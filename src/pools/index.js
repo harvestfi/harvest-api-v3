@@ -2,7 +2,6 @@ const BigNumber = require('bignumber.js')
 const {
   pool: regularPoolContract,
   potPool: potPoolContract,
-  amplifier: amplifierContract,
   token: tokenContract,
 } = require('../lib/web3/contracts')
 const { getWeb3, getCallCount, resetCallCount } = require('../lib/web3')
@@ -12,7 +11,6 @@ const {
   WEB3_CALL_COUNT_STATS_KEY,
   DEBUG_MODE,
   PROFIT_SHARING_POOL_ID,
-  POOL_TYPES,
   UI_DATA_FILES,
 } = require('../lib/constants')
 const { cache } = require('../lib/cache')
@@ -92,71 +90,11 @@ const fetchAndExpandPool = async pool => {
       )
 
       const hasIFarmReward = pool.rewardTokens.includes(addresses.iFARM) && !inactive
-      const hasAmpliFARMReward = pool.rewardTokens.includes(addresses.ampliFARM) && !inactive
 
       if (hasIFarmReward) {
         boostedRewardAPY = new BigNumber(get(poolStats, 'apy[0]', 0))
           .times(new BigNumber(profitShareAPY).plus(100))
           .dividedBy(100)
-          .toFixed(2)
-      } else if (hasAmpliFARMReward) {
-        const bFarmTokenInstance = new web3Instance.eth.Contract(
-          tokenContract.contract.abi,
-          addresses.BSC.bFARM,
-        )
-
-        const amplifierInstance = new web3Instance.eth.Contract(
-          amplifierContract.contract.abi,
-          addresses.BSC.AmpliFARM.tokenAddress,
-        )
-
-        const totalSupply = await tokenContract.methods.getTotalSupply(amplifierInstance)
-
-        const amplifierAmount = new BigNumber(
-          await tokenContract.methods.getBalance(
-            addresses.BSC.AmpliFARM.amplifier,
-            bFarmTokenInstance,
-          ),
-        ).toFixed()
-
-        amountToStakeForBoost = new BigNumber(amplifierAmount).dividedBy(totalSupply).toFixed()
-
-        const now = Date.now() / 1000
-        const fetchedPeriodFinish = await poolContract.methods.periodFinishForToken(
-          addresses.ampliFARM,
-          poolInstance,
-        )
-
-        const fetchedRewardRate = new BigNumber(
-          await potPoolContract.methods.rewardRateForToken(addresses.ampliFARM, poolInstance),
-        )
-
-        const weeklyAmplifarm = new BigNumber(
-          fetchedPeriodFinish < now ? 0 : fetchedRewardRate.dividedBy(1e18).times(604800).toFixed(),
-        )
-
-        const additionalbFarm = new BigNumber(amountToStakeForBoost)
-          .times(weeklyAmplifarm)
-          .toFixed()
-
-        // we can use the POOL_TYPES.INCENTIVE_BUYBACK type to get what the APY would be with the additional bFARM
-        const poolStatsIfBFarmWasTheReward = await getPoolStatsPerType(
-          {
-            ...pool,
-            type: POOL_TYPES.INCENTIVE_BUYBACK,
-            rewardTokens: [addresses.BSC.bFARM],
-          },
-          {
-            ...poolContract,
-            instance: poolInstance,
-          },
-          lpTokenData,
-          additionalbFarm,
-          true,
-        )
-
-        boostedRewardAPY = new BigNumber(get(poolStatsIfBFarmWasTheReward, 'apy[0]', 0))
-          .plus(get(poolStatsIfBFarmWasTheReward, 'apy[0]', 0))
           .toFixed(2)
       } else {
         boostedRewardAPY = null
