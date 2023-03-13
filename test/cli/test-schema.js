@@ -66,7 +66,6 @@ const main = async () => {
   const pools_output = poolsResponse.data
 
   // preprocess
-  vaults_output.bsc = objectToArray(vaults_output.bsc)
   vaults_output.eth = objectToArray(vaults_output.eth)
   vaults_output.matic = objectToArray(vaults_output.matic)
 
@@ -86,7 +85,7 @@ const main = async () => {
     console.log('FAILURE!')
     for (let i = 0; i < resultVaults.errors.length; i++) {
       let error = resultVaults.errors[i]
-      if (error.path[0] == 'bsc' || error.path[0] == 'eth' || error.path[0] == 'matic') {
+      if (error.path[0] == 'eth' || error.path[0] == 'matic') {
         console.log(vaults_output[error.path[0]][error.path[1]].name + ': ' + error.stack)
       } else {
         console.log(error.path[error.path.length - 1] + ' ' + error.message)
@@ -105,7 +104,7 @@ const main = async () => {
     console.log('FAILURE!')
     for (let i = 0; i < resultPools.errors.length; i++) {
       let error = resultPools.errors[i]
-      if (error.path[0] == 'bsc' || error.path[0] == 'eth' || error.path[0] == 'matic') {
+      if (error.path[0] == 'eth' || error.path[0] == 'matic') {
         console.log(pools_output[error.path[0]][error.path[1]].id + ': ' + error.stack)
       } else {
         console.log(error.path[error.path.length - 1] + ' ' + error.message)

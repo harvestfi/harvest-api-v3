@@ -37,7 +37,6 @@
   "YEL": "0x7815bDa662050D84718B988735218CFfd32f75ea",
   "FCASH": "0x531261a091F31bFd93dd393a6CA447ed6Fb2043C",
   "CVX": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
-  "LIFT": "0xf9209d900f7ad1dc45376a2caa61c78f6dea53b6",
   "lfBTC": "0xafce9b78d409bf74980cacf610afb851bf02f257",
   "PERP": "0xbC396689893D065F41bc2C6EcbeE5e0085233447",
   "BANK": "0x24a6a37576377f63f194caa5f518a60f45b42921",
@@ -97,9 +96,7 @@
   "TBTC_MIXED": "0x64eda51d3Ad40D56b9dFc5554E06F94e1Dd786Fd",
   "crvCOMPOUND": "0x845838DF265Dcd2c412A1Dc9e959c7d08537f8a2",
   "crvUSDN": "0x4f3E8F405CF5aFC05D68142F3783bDfE13811522",
-  "crvBUSD": "0x3B3Ac5386837Dc563660FB6a0937DFAa5924333B",
   "crvHBTC": "0xb19059ebb43466C323583928285a49f558E572Fd",
-  "crvHUSD": "0x5B5CFE992AdAC0C9D48E05854B2d91C73a003858",
   "cvxCRV": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
   "BASED_sUSD": "0xaAD22f5543FCDaA694B68f94Be177B561836AE57",
   "NOTE": "0xCFEAead4947f0705A14ec42aC3D44129E1Ef3eD5",
@@ -134,7 +131,6 @@
   "FARM_WETH_LP": "0x56feAccb7f750B997B36A68625C7C596F0B41A58",
   "FARMSteadUSDC": "0xf6BD560131c1BB8591Cf864cDD51817FD5657061",
   "BAS": "0xa7ED29B253D8B4E3109ce07c80fc570f81B63696",
-  "BAC": "0x3449FC1Cd036255BA1EB19d65fF4BA2b8903A69a",
   "MIS": "0x4b4D2e899658FB59b1D518b68fe836B100ee8958",
   "MIC": "0x368B3a58B5f49392e5C9E4C998cb0bB966752E51",
   "1INCH": "0x111111111117dc0aa78b770fa6a738034120c302",
@@ -286,11 +282,6 @@
       "NewPool": "0x01f9CAaD0f9255b0C0Aa2fBD1c1aA06ad8Af7254",
       "doHardwork": false
     },
-    "crvHUSD": {
-      "NewVault": "0x29780C39164Ebbd62e9DDDE50c151810070140f2",
-      "NewPool": "0x72C50e6FD8cC5506E166c273b6E814342Aa0a3c1",
-      "doHardwork": false
-    },
     "WBTC": {
       "OldVault": "0xc07EB91961662D275E2D285BdC21885A4Db136B0",
       "MigrationStrategy": "0x4050475BF052C25f2a66b5EAE7254E1c7A0CF806",
@@ -380,12 +371,6 @@
       "Miner": "0x0f9cb53Ebe405d49A0bbdBD291A65Ff571bC83e1",
       "doHardwork": false
     },
-    "crvBUSD": {
-      "NewVault": "0x4b1cBD6F6D8676AcE5E412C78B7a59b4A1bbb68a",
-      "NewStrategy": "0x2b7CAA7D87c01152A82c266791AdA69CcFe64045",
-      "NewPool": "0x093C2ae5E6F3D2A897459aa24551289D462449AD",
-      "doHardwork": false
-    },
     "sushi_PERP_ETH": {
       "Underlying": "0x8486c538DcBD6A707c5b3f730B6413286FE8c854",
       "SushiPoolId": "156",
@@ -428,22 +413,6 @@
       "NewStrategy": "0xA44ffa733f1d500Fd10C613Cf66C87320d87ebee",
       "NewPool": "0x16fBb193f99827C92A4CC22EFe8eD7390465BFa3",
       "SushiPoolId": "12",
-      "doHardwork": false
-    },
-    "UNI_BAC_DAI": {
-      "Underlying": "0xd4405F0704621DBe9d4dEA60E128E0C3b26bddbD",
-      "RewardPool": "0xc897daAb7Bc58a5A567911D6EC5C0FC8275F7F9e",
-      "NewVault": "0x6Bccd7E983E438a56Ba2844883A664Da87E4C43b",
-      "NewStrategy": "0xa89CBbE676562EbD0728E6cFA431DeBe77184090",
-      "NewPool": "0x797F1171DC5001B7A79ff7Dca68c9539329ccE48",
-      "doHardwork": false
-    },
-    "UNI_DAI_BAS": {
-      "Underlying": "0x3E78F2E7daDe07ea685F8612F00477FD97162F1e",
-      "RewardPool": "0xc897daAb7Bc58a5A567911D6EC5C0FC8275F7F9e",
-      "NewVault": "0xf8b7235fcfd5A75CfDcC0D7BC813817f3Dd17858",
-      "NewStrategy": "0xA9cA706797702a50ea76aC9920774c8E982E4436",
-      "NewPool": "0xf330891f02F8182D7D4e1A962ED0F3086D626020",
       "doHardwork": false
     },
     "UNI_MIC_USDT": {
@@ -493,76 +462,12 @@
       "RewardPool": "0xE22f6A5dd9e491dFAB49faeFdb32d01AaF99703e",
       "doHardwork": false
     },
-    "oneInch_ETH_WBTC": {
-      "Underlying": "0x6a11F3E5a01D129e566d783A7b6E8862bFD66CcA",
-      "NewVault": "0x859222DD0B249D0ea960F5102DaB79B294d6874a",
-      "NewStrategy": "0x15aDA3630227a33751e986F3E77b0a073f77d17d",
-      "NewPool": "0x747318Cf3171D4E2a1A52bBD3Fcc9f9c690448B4",
-      "RewardPool": "0x2eDe375d73D81dBd19ef58A75ba359Dd28d25De8",
-      "doHardwork": false
-    },
     "oneInch_1INCH_USDC": {
       "Underlying": "0x69AB07348F51c639eF81d7991692f0049b10D522",
       "NewVault": "0xF174DDDD9DBFfeaeA5D908a77d695a77e53025b3",
       "NewStrategy": "0x8d7dA935C449bE284B27D96B6F215d6Dba95d8d1",
       "NewPool": "0x516658d83A68747C34FD5aeCba7068ad4bD4783d",
       "RewardPool": "0x1055f60Bbf27D233C4E34D2E03e35567427415Fa",
-      "doHardwork": false
-    },
-    "oneInch_1INCH_WBTC": {
-      "Underlying": "0xE179d801E6882e628d6ce58b94b3C41E35C8518A",
-      "NewVault": "0xDdB4669f39c03A6edA92ffB5B78A9C1a74615F1b",
-      "NewStrategy": "0xb3fFE89b4f9e0b76980Ee06301409521CF6825Cc",
-      "NewPool": "0xd8a3C7d1dEcCB8445a4391F6052E5a0726f2F270",
-      "RewardPool": "0x73f5E5260423A2742d9F8Ac49DeA6CB5eaec465e",
-      "doHardwork": false
-    },
-    "oneInch_ETH_1INCH": {
-      "Underlying": "0x0EF1B8a0E726Fc3948E15b23993015eB1627f210",
-      "NewVault": "0xFCA949E34ecd9dE519542CF02054DE707Cf361cE",
-      "NewStrategy": "0x1b8e2b4Ad303550d6872C08C5F6c024b68B2286D",
-      "NewPool": "0x16b5089ED717409849b2748AC73adFbfE7ec0301",
-      "RewardPool": "0xe65184b402376703adc27a7d7e0e8d35a264a240",
-      "doHardwork": false
-    },
-    "basisGold_BAC": {
-      "Underlying": "0x3449FC1Cd036255BA1EB19d65fF4BA2b8903A69a",
-      "RewardPool": "0x4330E43F5b1e7D3Ea7B0a177Af50C6B2489ca406",
-      "NewVault": "0x371E78676cd8547ef969f89D2ee8fA689C50F86B",
-      "NewStrategy": "0xB075bA5DC253E39376AC044182BE13315e828AE2",
-      "NewPool": "0x3cddE34C96eCB95A1232c9673e23f2dB5fA72280",
-      "doHardwork": false
-    },
-    "basisGold_ESD": {
-      "Underlying": "0x36F3FD68E7325a35EB768F1AedaAe9EA0689d723",
-      "RewardPool": "0x466837EDC9411D8ea334e62AdBd1E9d18fBdb5d4",
-      "NewVault": "0x45a9e027DdD8486faD6fca647Bb132AD03303EC2",
-      "NewStrategy": "0x7e2a45Ea5223eD02fE80e5020Aa650121A7361ab",
-      "NewPool": "0xDB9C2EbA87301e6951d6FBE7a458832eaab2137E",
-      "doHardwork": false
-    },
-    "basisGold_DSD": {
-      "Underlying": "0xBD2F0Cd039E0BFcf88901C98c0bFAc5ab27566e3",
-      "RewardPool": "0x056Be3ED7CF114AFd98F694cC21c7C70a644e1BA",
-      "NewVault": "0x8Bf3c1c7B1961764Ecb19b4FC4491150ceB1ABB1",
-      "NewStrategy": "0x185F97Af588c0D416Da1Bc3828234F94F4681810",
-      "NewPool": "0x7c497298d9576499e17F9564CE4E13faa87A9b33",
-      "doHardwork": false
-    },
-    "basisGold_DAI_BSG": {
-      "Underlying": "0x4A9596E5d2f9bEF50E4De092AD7181aE3C40353e",
-      "RewardPool": "0xAe49F34331f31e1C1ADA91213b47b4065a04516b",
-      "NewVault": "0x639d4f3F41daA5f4B94d63C2A5f3e18139ba9E54",
-      "NewStrategy": "0x8d640378C983C6aab076bdB5d86A58F9179055eD",
-      "NewPool": "0xf5b221E1d9C3a094Fb6847bC3E241152772BbbF8",
-      "doHardwork": false
-    },
-    "basisGold_DAI_BSGS": {
-      "Underlying": "0x980a07E4F64d21a0cB2eF8D4AF362a79b9f5c0DA",
-      "RewardPool": "0x3B871056E9f13aA3BA5b4dC3f71f00f7dc652199",
-      "NewVault": "0x633C4861A4E9522353EDa0bb652878B079fb75Fd",
-      "NewStrategy": "0x3F37185399537e95686a66247514De55C8792eb3",
-      "NewPool": "0x63e7D3F6e208ccE4967b7a0E6A50A397Af0b0E7A",
       "doHardwork": false
     },
     "crvEURS": {
@@ -581,46 +486,6 @@
       "Underlying": "0xD2967f45c4f384DEEa880F807Be904762a3DeA07",
       "doHardwork": false
     },
-    "crvUST": {
-      "Underlying": "0x94e131324b6054c0D789b190b2dAC504e4361b53",
-      "GaugePool": "0x3B7020743Bc2A4ca9EaF9D0722d42E20d6935855",
-      "NewVault": "0x84A1DfAdd698886A614fD70407936816183C0A02",
-      "NewStrategy": "0xc55f8Be3cc55cae1BfBE5558D9E5b44906Ed248A",
-      "NewPool": "0xDdb5D3CCd968Df64Ce48b577776BdC29ebD3120e",
-      "doHardwork": false
-    },
-    "mirrorAAPL": {
-      "Underlying": "0xB022e08aDc8bA2dE6bA4fECb59C6D502f66e953B",
-      "RewardPool": "0x735659C8576d88A2Eb5C810415Ea51cB06931696",
-      "NewVault": "0x11804D69AcaC6Ae9466798325fA7DE023f63Ab53",
-      "NewStrategy": "0xA5a091fd156FF5e44f22Bef544923CDc850d9D46",
-      "NewPool": "0xc02d1Da469d68Adc651Dd135d1A7f6b42F4d1A57",
-      "doHardwork": false
-    },
-    "mirrorAMZN": {
-      "Underlying": "0x0Ae8cB1f57e3b1b7f4f5048743710084AA69E796",
-      "RewardPool": "0x1fABef2C2DAB77f01053E9600F70bE1F3F657F51",
-      "NewVault": "0x8334A61012A779169725FcC43ADcff1F581350B7",
-      "NewStrategy": "0x0c3d0B5910b0603d68be29a647c0F6187A8c3D36",
-      "NewPool": "0x8Dc427Cbcc75cAe58dD4f386979Eba6662f5C158",
-      "doHardwork": false
-    },
-    "mirrorGOOG": {
-      "Underlying": "0x4b70ccD1Cf9905BE1FaEd025EADbD3Ab124efe9a",
-      "RewardPool": "0x5b64BB4f69c8C03250Ac560AaC4C7401d78A1c32",
-      "NewVault": "0x07DBe6aA35EF70DaD124f4e2b748fFA6C9E1963a",
-      "NewStrategy": "0x0a6ADe7348598E42Da381B03C1c40c9bA1c7747D",
-      "NewPool": "0xfE83a00DF3A98dE218c08719FAF7e3741b220D0D",
-      "doHardwork": false
-    },
-    "mirrorTSLA": {
-      "Underlying": "0x5233349957586A8207c52693A959483F9aeAA50C",
-      "RewardPool": "0x43DFb87a26BA812b0988eBdf44e3e341144722Ab",
-      "NewVault": "0xC800982d906671637E23E031e907d2e3487291Bc",
-      "NewStrategy": "0xb5480a276C49B5e3a1bC13659030b4E94018a817",
-      "NewPool": "0x40C34B0E1bb6984810E17474c6B0Bcc6A6B46614",
-      "doHardwork": false
-    },
     "crvSTETH": {
       "Underlying": "0x06325440D014e39736583c165C2963BA99fAf14E",
       "GaugePool": "0x182B723a58739a9c974cFDB385ceaDb237453c28",
@@ -629,49 +494,9 @@
       "NewPool": "0x2E25800957742C52b4d69b65F9C67aBc5ccbffe6",
       "Miner": "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022"
     },
-    "crvAAVE": {
-      "NewVault": "0xc3EF8C4043D7cf1D15B6bb4cd307C844E0BA9d42",
-      "NewStrategy": "0xdC9a3e8c6327c6Fea1780019e00F7b0558f638A5",
-      "NewPool": "0x10f1fc85eAA1F064e38EEffDa82fBa414841f438",
-      "GaugePool": "0xd662908ADA2Ea1916B3318327A97eB18aD588b5d",
-      "Underlying": "0xFd2a8fA60Abd58Efe3EeE34dd494cD491dC14900",
-      "doHardwork": false
-    },
-    "klondike_WBTC_KBTC": {
-      "Underlying": "0x1F3D61248EC81542889535595903078109707941",
-      "NewVault": "0x5cd9Db40639013A08d797A839C9BECD6EC5DCD4D",
-      "NewStrategy": "0x5334cf3a2006f05f879f8677a6a1fb94c6ba7861",
-      "RewardPool": "0x2B01d3e34259D40Cf2fF3b34A28D7c80d6319Cb0",
-      "NewPool": "0xdD496A6Ba1B4Cf2b3ef42dEf132e2B2c570941FE",
-      "doHardwork": false
-    },
-    "klondike_WBTC_KLON": {
-      "Underlying": "0x69Cda6eDa9986f7fCa8A5dBa06c819B535F4Fc50",
-      "NewVault": "0xB4E3fC276532f27Bd0F738928Ce083A3b064ba61",
-      "NewStrategy": "0x1a0B8b5c603CAc03b3B6B7a9679F5E2c1E98f248",
-      "RewardPool": "0x185bDc02aAFbEcDc8DC574e8319228B586764415",
-      "NewPool": "0x719d70457658358f2e785B38307CfE24071b7417",
-      "doHardwork": false
-    },
     "iFARM": {
       "Underlying": "0xa0246c9032bC3A600820415aE600c6388619A14D",
       "NewVault": "0x1571eD0bed4D987fe2b498DdBaE7DFA19519F651"
-    },
-    "mirrorNFLX": {
-      "Underlying": "0xC99A74145682C4b4A6e9fa55d559eb49A6884F75",
-      "RewardPool": "0x29cF719d134c1C18daB61C2F4c0529C4895eCF44",
-      "NewVault": "0x99C2564C9D4767C13E13F38aB073D4758af396Ae",
-      "NewStrategy": "0x97487C1F352a8076A738fbDcd316A10F01046567",
-      "NewPool": "0x937D4b84f139bec548b825FdCE33B172C5Bf755a",
-      "doHardwork": false
-    },
-    "mirrorTWTR": {
-      "Underlying": "0x34856be886A2dBa5F7c38c4df7FD86869aB08040",
-      "RewardPool": "0x99d737ab0df10cdC99c6f64D0384ACd5C03AEF7F",
-      "NewVault": "0xb37c79f954E3e1A4ACCC14A5CCa3E46F226038b7",
-      "NewStrategy": "0x18fbE81e56133118669660A46d050546045aB9B3",
-      "NewPool": "0x677AD66025063bE55B070685E618a84FF3dd62be",
-      "doHardwork": false
     },
     "sushi_UST_WETH": {
       "Underlying": "0x8B00eE8606CC70c2dce68dea0CEfe632CCA0fB7b",
@@ -727,14 +552,6 @@
       "NewStrategy": "0x4Cad48Bf9a362d3576d2aaCD5fD0DbD4F9e9FAB8",
       "NewPool": "0x08aA65118996eaa61372B65978Cfa684F2C749b2",
       "SushiPoolId": "21",
-      "doHardwork": false
-    },
-    "crvUSDP": {
-      "Underlying": "0x7Eb40E450b9655f4B3cC4259BCC731c63ff55ae6",
-      "NewVault": "0x02d77f6925f4ef89EE2C35eB3dD5793f5695356f",
-      "NewStrategy": "0x127BfdC843a35607B024781324311522907bCA66",
-      "GaugePool": "0x055be5DDB7A925BfEF3417FC157f53CA77cA7222",
-      "NewPool": "0x15AEB9B209FEC67c672dBF5113827daB0b80f390",
       "doHardwork": false
     },
     "crvThreeCrypto": {
@@ -827,35 +644,11 @@
       "RewardPool": "0xE301F632E573A3F8bd06fe623E4440560ab08692",
       "doHardwork": false
     },
-    "complifi_COMPFI_WETH": {
-      "Underlying": "0xe9C966bc01b4f14c0433800eFbffef4F81540A97",
-      "NewVault": "0xB89777534acCcc9aE7cbA0e72163f9F214189263",
-      "NewStrategy": "0x7724844189CD0Bb08cAAD3d2F47d826EcB33aFe5",
-      "NewPool": "0xaB2e513C9f92a7B0F36f7fEeF680cd0f502B23dc",
-      "PoolId": "12",
-      "doHardwork": false
-    },
     "complifi_COMPFI_ETH5X": {
       "Underlying": "0xbfB68BedFE44E5a27B5b3931e20ab389D5928405",
       "NewVault": "0xd3093e3EfBE00f010E8F5Efe3f1cb5d9b7Fe0eb1",
       "NewStrategy": "0x4c992088252441Ee1840ad0213Bf27e7B8825064",
       "NewPool": "0x85F11E0480cc8F0a1c9B24B6421fAdD9C10b485f",
-      "doHardwork": false
-    },
-    "lfBTC_LIFT": {
-      "Underlying": "0x0e250c3FF736491712C5b11EcEe6d8dbFA41c78f",
-      "NewVault": "0x8d2450C6e35c765fA4D43FC9EEA87bE269E1Ab5b",
-      "StrategyContract": "LiftStrategyMainnet_lfBTC_LIFT",
-      "NewStrategy": "0xA1DdB9C23e678B55fde108C41741f6c85EDF1972",
-      "NewPool": "0x5ed17cA557359eAB39FEA1de8240BaC4b9C7BECa",
-      "doHardwork": false
-    },
-    "wBTC_lfBTC": {
-      "Underlying": "0xd975b774C50aa0aEacB7b546b86218c1D7362123",
-      "NewVault": "0xc8404f55015FC76eA36Ca11dc8628dD38F1d6Ed2",
-      "StrategyContract": "LiftStrategyMainnet_wBTC_lfBTC",
-      "NewStrategy": "0x4157beBDeBb508A62874c841b07Ae4013dB8B274",
-      "NewPool": "0x17Ea335B82844212468000e7Aeb5F55D63948c47",
       "doHardwork": false
     },
     "UniV3_ZUSD_ETH": {
@@ -957,15 +750,6 @@
       "NewPool": "0x2579687F556C963b607a8E44c1FbA0F363D2AA11",
       "doHardwork": false
     },
-    "UniV3_FCASH_USDC": {
-      "Underlying": [
-        "0x531261a091F31bFd93dd393a6CA447ed6Fb2043C",
-        "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
-      ],
-      "NewVault": "0x50dCcf8F83CCE8aA9168637c2Ec0114ae934F6d1",
-      "NewPool": "0xC02f8fE55Aa542038a619e17ED42002EB7A5D247",
-      "doHardwork": false
-    },
     "UniV3_USDT_ETH_1400_2400": {
       "Underlying": [
         "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -992,34 +776,6 @@
       "NewVault": "0xC905ccc1a1EC21C8bbE0c0b53d3D048D9055D4bB",
       "NewPool": "0xBa20df1C78eD7CE835035e49Dc0389fF11224a76",
       "doHardwork": "onlyProfit"
-    },
-    "UniV3_DPI_ETH": {
-      "Underlying": [
-        "0x1494CA1F11D487c2bBe4543E90080AeBa4BA3C2b",
-        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
-      ],
-      "NewVault": "0x04EdB1420A01547944eA57bBd4EBeBAE04ac116b",
-      "NewPool": "0xf435E8E3D48C972EF536b4862b2Cfec4d0a8C5f1",
-      "doHardwork": false
-    },
-    "UniV3_BUSD_USDC": {
-      "Underlying": [
-        "0x4Fabb145d64652a948d72533023f6E7A623C7C53",
-        "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
-      ],
-      "NewVault": "0x7095b06C02B66e4133F7B4b078B2720CB4437408",
-      "NewPool": "0xDC1873C8E58e925D530b94FF14b0Aa4121b04d1F",
-      "doHardwork": false
-    },
-    "UniV3_renBTC_wBTC": {
-      "Underlying": [
-        "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-        "0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D"
-      ],
-      "NewVault": "0x7Fb7E4aE3a174E24e6Fd545BbF6E9fC5a14162Cc",
-      "DataContract": "0x32236dA3701499Cb7ceaED8141FFb936C4d1358e",
-      "NewPool": "0xAA6f97dFE0BA937E311D216972707fD886886e75",
-      "doHardwork": false
     },
     "bal_BAL_WETH": {
       "Underlying": "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56",
@@ -1066,43 +822,11 @@
       "PoolId": "0xa6f548df93de924d73be7d25dc02554c6bd66db500020000000000000000000e",
       "doHardwork": false
     },
-    "uni_FOX_WETH": {
-      "Underlying": "0x470e8de2eBaef52014A47Cb5E6aF86884947F08c",
-      "NewVault": "0x9AF516e9095069972528eeba8E55275e31fE7734",
-      "RewardPool": "0xc54b9f82c1c54e9d4d274d633c7523f2299c42a0",
-      "NewPool": "0x34D358cd25e4BBdcf7D30887c55FE68E0F25dC65",
-      "doHardwork": false
-    },
-    "sushi_PHTR_FARM": {
-      "Underlying": "0x15D1FEEcc23691E2E5E39490F5fc14413f9d909A",
-      "NewVault": "0xa85f818A4634c13E8Be795240e9ACA2CB7C70CcF",
-      "NewStrategy": "0x3B9a7579005CF6C16878F3427062eA20079ec1FD",
-      "NewPool": "0x6CE6b6c9BDa2348dea69D827314E2C1419843792",
-      "doHardwork": false
-    },
     "sushi_PHTR_ETH": {
       "Underlying": "0xa88008543efb1db18922e376DB52CD7E2F73648c",
       "NewVault": "0x3Cf83c7A8674112f680E4af893EbaFc7beF48574",
       "NewStrategy": "0xedEf953cC7f36d0046495C05A25ed0526Dbf0c0f",
       "NewPool": "0x6B671290B51446C4CD01a2731f72fdA1d180f270",
-      "doHardwork": false
-    },
-    "UniV3_REI_ETH": {
-      "Underlying": [
-        "0x011864D37035439E078d64630777Ec518138aF05",
-        "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
-      ],
-      "NewVault": "0xeC665d477812C11Bf163841C83322FB4743D1Cfa",
-      "NewPool": "0xf9BcABd9886Ec2BA1467aCdeBE040077EE61bEe6",
-      "doHardwork": false
-    },
-    "UniV3_REI_wBTC": {
-      "Underlying": [
-        "0x011864D37035439E078d64630777Ec518138aF05",
-        "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
-      ],
-      "NewVault": "0x8e1de189195a76baF8871f70AdcD090aD06a0B58",
-      "NewPool": "0xDdcaA7Df52674b7a64C37F6D347E4489a5593039",
       "doHardwork": false
     },
     "UniV3_zUSD_USDC_full_range": {
@@ -1137,37 +861,6 @@
       "NewVault": "0x81a276Cc1323A76ad0C71657139e6bCdC3C52b30",
       "NewPool": "0x54941AF9Eff1484DF58e250fE2FD3d79054ba269",
       "PoolId": "1"
-    },
-    "yelhold_YEL": {
-      "Underlying": "0x7815bDa662050D84718B988735218CFfd32f75ea",
-      "NewVault": "0xDB94C2817f405b4a01dDb324F8aBB4d7D3705dAD",
-      "NewPool": "0x56dB0FbAEA64d776B64A4a5824e47f6465A5433c",
-      "PoolId": "0",
-      "doHardwork": false
-    },
-    "convex_MIM": {
-      "Underlying": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
-      "NewVault": "0x604925aD5B715F32F6ed4b3EdC8dE89d764dc583",
-      "StrategyContract": "ConvexStrategyMIMMainnet",
-      "NewStrategy": "0x596355E19910dd683C294906Df14ed212f76411C",
-      "NewPool": "0x0b44335aA5B0D5e4DF85d4aBF81683F892310a5c",
-      "doHardwork": false
-    },
-    "convex_EURT": {
-      "Underlying": "0xFD5dB7463a3aB53fD211b4af195c5BCCC1A03890",
-      "NewVault": "0xB59EdCB651EF54b9e960f8CA35c36EF7904459dB",
-      "StrategyContract": "ConvexStrategyEURTMainnet",
-      "NewStrategy": "0x56CfC57bC1C5b40Dc739B88fBEbCc96B05056BB6",
-      "NewPool": "0x199eFfC20793197d6c5100B32aAae880d1061004",
-      "doHardwork": false
-    },
-    "convex_ibEUR": {
-      "Underlying": "0x19b080FE1ffA0553469D20Ca36219F17Fcf03859",
-      "NewVault": "0x8AA055990f9Ea583f4f5C86Fa4aD57898C18Ff21",
-      "StrategyContract": "ConvexStrategyIbEURMainnet",
-      "NewStrategy": "0x01579527d5734C03b8220E96dd5754346BfdFD63",
-      "NewPool": "0xa6f85bB21Ff71ac0A5890F76fD2514D76e0035EF",
-      "doHardwork": false
     },
     "convex_cvxCRV": {
       "Underlying": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
@@ -1259,18 +952,6 @@
       "NewPool": "0xFd1121b2292eBD475791Ee2d646ccC8451c9F7Ae",
       "doHardwork": false
     },
-    "UniV3_BABL_ETH": {
-      "Underlying": [
-        "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        "0xF4Dc48D260C93ad6a96c5Ce563E70CA578987c74"
-      ],
-      "NewVault": "0xadB16dF01b9474347E8fffD6032360D3B54627fB",
-      "NewPool": "0x3e6397E309f68805FA8Ef66A6216bD2010DdAF19",
-      "DataContract": "0xf53BB21400822c929668F36bF952baD6833B158f",
-      "FeeAmount": 3000,
-      "PosId": [158516],
-      "doHardwork": false
-    },
     "uni_LOOKS_ETH": {
       "Underlying": "0xDC00bA87Cc2D99468f7f34BC04CBf72E111A32f7",
       "NewVault": "0x41d0Ab2Bf4E8Da44FEE38232E56b089f3Bb00587",
@@ -1299,13 +980,6 @@
       "PosId": [186833],
       "doHardwork": "onlyProfit"
     },
-    "crv_UST_WORMHOLE": {
-      "Underlying": "0xCEAF7747579696A2F0bb206a14210e3c9e6fB269",
-      "NewVault": "0x37b27bAA0B04a00ba5E325e88267B4511577e203",
-      "NewStrategy": "0xd07BCdF0C49eCB100856B2FB659552fa1429edCB",
-      "NewPool": "0x4cc6e3c4b711091548f91b0C7B5f840359109475",
-      "doHardwork": false
-    },
     "crv_CRV_ETH": {
       "Underlying": "0xEd4064f376cB8d68F770FB1Ff088a3d0F3FF5c4d",
       "NewVault": "0xd7b17297B9884Aa73BF5E6e39e3cEC107ffe6b17",
@@ -1313,19 +987,6 @@
       "NewStrategy": "0x250601479F13d4EEc9177De018590B421363dd3B",
       "NewPool": "0x64EE16703874b2c6D2C9226A3Cb25CD0Ac2e1E31",
       "Miner": "0x8301AE4fc9c624d1D396cbDAa1ed877821D7C511"
-    },
-    "UniV3_UNT_ETH": {
-      "Underlying": [
-        "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        "0xe4b5936Dce1820f84509C89CcE0F28C87988Bad8"
-      ],
-      "NewVault": "0x2CE57694b635f6Ea0087A341654543E12b082538",
-      "NewStrategy": "0x0000000000000000000000000000000000000000",
-      "NewPool": "0x71c70B619189F877Ba708407C1EA068Ca6EbfB32",
-      "DataContract": "0xFB9a912f2375C481957e47153E079d60B980C69a",
-      "FeeAmount": 10000,
-      "PosId": [201880],
-      "doHardwork": false
     },
     "notional_DAI": {
       "Underlying": "0x6EbcE2453398af200c688C7c4eBD479171231818",
@@ -1372,12 +1033,6 @@
       "NewVault": "0x4CF4f433e359a343648c480b2f3952FD64616a9a",
       "NewStrategy": "0x3474293f03F19fA94A97BD8F1c4da151D7B9Aa80",
       "NewPool": "0xcD813cef74D41FB9DC03E725887F85BFA5cfeC20"
-    },
-    "convex_pBTC": {
-      "Underlying": "0xC9467E453620f16b57a34a770C6bceBECe002587",
-      "NewVault": "0xc7fc2E6fd1d28fA86993F2d8707898c609535A4f",
-      "NewStrategy": "0x223f134f63723f366e6355Fa3FfbC02E6580E216",
-      "NewPool": "0xcEb6985B78D0f2d69274f1c37e192E82bA81CDad"
     },
     "convex_CVX_ETH": {
       "Underlying": "0x3A283D9c08E8b55966afb64C515f5143cf907611",
@@ -1435,364 +1090,6 @@
       "PoolId": "0x60683b05e9a39e3509d8fdb9c959f23170f8a0fa000000000000000000000489"
     }
   },
-  "BSC": {
-    "EGG": "0xf952fc3ca7325cc27d15885d37117676d25bfda6",
-    "beacon_ETH": "0x250632378E573c6Be1AC2f97Fcdf00515d0Aa91B",
-    "bETH": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
-    "wBNB": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
-    "bFARM": "0x4B5C23cac08a567ecf0c1fFcA8372A45a5D33743",
-    "VAI": "0x4BD17003473389A42DAF6a0a729f6Fdb328BbBd7",
-    "bUSD": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
-    "bUSDT": "0x55d398326f99059fF775485246999027B3197955",
-    "CAKE": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
-    "XVS": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
-    "b1INCH": "0x111111111117dC0aa78b770fA6A738034120C302",
-    "bRENBTC": "0xfCe146bF3146100cfe5dB4129cf6C82b0eF4Ad8c",
-    "BDO": "0x190b589cf9fb8ddeabbfeae36a813ffb2a702454",
-    "sBDO": "0x0d9319565be7f53cefe84ad201be3f40feae2740",
-    "EPS": "0xa7f552078dcc247c2684336020c03648500c6d9f",
-    "BELT": "0xe0e514c71282b6f4e823703a39374cf58dc3ea4f",
-    "SWIRL": "0x52d86850bc8207b520340b7e39cdaf22561b9e56",
-    "SPACE": "0x0abd3e3502c15ec252f90f64341cba74a24fba06",
-    "ICE": "0xf16e81dce15b08f326220742020379b855b87df9",
-    "ampliFARM": "0x8cf3F692CAd5Bfa94817Fb425a2871bA11FE883d",
-    "ProfitShareTarget": "0xf00dD244228F51547f0563e60bCa65a30FBF5f7f",
-    "Controller": "0x222412af183BCeAdEFd72e4Cb1b71f1889953b1C",
-    "AmpliFARM": {
-      "tokenAddress": "0x8cf3F692CAd5Bfa94817Fb425a2871bA11FE883d",
-      "proxy": "0xE10f2E9bc4C59E8F40759675b44778F7a044d94A",
-      "amplifier": "0x633a050832519e824367859895a955D14714AD6A",
-      "amplifierViewer": "0x0F0Cd8eCf7d13245A54e785F8c3B67dea80f63f2"
-    },
-    "V2": {
-      "venus_BETH": {
-        "Underlying": "0x250632378E573c6Be1AC2f97Fcdf00515d0Aa91B",
-        "NewVault": "0x394E653bbFC9A3497A0487Abee153CA6498F053D",
-        "NewPool": "0xb3b56c7BDc87F9DeB7972cD8b5c09329ce421F89",
-        "StrategyContract": "VenusFoldStrategyMainnet_BETH",
-        "NewStrategy": "0xB7506271FE72FE2cdC3a7ee6Ead8749AD54df8C2",
-        "doHardwork": false
-      },
-      "venus_BTCB": {
-        "Underlying": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
-        "NewVault": "0xd75ffA16FFbCf4078d55fF246CfBA79Bb8cE3F63",
-        "NewPool": "0xC6f39CFf6797baC5e29275177b6E8e315cF87D95",
-        "StrategyContract": "VenusFoldStrategyMainnet_BTCB",
-        "NewStrategy": "0x5C6bC2287C48a2C9fc2f0533De2B2acFe7a9230A",
-        "doHardwork": false
-      },
-      "venus_ETH": {
-        "Underlying": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
-        "NewVault": "0x2CE34b1bb247f242f1d2A33811E01138968EFBFF",
-        "NewPool": "0x3331039530DD04B5DF06c2D226AC28E958BACc0f",
-        "StrategyContract": "VenusFoldStrategyMainnet_ETH",
-        "NewStrategy": "0xE24e96ab1564DCb444159C8cB2374e13412A01fc",
-        "doHardwork": false
-      },
-      "venus_XVS": {
-        "Underlying": "0xcF6BB5389c92Bdda8a3747Ddb454cB7a64626C63",
-        "NewVault": "0xCf5F83F8FE0AB0f9E9C1db07E6606dD598b2bbf5",
-        "NewPool": "0x8709B440C0F4F6830a468c6f696D010e85c9510B",
-        "NewStrategy": "0x826a37148978E8b51641C7cC339E41eCa6dDb909",
-        "doHardwork": false
-      },
-      "venus_VAI": {
-        "Underlying": "0x4BD17003473389A42DAF6a0a729f6Fdb328BbBd7",
-        "NewVault": "0x33DA6B1a05B4afcC5a321aACaA1334BDA4345a14",
-        "NewPool": "0xDA88e38735e75B58fee6ea4FC5Be576c1e22F6cd",
-        "NewStrategy": "0x1050f1876AF8a06BA550fe2106cCfCF65eA950FF",
-        "RewardPool": "0x0667Eed0a0aAb930af74a3dfeDD263A73994f216",
-        "doHardwork": false
-      },
-      "venus_WBNB": {
-        "Underlying": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
-        "NewVault": "0x1274B70bF34E1a57E78C2A2f3E28a4E1B66cbE48",
-        "NewPool": "0xE83f395B076F9b95200f9bEC40f5E446599F4F06",
-        "NewStrategy": "0x70aec98D696c201dBF7549fd08a47a64A316308E",
-        "doHardwork": false
-      },
-      "pancake_BUSD_BNB": {
-        "Underlying": "0x58F876857a02D6762E0101bb5C46A8c1ED44Dc16",
-        "MasterChef": "0x73feaa1eE314F8c655E354234017bE2193C9E24E",
-        "PoolId": 252,
-        "NewVault": "0xF7A3a95d0f7E8A5EEaE483Cdd7b76aF287283D34",
-        "NewStrategy": "0x4E48c585565581FFC1d2a6a53020927CdcA97161",
-        "NewPool": "0xeaB819E2BE63FFC0dF64E7BBA4DDB3bDEa280310",
-        "doHardwork": false
-      },
-      "pancake_CAKE": {
-        "Underlying": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
-        "MasterChef": "0x73feaa1eE314F8c655E354234017bE2193C9E24E",
-        "PoolId": 0,
-        "NewVault": "0x3D5B0a8CD80e2A87953525fC136c33112E4b885a",
-        "NewStrategy": "0x66B7611F35e48e311929e25D73428410C2335c34",
-        "NewPool": "0x78963b538c4835E00648DF764029196700ea8eE9",
-        "doHardwork": false
-      },
-      "pancake_CAKE_BNB": {
-        "Underlying": "0x0eD7e52944161450477ee417DE9Cd3a859b14fD0",
-        "MasterChef": "0x73feaa1eE314F8c655E354234017bE2193C9E24E",
-        "PoolId": 251,
-        "NewVault": "0xfFBD102fAFbd9e15C9122d9C62aB299AFD4D3E4F",
-        "NewStrategy": "0x573CfE4525C39A574d8c67552706d85F2a777709",
-        "NewPool": "0xD4bC6001937C6fF493e4bae3BA0F812799f86AB0",
-        "doHardwork": false
-      },
-      "pancake_ETH_BNB": {
-        "Underlying": "0x74E4716E431f45807DCF19f284c7aA99F18a4fbc",
-        "MasterChef": "0x73feaa1eE314F8c655E354234017bE2193C9E24E",
-        "PoolId": 261,
-        "NewVault": "0xE1f9A3EE001a2EcC906E8de637DBf20BB2d44633",
-        "NewStrategy": "0xFbc74EE9D8B55C29a23fc6fBEEF22661f06C2E58",
-        "NewPool": "0x221ED06024Ee4296fB544a44cfEDDf7c9f882cF3",
-        "doHardwork": false
-      },
-      "pancake_USDT_BNB": {
-        "Underlying": "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE",
-        "MasterChef": "0x73feaa1eE314F8c655E354234017bE2193C9E24E",
-        "PoolId": 264,
-        "NewVault": "0x6D386490e2367Fc31b4aCC99aB7c7D4d998a3121",
-        "NewStrategy": "0x7A2Af29b859fB916979daD64f4C3a21Fa8b5e1a0",
-        "NewPool": "0xf1121f56961C6DFD40355dDe61404D51b3f1c34E",
-        "doHardwork": false
-      },
-      "pancake_XVS_BNB": {
-        "Underlying": "0x7EB5D86FD78f3852a3e0e064f2842d45a3dB6EA2",
-        "MasterChef": "0x73feaa1eE314F8c655E354234017bE2193C9E24E",
-        "PoolId": 260,
-        "NewVault": "0x0bB94083d5718a8cb716faDc016187a0d6C99425",
-        "NewStrategy": "0x4d3Ef7A670E524849096f7bA0f1947eEa925e2CF",
-        "NewPool": "0x063eB32430bD63f4144f3e87D3339E4D2a318C52",
-        "doHardwork": false
-      },
-      "goose_EGG_BNB": {
-        "Underlying": "0xd1B59D11316E87C3a0A069E80F590BA35cD8D8D3",
-        "NewVault": "0xe3f309F151746b3C0953e4C0E455bFf3dc2176AA",
-        "NewPool": "0x26A4FE4c858f0d8a11442d358d182F2832A7F84c",
-        "StrategyContract": "GooseStrategyMainnet_EGG_BNB",
-        "NewStrategy": "0xB60E69F21b469A93aB6e3f4a831E833bcFb7C7dE",
-        "PoolId": 1,
-        "doHardwork": false
-      },
-      "goose_EGG_BUSD": {
-        "Underlying": "0x19e7cbECDD23A16DfA5573dF54d98F7CaAE03019",
-        "NewVault": "0xcD8FB1302C30fde56BCE5B34211E84561BBF0dF1",
-        "NewPool": "0x7CAA01B3DC8eE91aA6FA7093e184f045e0DA8792",
-        "StrategyContract": "GooseStrategyMainnet_EGG_BUSD",
-        "NewStrategy": "0xc547c527D6ce9a0A0Cea928B50fbD3A598d349a2",
-        "PoolId": 0,
-        "doHardwork": false
-      },
-      "goose_EGG": {
-        "Underlying": "0xF952Fc3ca7325Cc27D15885d37117676d25BfdA6",
-        "NewVault": "0x0392F36D2896c966E141C8Fd9ECA58a7ca9Fa8AF",
-        "NewPool": "0xfc8c1f0E25d91cB10db243acBcA5ac3c422A6277",
-        "StrategyContract": "GooseStrategyMainnet_EGG",
-        "NewStrategy": "0xc11f5f4CdAEBAb98CaB29501466ba05d41675A3E",
-        "PoolId": 12,
-        "doHardwork": false
-      },
-      "venus_DAI": {
-        "Underlying": "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3",
-        "NewVault": "0x78cF4a86bA3b4C5246D097E5cd0833cB641C1425",
-        "StrategyContract": "VenusFoldStrategyMainnet_DAI",
-        "NewStrategy": "0x52735122306E32e41cdf0257c8647244D475CB4b",
-        "NewPool": "0xf53c6789F35C4eCf152d2168Ca203808595CB524",
-        "doHardwork": false
-      },
-      "venus_USDC": {
-        "Underlying": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
-        "NewVault": "0x5089EA6c884a03823672888b57EBCE929EcE63ca",
-        "StrategyContract": "VenusFoldStrategyMainnet_USDC",
-        "NewStrategy": "0x6Aa85f9faF4639c6f290E04815B2AA45D78468F4",
-        "NewPool": "0x08b6732e1D07726e8F398a0ea97200d26E172066",
-        "doHardwork": false
-      },
-      "venus_USDT": {
-        "Underlying": "0x55d398326f99059fF775485246999027B3197955",
-        "NewVault": "0x374787234b369b56b3701E0B932051b37726096a",
-        "StrategyContract": "VenusFoldStrategyMainnet_USDT",
-        "NewStrategy": "0x11bAbd0B619BEC0BD1b7b2689f4cd11B25a54e56",
-        "NewPool": "0xE637E7d1e37875c787b773dBEb28Fcc55FE91C16",
-        "doHardwork": false
-      },
-      "venus_BUSD": {
-        "Underlying": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
-        "NewVault": "0x1BFB4ed996F4356aa705891DedB7d7776402BeC1",
-        "StrategyContract": "VenusFoldStrategyMainnet_BUSD",
-        "NewStrategy": "0x321e9402479AE47b4De53046bCc418b26D983185",
-        "NewPool": "0x76aAddf1eBaF9300dAd18469D01A0ee62633abe7",
-        "doHardwork": false
-      },
-      "oneInch_1INCH_renBTC": {
-        "Underlying": "0xe3f6509818ccf031370bB4cb398EB37C21622ac4",
-        "NewVault": "0xbF2989575dE9850F0A4b534740A88F5D2b460A4f",
-        "NewPool": "0xE9E03506A088eaCDfa1A690cD3019ac105D7B871",
-        "RewardPool": "0xCB06dF7F0Be5B8Bb261d294Cf87C794EB9Da85b1",
-        "StrategyContract": "OneInchStrategyMainnet_1INCH_renBTC",
-        "NewStrategy": "0x4909BfaFaA4D166F09e428Dd96C7f481a18d42ad",
-        "doHardwork": false
-      },
-      "oneInch_1INCH_BNB": {
-        "Underlying": "0xdaF66c0B7e8E2FC76B15B07AD25eE58E04a66796",
-        "NewVault": "0x9090BCcD472b9D11DE302572167DED6632e185AB",
-        "NewPool": "0x57C30567e0dbd1c308FD2c5665c4084F368560a2",
-        "RewardPool": "0x5D0EC1F843c1233D304B96DbDE0CAB9Ec04D71EF",
-        "StrategyContract": "OneInchStrategyMainnet_1INCH_BNB",
-        "NewStrategy": "0x5fD7a4D33f23967E890Ae77DD4E065bC01db343B",
-        "doHardwork": false
-      },
-      "bdo_BDO_BNB": {
-        "Underlying": "0x74690f829fec83ea424ee1F1654041b2491A7bE9",
-        "NewVault": "0xE604Fd5b1317BABd0cF2c72F7F5f2AD8c00Adbe1",
-        "NewPool": "0xdEb314a2222884B6c1e848BfFcf68dcfBc5c1406",
-        "poolId": "CakeLPsBDOBNB",
-        "NewStrategy": "0x927c074361B79713f1d7b96C18E5dE105B136b19",
-        "doHardwork": false
-      },
-      "bdo_BDO_BUSD": {
-        "Underlying": "0xc5b0d73A7c0E4eaF66baBf7eE16A2096447f7aD6",
-        "NewVault": "0x84646F736795a8bC22Ab34E05c8982CD058328C7",
-        "NewPool": "0x03b58CE34E9Cb6a908b019228778CBB9f3A1A2Ba",
-        "poolId": "CakeLPBDOBUSD",
-        "NewStrategy": "0xD70E3826927BA72bc5C01014a2C447a918e54919",
-        "doHardwork": false
-      },
-      "bdo_SBDO_BUSD": {
-        "Underlying": "0xA0718093baa3E7AAE054eED71F303A4ebc1C076f",
-        "NewVault": "0xC97DDAa8091aBaF79A4910b094830CCE5cDd78f4",
-        "NewPool": "0x9178f402453b118b6B897Ff520256Ed63b2d9998",
-        "poolId": "CakeLPsBDOBUSD",
-        "NewStrategy": "0xD77E6BDe0270B18bc1aBc964557E025023D2a989",
-        "doHardwork": false
-      },
-      "ellipsis_3pool": {
-        "Underlying": "0xaF4dE8E872131AE328Ce21D909C74705d3Aaf452",
-        "NewVault": "0x63671425ef4D25Ec2b12C7d05DE855C143f16e3B",
-        "StrategyContract": "Ellipsis3PoolStrategyMainnet",
-        "NewStrategy": "0xb43aA2C44B99BaD346143Fb44e264213d412B6c2",
-        "NewPool": "0x2Fee56e039AcCceFA3cB1f3051aD00fe550a472c",
-        "PoolId": "1",
-        "doHardwork": false
-      },
-      "ellipsis_EPS_BNB": {
-        "Underlying": "0xf9045866e7b372DeF1EFf3712CE55FAc1A98dAF0",
-        "NewVault": "0x0A7d74604b39229D444855eF294F287099774aC8",
-        "StrategyContract": "EllipsisLPStrategyMainnet_EPS_BNB",
-        "NewStrategy": "0x5954F9d5AFb005ebA67813B5Ab82398FAC7F0178",
-        "NewPool": "0x0694e3cB1055Ff33d774d51a55272DDEE305f745",
-        "PoolId": "0",
-        "doHardwork": false
-      },
-      "belt_BTCB": {
-        "Underlying": "0x51bd63F240fB13870550423D208452cA87c44444",
-        "NewVault": "0x6A0D7383762962bE039C197462bF1DF377410853",
-        "StrategyContract": "BeltSingleAssetStrategyMainnet_BeltBTCB",
-        "NewStrategy": "0xE6CaD08D92ACa2F5c5345882b6dbf13d12C26dd8",
-        "NewPool": "0xE5f7396B7f7D52C024be5e8FE229b8E11eefCCc1",
-        "PoolId": "7",
-        "doHardwork": false
-      },
-      "belt_ETH": {
-        "Underlying": "0xAA20E8Cb61299df2357561C2AC2e1172bC68bc25",
-        "NewVault": "0xF553E1f826f42716cDFe02bde5ee76b2a52fc7EB",
-        "StrategyContract": "BeltSingleAssetStrategyMainnet_BeltETH",
-        "NewStrategy": "0x53df6664b3ddE086DCe6315c317d1002b14B87E3",
-        "NewPool": "0x7002FC2D41D4185787F7b019c2517bB8490b9368",
-        "PoolId": "8",
-        "doHardwork": false
-      },
-      "belt_BNB": {
-        "Underlying": "0xa8Bb71facdd46445644C277F9499Dd22f6F0A30C",
-        "NewVault": "0x75071F2653fBC902EBaff908d4c68712a5d1C960",
-        "StrategyContract": "BeltSingleAssetStrategyMainnet_BeltBNB",
-        "NewStrategy": "0xA6fe292ff497816cF3144eaD564cCd7b44F66021",
-        "NewPool": "0x9481251436C1E27E5dBa5462c763491B8EE441Cd",
-        "PoolId": "9",
-        "doHardwork": false
-      },
-      "belt_Venus": {
-        "Underlying": "0x86aFa7ff694Ab8C985b79733745662760e454169",
-        "NewVault": "0x2427DA81376A0C0a0c654089a951887242D67C92",
-        "StrategyContract": "BeltVenusStrategyMainnet",
-        "NewStrategy": "0x3736F98190383Bb0490D0099cBedd4175f89653a",
-        "NewPool": "0x5c6Fe09FcEfeaCa84DC18018cF8aCf7476B2498F",
-        "PoolId": "0",
-        "doHardwork": false
-      },
-      "belt_BELT_BNB": {
-        "Underlying": "0xF3Bc6FC080ffCC30d93dF48BFA2aA14b869554bb",
-        "NewVault": "0xaD941e12544F49077fc6425CDa1871E11Cea5288",
-        "StrategyContract": "BeltStrategyMainnet_BELT_BNB",
-        "NewStrategy": "0x497173d620560440BD715202a2fA0a39491B6402",
-        "NewPool": "0x8E8Ca3719360809cd4BFe175De58992E7d3e7874",
-        "PoolId": "11",
-        "doHardwork": false
-      },
-      "swirl_SWIRL_BNB": {
-        "Underlying": "0x135AeDCFb35b0b5dCf61Db7891a21253452Eb970",
-        "NewVault": "0x299B00d031Ba65cA3a22A8f7E8059DAb0b072247",
-        "NewStrategy": "0x4eE876B94BB00E1792cC25D290C7FCa820a4CEd2",
-        "NewPool": "0xEa2c3C25985fBB5418c61451C2cbD1311e0EbE9e",
-        "RewardPool": "0x9FC04657C1178F857d36D8a6B028C732D78F60E0",
-        "PoolId": "stakingPool",
-        "doHardwork": false
-      },
-      "space_SPACE_BNB": {
-        "Underlying": "0x78D9a0c50F6484291b4122f61888Bb9EE71879Ff",
-        "NewVault": "0x14CB410659b4a4a7CCEa99E6F6C9eac8718160dF",
-        "NewStrategy": "0xE8E10677ed1F9409424Ea10ee4477B5C4CadCC53",
-        "NewPool": "0xC2A1fa5753B7c3272F32aBec19140658D539E61C",
-        "PoolId": "0",
-        "doHardwork": false
-      },
-      "space_SPACE_BUSD": {
-        "Underlying": "0x6B936c5C1FD7De08E03684b0588A87DBD8ce6b63",
-        "NewVault": "0x129cCeE12A9542Ff77e066E6F8d7DF49F8Cbf89D",
-        "StrategyContract": "SpaceStrategy_SPACE_BUSD",
-        "NewStrategy": "0x381b02359beBe2566c7c08Fd7d0B078269BCFF9f",
-        "NewPool": "0x03292bdfE36591F70575C77847d7f004FFd0966A",
-        "PoolId": "1",
-        "doHardwork": false
-      },
-      "ellipsis_FUSDT": {
-        "Underlying": "0x373410A99B64B089DFE16F1088526D399252dacE",
-        "NewVault": "0xe64BFE13AA99335487f1F42a56cddBFfaEC83BBF",
-        "StrategyContract": "EllipsisFUSDTStrategyMainnet",
-        "NewStrategy": "0x28db270691b840A7C2249D39435049Be1F617B02",
-        "NewPool": "0x9B36E1DcBb21DfA6863b2711Ed6f0F080888072c",
-        "PoolId": "2",
-        "doHardwork": false
-      },
-      "ellipsis_BTC": {
-        "Underlying": "0x2a435Ecb3fcC0E316492Dc1cdd62d0F189be5640",
-        "NewVault": "0x5Da237ad194B8BBb008Ac8916DF99A92A8a7c8Eb",
-        "StrategyContract": "EllipsisBTCStrategyMainnet",
-        "NewStrategy": "0x11D4f0398d135B979d1D20761c43878FBb81417f",
-        "NewPool": "0x4165884840eE7e6280c512C75B23B098F7e420fc",
-        "PoolId": "3",
-        "doHardwork": false
-      },
-      "popsicle_ICE_BNB": {
-        "Underlying": "0x51F914a192a97408D991FddDAFB8F8537C5Ffb0a",
-        "NewVault": "0x1c4ADFf419F6b91E51D0aDe953C9BBf5D16A583F",
-        "StrategyContract": "PopsicleStrategtMainnet_ICE_BNB",
-        "NewStrategy": "0xBcDf4EAec6166b94e54e2b1F0A4C2c30Cea834CA",
-        "NewPool": "0xfE7f456F8274355f17243b7282bd88129e894b1A",
-        "PoolId": "0",
-        "doHardwork": false
-      },
-      "popsicle_ICE": {
-        "Underlying": "0xf16e81dce15B08F326220742020379B855B87DF9",
-        "NewVault": "0xfeB902DB08E4e1F362866628098D6110DBe3D072",
-        "StrategyContract": "PopsicleStrategtMainnet_ICE",
-        "NewStrategy": "0xD7338145D79771D0D6926dB134aC040ABb48E835",
-        "NewPool": "0x1Bb6fDaf6258071F4d2E96d70ffEB8AD392f299B",
-        "PoolId": "0",
-        "doHardwork": false
-      }
-    }
-  },
   "MATIC": {
     "miFARM": "0xab0b2ddB9C7e440fAc8E140A89c0dbCBf2d7Bbff",
     "dQUICK": "0xf28164a485b0b2c90639e47b0f377b4a438a16b1",
@@ -1821,7 +1118,6 @@
     "DEN": "0xf379CB529aE58E1A03E62d3e31565f4f7c1F2020",
     "DEN_MAR22": "0xa286eeDAa5aBbAE98F65b152B5057b8bE9893fbB",
     "DEN_JUL22": "0x53d00635aeC4a6379523341AEBC325857f32FdE1",
-    "SES": "0x9120ECada8dc70Dc62cBD49f58e861a09bf83788",
     "QUI": "0xF65fb31ad1ccb2E7A6Ec3B34BEA4c81b68af6695",
     "JARVIS_SANCTUARY_DEN": "0xB97ae6DdF409cd2d4549aA0d3457ce3E8143BD09",
     "pMIMO": "0xADAC33f543267c4D59a8c299cF804c303BC3e4aC",
@@ -1863,7 +1159,6 @@
     "JRT_ANGLE_SEP22": "0x6966D20E33A15baFde7E856147E4E5EaF418E145",
     "JRT_SEP22": "0xcE0248f30d565555B793f42e46E58879F2cDCCa4",
     "JRT_MIMO_SEP22": "0xAFC780bb79E308990c7387AB8338160bA8071B67",
-    "JRT_ANGLE_NOV22": "0x63B87304fc9889Ce7356396ea959aA64850a52E7",
     "JRT_NOV22": "0x5eF12a086B8A61C0f11a72b36b5EF451FA17f1f1",
     "JRT_MIMO_NOV22": "0x4Fd52587194a0bfd3AC5b8096D15e1a7230bA2eb",
     "pEURe": "0x18ec0A6E18E5bc3784fDd3a3634b31245ab704F6",
@@ -1891,15 +1186,6 @@
       "quickswap_ETH_MATIC": {
         "Underlying": "0xadbF1854e5883eB8aa7BAf50705338739e558E5b"
       },
-      "quickswap_ETH_USDT": {
-        "Underlying": "0xF6422B997c7F54D1c6a6e103bcb1499EeA0a7046",
-        "NewVault": "0x3D5B0a8CD80e2A87953525fC136c33112E4b885a",
-        "StrategyContract": "QuickStrategyMainnet_ETH_USDT",
-        "NewStrategy": "0xfFBD102fAFbd9e15C9122d9C62aB299AFD4D3E4F",
-        "RewardPool": "0x45a5CB25F3E3bFEe615F6da0731740093F59b768",
-        "NewPool": "0xE1f9A3EE001a2EcC906E8de637DBf20BB2d44633",
-        "doHardwork": false
-      },
       "quickswap_IFARM_QUICK": {
         "Underlying": "0xD7668414BfD52DE6d59E16e5f647c9761992C435",
         "NewVault": "0x388Aaf7a534E96Ea97beCAb9Ff0914BB10EC18fE",
@@ -1907,24 +1193,6 @@
         "NewStrategy": "0x6a7C4655a567e105b143285542be8B47A31540A5",
         "RewardPool": "0xEa2EC0713D3B48234Ad4b2f14EDb4978D1228aE5",
         "NewPool": "0x284D7200a0Dabb05ee6De698da10d00df164f61d",
-        "doHardwork": false
-      },
-      "sushiswap_USDC_ETH": {
-        "Underlying": "0x34965ba0ac2451A34a0471F04CCa3F990b8dea27",
-        "NewVault": "0xf76a0C5083b895c76ecBF30121F036849137D545",
-        "StrategyContract": "SushiStrategyMainnet_USDC_ETH",
-        "MiniChef": "0x0769fd68dFb93167989C6f7254cd0D766Fb2841F",
-        "PoolId": 1,
-        "NewStrategy": "0xe3f309F151746b3C0953e4C0E455bFf3dc2176AA",
-        "NewPool": "0xB25e2C1efDD4b79CD5d63C0F5a45326FA4CA2139"
-      },
-      "balancer_BTC": {
-        "Underlying": "0xFeadd389a5c427952D8fdb8057D6C8ba1156cC56",
-        "NewVault": "0x002Fbb34646c32fCe6bb1D973B7585e62EeE6aa9",
-        "StrategyContract": "BalancerStrategyMainnet_BTC",
-        "NewStrategy": "0xE4b9a65c8692e7d9c574E99bF7BF2bFFa61F14E9",
-        "NewPool": "0x299F75862c49DD852f2F3349D62A7e6a98fB8A0F",
-        "PoolId": "0xfeadd389a5c427952d8fdb8057d6c8ba1156cc5600020000000000000000001e",
         "doHardwork": false
       },
       "balancer_POLYBASE": {
@@ -1937,16 +1205,6 @@
         "PoolId": "0x0297e37f1873d2dab4487aa67cd56b58e2f27875000100000000000000000002",
         "Gauge": "0x068Ff98072d3eB848D012e3390703BB507729ed6",
         "RootChainGauge": "0xA5A0B6598B90d214eAf4d7a6b72d5a89C3b9A72c"
-      },
-      "balancer_TRICRYPTO": {
-        "Underlying": "0x03cD191F589d12b0582a99808cf19851E468E6B5",
-        "NewVault": "0xC426DB5EfcBfc41B9f1ECdbc89C11E154ec2c99C",
-        "StrategyContract": "BalancerStrategyMainnet_TRICRYPTO",
-        "NewStrategy": "0xB7506271FE72FE2cdC3a7ee6Ead8749AD54df8C2",
-        "OldPool": "0xB99c358d91d57612236C74643306eA035645887E",
-        "NewPool": "0x81aCAee9a3d9b91aC42727DdB1AcADBE4D9F07F7",
-        "PoolId": "0x03cd191f589d12b0582a99808cf19851e468e6b500010000000000000000000a",
-        "doHardwork": false
       },
       "balancer_STABLE": {
         "Underlying": "0x06Df3b2bbB68adc8B0e302443692037ED9f91b42",
@@ -2001,14 +1259,6 @@
         "NewPool": "0x877635e68C1E943D6d6B777C0e847Cd7aE5A01BE",
         "RewardPool": "0xFAA0f413E67A56cbbE181024279bA5504Ce487EF",
         "useMsigProfitCalculation": true,
-        "doHardwork": false
-      },
-      "polygon_DAI": {
-        "Underlying": "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063",
-        "NewVault": "0x2Fee56e039AcCceFA3cB1f3051aD00fe550a472c",
-        "StrategyContract": "IdleStrategyDAIMainnet",
-        "NewStrategy": "0x3330d534A470BdaBD1105dab6C5Fa61E7789882E",
-        "NewPool": "0x5954F9d5AFb005ebA67813B5Ab82398FAC7F0178",
         "doHardwork": false
       },
       "polygon_USDC": {
@@ -2071,28 +1321,12 @@
         "NewStrategy": "0xc657B9BF61e928e3114FaF8aa269BEB9a29105b1",
         "NewPool": "0x60ce0066F86F7805c2Cc39bBf0b1be4BfE2ec810"
       },
-      "popsicle_ICE_WETH": {
-        "Underlying": "0x941eb28e750C441AEF465a89E43DDfec2561830b",
-        "NewVault": "0xC2F50f1886D790e199Cd8a5c0AC360DF44636012",
-        "NewStrategy": "0x1626e9a3880805fD2349E90e3116562c5Dc65f31",
-        "NewPool": "0x26906cFF92f5c0D24B3045BEA0cf11a30a22D0eA",
-        "PoolId": 0,
-        "doHardwork": false
-      },
       "quick_YEL_MATIC": {
         "Underlying": "0x8bAb87ECF28Bf45507Bd745bc70532e968b5c2De",
         "NewVault": "0xA9B35ef7C2289b5D0391381bF8a2560d2eb0F961",
         "NewStrategy": "0x2e5A5455411DE1AFb9Bf81f11fD764B9bCc0674E",
         "NewPool": "0xB2a1727Db618D6614c57ccdc7e70F3d930BFDe11",
         "PoolId": 1
-      },
-      "quickswap_PSP_MATIC": {
-        "Underlying": "0x7AfC060acCA7ec6985d982dD85cC62B111CAc7a7",
-        "NewVault": "0x54Bc6af48464510838e81fDdda4de53B2d65f32a",
-        "NewStrategy": "0x8cB98c8FD5740665E88827D45bEC42c00A8d4322",
-        "NewPool": "0x77050b56e8aC54b14e207D1E013c2719ed7C71Ab",
-        "RewardPool": "0x64D2B3994F64E3E82E48CC92e1122489e88e8727",
-        "doHardwork": false
       },
       "bal_TUSD_STABLE": {
         "Underlying": "0x0d34e5dD4D8f043557145598E4e2dC286B35FD4f",
@@ -2101,26 +1335,6 @@
         "NewStrategy": "0x430799E21A2aF202D8d983E29935e4D2Ed16aa2e",
         "NewPool": "0xA917F56A1749f0E7820fdBc4EB783a3a476164ba",
         "PoolId": "0x0d34e5dd4d8f043557145598e4e2dc286b35fd4f000000000000000000000068",
-        "doHardwork": false
-      },
-      "bal_USDC_WETH_polygon": {
-        "Underlying": "0x10f21C9bD8128a29Aa785Ab2dE0d044DCdd79436",
-        "NewVault": "0x264B17DF8a79bFa830C1A94B90876CD3b0784b30",
-        "StrategyContract": "BalancerStrategyMainnet_USDC_WETH",
-        "NewStrategy": "0x014cE9201e417b7A8c49Aa1C9eB72E8f8D2b3DcD",
-        "NewPool": "0x02F28abb9bc319E03FC6844466BBB569D5cDe097",
-        "PoolId": "0x10f21c9bd8128a29aa785ab2de0d044dcdd79436000200000000000000000059",
-        "Gauge": "0xD3Fdd06285d2649337800f00B41D07801C9f5715",
-        "RootChainGauge": "0x45012035a728b0a9B344036e6bff6c775EE09769",
-        "doHardwork": false
-      },
-      "bal_WBTC_WETH_polygon": {
-        "Underlying": "0xCF354603A9AEbD2Ff9f33E1B04246d8Ea204ae95",
-        "NewVault": "0x60E057A17be997a1631B7188e8AF42657F836077",
-        "StrategeContract": "BalancerStrategyMainnet_WBTC_WETH",
-        "NewStrategy": "0x58Ca938dcACB193a9939D13A4b2AB6De5128D755",
-        "NewPool": "0x0E8661714998c2d8232Ca47406d8bE7ac066D16a",
-        "PoolId": "0xcf354603a9aebd2ff9f33e1b04246d8ea204ae9500020000000000000000005a",
         "doHardwork": false
       },
       "jarvis_DEN2_4EUR": {
@@ -2141,15 +1355,6 @@
         "useMsigProfitCalculation": true,
         "doHardwork": false
       },
-      "jarvis_SES_2JPY": {
-        "Underlying": "0x3b76F90A8ab3EA7f0EA717F34ec65d194E5e9737",
-        "NewVault": "0x483d1e18E67bF69ef555c798807DaDbE7757311D",
-        "NewStrategy": "0xE01009072a45D782Fe827a286EB2Fd09cf559eDB",
-        "NewPool": "0x811020F961f3A3EB4DF393c2837611fC1271556E",
-        "RewardPool": "0xeb4a4ba3ef5e3a286dc49408c27f9bdaa286db84",
-        "useMsigProfitCalculation": true,
-        "doHardwork": false
-      },
       "jarvis_2JPY_HODL": {
         "OldUnderlying": "0xE8dCeA7Fb2Baf7a9F4d9af608F06d78a687F8d9A",
         "Underlying": "0xaA91CDD7abb47F821Cf07a2d38Cc8668DEAf1bdc",
@@ -2160,15 +1365,6 @@
         "RewardPool": "0xa0044b58b1de085845aeA7BD3256a00EAb4145a2",
         "useMsigProfitCalculation": true
       },
-      "jarvis_QUI_2CAD": {
-        "Underlying": "0x32d8513eDDa5AEf930080F15270984A043933A95",
-        "NewVault": "0x7f7136760ce6235b0889704B01bE23E6E8220e7B",
-        "NewStrategy": "0x77B2a497dC7482622Ff38C4C624B258F009Bf34b",
-        "NewPool": "0x21284e4A00999cf01783Cc1c2dF9C9F059435c41",
-        "RewardPool": "0x16ef7a2f8156819bae95cfce0ca712d01498b665",
-        "useMsigProfitCalculation": true,
-        "doHardwork": false
-      },
       "jarvis_2CAD_HODL": {
         "Underlying": "0xA69b0D5c0C401BBA2d5162138613B5E38584F63F",
         "NewVault": "0x2D165213df42C70B72FbE47670bA3b7e6DBfAB4a",
@@ -2176,35 +1372,6 @@
         "NewPool": "0x2f590EB4980ed49Ff9613E3098b61772970a7f36",
         "RewardPool": "0xa0044b58b1de085845aeA7BD3256a00EAb4145a2",
         "useMsigProfitCalculation": true
-      },
-      "crvTriCrypto3_polygon": {
-        "Underlying": "0xdAD97F7713Ae9437fa9249920eC8507e5FbB23d3",
-        "NewVault": "0x82B5393Df3822921159C3e9513191299caAe05f9",
-        "NewStrategy": "0xdef9E389b7dc4F34182fb1eEb2702029deF8F24c",
-        "NewPool": "0xec4CDb325d293a0057fF0b8b53C637605A00066b",
-        "CurvePool": "0x92215849c439E1f8612b6646060B4E3E5ef822cC",
-        "Gauge": "0x3B6B158A76fd8ccc297538F454ce7B4787778c7C",
-        "RootChainGauge": "0x060e386eCfBacf42Aa72171Af9EFe17b3993fC4F",
-        "doHardwork": false
-      },
-      "crvEurtUsd_polygon": {
-        "Underlying": "0x600743B1d8A96438bD46836fD34977a00293f6Aa",
-        "NewVault": "0x09E5FCd4F05ba0ea95D4f81a3f8cd60A50840100",
-        "NewStrategy": "0xBcEF4629f7ea87E84d729a8279277cd63f7F1268",
-        "NewPool": "0x105d37A970594a231ffeAA5283b18101596f4f55",
-        "CurvePool": "0xB446BF7b8D6D4276d0c75eC0e3ee8dD7Fe15783A",
-        "Gauge": "0x40c0e9376468b4f257d15F8c47E5D0C646C28880",
-        "RootChainGauge": "0xAF78381216a8eCC7Ad5957f3cD12a431500E0B0D",
-        "doHardwork": false
-      },
-      "jarvis_JRTMAY22_USDC": {
-        "Underlying": "0xdaa2C66B06B62bAd2E192be0A93f895c855484ee",
-        "NewVault": "0x95b730ED766F4e385016144fA30E96b78EBd09f5",
-        "NewStrategy": "0x1319F123962DC98418A73e5CeC7a6a555e571425",
-        "NewPool": "0xd2104e58258D0dFC4dc6D203DDBE0AaeE4798E6C",
-        "RewardPool": "0x0ff93e7CE954A7Ac2ADbBe8F635513cbDB497405",
-        "useMsigProfitCalculation": true,
-        "doHardwork": false
       },
       "jarvis_2SGD_HODL": {
         "Underlying": "0xeF75E9C7097842AcC5D0869E1dB4e5fDdf4BFDDA",
@@ -2231,54 +1398,6 @@
         "RewardPool": "0x1e1506b8cF84f8D1C2dbF474BcB6fEC36467C478",
         "useMsigProfitCalculation": true
       },
-      "jarvis_agDENJUL22_2EUR": {
-        "Underlying": "0x7d85cCf1B7cbAAB68c580E14fA8C92E32704404f",
-        "NewVault": "0x48795326FBa34e07076038cC8f03f88a80E71214",
-        "NewStrategy": "0xD9C4C1DD6F8dD7b7C07254B5E731530cf2EfEbBF",
-        "NewPool": "0x1dfdE6E4c9852Bb8c593b72631257EAC6A827E09",
-        "RewardPool": "0x834579150Cc521e0afAB15568930e3BEc67B865A",
-        "useMsigProfitCalculation": true
-      },
-      "jarvis_JRTJUL22_USDC": {
-        "Underlying": "0x707C7f22d5E3C0234bCc53aeE51420d6cdD988f9",
-        "NewVault": "0xcFD80B11fefD581Fc45868ABD0d61e8437C050b1",
-        "NewStrategy": "0xcd87438ba146A76fE078dc61ef0f0765b67f31a4",
-        "NewPool": "0xF353cC638068F7af05856447D3D655dBE510F257",
-        "RewardPool": "0xaB5053e1f6f7fb242f62091BEE8f15c81265EE05",
-        "useMsigProfitCalculation": true
-      },
-      "jarvis_2NZD_HODL": {
-        "Underlying": "0x976A750168801F58E8AEdbCfF9328138D544cc09",
-        "NewVault": "0x6F2047E88D70fEcEbA2D33Ec6A0CC579B56CEa52",
-        "NewStrategy": "0x34733CE813D289D05F17DCB3CB195b2128105f54",
-        "NewPool": "0xfcD319Da00C632c2Fca0c95E147A5494973E6fC8",
-        "RewardPool": "0x2FAe83B3916e1467C970C113399ee91B31412bCD",
-        "useMsigProfitCalculation": true
-      },
-      "jarvis_AURJUL22_WETH": {
-        "Underlying": "0xF9Ce68A9E41f1e7cee5FDCbef99669653Aa61390",
-        "NewVault": "0x3BB93BdEaF0906819e5D2Eccdc2E9Ce408296dD1",
-        "NewStrategy": "0xaB298F259426e8202B69C17037270862a19554D8",
-        "NewPool": "0x7bcb258EED0fD374d3B0398C5DcC1a4a792e5e93",
-        "RewardPool": "0x8b4D15670CaA3772a29AaC386AB924a0F54Abe48",
-        "useMsigProfitCalculation": true
-      },
-      "jarvis_jEUR_WETH_HODL": {
-        "Underlying": "0x7090f6f42EA9b07C85E46aD796f8C4A50E0f76fA",
-        "NewVault": "0xe1195e7276Ca0A20d8E5A07eecFb9Ec9921B90BD",
-        "NewStrategy": "0x6F7646397b2B57c6791b36556E5FfBB0Db7a2Be5",
-        "NewPool": "0x7d18650C8A7aFfC06604cF83628bf95e51f5ceDd",
-        "RewardPool": "0x8b4D15670CaA3772a29AaC386AB924a0F54Abe48",
-        "useMsigProfitCalculation": true
-      },
-      "jarvis_jCHF_WETH_HODL": {
-        "Underlying": "0x95697B1b83E0F28017158BF2a2Adc6bA991088EC",
-        "NewVault": "0x14444C719eDAD3c24563860203e2252e55711eb6",
-        "NewStrategy": "0xbF59f171d255C86C798ffCCf0909F2F2d0e732b3",
-        "NewPool": "0x19b4954386A1061756402159Dae16a831FBB75F6",
-        "RewardPool": "0x8b4D15670CaA3772a29AaC386AB924a0F54Abe48",
-        "useMsigProfitCalculation": true
-      },
       "bal_MaticX": {
         "Underlying": "0xb20fC01D21A50d2C734C4a1262B4404d41fA7BF0",
         "OldUnderlying": "0xC17636e36398602dd37Bb5d1B3a9008c7629005f",
@@ -2299,34 +1418,6 @@
         "PoolId": "0x8159462d255c1d24915cb51ec361f700174cd99400000000000000000000075d",
         "Gauge": "0x2Aa6fB79EfE19A3fcE71c46AE48EFc16372ED6dD"
       },
-      "ape_BANANA_MATIC": {
-        "Underlying": "0x034293F21F1cCE5908BC605CE5850dF2b1059aC0",
-        "NewVault": "0x8B7EEb22B91D588d8e5564b44F256Df41ad89923",
-        "NewStrategy": "0xf79AC49370b0D62405b83E9903b3BcC106886972",
-        "NewPool": "0x1801c2a7BC1046BF13ABA72315fFa4f70071Ce59",
-        "ApePoolId": "0"
-      },
-      "ape_ETH_MATIC": {
-        "Underlying": "0x6Cf8654e85AB489cA7e70189046D507ebA233613",
-        "NewVault": "0x492af6444C3003097468789b72f09a6eD4fC5a6d",
-        "NewStrategy": "0x6A0ce488A9D5EA6B150a591D6B354c2BC895eCa9",
-        "NewPool": "0x53cDFc750c1C8E0bB1C18C670fB8f5da7f7c60fd",
-        "ApePoolId": "1"
-      },
-      "ape_DAI_MATIC": {
-        "Underlying": "0xd32f3139A214034A0f9777c87eE0a064c1FF6AE2",
-        "NewVault": "0x68EaBFbaD552615ABe6d38E632184f88d6FFd201",
-        "NewStrategy": "0x7Aa2ef977Ef523b7d600b55EBFe46bBd96eDD467",
-        "NewPool": "0xE99C875D455DdEEC443Ba3f1c8eF073EDEd35794",
-        "ApePoolId": "2"
-      },
-      "ape_USDT_MATIC": {
-        "Underlying": "0x65D43B64E3B31965Cd5EA367D4c2b94c03084797",
-        "NewVault": "0x843EaDd613fF922CB2e7aE06aa810e0b147517A7",
-        "NewStrategy": "0x60591d798b334d1b28cB07Cbc76493F5De356ed0",
-        "NewPool": "0xca1216D54a50A89575C6481D53c6760E1C8aaF81",
-        "ApePoolId": "3"
-      },
       "ape_BTC_MATIC": {
         "Underlying": "0xe82635a105c520fd58e597181cBf754961d51E3e",
         "NewVault": "0x56ABce9f4872c3bfb2c047a22c868Cfb24EAc8a1",
@@ -2334,81 +1425,11 @@
         "NewPool": "0x37f33Ba01EF14d239484858959Ab683c07352e52",
         "ApePoolId": "4"
       },
-      "ape_DAI_USDC": {
-        "Underlying": "0x5b13B583D4317aB15186Ed660A1E4C65C10da659",
-        "NewVault": "0xF91d4D99032Bc4905b91BD08055D5a65d95Db58E",
-        "NewStrategy": "0x3F1b8d9B8B699c013Bc48047109a445fA135D8e3",
-        "NewPool": "0x8DC2bC8E52BE6931f02951546a35ce8dF7797DbD",
-        "ApePoolId": "5"
-      },
-      "ape_BNB_MATIC": {
-        "Underlying": "0x0359001070cF696D5993E0697335157a6f7dB289",
-        "NewVault": "0xaCEDABb7C31f862a47fd07F4D46a862987737F02",
-        "NewStrategy": "0x69Edd4c37f466A283Fe51BDB9A712C2E576A1B1a",
-        "NewPool": "0x8322dB352E63eDbBCcF4CB9d8370C1dC5C36Df49",
-        "ApePoolId": "6"
-      },
-      "jarvis_JRTANGLE_2EURagEUR": {
-        "Underlying": "0x8c2fe36E51657385d3091E92FbACb79263867F16",
-        "NewVault": "0xbB5d97c05E55b30B7F35C757F467eBeCD0Ba4cD5",
-        "NewStrategy": "0xa9b16d40d8cF703A22f4B633A067009e753A35dA",
-        "NewPool": "0x6209b0893298745987456dc1F8188eC1a784dAa9",
-        "RewardPool": "0x9D5d2509C78f7dfEE7FD1b82a49c00Bc9dA70D28",
-        "useMsigProfitCalculation": true
-      },
-      "jarvis_JRTSEP22_USDC": {
-        "Underlying": "0x2623D9a6cceb732f9e86125e107A18e7832B27e5",
-        "NewVault": "0x587155256938F081D6e48829d45849BD856Fd969",
-        "NewStrategy": "0xBb630cAB450420C96f77320146aEa22f7043E2A5",
-        "NewPool": "0xB4B7C7800025E407C9Efe8993f5E5A60a98F3E97",
-        "RewardPool": "0x2FAe83B3916e1467C970C113399ee91B31412bCD",
-        "useMsigProfitCalculation": true
-      },
       "jarvis_2EUR_EURT_HODL": {
         "Underlying": "0x2C3cc8e698890271c8141be9F6fD6243d56B39f1",
         "NewVault": "0xF7Cbe177157031eA2d63399BeEFc027779585Bb8",
         "NewStrategy": "0xa0eF0E68255eC13ABD6c731300713CE504D3844E",
         "NewPool": "0x1046bC2199fa009a19A2a0A04eF598991BA4523E",
-        "RewardPool": "0xa0044b58b1de085845aeA7BD3256a00EAb4145a2",
-        "useMsigProfitCalculation": true
-      },
-      "jarvis_JRTMIMO_2EURPAR": {
-        "Underlying": "0x181650dde0A3a457F9e82B00052184AC3FEAAdF3",
-        "NewVault": "0x173ce98897F7c846d7282555B52362B4233d2196",
-        "NewStrategy": "0x0c8701d6889F6C0D5fCaAf46e58352475945eCaD",
-        "NewPool": "0x8d3E0f041cd9E6f09bfF93D3c621041E80ff1cF7",
-        "RewardPool": "0x2BC39d179FAfC32B7796DDA3b936e491C87D245b",
-        "useMsigProfitCalculation": true
-      },
-      "jarvis_JRTNOV22_USDC": {
-        "Underlying": "0x68Fd822a2Bda3dB31fFfA68089696ea4e55A9D36",
-        "NewVault": "0xE17e6EfbD0064992D1E4e9a4641f30e40be208a0",
-        "NewStrategy": "0x5e1ee22580E2Dfa3859bFae4a82f8460527cC587",
-        "NewPool": "0x75B0846c94060bAb13b7Ae4Cc5571A1a7D8cC5cd",
-        "RewardPool": "0xa0044b58b1de085845aeA7BD3256a00EAb4145a2",
-        "useMsigProfitCalculation": true
-      },
-      "jarvis_JRTMIMONOV22_2EURPAR": {
-        "Underlying": "0x946bE3eCAebaA3fe2eBb73864ab555A8cfdF49Fd",
-        "NewVault": "0xF67d5e775C76E1631ea33D9977A02EccD7316a4C",
-        "NewStrategy": "0x2DF22A3b098f0Ec01ad4Ba8a9b43d73c0E51Ed30",
-        "NewPool": "0x1399B0B85E449fae6A46EF3f468C824a4e9486A4",
-        "RewardPool": "0xeA9871A9451c281cc1180100FC074D7F28402288",
-        "useMsigProfitCalculation": true
-      },
-      "jarvis_JRTANGLENOV22_2EURagEUR": {
-        "Underlying": "0x4D44f653B885fbddF486a71508Afd63071ca1A6E",
-        "NewVault": "0xd2C0B08d64D5Edf4ec320807C6a2C12F37840c99",
-        "NewStrategy": "0x8cd565800a354229470ca46Bfc35A97593ad6e30",
-        "NewPool": "0xBc3A061Fc4394f21Fd5cC373C2048FeCe08bb97a",
-        "RewardPool": "0x7349Cc23B3A3E104ec2FA5A0BB29c8b022508779",
-        "useMsigProfitCalculation": true
-      },
-      "jarvis_2EUR_EURe_HODL": {
-        "Underlying": "0x2F3E9CA3bFf85B91D9fe6a9f3e8F9B1A6a4c3cF4",
-        "NewVault": "0xBb7Ae170791d617d9BEc6196c63a7CF8EEFF6087",
-        "NewStrategy": "0xF22015A7B2CaF9608037244fD2a45d6318b09045",
-        "NewPool": "0x3c39B74025Ed89F060CFa53E06C2827a34e093A4",
         "RewardPool": "0xa0044b58b1de085845aeA7BD3256a00EAb4145a2",
         "useMsigProfitCalculation": true
       },

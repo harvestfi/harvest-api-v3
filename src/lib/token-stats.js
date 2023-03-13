@@ -44,15 +44,9 @@ const getMonthlyProfits = async () => {
     rejectUnauthorized: false, // Ignore SSL errors (this is ok since there is no sensitive data)
   })
 
-  let resultBSC, resultETH, response
+  let resultETH, response
 
   try {
-    response = await axios.get(`${MONTHLY_PROFITS_ENDPOINT}?network=bsc`, {
-      httpsAgent: agent,
-    })
-
-    resultBSC = get(response, 'data.weeklyAllProfit')
-
     response = await axios.get(`${MONTHLY_PROFITS_ENDPOINT}?network=eth`, {
       httpsAgent: agent,
     })
@@ -62,7 +56,7 @@ const getMonthlyProfits = async () => {
     console.error('Error getting monthly profits: ', err)
   }
 
-  return new BigNumber(resultETH).plus(resultBSC).dividedBy(7).times(30).times(1.6).toFixed(2)
+  return new BigNumber(resultETH).dividedBy(7).times(30).times(1.6).toFixed(2)
 }
 
 const getHistoricalAverageProfitSharingAPY = async () => {

@@ -1,7 +1,6 @@
-const { VAULT_CATEGORIES_IDS, POOL_TYPES } = require('../../data/constants')
+const { POOL_TYPES } = require('../../data/constants')
 
 const poolType = `^(${Object.values(POOL_TYPES).join('|')})$`
-const vaultsCategory = `^(${Object.values(VAULT_CATEGORIES_IDS).join('|')})$`
 
 const vaultsPattern = {
   type: 'array',
@@ -16,24 +15,6 @@ const vaultsPattern = {
             minimum: 0,
             maximum: 1000,
           },
-          category: {
-            anyOf: [
-              {
-                type: 'string',
-                pattern: vaultsCategory,
-              },
-              {
-                type: 'array',
-                items: {
-                  type: 'string',
-                  pattern: vaultsCategory,
-                },
-              },
-            ],
-          },
-          displayName: {
-            type: 'string',
-          },
           apyIconUrls: {
             type: 'array',
             items: {
@@ -47,7 +28,22 @@ const vaultsPattern = {
             },
           },
           logoUrl: {
-            type: 'string',
+            type: 'array',
+            items: {
+              type: 'string',
+            },
+          },
+          tokenNames: {
+            type: 'array',
+            items: {
+              type: 'string',
+            },
+          },
+          platform: {
+            type: 'array',
+            items: {
+              type: 'string',
+            },
           },
           tokenAddress: {
             anyOf: [
@@ -131,7 +127,8 @@ const vaultsPattern = {
         required: [
           'chain',
           'id',
-          'displayName',
+          'tokenNames',
+          'platform',
           'totalSupply',
           'totalValueLocked',
           'apyIconUrls',
@@ -320,11 +317,10 @@ const POOLS_SCHEMA = {
       },
       required: ['apiData', 'lastUpdated'],
     },
-    bsc: poolsPattern,
     eth: poolsPattern,
     matic: poolsPattern,
   },
-  required: ['updatedAt', 'bsc', 'eth', 'matic'],
+  required: ['updatedAt', 'eth', 'matic'],
 }
 
 const VAULTS_SCHEMA = {
@@ -344,11 +340,10 @@ const VAULTS_SCHEMA = {
       },
       required: ['apiData', 'lastUpdated'],
     },
-    bsc: vaultsPattern,
     eth: vaultsPattern,
     matic: vaultsPattern,
   },
-  required: ['updatedAt', 'bsc', 'eth', 'matic'],
+  required: ['updatedAt', 'eth', 'matic'],
 }
 
 module.exports = {

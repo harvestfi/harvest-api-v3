@@ -15,19 +15,11 @@ const getIncentivePoolStats = async (
   poolContractData,
   lpTokenData,
   weeklyRewardRateOverride, // used to overwrite the reward amount per week (currently used for ampliFARM and INCENTIVE_BUYBACK pools)
-  basisPoolId,
   rewardTokenAddress,
   isPotPool,
 ) => {
   const {
-    methods: {
-      periodFinish,
-      rewardRate,
-      rewardRateForToken,
-      periodFinishForToken,
-      totalSupply,
-      rewardRatePerPool,
-    },
+    methods: { periodFinish, rewardRate, rewardRateForToken, periodFinishForToken, totalSupply },
     instance,
   } = poolContractData
 
@@ -40,8 +32,6 @@ const getIncentivePoolStats = async (
 
   const fetchedRewardRate = isPotPool
     ? new BigNumber(await rewardRateForToken(rewardTokenAddress, instance))
-    : !isUndefined(basisPoolId)
-    ? new BigNumber(await rewardRatePerPool(basisPoolId, instance))
     : new BigNumber(await rewardRate(instance))
 
   const fetchedTokenPrice = await getTokenPrice(rewardTokenAddress, pool.chain)
@@ -59,11 +49,7 @@ const getIncentivePoolStats = async (
     stakingTokenPrice = await getTokenPrice(lpTokenData.address, pool.chain)
   }
 
-  fetchedTotalSupply = new BigNumber(
-    !isUndefined(basisPoolId)
-      ? await totalSupply(basisPoolId, instance)
-      : await totalSupply(instance),
-  )
+  fetchedTotalSupply = new BigNumber(await totalSupply(instance))
 
   // Set to one in the case of zero to avoid division by zero
   if (fetchedTotalSupply.eq(0)) {
@@ -122,7 +108,6 @@ const getPoolStatsPerType = async (pool, poolContractData, lpTokenData, weeklyRe
           poolContractData,
           lpTokenData,
           undefined,
-          undefined,
           rewardTokenAddress,
           isPotPool(pool),
         )
@@ -137,7 +122,6 @@ const getPoolStatsPerType = async (pool, poolContractData, lpTokenData, weeklyRe
           pool,
           poolContractData,
           lpTokenData,
-          undefined,
           undefined,
           rewardTokenAddress,
           isPotPool(pool),
@@ -158,8 +142,8 @@ const getPoolStatsPerType = async (pool, poolContractData, lpTokenData, weeklyRe
           poolContractData,
           lpTokenData,
           undefined,
-          undefined,
           rewardTokenAddress,
+          isPotPool(pool),
         )
         poolStats.apy = getDailyCompound(poolStats.apr)
         break
@@ -233,7 +217,6 @@ const getPoolStatsPerType = async (pool, poolContractData, lpTokenData, weeklyRe
           poolContractData,
           lpTokenData,
           weeklyRewardRateOverride,
-          undefined,
           rewardTokenAddress,
           isPotPool(pool),
         )

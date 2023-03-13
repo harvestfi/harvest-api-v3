@@ -31,16 +31,11 @@ const poolContract = require('../contracts/pool/contract.json')
 const potPoolMethods = require('../contracts/pot-pool/methods')
 const potPoolContract = require('../contracts/pot-pool/contract.json')
 
-const basisPoolMethods = require('../contracts/basis-pool/methods')
-const basisPoolContract = require('../contracts/basis-pool/contract.json')
-
 const tokenMethods = require('../contracts/token/methods')
 const tokenContract = require('../contracts/token/contract.json')
 
 const farmsteadUSDCMethods = require('../contracts/farmstead-usdc/methods')
 const farmsteadUSDCContract = require('../contracts/farmstead-usdc/contract.json')
-
-const amplifierContract = require('../contracts/amplifier/contract.json')
 
 const balancerVaultMethods = require('../contracts/balancer-vault/methods')
 const balancerVaultContract = require('../contracts/balancer-vault/contract.json')
@@ -108,13 +103,6 @@ module.exports = {
   potPool: {
     methods: potPoolMethods,
     contract: potPoolContract,
-  },
-  basisPool: {
-    methods: basisPoolMethods,
-    contract: basisPoolContract,
-  },
-  amplifier: {
-    contract: amplifierContract,
   },
   farmsteadUSDC: {
     contract: farmsteadUSDCContract,

@@ -6,7 +6,7 @@ const getTradingApy = async poolId => {
   let apy
 
   try {
-    const response = await cachedAxios.get('https://stats.curve.fi/raw-stats-arbitrum/apys.json')
+    const response = await cachedAxios.get('http://stats.curve.fi/raw-stats-arbitrum/apys.json')
 
     apy = new BigNumber(get(response, `data.apy.day[${poolId}]`, 0))
   } catch (err) {

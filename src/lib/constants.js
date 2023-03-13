@@ -1,8 +1,11 @@
 require('dotenv').config()
 const INFURA_URL =
-  process.env.MAINNET_RPC_URL || `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`
+  // process.env.MAINNET_RPC_URL || `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`
+  process.env.MAINNET_RPC_URL ||
+  `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_ETH_KEY}`
 const INFURA_WS_URL =
-  process.env.MAINNET_WS_URL || `wss://mainnet.infura.io/ws/v3/${process.env.INFURA_KEY}`
+  // process.env.MAINNET_WS_URL || `wss://mainnet.infura.io/ws/v3/${process.env.INFURA_KEY}`
+  process.env.MAINNET_WS_URL || `wss://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_ETH_KEY}`
 const COINGECKO_PRICE_API_ENDPOINT_CONTRACT = 'https://api.coingecko.com/api/v3/simple/token_price'
 const COINGECKO_PRICE_API_ENDPOINT_ID = 'https://api.coingecko.com/api/v3/simple/price'
 const API_KEY = process.env.API_KEY || 'harvest-key'
@@ -25,7 +28,6 @@ const GET_PRICE_TYPES = {
   UNISWAP_PAIR: 'UNISWAP_PAIR',
   MANUAL: 'MANUAL',
   F_TOKEN_ID: 'F_TOKEN_ID',
-  PANCAKESWAP_PAIR: 'PANCAKESWAP_PAIR',
   SUSHISWAP_PAIR: 'SUSHISWAP_PAIR',
   UNISWAP_V3: 'UNISWAP_V3',
   CURVE_POOL: 'CURVE_POOL',
@@ -44,21 +46,13 @@ const ESTIMATED_APY_TYPES = {
   SUSHI: 'SUSHI',
   IDLE_FINANCE: 'IDLE_FINANCE',
   NARWHALE: 'NARWHALE',
-  BASIS: 'BASIS',
   NATIVE_SUSHI: 'NATIVE_SUSHI',
   SUSHI_PLUS_NATIVE: 'SUSHI_PLUS_NATIVE',
   MUSE: 'MUSE',
   ONEINCH: 'ONEINCH',
-  VENUS: 'VENUS',
-  PANCAKE: 'PANCAKE',
-  VENUS_VAI_STAKING: 'VENUS_VAI_STAKING',
   GOOSE: 'GOOSE',
   BDO: 'BDO',
-  ELLIPSIS: 'ELLIPSIS',
-  BELT: 'BELT',
   SWIRL: 'SWIRL',
-  SPACE: 'SPACE',
-  POPSICLE: 'POPSICLE',
   COMPFI: 'COMPFI',
   CONVEX: 'CONVEX',
   BALANCER: 'BALANCER',
@@ -76,8 +70,6 @@ const TRADING_APY_TYPES = {
   UNIV3_V2: 'UNIV3_V2',
   RARI_FARMSTEAD_USDC: 'RARI_FARMSTEAD_USDC',
   CONVEX: 'CONVEX',
-  BELT: 'BELT',
-  VENUS: 'VENUS',
   MSTABLE: 'MSTABLE',
   LOOKS: 'LOOKS',
 }
@@ -131,7 +123,7 @@ const COMPOUND_CTOKEN_API_URL = 'https://api.compound.finance/api/v2/ctoken'
 
 const APY_VISION_API_URL = 'https://stats.apy.vision/api/v1'
 
-const ARBITRUM_CONVEX_API_URL = 'https://www.convexfinance.com/api/sidechains-apys'
+const ARBITRUM_CONVEX_API_URL = 'https://www.convexfinance.com/api/curve-arbitrum-apys'
 
 const SUSHI_POOLS_IDS = {
   USDT: 0,
@@ -141,11 +133,6 @@ const SUSHI_POOLS_IDS = {
   SUSHI: 12,
   UST: 85,
   PERP: 156,
-}
-
-const BASIS_POOL_IDS = {
-  'BAC-DAI': 0,
-  'BAS-DAI': 2,
 }
 
 const HISTORICAL_AVERAGE_PROFIT_SHARING_APY_DAYS = 14
@@ -169,23 +156,19 @@ const SUSHI_GRAPHQL_ENDPOINTS = {
 
 const CHAIN_TYPES = {
   ETH: '1',
-  BSC: '56',
   MATIC: '137',
   ARBITRUM_ONE: '42161',
 }
 
-const BSC_RPC_URL = process.env.BSC_RPC_URL || 'https://bsc-dataseed2.binance.org/'
 const MATIC_RPC_URL =
   process.env.MATIC_RPC_URL ||
-  `https://polygon-mainnet.infura.io/v3/${process.env.MATIC_INFURA_KEY}`
+  // `https://polygon-mainnet.infura.io/v3/${process.env.MATIC_INFURA_KEY}`
+  `https://polygon-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
 const ARBITRUM_RPC_URL =
   process.env.ARBITRUM_RPC_URL ||
-  `https://arbitrum-mainnet.infura.io/v3/${process.env.ARBITRUM_INFURA_KEY}`
-const VENUS_API_URL = 'https://api.venus.io/api/governance/venus'
-const BDO_API_URL = 'https://api.bdollar.fi/api/bdollar/'
-const ELLIPSIS_API_URL = 'https://api.ellipsis.finance/api/'
+  // `https://arbitrum-mainnet.infura.io/v3/${process.env.ARBITRUM_INFURA_KEY}`
+  `https://arb-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
 const SWIRL_API_URL = 'https://api.swirl.cash/'
-const BELT_API_URL = 'https://s.belt.fi/info/all.json'
 const MSTABLE_API_URL = 'https://api.mstable.org/pools'
 const APE_API_URL = 'https://ape-swap-api.herokuapp.com'
 
@@ -237,8 +220,6 @@ module.exports = {
   WEB3_CALL_COUNT_STATS_KEY,
   WEB3_CALL_COUNT_KEY,
   GET_POOL_DATA_BATCH_SIZE,
-  VENUS_API_URL,
-  BSC_RPC_URL,
   CHAIN_TYPES,
   INFURA_URL,
   INFURA_WS_URL,
@@ -265,13 +246,9 @@ module.exports = {
   CG_CACHE_TTL,
   COLLATERAL_TYPE,
   TOTAL_GAS_SAVED_ENDPOINT,
-  BASIS_POOL_IDS,
   SUSHI_GRAPHQL_ENDPOINTS_TYPES,
   SUSHI_GRAPHQL_ENDPOINTS,
-  BDO_API_URL,
-  ELLIPSIS_API_URL,
   SWIRL_API_URL,
-  BELT_API_URL,
   MSTABLE_API_URL,
   DEBUG_MODE,
   DB_CACHE_IDS,

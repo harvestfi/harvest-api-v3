@@ -8,7 +8,7 @@ const uniNonFungibleContractData = require('../../lib/web3/contracts/uni-non-fun
 const { getAmountsForPosition } = require('../../lib/web3/contracts/unistatus-viewer/methods')
 const { getPositions } = require('../../lib/web3/contracts/uni-non-fungible-manager/methods')
 const { token: tokenContractData } = require('../../lib/web3/contracts')
-const { CHAIN_TYPES, UI_DATA_FILES } = require('../../lib/constants')
+const { UI_DATA_FILES } = require('../../lib/constants')
 const { getUIData } = require('../../lib/data')
 
 const { getPosId } = require('./uniswap-v3.js')
@@ -56,13 +56,9 @@ const getPrice = async (contractAddress, firstToken, secondToken) => {
       allFirstAssetInWei = new BigNumber(await getBalance(contractAddress, firstInstance))
     }
 
-    if (chainId === CHAIN_TYPES.BSC && secondToken === 'BNB') {
-      allSecondAssetInWei = new BigNumber(await web3Instance.eth.getBalance(contractAddress))
-      secondToken = 'wBNB'
-    } else {
-      const secondInstance = new web3Instance.eth.Contract(abi, tokens[secondToken].tokenAddress)
-      allSecondAssetInWei = new BigNumber(await getBalance(contractAddress, secondInstance))
-    }
+    const secondInstance = new web3Instance.eth.Contract(abi, tokens[secondToken].tokenAddress)
+    allSecondAssetInWei = new BigNumber(await getBalance(contractAddress, secondInstance))
+
     const tokenInstance = new web3Instance.eth.Contract(abi, contractAddress)
     totalSupplyInWei = new BigNumber(await getTotalSupply(tokenInstance))
     pairDecimals = await getDecimals(tokenInstance)
