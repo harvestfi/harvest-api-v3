@@ -52,7 +52,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
   aura_bbiUSD: {
-    inactive: true,
+    inactive: true, //inactive
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
