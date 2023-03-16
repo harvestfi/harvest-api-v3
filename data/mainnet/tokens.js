@@ -153,7 +153,6 @@ module.exports = {
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: [
       './icons/balancer.svg',
-      './icons/balancer.svg',
       './icons/wbtc.svg',
       './icons/eth.svg',
       './icons/usdc.svg',
@@ -360,7 +359,7 @@ module.exports = {
   },
   Curve_TriCrypto_arbitrum: {
     chain: CHAINS_ID.ARBITRUM_ONE,
-    logoUrl: ['./icons/curve.svg', './icons/curve-crypto-icons-stack-2-arbitrum.svg#tricrypto'],
+    logoUrl: ['./icons/curve.svg', './icons/wbtc.svg', './icons/weth.svg', './icons/usdt.svg'],
     decimals: '18',
     tokenAddress: addresses.ARBITRUM_ONE.Curve_TriCrypto_arbitrum.Underlying,
     tokenNames: ['WBTC', 'WETH', 'USDT'],
@@ -817,9 +816,9 @@ module.exports = {
   aura_bbaUSD: {
     isNew: true,
     chain: CHAINS_ID.ETH_MAINNET,
-    apyIconUrls: ['./icons/balancer.svg', './icons/aura.png', './icons/bbausd.png'],
+    apyIconUrls: ['./icons/balancer.svg', './icons/aura.png'],
     apyTokenSymbols: ['BAL', 'AURA'],
-    logoUrl: ['./icons/aura.png', './icons/balancer-bbaUSD.png'],
+    logoUrl: ['./icons/aura.png', './icons/bbausd.png'],
     tokenNames: ['aDAI', 'aUSDC', 'aUSDT'],
     farmType: 'Advanced',
     platform: ['Aura', 'Balancer'],
@@ -1548,7 +1547,7 @@ module.exports = {
   },
   balancer_2BRLUSD: {
     chain: CHAINS_ID.MATIC_MAINNET,
-    logoUrl: ['./icons/balancer.svg', './icons/2brl-usd.png'],
+    logoUrl: ['./icons/balancer.svg', './icons/2brl.png', './icons/bb-am-usd.png'],
     apyIconUrls: ['./icons/balancer.svg'],
     apyTokenSymbols: ['BAL'],
     tokenNames: ['2BRL', 'bb-amUSD'],
@@ -1685,7 +1684,7 @@ module.exports = {
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
-    logoUrl: ['./icons/cvx.svg', './icons/curve-usdd-3crv.png'],
+    logoUrl: ['./icons/cvx.svg', './icons/usdd.png', './icons/3crv.svg'],
     tokenNames: ['USDD', '3Crv'],
     farmType: 'Advanced',
     platform: ['Convex'],
@@ -2575,9 +2574,9 @@ module.exports = {
   },
   convex_cvxCRV: {
     chain: CHAINS_ID.ETH_MAINNET,
-    apyIconUrls: ['./icons/cvx.svg', './icons/curve.svg', './icons/cvx.svg', './icons/3crv.svg'],
+    apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg', './icons/3crv.svg'],
     apyTokenSymbols: ['CRV', 'CVX', '3CRV'],
-    logoUrl: ['./icons/cvx.svg'],
+    logoUrl: ['./icons/cvx.svg', './icons/curve.svg', './icons/cvx.svg'],
     tokenNames: ['CRV', 'CVXCRV'],
     farmType: 'Advanced',
     platform: ['Convex'],
