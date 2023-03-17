@@ -3640,7 +3640,7 @@ module.exports = {
   },
   pBNB: {
     chain: CHAINS_ID.MATIC_MAINNET,
-    logoUrl: ['./icons/wbnb.png'],
+    logoUrl: ['./icons/wbnb.svg'],
     tokenAddress: addresses.MATIC.pBNB,
     decimals: '18',
     vaultAddress: null,
