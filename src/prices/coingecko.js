@@ -6,6 +6,7 @@ const { cache } = require('../lib/cache')
 const {
   COINGECKO_PRICE_API_ENDPOINT_CONTRACT,
   COINGECKO_PRICE_API_ENDPOINT_ID,
+  COINGECKO_API_KEY,
   CG_CACHE_TTL,
   CHAIN_TYPES,
 } = require('../lib/constants')
@@ -42,6 +43,7 @@ const priceByAddresses = (contractAddresses, ourChainId = CHAIN_TYPES.ETH, curre
       params: {
         contract_addresses: contractAddresses,
         vs_currencies: currency,
+        x_cg_pro_api_key: COINGECKO_API_KEY,
       },
     })
     .then(res => {
@@ -67,6 +69,7 @@ const priceByIds = (ids, currency) =>
       params: {
         ids: ids,
         vs_currencies: currency,
+        x_cg_pro_api_key: COINGECKO_API_KEY,
       },
     })
     .then(res => {

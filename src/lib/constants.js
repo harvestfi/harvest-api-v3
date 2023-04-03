@@ -3,10 +3,15 @@ const INFURA_URL =
   process.env.MAINNET_RPC_URL || `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`
 const INFURA_WS_URL =
   process.env.MAINNET_WS_URL || `wss://mainnet.infura.io/ws/v3/${process.env.INFURA_KEY}`
-const COINGECKO_PRICE_API_ENDPOINT_CONTRACT = 'https://api.coingecko.com/api/v3/simple/token_price'
-const COINGECKO_PRICE_API_ENDPOINT_ID = 'https://api.coingecko.com/api/v3/simple/price'
+const COINGECKO_PRICE_API_ENDPOINT_CONTRACT = process.env.COINGECKO_API_KEY
+  ? 'https://pro-api.coingecko.com/api/v3/simple/token_price'
+  : 'https://api.coingecko.com/api/v3/simple/token_price'
+const COINGECKO_PRICE_API_ENDPOINT_ID = process.env.COINGECKO_API_KEY
+  ? 'https://pro-api.coingecko.com/api/v3/simple/price'
+  : 'https://api.coingecko.com/api/v3/simple/price'
 const API_KEY = process.env.API_KEY || 'harvest-key'
 const APY_VISION_TOKEN = process.env.APY_VISION_TOKEN
+const COINGECKO_API_KEY = process.env.COINGECKO_API_KEY
 
 const POOL_TYPES = {
   INCENTIVE: 'INCENTIVE',
@@ -262,4 +267,5 @@ module.exports = {
   QUICKSWAP_GAMMA_ENDPOINT,
   ARBITRUM_RPC_URL,
   ARBITRUM_CONVEX_API_URL,
+  COINGECKO_API_KEY,
 }
