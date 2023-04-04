@@ -5,6 +5,864 @@ const strat30PercentFactor = '0.7'
 
 module.exports = [
   {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'lizard_ARB_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lizard_ARB_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lizard_ARB_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://solidlizard.finance/liquidity/${addresses.ARBITRUM_ONE.V2.lizard_ARB_ETH.Underlying}">
+              solidlizard.finance
+            </a>
+            and deposit <b>ARB</b> and <b>WETH</b>
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'lizard_ARB_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lizard_ARB_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lizard_ARB_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://solidlizard.finance/liquidity/${addresses.ARBITRUM_ONE.V2.lizard_ARB_USDC.Underlying}">
+              solidlizard.finance
+            </a>
+            and deposit <b>SLIZ</b> and <b>WETH</b>
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'sushi_MAGIC_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.sushi_MAGIC_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.sushi_MAGIC_ETH.NewVault,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.ARBITRUM_ONE.V2.sushi_MAGIC_ETH.Underlying, 'sushiswap_arbitrum'],
+    },
+    rewardAPY: [],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://app.sushi.com/farm?chainId=42161"
+            >
+             Arbitrum Sushi
+            </a>
+            and add <b>MAGIC-ETH</b> liquidity on the <i>Pool</i> page
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+      </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'sushi_DPX_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.sushi_DPX_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.sushi_DPX_ETH.NewVault,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.ARBITRUM_ONE.V2.sushi_DPX_ETH.Underlying, 'sushiswap_arbitrum'],
+    },
+    rewardAPY: [],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://app.sushi.com/farm?chainId=42161"
+            >
+             Arbitrum Sushi
+            </a>
+            and add <b>DPX-ETH</b> liquidity on the <i>Pool</i> page
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+      </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'sushi_RDPX_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.sushi_RDPX_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.sushi_RDPX_ETH.NewVault,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.ARBITRUM_ONE.V2.sushi_RDPX_ETH.Underlying, 'sushiswap_arbitrum'],
+    },
+    rewardAPY: [],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://app.sushi.com/farm?chainId=42161"
+            >
+             Arbitrum Sushi
+            </a>
+            and add <b>RDPX-ETH</b> liquidity on the <i>Pool</i> page
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+      </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    id: 'curve_3CRV_polygon',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.curve_3CRV.NewPool,
+    collateralAddress: addresses.MATIC.V2.curve_3CRV.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['miFARM'],
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX_L2,
+      params: [
+        addresses.MATIC.V2.curve_3CRV.Miner,
+        addresses.MATIC.V2.curve_3CRV.PoolId,
+        CHAINS_ID.MATIC_MAINNET,
+      ],
+    },
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/polygon/pools/aave/deposit">
+              Curve.fi
+            </a>
+            and add liquidity.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    id: 'curve_3Crypto_polygon',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.curve_3Crypto.NewPool,
+    collateralAddress: addresses.MATIC.V2.curve_3Crypto.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['miFARM'],
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX_L2,
+      params: [
+        addresses.MATIC.V2.curve_3Crypto.Miner,
+        addresses.MATIC.V2.curve_3Crypto.PoolId,
+        CHAINS_ID.MATIC_MAINNET,
+      ],
+    },
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/polygon/pools/atricrypto3/deposit">
+              Curve.fi
+            </a>
+            and add liquidity.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    id: 'curve_CRV_3Crypto_polygon',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.curve_CRV_3Crypto.NewPool,
+    collateralAddress: addresses.MATIC.V2.curve_CRV_3Crypto.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['miFARM'],
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX_L2,
+      params: [
+        addresses.MATIC.V2.curve_CRV_3Crypto.Miner,
+        addresses.MATIC.V2.curve_CRV_3Crypto.PoolId,
+        CHAINS_ID.MATIC_MAINNET,
+      ],
+    },
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/polygon/pools/factory-crypto-1/deposit">
+              Curve.fi
+            </a>
+            and add liquidity.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    id: 'curve_MATIC_3Crypto_polygon',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.curve_MATIC_3Crypto.NewPool,
+    collateralAddress: addresses.MATIC.V2.curve_MATIC_3Crypto.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['miFARM'],
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX_L2,
+      params: [
+        addresses.MATIC.V2.curve_MATIC_3Crypto.Miner,
+        addresses.MATIC.V2.curve_MATIC_3Crypto.PoolId,
+        CHAINS_ID.MATIC_MAINNET,
+      ],
+    },
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/polygon/pools/factory-crypto-83/deposit">
+              Curve.fi
+            </a>
+            and add liquidity.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    id: 'balancer_frxETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [
+        addresses.MATIC.V2.balancer_frxETH.Underlying,
+        'balancerv2_matic',
+        true,
+        CHAINS_ID.MATIC_MAINNET,
+      ],
+    },
+    contractAddress: addresses.MATIC.V2.balancer_frxETH.NewPool,
+    collateralAddress: addresses.MATIC.V2.balancer_frxETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['miFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <b>Deposit and stake:</b>
+      <ol class="numeric-list">
+        <li>
+          Go to&nbsp;
+          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_frxETH.PoolId}">
+            balancer
+          </a>
+          and provide liquidity.
+        </li>
+        <li>
+          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+          &quot;Stake for rewards&quot; checked for staking
+        </li>
+      </ol>
+    </div>
+ `,
+  },
+  {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    id: 'balancer_SPHERE_MATIC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.MATIC.V2.balancer_SPHERE_MATIC.Underlying, 'balancerv2_matic'],
+    },
+    contractAddress: addresses.MATIC.V2.balancer_SPHERE_MATIC.NewPool,
+    collateralAddress: addresses.MATIC.V2.balancer_SPHERE_MATIC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['miFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <b>Deposit and stake:</b>
+      <ol class="numeric-list">
+        <li>
+          Go to&nbsp;
+          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_SPHERE_MATIC.PoolId}">
+            balancer
+          </a>
+          and provide liquidity.
+        </li>
+        <li>
+          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+          &quot;Stake for rewards&quot; checked for staking
+        </li>
+      </ol>
+    </div>
+ `,
+  },
+  {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    id: 'balancer_stETH_polygon',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [
+        addresses.MATIC.V2.balancer_stETH.Underlying,
+        'balancerv2_matic',
+        true,
+        CHAINS_ID.MATIC_MAINNET,
+      ],
+    },
+    contractAddress: addresses.MATIC.V2.balancer_stETH.NewPool,
+    collateralAddress: addresses.MATIC.V2.balancer_stETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['miFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <b>Deposit and stake:</b>
+      <ol class="numeric-list">
+        <li>
+          Go to&nbsp;
+          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_stETH.PoolId}">
+            balancer
+          </a>
+          and provide liquidity.
+        </li>
+        <li>
+          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+          &quot;Stake for rewards&quot; checked for staking
+        </li>
+      </ol>
+    </div>
+ `,
+  },
+  {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    id: 'balancer_wUSDR_USDC_polygon',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying, 'balancerv2_matic'],
+    },
+    contractAddress: addresses.MATIC.V2.balancer_wUSDR_USDC.NewPool,
+    collateralAddress: addresses.MATIC.V2.balancer_wUSDR_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['miFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <b>Deposit and stake:</b>
+      <ol class="numeric-list">
+        <li>
+          Go to&nbsp;
+          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_wUSDR_USDC.PoolId}">
+            balancer
+          </a>
+          and provide liquidity.
+        </li>
+        <li>
+          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+          &quot;Stake for rewards&quot; checked for staking
+        </li>
+      </ol>
+    </div>
+ `,
+  },
+  {
+    chain: CHAINS_ID.ETH_MAINNET,
+    id: 'balancer_OHM_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.V2.balancer_OHM_ETH.Underlying, 'balancerv2_eth'],
+    },
+    contractAddress: addresses.V2.balancer_OHM_ETH.NewPool,
+    collateralAddress: addresses.V2.balancer_OHM_ETH.NewVault,
+    rewardAPY: [],
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_OHM_ETH.PoolId}">
+              Balancer
+            </a>
+            and add liquidity.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ETH_MAINNET,
+    id: 'balancer_PENDLE_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.V2.balancer_PENDLE_ETH.Underlying, 'balancerv2_eth'],
+    },
+    contractAddress: addresses.V2.balancer_PENDLE_ETH.NewPool,
+    collateralAddress: addresses.V2.balancer_PENDLE_ETH.NewVault,
+    rewardAPY: [],
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_PENDLE_ETH.PoolId}">
+              Balancer
+            </a>
+            and add liquidity.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ETH_MAINNET,
+    id: 'balancer_rETH_BADGER',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.V2.balancer_rETH_BADGER.Underlying, 'balancerv2_eth', true],
+    },
+    contractAddress: addresses.V2.balancer_rETH_BADGER.NewPool,
+    collateralAddress: addresses.V2.balancer_rETH_BADGER.NewVault,
+    rewardAPY: [],
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_rETH_BADGER.PoolId}">
+              Balancer
+            </a>
+            and add liquidity.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ETH_MAINNET,
+    id: 'balancer_stETH_rETH_sfrxETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.V2.balancer_stETH_rETH_sfrxETH.Underlying, 'balancerv2_eth', true],
+    },
+    contractAddress: addresses.V2.balancer_stETH_rETH_sfrxETH.NewPool,
+    collateralAddress: addresses.V2.balancer_stETH_rETH_sfrxETH.NewVault,
+    rewardAPY: [],
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_stETH_rETH_sfrxETH.PoolId}">
+              Balancer
+            </a>
+            and add liquidity.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ETH_MAINNET,
+    id: 'balancer_wUSDR_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.V2.balancer_OHM_ETH.Underlying, 'balancerv2_eth'],
+    },
+    contractAddress: addresses.V2.balancer_wUSDR_USDC.NewPool,
+    collateralAddress: addresses.V2.balancer_wUSDR_USDC.NewVault,
+    rewardAPY: [],
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_wUSDR_USDC.PoolId}">
+              Balancer
+            </a>
+            and add liquidity.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ETH_MAINNET,
+    id: 'curve_lvUSD',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.curve_lvUSD.NewPool,
+    collateralAddress: addresses.V2.curve_lvUSD.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://curve.fi/#/ethereum/pools/factory-v2-268/deposit"
+            >
+              curve.fi
+            </a>
+            and deposit <b>USD stablecoins</b>
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+      </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'iPoison',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.iPoison.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.iPoison.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://poison.finance/App/">
+              Poison Finance
+            </a>
+            and use the "Grow" page to mint iPoison with Poison
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'pGOLD',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.pGOLD.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.pGOLD.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fiPoison'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Buy pGOLD on&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://sushi.com/swap/">
+              SushiSwap
+            </a>
+            or mint it on&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://poison.finance/App/">
+              Poison Finance
+            </a>
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'pSLVR',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.pSLVR.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.pSLVR.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fiPoison'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Buy pSLVR on&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://sushi.com/swap/">
+              SushiSwap
+            </a>
+            or mint it on&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://poison.finance/App/">
+              Poison Finance
+            </a>
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'poison_pGOLD_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.poison_pGOLD_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.poison_pGOLD_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://sushi.com/swap/">
+              SushiSwap
+            </a>
+            and add liquidity for pGOLD - USDC.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'poison_pGOLD_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.poison_pGOLD_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.poison_pGOLD_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://sushi.com/swap/">
+              SushiSwap
+            </a>
+            and add liquidity for pGOLD - USDC.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'poison_pSLVR_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.poison_pSLVR_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.poison_pSLVR_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://sushi.com/swap/">
+              SushiSwap
+            </a>
+            and add liquidity for pSLVR - USDC.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'poison_pTSLA_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.poison_pTSLA_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.poison_pTSLA_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://sushi.com/swap/">
+              SushiSwap
+            </a>
+            and add liquidity for pTSLA - USDC.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
     chain: CHAINS_ID.ETH_MAINNET,
     id: 'aura_bbiUSD',
     type: POOL_TYPES.INCENTIVE,
@@ -38,17 +896,137 @@ module.exports = [
   },
   {
     chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'lizard_SLIZ_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lizard_SLIZ_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lizard_SLIZ_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://solidlizard.finance/liquidity/0x751f3b8ca139bc1f3482b193297485f14208826a">
+              solidlizard.finance
+            </a>
+            and deposit <b>SLIZ</b> and <b>WETH</b>
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'lizard_ETH_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lizard_ETH_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lizard_ETH_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://solidlizard.finance/liquidity/0xe20f93279ff3538b1ad70d11ba160755625e3400">
+              solidlizard.finance
+            </a>
+            and deposit <b>WETH</b> and <b>USDC</b>
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'lizard_agEUR_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lizard_agEUR_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lizard_agEUR_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://solidlizard.finance/liquidity/0x5cd95bc186e41419e6b48a0153833c8105781292">
+              solidlizard.finance
+            </a>
+            and deposit <b>agEUR</b> and <b>USDC</b>
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'lizard_LUSD_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lizard_LUSD_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lizard_LUSD_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://solidlizard.finance/liquidity/0xb1e9b823295b3c69ac651c05d987b67189ff20ad">
+              solidlizard.finance
+            </a>
+            and deposit <b>LUSD</b> and <b>USDC</b>
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'convex_USDT_WBTC_WETH_arbitrum',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.convex_USDT_WBTC_WETH_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.convex_USDT_WBTC_WETH_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.ARBITRUM_CURVE,
-      params: ['tricrypto'],
+      type: TRADING_APY_TYPES.CONVEX_L2,
+      params: [
+        addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.Miner,
+        addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.PoolId,
+        CHAINS_ID.ARBITRUM_ONE,
+      ],
     },
     stakeAndDepositHelpMessage: `
       <div class="help-message">
@@ -73,15 +1051,19 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'convex_USDC_USDT_arbitrum',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.convex_USDC_USDT_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.convex_USDC_USDT_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.ARBITRUM_CURVE,
-      params: ['2pool'],
+      type: TRADING_APY_TYPES.CONVEX_L2,
+      params: [
+        addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.Miner,
+        addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.PoolId,
+        CHAINS_ID.ARBITRUM_ONE,
+      ],
     },
     stakeAndDepositHelpMessage: `
       <div class="help-message">
@@ -109,14 +1091,14 @@ module.exports = [
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
       params: [
-        addresses.ARBITRUM_ONE.balancer_wstETH_wETH_arbitrum.Underlying,
+        addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.Underlying,
         'balancerv2_arbitrum',
         true,
         CHAINS_ID.ARBITRUM_ONE,
       ],
     },
-    contractAddress: addresses.ARBITRUM_ONE.balancer_wstETH_wETH_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.balancer_wstETH_wETH_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
@@ -127,7 +1109,7 @@ module.exports = [
       <ol class="numeric-list">
         <li>
           Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.balancer_wstETH_wETH_arbitrum.PoolId}">
+          <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.PoolId}">
             balancer
           </a>
           and invest <b>ETH</b>
@@ -147,14 +1129,14 @@ module.exports = [
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
       params: [
-        addresses.ARBITRUM_ONE.balancer_wstETH_USDC_arbitrum.Underlying,
+        addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.Underlying,
         'balancerv2_arbitrum',
         true,
         CHAINS_ID.ARBITRUM_ONE,
       ],
     },
-    contractAddress: addresses.ARBITRUM_ONE.balancer_wstETH_USDC_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.balancer_wstETH_USDC_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
@@ -165,7 +1147,7 @@ module.exports = [
       <ol class="numeric-list">
         <li>
           Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.balancer_wstETH_USDC_arbitrum.PoolId}">
+          <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.PoolId}">
             balancer
           </a>
           and invest <b>ETH</b> and/or <b>USDC</b>
@@ -185,12 +1167,12 @@ module.exports = [
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
       params: [
-        addresses.ARBITRUM_ONE.balancer_wBTC_wETH_USDC_arbitrum.Underlying,
+        addresses.ARBITRUM_ONE.V2.balancer_wBTC_wETH_USDC_arbitrum.Underlying,
         'balancerv2_arbitrum',
       ],
     },
-    contractAddress: addresses.ARBITRUM_ONE.balancer_wBTC_wETH_USDC_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.balancer_wBTC_wETH_USDC_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.balancer_wBTC_wETH_USDC_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_wBTC_wETH_USDC_arbitrum.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
@@ -201,7 +1183,7 @@ module.exports = [
       <ol class="numeric-list">
         <li>
           Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.balancer_wBTC_wETH_USDC_arbitrum.PoolId}">
+          <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_wBTC_wETH_USDC_arbitrum.PoolId}">
             balancer
           </a>
           and invest <b>wBTC</b>, <b>ETH</b> and/or <b>USDC</b>
@@ -218,8 +1200,8 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'Curve_2pool_arbitrum',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.Curve_2pool_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.Curve_2pool_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.Curve_2pool_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.Curve_2pool_arbitrum.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
@@ -254,8 +1236,8 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'Curve_EursUsd_arbitrum',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.Curve_EursUsd_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.Curve_EursUsd_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.Curve_EursUsd_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.Curve_EursUsd_arbitrum.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
@@ -290,8 +1272,8 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'Curve_RenWbtc_arbitrum',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.Curve_RenWbtc_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.Curve_RenWbtc_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.Curve_RenWbtc_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.Curve_RenWbtc_arbitrum.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
@@ -326,8 +1308,8 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'Curve_TriCrypto_arbitrum',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.Curve_TriCrypto_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.Curve_TriCrypto_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.Curve_TriCrypto_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.Curve_TriCrypto_arbitrum.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
@@ -362,8 +1344,8 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'StargateUSDC_arbitrum',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.StargateUSDC_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.StargateUSDC_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.StargateUSDC_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.StargateUSDC_arbitrum.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
@@ -394,8 +1376,8 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'StargateUSDT_arbitrum',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.StargateUSDT_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.StargateUSDT_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.StargateUSDT_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.StargateUSDT_arbitrum.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
@@ -426,11 +1408,11 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'Sushi_ETHDAI_arbitrum',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.Sushi_ETHDAI_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.Sushi_ETHDAI_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHDAI_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHDAI_arbitrum.NewVault,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.Sushi_ETHDAI_arbitrum.Underlying, 'sushiswap_arbitrum'],
+      params: [addresses.ARBITRUM_ONE.V2.Sushi_ETHDAI_arbitrum.Underlying, 'sushiswap_arbitrum'],
     },
     rewardAPY: [],
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
@@ -462,11 +1444,11 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'Sushi_ETHGOHM_arbitrum',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.Sushi_ETHGOHM_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.Sushi_ETHGOHM_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHGOHM_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHGOHM_arbitrum.NewVault,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.Sushi_ETHGOHM_arbitrum.Underlying, 'sushiswap_arbitrum'],
+      params: [addresses.ARBITRUM_ONE.V2.Sushi_ETHGOHM_arbitrum.Underlying, 'sushiswap_arbitrum'],
     },
     rewardAPY: [],
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
@@ -498,11 +1480,11 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'Sushi_ETHMAGIC_arbitrum',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.Sushi_ETHMAGIC_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.Sushi_ETHMAGIC_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHMAGIC_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHMAGIC_arbitrum.NewVault,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.Sushi_ETHMAGIC_arbitrum.Underlying, 'sushiswap_arbitrum'],
+      params: [addresses.ARBITRUM_ONE.V2.Sushi_ETHMAGIC_arbitrum.Underlying, 'sushiswap_arbitrum'],
     },
     rewardAPY: [],
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
@@ -534,11 +1516,11 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'Sushi_ETHMIM_arbitrum',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.Sushi_ETHMIM_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.Sushi_ETHMIM_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHMIM_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHMIM_arbitrum.NewVault,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.Sushi_ETHMIM_arbitrum.Underlying, 'sushiswap_arbitrum'],
+      params: [addresses.ARBITRUM_ONE.V2.Sushi_ETHMIM_arbitrum.Underlying, 'sushiswap_arbitrum'],
     },
     rewardAPY: [],
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
@@ -570,11 +1552,11 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'Sushi_ETHSPELL_arbitrum',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.Sushi_ETHSPELL_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.Sushi_ETHSPELL_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHSPELL_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHSPELL_arbitrum.NewVault,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.Sushi_ETHSPELL_arbitrum.Underlying, 'sushiswap_arbitrum'],
+      params: [addresses.ARBITRUM_ONE.V2.Sushi_ETHSPELL_arbitrum.Underlying, 'sushiswap_arbitrum'],
     },
     rewardAPY: [],
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
@@ -606,11 +1588,11 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'Sushi_ETHSUSHI_arbitrum',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.Sushi_ETHSUSHI_arbitrum.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.Sushi_ETHSUSHI_arbitrum.NewVault,
+    contractAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHSUSHI_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHSUSHI_arbitrum.NewVault,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.Sushi_ETHSUSHI_arbitrum.Underlying, 'sushiswap_arbitrum'],
+      params: [addresses.ARBITRUM_ONE.V2.Sushi_ETHSUSHI_arbitrum.Underlying, 'sushiswap_arbitrum'],
     },
     rewardAPY: [],
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],

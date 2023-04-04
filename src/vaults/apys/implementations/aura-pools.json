@@ -63,6 +63,41 @@
     "name": "wstETH_bbaUSD"
   },
   {
+    "id": 50,
+    "lptoken": "0x5aEe1e99fE86960377DE9f88689616916D5DcaBe",
+    "rewardPool": "0xd26948E7a0223700e3C3cdEA21cA2471abCb8d47",
+    "balancerPoolId": "0x5aee1e99fe86960377de9f88689616916d5dcabe000000000000000000000467",
+    "name": "steth_reth_sfrxeth"
+  },
+  {
+    "id": 55,
+    "lptoken": "0xD1eC5e215E8148D76F4460e4097FD3d5ae0A3558",
+    "rewardPool": "0x978653C02f2fBBDfd67CbC7f45c42262f213e0b5",
+    "balancerPoolId": "0xd1ec5e215e8148d76f4460e4097fd3d5ae0a35580002000000000000000003d3",
+    "name": "ohm_eth"
+  },
+  {
+    "id": 61,
+    "lptoken": "0xFD1Cf6FD41F229Ca86ada0584c63C49C3d66BbC9",
+    "rewardPool": "0x08129a472dfb92A1596Bbe31f27c53914a990563",
+    "balancerPoolId": "0xfd1cf6fd41f229ca86ada0584c63c49c3d66bbc9000200000000000000000438",
+    "name": "pendle_eth"
+  },
+  {
+    "id": 65,
+    "lptoken": "0x831261f44931B7dA8ba0DcC547223c60BB75B47F",
+    "rewardPool": "0x2a596E721A9F1824F36c484e71f5bE80675Cca2b",
+    "balancerPoolId": "0x831261f44931b7da8ba0dcc547223c60bb75b47f000200000000000000000460",
+    "name": "wusdr_usdc"
+  },
+  {
+    "id": 67,
+    "lptoken": "0x1ee442b5326009Bb18F2F472d3e0061513d1A0fF",
+    "rewardPool": "0xAAd4eE162Dbc9C25cCa26bA4340B36E3eF7C1A80",
+    "balancerPoolId": "0x1ee442b5326009bb18f2f472d3e0061513d1a0ff000200000000000000000464",
+    "name": "reth_badger"
+  },
+  {
     "id": 72,
     "lptoken": "0x60683B05e9a39E3509D8fdb9C959f23170f8A0fa",
     "rewardPool": "0x4d585a29dF0a8E18c26f662C6586ded6703062a8",

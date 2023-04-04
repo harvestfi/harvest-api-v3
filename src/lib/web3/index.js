@@ -78,6 +78,7 @@ module.exports = {
   web3,
   web3Socket,
   web3MATIC,
+  web3ARBITRUM,
   getWeb3,
   countFunctionCall,
   resetCallCount,
