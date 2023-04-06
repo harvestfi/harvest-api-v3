@@ -179,7 +179,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     tradingApyFunction: {
       type: TRADING_APY_TYPES.CONVEX_L2,
       params: [
@@ -216,7 +216,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     tradingApyFunction: {
       type: TRADING_APY_TYPES.CONVEX_L2,
       params: [
@@ -253,7 +253,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     tradingApyFunction: {
       type: TRADING_APY_TYPES.CONVEX_L2,
       params: [
@@ -290,7 +290,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     tradingApyFunction: {
       type: TRADING_APY_TYPES.CONVEX_L2,
       params: [
@@ -336,7 +336,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -369,7 +369,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -407,7 +407,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -440,7 +440,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -1633,7 +1633,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -1666,7 +1666,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -1699,7 +1699,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -1732,7 +1732,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -1765,7 +1765,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -1798,7 +1798,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -1836,7 +1836,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -1874,7 +1874,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -1912,7 +1912,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -1945,7 +1945,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -2131,7 +2131,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.meshswap_MESH_oMOOI.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -2159,7 +2159,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.meshswap_MESH_oZEMIT.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -2187,7 +2187,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.meshswap_USDC_oUSDC.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -2215,7 +2215,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.meshswap_USDT_oUSDT.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -2243,7 +2243,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.meshswap_WMATIC_MESH.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -2271,7 +2271,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.meshswap_WMATIC_USDC.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -2299,7 +2299,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.meshswap_WMATIC_USDT.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -2455,7 +2455,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.jarvis_2EUR_EURT_HODL.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM', 'WMATIC', 'fJRTSEP22_USDC', 'fJRTNOV22_USDC'],
+    rewardTokenSymbols: ['iFARM', 'WMATIC', 'fJRTSEP22_USDC', 'fJRTNOV22_USDC'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -2487,7 +2487,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.balancer_2EUR_PAR.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -2709,7 +2709,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -2747,7 +2747,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -2779,7 +2779,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.balancer_2EUR_agEUR.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -2811,7 +2811,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.jarvis_DENJUL22_4EUR.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -2840,7 +2840,7 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: [
-      'miFARM',
+      'iFARM',
       'WMATIC',
       'fJRTMAY22_USDC',
       'fJRTJUL22_USDC',
@@ -2875,7 +2875,7 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: [
-      'miFARM',
+      'iFARM',
       'WMATIC',
       'fSES_2JPY',
       'fJRTMAY22_USDC',
@@ -2911,7 +2911,7 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: [
-      'miFARM',
+      'iFARM',
       'WMATIC',
       'fQUI_2CAD',
       'fJRTMAY22_USDC',
@@ -2984,7 +2984,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -3031,7 +3031,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -3078,7 +3078,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
   },
   {
     tradingApyFunction: {
@@ -3129,7 +3129,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM, addresses.MATIC.pGNOME],
-    rewardTokenSymbols: ['miFARM', 'GNOME'],
+    rewardTokenSymbols: ['iFARM', 'GNOME'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -3167,7 +3167,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM, addresses.MATIC.pGENE],
-    rewardTokenSymbols: ['miFARM', 'GENE'],
+    rewardTokenSymbols: ['iFARM', 'GENE'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -3205,7 +3205,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -3237,7 +3237,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.jarvis_DENMAY22_4EUR.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -3269,7 +3269,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.jarvis_DEN2_4EUR.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -3301,7 +3301,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.jarvis_DEN_4EUR.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -3330,7 +3330,7 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: [
-      'miFARM',
+      'iFARM',
       'WMATIC',
       'fDEN_4EUR',
       'fDEN2_4EUR',
@@ -3369,7 +3369,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
       <div class="help-message">
         <b>Deposit and stake:</b>
@@ -3402,7 +3402,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.polygon_WETH.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -3412,7 +3412,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.polygon_USDC.NewVault,
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -3581,7 +3581,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -5785,7 +5785,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM', 'WMATIC', 'fAURFEB22_USDC', 'fAURAPR22_USDC'],
+    rewardTokenSymbols: ['iFARM', 'WMATIC', 'fAURFEB22_USDC', 'fAURAPR22_USDC'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -5819,7 +5819,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM', 'WMATIC', 'fAURFEB22_USDC', 'fAURAPR22_USDC'],
+    rewardTokenSymbols: ['iFARM', 'WMATIC', 'fAURFEB22_USDC', 'fAURAPR22_USDC'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -5853,7 +5853,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM', 'WMATIC', 'fAURFEB22_USDC', 'fAURAPR22_USDC'],
+    rewardTokenSymbols: ['iFARM', 'WMATIC', 'fAURFEB22_USDC', 'fAURAPR22_USDC'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -5882,7 +5882,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -5916,7 +5916,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -5950,7 +5950,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <b>Deposit and stake:</b>
@@ -6020,7 +6020,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['miFARM'],
+    rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
       <div class="help-message">
         <b>Deposit and stake:</b>
