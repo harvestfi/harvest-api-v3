@@ -1731,6 +1731,7 @@
     "DPX": "0x6C2C06790b3E3E3c38e12Ee22F8183b37a13EE55",
     "RDPX": "0x32Eb7902D4134bf98A28b963D26de779AF92A212",
     "ARB": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+    "FRAX": "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F",
     "V2": {
       "lizard_SLIZ_ETH": {
         "Underlying": "0x751F3B8ca139bC1F3482b193297485f14208826a",
@@ -1905,7 +1906,7 @@
         "NewStrategy": "0x35D37Aef3d3293d48531D81d54Dc5F0edA98c54d",
         "NewPool": "0xBb5FA2Fc1c435B2409231C5c92F44191a53654dF",
         "Miner": "0x960ea3e3C7FB317332d990873d354E18d7645590",
-        "PoolId": "3"
+        "PoolId": "8"
       },
       "convex_USDC_USDT_arbitrum": {
         "Underlying": "0x7f90122BF0700F9E7e1F688fe926940E8839F353",
@@ -1913,7 +1914,7 @@
         "NewStrategy": "0xcF509a3de881C7A2781C22b893Fb30B57Ce6d502",
         "NewPool": "0x200e629872dDaf944159b706b1C6eC4fE80e93fa",
         "Miner": "0x7f90122bf0700f9e7e1f688fe926940e8839f353",
-        "PoolId": "1"
+        "PoolId": "7"
       },
       "iPoison": {
         "Underlying": "0xDA016d31f2B52C73D7c1956E955ae8A507b305bB",
@@ -1991,6 +1992,14 @@
         "NewStrategy": "0x4341Ae01CF1a65E2cdBd0d1Bf9E594E1D72b330e",
         "NewPool": "0x15C286D6Ac7094343415350F54F196F6dD50B1C0",
         "Gauge": "0xc43e8F9AE4c1Ef6b8b63CBFEfE8Fe90d375fe11C"
+      },
+      "convex_FRAX_USDC": {
+        "Underlying": "0xC9B8a3FDECB9D5b218d02555a8Baf332E5B740d5",
+        "NewVault": "0x10a44B7580d88916adf35B54D1e3a9C306B5B79C",
+        "NewStrategy": "0x5d48e5818819C1F341Bc20cc37080eC65F735542",
+        "NewPool": "0x7CFE614a106C44dEA0436061767b31b877AB40eB",
+        "Miner": "0xC9B8a3FDECB9D5b218d02555a8Baf332E5B740d5",
+        "PoolId": "10"
       }
     }
   }

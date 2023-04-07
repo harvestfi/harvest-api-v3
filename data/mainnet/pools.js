@@ -6,6 +6,43 @@ const strat30PercentFactor = '0.7'
 module.exports = [
   {
     chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'convex_FRAX_USDC_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX_L2,
+      params: [
+        addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.Miner,
+        addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.PoolId,
+        CHAINS_ID.ARBITRUM_ONE,
+      ],
+    },
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/arbitrum/pools/factory-v2-41/deposit">
+              curve.fi
+            </a>
+            and deposit <b>FRAX</b> and/or <b>USDC</b>
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'lizard_ARB_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.lizard_ARB_ETH.NewPool,
@@ -1034,7 +1071,7 @@ module.exports = [
         <ol class="numeric-list">
           <li>
             Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://arbitrum.curve.fi/tricrypto/deposit">
+            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/arbitrum/pools/tricrypto/deposit">
               curve.fi
             </a>
             and deposit <b>USDT</b>, <b>WBTC</b> and/or <b>ETH</b>
@@ -1071,7 +1108,7 @@ module.exports = [
         <ol class="numeric-list">
           <li>
             Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://arbitrum.curve.fi/2pool/deposit">
+            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/arbitrum/pools/2pool/deposit">
               curve.fi
             </a>
             and deposit <b>USDT</b>, <b>WBTC</b> and/or <b>ETH</b>
