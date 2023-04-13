@@ -38,9 +38,9 @@ const getProfitSharingFactor = chain => {
     case CHAIN_TYPES.MATIC:
       return 0.92
     case CHAIN_TYPES.ARBITRUM_ONE:
-      return 0.75
+      return 0.9
     default:
-      return 0.7
+      return 0.85
   }
 }
 
@@ -303,10 +303,6 @@ const getTotalGmv = async () => {
   for (let networkId in vaults) {
     for (let symbol in vaults[networkId]) {
       const vault = vaults[networkId][symbol]
-      if (vault.inactive) {
-        continue
-      }
-
       try {
         console.log('Got GMV for:', vault.id, ':', vault.totalValueLocked)
         gmvList[symbol] = vault.totalValueLocked
@@ -314,7 +310,10 @@ const getTotalGmv = async () => {
         console.log(`Error getting GMV for: ${symbol}`, err)
         hasErrors = true
       }
-
+      if (symbol == 'IFARM') {
+        //Skip adding iFARM TVL to total because of duplicate with profit-sharing-farm
+        continue
+      }
       totalGmv = totalGmv.plus(vault.totalValueLocked)
     }
   }
@@ -326,7 +325,7 @@ const getTotalGmv = async () => {
 
   await forEach(relevantPools, async relevantPool => {
     try {
-      console.log('Getting GMV for: ', relevantPool.id, ':', relevantPool.totalValueLocked)
+      console.log('Got GMV for: ', relevantPool.id, ':', relevantPool.totalValueLocked)
       totalGmv = totalGmv.plus(relevantPool.totalValueLocked)
     } catch (err) {
       console.log(`Error getting GMV for: ${relevantPool.id}`, err)
