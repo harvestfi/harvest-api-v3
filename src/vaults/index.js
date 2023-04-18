@@ -70,7 +70,9 @@ const fetchAndExpandVault = async symbol => {
     pricePerFullShare = await getPricePerFullShare(vaultInstance)
   } catch (error) {
     underlyingBalanceWithInvestment = totalSupply
-    pricePerFullShare = 1
+    pricePerFullShare = new BigNumber(1).times(
+      new BigNumber(10).exponentiatedBy(Number(vaultData.decimals)),
+    )
   }
 
   const { estimatedApy, estimatedApyBreakdown } = await executeEstimateApyFunctions(
@@ -124,10 +126,17 @@ const fetchAndExpandVault = async symbol => {
     resetCallCount()
   }
 
-  totalValueLocked = new BigNumber(underlyingBalanceWithInvestment)
-    .multipliedBy(usdPrice)
-    .dividedBy(new BigNumber(10).exponentiatedBy(Number(vaultData.decimals)))
-    .toString()
+  if (symbol == 'IFARM') {
+    totalValueLocked = new BigNumber(underlyingBalanceWithInvestment)
+      .multipliedBy(usdPrice)
+      .dividedBy(pricePerFullShare)
+      .toString()
+  } else {
+    totalValueLocked = new BigNumber(underlyingBalanceWithInvestment)
+      .multipliedBy(usdPrice)
+      .dividedBy(new BigNumber(10).exponentiatedBy(Number(vaultData.decimals)))
+      .toString()
+  }
 
   if (isArray(vaultData.tokenAddress)) {
     await forEach(vaultData.tokenAddress, async tokenAddress => {

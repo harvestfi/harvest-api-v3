@@ -18,6 +18,9 @@ const getApy = async (address, poolId, profitSharingFactor, chain) => {
     const response = await cachedAxios.get(url)
     const apyResult = get(response, `data.apys.` + poolName, [])
     apy = (apyResult.crvApy + apyResult.cvxApy) * profitSharingFactor
+    if (isNaN(apy)) {
+      apy = 0
+    }
   } catch (err) {
     console.error('Arbitrum Convex API error: ', err)
     apy = 0
