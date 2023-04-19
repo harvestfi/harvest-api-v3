@@ -3838,7 +3838,7 @@ module.exports = {
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg', './icons/3crv.svg'],
     apyTokenSymbols: ['CRV', 'CVX', '3CRV'],
     logoUrl: ['./icons/curve.svg', './icons/cvx.svg'],
-    tokenNames: ['CRV', 'CVXCRV'],
+    tokenNames: ['cvxCRV'],
     farmType: 'Advanced',
     platform: ['Convex Finance'],
     stableCoin: false,

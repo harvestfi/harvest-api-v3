@@ -18,21 +18,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_OHM_DAI.PoolId}">
-              Balancer
-            </a>
-            and add liquidity.
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://etherscan.io/token/${addresses.V2.balancer_OHM_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a> in an Aura farm, earning 
+       <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.balancer_OHM_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -52,22 +45,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.PoolId}">
-            balancer
-          </a>
-          and invest <b>RDNT</b> and/or <b>ETH</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a> in a Balancer farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.ARBITRUM_ONE,
@@ -80,21 +65,13 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://solidlizard.finance/liquidity/${addresses.ARBITRUM_ONE.V2.lizard_etsGamma_usdPlus.Underlying}">
-              solidlizard.finance
-            </a>
-            and deposit <b>ETS Gamma</b> and <b>USD+</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lizard_etsGamma_usdPlus.Underlying}" target="_blank" rel="noopener noreferrer"> SolidLizard LP tokens </a>in a SolidLizard farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.SLIZ}" target="_blank" rel="noopener noreferrer">SLIZ</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lizard_etsGamma_usdPlus.Underlying}" target="_blank" rel="noopener noreferrer"> SolidLizard LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -117,21 +94,14 @@ module.exports = [
       ],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/arbitrum/pools/factory-v2-41/deposit">
-              curve.fi
-            </a>
-            and deposit <b>FRAX</b> and/or <b>USDC</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -146,21 +116,13 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://solidlizard.finance/liquidity/${addresses.ARBITRUM_ONE.V2.lizard_ARB_ETH.Underlying}">
-              solidlizard.finance
-            </a>
-            and deposit <b>ARB</b> and <b>WETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lizard_ARB_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> SolidLizard LP tokens </a>in a SolidLizard farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.SLIZ}" target="_blank" rel="noopener noreferrer">SLIZ</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lizard_ARB_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> SolidLizard LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -175,21 +137,13 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://solidlizard.finance/liquidity/${addresses.ARBITRUM_ONE.V2.lizard_ARB_USDC.Underlying}">
-              solidlizard.finance
-            </a>
-            and deposit <b>SLIZ</b> and <b>WETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lizard_ARB_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> SolidLizard LP tokens </a>in a SolidLizard farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.SLIZ}" target="_blank" rel="noopener noreferrer">SLIZ</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lizard_ARB_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> SolidLizard LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -207,26 +161,15 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.sushi.com/farm?chainId=42161"
-            >
-             Arbitrum Sushi
-            </a>
-            and add <b>MAGIC-ETH</b> liquidity on the <i>Pool</i> page
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.sushi_MAGIC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.SUSHI}" target="_blank" rel="noopener noreferrer">SUSHI</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MAGIC}" target="_blank" rel="noopener noreferrer">MAGIC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.sushi_MAGIC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -243,26 +186,15 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.sushi.com/farm?chainId=42161"
-            >
-             Arbitrum Sushi
-            </a>
-            and add <b>DPX-ETH</b> liquidity on the <i>Pool</i> page
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.sushi_DPX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.SUSHI}" target="_blank" rel="noopener noreferrer">SUSHI</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.DPX}" target="_blank" rel="noopener noreferrer">DPX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.sushi_DPX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -279,26 +211,15 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.sushi.com/farm?chainId=42161"
-            >
-             Arbitrum Sushi
-            </a>
-            and add <b>RDPX-ETH</b> liquidity on the <i>Pool</i> page
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.sushi_RDPX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.SUSHI}" target="_blank" rel="noopener noreferrer">SUSHI</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.DPX}" target="_blank" rel="noopener noreferrer">DPX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.sushi_RDPX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -320,21 +241,14 @@ module.exports = [
       ],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/polygon/pools/aave/deposit">
-              Curve.fi
-            </a>
-            and add liquidity.
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_3CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_3CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -357,21 +271,14 @@ module.exports = [
       ],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/polygon/pools/atricrypto3/deposit">
-              Curve.fi
-            </a>
-            and add liquidity.
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -394,21 +301,14 @@ module.exports = [
       ],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/polygon/pools/factory-crypto-1/deposit">
-              Curve.fi
-            </a>
-            and add liquidity.
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_CRV_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_CRV_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -431,21 +331,14 @@ module.exports = [
       ],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/polygon/pools/factory-crypto-83/deposit">
-              Curve.fi
-            </a>
-            and add liquidity.
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_MATIC_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_MATIC_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -470,22 +363,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_frxETH.PoolId}">
-            balancer
-          </a>
-          and provide liquidity.
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_frxETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_frxETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -503,22 +388,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_SPHERE_MATIC.PoolId}">
-            balancer
-          </a>
-          and provide liquidity.
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_SPHERE_MATIC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_SPHERE_MATIC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -541,22 +418,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_stETH.PoolId}">
-            balancer
-          </a>
-          and provide liquidity.
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -574,22 +443,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_wUSDR_USDC.PoolId}">
-            balancer
-          </a>
-          and provide liquidity.
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -605,21 +466,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_OHM_ETH.PoolId}">
-              Balancer
-            </a>
-            and add liquidity.
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.balancer_OHM_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in an Aura farm, earning 
+       <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.balancer_OHM_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -637,21 +491,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_PENDLE_ETH.PoolId}">
-              Balancer
-            </a>
-            and add liquidity.
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.balancer_PENDLE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in an Aura farm, earning 
+       <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.balancer_PENDLE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -669,21 +516,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_rETH_BADGER.PoolId}">
-              Balancer
-            </a>
-            and add liquidity.
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.balancer_rETH_BADGER.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in an Aura farm, earning 
+       <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.balancer_rETH_BADGER.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -701,21 +541,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_stETH_rETH_sfrxETH.PoolId}">
-              Balancer
-            </a>
-            and add liquidity.
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.balancer_stETH_rETH_sfrxETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in an Aura farm, earning 
+       <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.balancer_stETH_rETH_sfrxETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -733,21 +566,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_wUSDR_USDC.PoolId}">
-              Balancer
-            </a>
-            and add liquidity.
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in an Aura farm, earning 
+       <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -762,26 +588,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://curve.fi/#/ethereum/pools/factory-v2-268/deposit"
-            >
-              curve.fi
-            </a>
-            and deposit <b>USD stablecoins</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.curve_lvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
+       <a href="https://etherscan.io/token/${addresses.ARCH}" target="_blank" rel="noopener noreferrer">ARCH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.curve_lvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -795,21 +609,13 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://poison.finance/App/">
-              Poison Finance
-            </a>
-            and use the "Grow" page to mint iPoison with Poison
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.iPoison.Underlying}" target="_blank" rel="noopener noreferrer"> iPOISON </a>in a Poison farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.POISON}" target="_blank" rel="noopener noreferrer">POISON</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.V2.curve_lvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> iPOISON</a>.
+      </p>
     </div>
    `,
   },
@@ -824,24 +630,13 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fiPoison'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Buy pGOLD on&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://sushi.com/swap/">
-              SushiSwap
-            </a>
-            or mint it on&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://poison.finance/App/">
-              Poison Finance
-            </a>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.pGOLD.Underlying}" target="_blank" rel="noopener noreferrer"> pGOLD </a>in a Poison farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.POISON}" target="_blank" rel="noopener noreferrer">POISON</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.pGOLD.Underlying}" target="_blank" rel="noopener noreferrer"> pGOLD</a>.
+      </p>
     </div>
    `,
   },
@@ -856,24 +651,13 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fiPoison'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Buy pSLVR on&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://sushi.com/swap/">
-              SushiSwap
-            </a>
-            or mint it on&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://poison.finance/App/">
-              Poison Finance
-            </a>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.pSLVR.Underlying}" target="_blank" rel="noopener noreferrer"> pSLVR </a>in a Poison farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.POISON}" target="_blank" rel="noopener noreferrer">POISON</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.pSLVR.Underlying}" target="_blank" rel="noopener noreferrer"> pSLVR</a>.
+      </p>
     </div>
    `,
   },
@@ -888,50 +672,13 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://sushi.com/swap/">
-              SushiSwap
-            </a>
-            and add liquidity for pGOLD - USDC.
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-    </div>
-   `,
-  },
-  {
-    chain: CHAINS_ID.ARBITRUM_ONE,
-    id: 'poison_pGOLD_USDC',
-    type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.ARBITRUM_ONE.V2.poison_pGOLD_USDC.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.V2.poison_pGOLD_USDC.NewVault,
-    rewardAPY: [],
-    rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
-    stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://sushi.com/swap/">
-              SushiSwap
-            </a>
-            and add liquidity for pGOLD - USDC.
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.poison_pGOLD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Posion LP tokens </a>in a Poison farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.POISON}" target="_blank" rel="noopener noreferrer">POISON</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.poison_pGOLD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Posion LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -946,21 +693,13 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://sushi.com/swap/">
-              SushiSwap
-            </a>
-            and add liquidity for pSLVR - USDC.
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.poison_pSLVR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Posion LP tokens </a>in a Poison farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.POISON}" target="_blank" rel="noopener noreferrer">POISON</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.poison_pSLVR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Posion LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -975,21 +714,13 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://sushi.com/swap/">
-              SushiSwap
-            </a>
-            and add liquidity for pTSLA - USDC.
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.poison_pTSLA_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Posion LP tokens </a>in a Poison farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.POISON}" target="_blank" rel="noopener noreferrer">POISON</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.poison_pTSLA_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Posion LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -1007,21 +738,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.aura_bbiUSD.PoolId}">
-              Balancer
-            </a>
-            and add liquidity with <b>USD Stablecoins</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.aura_bbiUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in an Aura farm, earning 
+       <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.aura_bbiUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -1036,21 +760,13 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://solidlizard.finance/liquidity/0x751f3b8ca139bc1f3482b193297485f14208826a">
-              solidlizard.finance
-            </a>
-            and deposit <b>SLIZ</b> and <b>WETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lizard_SLIZ_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> SolidLizard LP tokens </a>in a SolidLizard farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.SLIZ}" target="_blank" rel="noopener noreferrer">SLIZ</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lizard_SLIZ_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> SolidLizard LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -1065,21 +781,13 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://solidlizard.finance/liquidity/0xe20f93279ff3538b1ad70d11ba160755625e3400">
-              solidlizard.finance
-            </a>
-            and deposit <b>WETH</b> and <b>USDC</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lizard_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> SolidLizard LP tokens </a>in a SolidLizard farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.SLIZ}" target="_blank" rel="noopener noreferrer">SLIZ</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lizard_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> SolidLizard LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -1094,21 +802,13 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://solidlizard.finance/liquidity/0x5cd95bc186e41419e6b48a0153833c8105781292">
-              solidlizard.finance
-            </a>
-            and deposit <b>agEUR</b> and <b>USDC</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lizard_agEUR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> SolidLizard LP tokens </a>in a SolidLizard farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.SLIZ}" target="_blank" rel="noopener noreferrer">SLIZ</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lizard_agEUR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> SolidLizard LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -1123,21 +823,13 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://solidlizard.finance/liquidity/0xb1e9b823295b3c69ac651c05d987b67189ff20ad">
-              solidlizard.finance
-            </a>
-            and deposit <b>LUSD</b> and <b>USDC</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lizard_LUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> SolidLizard LP tokens </a>in a SolidLizard farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.SLIZ}" target="_blank" rel="noopener noreferrer">SLIZ</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lizard_LUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> SolidLizard LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -1160,21 +852,14 @@ module.exports = [
       ],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/arbitrum/pools/tricrypto/deposit">
-              curve.fi
-            </a>
-            and deposit <b>USDT</b>, <b>WBTC</b> and/or <b>ETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -1197,21 +882,14 @@ module.exports = [
       ],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/arbitrum/pools/2pool/deposit">
-              curve.fi
-            </a>
-            and deposit <b>USDT</b>, <b>WBTC</b> and/or <b>ETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -1236,22 +914,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.PoolId}">
-            balancer
-          </a>
-          and invest <b>ETH</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Lido farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.ARBITRUM_ONE,
@@ -1274,22 +945,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.PoolId}">
-            balancer
-          </a>
-          and invest <b>ETH</b> and/or <b>USDC</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Lido farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.ARBITRUM_ONE,
@@ -1310,22 +974,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_wBTC_wETH_USDC_arbitrum.PoolId}">
-            balancer
-          </a>
-          and invest <b>wBTC</b>, <b>ETH</b> and/or <b>USDC</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wBTC_wETH_USDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wBTC_wETH_USDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.ARBITRUM_ONE,
@@ -1337,26 +993,14 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://arbitrum.curve.fi/2pool/deposit"
-            >
-             Arbitrum Curve
-            </a>
-            and add assets to <b>2Pool</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Curve_2pool_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Curve_2pool_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+    </div>
    `,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.ARBITRUM_CURVE,
@@ -1373,26 +1017,14 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://arbitrum.curve.fi/eursusd/deposit"
-            >
-             Arbitrum Curve
-            </a>
-            and add assets to <b>EursUsd</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Curve_EursUsd_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Curve_EursUsd_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+    </div>
    `,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.ARBITRUM_CURVE,
@@ -1409,26 +1041,14 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://arbitrum.curve.fi/ren/deposit"
-            >
-             Arbitrum Curve
-            </a>
-            and add assets to <b>RenWbtc</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Curve_RenWbtc_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Curve_RenWbtc_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+    </div>
    `,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.ARBITRUM_CURVE,
@@ -1445,26 +1065,14 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://arbitrum.curve.fi/tricrypto/deposit"
-            >
-             Arbitrum Curve
-            </a>
-            and add assets to <b>TriCrypto</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Curve_TriCrypto_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Curve_TriCrypto_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+    </div>
    `,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.ARBITRUM_CURVE,
@@ -1481,26 +1089,14 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://stargate.finance/pool/USDC-ARBITRUM"
-            >
-             Arbitrum Stargate Finance
-            </a>
-            and add <b>USDC</b> on the <i>Pool</i> page
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.StargateUSDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Stargate LP tokens </a>in a Stargate farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.STG}" target="_blank" rel="noopener noreferrer">STG</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.StargateUSDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Stargate LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -1513,26 +1109,14 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://stargate.finance/pool/USDT-ARBITRUM"
-            >
-             Arbitrum Stargate Finance
-            </a>
-            and add <b>USDT</b> on the <i>Pool</i> page
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.StargateUSDT_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Stargate LP tokens </a>in a Stargate farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.STG}" target="_blank" rel="noopener noreferrer">STG</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.StargateUSDT_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Stargate LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -1549,26 +1133,15 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.sushi.com/farm?chainId=42161"
-            >
-             Arbitrum Sushi
-            </a>
-            and add <b>ETH-DAI</b> on the <i>Pool</i> page
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Sushi_ETHDAI_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.DAI}" target="_blank" rel="noopener noreferrer">DAI</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Sushi_ETHDAI_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -1585,26 +1158,15 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.sushi.com/farm?chainId=42161"
-            >
-             Arbitrum Sushi
-            </a>
-            and add <b>ETH-GOHM</b> on the <i>Pool</i> page
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Sushi_ETHGOHM_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.gOHM}" target="_blank" rel="noopener noreferrer">gOHM</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Sushi_ETHGOHM_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -1621,26 +1183,15 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.sushi.com/farm?chainId=42161"
-            >
-             Arbitrum Sushi
-            </a>
-            and add <b>ETH-MAGIC</b> on the <i>Pool</i> page
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Sushi_ETHMAGIC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MAGIC}" target="_blank" rel="noopener noreferrer">MAGIC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Sushi_ETHMAGIC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -1657,26 +1208,15 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.sushi.com/farm?chainId=42161"
-            >
-             Arbitrum Sushi
-            </a>
-            and add <b>ETH-MIM</b> on the <i>Pool</i> page
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Sushi_ETHMIM_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MIM}" target="_blank" rel="noopener noreferrer">MIM</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Sushi_ETHMIM_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -1693,26 +1233,15 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.sushi.com/farm?chainId=42161"
-            >
-             Arbitrum Sushi
-            </a>
-            and add <b>ETH-SPELL</b> on the <i>Pool</i> page
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Sushi_ETHSPELL_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.SPELL}" target="_blank" rel="noopener noreferrer">SPELL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Sushi_ETHSPELL_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -1729,26 +1258,15 @@ module.exports = [
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.sushi.com/farm?chainId=42161"
-            >
-             Arbitrum Sushi
-            </a>
-            and add <b>ETH-SUSHI</b> on the <i>Pool</i> page
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Sushi_ETHSUSHI_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.SUSHI}" target="_blank" rel="noopener noreferrer">SUSHI</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.Sushi_ETHSUSHI_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -1767,22 +1285,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://quickswap.gamma.xyz/vault-detail/WMATIC-WETH-0-Narrow">
-            gamma
-          </a>
-          and invest <b>WMATIC</b> and/or <b>WETH</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens </a>in a Gamma farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -1800,22 +1311,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://quickswap.gamma.xyz/vault-detail/WMATIC-WETH-0-Wide">
-            gamma
-          </a>
-          and invest <b>WMATIC</b> and/or <b>WETH</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens </a>in a Gamma farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -1833,22 +1337,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://quickswap.gamma.xyz/vault-detail/WMATIC-USDC-0-Narrow">
-            gamma
-          </a>
-          and invest <b>WMATIC</b> and/or <b>USDC</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens </a>in a Gamma farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -1866,22 +1363,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://quickswap.gamma.xyz/vault-detail/WMATIC-USDC-0-Wide">
-            gamma
-          </a>
-          and invest <b>WMATIC</b> and/or <b>USDC</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens </a>in a Gamma farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -1899,22 +1389,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://quickswap.gamma.xyz/vault-detail/USDC-WETH-0-Narrow">
-            gamma
-          </a>
-          and invest <b>USDC</b> and/or <b>WETH</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens </a>in a Gamma farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -1932,22 +1415,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://quickswap.gamma.xyz/vault-detail/USDC-WETH-0-Wide">
-            gamma
-          </a>
-          and invest <b>USDC</b> and/or <b>WETH</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens </a>in a Gamma farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -1970,22 +1446,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_bbamusd.PoolId}">
-            balancer
-          </a>
-          and invest <b>stable coins</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_bbamusd.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_bbamusd.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -2008,22 +1476,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_tetuBal.PoolId}">
-            balancer
-          </a>
-          and invest <b>tetuBal</b> and/or <b>80BAL-20WETH</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_tetuBal.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_tetuBal.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -2046,22 +1506,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_2BRLUSD.PoolId}">
-            balancer
-          </a>
-          and invest <b>USD</b> or <b>BRL</b> stable coins
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2BRLUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2BRLUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -2079,22 +1531,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_2BRL.PoolId}">
-            balancer
-          </a>
-          and invest <b>BRL</b> stable coins
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2BRL.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2BRL.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -2121,26 +1565,15 @@ module.exports = [
       params: ['factory-v2-176'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://curve.fi/factory-v2-176/deposit"
-            >
-              curve.fi
-            </a>
-            and deposit <b>USD stablecoins</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.convex_DOLA_FRAXBP.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.convex_DOLA_FRAXBP.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -2159,26 +1592,15 @@ module.exports = [
     },
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://curve.fi/factory-v2-116/deposit"
-          >
-            curve.fi
-          </a>
-          and deposit <b>USD stablecoins</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.convex_USDD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.convex_USDD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -2196,26 +1618,15 @@ module.exports = [
     },
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://curve.fi/factory-v2-194/deposit"
-          >
-            curve.fi
-          </a>
-          and deposit <b>pETH and/or ETH</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.convex_pETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.convex_pETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -2233,26 +1644,15 @@ module.exports = [
     },
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://curve.fi/cvxeth/deposit"
-          >
-            curve.fi
-          </a>
-          and deposit <b>CVX and/or ETH</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.convex_CVX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.convex_CVX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -2265,22 +1665,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://meshswap.fi/exchange/pool/detail/0x5b1e475933c802117212ce2a4240a4e7999a52a2">
-            MeshSwap
-          </a>
-          and add liquidity for MESH-oMOOI
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_MESH_oMOOI.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens </a>in a Meshswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.oMOOI}" target="_blank" rel="noopener noreferrer">oMOOI</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_MESH_oMOOI.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -2293,22 +1685,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://meshswap.fi/exchange/pool/detail/0x6fc01d72960af0de3dd97d544fe785b751d752e2">
-            MeshSwap
-          </a>
-          and add liquidity for MESH-oZEMIT
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_MESH_oZEMIT.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens </a>in a Meshswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.oZEMIT}" target="_blank" rel="noopener noreferrer">oZEMIT</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_MESH_oZEMIT.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -2321,22 +1705,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://meshswap.fi/exchange/pool/detail/0x111d7a73b40aa5ee52bf651e8f07aa26f8e9efe8">
-            MeshSwap
-          </a>
-          and add liquidity for USDC-oUSDC
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_USDC_oUSDC.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens </a>in a Meshswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.MESH}" target="_blank" rel="noopener noreferrer">MESH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_USDC_oUSDC.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -2349,22 +1725,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://meshswap.fi/exchange/pool/detail/0x58a7aac84560f994d191e78aeb690855eb2d5b88">
-            MeshSwap
-          </a>
-          and add liquidity for USDT-oUSDT
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_USDT_oUSDT.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens </a>in a Meshswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.MESH}" target="_blank" rel="noopener noreferrer">MESH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_USDT_oUSDT.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -2377,22 +1745,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://meshswap.fi/exchange/pool/detail/0x07a7ab21b582058b71d2aee1b1719926e3451adf">
-            MeshSwap
-          </a>
-          and add liquidity for MATIC-MESH
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_WMATIC_MESH.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens </a>in a Meshswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.MESH}" target="_blank" rel="noopener noreferrer">MESH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_WMATIC_MESH.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -2405,22 +1765,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://meshswap.fi/exchange/pool/detail/0x6ffe747579ed4e807dec9b40dba18d15226c32dc">
-            MeshSwap
-          </a>
-          and add liquidity for MATIC-USDC
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_WMATIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens </a>in a Meshswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.MESH}" target="_blank" rel="noopener noreferrer">MESH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_WMATIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -2433,22 +1785,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://meshswap.fi/exchange/pool/detail/0x24af68ff6e3501eaf8b52a9f7935225e524fe617">
-            MeshSwap
-          </a>
-          and add liquidity for MATIC-USDT
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_WMATIC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens </a>in a Meshswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.MESH}" target="_blank" rel="noopener noreferrer">MESH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_WMATIC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -2460,26 +1804,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://notional.finance/provide/DAI"
-            >
-             Notional Finance
-            </a>
-            and mint <b>nDAI</b> by providing <b>DAI</b> liquidity and
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.notional_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> nDAI </a>in a Notional farm, earning 
+       <a href="https://etherscan.io/token/${addresses.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.notional_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> nDAI</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -2492,26 +1824,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://notional.finance/provide/ETH"
-            >
-             Notional Finance
-            </a>
-            and mint <b>nETH</b> by providing <b>ETH</b> liquidity and
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.notional_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> nETH </a>in a Notional farm, earning 
+       <a href="https://etherscan.io/token/${addresses.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.notional_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> nETH</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -2524,26 +1844,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://notional.finance/provide/USDC"
-            >
-             Notional Finance
-            </a>
-            and mint <b>nUSDC</b> by providing <b>USDC</b> liquidity and
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.notional_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> nUSDC </a>in a Notional farm, earning 
+       <a href="https://etherscan.io/token/${addresses.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.notional_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> nUSDC</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -2556,26 +1864,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://notional.finance/provide/WBTC"
-            >
-             Notional Finance
-            </a>
-            and mint <b>nWBTC</b> by providing <b>WBTC</b> liquidity and
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.notional_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> nWBTC </a>in a Notional farm, earning 
+       <a href="https://etherscan.io/token/${addresses.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.notional_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> nWBTC</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -2589,22 +1885,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM', 'WMATIC', 'fJRTSEP22_USDC', 'fJRTNOV22_USDC'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.curve.fi/factory/286/deposit">
-            Curve
-          </a>
-          and add liquidity for 2EUR (EURT)
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2EUR_EURT_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.JRT_NOV22}" target="_blank" rel="noopener noreferrer">JRT_NOV22</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2EUR_EURT_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     tradingApyFunction: {
@@ -2621,22 +1909,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_2EUR_PAR.PoolId}">
-            Curve
-          </a>
-          and add liquidity for 2EUR (PAR)
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_PAR.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_PAR.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -2648,21 +1928,15 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://www.convexfinance.com/stake">
-              Convex
-            </a>
-            and convert <b>CRV</b> to <b>cvxCRV</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.convex_cvxCRV.Underlying}" target="_blank" rel="noopener noreferrer"> cvxCRV </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a> & 
+       <a href="https://etherscan.io/token/${addresses.THREE_POOL}" target="_blank" rel="noopener noreferrer">3CRV</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.convex_cvxCRV.Underlying}" target="_blank" rel="noopener noreferrer"> cvxCRV</a>.
+      </p>
     </div>
    `,
   },
@@ -2676,21 +1950,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://app.aura.finance/">
-              Aura
-            </a>
-            and mint auraBAL with <b>BAL</b> or <b>80BAL-20WETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.aura_auraBAL.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in an Aura farm, earning 
+       <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.aura_auraBAL.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -2708,21 +1975,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/0x3dd0843a028c86e0b760b1a76929d1c5ef93a2dd000200000000000000000249">
-              Balancer
-            </a>
-            and add liquidity with <b>B-80BAL-20WETH</b> or <b>auraBAL</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.aura_auraBAL_lp.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in an Aura farm, earning 
+       <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.aura_auraBAL_lp.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -2740,21 +2000,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/0xa13a9247ea42d743238089903570127dda72fe4400000000000000000000035d">
-              Balancer
-            </a>
-            and add liquidity with <b>USD Stablecoins</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.aura_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in an Aura farm, earning 
+       <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.aura_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -2772,21 +2025,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/0x1e19cf2d73a72ef1332c882f20534b6519be0276000200000000000000000112">
-              Balancer
-            </a>
-            and add liquidity with <b>ETH</b>, <b>WETH</b> or <b>rETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.aura_rETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in an Aura farm, earning 
+       <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.aura_rETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -2804,21 +2050,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://app.balancer.fi/#/ethereum/pool/0x32296969ef14eb0c6d29669c550d4a0449130230000200000000000000000080">
-              Balancer
-            </a>
-            and add liquidity with <b>ETH</b>, <b>WETH</b> or <b>wstETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.aura_wstETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in an Aura farm, earning 
+       <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.aura_wstETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -2843,22 +2082,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.bal_MaticX.PoolId}">
-            balancer
-          </a>
-          and invest <b>WMATIC</b> or <b>MaticX</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.bal_MaticX.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.SD}" target="_blank" rel="noopener noreferrer">SD</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.bal_MaticX.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -2881,22 +2113,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.bal_stMatic.PoolId}">
-            balancer
-          </a>
-          and invest <b>WMATIC</b> or <b>stMatic</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.bal_stMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.bal_stMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     tradingApyFunction: {
@@ -2913,22 +2138,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_2EUR_agEUR.PoolId}">
-            Curve
-          </a>
-          and add liquidity for 2EUR (agEUR)
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_agEUR.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>. 
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_agEUR.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     tradingApyFunction: {
@@ -2945,22 +2162,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://kyberswap.com/#/add/0x53d00635aeC4a6379523341AEBC325857f32FdE1/0xAd326c253A84e9805559b73A08724e11E49ca651/0xf84fa79a94afb742a98edf2c7a10ef7134b684bc">
-            KyberDMM
-          </a>
-          and add liquidity for DEN(JUL22)-4EUR
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DENJUL22_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.DEN_JUL22}" target="_blank" rel="noopener noreferrer">DEN-JUL22</a>. 
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DENJUL22_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -2980,22 +2189,14 @@ module.exports = [
     ],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.curve.fi/factory/22/deposit">
-            Curve
-          </a>
-          and add liquidity for 2SGD
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2SGD_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.JRT_NOV22}" target="_blank" rel="noopener noreferrer">JRT_NOV22</a>. 
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2SGD_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -3016,22 +2217,14 @@ module.exports = [
     ],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.curve.fi/factory/255/deposit">
-            Curve
-          </a>
-          and add liquidity for 2JPY
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2JPY_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.JRT_NOV22}" target="_blank" rel="noopener noreferrer">JRT_NOV22</a>. 
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2JPY_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -3052,22 +2245,14 @@ module.exports = [
     ],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.curve.fi/factory/23/deposit">
-            Curve
-          </a>
-          and add liquidity for 2CAD
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2CAD_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.JRT_NOV22}" target="_blank" rel="noopener noreferrer">JRT_NOV22</a>. 
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2CAD_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -3084,21 +2269,14 @@ module.exports = [
       params: ['crypto-3'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/crveth/deposit">
-              curve.fi
-            </a>
-            and deposit <b>CRV and/or ETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.crv_CRV_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.crv_CRV_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
    `,
   },
@@ -3118,22 +2296,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://kyberswap.com/#/add/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174/0xBF06D9b11126B140788D842a6ed8dC7885C722B3/0xF40E249737c510CCE832286e54cB30E60D4e4656">
-            KyberDMM
-          </a>
-          and add liquidity for AUR(APR22)-USDC
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_AUR3_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.AUR_APR22}" target="_blank" rel="noopener noreferrer">AUR_APR22</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_AUR3_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -3148,6 +2318,17 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM, addresses.ORC],
     rewardTokenSymbols: ['iFARM', 'ORC'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.UniV3_ORC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Orbit farm, earning 
+       <a href="https://etherscan.io/token/${addresses.ORC}" target="_blank" rel="noopener noreferrer">ORC</a> & 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.UniV3_ORC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -3165,22 +2346,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.bal_TUSD_STABLE.PoolId}">
-            balancer
-          </a>
-          and invest <b>USDT</b>, <b>TUSD</b>, <b>USDC</b> or <b>DAI</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.bal_TUSD_STABLE.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.bal_TUSD_STABLE.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     tradingApyFunction: {
@@ -3226,26 +2399,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://app.uniswap.org/#/add/v2/ETH/0xf4d2888d29D722226FafA5d9B24F9164c092421E"
-          >
-          UniswapV2
-          </a>
-          and provide liquidity using <b>LOOKS</b> and <b>ETH</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.uni_LOOKS_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a LooksRare farm, earning 
+       <a href="https://etherscan.io/token/${addresses.LOOKS}" target="_blank" rel="noopener noreferrer">LOOKS</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.uni_LOOKS_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     tradingApyFunction: {
@@ -3263,27 +2424,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM', 'GNOME'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.sushi.com/add/${addresses.MATIC.pGENE}/${addresses.MATIC.pWETH}"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>GENE-ETH</b> pair by depositing <b>GENE</b> and
-            <b>ETH</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.SUSHI_GENE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Harvest farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.pGNOME}" target="_blank" rel="noopener noreferrer">pGNOME</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.SUSHI_GENE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     tradingApyFunction: {
@@ -3301,27 +2449,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM', 'GENE'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.sushi.com/add/${addresses.MATIC.pGNOME}/${addresses.MATIC.pWETH}"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>GNOME-ETH</b> pair by depositing <b>GNOME</b> and
-            <b>ETH</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.SUSHI_GNOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Harvest farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.pGENE}" target="_blank" rel="noopener noreferrer">pGENE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.SUSHI_GNOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     tradingApyFunction: {
@@ -3339,22 +2474,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://kyberswap.com/#/add/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174/0x6Fb2415463e949aF08ce50F83E94b7e008BABf07/0xA623aacf9eB4Fc0a29515F08bdABB0d8Ce385cF7">
-            KyberDMM
-          </a>
-          and add liquidity for AURFEB22-USDC
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_AUR_USDC_V2.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.AURFEB22}" target="_blank" rel="noopener noreferrer">AURFEB22</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_AUR_USDC_V2.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     tradingApyFunction: {
@@ -3371,22 +2498,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://kyberswap.com/#/add/0x51e7B5A0e8E942A62562f85D91501fbfA43121fE/0xAd326c253A84e9805559b73A08724e11E49ca651/0x6e56300267a6dd07da0908557e02756747e1c90e">
-            KyberDMM
-          </a>
-          and add liquidity for DEN(MAY22)-4EUR
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DENMAY22_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.DEN_MAY22}" target="_blank" rel="noopener noreferrer">DEN-MAY22</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DENMAY22_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     tradingApyFunction: {
@@ -3403,22 +2522,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://dmm.exchange/#/add/0xAd326c253A84e9805559b73A08724e11E49ca651/0xa286eeDAa5aBbAE98F65b152B5057b8bE9893fbB/0xEb6f426963140471a7c1E4337877e6dBf834d2A8">
-            KyberDMM
-          </a>
-          and add liquidity for DEN(MAR22)-4EUR
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DEN2_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.DEN_MAR22}" target="_blank" rel="noopener noreferrer">DEN-MAR22</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DEN2_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     tradingApyFunction: {
@@ -3435,22 +2546,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://dmm.exchange/#/add/0xAd326c253A84e9805559b73A08724e11E49ca651/0xf379CB529aE58E1A03E62d3e31565f4f7c1F2020/0x4924B6E1207EFb244433294619a5ADD08ACB3dfF">
-            KyberDMM
-          </a>
-          and add liquidity for DEN-4EUR
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DEN_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.DEN}" target="_blank" rel="noopener noreferrer">DEN</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DEN_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -3470,22 +2573,14 @@ module.exports = [
     ],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.curve.fi/factory/37/deposit">
-            Curve
-          </a>
-          and add liquidity for 4EUR
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_4EUR_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.DEN_JUL22}" target="_blank" rel="noopener noreferrer">DEN_JUL22</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_4EUR_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     tradingApyFunction: {
@@ -3502,28 +2597,15 @@ module.exports = [
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://quickswap.exchange/#/add/${addresses.MATIC.pYEL}/${addresses.MATIC.WMATIC}"
-              >
-                Quickswap
-              </a>
-              and supply liquidity to the <b>YEL-MATIC</b> pair by depositing <b>YEL</b> and
-              <b>MATIC</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
-    `,
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quick_YEL_MATIC.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap V2 LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.pYEL}" target="_blank" rel="noopener noreferrer">pYEL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quick_YEL_MATIC.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap V2 LP tokens</a>.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -3715,23 +2797,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://quickswap.exchange/#/add/${addresses.MATIC.miFARM}/${addresses.MATIC.QUICK}">
-            quickswap
-          </a>
-          and supply liquidity to the <b>IFARM-QUICK</b> pair by depositing <b>IFARM</b> and
-            <b>QUICK</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickswap_IFARM_QUICK.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap V2 LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.QUICK}" target="_blank" rel="noopener noreferrer">QUICK</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickswap_IFARM_QUICK.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap V2 LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -3757,26 +2830,14 @@ module.exports = [
     chain: CHAINS_ID.ETH_MAINNET,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://app.rari.capital/fuse/pool/24"
-          >
-            Rari Fuse
-          </a>
-          and provide liquidity using <b>USDC</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.FARMSteadUSDC}" target="_blank" rel="noopener noreferrer"> FARMSteadUSDC </a>in a Harvest farm, earning 
+       <a href="https://etherscan.io/token/${addresses.FARMSteadUSDC}" target="_blank" rel="noopener noreferrer">FARMSteadUSDC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.FARMSteadUSDC}" target="_blank" rel="noopener noreferrer"> FARMSteadUSDC</a>.
+      </p>
     </div>
- `,
+   `,
     id: 'farmstead-usdc',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.pools.FARMSteadUSDCPool,
@@ -3812,29 +2873,14 @@ module.exports = [
     rewardTokens: [addresses.FARM],
     rewardTokenSymbols: ['FARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.uniswap.org/#/add/v2/${addresses.FARM}/ETH"
-            >
-              Uniswap
-            </a>
-            and provide liquidity using <b>FARM</b> and <b>ETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-            <br />
-            The current version of the FARM/ETH pool does not allow partial withdrawals. You can
-            only withdraw the maximum amount.
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.pools.FARM_WETHPool}" target="_blank" rel="noopener noreferrer"> Farm LP tokens </a>in a Harvest farm, earning 
+       <a href="https://etherscan.io/token/${addresses.FARM}" target="_blank" rel="noopener noreferrer">FARM</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.pools.FARM_WETHPool}" target="_blank" rel="noopener noreferrer"> Farm LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -3853,29 +2899,14 @@ module.exports = [
     rewardTokens: [addresses.FARM],
     rewardTokenSymbols: ['FARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.uniswap.org/#/add/v2/${addresses.FARM}/${addresses.GRAIN}"
-            >
-              Uniswap
-            </a>
-            and provide liquidity using <b>FARM</b> and <b>GRAIN</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-            <br />
-            The current version of the FARM/GRAIN pool does not allow partial withdrawals. You can
-            only withdraw the maximum amount.
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.pools.GRAINPool}" target="_blank" rel="noopener noreferrer"> Farm LP tokens </a>in a Harvest farm, earning 
+       <a href="https://etherscan.io/token/${addresses.FARM}" target="_blank" rel="noopener noreferrer">FARM</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.pools.GRAINPool}" target="_blank" rel="noopener noreferrer"> Farm LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -3893,22 +2924,15 @@ module.exports = [
       params: ['ypool'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://www.curve.fi/iearn/deposit">
-              curve.fi
-            </a>
-            deposit <b>USD stablecoins</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.YCRV}" target="_blank" rel="noopener noreferrer"> YCRV </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.YCRV}" target="_blank" rel="noopener noreferrer"> YCRV</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -3925,22 +2949,15 @@ module.exports = [
       params: ['3pool'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://www.curve.fi/3pool/deposit">
-              curve.fi
-            </a>
-            deposit <b>USD stablecoins</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.THREE_POOL}" target="_blank" rel="noopener noreferrer"> 3CRV </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.THREE_POOL}" target="_blank" rel="noopener noreferrer"> 3CRV</a>.
+      </p>
+    </div>
    `,
     zapperFiTokens: ['USDC', 'DAI', 'USDT', 'WETH'],
   },
@@ -3959,22 +2976,15 @@ module.exports = [
       params: ['hbtc'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://www.curve.fi/hbtc/deposit">
-              curve.fi
-            </a>
-            deposit <b>BTC assets</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.crvHBTC}" target="_blank" rel="noopener noreferrer"> HBTC </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.crvHBTC}" target="_blank" rel="noopener noreferrer"> HBTC</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -3992,26 +3002,15 @@ module.exports = [
       params: ['compound'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.curve.fi/compound/deposit"
-            >
-              curve.fi
-            </a>
-            deposit <b>USD stablecoins</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.crvCOMPOUND}" target="_blank" rel="noopener noreferrer"> CRV:COMPOUND </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.crvCOMPOUND}" target="_blank" rel="noopener noreferrer"> CRV:COMPOUND</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4029,22 +3028,15 @@ module.exports = [
       params: ['25'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://www.curve.fi/usdn/deposit">
-              curve.fi
-            </a>
-            deposit <b>USD stablecoins</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.crvUSDN}" target="_blank" rel="noopener noreferrer"> crvUSDN </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.crvUSDN}" target="_blank" rel="noopener noreferrer"> crvUSDN</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4108,22 +3100,15 @@ module.exports = [
       params: ['obtc'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://www.curve.fi/obtc/deposit">
-              curve.fi
-            </a>
-            deposit <b>BTC assets</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.crvOBTC.Underlying}" target="_blank" rel="noopener noreferrer"> OBTC </a>in a Curve farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.crvOBTC.Underlying}" target="_blank" rel="noopener noreferrer"> OBTC</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4140,22 +3125,15 @@ module.exports = [
       params: ['tbtc'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://www.curve.fi/tbtc/deposit">
-              curve.fi
-            </a>
-            deposit <b>BTC assets</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.TBTC_MIXED}" target="_blank" rel="noopener noreferrer"> TBTC </a>in a Curve farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.TBTC_MIXED}" target="_blank" rel="noopener noreferrer"> TBTC</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4173,22 +3151,15 @@ module.exports = [
       params: ['ren'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://www.curve.fi/ren/deposit">
-              curve.fi
-            </a>
-            deposit <b>BTC assets</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.CRVRENWBTC}" target="_blank" rel="noopener noreferrer"> RENWBTC </a>in a Curve farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.CRVRENWBTC}" target="_blank" rel="noopener noreferrer"> RENWBTC</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4228,26 +3199,15 @@ module.exports = [
     rewardTokens: [addresses.FARM],
     rewardTokenSymbols: ['FARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.uniswap.org/#/add/v2/0x1494ca1f11d487c2bbe4543e90080aeba4ba3c2b/ETH"
-            >
-              Uniswap
-            </a>
-            and supply liquidity to the <b>ETH-DPI</b> pair by depositing <b>ETH</b> and <b>DPI</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.UNI_LP_WETH_DPI}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.DPI}" target="_blank" rel="noopener noreferrer">DPI</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.UNI_LP_WETH_DPI}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4273,27 +3233,15 @@ module.exports = [
     rewardTokenSymbols: ['FARM'],
     externalPoolURL: `https://sushiswap.fi/pair/${addresses.V2.UNI_MIC_USDT.Underlying}`,
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://sushiswap.fi/pair/${addresses.V2.UNI_MIC_USDT.Underlying}"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>MIC-USDT</b> pair by depositing <b>MIC</b> and{' '}
-            <b>USDT</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.UNI_MIC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
+       <a href="https://etherscan.io/token/${addresses.MIC}" target="_blank" rel="noopener noreferrer">MIC</a> & 
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer">USDT</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.UNI_MIC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4308,27 +3256,15 @@ module.exports = [
     rewardTokenSymbols: ['FARM'],
     externalPoolURL: `https://sushiswap.fi/pair/${addresses.V2.UNI_MIS_USDT.Underlying}`,
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://sushiswap.fi/pair/${addresses.V2.UNI_MIS_USDT.Underlying}"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>MIS-USDT</b> pair by depositing <b>MIS</b> and{' '}
-            <b>USDT</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.UNI_MIS_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
+       <a href="https://etherscan.io/token/${addresses.MIS}" target="_blank" rel="noopener noreferrer">MIS</a> & 
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer">USDT</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.UNI_MIS_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4347,27 +3283,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     externalPoolURL: `https://exchange.sushiswapclassic.org/#/add/ETH/${addresses.PERP}`,
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://exchange.sushiswapclassic.org/#/add/ETH/${addresses.PERP}"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>PERP-ETH</b> pair by depositing <b>PERP</b> and{' '}
-            <b>ETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.sushi_PERP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.PERP}" target="_blank" rel="noopener noreferrer">PERP</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.sushi_PERP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4385,27 +3309,15 @@ module.exports = [
     rewardTokenSymbols: ['FARM'],
     externalPoolURL: `https://exchange.sushiswapclassic.org/#/add/ETH/0x6B3595068778DD592e39A122f4f5a5cF09C90fE2`,
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://exchange.sushiswapclassic.org/#/add/ETH/0x6B3595068778DD592e39A122f4f5a5cF09C90fE2"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>ETH-SUSHI</b> pair by depositing <b>ETH</b> and{' '}
-            <b>SUSHI</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.sushi_SUSHI_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.SUSHI}" target="_blank" rel="noopener noreferrer">SUSHI</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.sushi_SUSHI_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4423,26 +3335,15 @@ module.exports = [
     rewardTokenSymbols: ['FARM'],
     externalPoolURL: `https://exchange.sushiswapclassic.org/#/add/ETH/0x6B175474E89094C44Da98b954EedeAC495271d0F`,
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://exchange.sushiswapclassic.org/#/add/ETH/0x6B175474E89094C44Da98b954EedeAC495271d0F"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>ETH-DAI</b> pair by depositing <b>ETH</b> and <b>DAI</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.sushi_DAI_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer">DAI</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.sushi_DAI_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4460,27 +3361,15 @@ module.exports = [
     rewardTokenSymbols: ['FARM'],
     externalPoolURL: `https://exchange.sushiswapclassic.org/#/add/ETH/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48`,
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://exchange.sushiswapclassic.org/#/add/ETH/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>ETH-USDC</b> pair by depositing <b>ETH</b> and{' '}
-            <b>USDC</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.sushi_USDC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.sushi_USDC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4498,27 +3387,15 @@ module.exports = [
     rewardTokenSymbols: ['FARM'],
     externalPoolURL: `https://exchange.sushiswapclassic.org/#/add/ETH/0xdAC17F958D2ee523a2206206994597C13D831ec7`,
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://exchange.sushiswapclassic.org/#/add/ETH/0xdAC17F958D2ee523a2206206994597C13D831ec7"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>ETH-USDT</b> pair by depositing <b>ETH</b> and{' '}
-            <b>USDT</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.sushi_USDT_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer">USDT</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.sushi_USDT_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4536,27 +3413,15 @@ module.exports = [
     rewardTokenSymbols: ['FARM'],
     externalPoolURL: `https://exchange.sushiswapclassic.org/#/add/ETH/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599`,
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://exchange.sushiswapclassic.org/#/add/ETH/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>ETH-WBTC</b> pair by depositing <b>ETH</b> and{' '}
-            <b>WBTC</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.sushi_WBTC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.WBTC}" target="_blank" rel="noopener noreferrer">WBTC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.sushi_WBTC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4574,26 +3439,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     externalPoolURL: `https://exchange.sushiswapclassic.org/#/add/ETH/0xa47c8bf37f92aBed4A126BDA807A7b7498661acD`,
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://exchange.sushiswapclassic.org/#/add/ETH/0xa47c8bf37f92aBed4A126BDA807A7b7498661acD"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>UST-ETH</b> pair by depositing <b>UST</b> and <b>ETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.sushi_UST_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.UST}" target="_blank" rel="noopener noreferrer">UST</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.sushi_UST_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4611,15 +3465,15 @@ module.exports = [
     rewardTokenSymbols: ['FARM'],
     externalPoolURL: 'https://1inch.exchange/#/dao/pools',
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        These vaults are migrated from <b>1INCH</b> to <b>Sushiswap</b> and now earning the same{' '}
-        <b>iFARM</b> and <b>fSUSHI</b> yields as <b>SUSHI HODL</b> vaults.
-        <br />
-        <br /> When you withdraw, you receive <b>Sushiswap LP tokens</b> as well as proportional{' '}
-        <b>iFARM</b> and <b>fSUSHI</b> accumulated in the <b>HODL</b> vaults.
-        <br />
-        <br /> To deposit more assets, use the vaults in the <b>SUSHI HODL</b> section directly.
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.oneInch_ETH_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a 1Inch farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer">DAI</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.oneInch_ETH_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4637,15 +3491,15 @@ module.exports = [
     rewardTokenSymbols: ['FARM'],
     externalPoolURL: 'https://1inch.exchange/#/dao/pools',
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        These vaults are migrated from <b>1INCH</b> to <b>Sushiswap</b> and now earning the same{' '}
-        <b>iFARM</b> and <b>fSUSHI</b> yields as <b>SUSHI HODL</b> vaults.
-        <br />
-        <br /> When you withdraw, you receive <b>Sushiswap LP tokens</b> as well as proportional{' '}
-        <b>iFARM</b> and <b>fSUSHI</b> accumulated in the <b>HODL</b> vaults.
-        <br />
-        <br /> To deposit more assets, use the vaults in the <b>SUSHI HODL</b> section directly.
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.oneInch_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a 1Inch farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.oneInch_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4663,15 +3517,15 @@ module.exports = [
     rewardTokenSymbols: ['FARM'],
     externalPoolURL: 'https://1inch.exchange/#/dao/pools',
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        These vaults are migrated from <b>1INCH</b> to <b>Sushiswap</b> and now earning the same{' '}
-        <b>iFARM</b> and <b>fSUSHI</b> yields as <b>SUSHI HODL</b> vaults.
-        <br />
-        <br /> When you withdraw, you receive <b>Sushiswap LP tokens</b> as well as proportional{' '}
-        <b>iFARM</b> and <b>fSUSHI</b> accumulated in the <b>HODL</b> vaults.
-        <br />
-        <br /> To deposit more assets, use the vaults in the <b>SUSHI HODL</b> section directly.
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.oneInch_ETH_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a 1Inch farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer">USDT</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.oneInch_ETH_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4689,27 +3543,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     externalPoolURL: 'https://1inch.exchange/#/dao/pools',
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://1inch.exchange/#/dao/pools?token0=${addresses.USDC}&token1=${addresses['1INCH']}"
-            >
-              1Inch
-            </a>
-            and supply liquidity to the <b>USDC-1INCH</b> pair by depositing <b>1INCH</b> and{' '}
-            <b>USDC</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.oneInch_1INCH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a 1Inch farm, earning 
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer">USDC</a> & 
+       <a href="https://etherscan.io/token/${addresses["1INCH"]}" target="_blank" rel="noopener noreferrer">1INCH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.oneInch_1INCH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4726,22 +3568,15 @@ module.exports = [
       params: ['eurs'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://www.curve.fi/eurs/deposit">
-              curve.fi
-            </a>
-            and deposit <b>EUR stablecoins</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.crvEURS.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.crvEURS.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4758,22 +3593,14 @@ module.exports = [
       params: ['gusd'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://www.curve.fi/gusd/deposit">
-              curve.fi
-            </a>
-            and deposit <b>USD stablecoins</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.crvGUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.crvGUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4790,22 +3617,16 @@ module.exports = [
       params: ['14'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://www.curve.fi/steth/deposit">
-              curve.fi
-            </a>
-            and deposit <b>ETH assets</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.crvSTETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a> & 
+       <a href="https://etherscan.io/token/${addresses.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.crvSTETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4823,22 +3644,15 @@ module.exports = [
       params: ['link'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://www.curve.fi/link/deposit">
-              curve.fi
-            </a>
-            and deposit <b>LINK assets</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.crvLink.Underlying}" target="_blank" rel="noopener noreferrer"> CRV:LINK </a>in a Curve farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.crvLink.Underlying}" target="_blank" rel="noopener noreferrer"> CRV:LINK</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4852,22 +3666,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="https://exchange.sushi.com/">
-              Sushiswap
-            </a>
-            and convert assets to <b>SUSHI</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.SUSHI.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://etherscan.io/token/${addresses.SUSHI}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.SUSHI.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4885,26 +3691,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM', 'fSUSHI'],
     externalPoolURL: `https://exchange.sushiswapclassic.org/#/add/ETH/0x6B175474E89094C44Da98b954EedeAC495271d0F`,
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://exchange.sushiswapclassic.org/#/add/ETH/0x6B175474E89094C44Da98b954EedeAC495271d0F"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>ETH-DAI</b> pair by depositing <b>ETH</b> and <b>DAI</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.sushi_DAI_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer">DAI</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.sushi_DAI_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4922,27 +3717,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM', 'fSUSHI'],
     externalPoolURL: `https://exchange.sushiswapclassic.org/#/add/ETH/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48`,
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://exchange.sushiswapclassic.org/#/add/ETH/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>ETH-USDC</b> pair by depositing <b>ETH</b> and{' '}
-            <b>USDC</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.sushi_USDC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.sushi_USDC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4960,27 +3743,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM', 'fSUSHI'],
     externalPoolURL: `https://exchange.sushiswapclassic.org/#/add/ETH/0xdAC17F958D2ee523a2206206994597C13D831ec7`,
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://exchange.sushiswapclassic.org/#/add/ETH/0xdAC17F958D2ee523a2206206994597C13D831ec7"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>ETH-USDT</b> pair by depositing <b>ETH</b> and{' '}
-            <b>USDT</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.sushi_USDT_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer">USDT</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.sushi_USDT_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -4998,27 +3769,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM', 'fSUSHI'],
     externalPoolURL: `https://exchange.sushiswapclassic.org/#/add/ETH/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599`,
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://exchange.sushiswapclassic.org/#/add/ETH/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>ETH-WBTC</b> pair by depositing <b>ETH</b> and{' '}
-            <b>WBTC</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.sushi_WBTC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.WBTC}" target="_blank" rel="noopener noreferrer">WBTC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.sushi_WBTC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5037,27 +3796,15 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.uniswap.org/#/add/v2/${addresses.MUSE}/eth"
-            >
-              Uniswap
-            </a>
-            and supply liquidity to the <b>MUSE-ETH</b> pair by depositing <b>MUSE</b> and{' '}
-            <b>ETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.nft20_Muse.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.MUSE}" target="_blank" rel="noopener noreferrer">MUSE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.nft20_Muse.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5076,27 +3823,15 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.uniswap.org/#/add/v2/${addresses.NUDES20}/eth"
-            >
-              Uniswap
-            </a>
-            and supply liquidity to the <b>DUDES20-ETH</b> pair by depositing <b>DUDES20</b> and{' '}
-            <b>ETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.nft20_Dudes.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.NUDES20}" target="_blank" rel="noopener noreferrer">NUDES20</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.nft20_Dudes.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5115,27 +3850,15 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.uniswap.org/#/add/v2/${addresses.MASK20}/eth"
-            >
-              Uniswap
-            </a>
-            and supply liquidity to the <b>MASK20-ETH</b> pair by depositing <b>MASK20</b> and{' '}
-            <b>ETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.nft20_Mask.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.MASK20}" target="_blank" rel="noopener noreferrer">MASK20</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.nft20_Mask.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5153,27 +3876,15 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.uniswap.org/#/add/v2/${addresses.ROPE20}/eth"
-            >
-              Uniswap
-            </a>
-            and supply liquidity to the <b>ROPE20-ETH</b> pair by depositing <b>ROPE20</b> and{' '}
-            <b>ETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.nft20_Rope.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.ROPE20}" target="_blank" rel="noopener noreferrer">ROPE20</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.nft20_Rope.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5192,27 +3903,15 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.uniswap.org/#/add/v2/${addresses.MCAT20}/eth"
-            >
-              Uniswap
-            </a>
-            and supply liquidity to the <b>MCAT20-ETH</b> pair by depositing <b>MCAT20</b> and{' '}
-            <b>ETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.nft20_Mooncat.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.MCAT20}" target="_blank" rel="noopener noreferrer">MCAT20</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.nft20_Mooncat.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5231,27 +3930,15 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.uniswap.org/#/add/v2/${addresses.MEME20}/eth"
-            >
-              Uniswap
-            </a>
-            and supply liquidity to the <b>MEME20-ETH</b> pair by depositing <b>MEME20</b> and{' '}
-            <b>ETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.nft20_Meme.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.MEME20}" target="_blank" rel="noopener noreferrer">MEME20</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.nft20_Meme.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5270,27 +3957,15 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.uniswap.org/#/add/v2/${addresses.GPUNKS20}/eth"
-            >
-              Uniswap
-            </a>
-            and supply liquidity to the <b>GPUNKS20-ETH</b> pair by depositing <b>GPUNKS20</b> and{' '}
-            <b>ETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.nft20_Gpunks.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.GPUNKS20}" target="_blank" rel="noopener noreferrer">GPUNKS20</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.nft20_Gpunks.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5308,26 +3983,15 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.uniswap.org/#/add/v2/${addresses.MVI}/ETH"
-            >
-              Uniswap
-            </a>
-            and supply liquidity to the <b>ETH-MVI</b> pair by depositing <b>ETH</b> and <b>MVI</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.uni_ETH_MVI.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
+       <a href="https://etherscan.io/token/${addresses.MVI}" target="_blank" rel="noopener noreferrer">MVI</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.uni_ETH_MVI.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5346,27 +4010,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     externalPoolURL: `https://app.uniswap.org/#/add/v2/${addresses.KXUSD}/${addresses.DAI}`,
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.uniswap.org/#/add/v2/${addresses.KXUSD}/${addresses.DAI}"
-            >
-              Uniswap
-            </a>
-            and supply liquidity to the <b>KXUSD-DAI</b> pair by depositing <b>KXUSD</b> and{' '}
-            <b>DAI</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.klondike_KXUSD_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Klondike farm, earning 
+       <a href="https://etherscan.io/token/${addresses.KXUSD}" target="_blank" rel="noopener noreferrer">KXUSD</a> & 
+       <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer">DAI</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.klondike_KXUSD_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5606,26 +4258,15 @@ module.exports = [
       params: ['crypto-0'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://curve.fi/tricrypto2/deposit"
-            >
-              curve.fi
-            </a>
-            and deposit <b>WBTC, ETH, and/or USDT</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.crvThreeCrypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.crvThreeCrypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5643,26 +4284,15 @@ module.exports = [
       params: ['cvxcrv'],
     },
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://curve.fi/factory/22/deposit"
-            >
-              curve.fi
-            </a>
-            and deposit <b>CRV and/or cvxCRV</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.crvCVXCRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.crvCVXCRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5680,26 +4310,15 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.balancer.fi/#/pool/${addresses.V2.bal_BAL_WETH.PoolId}"
-            >
-              balancer.fi
-            </a>
-            and deposit <b>BAL</b> and <b>WETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.bal_BAL_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.bal_BAL_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5717,26 +4336,15 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.balancer.fi/#/pool/${addresses.V2.bal_DAI_WETH.PoolId}"
-            >
-              balancer.fi
-            </a>
-            and deposit <b>DAI</b> and <b>WETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.bal_DAI_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer">DAI</a> & 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.bal_DAI_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5754,26 +4362,15 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.balancer.fi/#/pool/${addresses.V2.bal_USDC_WETH.PoolId}"
-            >
-              balancer.fi
-            </a>
-            and deposit <b>USDC</b> and <b>WETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.bal_USDC_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer">USDC</a> & 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.bal_USDC_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5791,26 +4388,15 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.balancer.fi/#/pool/${addresses.V2.bal_USDT_WETH.PoolId}"
-            >
-              balancer.fi
-            </a>
-            and deposit <b>USDT</b> and <b>WETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.bal_USDT_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer">USDC</a> & 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.bal_USDT_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5828,26 +4414,15 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.balancer.fi/#/pool/${addresses.V2.bal_WBTC_WETH.PoolId}"
-            >
-              balancer.fi
-            </a>
-            and deposit <b>WBTC</b> and <b>WETH</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.bal_WBTC_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WBTC}" target="_blank" rel="noopener noreferrer">WBTC</a> & 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.bal_WBTC_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -5866,27 +4441,15 @@ module.exports = [
     rewardTokenSymbols: ['iFARM', 'PHTR'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://app.sushi.com/add/${addresses.PHTR}/${addresses.WETH}"
-            >
-              Sushiswap
-            </a>
-            and supply liquidity to the <b>PHTR-ETH</b> pair by depositing <b>PHTR</b> and
-            <b>ETH</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.sushi_PHTR_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://etherscan.io/token/${addresses.PHTR}" target="_blank" rel="noopener noreferrer">PHTR</a> & 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.sushi_PHTR_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -5919,22 +4482,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM', 'WMATIC', 'fAURFEB22_USDC', 'fAURAPR22_USDC'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://dmm.exchange/#/add/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174/0x4e3Decbb3645551B8A19f0eA1678079FCB33fB4c/0xa1219DBE76eEcBf7571Fed6b020Dd9154396B70e">
-            KyberDMM
-          </a>
-          and add liquidity for jEUR-USDC
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_JEUR_USDC_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.AUR_APR22}" target="_blank" rel="noopener noreferrer">AUR_APR22</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_JEUR_USDC_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     tradingApyFunction: {
@@ -5953,22 +4508,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM', 'WMATIC', 'fAURFEB22_USDC', 'fAURAPR22_USDC'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://dmm.exchange/#/add/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174/0x767058F11800FBA6A682E73A6e79ec5eB74Fac8c/0xbb2d00675B775E0F8acd590e08DA081B2a36D3a6">
-            KyberDMM
-          </a>
-          and add liquidity for jGBP-USDC
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_JGBP_USDC_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.AUR_APR22}" target="_blank" rel="noopener noreferrer">AUR_APR22</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_JGBP_USDC_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     tradingApyFunction: {
@@ -5987,22 +4534,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM', 'WMATIC', 'fAURFEB22_USDC', 'fAURAPR22_USDC'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://dmm.exchange/#/add/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174/0xbD1463F02f61676d53fd183C2B19282BFF93D099/0x439E6A13a5ce7FdCA2CC03bF31Fb631b3f5EF157">
-            KyberDMM
-          </a>
-          and add liquidity for jCHF-USDC
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_JCHF_USDC_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.AUR_APR22}" target="_blank" rel="noopener noreferrer">AUR_APR22</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_JCHF_USDC_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -6016,22 +4555,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://dmm.exchange/#/add/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174/0xfAdE2934b8E7685070149034384fB7863860D86e/0xA0fB4487c0935f01cBf9F0274FE3CdB21a965340">
-            KyberDMM
-          </a>
-          and add liquidity for AUR-USDC
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_AUR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.AUR0112}" target="_blank" rel="noopener noreferrer">AUR0112</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_AUR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -6050,22 +4581,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_POLYBASE.PoolId}">
-            balancer
-          </a>
-          and invest <b>WMATIC</b>, <b>USDC</b>, <b>WETH</b> or <b>BAL</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_POLYBASE.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_POLYBASE.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -6084,22 +4607,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <b>Deposit and stake:</b>
-      <ol class="numeric-list">
-        <li>
-          Go to&nbsp;
-          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_STABLE.PoolId}">
-            balancer
-          </a>
-          and invest <b>USDT</b>, <b>miMATIC</b>, <b>USDC</b> or <b>DAI</b>
-        </li>
-        <li>
-          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-          &quot;Stake for rewards&quot; checked for staking
-        </li>
-      </ol>
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_STABLE.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_STABLE.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
     </div>
- `,
+   `,
   },
   {
     tradingApyFunction: {
@@ -6115,27 +4630,14 @@ module.exports = [
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-        <li>
-        Go to&nbsp;
-        <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://app.sushi.com/add/ETH/${addresses.YEL}"
-          >
-            Sushiswap
-          </a>
-          and supply liquidity to the <b>YEL-ETH</b> pair by depositing <b>YEL</b> and
-          <b>ETH</b>
-        </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.V2.sushi_YEL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.pYEL}" target="_blank" rel="noopener noreferrer">pYEL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.V2.sushi_YEL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+      </p>
+    </div>
    `,
   },
   {
@@ -6153,27 +4655,14 @@ module.exports = [
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
     stakeAndDepositHelpMessage: `
-      <div class="help-message">
-        <b>Deposit and stake:</b>
-        <ol class="numeric-list">
-          <li>
-            Go to&nbsp;
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://apeswap.finance/add/ETH/${addresses.MATIC.pWBTC}"
-              >
-                Apeswap
-              </a>
-              and supply liquidity to the <b>BTC-MATIC</b> pair by depositing <b>BTC</b> and
-              <b>MATIC</b>
-          </li>
-          <li>
-            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
-            &quot;Stake for rewards&quot; checked for staking
-          </li>
-        </ol>
-      </div>
-    `,
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.ape_BTC_MATIC.Underlying}" target="_blank" rel="noopener noreferrer"> Apeswap LP tokens </a>in a Apeswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BANANA}" target="_blank" rel="noopener noreferrer">pYEL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.ape_BTC_MATIC.Underlying}" target="_blank" rel="noopener noreferrer"> Apeswap LP tokens</a>.
+      </p>
+    </div>
+   `,
   },
 ]
