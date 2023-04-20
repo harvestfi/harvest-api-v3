@@ -2694,6 +2694,16 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM, addresses.ecoCNG],
     rewardTokenSymbols: ['iFARM', 'ecoCNG'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.UniV3_CNG_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
+       <a href="https://etherscan.io/token/${addresses.UNI}" target="_blank" rel="noopener noreferrer">UNI</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.UniV3_CNG_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
