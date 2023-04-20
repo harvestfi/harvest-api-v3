@@ -3547,7 +3547,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.V2.oneInch_1INCH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a 1Inch farm, earning 
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer">USDC</a> & 
-       <a href="https://etherscan.io/token/${addresses["1INCH"]}" target="_blank" rel="noopener noreferrer">1INCH</a>.
+       <a href="https://etherscan.io/token/${addresses['1INCH']}" target="_blank" rel="noopener noreferrer">1INCH</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.oneInch_1INCH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
