@@ -83,7 +83,7 @@ module.exports = {
   balancer_RDNT_ETH: {
     isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
-    logoUrl: ['./icons/rdnt.png', './icons/eth.svg'],
+    logoUrl: ['./icons/rdnt.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
     apyTokenSymbols: ['BAL'],
     farmType: 'Advanced',
@@ -116,7 +116,7 @@ module.exports = {
   },
   ETSGamma: {
     chain: CHAINS_ID.ARBITRUM_ONE,
-    logoUrl: ['./icons/ets-gamma.png'],
+    logoUrl: ['./icons/ets-gamma.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.ETSGamma,
     decimals: '6',
     vaultAddress: null,
@@ -124,7 +124,7 @@ module.exports = {
   },
   USDPlus_arbitrum: {
     chain: CHAINS_ID.ARBITRUM_ONE,
-    logoUrl: ['./icons/usdplus.png'],
+    logoUrl: ['./icons/usdplus.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.USDPlus,
     decimals: '6',
     vaultAddress: null,
@@ -133,7 +133,7 @@ module.exports = {
   lizard_etsGamma_usdPlus: {
     isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
-    logoUrl: ['./icons/ets-gamma.png', './icons/usdplus.png'],
+    logoUrl: ['./icons/ets-gamma.svg', './icons/usdplus.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
     apyTokenSymbols: ['SLIZ'],
     farmType: 'Advanced',
@@ -5741,7 +5741,7 @@ module.exports = {
     },
   },
   MCAT20: {
-    logoUrl: ['./icons/mooncat20.png'],
+    logoUrl: ['./icons/mooncat20.svg'],
     tokenAddress: addresses.MCAT20,
     decimals: '18',
     vaultAddress: null,
@@ -6472,7 +6472,7 @@ module.exports = {
     isNFT: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
-    logoUrl: ['./icons/mooncat20.png', './icons/eth.svg'],
+    logoUrl: ['./icons/mooncat20.svg', './icons/eth.svg'],
     tokenNames: ['MCAT20', 'ETH'],
     platform: [],
     tokenAddress: addresses.V2.nft20_Mooncat.Underlying,
@@ -6691,7 +6691,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.PERP] },
   },
   DPI: {
-    logoUrl: ['./icons/dpi.png'],
+    logoUrl: ['./icons/dpi.svg'],
     tokenAddress: addresses.DPI,
     decimals: '18',
     vaultAddress: null,
@@ -7006,7 +7006,7 @@ module.exports = {
   'ETH-DPI': {
     chain: CHAINS_ID.ETH_MAINNET,
     inactive: true,
-    logoUrl: ['./icons/eth.svg', './icons/dpi.png'],
+    logoUrl: ['./icons/eth.svg', './icons/dpi.svg'],
     apyIconUrls: [],
     tokenNames: ['ETH', 'DPI'],
     platform: [],
