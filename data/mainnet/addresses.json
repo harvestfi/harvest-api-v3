@@ -1235,6 +1235,9 @@
     "CRV": "0x172370d5Cd63279eFa6d502DAB29171933a610AF",
     "CVX": "0x4257EA7637c355F81616050CbB6a9b709fd72683",
     "BAL": "0x9a71012B13CA4d3D0Cdc72A177DF3ef03b0E76A3",
+    "aCRV": "0x89C90E480A39fBE3886bB5bD53ba5B1Acc69D4Fb",
+    "USDR": "0xb5DFABd7fF7F83BAB83995E72A52B97ABb7bcf63",
+    "am3CRV_gauge": "0x19793B454D3AfC7b454F206Ffe95aDE26cA6912c",
     "V2": {
       "quickswap_ETH_MATIC": {
         "Underlying": "0xadbF1854e5883eB8aa7BAf50705338739e558E5b"
@@ -1697,6 +1700,22 @@
         "NewPool": "0x3B5DB41C26039C8D7C125a2200E564377A3554aa",
         "Miner": "0x7BBc0e92505B485aeb3e82E828cb505DAf1E50c6",
         "PoolId": "9"
+      },
+      "curve_aCRV_CRV": {
+        "Underlying": "0xBed1d474DdA97edcEB7b9af13be4cbf1Bb98A2D3",
+        "NewVault": "0xD0d1441CF85d8Ad8F8b972bc9b3ABCF4031f3921",
+        "NewStrategy": "0x6af680688610B7313b0076dcbF7d9267669DA930",
+        "NewPool": "0xA4071074E362048795ef603CAbb9e75e7B5b1496",
+        "Miner": "0xd9F354177Edd66E7A6669F33d0Ec64C14E153b38",
+        "PoolId": "10"
+      },
+      "curve_USDR_3CRV": {
+        "Underlying": "0xa138341185a9D0429B0021A11FB717B225e13e1F",
+        "NewVault": "0xABB08b42975e9EC9E023DA82ef7e59EB86df7d27",
+        "NewStrategy": "0x983dDd43D360feb9a8062681802c1c5Bde0aE38F",
+        "NewPool": "0x0Fedd7ea1F4c59c097977026023656209D6Bdf09",
+        "Miner": "0xa138341185a9D0429B0021A11FB717B225e13e1F",
+        "PoolId": "11"
       }
     }
   },

@@ -5,6 +5,80 @@ const strat30PercentFactor = '0.7'
 
 module.exports = [
   {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    id: 'curve_aCRV_CRV',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.curve_aCRV_CRV.NewPool,
+    collateralAddress: addresses.MATIC.V2.curve_aCRV_CRV.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['miFARM'],
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX_L2,
+      params: [
+        addresses.MATIC.V2.curve_aCRV_CRV.Miner,
+        addresses.MATIC.V2.curve_aCRV_CRV.PoolId,
+        CHAINS_ID.MATIC_MAINNET,
+      ],
+    },
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/polygon/pools/factory-crypto-9/deposit">
+              Curve.fi
+            </a>
+            and add liquidity.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    id: 'curve_USDR_3CRV',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.curve_USDR_3CRV.NewPool,
+    collateralAddress: addresses.MATIC.V2.curve_USDR_3CRV.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['miFARM'],
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX_L2,
+      params: [
+        addresses.MATIC.V2.curve_USDR_3CRV.Miner,
+        addresses.MATIC.V2.curve_USDR_3CRV.PoolId,
+        CHAINS_ID.MATIC_MAINNET,
+      ],
+    },
+    stakeAndDepositHelpMessage: `
+      <div class="help-message">
+        <b>Deposit and stake:</b>
+        <ol class="numeric-list">
+          <li>
+            Go to&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="https://curve.fi/#/polygon/pools/factory-v2-339/deposit">
+              Curve.fi
+            </a>
+            and add liquidity.
+          </li>
+          <li>
+            Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+            &quot;Stake for rewards&quot; checked for staking
+          </li>
+        </ol>
+    </div>
+   `,
+  },
+  {
     chain: CHAINS_ID.ETH_MAINNET,
     id: 'balancer_OHM_DAI',
     type: POOL_TYPES.INCENTIVE,
