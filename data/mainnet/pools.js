@@ -6,6 +6,148 @@ const strat30PercentFactor = '0.7'
 module.exports = [
   {
     chain: CHAINS_ID.MATIC_MAINNET,
+    id: 'balancer_TNGBL_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.MATIC.V2.balancer_TNGBL_USDC.Underlying, 'balancerv2_matic'],
+    },
+    contractAddress: addresses.MATIC.V2.balancer_TNGBL_USDC.NewPool,
+    collateralAddress: addresses.MATIC.V2.balancer_TNGBL_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['miFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <b>Deposit and stake:</b>
+      <ol class="numeric-list">
+        <li>
+          Go to&nbsp;
+          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_TNGBL_USDC.PoolId}">
+            balancer
+          </a>
+          and provide liquidity.
+        </li>
+        <li>
+          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+          &quot;Stake for rewards&quot; checked for staking
+        </li>
+      </ol>
+    </div>
+ `,
+  },
+  {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    id: 'balancer_MaticX_amMatic',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [
+        addresses.MATIC.V2.balancer_MaticX_amMatic.Underlying,
+        'balancerv2_matic',
+        true,
+        CHAINS_ID.MATIC_MAINNET,
+      ],
+    },
+    contractAddress: addresses.MATIC.V2.balancer_MaticX_amMatic.NewPool,
+    collateralAddress: addresses.MATIC.V2.balancer_MaticX_amMatic.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['miFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <b>Deposit and stake:</b>
+      <ol class="numeric-list">
+        <li>
+          Go to&nbsp;
+          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_MaticX_amMatic.PoolId}">
+            balancer
+          </a>
+          and provide liquidity.
+        </li>
+        <li>
+          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+          &quot;Stake for rewards&quot; checked for staking
+        </li>
+      </ol>
+    </div>
+ `,
+  },
+  {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    id: 'balancer_stMatic_amMatic',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [
+        addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying,
+        'balancerv2_matic',
+        true,
+        CHAINS_ID.MATIC_MAINNET,
+      ],
+    },
+    contractAddress: addresses.MATIC.V2.balancer_stMatic_amMatic.NewPool,
+    collateralAddress: addresses.MATIC.V2.balancer_stMatic_amMatic.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['miFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <b>Deposit and stake:</b>
+      <ol class="numeric-list">
+        <li>
+          Go to&nbsp;
+          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_stMatic_amMatic.PoolId}">
+            balancer
+          </a>
+          and provide liquidity.
+        </li>
+        <li>
+          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+          &quot;Stake for rewards&quot; checked for staking
+        </li>
+      </ol>
+    </div>
+ `,
+  },
+  {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    id: 'balancer_2EUR_PAR_v2',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying, 'balancerv2_matic'],
+    },
+    contractAddress: addresses.MATIC.V2.balancer_2EUR_PAR_v2.NewPool,
+    collateralAddress: addresses.MATIC.V2.balancer_2EUR_PAR_v2.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['miFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <b>Deposit and stake:</b>
+      <ol class="numeric-list">
+        <li>
+          Go to&nbsp;
+          <a target="_blank" rel="noopener noreferrer" href="https://polygon.balancer.fi/#/pool/${addresses.MATIC.V2.balancer_2EUR_PAR_v2.PoolId}">
+            balancer
+          </a>
+          and provide liquidity.
+        </li>
+        <li>
+          Go back to this vault, hit &quot;MAX&quot; and then &quot;Deposit&quot;. Leave
+          &quot;Stake for rewards&quot; checked for staking
+        </li>
+      </ol>
+    </div>
+ `,
+  },
+  {
+    chain: CHAINS_ID.MATIC_MAINNET,
     id: 'curve_aCRV_CRV',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.curve_aCRV_CRV.NewPool,

@@ -35,6 +35,24 @@
     "boostTypes": ["stakedMatic"],
     "poolId": "0xb20fc01d21a50d2c734c4a1262b4404d41fa7bf000000000000000000000075c"
   },
+  "0x216690738Aac4aa0C4770253CA26a28f0115c595": {
+    "boostedUnderlyings": [
+      "0x3A58a54C066FdC0f2D55FC9C89F0415C92eBf3C4",
+      "0xE4885Ed2818Cc9E840A25f94F9b2A28169D1AEA7"
+    ],
+    "boostTypes": ["stakedMatic", "Aave"],
+    "aaveTags": [0, "WMATIC"],
+    "poolId": "0x216690738aac4aa0c4770253ca26a28f0115c595000000000000000000000b2c"
+  },
+  "0xE78b25c06dB117fdF8F98583CDaaa6c92B79E917": {
+    "boostedUnderlyings": [
+      "0xfa68FB4628DFF1028CFEc22b4162FCcd0d45efb6",
+      "0xE4885Ed2818Cc9E840A25f94F9b2A28169D1AEA7"
+    ],
+    "boostTypes": ["stakedMatic", "Aave"],
+    "aaveTags": [0, "WMATIC"],
+    "poolId": "0xe78b25c06db117fdf8f98583cdaaa6c92b79e917000000000000000000000b2b"
+  },
   "0x3dd0843A028C86e0b760b1A76929d1C5Ef93a2dd": {
     "boostedUnderlyings": ["0x616e8BfA43F920657B3497DBf40D6b1A02D4608d"],
     "boostTypes": ["balLP"],
@@ -91,7 +109,11 @@
     "poolId": "0x1ee442b5326009bb18f2f472d3e0061513d1a0ff000200000000000000000464"
   },
   "0x5aEe1e99fE86960377DE9f88689616916D5DcaBe": {
-    "boostedUnderlyings": ["0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0", "0xae78736Cd615f374D3085123A210448E74Fc6393", "0xac3E018457B222d93114458476f3E3416Abbe38F"],
+    "boostedUnderlyings": [
+      "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      "0xae78736Cd615f374D3085123A210448E74Fc6393",
+      "0xac3E018457B222d93114458476f3E3416Abbe38F"
+    ],
     "boostTypes": ["stakedEth", "stakedEth", "stakedEth"],
     "poolId": "0x5aee1e99fe86960377de9f88689616916d5dcabe000000000000000000000467"
   },
