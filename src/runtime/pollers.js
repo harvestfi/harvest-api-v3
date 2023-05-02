@@ -438,8 +438,12 @@ const getTotalRevenue = async () => {
   console.log('\n-- Getting total revenue --')
 
   const vaults = await loadData(Cache, DB_CACHE_IDS.VAULTS)
+  const pools = await loadData(Cache, DB_CACHE_IDS.POOLS)
   if (!vaults) {
-    console.log(`Error getting revenue due to missing data. Vaults: ${vaults}`)
+    console.log(`Error getting weekly buybacks due to missing data. Vaults: ${vaults}`)
+    return
+  } else if (!pools) {
+    console.log(`Error getting weekly buybacks due to missing data. Pools: ${pools}`)
     return
   }
 
@@ -457,9 +461,27 @@ const getTotalRevenue = async () => {
       const vault = vaults[networkId][symbol]
       let revenue = 0,
         revenueMonthly = 0
-      if (!vault.inactive) {
+      if (!vault.inactive && symbol != 'IFARM') {
         const tokenGmv = vault.totalValueLocked
-        const estimatedApy = vault.estimatedApy
+        let estimatedApy
+        if (
+          vault.category == 'UNIV3' ||
+          vault.category[0] == 'UNIV3' ||
+          vault.category[1] == 'UNIV3'
+        ) {
+          const poolToFetch = pools[networkId].find(
+            pool =>
+              pool.id === symbol ||
+              (pool.collateralAddress &&
+                pool.collateralAddress.toLowerCase() === vault.vaultAddress.toLowerCase()),
+          )
+          estimatedApy = poolToFetch.tradingApy
+          if (vault.estimatedApy > 0) {
+            estimatedApy = Number(estimatedApy) + Number(vault.estimatedApy)
+          }
+        } else {
+          estimatedApy = vault.estimatedApy
+        }
 
         const dailyApr = Math.pow(Number(estimatedApy / 100) + 1, 1 / 365) - 1
         const monthlyApy = (Math.pow(1 + dailyApr, 30) - 1) * 100
