@@ -464,11 +464,8 @@ const getTotalRevenue = async () => {
       if (!vault.inactive && symbol != 'IFARM') {
         const tokenGmv = vault.totalValueLocked
         let estimatedApy
-        if (
-          vault.category == 'UNIV3' ||
-          vault.category[0] == 'UNIV3' ||
-          vault.category[1] == 'UNIV3'
-        ) {
+        const pool = pools[networkId].find(pool => pool.id === symbol)
+        if (pool.type == 'UNIV3') {
           const poolToFetch = pools[networkId].find(
             pool =>
               pool.id === symbol ||
