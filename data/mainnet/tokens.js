@@ -200,7 +200,7 @@ module.exports = {
   balancer_2EUR_PAR_v2: {
     isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
-    logoUrl: ['./icons/2eur_par.png'],
+    logoUrl: ['./icons/jeur.svg', './icons/par.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
     apyTokenSymbols: ['BAL'],
     tokenNames: ['jEUR', 'PAR'],
