@@ -64,7 +64,6 @@ const fetchAndExpandVault = async symbol => {
 
   totalSupply = await getTotalSupply(vaultInstance)
 
-  //HOTFIX
   try {
     underlyingBalanceWithInvestment = await getUnderlyingBalanceWithInvestment(vaultInstance)
     pricePerFullShare = await getPricePerFullShare(vaultInstance)
@@ -234,7 +233,7 @@ const fetchAndExpandVault = async symbol => {
   }
 
   return {
-    ...omit(vaultData, ['priceFunction', 'estimateApyFunctions']),
+    ...omit(vaultData, ['priceFunction', 'estimateApyFunctions', 'inactive']),
     pricePerFullShare,
     estimatedApy,
     estimatedApyBreakdown,
@@ -246,6 +245,7 @@ const fetchAndExpandVault = async symbol => {
     uniswapV3PositionId,
     uniswapV3UnderlyingTokenPrices,
     uniswapV3ManagedData,
+    inactive: vaultData.inactive ? vaultData.inactive : false,
     rewardPool: vaultPool ? vaultPool.contractAddress : null,
   }
 }
