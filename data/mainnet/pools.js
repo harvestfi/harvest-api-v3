@@ -1721,6 +1721,16 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.apeStake.Underlying}" target="_blank" rel="noopener noreferrer"> APE </a>in an APE farm, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.apeStake.Underlying}" target="_blank" rel="noopener noreferrer">APE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.apeStake.Underlying}" target="_blank" rel="noopener noreferrer"> APE</a>.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -2540,6 +2550,16 @@ module.exports = [
     rewardAPY: null,
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.looks_LOOKS.Underlying}" target="_blank" rel="noopener noreferrer"> LOOKS </a>in a LooksRare farm, earning 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.looks_LOOKS.Underlying}" target="_blank" rel="noopener noreferrer"> LOOKS</a>.
+      </p>
+    </div>
+   `,
   },
   {
     tradingApyFunction: {
@@ -2555,6 +2575,16 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.mUSD.Underlying}" target="_blank" rel="noopener noreferrer"> mUSD </a>in a mStable farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.pMTA}" target="_blank" rel="noopener noreferrer">MTA</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.mUSD.Underlying}" target="_blank" rel="noopener noreferrer"> mUSD</a>.
+      </p>
+    </div>
+   `,
   },
   {
     tradingApyFunction: {
@@ -2788,6 +2818,15 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.polygon_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>in an IDLE farm.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.polygon_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -2798,6 +2837,15 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.polygon_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>in an IDLE farm.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.polygon_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -2816,6 +2864,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -2834,6 +2890,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -2852,6 +2916,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>and 
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -2894,6 +2966,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -2912,6 +2992,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -2930,6 +3018,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -2951,6 +3047,14 @@ module.exports = [
     vestingDescriptionOverride: {
       DON: '',
     },
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.DON}" target="_blank" rel="noopener noreferrer"> DON </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -2962,6 +3066,16 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.liquity_LQTY.Underlying}" target="_blank" rel="noopener noreferrer"> Liquity </a>in a Harvest farm, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.liquity_LQTY.Underlying}" target="_blank" rel="noopener noreferrer">Liquity</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.liquity_LQTY.Underlying}" target="_blank" rel="noopener noreferrer"> Liquity</a>.
+      </p>
+    </div>
+   `,
   },
   {
     tradingApyFunction: {
@@ -3007,6 +3121,13 @@ module.exports = [
       decimals: '18',
       icon: '/icons/farm.png',
     },
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p>
+        Deposit FARM to receive iFARM. Protocol profits are shared with iFARM holders. The rewards are automatically compounded making iFARM redeemable for an increasing amount of FARM over time.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -3232,6 +3353,17 @@ module.exports = [
     rewardTokens: [addresses.FARM],
     rewardTokenSymbols: ['FARM'],
     zapperFiTokens: ['DAI', 'USDT'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>in an Idle farm, earning 
+       <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
+       <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -3244,6 +3376,17 @@ module.exports = [
     rewardTokens: [addresses.FARM],
     rewardTokenSymbols: ['FARM'],
     zapperFiTokens: ['USDC', 'DAI'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>in an Idle farm, earning 
+       <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
+       <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT</a>.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -3255,6 +3398,15 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.FARM],
     rewardTokenSymbols: ['FARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.TUSD}" target="_blank" rel="noopener noreferrer"> TUSD </a>in a farm.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.TUSD}" target="_blank" rel="noopener noreferrer"> TUSD</a>.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -3267,6 +3419,17 @@ module.exports = [
     rewardTokens: [addresses.FARM],
     rewardTokenSymbols: ['FARM'],
     zapperFiTokens: ['USDC', 'USDT'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>in an Idle farm, earning 
+       <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
+       <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI</a>.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -3354,6 +3517,17 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.FARM],
     rewardTokenSymbols: ['FARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.WBTC}" target="_blank" rel="noopener noreferrer"> WBTC </a>in an Idle farm, earning 
+       <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
+       <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.WBTC}" target="_blank" rel="noopener noreferrer"> WBTC</a>.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -3365,6 +3539,15 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.FARM],
     rewardTokenSymbols: ['FARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.RENBTC}" target="_blank" rel="noopener noreferrer"> renBTC </a>in a farm.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.RENBTC}" target="_blank" rel="noopener noreferrer"> renBTC</a>.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -3402,6 +3585,17 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.FARM],
     rewardTokenSymbols: ['FARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>in an Idle farm, earning 
+       <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
+       <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4216,6 +4410,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.zUSD}" target="_blank" rel="noopener noreferrer"> zUSD </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4230,6 +4432,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.zUSD}" target="_blank" rel="noopener noreferrer"> zUSD </a>and 
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4244,6 +4454,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>and 
+       <a href="https://etherscan.io/token/${addresses.sETH2}" target="_blank" rel="noopener noreferrer"> sETH2 </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4258,6 +4476,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4272,6 +4498,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4286,6 +4520,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM, addresses.LUNA],
     rewardTokenSymbols: ['iFARM', 'LUNA'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.UST}" target="_blank" rel="noopener noreferrer"> UST </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4300,6 +4542,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>and
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4314,6 +4564,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.WBTC}" target="_blank" rel="noopener noreferrer"> WBTC </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4328,6 +4586,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>and 
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4342,6 +4608,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>and 
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4356,6 +4630,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4370,6 +4652,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.UNI}" target="_blank" rel="noopener noreferrer"> UNI </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4388,6 +4678,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4406,6 +4704,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -4424,6 +4730,14 @@ module.exports = [
     rewardAPY: [],
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+      </p>
+    </div>
+   `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
