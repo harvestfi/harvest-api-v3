@@ -52,7 +52,7 @@ module.exports = {
   },
   TNGBL: {
     chain: CHAINS_ID.MATIC_MAINNET,
-    logoUrl: ['./icons/tngbl.png'],
+    logoUrl: ['./icons/tngbl.svg'],
     tokenAddress: addresses.MATIC.TNGBL,
     decimals: '18',
     vaultAddress: null,
@@ -61,7 +61,7 @@ module.exports = {
   balancer_TNGBL_USDC: {
     isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
-    logoUrl: ['./icons/tngbl-usdc.png'],
+    logoUrl: ['./icons/tngbl.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
     apyTokenSymbols: ['BAL'],
     tokenNames: ['TNGBL', 'USDC'],
@@ -94,7 +94,7 @@ module.exports = {
   },
   amMATIC: {
     chain: CHAINS_ID.MATIC_MAINNET,
-    logoUrl: [''],
+    logoUrl: ['./icons/ammatic.svg'],
     tokenAddress: addresses.MATIC.amMATIC,
     decimals: '18',
     vaultAddress: null,
@@ -132,7 +132,7 @@ module.exports = {
   balancer_MaticX_amMatic: {
     isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
-    logoUrl: ['./icons/maticx-ammatic.png'],
+    logoUrl: ['./icons/maticx.svg', './icons/ammatic.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/sd.png'],
     apyTokenSymbols: ['BAL', 'SD'],
     tokenNames: ['MaticX', 'amMATIC'],
@@ -166,7 +166,7 @@ module.exports = {
   balancer_stMatic_amMatic: {
     isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
-    logoUrl: ['./icons/stmatic-ammatic.png'],
+    logoUrl: ['./icons/stmatic.svg', './icons/ammatic.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/ldo.svg'],
     apyTokenSymbols: ['BAL', 'LDO'],
     tokenNames: ['stMATIC', 'amMATIC'],
@@ -233,7 +233,7 @@ module.exports = {
   },
   aCRV_polygon: {
     chain: CHAINS_ID.MATIC_MAINNET,
-    logoUrl: ['./icons/aCRV.png'],
+    logoUrl: ['./icons/acrv.svg'],
     tokenAddress: addresses.MATIC.aCRV,
     decimals: '18',
     vaultAddress: null,
@@ -244,7 +244,7 @@ module.exports = {
     chain: CHAINS_ID.MATIC_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
-    logoUrl: ['./icons/acrv-crv.png'],
+    logoUrl: ['./icons/acrv.svg', './icons/curve.svg'],
     tokenNames: ['aCRV', 'CRV'],
     farmType: 'Advanced',
     platform: ['Convex Finance'],
@@ -277,7 +277,7 @@ module.exports = {
   },
   USDR_polygon: {
     chain: CHAINS_ID.MATIC_MAINNET,
-    logoUrl: ['./icons/usdr.png'],
+    logoUrl: ['./icons/usdr.svg'],
     tokenAddress: addresses.MATIC.USDR,
     decimals: '9',
     vaultAddress: null,
@@ -305,7 +305,7 @@ module.exports = {
     chain: CHAINS_ID.MATIC_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
-    logoUrl: ['./icons/usdr-3crv.png'],
+    logoUrl: ['./icons/usdr.svg', './icons/am-dai.svg', './icons/am-usdc.svg', './icons/am-usdt.svg'],
     tokenNames: ['USDR', 'am3CRV'],
     farmType: 'Advanced',
     platform: ['Convex Finance'],
