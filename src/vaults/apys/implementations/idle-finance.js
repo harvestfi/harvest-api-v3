@@ -1,33 +1,13 @@
 const BigNumber = require('bignumber.js')
-const { web3, getWeb3 } = require('../../../lib/web3')
+const { getWeb3 } = require('../../../lib/web3')
 const tokenAddresses = require('../../../lib/data/addresses.json')
 
 const { UI_DATA_FILES, CHAIN_TYPES } = require('../../../lib/constants')
 const { getUIData } = require('../../../lib/data')
 const { cache } = require('../../../lib/cache')
 
-const uniswapContract = require('../../../lib/web3/contracts/uniswap/contract.json')
-const uniswapMethods = require('../../../lib/web3/contracts/uniswap/methods')
-
 const { idleLendingToken, idleController } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
-
-const getIDLEPriceFromUniswapInWethWeis = async () => {
-  const uniswapInstance = new web3.eth.Contract(
-    uniswapContract.abi,
-    uniswapContract.address.mainnet,
-  )
-
-  const result = await uniswapMethods.getAmountsOut(
-    new BigNumber(10).pow(18).toString(),
-    [tokenAddresses.IDLE, tokenAddresses.WETH],
-    uniswapInstance,
-  )
-
-  const price = new BigNumber(result[1])
-
-  return price.toString()
-}
 
 const getApy = async (tokenSymbol, idleLendingTokenAddress, factor, network = '1') => {
   const cachedApy = cache.get(`idleApy${tokenSymbol}`)
@@ -69,12 +49,11 @@ const getApy = async (tokenSymbol, idleLendingTokenAddress, factor, network = '1
     currentRate = new BigNumber(
       await idleControllerMethods.idleSpeeds(idleLendingTokenAddress, idleControllerInstance),
     )
-      .multipliedBy(2371428) // blocks per year
+      .multipliedBy(7200)
+      .multipliedBy(365.25) // blocks per year
       .dividedBy(new BigNumber(10).exponentiatedBy(18))
 
-    rewardTokenInUsd = new BigNumber(await getIDLEPriceFromUniswapInWethWeis())
-      .multipliedBy(await getTokenPrice(tokenAddresses.WETH))
-      .dividedBy(new BigNumber(10).exponentiatedBy(18))
+    rewardTokenInUsd = new BigNumber(await getTokenPrice(tokenAddresses.IDLE))
   } else if (network == CHAIN_TYPES.MATIC) {
     //Will add this implemenation later, it represents a tiny part of the APY.
     currentRate = new BigNumber(0)

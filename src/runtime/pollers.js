@@ -35,14 +35,12 @@ const addresses = require('../lib/data/addresses.json')
 
 const getProfitSharingFactor = chain => {
   switch (chain) {
-    case CHAIN_TYPES.BSC:
-      return 0.92
     case CHAIN_TYPES.MATIC:
       return 0.92
     case CHAIN_TYPES.ARBITRUM_ONE:
-      return 0.75
+      return 0.9
     default:
-      return 0.7
+      return 0.85
   }
 }
 
@@ -50,7 +48,6 @@ const getVaults = async () => {
   console.log('\n-- Getting vaults data --')
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
   let fetchedETHVaults = [],
-    fetchedBSCVaults = [],
     fetchedMATICVaults = [],
     fetchedARBITRUMVaults = [],
     fetchedVaults,
@@ -60,11 +57,6 @@ const getVaults = async () => {
 
   const ethVaultsBatches = chunk(
     Object.keys(tokensWithVault).filter(tokenId => tokens[tokenId].chain === CHAIN_TYPES.ETH),
-    GET_VAULT_DATA_BATCH_SIZE,
-  )
-
-  const bscVaultsBatches = chunk(
-    Object.keys(tokensWithVault).filter(tokenId => tokens[tokenId].chain === CHAIN_TYPES.BSC),
     GET_VAULT_DATA_BATCH_SIZE,
   )
 
@@ -79,19 +71,6 @@ const getVaults = async () => {
     ),
     GET_VAULT_DATA_BATCH_SIZE,
   )
-
-  console.log('\n-- Getting BSC vaults data --')
-  await forEach(bscVaultsBatches, async batch => {
-    try {
-      console.log('Getting vault data for: ', batch)
-      const vaultsData = await getVaultsData(batch)
-      fetchedBSCVaults = fetchedBSCVaults.concat(vaultsData)
-    } catch (err) {
-      hasErrors = true
-      console.error(`Failed to get vault data for: ${batch}`, err)
-    }
-  })
-  console.log('\n-- Done getting BSC vaults data --')
 
   console.log('\n-- Getting MATIC vaults data --')
   await forEach(maticVaultsBatches, async batch => {
@@ -135,10 +114,6 @@ const getVaults = async () => {
   console.log('\n-- Done getting ETH vaults data --')
 
   fetchedVaults = {
-    bsc: fetchedBSCVaults.reduce((acc, vault) => {
-      acc[vault.id] = vault
-      return acc
-    }, {}),
     eth: fetchedETHVaults.reduce((acc, vault) => {
       acc[vault.id] = vault
       return acc
@@ -222,31 +197,14 @@ const getTokenStats = async () => {
 }
 
 const getPools = async () => {
-  console.log('\n-- Getting BSC pool data --')
   const pools = await getUIData(UI_DATA_FILES.POOLS)
-  let fetchedBSCPools = [],
-    fetchedETHPools = [],
+  let fetchedETHPools = [],
     fetchedMATICPools = [],
     fetchedARBITRUMPools = [],
     fetchedPools = [],
     hasErrors
 
   try {
-    const bscPoolBatches = chunk(
-      pools.filter(pool => pool.chain === CHAIN_TYPES.BSC),
-      GET_POOL_DATA_BATCH_SIZE,
-    )
-
-    if (size(bscPoolBatches)) {
-      await forEach(bscPoolBatches, async poolBatch => {
-        const poolData = await getPoolsData(poolBatch)
-        fetchedBSCPools = fetchedBSCPools.concat(poolData)
-      })
-    } else {
-      console.log('No pools available')
-    }
-    console.log('-- Done getting BSC pool data --\n')
-
     console.log('\n-- Getting MATIC pool data --')
 
     const maticPoolBatches = chunk(
@@ -304,14 +262,11 @@ const getPools = async () => {
   }
 
   fetchedPools = {
-    bsc: fetchedBSCPools,
     eth: fetchedETHPools,
     matic: fetchedMATICPools,
     arbitrum: fetchedARBITRUMPools,
   }
   hasErrors =
-    (isArray(fetchedBSCPools) &&
-      (fetchedBSCPools.includes(undefined) || fetchedBSCPools.includes(null))) ||
     (isArray(fetchedETHPools) &&
       (fetchedETHPools.includes(undefined) || fetchedETHPools.includes(null))) ||
     (isArray(fetchedMATICPools) &&
@@ -348,10 +303,6 @@ const getTotalGmv = async () => {
   for (let networkId in vaults) {
     for (let symbol in vaults[networkId]) {
       const vault = vaults[networkId][symbol]
-      if (vault.inactive) {
-        continue
-      }
-
       try {
         console.log('Got GMV for:', vault.id, ':', vault.totalValueLocked)
         gmvList[symbol] = vault.totalValueLocked
@@ -359,7 +310,10 @@ const getTotalGmv = async () => {
         console.log(`Error getting GMV for: ${symbol}`, err)
         hasErrors = true
       }
-
+      if (symbol == 'IFARM') {
+        //Skip adding iFARM TVL to total because of duplicate with profit-sharing-farm
+        continue
+      }
       totalGmv = totalGmv.plus(vault.totalValueLocked)
     }
   }
@@ -371,7 +325,7 @@ const getTotalGmv = async () => {
 
   await forEach(relevantPools, async relevantPool => {
     try {
-      console.log('Getting GMV for: ', relevantPool.id, ':', relevantPool.totalValueLocked)
+      console.log('Got GMV for: ', relevantPool.id, ':', relevantPool.totalValueLocked)
       totalGmv = totalGmv.plus(relevantPool.totalValueLocked)
     } catch (err) {
       console.log(`Error getting GMV for: ${relevantPool.id}`, err)
@@ -419,11 +373,7 @@ const getWeeklyBuybacks = async () => {
         const tokenGmv = vault.totalValueLocked
         let profitSharingFactor = getProfitSharingFactor(vault.chain)
         let estimatedApy
-        if (
-          vault.category == 'UNIV3' ||
-          vault.category[0] == 'UNIV3' ||
-          vault.category[1] == 'UNIV3'
-        ) {
+        if (vault.isUniv3) {
           const poolToFetch = pools[networkId].find(
             pool =>
               pool.id === symbol ||
@@ -488,8 +438,12 @@ const getTotalRevenue = async () => {
   console.log('\n-- Getting total revenue --')
 
   const vaults = await loadData(Cache, DB_CACHE_IDS.VAULTS)
+  const pools = await loadData(Cache, DB_CACHE_IDS.POOLS)
   if (!vaults) {
-    console.log(`Error getting revenue due to missing data. Vaults: ${vaults}`)
+    console.log(`Error getting weekly buybacks due to missing data. Vaults: ${vaults}`)
+    return
+  } else if (!pools) {
+    console.log(`Error getting weekly buybacks due to missing data. Pools: ${pools}`)
     return
   }
 
@@ -507,9 +461,24 @@ const getTotalRevenue = async () => {
       const vault = vaults[networkId][symbol]
       let revenue = 0,
         revenueMonthly = 0
-      if (!vault.inactive) {
+      if (!vault.inactive && symbol != 'IFARM') {
         const tokenGmv = vault.totalValueLocked
-        const estimatedApy = vault.estimatedApy
+        let estimatedApy
+        const pool = pools[networkId].find(pool => pool.id === symbol)
+        if (pool.type == 'UNIV3') {
+          const poolToFetch = pools[networkId].find(
+            pool =>
+              pool.id === symbol ||
+              (pool.collateralAddress &&
+                pool.collateralAddress.toLowerCase() === vault.vaultAddress.toLowerCase()),
+          )
+          estimatedApy = poolToFetch.tradingApy
+          if (vault.estimatedApy > 0) {
+            estimatedApy = Number(estimatedApy) + Number(vault.estimatedApy)
+          }
+        } else {
+          estimatedApy = vault.estimatedApy
+        }
 
         const dailyApr = Math.pow(Number(estimatedApy / 100) + 1, 1 / 365) - 1
         const monthlyApy = (Math.pow(1 + dailyApr, 30) - 1) * 100
@@ -600,7 +569,7 @@ const getNanolyData = async () => {
               pool.collateralAddress.toLowerCase() === vault.vaultAddress.toLowerCase()),
         )
         const address = vault.tokenAddress
-        const tokens = vault.displayName
+        const tokens = vault.tokenNames.join('-')
         let base
         if (pool && pool.tradingApy) {
           base = (Number(vault.estimatedApy) + Number(pool.tradingApy)) / 100
@@ -757,13 +726,18 @@ const getCmc = async () => {
               pool.collateralAddress.toLowerCase() === vault.vaultAddress.toLowerCase() &&
               pool.chain === vault.chain,
           )
+          let logoUrlArray = []
+          for (let id in vault.logoUrl) {
+            let str = `https://harvest.finance/${vault.logoUrl[id].substring(2)}`
+            logoUrlArray.push(str)
+          }
 
           // now, pushing into an array
           response.pools.push({
             name: `${symbol} Vault`, // Pool name if any, eg. Sushi Party, Uniswap Sushi-ETH LP
             pair: symbol, // Pool pairs, e.g SUSHI-ETH
             pairLink: 'https://harvest.finance/', // The URL to this pool
-            logo: `https://harvest.finance/${vault.logoUrl.substring(2)}`, //  Pool logo if any, otherwise just use Project logo
+            logo: logoUrlArray,
             poolRewards: vault.cmcRewardTokenSymbols, // The reward token ticker
             apr: new BigNumber(estimatedApy)
               .plus(sumBy(relevantPool.apy, apy => Number(apy)))
