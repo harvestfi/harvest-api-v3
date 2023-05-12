@@ -5,6 +5,31 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAINS_ID.ETH_MAINNET,
+    id: 'verse_VERSE_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.V2.verse_VERSE_ETH.Underlying],
+    },
+    contractAddress: addresses.V2.verse_VERSE_ETH.NewPool,
+    collateralAddress: addresses.V2.verse_VERSE_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://etherscan.io/token/${addresses.V2.verse_VERSE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a> in a Verse farm, earning 
+       <a href="https://etherscan.io/token/${addresses.VERSE}" target="_blank" rel="noopener noreferrer">VERSE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.verse_VERSE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAINS_ID.MATIC_MAINNET,
     id: 'balancer_TNGBL_USDC',
     type: POOL_TYPES.INCENTIVE,
@@ -21,10 +46,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
-       <a href="https://etherscan.io/token/${addresses.MATIC.V2.balancer_TNGBL_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
-       <a href="https://etherscan.io/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_TNGBL_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://etherscan.io/token/${addresses.MATIC.V2.balancer_TNGBL_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_TNGBL_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
     </div>
    `,
@@ -51,11 +76,11 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
-       <a href="https://etherscan.io/token/${addresses.MATIC.V2.balancer_MaticX_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
-       <a href="https://etherscan.io/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
-       <a href="https://etherscan.io/token/${addresses.MATIC.SD}" target="_blank" rel="noopener noreferrer">SD</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_MaticX_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.SD}" target="_blank" rel="noopener noreferrer">SD</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://etherscan.io/token/${addresses.MATIC.V2.balancer_MaticX_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_MaticX_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
     </div>
    `,
@@ -82,11 +107,11 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
-       <a href="https://etherscan.io/token/${addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
-       <a href="https://etherscan.io/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
-       <a href="https://etherscan.io/token/${addresses.MATIC.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://etherscan.io/token/${addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
     </div>
    `,
@@ -108,10 +133,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
-       <a href="https://etherscan.io/token/${addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a> in a Balancer farm, earning 
-       <a href="https://etherscan.io/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a> in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://etherscan.io/token/${addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
     </div>
    `,
@@ -137,11 +162,11 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
-       <a href="https://etherscan.io/token/${addresses.MATIC.V2.curve_aCRV_CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a> in a Convex farm, earning 
-       <a href="https://etherscan.io/token/${addresses.MATIC.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
-       <a href="https://etherscan.io/token/${addresses.MATIC.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_aCRV_CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a> in a Convex farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://etherscan.io/token/${addresses.MATIC.V2.curve_aCRV_CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_aCRV_CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
     </div>
    `,
@@ -167,11 +192,11 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
-       <a href="https://etherscan.io/token/${addresses.MATIC.V2.curve_USDR_3CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a> in a Convex farm, earning 
-       <a href="https://etherscan.io/token/${addresses.MATIC.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
-       <a href="https://etherscan.io/token/${addresses.MATIC.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_USDR_3CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a> in a Convex farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://etherscan.io/token/${addresses.MATIC.V2.curve_USDR_3CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_USDR_3CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
     </div>
    `,
@@ -2941,10 +2966,8 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.UniV3_CNG_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
-       <a href="https://etherscan.io/token/${addresses.UNI}" target="_blank" rel="noopener noreferrer">UNI</a>.
-       At every harvest, the earned rewards are reinvested into more
-       <a href="https://etherscan.io/token/${addresses.V2.UniV3_CNG_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
+       <a href="https://etherscan.io/token/${addresses.CNG}" target="_blank" rel="noopener noreferrer"> CNG </a>and 
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -3362,7 +3385,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>to Idle's Best Yield vault. Idle strategies rely on a combination of different protocols to boost your earnings (Compound, Aave, Clearpool, Euler, Morpho). The vault earns  
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>to Idle's Best Yield vault. Idle strategies rely on a combination of different protocols to boost your earnings (Compound, Aave, Clearpool, Morpho). The vault earns  
        <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
        <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a> rewards.
        At every harvest, the earned rewards are reinvested into more
@@ -3382,10 +3405,10 @@ module.exports = [
     rewardTokens: [addresses.FARM],
     rewardTokenSymbols: ['FARM'],
     zapperFiTokens: ['USDC', 'DAI'],
-   stakeAndDepositHelpMessage: `
+    stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>to Idle's Best Yield vault. Idle strategies rely on a combination of different protocols to boost your earnings (Compound, Aave, Clearpool, Euler, Morpho). The vault earns  
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>to Idle's Best Yield vault. Idle strategies rely on a combination of different protocols to boost your earnings (Compound, Aave, Clearpool, Morpho). The vault earns  
        <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
        <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a> rewards.
        At every harvest, the earned rewards are reinvested into more
@@ -3428,14 +3451,14 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>in an Idle farm, earning 
-       <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
-       <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a>.
-       At every harvest, the earned rewards are reinvested into more
-       <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI</a>.
+        <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>to Idle's Best Yield vault. Idle strategies rely on a combination of different protocols to boost your earnings (Compound, Aave, Clearpool, Morpho). The vault earns  
+        <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
+        <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a> rewards.
+        At every harvest, the earned rewards are reinvested into more
+        <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI</a> to compound your earnings. By participating to this vault, farmers are also entitled to FARM rewards that can be claimed separately.
       </p>
     </div>
-   `,
+  `,
   },
   {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -3594,7 +3617,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>to Idle's Best Yield vault. Idle strategies rely on a combination of different protocols to boost your earnings (Compound, Aave, Clearpool, Euler, Morpho). The vault earns  
+        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>to Idle's Best Yield vault. Idle strategies rely on a combination of different protocols to boost your earnings (Compound, Aave, Clearpool, Morpho). The vault earns  
         <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
         <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a> rewards.
         At every harvest, the earned rewards are reinvested into more
