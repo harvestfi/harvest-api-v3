@@ -35,6 +35,24 @@
     "boostTypes": ["stakedMatic"],
     "poolId": "0xb20fc01d21a50d2c734c4a1262b4404d41fa7bf000000000000000000000075c"
   },
+  "0x216690738Aac4aa0C4770253CA26a28f0115c595": {
+    "boostedUnderlyings": [
+      "0x3A58a54C066FdC0f2D55FC9C89F0415C92eBf3C4",
+      "0xE4885Ed2818Cc9E840A25f94F9b2A28169D1AEA7"
+    ],
+    "boostTypes": ["stakedMatic", "Aave"],
+    "aaveTags": [0, "WMATIC"],
+    "poolId": "0x216690738aac4aa0c4770253ca26a28f0115c595000000000000000000000b2c"
+  },
+  "0xE78b25c06dB117fdF8F98583CDaaa6c92B79E917": {
+    "boostedUnderlyings": [
+      "0xfa68FB4628DFF1028CFEc22b4162FCcd0d45efb6",
+      "0xE4885Ed2818Cc9E840A25f94F9b2A28169D1AEA7"
+    ],
+    "boostTypes": ["stakedMatic", "Aave"],
+    "aaveTags": [0, "WMATIC"],
+    "poolId": "0xe78b25c06db117fdf8f98583cdaaa6c92b79e917000000000000000000000b2b"
+  },
   "0x3dd0843A028C86e0b760b1A76929d1C5Ef93a2dd": {
     "boostedUnderlyings": ["0x616e8BfA43F920657B3497DBf40D6b1A02D4608d"],
     "boostTypes": ["balLP"],
@@ -84,5 +102,29 @@
       "0x3fe7940616e5bc47b0775a0dccf6237893353bb4"
     ],
     "poolId": "0x60683b05e9a39e3509d8fdb9c959f23170f8a0fa000000000000000000000489"
+  },
+  "0x1ee442b5326009Bb18F2F472d3e0061513d1A0fF": {
+    "boostedUnderlyings": ["0xae78736Cd615f374D3085123A210448E74Fc6393"],
+    "boostTypes": ["stakedEth"],
+    "poolId": "0x1ee442b5326009bb18f2f472d3e0061513d1a0ff000200000000000000000464"
+  },
+  "0x5aEe1e99fE86960377DE9f88689616916D5DcaBe": {
+    "boostedUnderlyings": [
+      "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      "0xae78736Cd615f374D3085123A210448E74Fc6393",
+      "0xac3E018457B222d93114458476f3E3416Abbe38F"
+    ],
+    "boostTypes": ["stakedEth", "stakedEth", "stakedEth"],
+    "poolId": "0x5aee1e99fe86960377de9f88689616916d5dcabe000000000000000000000467"
+  },
+  "0x5DEe84FfA2DC27419Ba7b3419d7146E53e4F7dEd": {
+    "boostedUnderlyings": ["0xEe327F889d5947c1dc1934Bb208a1E792F953E96"],
+    "boostTypes": ["stakedEth"],
+    "poolId": "0x5dee84ffa2dc27419ba7b3419d7146e53e4f7ded000200000000000000000a4e"
+  },
+  "0x65Fe9314bE50890Fb01457be076fAFD05Ff32B9A": {
+    "boostedUnderlyings": ["0x03b54A6e9a984069379fae1a4fC4dBAE93B3bCCD"],
+    "boostTypes": ["stakedEth"],
+    "poolId": "0x65fe9314be50890fb01457be076fafd05ff32b9a000000000000000000000a96"
   }
 }

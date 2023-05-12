@@ -49,6 +49,7 @@ const getApy = async (poolId, firstToken, secondToken, reduction, chain) => {
   let apy,
     sushiPerBlock,
     sushiPerSecond,
+    extraUsdPerSecond,
     blocksPerYear,
     secondsPerYear,
     poolInfo = {}
@@ -77,14 +78,11 @@ const getApy = async (poolId, firstToken, secondToken, reduction, chain) => {
     if (rewarder !== '0x0000000000000000000000000000000000000000') {
       const rewarderInstance = new selectedWeb3.eth.Contract(rewarderContractArbitrum.abi, rewarder)
       const rewardToken = await getRewardToken(rewarderInstance)
-      const rewardTokenPerSecond = await getRewardPerSecond(rewarderInstance)
+      const rewardTokenPerSecond = new BigNumber(
+        await getRewardPerSecond(rewarderInstance),
+      ).dividedBy(OneEthInWei)
       const rewardTokenPrice = await getTokenPrice(rewardToken, CHAIN_TYPES.ARBITRUM_ONE)
-      sushiPerSecond = sushiPerSecond.plus(
-        new BigNumber(rewardTokenPerSecond)
-          .dividedBy(OneEthInWei)
-          .times(rewardTokenPrice)
-          .dividedBy(sushiPriceInUsd),
-      )
+      extraUsdPerSecond = rewardTokenPerSecond.times(rewardTokenPrice)
     }
   } else {
     sushiPerBlock = new BigNumber(await getSushiPerBlock(sushiInstance)).dividedBy(
@@ -109,12 +107,12 @@ const getApy = async (poolId, firstToken, secondToken, reduction, chain) => {
   apy = new BigNumber(sushiPriceInUsd)
 
   if (selectedChain !== CHAIN_TYPES.ETH) {
-    apy = apy.times(sushiPerSecond).times(secondsPerYear)
+    apy = apy.times(sushiPerSecond.times(poolWeight)).plus(extraUsdPerSecond).times(secondsPerYear)
   } else {
-    apy = apy.times(sushiPerBlock).times(blocksPerYear)
+    apy = apy.times(sushiPerBlock).times(blocksPerYear).times(poolWeight)
   }
 
-  apy = apy.times(poolWeight).div(totalSupplyInUsd)
+  apy = apy.div(totalSupplyInUsd)
 
   if (reduction) {
     apy = apy.multipliedBy(reduction)

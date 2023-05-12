@@ -34,11 +34,7 @@ const getBoostAPY = async (poolAddress, networkId) => {
     } else if (types[i] == 'stakedMatic') {
       partApy = await getStakedMaticApy(token)
     } else if (types[i] == 'stakedEth') {
-      if (token == '0x5979D7b546E38E414F7E9822514be443A4800529') {
-        partApy = await getStakedEthApy('0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0', '1')
-      } else {
-        partApy = await getStakedEthApy(token, networkId)
-      }
+      partApy = await getStakedEthApy(token)
     } else {
       console.error(`Balancer boost type: ${types[i]} not recognized`)
       continue
@@ -70,18 +66,30 @@ const getAaveApy = async tokenId => {
   return new BigNumber(aavePool[0].liquidityRate).times(100)
 }
 
-const getStakedEthApy = async (token, networkId) => {
-  if (token == '0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0') {
-    return await get7MAAPRs(networkId)
+const getStakedEthApy = async token => {
+  if (
+    token == '0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0' ||
+    token == '0x03b54A6e9a984069379fae1a4fC4dBAE93B3bCCD' ||
+    token == '0x5979D7b546E38E414F7E9822514be443A4800529'
+  ) {
+    return await get7MAAPRs('1')
   } else if (token == '0xae78736Cd615f374D3085123A210448E74Fc6393') {
-    return await getYearlyAPR(networkId)
+    return await getYearlyAPR('1')
+  } else if (
+    token == '0xac3E018457B222d93114458476f3E3416Abbe38F' ||
+    token == '0xEe327F889d5947c1dc1934Bb208a1E792F953E96'
+  ) {
+    //HOTFIX
+    return 10
   }
 }
 
 const getStakedMaticApy = async token => {
   if (token == '0xfa68FB4628DFF1028CFEc22b4162FCcd0d45efb6') {
+    //HOTFIX
     return 5.76
   } else {
+    //HOTFIX
     return 6.3
   }
 }
