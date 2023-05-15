@@ -648,7 +648,6 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['dopex-rebate-token'] },
   },
   sushi_DPX_ETH: {
-    inactive: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/dpx.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sushi.svg', './icons/dpx.svg'],
@@ -679,7 +678,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'ETH', 'DPX'],
   },
   sushi_RDPX_ETH: {
-    isNew: true,
+    inactive: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/rdpx.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sushi.svg', './icons/dpx.svg'],
@@ -3217,6 +3216,7 @@ module.exports = {
     },
   },
   balancer_2BRL: {
+    inactive: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/2brl.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
