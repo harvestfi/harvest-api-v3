@@ -59,7 +59,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.VERSE] },
   },
   verse_VERSE_ETH: {
-    isNew: true,
+    inactive: true,
     chain: CHAINS_ID.ETH_MAINNET,
     logoUrl: ['./icons/verse.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/verse.svg'],
