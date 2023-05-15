@@ -5947,7 +5947,7 @@ module.exports = {
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/univ3.svg'],
     apyTokenSymbols: ['UNI'],
-    logoUrl: ['./icons/univ3-busd-usdc.png'],
+    logoUrl: ['./icons/busd.svg', './icons/usdc.svg'],
     tokenNames: ['BUSD', 'USDC'],
     platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_BUSD_USDC.Underlying,
