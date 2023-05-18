@@ -3278,7 +3278,7 @@ module.exports = [
     rewardTokenSymbols: ['FARM'],
     tradingApyFunction: {
       type: TRADING_APY_TYPES.CONVEX,
-      params: ['3pool'],
+      params: ['0'],
     },
     stakeAndDepositHelpMessage: `
     <div class="help-message">

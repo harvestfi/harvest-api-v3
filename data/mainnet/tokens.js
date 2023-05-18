@@ -92,7 +92,6 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['tangible'] },
   },
   balancer_TNGBL_USDC: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/tngbl.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
@@ -163,7 +162,6 @@ module.exports = {
     },
   },
   balancer_MaticX_amMatic: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/maticx.svg', './icons/ammatic.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/sd.png'],
@@ -197,7 +195,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   balancer_stMatic_amMatic: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/stmatic.svg', './icons/ammatic.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/ldo.svg'],
@@ -231,7 +228,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   balancer_2EUR_PAR_v2: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/jeur.svg', './icons/par.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
@@ -273,7 +269,6 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['aladdin-cvxcrv'] },
   },
   curve_aCRV_CRV: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -334,7 +329,6 @@ module.exports = {
     },
   },
   curve_USDR_3CRV: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -375,7 +369,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   balancer_OHM_DAI: {
-    isNew: true,
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -404,7 +397,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   balancer_RDNT_ETH: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/rdnt.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
@@ -454,7 +446,6 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['usd'] },
   },
   lizard_etsGamma_usdPlus: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/ets-gamma.svg', './icons/usdplus.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
@@ -495,7 +486,6 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['frax'] },
   },
   convex_FRAX_USDC_arbitrum: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -539,7 +529,6 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['arbitrum'] },
   },
   lizard_ARB_ETH: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
@@ -568,7 +557,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   lizard_ARB_USDC: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
@@ -597,7 +585,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   sushi_MAGIC_ETH: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/magic.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sushi.svg', './icons/magic.svg'],
@@ -713,7 +700,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'ETH', 'DPX'],
   },
   curve_3CRV_polygon: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -749,7 +735,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   curve_3Crypto_polygon: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -802,7 +787,6 @@ module.exports = {
     },
   },
   curve_CRV_3Crypto_polygon: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -845,7 +829,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   curve_MATIC_3Crypto_polygon: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -1023,7 +1006,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   balancer_wUSDR_USDC_polygon: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/wusdr.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
@@ -1086,7 +1068,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   balancer_PENDLE_ETH: {
-    isNew: true,
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -1115,7 +1096,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   balancer_rETH_BADGER: {
-    isNew: true,
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -1144,7 +1124,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   balancer_stETH_rETH_sfrxETH: {
-    isNew: true,
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -1173,7 +1152,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   balancer_wUSDR_USDC: {
-    isNew: true,
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -1225,7 +1203,6 @@ module.exports = {
     },
   },
   curve_lvUSD: {
-    isNew: true,
     chain: CHAINS_ID.ETH_MAINNET,
     logoUrl: [
       './icons/lvusd.svg',
@@ -1292,7 +1269,6 @@ module.exports = {
     },
   },
   iPoison: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/ipoison.svg'],
     apyIconUrls: ['./icons/poison.svg'],
@@ -1326,7 +1302,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'POISON'],
   },
   poison_pGOLD_USDC: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/pgold.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/poison.svg'],
@@ -1356,7 +1331,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'POISON'],
   },
   poison_pSLVR_USDC: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/pslvr.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/poison.svg'],
@@ -1386,7 +1360,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'POISON'],
   },
   poison_pTSLA_USDC: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/ptsla.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/poison.svg'],
@@ -1538,7 +1511,6 @@ module.exports = {
     },
   },
   lizard_SLIZ_ETH: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/sliz.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
@@ -1567,7 +1539,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   lizard_ETH_USDC: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
@@ -1600,7 +1571,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   lizard_agEUR_USDC: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/ageur.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
@@ -1633,7 +1603,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   lizard_LUSD_USDC: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/lusd.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
@@ -1694,7 +1663,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   balancer_wstETH_wETH_arbitrum: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/ldo.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/ldo.svg'],
@@ -1728,7 +1696,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   balancer_wstETH_USDC_arbitrum: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/wsteth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/ldo.svg'],
@@ -1762,7 +1729,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   balancer_wBTC_wETH_USDC_arbitrum: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
@@ -1796,7 +1762,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   convex_USDT_WBTC_WETH_arbitrum: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -1832,7 +1797,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   convex_USDC_USDT_arbitrum: {
-    isNew: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -1876,6 +1840,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.F_TOKEN, params: [addresses.iFARM, '18'] },
   },
   Curve_2pool_arbitrum: {
+    inactive: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
     decimals: '18',
@@ -1968,6 +1933,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   Curve_TriCrypto_arbitrum: {
+    inactive: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg', './icons/usdt.svg'],
     decimals: '18',
@@ -2372,7 +2338,6 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.SUSHI] },
   },
   aura_auraBAL: {
-    isNew: true,
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -2397,7 +2362,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA', 'bbaUSD'],
   },
   aura_auraBAL_lp: {
-    isNew: true,
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -2426,7 +2390,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   aura_bbaUSD: {
-    isNew: true,
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -2455,7 +2418,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA', 'bbaUSD'],
   },
   aura_rETH: {
-    isNew: true,
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -2484,7 +2446,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   aura_wstETH: {
-    isNew: true,
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/ldo.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'LDO'],
@@ -2513,7 +2474,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA', 'LDO'],
   },
   quickGamma_MATIC_ETH_narrow: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -2543,7 +2503,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_MATIC_ETH_wide: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -2573,7 +2532,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_MATIC_USDC_narrow: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -2603,7 +2561,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_MATIC_USDC_wide: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -2633,7 +2590,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_USDC_ETH_narrow: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -2663,7 +2619,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_USDC_ETH_wide: {
-    isNew: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -3261,7 +3216,6 @@ module.exports = {
     },
   },
   apeStake: {
-    isNew: true,
     chain: CHAINS_ID.ETH_MAINNET,
     logoUrl: ['./icons/apestake.svg'],
     apyIconUrls: ['./icons/apestake.svg'],
@@ -4282,7 +4236,7 @@ module.exports = {
     apyIconUrls: ['./icons/univ3.svg'],
     apyTokenSymbols: ['UNI'],
     tokenNames: ['USDC', 'ETH'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     farmType: 'Advanced',
     stableCoin: false,
     logoUrl: ['./icons/usdc.svg', './icons/eth.svg'],
@@ -4314,7 +4268,7 @@ module.exports = {
     apyTokenSymbols: ['UNI'],
     logoUrl: ['./icons/dai.svg', './icons/eth.svg'],
     tokenNames: ['DAI', 'ETH'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     farmType: 'Advanced',
     stableCoin: false,
     tokenAddress: addresses.V2.UniV3_DAI_ETH_1400_2400.Underlying,
@@ -4345,7 +4299,7 @@ module.exports = {
     apyTokenSymbols: ['UNI'],
     logoUrl: ['./icons/eth.svg', './icons/usdt.svg'],
     tokenNames: ['ETH', 'USDT'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     farmType: 'Advanced',
     stableCoin: false,
     tokenAddress: addresses.V2.UniV3_USDT_ETH_1400_2400.Underlying,
@@ -4800,7 +4754,7 @@ module.exports = {
     logoUrl: ['./icons/orc.svg', './icons/eth.svg'],
     tokenNames: ['ORC', 'ETH'],
     farmType: 'Advanced',
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     stableCoin: false,
     tokenAddress: addresses.V2.UniV3_ORC_ETH.Underlying,
     decimals: '18',
@@ -4872,7 +4826,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/usdc.svg', './icons/eth.svg'],
     tokenNames: ['USDC', 'ETH'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_USDC_ETH_4200_5500.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_USDC_ETH_4200_5500.NewVault,
@@ -4903,7 +4857,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/dai.svg', './icons/eth.svg'],
     tokenNames: ['DAI', 'ETH'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_DAI_ETH_4200_5500.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_DAI_ETH_4200_5500.NewVault,
@@ -4934,7 +4888,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/eth.svg', './icons/usdt.svg'],
     tokenNames: ['ETH', 'USDT'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_ETH_USDT_4200_5500.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_ETH_USDT_4200_5500.NewVault,
@@ -4964,7 +4918,7 @@ module.exports = {
     logoUrl: ['./icons/eth.svg', './icons/cng.svg'],
     tokenNames: ['CNG', 'ETH'],
     farmType: 'Advanced',
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     stableCoin: false,
     tokenAddress: addresses.V2.UniV3_CNG_ETH.Underlying,
     decimals: '18',
@@ -4993,7 +4947,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/usdc.svg', './icons/eth.svg'],
     tokenNames: ['USDC', 'ETH'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_USDC_ETH_3000_4500.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_USDC_ETH_3000_4500.NewVault,
@@ -5024,7 +4978,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/dai.svg', './icons/eth.svg'],
     tokenNames: ['DAI', 'ETH'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_DAI_ETH_3000_4500.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_DAI_ETH_3000_4500.NewVault,
@@ -5055,7 +5009,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/eth.svg', './icons/usdt.svg'],
     tokenNames: ['USDT', 'ETH'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_USDT_ETH_3000_4500.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_USDT_ETH_3000_4500.NewVault,
@@ -5085,7 +5039,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/don.png', './icons/eth.svg'],
     tokenNames: ['DON', 'ETH'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_DON_WETH_full_range.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_DON_WETH_full_range.NewVault,
@@ -5148,7 +5102,7 @@ module.exports = {
     logoUrl: ['./icons/eth.svg', './icons/seth.svg'],
     tokenNames: ['ETH', 'sETH2'],
     farmType: 'Advanced',
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     stableCoin: false,
     tokenAddress: addresses.V2.UniV3_ETH_sETH2.Underlying,
     decimals: '18',
@@ -5435,7 +5389,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/zusd.png', './icons/usdc.svg'],
     tokenNames: ['zUSD', 'USDC'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_zUSD_USDC_full_range.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_zUSD_USDC_full_range.NewVault,
@@ -5461,7 +5415,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/zusd.png', './icons/eth.svg'],
     tokenNames: ['zUSD', 'ETH'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_ZUSD_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_ZUSD_ETH.NewVault,
@@ -5491,7 +5445,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/rei.png', './icons/eth.svg'],
     tokenNames: ['REI', 'ETH'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_REI_ETH_full_range.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_REI_ETH_full_range.NewVault,
@@ -5777,7 +5731,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/usdc.svg', './icons/eth.svg'],
     tokenNames: ['USDC', 'ETH'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_USDC_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_USDC_ETH.NewVault,
@@ -5838,7 +5792,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/eth.svg', './icons/usdt.svg'],
     tokenNames: ['ETH', 'USDT'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_ETH_USDT.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_ETH_USDT.NewVault,
@@ -5868,7 +5822,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/dai.svg', './icons/eth.svg'],
     tokenNames: ['DAI', 'ETH'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_DAI_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_DAI_ETH.NewVault,
@@ -5897,7 +5851,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/ust.png', './icons/usdt.svg'],
     tokenNames: ['UST', 'USDT'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_UST_USDT.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_UST_USDT.NewVault,
@@ -5981,7 +5935,7 @@ module.exports = {
     apyTokenSymbols: ['UNI'],
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg'],
     tokenNames: ['WBTC', 'ETH'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_WBTC_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_WBTC_ETH.NewVault,
@@ -6010,7 +5964,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/dai.svg', './icons/usdc.svg'],
     tokenNames: ['DAI', 'USDC'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_DAI_USDC.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_DAI_USDC.NewVault,
@@ -6044,7 +5998,7 @@ module.exports = {
     apyTokenSymbols: [],
     logoUrl: ['./icons/univ3.svg', './icons/eth.svg'],
     tokenNames: ['UNI', 'ETH'],
-    platform: ['Uniswap'],
+    platform: ['Uniswap V3'],
     tokenAddress: addresses.V2.UniV3_UNI_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.UniV3_UNI_ETH.NewVault,
@@ -6898,7 +6852,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'CVX', 'CRV'],
   },
   ThreePool: {
-    inactive: true,
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6971,7 +6924,7 @@ module.exports = {
     chain: CHAINS_ID.ETH_MAINNET,
     logoUrl: ['./icons/farmstead-usdc.png'],
     tokenNames: ['farmsteadUSDC'],
-    platform: ['Uniswap'],
+    platform: ['Rari Fuse'],
     tokenAddress: addresses.FARMSteadUSDC,
     decimals: '8',
     vaultAddress: null,
