@@ -2094,8 +2094,7 @@
         "NewVault": "0xf18079c229AaEE497Cf2ce5D0Ec778d462003A2E",
         "NewStrategy": "0x8dF2Dec432494fE5Ce529e67ca8C108979d55aE6",
         "NewPool": "0x9100bb602F0d486E32e4A4b98AcA7AB094aa4B55",
-        "PoolId": "23",
-        "doHardwork": false
+        "PoolId": "23"
       },
       "lizard_ARB_ETH": {
         "Underlying": "0xCeD06c9330B02C378C31c7b12570B1C38AbfcEA6",
@@ -2132,7 +2131,8 @@
         "NewVault": "0x9D76952536453f290c36B91e56EC2374dB1c1D49",
         "NewStrategy": "0x4dDB9CEfC94cf66c4Fd022FEBF84690F29256f46",
         "NewPool": "0x34b8096aCfE63B8821466160462C846D631c6f59",
-        "Gauge": "0xF5E17c2a60D4eF718F6b233d284978BEEb060eD6"
+        "Gauge": "0xF5E17c2a60D4eF718F6b233d284978BEEb060eD6",
+        "doHardwork": false
       }
     }
   }

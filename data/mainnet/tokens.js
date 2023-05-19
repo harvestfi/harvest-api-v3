@@ -446,6 +446,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['usd'] },
   },
   lizard_etsGamma_usdPlus: {
+    inactive: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/ets-gamma.svg', './icons/usdplus.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
@@ -665,7 +666,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'ETH', 'DPX'],
   },
   sushi_RDPX_ETH: {
-    inactive: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/rdpx.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sushi.svg', './icons/dpx.svg'],
