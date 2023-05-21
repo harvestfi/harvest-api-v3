@@ -1887,7 +1887,7 @@
         "RootChainGauge": "0xFf17560d746F85674FE7629cE986E949602EF948"
       },
       "Curve_EursUsd_arbitrum": {
-        "doHardWork": false,
+        "doHardwork": false,
         "Underlying": "0x3dFe1324A0ee9d86337d06aEB829dEb4528DB9CA",
         "NewVault": "0x09C29F5e64636487dD1DD851B994fa0AdE73A1bd",
         "StrategyContract": "EursUsdPoolStrategyMainnet",
@@ -1898,7 +1898,7 @@
         "RootChainGauge": "0x56eda719d82aE45cBB87B7030D3FB485685Bea45"
       },
       "Curve_RenWbtc_arbitrum": {
-        "doHardWork": false,
+        "doHardwork": false,
         "Underlying": "0x3E01dD8a5E1fb3481F0F589056b428Fc308AF0Fb",
         "NewVault": "0xBB9864A9bb3341818F061Cce305aa82b0cF5B3A3",
         "StrategyContract": "RenWbtcPoolStrategyMainnet",
@@ -1929,7 +1929,7 @@
         "RewardPool": "0xeA8DfEE1898a7e0a59f7527F076106d7e44c2176"
       },
       "StargateUSDT_arbitrum": {
-        "doHardWork": false,
+        "doHardwork": false,
         "Underlying": "0xB6CfcF89a7B22988bfC96632aC2A9D6daB60d641",
         "NewVault": "0x6d8ed5dace7C74e2d83AE09bB29d548c964EEBc5",
         "StrategyContract": "UsdtStargateStrategyMainnet",
@@ -1938,7 +1938,7 @@
         "RewardPool": "0xeA8DfEE1898a7e0a59f7527F076106d7e44c2176"
       },
       "Sushi_ETHDAI_arbitrum": {
-        "doHardWork": false,
+        "doHardwork": false,
         "Underlying": "0x692a0B300366D1042679397e40f3d2cb4b8F7D30",
         "NewVault": "0xc6f4A360732a53Cec7b7f2eF82F9DB34dF3593A7",
         "StrategyContract": "EthDaiSushiStrategyMainnet",
@@ -1947,7 +1947,7 @@
         "RewardPool": "0xeA8DfEE1898a7e0a59f7527F076106d7e44c2176"
       },
       "Sushi_ETHGOHM_arbitrum": {
-        "doHardWork": false,
+        "doHardwork": false,
         "Underlying": "0xaa5bD49f2162ffdC15634c87A77AC67bD51C6a6D",
         "NewVault": "0x49C0658d101b637E23f96b4334aECB193eD3E3d2",
         "StrategyContract": "EthGOhmSushiStrategyMainnet",
@@ -1965,7 +1965,7 @@
         "doHardwork": false
       },
       "Sushi_ETHMIM_arbitrum": {
-        "doHardWork": false,
+        "doHardwork": false,
         "Underlying": "0xb6DD51D5425861C808Fd60827Ab6CFBfFE604959",
         "NewVault": "0x53130D60c57D392afAf724239D53Cab9e313c9b7",
         "StrategyContract": "EthMimSushiStrategyMainnet",
@@ -1974,7 +1974,7 @@
         "RewardPool": "0xeA8DfEE1898a7e0a59f7527F076106d7e44c2176"
       },
       "Sushi_ETHSPELL_arbitrum": {
-        "doHardWork": false,
+        "doHardwork": false,
         "Underlying": "0x8f93Eaae544e8f5EB077A1e09C1554067d9e2CA8",
         "NewVault": "0x2A941522475978B40CD09916D860193aD2bE9e88",
         "StrategyContract": "EthSpellSushiStrategyMainnet",
@@ -1983,7 +1983,7 @@
         "RewardPool": "0xeA8DfEE1898a7e0a59f7527F076106d7e44c2176"
       },
       "Sushi_ETHSUSHI_arbitrum": {
-        "doHardWork": false,
+        "doHardwork": false,
         "Underlying": "0x3221022e37029923aCe4235D812273C5A42C322d",
         "NewVault": "0xd4607317290d2d6F7392bF8c3B353875E127ABd9",
         "StrategyContract": "EthSushiSushiStrategyMainnet",
