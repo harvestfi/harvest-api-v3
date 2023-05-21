@@ -52,7 +52,7 @@ module.exports = {
   },
   crvUSD: {
     chain: CHAINS_ID.ETH_MAINNET,
-    logoUrl: ['./icons/crv.svg'],
+    logoUrl: ['./icons/curve.svg'],
     tokenAddress: addresses.crvUSD,
     decimals: '18',
     vaultAddress: null,
@@ -62,8 +62,8 @@ module.exports = {
   },
   curve_crvUSD_USDT: {
     chain: CHAINS_ID.ETH_MAINNET,
-    logoUrl: ['./icons/crv.svg', './icons/usdt.svg'],
-    apyIconUrls: ['./icons/crv.svg'],
+    logoUrl: ['./icons/curve.svg', './icons/usdt.svg'],
+    apyIconUrls: ['./icons/curve.svg'],
     apyTokenSymbols: ['CRV'],
     farmType: 'Advanced',
     platform: ['Curve'],
