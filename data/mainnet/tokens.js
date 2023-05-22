@@ -61,7 +61,6 @@ module.exports = {
     // priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['crvusd'] },
   },
   curve_crvUSD_USDC: {
-    inactive: true,
     chain: CHAINS_ID.ETH_MAINNET,
     logoUrl: ['./icons/curve.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/curve.svg'],
@@ -97,7 +96,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   curve_crvUSD_USDT: {
-    inactive: true,
     chain: CHAINS_ID.ETH_MAINNET,
     logoUrl: ['./icons/curve.svg', './icons/usdt.svg'],
     apyIconUrls: ['./icons/curve.svg'],
