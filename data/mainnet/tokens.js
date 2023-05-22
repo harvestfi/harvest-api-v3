@@ -60,7 +60,44 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.MANUAL, params: ['1'] },
     // priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['crvusd'] },
   },
+  curve_crvUSD_USDC: {
+    inactive: true,
+    chain: CHAINS_ID.ETH_MAINNET,
+    logoUrl: ['./icons/curve.svg', './icons/usdc.svg'],
+    apyIconUrls: ['./icons/curve.svg'],
+    apyTokenSymbols: ['CRV'],
+    farmType: 'Advanced',
+    platform: ['Curve'],
+    stableCoin: true,
+    tokenNames: ['crvUSD', 'USDC'],
+    tokenAddress: addresses.V2.curve_crvUSD_USDC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.curve_crvUSD_USDC.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.CURVE_POOL,
+      params: [
+        addresses.V2.curve_crvUSD_USDC.Underlying,
+        addresses.V2.curve_crvUSD_USDC.Underlying,
+        18,
+        ['crvUSD', 'USDC'],
+        CHAINS_ID.ETH_MAINNET,
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.CURVE_GAUGE,
+        params: [
+          'curve_crvUSD_USDC',
+          addresses.V2.curve_crvUSD_USDC.Gauge,
+          profitSharingCut15Percent,
+          CHAINS_ID.ETH_MAINNET,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'CRV'],
+  },
   curve_crvUSD_USDT: {
+    inactive: true,
     chain: CHAINS_ID.ETH_MAINNET,
     logoUrl: ['./icons/curve.svg', './icons/usdt.svg'],
     apyIconUrls: ['./icons/curve.svg'],
@@ -104,7 +141,6 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.VERSE] },
   },
   verse_VERSE_ETH: {
-    inactive: true,
     chain: CHAINS_ID.ETH_MAINNET,
     logoUrl: ['./icons/verse.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/verse.svg'],

@@ -6,6 +6,27 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAINS_ID.ETH_MAINNET,
+    id: 'curve_crvUSD_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.curve_crvUSD_USDC.NewPool,
+    collateralAddress: addresses.V2.curve_crvUSD_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.curve_crvUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.curve_crvUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ETH_MAINNET,
     id: 'curve_crvUSD_USDT',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.curve_crvUSD_USDT.NewPool,

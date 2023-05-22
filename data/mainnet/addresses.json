@@ -1174,6 +1174,13 @@
       "NewStrategy": "0x58F8a90806c4988D123c1A4445f61B5a424665dE",
       "NewPool": "0x74f361813915180f47D3E076CEbC3D1071790729",
       "Gauge": "0x4e6bB6B7447B7B2Aa268C16AB87F4Bb48BF57939"
+    },
+    "curve_crvUSD_USDC": {
+      "Underlying": "0x4DEcE678ceceb27446b35C672dC7d61F30bAD69E",
+      "NewVault": "0xD2f344528e8ef62afbd1DB3467160b339bb0A712",
+      "NewStrategy": "0xa1C58BF5E651E164E0ebf132F2B05b9dEB98a23e",
+      "NewPool": "0x1c3d9b350FdAde924Be90e57f2AF96cc65CEe27d",
+      "Gauge": "0x95f00391cB5EebCd190EB58728B4CE23DbFa6ac1"
     }
   },
   "MATIC": {
