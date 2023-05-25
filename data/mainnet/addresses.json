@@ -1139,7 +1139,7 @@
       "NewStrategy": "0xF2E1408Cb3349334eBE9384b764a73Eb0f78f91D",
       "NewPool": "0x458261f53874BdcDAb5F259641889B4c8AbF98A2",
       "PoolId": "0x1ee442b5326009bb18f2f472d3e0061513d1a0ff000200000000000000000464",
-      "doHardwork": "onlyProfit"
+      "doHardwork": false
     },
     "balancer_stETH_rETH_sfrxETH": {
       "Underlying": "0x5aEe1e99fE86960377DE9f88689616916D5DcaBe",
@@ -1162,7 +1162,7 @@
       "NewStrategy": "0x6B5B5E84D4AF8e5e51FF3C590feD4bEe88B23E34",
       "NewPool": "0xd8DF6339576408c14eDA6C43bC6fC2a10109065b",
       "PoolId": "0x76fcf0e8c7ff37a47a799fa2cd4c13cde0d981c90002000000000000000003d2",
-      "doHardwork": "onlyProfit"
+      "doHardwork": false
     },
     "verse_VERSE_ETH": {
       "Underlying": "0x845C0179060362f071FF5C7f1D2703617a480F3e",
