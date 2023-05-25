@@ -50,6 +50,46 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  OETH: {
+    chain: CHAINS_ID.ETH_MAINNET,
+    logoUrl: ['./icons/oeth.png'],
+    tokenAddress: addresses.OETH,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['origin-ether'],
+    },
+  },
+  curve_OETH: {
+    chain: CHAINS_ID.ETH_MAINNET,
+    apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
+    apyTokenSymbols: ['CRV', 'CVX'],
+    logoUrl: ['./icons/oeth.png', './icons/eth.svg'],
+    tokenNames: ['OETH', 'ETH'],
+    farmType: 'Advanced',
+    platform: ['Convex Finance'],
+    stableCoin: false,
+    tokenAddress: addresses.V2.curve_OETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.curve_OETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.CURVE_POOL,
+      params: [
+        addresses.V2.curve_OETH.Underlying,
+        addresses.V2.curve_OETH.Underlying,
+        '18',
+        ['OETH', 'ETH'],
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.CONVEX,
+        params: ['oeth', profitSharingCut15Percent],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
+  },
   crvUSD: {
     chain: CHAINS_ID.ETH_MAINNET,
     logoUrl: ['./icons/curve.svg'],
@@ -3430,7 +3470,7 @@ module.exports = {
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['weth'],
+      params: ['peth'],
     },
   },
   convex_pETH: {

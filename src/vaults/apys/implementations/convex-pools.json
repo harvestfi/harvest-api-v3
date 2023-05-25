@@ -1021,5 +1021,14 @@
         ],
         "currency": "BTC",
         "name": "pbtc2"
+    },
+    {
+        "lptoken": "0x94B17476A93b3262d87B9a326965D1E91f9c13E7",
+        "token": " 0xc2591073629AcD455f2fEc56A398B677F2Ccb80c",
+        "crvRewards": "0x24b65DC1cf053A8D96872c323d29e86ec43eB33A",
+        "swap": "0x94B17476A93b3262d87B9a326965D1E91f9c13E7",
+        "id": 174,
+        "currency": "ETH",
+        "name": "oeth"
     }
 ]

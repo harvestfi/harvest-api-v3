@@ -6,6 +6,32 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAINS_ID.ETH_MAINNET,
+    id: 'curve_OETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.curve_OETH.NewPool,
+    collateralAddress: addresses.V2.curve_OETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['factory-v2-298'],
+    },
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.curve_OETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.curve_OETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ETH_MAINNET,
     id: 'curve_crvUSD_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.curve_crvUSD_USDC.NewPool,
