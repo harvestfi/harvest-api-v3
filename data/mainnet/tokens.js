@@ -515,6 +515,14 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
+  RDNT: {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    logoUrl: ['./icons/rdnt.svg'],
+    tokenAddress: addresses.ARBITRUM_ONE.RDNT,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['radiant-capital'] },
+  },
   balancer_RDNT_ETH: {
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/rdnt.svg', './icons/eth.svg'],
@@ -1123,6 +1131,17 @@ module.exports = {
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
+  },
+  wUSDR_polygon: {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    logoUrl: [''],
+    tokenAddress: addresses.MATIC.wUSDR,
+    decimals: '9',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['wrapped-usdr'],
+    },
   },
   balancer_wUSDR_USDC_polygon: {
     chain: CHAINS_ID.MATIC_MAINNET,
@@ -5379,6 +5398,17 @@ module.exports = {
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['mimatic'],
+    },
+  },
+  pDAI: {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    logoUrl: [],
+    tokenAddress: addresses.MATIC.DAI,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['dai'],
     },
   },
   BANANA: {
