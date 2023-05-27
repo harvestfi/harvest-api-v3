@@ -53,6 +53,24 @@
     "aaveTags": [0, "WMATIC"],
     "poolId": "0xe78b25c06db117fdf8f98583cdaaa6c92b79e917000000000000000000000b2b"
   },
+  "0x4a77eF015ddcd972fd9BA2C7D5D658689D090f1A": {
+    "boostedUnderlyings": [
+      "0x03b54A6e9a984069379fae1a4fC4dBAE93B3bCCD",
+      "0x43894DE14462B421372bCFe445fA51b1b4A0Ff3D"
+    ],
+    "boostTypes": ["stakedEth", "Aave"],
+    "aaveTags": [0, "WETH"],
+    "poolId": "0x4a77ef015ddcd972fd9ba2c7d5d658689d090f1a000000000000000000000b38"
+  },
+  "0xD00f9Ca46ce0E4A63067c4657986f0167b0De1E5": {
+    "boostedUnderlyings": [
+      "0xEe327F889d5947c1dc1934Bb208a1E792F953E96",
+      "0x43894DE14462B421372bCFe445fA51b1b4A0Ff3D"
+    ],
+    "boostTypes": ["stakedEth", "Aave"],
+    "aaveTags": [0, "WETH"],
+    "poolId": "0xd00f9ca46ce0e4a63067c4657986f0167b0de1e5000000000000000000000b42"
+  },
   "0x3dd0843A028C86e0b760b1A76929d1C5Ef93a2dd": {
     "boostedUnderlyings": ["0x616e8BfA43F920657B3497DBf40D6b1A02D4608d"],
     "boostTypes": ["balLP"],

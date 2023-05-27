@@ -80,17 +80,17 @@ const getStakedEthApy = async token => {
     token == '0xEe327F889d5947c1dc1934Bb208a1E792F953E96'
   ) {
     //HOTFIX
-    return 10
+    return 4.88
   }
 }
 
 const getStakedMaticApy = async token => {
   if (token == '0xfa68FB4628DFF1028CFEc22b4162FCcd0d45efb6') {
     //HOTFIX
-    return 5.76
+    return 4.28
   } else {
     //HOTFIX
-    return 6.3
+    return 4.74
   }
 }
 

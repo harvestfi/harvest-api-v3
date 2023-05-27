@@ -2,6 +2,7 @@ const BigNumber = require('bignumber.js')
 const { getWeb3 } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
 const { balGauge } = require('../../../lib/web3/contracts')
+const { token: tokenContractData } = require('../../../lib/web3/contracts')
 
 const getApy = async (tokenSymbol, gaugeAddress, factor, chainId) => {
   const web3 = getWeb3(chainId)
@@ -11,6 +12,10 @@ const getApy = async (tokenSymbol, gaugeAddress, factor, chainId) => {
     contract: { abi: balGaugeAbi },
     methods: balGaugeMethods,
   } = balGauge
+  const {
+    methods: { getDecimals },
+    contract: { abi: tokenAbi },
+  } = tokenContractData
 
   const balGaugeInstance = new web3.eth.Contract(balGaugeAbi, gaugeAddress)
 
@@ -24,8 +29,18 @@ const getApy = async (tokenSymbol, gaugeAddress, factor, chainId) => {
     await balGaugeMethods.getTotalSupply(balGaugeInstance),
   ).dividedBy(new BigNumber(1e18))
   const lpTokenPrice = new BigNumber(await getTokenPrice(tokenSymbol, chainId))
+  const balPrice = new BigNumber(await getTokenPrice('BAL'))
 
   let totalRewardPerWeekUsd = new BigNumber(0)
+  const period = await balGaugeMethods.getPeriod(balGaugeInstance)
+  const periodTime = await balGaugeMethods.getPeriodTime(period, balGaugeInstance)
+  const week = new BigNumber(periodTime).div(86400).div(7).toFixed(0, 1)
+  const balRate = new BigNumber(await balGaugeMethods.getBalRate(week, balGaugeInstance)).div(1e18)
+  const balPerWeek = balRate.times(7).times(86400)
+  const balPerWeekUsd = balPerWeek.times(balPrice)
+
+  totalRewardPerWeekUsd = totalRewardPerWeekUsd.plus(balPerWeekUsd)
+
   for (let i = 0; i < rewardTokens.length; i++) {
     const rewardToken = rewardTokens[i]
     if (rewardToken !== ZeroAddress) {
@@ -33,14 +48,17 @@ const getApy = async (tokenSymbol, gaugeAddress, factor, chainId) => {
       if (Date.now() / 1000 > parseInt(rewardTokenMeta.period_finish)) {
         continue
       }
-      const inflationRate = new BigNumber(rewardTokenMeta.rate).dividedBy(new BigNumber(1e18))
+
+      const tokenInstance = new web3.eth.Contract(tokenAbi, rewardToken)
+      const decimals = await getDecimals(tokenInstance)
+
+      const inflationRate = new BigNumber(rewardTokenMeta.rate).dividedBy(
+        new BigNumber(10 ** decimals),
+      )
       const tokenPerWeek = inflationRate.times(7).times(86400)
 
-      const shareForOneBpt = new BigNumber(1).dividedBy(totalSupply).plus(1)
-      const rewardPerWeek = shareForOneBpt.times(tokenPerWeek)
-
       const rewardTokenInUsd = await getTokenPrice(rewardToken, chainId)
-      const rewardPerWeekUsd = rewardPerWeek.times(rewardTokenInUsd)
+      const rewardPerWeekUsd = tokenPerWeek.times(rewardTokenInUsd)
       totalRewardPerWeekUsd = totalRewardPerWeekUsd.plus(rewardPerWeekUsd)
     }
   }
