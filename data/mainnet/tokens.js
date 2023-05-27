@@ -858,7 +858,7 @@ module.exports = {
         addresses.MATIC.V2.curve_3CRV.Miner,
         addresses.MATIC.V2.curve_3CRV.Underlying,
         '18',
-        ['aDAI', 'aUSDC', 'aUSDT'],
+        ['amDAI', 'amUSDC', 'amUSDT'],
         CHAINS_ID.MATIC_MAINNET,
       ],
     },
