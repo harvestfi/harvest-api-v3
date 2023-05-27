@@ -368,7 +368,7 @@ module.exports = {
   },
   balancer_wstETH_amETH: {
     chain: CHAINS_ID.MATIC_MAINNET,
-    logoUrl: ['./icons/wsteth.svg', './icons/am-weth.svg'],
+    logoUrl: ['./icons/steth.svg', './icons/am-weth.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/usdc.svg'],
     apyTokenSymbols: ['BAL', 'USDC'],
     farmType: 'Advanced',
@@ -2254,7 +2254,7 @@ module.exports = {
   balancer_wstETH_USDC_arbitrum: {
     inactive: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
-    logoUrl: ['./icons/wsteth.svg', './icons/usdc.svg'],
+    logoUrl: ['./icons/steth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/ldo.svg'],
     apyTokenSymbols: ['BAL', 'LDO'],
     tokenNames: ['stETH', 'USDC'],
@@ -3006,7 +3006,7 @@ module.exports = {
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/ldo.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'LDO'],
-    logoUrl: ['./icons/wsteth.svg', './icons/eth.svg'],
+    logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
     tokenNames: ['stETH', 'ETH'],
     farmType: 'Advanced',
     platform: ['Aura', 'Balancer'],
