@@ -89,7 +89,7 @@ module.exports = {
   },
   balancer_wstETH_amETH: {
     chain: CHAINS_ID.MATIC_MAINNET,
-    logoUrl: ['./icons/wsteth.svg', './icons/am-eth.svg'],
+    logoUrl: ['./icons/wsteth.svg', './icons/am-weth.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/usdc.svg'],
     apyTokenSymbols: ['BAL', 'USDC'],
     farmType: 'Advanced',
