@@ -50,6 +50,8 @@ const getLPApy = async (token, networkId) => {
     id = 'balancerv2_eth'
   } else if (networkId == '137') {
     id = 'balancerv2_matic'
+  } else if (networkId == '42161') {
+    id = 'balancerv2_arbitrum'
   } else {
     console.error(`Network ID: ${networkId} not supported`)
     return 0
@@ -60,9 +62,7 @@ const getLPApy = async (token, networkId) => {
 
 const getAaveApy = async tokenId => {
   const aaveData = await getAaveV2Market()
-  const aavePool = JSON.parse(JSON.stringify(aaveData.reserves)).filter(
-    ({ symbol }) => symbol === tokenId,
-  )
+  const aavePool = JSON.parse(JSON.stringify(aaveData.reserves)).filter(({ id }) => id === tokenId)
   return new BigNumber(aavePool[0].liquidityRate).times(100)
 }
 
@@ -73,7 +73,10 @@ const getStakedEthApy = async token => {
     token == '0x5979D7b546E38E414F7E9822514be443A4800529'
   ) {
     return await get7MAAPRs('1')
-  } else if (token == '0xae78736Cd615f374D3085123A210448E74Fc6393') {
+  } else if (
+    token == '0xae78736Cd615f374D3085123A210448E74Fc6393' ||
+    token == '0xEC70Dcb4A1EFa46b8F2D97C310C9c4790ba5ffA8'
+  ) {
     return await getYearlyAPR('1')
   } else if (
     token == '0xac3E018457B222d93114458476f3E3416Abbe38F' ||

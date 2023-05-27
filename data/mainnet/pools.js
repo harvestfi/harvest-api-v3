@@ -5,6 +5,98 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'balancer_bbwstETH_bbaUSD_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [
+        addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.Underlying,
+        'balancerv2_arbitrum',
+        true,
+        CHAINS_ID.ARBITRUM_ONE,
+      ],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'balancer_wstETH_aWETH_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [
+        addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.Underlying,
+        'balancerv2_arbitrum',
+        true,
+        CHAINS_ID.ARBITRUM_ONE,
+      ],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'balancer_rETH_aWETH_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [
+        addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying,
+        'balancerv2_arbitrum',
+        true,
+        CHAINS_ID.ARBITRUM_ONE,
+      ],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAINS_ID.MATIC_MAINNET,
     id: 'balancer_wstETH_amETH',
     type: POOL_TYPES.INCENTIVE,
