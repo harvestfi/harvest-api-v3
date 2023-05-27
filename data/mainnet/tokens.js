@@ -50,6 +50,143 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  amETH: {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    logoUrl: ['./icons/ameth.svg'],
+    tokenAddress: addresses.MATIC.amETH,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['ethereum'],
+    },
+  },
+  wamETH: {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    logoUrl: [''],
+    tokenAddress: addresses.MATIC.wamETH,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.WRAPPED_TOKEN,
+      params: [addresses.MATIC.wamETH, addresses.MATIC.amETH, CHAINS_ID.MATIC_MAINNET],
+    },
+  },
+  'bb-amETH': {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    logoUrl: [''],
+    tokenAddress: addresses.MATIC.bbamETH,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.BALANCER,
+      params: [
+        addresses.MATIC.bbamETH,
+        '0x43894de14462b421372bcfe445fa51b1b4a0ff3d000000000000000000000b36',
+        CHAINS_ID.MATIC_MAINNET,
+      ],
+    },
+  },
+  balancer_wstETH_amETH: {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    logoUrl: ['./icons/wsteth.svg', './icons/ameth.svg'],
+    apyIconUrls: ['./icons/balancer.svg', './icons/usdc.svg'],
+    apyTokenSymbols: ['BAL', 'USDC'],
+    farmType: 'Advanced',
+    platform: ['Balancer'],
+    stableCoin: false,
+    tokenNames: ['wstETH', 'amETH'],
+    tokenAddress: addresses.MATIC.V2.balancer_wstETH_amETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.balancer_wstETH_amETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.BALANCER,
+      params: [
+        addresses.MATIC.V2.balancer_wstETH_amETH.Underlying,
+        addresses.MATIC.V2.balancer_wstETH_amETH.PoolId,
+        CHAINS_ID.MATIC_MAINNET,
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.BALANCER_GAUGE_SIDECHAIN,
+        params: [
+          'balancer_wstETH_amETH',
+          addresses.MATIC.V2.balancer_wstETH_amETH.Gauge,
+          profitSharingCut8Percent,
+          CHAINS_ID.MATIC_MAINNET,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'BAL', 'USDC'],
+  },
+  balancer_frxETH_amETH: {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    logoUrl: ['./icons/frxeth.svg', './icons/amweth.svg'],
+    apyIconUrls: ['./icons/balancer.svg'],
+    apyTokenSymbols: ['BAL'],
+    farmType: 'Advanced',
+    platform: ['Balancer'],
+    stableCoin: false,
+    tokenNames: ['frxETH', 'amETH'],
+    tokenAddress: addresses.MATIC.V2.balancer_frxETH_amETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.balancer_frxETH_amETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.BALANCER,
+      params: [
+        addresses.MATIC.V2.balancer_frxETH_amETH.Underlying,
+        addresses.MATIC.V2.balancer_frxETH_amETH.PoolId,
+        CHAINS_ID.MATIC_MAINNET,
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.BALANCER_GAUGE_SIDECHAIN,
+        params: [
+          'balancer_frxETH_amETH',
+          addresses.MATIC.V2.balancer_frxETH_amETH.Gauge,
+          profitSharingCut8Percent,
+          CHAINS_ID.MATIC_MAINNET,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'BAL'],
+  },
+  balancer_WBTC_ETH_USDC_polygon: {
+    chain: CHAINS_ID.MATIC_MAINNET,
+    logoUrl: ['./icons/wbtc.svg', './icons/eth.svg', './icons/usdc.svg'],
+    apyIconUrls: ['./icons/balancer.svg'],
+    apyTokenSymbols: ['BAL'],
+    farmType: 'Advanced',
+    platform: ['Balancer'],
+    stableCoin: false,
+    tokenNames: ['WBTC', 'ETH', 'USDC'],
+    tokenAddress: addresses.MATIC.V2.balancer_WBTC_ETH_USDC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.balancer_WBTC_ETH_USDC.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.BALANCER,
+      params: [
+        addresses.MATIC.V2.balancer_WBTC_ETH_USDC.Underlying,
+        addresses.MATIC.V2.balancer_WBTC_ETH_USDC.PoolId,
+        CHAINS_ID.MATIC_MAINNET,
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.BALANCER_GAUGE_SIDECHAIN,
+        params: [
+          'balancer_WBTC_ETH_USDC_polygon',
+          addresses.MATIC.V2.balancer_WBTC_ETH_USDC.Gauge,
+          profitSharingCut8Percent,
+          CHAINS_ID.MATIC_MAINNET,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'BAL'],
+  },
+
   OETH: {
     chain: CHAINS_ID.ETH_MAINNET,
     logoUrl: ['./icons/oeth.png'],
@@ -316,8 +453,8 @@ module.exports = {
   balancer_stMatic_amMatic: {
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/stmatic.svg', './icons/ammatic.svg'],
-    apyIconUrls: ['./icons/balancer.svg', './icons/ldo.svg'],
-    apyTokenSymbols: ['BAL', 'LDO'],
+    apyIconUrls: ['./icons/balancer.svg', './icons/usdc.svg'],
+    apyTokenSymbols: ['BAL', 'USDC'],
     tokenNames: ['stMATIC', 'amMATIC'],
     farmType: 'Advanced',
     platform: ['Balancer'],
@@ -344,7 +481,7 @@ module.exports = {
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'BAL'],
+    cmcRewardTokenSymbols: ['iFARM', 'BAL', 'USDC'],
   },
   balancer_2EUR_PAR_v2: {
     chain: CHAINS_ID.MATIC_MAINNET,
