@@ -374,7 +374,7 @@ module.exports = {
     farmType: 'Advanced',
     platform: ['Balancer'],
     stableCoin: false,
-    tokenNames: ['wstETH', 'aETH'],
+    tokenNames: ['stETH', 'aETH'],
     tokenAddress: addresses.MATIC.V2.balancer_wstETH_amETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.balancer_wstETH_amETH.NewVault,
