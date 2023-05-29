@@ -51,6 +51,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
   camelot_ETH_USDC: {
+    inactive: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],

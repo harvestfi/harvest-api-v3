@@ -8,13 +8,10 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'camelot_ETH_USDC',
     type: POOL_TYPES.INCENTIVE,
-    // tradingApyFunction: {
-    //   type: TRADING_APY_TYPES.LP,
-    //   params: [
-    //     addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.Underlying,
-    //     '',
-    //   ],
-    // },
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.Underlying],
+    },
     contractAddress: addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.NewVault,
     rewardAPY: [],
@@ -38,13 +35,10 @@ module.exports = [
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'camelot_iFARM_ETH',
     type: POOL_TYPES.INCENTIVE,
-    // tradingApyFunction: {
-    //   type: TRADING_APY_TYPES.LP,
-    //   params: [
-    //     addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.Underlying,
-    //     '',
-    //   ],
-    // },
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.Underlying],
+    },
     contractAddress: addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.NewVault,
     rewardAPY: [],
