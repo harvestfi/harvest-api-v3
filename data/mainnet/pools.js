@@ -55,7 +55,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault deposits 
        <a href="https://arbiscan.com/token/${addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
-       <a href="https://arbiscan.com/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a> & 
+       <a href="https://arbiscan.com/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.com/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> & 
        <a href="https://arbiscan.com/token/${addresses.ARBITRUM_ONE.iFARM}" target="_blank" rel="noopener noreferrer">iFARM</a>.
        At every harvest, the earned GRAIL is reinvested into more
