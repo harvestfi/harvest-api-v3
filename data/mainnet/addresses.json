@@ -2228,7 +2228,7 @@
         "Gauge": "0xae9F2cE52FE89DD78e6F13d5d7b33125aE3dFF8C",
         "PoolId": "0x5a7f39435fd9c381e4932fa2047c9a5136a5e3e7000000000000000000000400"
       },
-      "camelot_xGrail": {
+      "xGRAIL": {
         "Underlying": "0x3CAaE25Ee616f2C8E13C74dA0813402eae3F496b",
         "NewVault": "0xFA10759780304c2B8d34B051C039899dFBbcad7f",
         "NewStrategy": "0xd97da915530e7d6946781BF332598aa5F336a76B",

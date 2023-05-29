@@ -127,9 +127,9 @@ module.exports = {
     farmType: 'Advanced',
     platform: ['Camelot'],
     stableCoin: false,
-    tokenAddress: addresses.ARBITRUM_ONE.V2.camelot_xGrail.Underlying,
+    tokenAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying,
     decimals: '18',
-    vaultAddress: addresses.ARBITRUM_ONE.V2.camelot_xGrail.NewVault,
+    vaultAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['camelot-token'],
@@ -137,7 +137,7 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.CAMELOT_XGRAIL,
-        params: [addresses.ARBITRUM_ONE.V2.camelot_xGrail.NewStrategy, profitSharingCut10Percent],
+        params: [addresses.ARBITRUM_ONE.V2.xGRAIL.NewStrategy, profitSharingCut10Percent],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'ETH-USDC', 'xGRAIL'],
