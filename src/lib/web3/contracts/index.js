@@ -55,7 +55,42 @@ const balLpTokenContract = require('../contracts/bal-lp-token/contract.json')
 const balBoostLpTokenMethods = require('../contracts/bal-boost-lp-token/methods')
 const balBoostLpTokenContract = require('../contracts/bal-boost-lp-token/contract.json')
 
+const xgrailStrategyMethods = require('../contracts/xgrail-strategy/methods')
+const xgrailStrategyContract = require('../contracts/xgrail-strategy/contract.json')
+
+const camelotDividendsMethods = require('../contracts/camelot-dividends/methods')
+const camelotDividendsContract = require('../contracts/camelot-dividends/contract.json')
+
+const camelotNFTMethods = require('../contracts/camelot-nftpool/methods')
+const camelotNFTContract = require('../contracts/camelot-nftpool/contract.json')
+
+const camelotNitroMethods = require('../contracts/camelot-nitropool/methods')
+const camelotNitroContract = require('../contracts/camelot-nitropool/contract.json')
+
+const camelotMasterMethods = require('../contracts/camelot-master/methods')
+const camelotMasterContract = require('../contracts/camelot-master/contract.json')
+
 module.exports = {
+  xgrailStrategy: {
+    methods: xgrailStrategyMethods,
+    contract: xgrailStrategyContract,
+  },
+  camelotDividends: {
+    methods: camelotDividendsMethods,
+    contract: camelotDividendsContract,
+  },
+  camelotNFTPool: {
+    methods: camelotNFTMethods,
+    contract: camelotNFTContract,
+  },
+  camelotNitroPool: {
+    methods: camelotNitroMethods,
+    contract: camelotNitroContract,
+  },
+  camelotMaster: {
+    methods: camelotMasterMethods,
+    contract: camelotMasterContract,
+  },
   vault: {
     methods: vaultMethods,
     contract: vaultContract,

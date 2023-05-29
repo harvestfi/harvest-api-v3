@@ -1302,6 +1302,7 @@
     "bbamETH": "0x43894DE14462B421372bCFe445fA51b1b4A0Ff3D",
     "wamETH": "0xa5bBf0f46B9dc8a43147862ba35c8134eB45f1F5",
     "amETH": "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
+    "GRAIL": "0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8",
     "V2": {
       "quickswap_ETH_MATIC": {
         "Underlying": "0xadbF1854e5883eB8aa7BAf50705338739e558E5b"
@@ -2226,7 +2227,29 @@
         "NewPool": "0x748DA733e63052068315850051484e8698BAe7D9",
         "Gauge": "0xae9F2cE52FE89DD78e6F13d5d7b33125aE3dFF8C",
         "PoolId": "0x5a7f39435fd9c381e4932fa2047c9a5136a5e3e7000000000000000000000400"
-      }      
+      },
+      "camelot_xGrail": {
+        "Underlying": "0x3CAaE25Ee616f2C8E13C74dA0813402eae3F496b",
+        "NewVault": "0xFA10759780304c2B8d34B051C039899dFBbcad7f",
+        "NewStrategy": "0xd97da915530e7d6946781BF332598aa5F336a76B",
+        "NewPool": "0xd57a5F9BC4856107D184C49f98bfD7DDf175ac2A"
+      },
+      "camelot_ETH_USDC": {
+        "Underlying": "0x84652bb2539513BAf36e225c930Fdd8eaa63CE27",
+        "NewVault": "0x2A15a59648eD09F14fb87A740199831a43031319",
+        "NewStrategy": "0x12d84F94fe14F98cfd1554940805A713329A9b55",
+        "NewPool": "0x618475287E975257bE94Efb748FdeC1976E0362C",
+        "NFTPool": "0x6BC938abA940fB828D39Daa23A94dfc522120C11",
+        "NitroPool": "0"
+      },
+      "camelot_iFARM_ETH": {
+        "Underlying": "0xD2A7084369cC93672b2CA868757a9f327e3677a4",
+        "NewVault": "0xc05374A286143BA88984AF1a103aceD8b587c96b",
+        "NewStrategy": "0x02CF3712816A5938Df87a09E148E6866eC8Bc3CB",
+        "NewPool": "0x377bE40897F5deB6DE6Fb681D088526580CCe1BD",
+        "NFTPool": "0x5DbFE78Bf6d6FDE1db1854c9A30DFb2d565e6152",
+        "NitroPool": "0x1330Ef50fb3aF24eB0c748BEbE38d059639d4158"
+      }
     }
   }
 }

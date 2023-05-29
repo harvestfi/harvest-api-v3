@@ -6,6 +6,87 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'camelot_ETH_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    // tradingApyFunction: {
+    //   type: TRADING_APY_TYPES.LP,
+    //   params: [
+    //     addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.Underlying,
+    //     '',
+    //   ],
+    // },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.V2.camelot_xGrail.NewVault],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault allocates 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a> & 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.camelot_xGrail.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'camelot_iFARM_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    // tradingApyFunction: {
+    //   type: TRADING_APY_TYPES.LP,
+    //   params: [
+    //     addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.Underlying,
+    //     '',
+    //   ],
+    // },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.V2.camelot_xGrail.NewVault],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault allocates 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a> & 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.camelot_xGrail.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+       At every harvest, the earned GRAIL is reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.camelot_xGrail.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL can be claimed with the "Claim All" button.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    id: 'xGRAIL',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelot_xGrail.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_xGrail.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault allocates 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.camelot_xGrail.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> in to Camelot Dividens and Yield Boost, earning 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.camelot_xGrail.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> & 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot ETH-USDC LP tokens</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.camelot_xGrail.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'balancer_bbwstETH_bbaUSD_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
