@@ -23,7 +23,7 @@ module.exports = [
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <p> The vault allocates 
+      <p> The vault deposits 
        <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
        <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a> & 
        <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
@@ -52,13 +52,14 @@ module.exports = [
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
-      <p> The vault allocates 
+      <p> The vault deposits 
        <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
        <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a> & 
-       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> & 
+       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.iFARM}" target="_blank" rel="noopener noreferrer">iFARM</a>.
        At every harvest, the earned GRAIL is reinvested into more
        <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
-       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL can be claimed with the "Claim All" button.
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL and iFARM rewards can be claimed with the "Claim All" button.
       </p>
     </div>
    `,
