@@ -16,7 +16,7 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
@@ -43,7 +43,7 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
