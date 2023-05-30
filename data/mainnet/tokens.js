@@ -121,7 +121,7 @@ module.exports = {
   },
   fxGRAIL: {
     chain: CHAINS_ID.ARBITRUM_ONE,
-    logoUrl: ['./icons/xgrail.svg'],
+    logoUrl: [''],
     tokenAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault,
     decimals: '18',
     vaultAddress: null,
