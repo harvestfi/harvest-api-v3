@@ -119,6 +119,17 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
+  fxGRAIL: {
+    chain: CHAINS_ID.ARBITRUM_ONE,
+    logoUrl: [''],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.F_TOKEN,
+      params: [addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault, '18', CHAINS_ID.ARBITRUM_ONE],
+    },
+  },
   xGRAIL: {
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/xgrail.svg'],
