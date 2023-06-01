@@ -2250,6 +2250,22 @@
         "NewPool": "0x377bE40897F5deB6DE6Fb681D088526580CCe1BD",
         "NFTPool": "0x5DbFE78Bf6d6FDE1db1854c9A30DFb2d565e6152",
         "NitroPool": "0x1330Ef50fb3aF24eB0c748BEbE38d059639d4158"
+      },
+      "camelot_ARB_ETH": {
+        "Underlying": "0xa6c5C7D189fA4eB5Af8ba34E63dCDD3a635D433f",
+        "NewVault": "0x270b593c6A67a4AF0B6501a3FDeb54fB85958938",
+        "NewStrategy": "0xec9C5Ab1528CC332CD85A34d8074C392f374BEF0",
+        "NewPool": "0x2112FDFc139c6aAF6ff26A8C2623D7C514EEbDC0",
+        "NFTPool": "0x9FFC53cE956Bf040c4465B73B3cfC04569EDaEf1",
+        "NitroPool": "0"
+      },
+      "camelot_GRAIL_USDC": {
+        "Underlying": "0x87425D8812f44726091831a9A109f4bDc3eA34b4",
+        "NewVault": "0x822E250B529969b4D9eEB422797Eb23F7EC95B25",
+        "NewStrategy": "0xB6B5C9C6b9Eb2182D964b14599FFF6ab001A01F1",
+        "NewPool": "0x7A803287062566D4bf68Fe54d35106658fF31597",
+        "NFTPool": "0x9CB2F70C8360461ab35e31A07ae9e94B26CA8A86",
+        "NitroPool": "0"
       }
     }
   }
