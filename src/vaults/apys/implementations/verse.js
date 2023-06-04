@@ -9,11 +9,8 @@ const {
 
 const { getTokenPrice } = require('../../../prices')
 
-const getApy = async (lpAddress, reduction) => {
-  const farmInstance = new web3.eth.Contract(
-    verseFarmContract.abi,
-    verseFarmContract.address.mainnet,
-  )
+const getApy = async (lpAddress, rewardPool, reduction) => {
+  const farmInstance = new web3.eth.Contract(verseFarmContract.abi, rewardPool)
 
   let versePerSecond = new BigNumber(await getRewardPerSecond(farmInstance)).dividedBy(
     new BigNumber(10).exponentiatedBy(18),

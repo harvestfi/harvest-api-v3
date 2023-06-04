@@ -1168,7 +1168,8 @@
       "Underlying": "0x845C0179060362f071FF5C7f1D2703617a480F3e",
       "NewVault": "0xf7754c2Bb15e565D185eF6378fbE1D23c3A5e065",
       "NewStrategy": "0xe7fD5d557D1a8E55a62F0Eb29592bc64D8670d14",
-      "NewPool": "0x25aD1FC7b40EAbD7869716e7C2d4806F0c6ac147"
+      "NewPool": "0x25aD1FC7b40EAbD7869716e7C2d4806F0c6ac147",
+      "RewardPool": "0xDED0C22aCd80e7a4bd6eC91ced451Fc83f04cAB2"
     },
     "curve_crvUSD_USDT": {
       "Underlying": "0x390f3595bCa2Df7d23783dFd126427CCeb997BF4",
@@ -1189,6 +1190,20 @@
       "NewVault": "0x924e022Ef8636FfA5971215e6Aac2652f7e9606e",
       "NewStrategy": "0x1d909e8cA9d99237eA435aBb2392d2C3831F6e3a",
       "NewPool": "0x17b4093F43266B1D5FebfaC02DA547007bC87A42"
+    },
+    "verse_WBTC_ETH": {
+      "Underlying": "0xeaCADc656c9394fb09af25AeBc0897fDfFe484A1",
+      "NewVault": "0xbfA9f80E0b930a0b5Cc47Cd1c0d3173ad061B59b",
+      "NewStrategy": "0x19590df33Da7CE1f437c8d0877b66609E83416A6",
+      "NewPool": "0x7fBEec388De6dF14d98d1E9eAedB046d769123E1",
+      "RewardPool": "0x4efff28192029bdb1Ac027c53674721875DA6B10"
+    },
+    "verse_USDC_ETH": {
+      "Underlying": "0x6E1fbeeABA87BAe1100d95f8340dc27aD7C8427b",
+      "NewVault": "0x16a308f7e628c1d9bFb506E2cd2E63d669af6B2C",
+      "NewStrategy": "0x339643855fc4dDe20B8b340781bdf7A1990Ebc3D",
+      "NewPool": "0x6E4aD6A54A3e670f95bce8BE4fcCd6b93352e648",
+      "RewardPool": "0x4E1F1206f2B9a651EcF2D49C5d33761861D4910C"
     }
   },
   "MATIC": {
@@ -2229,12 +2244,6 @@
         "Gauge": "0xae9F2cE52FE89DD78e6F13d5d7b33125aE3dFF8C",
         "PoolId": "0x5a7f39435fd9c381e4932fa2047c9a5136a5e3e7000000000000000000000400"
       },
-      "xGRAIL": {
-        "Underlying": "0x3CAaE25Ee616f2C8E13C74dA0813402eae3F496b",
-        "NewVault": "0xFA10759780304c2B8d34B051C039899dFBbcad7f",
-        "NewStrategy": "0xd97da915530e7d6946781BF332598aa5F336a76B",
-        "NewPool": "0xd57a5F9BC4856107D184C49f98bfD7DDf175ac2A"
-      },
       "camelot_ETH_USDC": {
         "Underlying": "0x84652bb2539513BAf36e225c930Fdd8eaa63CE27",
         "NewVault": "0x2A15a59648eD09F14fb87A740199831a43031319",
@@ -2266,6 +2275,12 @@
         "NewPool": "0x7A803287062566D4bf68Fe54d35106658fF31597",
         "NFTPool": "0x9CB2F70C8360461ab35e31A07ae9e94B26CA8A86",
         "NitroPool": "0"
+      },
+      "xGRAIL": {
+        "Underlying": "0x3CAaE25Ee616f2C8E13C74dA0813402eae3F496b",
+        "NewVault": "0xFA10759780304c2B8d34B051C039899dFBbcad7f",
+        "NewStrategy": "0xd97da915530e7d6946781BF332598aa5F336a76B",
+        "NewPool": "0xd57a5F9BC4856107D184C49f98bfD7DDf175ac2A"
       }
     }
   }

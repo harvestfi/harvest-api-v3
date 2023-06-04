@@ -5,6 +5,56 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAINS_ID.ETH_MAINNET,
+    id: 'verse_WBTC_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.V2.verse_WBTC_ETH.Underlying],
+    },
+    contractAddress: addresses.V2.verse_WBTC_ETH.NewPool,
+    collateralAddress: addresses.V2.verse_WBTC_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://etherscan.io/token/${addresses.V2.verse_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a> in a Verse farm, earning 
+       <a href="https://etherscan.io/token/${addresses.VERSE}" target="_blank" rel="noopener noreferrer">VERSE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.verse_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAINS_ID.ETH_MAINNET,
+    id: 'verse_USDC_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.V2.verse_USDC_ETH.Underlying],
+    },
+    contractAddress: addresses.V2.verse_USDC_ETH.NewPool,
+    collateralAddress: addresses.V2.verse_USDC_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://etherscan.io/token/${addresses.V2.verse_USDC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a> in a Verse farm, earning 
+       <a href="https://etherscan.io/token/${addresses.VERSE}" target="_blank" rel="noopener noreferrer">VERSE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://etherscan.io/token/${addresses.V2.verse_USDC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAINS_ID.ARBITRUM_ONE,
     id: 'camelot_ETH_USDC',
     type: POOL_TYPES.INCENTIVE,

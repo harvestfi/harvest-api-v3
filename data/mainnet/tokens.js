@@ -50,6 +50,62 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  verse_WBTC_ETH: {
+    chain: CHAINS_ID.ETH_MAINNET,
+    logoUrl: ['./icons/wbtc.svg', './icons/eth.svg'],
+    apyIconUrls: ['./icons/verse.svg'],
+    apyTokenSymbols: ['VERSE'],
+    tokenNames: ['WBTC', 'ETH'],
+    farmType: 'Advanced',
+    platform: ['Verse'],
+    stableCoin: false,
+    tokenAddress: addresses.V2.verse_WBTC_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.verse_WBTC_ETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.V2.verse_WBTC_ETH.Underlying, 'WBTC', 'WETH'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.VERSE,
+        params: [
+          addresses.V2.verse_WBTC_ETH.Underlying,
+          addresses.V2.verse_WBTC_ETH.RewardPool,
+          profitSharingCut15Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['FARM', 'VERSE'],
+  },
+  verse_USDC_ETH: {
+    chain: CHAINS_ID.ETH_MAINNET,
+    logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
+    apyIconUrls: ['./icons/verse.svg'],
+    apyTokenSymbols: ['VERSE'],
+    tokenNames: ['ETH', 'USDC'],
+    farmType: 'Advanced',
+    platform: ['Verse'],
+    stableCoin: false,
+    tokenAddress: addresses.V2.verse_USDC_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.verse_USDC_ETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.V2.verse_USDC_ETH.Underlying, 'USDC', 'WETH'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.VERSE,
+        params: [
+          addresses.V2.verse_USDC_ETH.Underlying,
+          addresses.V2.verse_USDC_ETH.RewardPool,
+          profitSharingCut15Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['FARM', 'VERSE'],
+  },
   camelot_iFARM_ETH: {
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/ifarm.svg', './icons/eth.svg'],
@@ -787,7 +843,11 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.VERSE,
-        params: [addresses.V2.verse_VERSE_ETH.Underlying, profitSharingCut15Percent],
+        params: [
+          addresses.V2.verse_VERSE_ETH.Underlying,
+          addresses.V2.verse_VERSE_ETH.RewardPool,
+          profitSharingCut15Percent,
+        ],
       },
     ],
     cmcRewardTokenSymbols: ['FARM', 'VERSE'],
