@@ -529,8 +529,8 @@ module.exports = {
   balancer_rETH_aWETH_arbitrum: {
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/reth.svg', './icons/am-weth.svg'],
-    apyIconUrls: ['./icons/balancer.svg'],
-    apyTokenSymbols: ['BAL'],
+    apyIconUrls: ['./icons/balancer.svg', './icons/reth.svg'],
+    apyTokenSymbols: ['BAL', 'rETH'],
     tokenNames: ['rETH', 'aETH'],
     farmType: 'Advanced',
     platform: ['Balancer'],
