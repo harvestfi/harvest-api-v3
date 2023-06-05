@@ -444,6 +444,7 @@ module.exports = {
     },
   },
   balancer_bbwstETH_bbaUSD_arbitrum: {
+    inactive: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: [
       './icons/steth.svg',
@@ -861,6 +862,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['tangible'] },
   },
   balancer_TNGBL_USDC: {
+    inactive: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/tngbl.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
@@ -1795,6 +1797,7 @@ module.exports = {
     },
   },
   balancer_wUSDR_USDC_polygon: {
+    inactive: true,
     chain: CHAINS_ID.MATIC_MAINNET,
     logoUrl: ['./icons/wusdr.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
@@ -1942,6 +1945,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   balancer_wUSDR_USDC: {
+    inactive: true,
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -1993,6 +1997,7 @@ module.exports = {
     },
   },
   curve_lvUSD: {
+    inactive: true,
     chain: CHAINS_ID.ETH_MAINNET,
     logoUrl: [
       './icons/lvusd.svg',
@@ -2121,6 +2126,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'POISON'],
   },
   poison_pSLVR_USDC: {
+    inactive: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/pslvr.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/poison.svg'],
@@ -2150,6 +2156,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'POISON'],
   },
   poison_pTSLA_USDC: {
+    inactive: true,
     chain: CHAINS_ID.ARBITRUM_ONE,
     logoUrl: ['./icons/ptsla.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/poison.svg'],
@@ -3183,6 +3190,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   aura_bbaUSD: {
+    inactive: true,
     chain: CHAINS_ID.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
