@@ -4,7 +4,7 @@ const tokenAddresses = require('../../../lib/data/addresses.json')
 const { token: tokenContractData } = require('../../../lib/web3/contracts')
 const getBalancerTokenPrice = require('../../../prices/implementations/balancer.js').getPrice
 const { getTokenPrice } = require('../../../prices')
-const { CHAIN_TYPES } = require('../../../lib/constants')
+const { CHAIN_IDS } = require('../../../lib/constants')
 
 const getApy = async (
   tokenAddress,
@@ -21,9 +21,9 @@ const getApy = async (
   } = tokenContractData
 
   let provider
-  if (networkId == CHAIN_TYPES.ETH) {
+  if (networkId == CHAIN_IDS.ETH) {
     provider = web3
-  } else if (networkId == CHAIN_TYPES.MATIC) {
+  } else if (networkId == CHAIN_IDS.POLYGON) {
     provider = web3MATIC
   }
 

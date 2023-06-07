@@ -159,9 +159,9 @@ const SUSHI_GRAPHQL_ENDPOINTS = {
   ETH: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
 }
 
-const CHAIN_TYPES = {
+const CHAIN_IDS = {
   ETH: '1',
-  MATIC: '137',
+  POLYGON: '137',
   ARBITRUM_ONE: '42161',
 }
 
@@ -223,7 +223,7 @@ module.exports = {
   WEB3_CALL_COUNT_STATS_KEY,
   WEB3_CALL_COUNT_KEY,
   GET_POOL_DATA_BATCH_SIZE,
-  CHAIN_TYPES,
+  CHAIN_IDS,
   INFURA_URL,
   INFURA_WS_URL,
   COINGECKO_PRICE_API_ENDPOINT_CONTRACT,

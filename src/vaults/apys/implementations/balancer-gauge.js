@@ -1,7 +1,7 @@
 const BigNumber = require('bignumber.js')
 const { getWeb3 } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
-const { CHAIN_TYPES } = require('../../../lib/constants')
+const { CHAIN_IDS } = require('../../../lib/constants')
 const { balTokenAdmin, crvGauge, crvController } = require('../../../lib/web3/contracts')
 const tokenAddresses = require('../../../lib/data/addresses.json')
 
@@ -10,13 +10,13 @@ const getApy = async (
   gaugeAddress,
   swapAddress,
   factor,
-  chain = CHAIN_TYPES.ETH,
+  chain = CHAIN_IDS.ETH,
   rootChainGaugeAddress,
 ) => {
-  const web3Eth = getWeb3(CHAIN_TYPES.ETH)
+  const web3Eth = getWeb3(CHAIN_IDS.ETH)
   let web3Polygon
-  if (chain != CHAIN_TYPES.ETH) {
-    web3Polygon = getWeb3(CHAIN_TYPES.MATIC)
+  if (chain != CHAIN_IDS.ETH) {
+    web3Polygon = getWeb3(CHAIN_IDS.POLYGON)
   }
 
   const {
@@ -45,7 +45,7 @@ const getApy = async (
   )
 
   let gaugeInstance, weight
-  if (chain == CHAIN_TYPES.ETH) {
+  if (chain == CHAIN_IDS.ETH) {
     gaugeInstance = new web3Eth.eth.Contract(crvGaugeAbi, gaugeAddress)
     weight = new BigNumber(
       await crvControllerMethods.getGaugeRelativeWeight(gaugeAddress, crvControllerInstance),

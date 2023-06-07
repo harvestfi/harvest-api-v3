@@ -8,7 +8,7 @@ const {
   COINGECKO_PRICE_API_ENDPOINT_ID,
   COINGECKO_API_KEY,
   CG_CACHE_TTL,
-  CHAIN_TYPES,
+  CHAIN_IDS,
 } = require('../lib/constants')
 const rateLimit = require('axios-rate-limit')
 
@@ -28,16 +28,16 @@ const cgCall = rateLimit(
 
 const getPlatformId = chain => {
   switch (chain) {
-    case CHAIN_TYPES.MATIC:
+    case CHAIN_IDS.POLYGON:
       return 'polygon-pos'
-    case CHAIN_TYPES.ARBITRUM_ONE:
+    case CHAIN_IDS.ARBITRUM_ONE:
       return 'arbitrum-one'
     default:
       return 'ethereum'
   }
 }
 
-const priceByAddresses = (contractAddresses, ourChainId = CHAIN_TYPES.ETH, currency = 'usd') =>
+const priceByAddresses = (contractAddresses, ourChainId = CHAIN_IDS.ETH, currency = 'usd') =>
   cgCall
     .get(`${COINGECKO_PRICE_API_ENDPOINT_CONTRACT}/${getPlatformId(ourChainId)}`, {
       params: {
@@ -79,7 +79,7 @@ const priceByIds = (ids, currency) =>
       }
       return Object.keys(res.data).map(id => {
         const fetchedPrice = get(res, `data[${id}][${currency}]`, 0)
-        cache.set(`tokenPrice${id}${CHAIN_TYPES.ETH}${currency}`, fetchedPrice)
+        cache.set(`tokenPrice${id}${CHAIN_IDS.ETH}${currency}`, fetchedPrice)
         return fetchedPrice
       })
     })
@@ -90,7 +90,7 @@ const priceByIds = (ids, currency) =>
 
 const getTokenPriceByAddress = async (
   contractAddress,
-  ourChainId = CHAIN_TYPES.ETH,
+  ourChainId = CHAIN_IDS.ETH,
   currency = 'usd',
 ) => {
   const formattedContractAddress = contractAddress.toLowerCase()
@@ -104,7 +104,7 @@ const getTokenPriceByAddress = async (
   return result[0]
 }
 
-const getTokenPriceById = async (id, currency = 'usd', ourChainId = CHAIN_TYPES.ETH) => {
+const getTokenPriceById = async (id, currency = 'usd', ourChainId = CHAIN_IDS.ETH) => {
   const tokenPrice = cache.get(`tokenPrice${id}${ourChainId}${currency}`)
 
   if (tokenPrice) {

@@ -4,7 +4,7 @@ const {
   INFURA_URL,
   MATIC_RPC_URL,
   ARBITRUM_RPC_URL,
-  CHAIN_TYPES,
+  CHAIN_IDS,
   WEB3_CALL_COUNT_STATS_KEY,
   WEB3_CALL_COUNT_KEY,
   INFURA_WS_URL,
@@ -19,9 +19,9 @@ const web3Socket = new Web3(new Web3.providers.WebsocketProvider(INFURA_WS_URL))
 
 const getWeb3 = chainId => {
   switch (chainId) {
-    case CHAIN_TYPES.MATIC:
+    case CHAIN_IDS.POLYGON:
       return web3MATIC
-    case CHAIN_TYPES.ARBITRUM_ONE:
+    case CHAIN_IDS.ARBITRUM_ONE:
       return web3ARBITRUM
     default:
       return web3

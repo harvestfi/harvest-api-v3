@@ -1,6 +1,6 @@
 const { cache } = require('../lib/cache')
 const { size, isUndefined } = require('lodash')
-const { POOL_TYPES, CHAIN_TYPES, GENERAL_CACHE_TTL } = require('../lib/constants')
+const { POOL_TYPES, CHAIN_IDS, GENERAL_CACHE_TTL } = require('../lib/constants')
 const { forEach } = require('promised-loops')
 const addresses = require('../lib/data/addresses.json')
 const { default: BigNumber } = require('bignumber.js')
@@ -82,7 +82,7 @@ const getIncentivePoolStats = async (
 }
 
 const isPotPool = pool => {
-  return size(pool.rewardTokens) >= 2 || pool.chain === CHAIN_TYPES.ARBITRUM_ONE
+  return size(pool.rewardTokens) >= 2 || pool.chain === CHAIN_IDS.ARBITRUM_ONE
 }
 
 const getPoolStatsPerType = async (pool, poolContractData, lpTokenData, weeklyReward, fresh) => {
@@ -111,7 +111,7 @@ const getPoolStatsPerType = async (pool, poolContractData, lpTokenData, weeklyRe
           rewardTokenAddress,
           isPotPool(pool),
         )
-        if (pool.chain === CHAIN_TYPES.ETH) {
+        if (pool.chain === CHAIN_IDS.ETH) {
           poolStats.apy = getWeeklyCompound(poolStats.apr)
         } else {
           poolStats.apy = poolStats.apr
@@ -130,7 +130,7 @@ const getPoolStatsPerType = async (pool, poolContractData, lpTokenData, weeklyRe
         if (rewardTokenAddress === addresses.iFARM) {
           poolStats.apr = new BigNumber(poolStats.apr).toFixed()
         }
-        if (pool.chain === CHAIN_TYPES.ETH && rewardTokenAddress === addresses.iFARM) {
+        if (pool.chain === CHAIN_IDS.ETH && rewardTokenAddress === addresses.iFARM) {
           poolStats.apy = getWeeklyCompound(poolStats.apr)
         } else {
           poolStats.apy = new BigNumber(poolStats.apr).toFixed(2)
@@ -151,7 +151,7 @@ const getPoolStatsPerType = async (pool, poolContractData, lpTokenData, weeklyRe
         weeklyRewardRateOverride = weeklyReward
         if (
           !weeklyRewardRateOverride &&
-          pool.chain === CHAIN_TYPES.ETH &&
+          pool.chain === CHAIN_IDS.ETH &&
           (rewardTokenAddress === tokenAddresses.iFARM ||
             rewardTokenAddress === tokenAddresses.FARM)
         ) {

@@ -1,10 +1,10 @@
 const { get } = require('lodash')
 const { cachedAxios } = require('../db/models/cache')
-const { CHAIN_TYPES, LIDO_API_URLS } = require('../constants')
+const { CHAIN_IDS, LIDO_API_URLS } = require('../constants')
 
 const get7MAAPRs = networkId => {
   let apiURL
-  if (networkId == CHAIN_TYPES.ETH) {
+  if (networkId == CHAIN_IDS.ETH) {
     apiURL = LIDO_API_URLS.ETH
   }
 

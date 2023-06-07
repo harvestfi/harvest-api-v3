@@ -2,7 +2,7 @@ const BigNumber = require('bignumber.js')
 const { getWeb3 } = require('../../lib/web3')
 const addresses = require('../../lib/data/addresses.json')
 const { farmsteadUSDC } = require('../../lib/web3/contracts')
-const { CHAIN_TYPES } = require('../../lib/constants')
+const { CHAIN_IDS } = require('../../lib/constants')
 const { getTokenPrice } = require('..')
 
 const getPrice = async () => {
@@ -14,7 +14,7 @@ const getPrice = async () => {
     },
   } = farmsteadUSDC
 
-  const web3Instance = getWeb3(CHAIN_TYPES.ETH)
+  const web3Instance = getWeb3(CHAIN_IDS.ETH)
   const farmsteadUSDCInstance = new web3Instance.eth.Contract(abi, mainnet)
 
   const usdcPrice = await getTokenPrice(addresses.USDC)

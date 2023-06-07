@@ -21,7 +21,7 @@ const {
   ENDPOINT_TYPES,
   ACTIVE_ENDPOINTS,
   GET_PRICE_TYPES,
-  CHAIN_TYPES,
+  CHAIN_IDS,
   GET_POOL_DATA_BATCH_SIZE,
   GET_VAULT_DATA_BATCH_SIZE,
   DEBUG_MODE,
@@ -35,9 +35,9 @@ const addresses = require('../lib/data/addresses.json')
 
 const getProfitSharingFactor = chain => {
   switch (chain) {
-    case CHAIN_TYPES.MATIC:
+    case CHAIN_IDS.POLYGON:
       return 0.92
-    case CHAIN_TYPES.ARBITRUM_ONE:
+    case CHAIN_IDS.ARBITRUM_ONE:
       return 0.9
     default:
       return 0.85
@@ -56,18 +56,18 @@ const getVaults = async () => {
   const tokensWithVault = pickBy(tokens, token => token.vaultAddress)
 
   const ethVaultsBatches = chunk(
-    Object.keys(tokensWithVault).filter(tokenId => tokens[tokenId].chain === CHAIN_TYPES.ETH),
+    Object.keys(tokensWithVault).filter(tokenId => tokens[tokenId].chain === CHAIN_IDS.ETH),
     GET_VAULT_DATA_BATCH_SIZE,
   )
 
   const maticVaultsBatches = chunk(
-    Object.keys(tokensWithVault).filter(tokenId => tokens[tokenId].chain === CHAIN_TYPES.MATIC),
+    Object.keys(tokensWithVault).filter(tokenId => tokens[tokenId].chain === CHAIN_IDS.POLYGON),
     GET_VAULT_DATA_BATCH_SIZE,
   )
 
   const arbitrumVaultsBatches = chunk(
     Object.keys(tokensWithVault).filter(
-      tokenId => tokens[tokenId].chain === CHAIN_TYPES.ARBITRUM_ONE,
+      tokenId => tokens[tokenId].chain === CHAIN_IDS.ARBITRUM_ONE,
     ),
     GET_VAULT_DATA_BATCH_SIZE,
   )
@@ -208,7 +208,7 @@ const getPools = async () => {
     console.log('\n-- Getting MATIC pool data --')
 
     const maticPoolBatches = chunk(
-      pools.filter(pool => pool.chain === CHAIN_TYPES.MATIC),
+      pools.filter(pool => pool.chain === CHAIN_IDS.POLYGON),
       GET_POOL_DATA_BATCH_SIZE,
     )
 
@@ -226,7 +226,7 @@ const getPools = async () => {
     console.log('\n-- Getting ARBITRUM pool data --')
 
     const arbitrumPoolBatches = chunk(
-      pools.filter(pool => pool.chain === CHAIN_TYPES.ARBITRUM_ONE),
+      pools.filter(pool => pool.chain === CHAIN_IDS.ARBITRUM_ONE),
       GET_POOL_DATA_BATCH_SIZE,
     )
 
@@ -244,7 +244,7 @@ const getPools = async () => {
     console.log('\n-- Getting ETH pool data --')
 
     const ethPoolBatches = chunk(
-      pools.filter(pool => pool.chain === CHAIN_TYPES.ETH),
+      pools.filter(pool => pool.chain === CHAIN_IDS.ETH),
       GET_POOL_DATA_BATCH_SIZE,
     )
     if (size(ethPoolBatches)) {
@@ -568,8 +568,8 @@ const getNanolyData = async () => {
             (pool.collateralAddress &&
               pool.collateralAddress.toLowerCase() === vault.vaultAddress.toLowerCase()),
         )
-        const address = vault.tokenAddress
-        const tokens = vault.tokenNames.join('-')
+        const address = vault.vaultAddress
+        const tokens = vault.tokenNames
         let base
         if (pool && pool.tradingApy) {
           base = (Number(vault.estimatedApy) + Number(pool.tradingApy)) / 100
@@ -590,6 +590,19 @@ const getNanolyData = async () => {
         }
         const tvl = Number(vault.totalValueLocked).toFixed(2)
 
+        let url
+        if (networkId == CHAIN_IDS.ETH) {
+          if (vault.id == 'IFARM') {
+            url = `https://app.harvest.finance/ethereum/${vault.tokenAddress}`
+          } else {
+            url = `https://app.harvest.finance/ethereum/${vault.vaultAddress}`
+          }
+        } else if (networkId == CHAIN_IDS.POLYGON) {
+          url = `https://app.harvest.finance/polygon/${vault.vaultAddress}`
+        } else if (networkId == CHAIN_IDS.ARBITRUM_ONE) {
+          url = `https://app.harvest.finance/arbitrum/${vault.vaultAddress}`
+        }
+
         let result = {
           chain: networkId,
           tokens,
@@ -597,7 +610,7 @@ const getNanolyData = async () => {
           base,
           reward,
           rewards,
-          url: 'https://app.harvest.finance/',
+          url,
           tvl,
           active: true,
         }

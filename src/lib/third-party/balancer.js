@@ -1,6 +1,6 @@
 const { get } = require('lodash')
 const { cachedAxios } = require('../db/models/cache')
-const { CHAIN_TYPES, BALANCER_SUBGRAPH_URLS } = require('../constants')
+const { CHAIN_IDS, BALANCER_SUBGRAPH_URLS } = require('../constants')
 const { balancerVault, token: tokenContract } = require('../web3/contracts')
 const { getWeb3 } = require('../web3')
 const { getTokenPrice } = require('../../prices')
@@ -8,9 +8,9 @@ const BigNumber = require('bignumber.js')
 
 const executeBalancerCall = (type, query, networkId) => {
   let subgraphURL
-  if (networkId == CHAIN_TYPES.ETH) {
+  if (networkId == CHAIN_IDS.ETH) {
     subgraphURL = BALANCER_SUBGRAPH_URLS.ETH
-  } else if (networkId == CHAIN_TYPES.MATIC) {
+  } else if (networkId == CHAIN_IDS.POLYGON) {
     subgraphURL = BALANCER_SUBGRAPH_URLS.MATIC
   }
   return cachedAxios
@@ -31,7 +31,7 @@ const executeBalancerCall = (type, query, networkId) => {
 }
 
 const getPoolInfo = (poolId, networkId) => {
-  if (networkId == CHAIN_TYPES.ETH) {
+  if (networkId == CHAIN_IDS.ETH) {
     return getPoolInfoSubgraph(poolId, networkId)
   } else {
     return getPoolInfoOnChain(poolId, networkId)

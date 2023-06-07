@@ -2,9 +2,9 @@ const BigNumber = require('bignumber.js')
 const { getTokenPrice } = require('../')
 const { getWeb3 } = require('../../lib/web3')
 const { token: tokenContractData } = require('../../lib/web3/contracts')
-const { CHAIN_TYPES } = require('../../lib/constants')
+const { CHAIN_IDS } = require('../../lib/constants')
 
-const getPrice = async (wrapper, underlying, chain = CHAIN_TYPES.ETH) => {
+const getPrice = async (wrapper, underlying, chain = CHAIN_IDS.ETH) => {
   const {
     contract: { abi: tokenAbi },
     methods: { getTotalSupply, getBalance, getDecimals },

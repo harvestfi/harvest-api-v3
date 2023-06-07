@@ -1,10 +1,10 @@
 const { get } = require('lodash')
 const { cachedAxios } = require('../db/models/cache')
-const { CHAIN_TYPES, ROCKETPOOL_API_URLS } = require('../constants')
+const { CHAIN_IDS, ROCKETPOOL_API_URLS } = require('../constants')
 
 const getYearlyAPR = networkId => {
   let apiURL
-  if (networkId == CHAIN_TYPES.ETH) {
+  if (networkId == CHAIN_IDS.ETH) {
     apiURL = ROCKETPOOL_API_URLS.ETH
   }
 

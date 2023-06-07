@@ -1,5 +1,5 @@
 const {
-  CHAINS_ID,
+  CHAIN_IDS,
   GET_PRICE_TYPES,
   ESTIMATED_APY_TYPES,
   SUSHI_POOLS_IDS,
@@ -16,7 +16,7 @@ const profitSharingCut25Percent = '0.75'
 
 module.exports = {
   FARM: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/farm.svg'],
     tokenAddress: addresses.FARM,
     tokenNames: ['FARM'],
@@ -28,7 +28,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.FARM] },
   },
   WETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/eth.svg'],
     apyIconUrls: ['./icons/comp.svg', './icons/idle.svg'],
     apyTokenSymbols: ['COMP', 'IDLE'],
@@ -49,7 +49,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
   camelot_GRAIL_ARB: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/grail.svg', './icons/arb.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
     apyTokenSymbols: ['GRAIL', 'xGRAIL'],
@@ -78,7 +78,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   GMX: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/gmx.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.GMX,
     decimals: '18',
@@ -89,7 +89,7 @@ module.exports = {
     },
   },
   camelot_GMX_USDC: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/gmx.png', './icons/usdc.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
     apyTokenSymbols: ['GRAIL', 'xGRAIL'],
@@ -118,7 +118,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   SILO_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/silo.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.SILO,
     decimals: '18',
@@ -130,7 +130,7 @@ module.exports = {
   },
   camelot_SILO_ETH: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/silo.png', './icons/eth.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/silo.png'],
     apyTokenSymbols: ['GRAIL', 'xGRAIL', 'SILO'],
@@ -163,7 +163,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'SILO'],
   },
   VELA: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/vela.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.VELA,
     decimals: '18',
@@ -175,7 +175,7 @@ module.exports = {
   },
   camelot_VELA_ETH: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/vela.png', './icons/eth.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/vela.png'],
     apyTokenSymbols: ['GRAIL', 'xGRAIL', 'VELA'],
@@ -204,7 +204,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'VELA'],
   },
   verse_WBTC_ETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/verse.svg'],
     apyTokenSymbols: ['VERSE'],
@@ -231,7 +231,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'VERSE'],
   },
   verse_USDC_ETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/verse.svg'],
     apyTokenSymbols: ['VERSE'],
@@ -258,7 +258,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'VERSE'],
   },
   camelot_iFARM_ETH: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/ifarm.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/ifarm.svg'],
     apyTokenSymbols: ['GRAIL', 'xGRAIL', 'iFARM'],
@@ -291,7 +291,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   camelot_GRAIL_USDC: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/grail.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
     apyTokenSymbols: ['GRAIL', 'xGRAIL'],
@@ -320,7 +320,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   camelot_ARB_ETH: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
     apyTokenSymbols: ['GRAIL', 'xGRAIL'],
@@ -349,7 +349,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   camelot_ETH_USDC: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
     apyTokenSymbols: ['GRAIL', 'xGRAIL'],
@@ -382,18 +382,18 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   fxGRAIL: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [''],
     tokenAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.F_TOKEN,
-      params: [addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault, '18', CHAINS_ID.ARBITRUM_ONE],
+      params: [addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault, '18', CHAIN_IDS.ARBITRUM_ONE],
     },
   },
   xGRAIL: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/xgrail.svg'],
     apyIconUrls: ['./icons/eth.svg', './icons/usdc.svg', './icons/xgrail.svg'],
     apyTokenSymbols: ['ETH-USDC', 'xGRAIL'],
@@ -416,7 +416,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'ETH-USDC', 'xGRAIL'],
   },
   GRAIL: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/grail.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.GRAIL,
     decimals: '18',
@@ -427,7 +427,7 @@ module.exports = {
     },
   },
   aWETH_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/am-weth.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.aWETH,
     decimals: '18',
@@ -438,18 +438,18 @@ module.exports = {
     },
   },
   waWETH_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [''],
     tokenAddress: addresses.ARBITRUM_ONE.waWETH,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.WRAPPED_TOKEN,
-      params: [addresses.ARBITRUM_ONE.waWETH, addresses.ARBITRUM_ONE.aWETH, CHAINS_ID.ARBITRUM_ONE],
+      params: [addresses.ARBITRUM_ONE.waWETH, addresses.ARBITRUM_ONE.aWETH, CHAIN_IDS.ARBITRUM_ONE],
     },
   },
   'bb-aWETH_arbitrum': {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [''],
     tokenAddress: addresses.ARBITRUM_ONE.bbaWETH,
     decimals: '18',
@@ -459,12 +459,12 @@ module.exports = {
       params: [
         addresses.ARBITRUM_ONE.bbaWETH,
         '0xda1cd1711743e57dd57102e9e61b75f3587703da0000000000000000000003fc',
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
   },
   aDAI_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/am-dai.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.aDAI,
     decimals: '18',
@@ -475,18 +475,18 @@ module.exports = {
     },
   },
   waDAI_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [''],
     tokenAddress: addresses.ARBITRUM_ONE.waDAI,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.WRAPPED_TOKEN,
-      params: [addresses.ARBITRUM_ONE.waDAI, addresses.ARBITRUM_ONE.aDAI, CHAINS_ID.ARBITRUM_ONE],
+      params: [addresses.ARBITRUM_ONE.waDAI, addresses.ARBITRUM_ONE.aDAI, CHAIN_IDS.ARBITRUM_ONE],
     },
   },
   aUSDC_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/am-usdc.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.aUSDC,
     decimals: '6',
@@ -497,18 +497,18 @@ module.exports = {
     },
   },
   waUSDC_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [''],
     tokenAddress: addresses.ARBITRUM_ONE.waUSDC,
     decimals: '6',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.WRAPPED_TOKEN,
-      params: [addresses.ARBITRUM_ONE.waUSDC, addresses.ARBITRUM_ONE.aUSDC, CHAINS_ID.ARBITRUM_ONE],
+      params: [addresses.ARBITRUM_ONE.waUSDC, addresses.ARBITRUM_ONE.aUSDC, CHAIN_IDS.ARBITRUM_ONE],
     },
   },
   aUSDT_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/am-usdt.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.aUSDT,
     decimals: '6',
@@ -519,18 +519,18 @@ module.exports = {
     },
   },
   waUSDT_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [''],
     tokenAddress: addresses.ARBITRUM_ONE.waUSDT,
     decimals: '6',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.WRAPPED_TOKEN,
-      params: [addresses.ARBITRUM_ONE.waUSDT, addresses.ARBITRUM_ONE.aUSDT, CHAINS_ID.ARBITRUM_ONE],
+      params: [addresses.ARBITRUM_ONE.waUSDT, addresses.ARBITRUM_ONE.aUSDT, CHAIN_IDS.ARBITRUM_ONE],
     },
   },
   'bb-aDAI_arbitrum': {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [''],
     tokenAddress: addresses.ARBITRUM_ONE.bbaDAI,
     decimals: '18',
@@ -540,12 +540,12 @@ module.exports = {
       params: [
         addresses.ARBITRUM_ONE.bbaDAI,
         '0x9e34631547adcf2f8cefa0f5f223955c7b137571000000000000000000000407',
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
   },
   'bb-aUSDC_arbitrum': {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [''],
     tokenAddress: addresses.ARBITRUM_ONE.bbaUSDC,
     decimals: '18',
@@ -555,12 +555,12 @@ module.exports = {
       params: [
         addresses.ARBITRUM_ONE.bbaUSDC,
         '0x7c82a23b4c48d796dee36a9ca215b641c6a8709d000000000000000000000406',
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
   },
   'bb-aUSDT_arbitrum': {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [''],
     tokenAddress: addresses.ARBITRUM_ONE.bbaUSDT,
     decimals: '18',
@@ -570,12 +570,12 @@ module.exports = {
       params: [
         addresses.ARBITRUM_ONE.bbaUSDT,
         '0x4739e50b59b552d490d3fdc60d200977a38510c0000000000000000000000409',
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
   },
   'bb-aUSD_arbitrum': {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [''],
     tokenAddress: addresses.ARBITRUM_ONE.bbaUSD,
     decimals: '18',
@@ -585,13 +585,13 @@ module.exports = {
       params: [
         addresses.ARBITRUM_ONE.bbaUSD,
         '0xee02583596aee94cccb7e8ccd3921d955f17982a00000000000000000000040a',
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
   },
   balancer_bbwstETH_bbaUSD_arbitrum: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [
       './icons/steth.svg',
       './icons/am-weth.svg',
@@ -612,7 +612,7 @@ module.exports = {
       params: [
         addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.Underlying,
         addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.PoolId,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -622,14 +622,14 @@ module.exports = {
           'balancer_bbwstETH_bbaUSD_arbitrum',
           addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.Gauge,
           profitSharingCut10Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'LDO'],
   },
   balancer_wstETH_aWETH_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/steth.svg', './icons/am-weth.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/ldo.svg'],
     apyTokenSymbols: ['BAL', 'LDO'],
@@ -644,7 +644,7 @@ module.exports = {
       params: [
         addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.Underlying,
         addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.PoolId,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -654,14 +654,14 @@ module.exports = {
           'balancer_wstETH_aWETH_arbitrum',
           addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.Gauge,
           profitSharingCut10Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'LDO'],
   },
   rETH_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [],
     tokenAddress: addresses.ARBITRUM_ONE.rETH,
     decimals: '18',
@@ -672,7 +672,7 @@ module.exports = {
     },
   },
   balancer_rETH_aWETH_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/reth.svg', './icons/am-weth.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/reth.svg'],
     apyTokenSymbols: ['BAL', 'rETH'],
@@ -687,7 +687,7 @@ module.exports = {
       params: [
         addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying,
         addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.PoolId,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -697,14 +697,14 @@ module.exports = {
           'balancer_rETH_aWETH_arbitrum',
           addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Gauge,
           profitSharingCut10Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   amETH: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/am-weth.svg'],
     tokenAddress: addresses.MATIC.amETH,
     decimals: '18',
@@ -715,18 +715,18 @@ module.exports = {
     },
   },
   wamETH: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [''],
     tokenAddress: addresses.MATIC.wamETH,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.WRAPPED_TOKEN,
-      params: [addresses.MATIC.wamETH, addresses.MATIC.amETH, CHAINS_ID.MATIC_MAINNET],
+      params: [addresses.MATIC.wamETH, addresses.MATIC.amETH, CHAIN_IDS.POLYGON_MAINNET],
     },
   },
   'bb-amETH': {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [''],
     tokenAddress: addresses.MATIC.bbamETH,
     decimals: '18',
@@ -736,12 +736,12 @@ module.exports = {
       params: [
         addresses.MATIC.bbamETH,
         '0x43894de14462b421372bcfe445fa51b1b4a0ff3d000000000000000000000b36',
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
   },
   balancer_wstETH_amETH: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/steth.svg', './icons/am-weth.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/usdc.svg'],
     apyTokenSymbols: ['BAL', 'USDC'],
@@ -756,7 +756,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_wstETH_amETH.Underlying,
         addresses.MATIC.V2.balancer_wstETH_amETH.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -766,14 +766,14 @@ module.exports = {
           'balancer_wstETH_amETH',
           addresses.MATIC.V2.balancer_wstETH_amETH.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'USDC'],
   },
   balancer_frxETH_amETH: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/sfrxeth.svg', './icons/am-weth.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
     apyTokenSymbols: ['BAL'],
@@ -788,7 +788,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_frxETH_amETH.Underlying,
         addresses.MATIC.V2.balancer_frxETH_amETH.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -798,14 +798,14 @@ module.exports = {
           'balancer_frxETH_amETH',
           addresses.MATIC.V2.balancer_frxETH_amETH.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   balancer_WBTC_ETH_USDC_polygon: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
     apyTokenSymbols: ['BAL'],
@@ -820,7 +820,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_WBTC_ETH_USDC.Underlying,
         addresses.MATIC.V2.balancer_WBTC_ETH_USDC.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -830,7 +830,7 @@ module.exports = {
           'balancer_WBTC_ETH_USDC_polygon',
           addresses.MATIC.V2.balancer_WBTC_ETH_USDC.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
@@ -838,7 +838,7 @@ module.exports = {
   },
 
   OETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/oeth.png'],
     tokenAddress: addresses.OETH,
     decimals: '18',
@@ -849,7 +849,7 @@ module.exports = {
     },
   },
   curve_OETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/oeth.png', './icons/eth.svg'],
@@ -877,7 +877,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   crvUSD: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/curve.svg'],
     tokenAddress: addresses.crvUSD,
     decimals: '18',
@@ -885,7 +885,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['crvusd'] },
   },
   curve_crvUSD_USDC: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/curve.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -902,7 +902,7 @@ module.exports = {
         addresses.V2.curve_crvUSD_USDC.Underlying,
         18,
         ['crvUSD', 'USDC'],
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -914,7 +914,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   curve_crvUSD_USDT: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/curve.svg', './icons/usdt.svg'],
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -931,7 +931,7 @@ module.exports = {
         addresses.V2.curve_crvUSD_USDT.Underlying,
         18,
         ['crvUSD', 'USDT'],
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -943,7 +943,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   VERSE: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/verse.svg'],
     tokenAddress: addresses.VERSE,
     decimals: '18',
@@ -951,7 +951,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.VERSE] },
   },
   verse_VERSE_ETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/verse.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/verse.svg'],
     apyTokenSymbols: ['VERSE'],
@@ -978,7 +978,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'VERSE'],
   },
   TNGBL: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/tngbl.svg'],
     tokenAddress: addresses.MATIC.TNGBL,
     decimals: '18',
@@ -987,7 +987,7 @@ module.exports = {
   },
   balancer_TNGBL_USDC: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/tngbl.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
     apyTokenSymbols: ['BAL'],
@@ -1002,7 +1002,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_TNGBL_USDC.Underlying,
         addresses.MATIC.V2.balancer_TNGBL_USDC.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1012,14 +1012,14 @@ module.exports = {
           'balancer_TNGBL_USDC',
           addresses.MATIC.V2.balancer_TNGBL_USDC.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   amMATIC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/ammatic.svg'],
     tokenAddress: addresses.MATIC.amMATIC,
     decimals: '18',
@@ -1030,18 +1030,18 @@ module.exports = {
     },
   },
   wamMATIC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [''],
     tokenAddress: addresses.MATIC.wamMATIC,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.WRAPPED_TOKEN,
-      params: [addresses.MATIC.wamMATIC, addresses.MATIC.amMATIC, CHAINS_ID.MATIC_MAINNET],
+      params: [addresses.MATIC.wamMATIC, addresses.MATIC.amMATIC, CHAIN_IDS.POLYGON_MAINNET],
     },
   },
   'bb-amMATIC': {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [''],
     tokenAddress: addresses.MATIC.bbamMATIC,
     decimals: '18',
@@ -1051,12 +1051,12 @@ module.exports = {
       params: [
         addresses.MATIC.bbamMATIC,
         '0xe4885ed2818cc9e840a25f94f9b2a28169d1aea7000000000000000000000b29',
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
   },
   balancer_MaticX_amMatic: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/maticx.svg', './icons/ammatic.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/sd.png'],
     apyTokenSymbols: ['BAL', 'SD'],
@@ -1071,7 +1071,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_MaticX_amMatic.Underlying,
         addresses.MATIC.V2.balancer_MaticX_amMatic.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1081,14 +1081,14 @@ module.exports = {
           'balancer_MaticX_amMatic',
           addresses.MATIC.V2.balancer_MaticX_amMatic.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   balancer_stMatic_amMatic: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/stmatic.svg', './icons/ammatic.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/usdc.svg'],
     apyTokenSymbols: ['BAL', 'USDC'],
@@ -1103,7 +1103,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying,
         addresses.MATIC.V2.balancer_stMatic_amMatic.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1113,14 +1113,14 @@ module.exports = {
           'balancer_stMatic_amMatic',
           addresses.MATIC.V2.balancer_stMatic_amMatic.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'USDC'],
   },
   balancer_2EUR_PAR_v2: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jeur.svg', './icons/par.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
     apyTokenSymbols: ['BAL'],
@@ -1135,7 +1135,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying,
         addresses.MATIC.V2.balancer_2EUR_PAR_v2.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1145,14 +1145,14 @@ module.exports = {
           'balancer_2EUR_PAR_v2',
           addresses.MATIC.V2.balancer_2EUR_PAR_v2.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   aCRV_polygon: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/acrv.svg'],
     tokenAddress: addresses.MATIC.aCRV,
     decimals: '18',
@@ -1160,7 +1160,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['aladdin-cvxcrv'] },
   },
   curve_aCRV_CRV: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/acrv.svg', './icons/curve.svg'],
@@ -1177,7 +1177,7 @@ module.exports = {
         addresses.MATIC.V2.curve_aCRV_CRV.Underlying,
         '18',
         ['pCRV', 'aCRV_polygon'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1187,14 +1187,14 @@ module.exports = {
           addresses.MATIC.V2.curve_aCRV_CRV.Miner,
           addresses.MATIC.V2.curve_aCRV_CRV.PoolId,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   USDR_polygon: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdr.svg'],
     tokenAddress: addresses.MATIC.USDR,
     decimals: '9',
@@ -1202,7 +1202,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['real-usd'] },
   },
   am3CRV_gauge: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/am-dai.svg', './icons/am-usdc.svg', './icons/am-usdt.svg'],
     tokenAddress: addresses.MATIC.am3CRV_gauge,
     decimals: '18',
@@ -1214,12 +1214,12 @@ module.exports = {
         addresses.MATIC.V2.curve_3CRV.Underlying,
         '18',
         ['amDAI', 'amUSDC', 'amUSDT'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
   },
   curve_USDR_3CRV: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: [
@@ -1241,7 +1241,7 @@ module.exports = {
         addresses.MATIC.V2.curve_USDR_3CRV.Underlying,
         '18',
         ['USDR_polygon', 'am3CRV_gauge'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1251,7 +1251,7 @@ module.exports = {
           addresses.MATIC.V2.curve_USDR_3CRV.Miner,
           addresses.MATIC.V2.curve_USDR_3CRV.PoolId,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
@@ -1259,7 +1259,7 @@ module.exports = {
   },
   balancer_OHM_DAI: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
     logoUrl: ['./icons/gohm.svg', './icons/dai.svg'],
@@ -1274,7 +1274,7 @@ module.exports = {
       params: [
         addresses.V2.balancer_OHM_DAI.Underlying,
         addresses.V2.balancer_OHM_DAI.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1286,7 +1286,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   RDNT: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/rdnt.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.RDNT,
     decimals: '18',
@@ -1294,7 +1294,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['radiant-capital'] },
   },
   balancer_RDNT_ETH: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/rdnt.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
     apyTokenSymbols: ['BAL'],
@@ -1309,7 +1309,7 @@ module.exports = {
       params: [
         addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.Underlying,
         addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.PoolId,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -1319,14 +1319,14 @@ module.exports = {
           'balancer_RDNT_ETH',
           addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.Gauge,
           profitSharingCut10Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   ETSGamma: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/ets-gamma.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.ETSGamma,
     decimals: '6',
@@ -1334,7 +1334,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['usd-coin'] },
   },
   USDPlus_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdplus.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.USDPlus,
     decimals: '6',
@@ -1343,7 +1343,7 @@ module.exports = {
   },
   lizard_etsGamma_usdPlus: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/ets-gamma.svg', './icons/usdplus.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
     apyTokenSymbols: ['SLIZ'],
@@ -1374,7 +1374,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   FRAX_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/frax.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.FRAX,
     decimals: '18',
@@ -1382,7 +1382,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['frax'] },
   },
   convex_FRAX_USDC_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/frax.svg', './icons/usdc.svg'],
@@ -1399,7 +1399,7 @@ module.exports = {
         addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.Underlying,
         '18',
         ['FRAX_arbitrum', 'USDC_arbitrum'],
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -1409,14 +1409,14 @@ module.exports = {
           addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.Miner,
           addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.PoolId,
           profitSharingCut10Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   ARB: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.ARB,
     decimals: '18',
@@ -1424,7 +1424,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['arbitrum'] },
   },
   lizard_ARB_ETH: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
     apyTokenSymbols: ['SLIZ'],
@@ -1451,7 +1451,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   lizard_ARB_USDC: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
     apyTokenSymbols: ['SLIZ'],
@@ -1478,7 +1478,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   sushi_MAGIC_ETH: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/magic.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sushi.svg', './icons/magic.svg'],
     apyTokenSymbols: ['SUSHI', 'MAGIC'],
@@ -1504,14 +1504,14 @@ module.exports = {
           'WETH_arbitrum',
           'MAGIC_arbitrum',
           profitSharingCut10Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['FARM', 'ETH', 'MAGIC'],
   },
   DPX_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/dpx.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.DPX,
     decimals: '18',
@@ -1519,7 +1519,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['dopex'] },
   },
   RDPX_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/rdpx.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.RDPX,
     decimals: '18',
@@ -1527,7 +1527,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['dopex-rebate-token'] },
   },
   sushi_DPX_ETH: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/dpx.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sushi.svg', './icons/dpx.svg'],
     apyTokenSymbols: ['SUSHI', 'DPX'],
@@ -1549,14 +1549,14 @@ module.exports = {
           'WETH_arbitrum',
           'DPX_arbitrum',
           profitSharingCut10Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['FARM', 'ETH', 'DPX'],
   },
   sushi_RDPX_ETH: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/rdpx.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sushi.svg', './icons/dpx.svg'],
     apyTokenSymbols: ['SUSHI', 'DPX'],
@@ -1582,14 +1582,14 @@ module.exports = {
           'WETH_arbitrum',
           'RDPX_arbitrum',
           profitSharingCut10Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['FARM', 'ETH', 'DPX'],
   },
   curve_3CRV_polygon: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/am-dai.svg', './icons/am-usdc.svg', './icons/am-usdt.svg'],
@@ -1606,7 +1606,7 @@ module.exports = {
         addresses.MATIC.V2.curve_3CRV.Underlying,
         '18',
         ['amDAI', 'amUSDC', 'amUSDT'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1616,14 +1616,14 @@ module.exports = {
           addresses.MATIC.V2.curve_3CRV.Miner,
           addresses.MATIC.V2.curve_3CRV.PoolId,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   curve_3Crypto_polygon: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: [
@@ -1646,7 +1646,7 @@ module.exports = {
         addresses.MATIC.V2.curve_3Crypto.Underlying,
         '18',
         ['amWETH', 'amWBTC', 'curve_3CRV_polygon'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1656,14 +1656,14 @@ module.exports = {
           addresses.MATIC.V2.curve_3Crypto.Miner,
           addresses.MATIC.V2.curve_3Crypto.PoolId,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   pCRV: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [''],
     tokenAddress: addresses.MATIC.CRV,
     decimals: '18',
@@ -1674,7 +1674,7 @@ module.exports = {
     },
   },
   curve_CRV_3Crypto_polygon: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: [
@@ -1698,7 +1698,7 @@ module.exports = {
         addresses.MATIC.V2.curve_CRV_3Crypto.Underlying,
         '18',
         ['pCRV', 'curve_3Crypto_polygon'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1708,14 +1708,14 @@ module.exports = {
           addresses.MATIC.V2.curve_CRV_3Crypto.Miner,
           addresses.MATIC.V2.curve_CRV_3Crypto.PoolId,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   curve_MATIC_3Crypto_polygon: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: [
@@ -1739,7 +1739,7 @@ module.exports = {
         addresses.MATIC.V2.curve_MATIC_3Crypto.Underlying,
         '18',
         ['MATIC', 'curve_3Crypto_polygon'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1749,14 +1749,14 @@ module.exports = {
           addresses.MATIC.V2.curve_MATIC_3Crypto.Miner,
           addresses.MATIC.V2.curve_MATIC_3Crypto.PoolId,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   frxETH_polygon: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [''],
     tokenAddress: addresses.MATIC.frxETH,
     decimals: '18',
@@ -1768,7 +1768,7 @@ module.exports = {
   },
   balancer_frxETH: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/frax.svg', './icons/eth.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -1783,7 +1783,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_frxETH.Underlying,
         addresses.MATIC.V2.balancer_frxETH.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1793,14 +1793,14 @@ module.exports = {
           'balancer_frxETH',
           addresses.MATIC.V2.balancer_frxETH.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   SPHERE: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [''],
     tokenAddress: addresses.MATIC.SPHERE,
     decimals: '18',
@@ -1812,7 +1812,7 @@ module.exports = {
   },
   balancer_SPHERE_MATIC: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/sphere.svg', './icons/matic.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
     apyTokenSymbols: ['BAL'],
@@ -1827,7 +1827,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_SPHERE_MATIC.Underlying,
         addresses.MATIC.V2.balancer_SPHERE_MATIC.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1837,14 +1837,14 @@ module.exports = {
           'balancer_SPHERE_MATIC',
           addresses.MATIC.V2.balancer_SPHERE_MATIC.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   wstETH_polygon: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [''],
     tokenAddress: addresses.MATIC.wstETH,
     decimals: '18',
@@ -1856,7 +1856,7 @@ module.exports = {
   },
   balancer_stETH_polygon: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -1871,7 +1871,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_stETH.Underlying,
         addresses.MATIC.V2.balancer_stETH.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1881,14 +1881,14 @@ module.exports = {
           'balancer_stETH_polygon',
           addresses.MATIC.V2.balancer_stETH.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   wUSDR_polygon: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [''],
     tokenAddress: addresses.MATIC.wUSDR,
     decimals: '9',
@@ -1900,7 +1900,7 @@ module.exports = {
   },
   balancer_wUSDR_USDC_polygon: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/wusdr.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
     apyTokenSymbols: ['BAL'],
@@ -1915,7 +1915,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying,
         addresses.MATIC.V2.balancer_wUSDR_USDC.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1925,7 +1925,7 @@ module.exports = {
           'balancer_wUSDR_USDC_polygon',
           addresses.MATIC.V2.balancer_wUSDR_USDC.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
@@ -1933,7 +1933,7 @@ module.exports = {
   },
   balancer_OHM_ETH: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
     logoUrl: ['./icons/gohm.svg', './icons/eth.svg'],
@@ -1948,7 +1948,7 @@ module.exports = {
       params: [
         addresses.V2.balancer_OHM_ETH.Underlying,
         addresses.V2.balancer_OHM_ETH.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1960,7 +1960,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   balancer_PENDLE_ETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
     logoUrl: ['./icons/pendle.svg', './icons/eth.svg'],
@@ -1975,7 +1975,7 @@ module.exports = {
       params: [
         addresses.V2.balancer_PENDLE_ETH.Underlying,
         addresses.V2.balancer_PENDLE_ETH.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -1988,7 +1988,7 @@ module.exports = {
   },
   balancer_rETH_BADGER: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
     logoUrl: ['./icons/reth.svg', './icons/badger.svg'],
@@ -2003,7 +2003,7 @@ module.exports = {
       params: [
         addresses.V2.balancer_rETH_BADGER.Underlying,
         addresses.V2.balancer_rETH_BADGER.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -2015,7 +2015,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   balancer_stETH_rETH_sfrxETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
     logoUrl: ['./icons/steth.svg', './icons/reth.svg', './icons/sfrxeth.svg'],
@@ -2030,7 +2030,7 @@ module.exports = {
       params: [
         addresses.V2.balancer_stETH_rETH_sfrxETH.Underlying,
         addresses.V2.balancer_stETH_rETH_sfrxETH.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -2043,7 +2043,7 @@ module.exports = {
   },
   balancer_wUSDR_USDC: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
     logoUrl: ['./icons/wusdr.svg', './icons/usdc.svg'],
@@ -2058,7 +2058,7 @@ module.exports = {
       params: [
         addresses.V2.balancer_wUSDR_USDC.Underlying,
         addresses.V2.balancer_wUSDR_USDC.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -2070,7 +2070,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   lvUSD: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/lvusd.svg'],
     tokenAddress: addresses.lvUSD,
     decimals: '18',
@@ -2082,7 +2082,7 @@ module.exports = {
     },
   },
   ARCH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/arch.svg'],
     tokenAddress: addresses.ARCH,
     decimals: '18',
@@ -2094,7 +2094,7 @@ module.exports = {
   },
   curve_lvUSD: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: [
       './icons/lvusd.svg',
       './icons/am-dai.svg',
@@ -2116,7 +2116,7 @@ module.exports = {
         addresses.V2.curve_lvUSD.Underlying,
         18,
         ['lvUSD', 'ThreePool'],
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -2126,14 +2126,14 @@ module.exports = {
           'curve_lvUSD',
           addresses.V2.curve_lvUSD.Gauge,
           profitSharingCut15Percent,
-          CHAINS_ID.ETH_MAINNET,
+          CHAIN_IDS.ETH_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'ARCH'],
   },
   POISON: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/poison.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.POISON,
     decimals: '18',
@@ -2144,7 +2144,7 @@ module.exports = {
     },
   },
   pTSLA: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     tokenAddress: addresses.ARBITRUM_ONE.pTSLA,
     decimals: '18',
     vaultAddress: null,
@@ -2154,12 +2154,12 @@ module.exports = {
         addresses.ARBITRUM_ONE.pTSLA,
         addresses.ARBITRUM_ONE.USDC,
         6,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
   },
   iPoison: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/ipoison.svg'],
     apyIconUrls: ['./icons/poison.svg'],
     apyTokenSymbols: ['POISON'],
@@ -2175,7 +2175,7 @@ module.exports = {
       params: [
         addresses.ARBITRUM_ONE.V2.iPoison.Underlying,
         addresses.ARBITRUM_ONE.POISON,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -2191,7 +2191,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'POISON'],
   },
   poison_pGOLD_USDC: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/pgold.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/poison.svg'],
     apyTokenSymbols: ['POISON'],
@@ -2220,7 +2220,7 @@ module.exports = {
   },
   poison_pSLVR_USDC: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/pslvr.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/poison.svg'],
     apyTokenSymbols: ['POISON'],
@@ -2249,7 +2249,7 @@ module.exports = {
   },
   poison_pTSLA_USDC: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/ptsla.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/poison.svg'],
     apyTokenSymbols: ['POISON'],
@@ -2277,19 +2277,19 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'POISON'],
   },
   fiPoison: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [''],
     tokenAddress: addresses.ARBITRUM_ONE.V2.iPoison.NewVault,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.F_TOKEN,
-      params: [addresses.ARBITRUM_ONE.V2.iPoison.NewVault, '18', CHAINS_ID.ARBITRUM_ONE],
+      params: [addresses.ARBITRUM_ONE.V2.iPoison.NewVault, '18', CHAIN_IDS.ARBITRUM_ONE],
     },
   },
   pGOLD: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/pgold.svg'],
     apyIconUrls: ['./icons/poison.svg'],
     apyTokenSymbols: ['POISON'],
@@ -2306,7 +2306,7 @@ module.exports = {
         addresses.ARBITRUM_ONE.V2.pGOLD.Underlying,
         addresses.ARBITRUM_ONE.USDC,
         6,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -2328,7 +2328,7 @@ module.exports = {
   },
   pSLVR: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/pslvr.svg'],
     apyIconUrls: ['./icons/poison.svg'],
     apyTokenSymbols: ['POISON'],
@@ -2345,7 +2345,7 @@ module.exports = {
         addresses.ARBITRUM_ONE.V2.pSLVR.Underlying,
         addresses.ARBITRUM_ONE.USDC,
         6,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -2366,7 +2366,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'POISON'],
   },
   SLIZ: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/sliz.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.SLIZ,
     decimals: '18',
@@ -2377,7 +2377,7 @@ module.exports = {
     },
   },
   LUSD_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/lusd.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.LUSD,
     decimals: '18',
@@ -2388,7 +2388,7 @@ module.exports = {
     },
   },
   agEUR_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/ageur.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.agEUR,
     decimals: '18',
@@ -2399,7 +2399,7 @@ module.exports = {
     },
   },
   lizard_SLIZ_ETH: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/sliz.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
     apyTokenSymbols: ['SLIZ'],
@@ -2426,7 +2426,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   lizard_ETH_USDC: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
     apyTokenSymbols: ['SLIZ'],
@@ -2457,7 +2457,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   lizard_agEUR_USDC: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/ageur.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
     apyTokenSymbols: ['SLIZ'],
@@ -2488,7 +2488,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   lizard_LUSD_USDC: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/lusd.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
     apyTokenSymbols: ['SLIZ'],
@@ -2519,7 +2519,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   aura_bbiUSD: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
     logoUrl: ['./icons/dai.svg', './icons/usdc.svg', './icons/usdt.svg'],
@@ -2534,7 +2534,7 @@ module.exports = {
       params: [
         addresses.V2.aura_bbiUSD.Underlying,
         addresses.V2.aura_bbiUSD.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -2546,7 +2546,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   balancer_wstETH_wETH_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/ldo.svg'],
     apyTokenSymbols: ['BAL', 'LDO'],
@@ -2561,7 +2561,7 @@ module.exports = {
       params: [
         addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.Underlying,
         addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.PoolId,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -2571,7 +2571,7 @@ module.exports = {
           'balancer_wstETH_wETH_arbitrum',
           addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.Gauge,
           profitSharingCut10Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
@@ -2579,7 +2579,7 @@ module.exports = {
   },
   balancer_wstETH_USDC_arbitrum: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/steth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/ldo.svg'],
     apyTokenSymbols: ['BAL', 'LDO'],
@@ -2594,7 +2594,7 @@ module.exports = {
       params: [
         addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.Underlying,
         addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.PoolId,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -2604,14 +2604,14 @@ module.exports = {
           'balancer_wstETH_USDC_arbitrum',
           addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.Gauge,
           profitSharingCut10Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   balancer_wBTC_wETH_USDC_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
     apyTokenSymbols: ['BAL'],
@@ -2626,7 +2626,7 @@ module.exports = {
       params: [
         addresses.ARBITRUM_ONE.V2.balancer_wBTC_wETH_USDC_arbitrum.Underlying,
         addresses.ARBITRUM_ONE.V2.balancer_wBTC_wETH_USDC_arbitrum.PoolId,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -2636,14 +2636,14 @@ module.exports = {
           'balancer_wBTC_wETH_USDC_arbitrum',
           addresses.ARBITRUM_ONE.V2.balancer_wBTC_wETH_USDC_arbitrum.Gauge,
           profitSharingCut10Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   convex_USDT_WBTC_WETH_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/usdt.svg', './icons/wbtc.svg', './icons/eth.svg'],
@@ -2660,7 +2660,7 @@ module.exports = {
         addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.Underlying,
         '18',
         ['USDT_arbitrum', 'WBTC_arbitrum', 'WETH_arbitrum'],
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -2670,14 +2670,14 @@ module.exports = {
           addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.Miner,
           addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.PoolId,
           profitSharingCut10Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   convex_USDC_USDT_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
@@ -2694,7 +2694,7 @@ module.exports = {
         addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.Underlying,
         '18',
         ['USDC_arbitrum', 'USDT_arbitrum'],
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -2704,14 +2704,14 @@ module.exports = {
           addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.Miner,
           addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.PoolId,
           profitSharingCut10Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   iFARM_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     decimals: '18',
     tokenAddress: addresses.ARBITRUM_ONE.iFARM,
     tokenNames: ['aiFARM'],
@@ -2720,7 +2720,7 @@ module.exports = {
   },
   Curve_2pool_arbitrum: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
     decimals: '18',
     tokenAddress: addresses.ARBITRUM_ONE.V2.Curve_2pool_arbitrum.Underlying,
@@ -2735,7 +2735,7 @@ module.exports = {
         addresses.ARBITRUM_ONE.Crv2PoolToken,
         '18',
         ['USDC_arbitrum', 'USDT_arbitrum'],
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -2750,7 +2750,7 @@ module.exports = {
   },
   Curve_EursUsd_arbitrum: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/curve-crypto-icons-stack-2-arbitrum.svg#eurs'],
     decimals: '18',
     tokenAddress: addresses.ARBITRUM_ONE.V2.Curve_EursUsd_arbitrum.Underlying,
@@ -2765,7 +2765,7 @@ module.exports = {
         addresses.ARBITRUM_ONE.CrvEursUsdPoolToken,
         '18',
         ['EURS_arbitrum', 'Curve_2pool_arbitrum'],
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -2780,7 +2780,7 @@ module.exports = {
   },
   Curve_RenWbtc_arbitrum: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/curve-crypto-icons-stack-2-arbitrum.svg#renbtc', './icons/wbtc.svg'],
     decimals: '18',
     tokenAddress: addresses.ARBITRUM_ONE.V2.Curve_RenWbtc_arbitrum.Underlying,
@@ -2795,7 +2795,7 @@ module.exports = {
         addresses.ARBITRUM_ONE.CrvRenWbtcPoolToken,
         '18',
         ['RENBTC_arbitrum', 'WBTC_arbitrum'],
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -2810,7 +2810,7 @@ module.exports = {
   },
   Curve_TriCrypto_arbitrum: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg', './icons/usdt.svg'],
     decimals: '18',
     tokenAddress: addresses.ARBITRUM_ONE.V2.Curve_TriCrypto_arbitrum.Underlying,
@@ -2825,7 +2825,7 @@ module.exports = {
         addresses.ARBITRUM_ONE.CrvTriCryptoToken,
         '18',
         ['WBTC_arbitrum', 'WETH_arbitrum', 'USDT_arbitrum'],
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     estimateApyFunctions: [
@@ -2839,7 +2839,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   USDC_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdc.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.USDC,
     decimals: '6',
@@ -2847,7 +2847,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.USDC] },
   },
   USDT_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdt.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.USDT,
     decimals: '6',
@@ -2855,7 +2855,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.USDT] },
   },
   WBTC_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/wbtc.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.WBTC,
     decimals: '8',
@@ -2863,7 +2863,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.WBTC] },
   },
   RENBTC_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/ren.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.RENBTC,
     decimals: '8',
@@ -2871,7 +2871,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.RENBTC] },
   },
   WETH_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.WETH,
     decimals: '18',
@@ -2879,7 +2879,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.WETH] },
   },
   EURS_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eurs.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.EURS,
     decimals: '2',
@@ -2887,7 +2887,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.EURS] },
   },
   STG_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/stg.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.STG,
     decimals: '2',
@@ -2896,7 +2896,7 @@ module.exports = {
   },
   StargateUSDC_arbitrum: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdc.svg'],
     decimals: '6',
     tokenAddress: addresses.ARBITRUM_ONE.V2.StargateUSDC_arbitrum.Underlying,
@@ -2917,7 +2917,7 @@ module.exports = {
           'StargateUSDC_arbitrum',
           'STG_arbitrum',
           profitSharingCut25Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
@@ -2926,7 +2926,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'STG'],
   },
   StargateUSDT_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     inactive: true,
     logoUrl: ['./icons/usdt.svg'],
     decimals: '6',
@@ -2948,7 +2948,7 @@ module.exports = {
           'StargateUSDT_arbitrum',
           'STG_arbitrum',
           profitSharingCut25Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
@@ -2958,7 +2958,7 @@ module.exports = {
   },
   Sushi_ETHDAI_arbitrum: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/dai.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -2983,7 +2983,7 @@ module.exports = {
           'WETH_arbitrum',
           'DAI_arbitrum',
           profitSharingCut25Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
@@ -2991,7 +2991,7 @@ module.exports = {
   },
   Sushi_ETHGOHM_arbitrum: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/gohm.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -3017,7 +3017,7 @@ module.exports = {
           'WETH_arbitrum',
           'GOHM_arbitrum',
           profitSharingCut25Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
@@ -3025,7 +3025,7 @@ module.exports = {
   },
   Sushi_ETHMAGIC_arbitrum: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/magic.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -3051,7 +3051,7 @@ module.exports = {
           'WETH_arbitrum',
           'MAGIC_arbitrum',
           profitSharingCut25Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
@@ -3059,7 +3059,7 @@ module.exports = {
   },
   Sushi_ETHMIM_arbitrum: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/mim.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -3084,7 +3084,7 @@ module.exports = {
           'WETH_arbitrum',
           'MIM_arbitrum',
           profitSharingCut25Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
@@ -3092,7 +3092,7 @@ module.exports = {
   },
   Sushi_ETHSPELL_arbitrum: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/spell.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -3118,7 +3118,7 @@ module.exports = {
           'WETH_arbitrum',
           'SPELL_arbitrum',
           profitSharingCut25Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
@@ -3126,7 +3126,7 @@ module.exports = {
   },
   Sushi_ETHSUSHI_arbitrum: {
     inactive: true,
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/sushi.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -3152,14 +3152,14 @@ module.exports = {
           'WETH_arbitrum',
           'SUSHI_arbitrum',
           profitSharingCut25Percent,
-          CHAINS_ID.ARBITRUM_ONE,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['FARM', 'ETH', 'SUSHI'],
   },
   DAI_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     tokenAddress: addresses.ARBITRUM_ONE.DAI,
     logoUrl: ['./icons/dai.svg'],
     decimals: '18',
@@ -3167,7 +3167,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.DAI] },
   },
   GOHM_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     tokenAddress: addresses.ARBITRUM_ONE.GOHM,
     logoUrl: ['./icons/gohm.svg'],
     decimals: '18',
@@ -3175,7 +3175,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.GOHM] },
   },
   MAGIC_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     tokenAddress: addresses.ARBITRUM_ONE.MAGIC,
     logoUrl: ['./icons/magic.svg'],
     decimals: '18',
@@ -3183,7 +3183,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.MAGIC] },
   },
   MIM_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     tokenAddress: addresses.ARBITRUM_ONE.MIM,
     logoUrl: ['./icons/mim.svg'],
     decimals: '18',
@@ -3191,7 +3191,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.MIM] },
   },
   SPELL_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     tokenAddress: addresses.ARBITRUM_ONE.SPELL,
     logoUrl: ['./icons/spell.svg'],
     decimals: '18',
@@ -3199,7 +3199,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.SPELL] },
   },
   SUSHI_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     tokenAddress: addresses.ARBITRUM_ONE.SUSHI,
     logoUrl: ['./icons/sushi.svg'],
     decimals: '18',
@@ -3207,7 +3207,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.SUSHI] },
   },
   aura_auraBAL: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
     logoUrl: ['./icons/balancer.svg', './icons/aura.svg'],
@@ -3230,7 +3230,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA', 'bbaUSD'],
   },
   aura_auraBAL_lp: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
     logoUrl: ['./icons/80bal-20eth.svg', './icons/aura-bal.svg'],
@@ -3245,7 +3245,7 @@ module.exports = {
       params: [
         addresses.V2.aura_auraBAL_lp.Underlying,
         addresses.V2.aura_auraBAL_lp.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -3258,7 +3258,7 @@ module.exports = {
   },
   aura_bbaUSD: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
     logoUrl: ['./icons/am-dai.svg', './icons/am-usdc.svg', './icons/am-usdt.svg'],
@@ -3273,7 +3273,7 @@ module.exports = {
       params: [
         addresses.V2.aura_bbaUSD.Underlying,
         addresses.V2.aura_bbaUSD.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -3285,7 +3285,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA', 'bbaUSD'],
   },
   aura_rETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
     logoUrl: ['./icons/reth.svg', './icons/eth.svg'],
@@ -3300,7 +3300,7 @@ module.exports = {
       params: [
         addresses.V2.aura_rETH.Underlying,
         addresses.V2.aura_rETH.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -3312,7 +3312,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   aura_wstETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/ldo.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'LDO'],
     logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
@@ -3327,7 +3327,7 @@ module.exports = {
       params: [
         addresses.V2.aura_wstETH.Underlying,
         addresses.V2.aura_wstETH.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -3339,7 +3339,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA', 'LDO'],
   },
   quickGamma_MATIC_ETH_narrow: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
     apyTokenSymbols: ['dQUICK', 'WMATIC'],
@@ -3367,7 +3367,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_MATIC_ETH_wide: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
     apyTokenSymbols: ['dQUICK', 'WMATIC'],
@@ -3395,7 +3395,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_MATIC_USDC_narrow: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
     apyTokenSymbols: ['dQUICK', 'WMATIC'],
@@ -3423,7 +3423,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_MATIC_USDC_wide: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
     apyTokenSymbols: ['dQUICK', 'WMATIC'],
@@ -3451,7 +3451,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_USDC_ETH_narrow: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
     apyTokenSymbols: ['dQUICK', 'WMATIC'],
@@ -3479,7 +3479,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_USDC_ETH_wide: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
     apyTokenSymbols: ['dQUICK', 'WMATIC'],
@@ -3508,7 +3508,7 @@ module.exports = {
   },
   balancer_2EUR_agEUR: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/2eur_ageur.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -3523,7 +3523,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_2EUR_agEUR.Underlying,
         addresses.MATIC.V2.balancer_2EUR_agEUR.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -3533,7 +3533,7 @@ module.exports = {
           'balancer_2EUR_agEUR',
           addresses.MATIC.V2.balancer_2EUR_agEUR.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
@@ -3541,7 +3541,7 @@ module.exports = {
   },
   balancer_2EUR_PAR: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jeur.svg', './icons/par.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -3555,7 +3555,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_2EUR_PAR.Underlying,
         addresses.MATIC.V2.balancer_2EUR_PAR.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -3565,14 +3565,14 @@ module.exports = {
           'balancer_2EUR_PAR',
           addresses.MATIC.V2.balancer_2EUR_PAR.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   SWISE: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.SWISE,
     decimals: '18',
@@ -3583,7 +3583,7 @@ module.exports = {
     },
   },
   LDO: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.LDO,
     decimals: '18',
@@ -3594,7 +3594,7 @@ module.exports = {
     },
   },
   wstETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.wstETH,
     decimals: '18',
@@ -3605,7 +3605,7 @@ module.exports = {
     },
   },
   wstETH_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [],
     tokenAddress: addresses.ARBITRUM_ONE.wstETH,
     decimals: '18',
@@ -3616,7 +3616,7 @@ module.exports = {
     },
   },
   stMATIC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.stMATIC,
     decimals: '18',
@@ -3627,7 +3627,7 @@ module.exports = {
     },
   },
   maticX: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.maticX,
     decimals: '18',
@@ -3638,7 +3638,7 @@ module.exports = {
     },
   },
   pSD: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.SD,
     decimals: '18',
@@ -3649,7 +3649,7 @@ module.exports = {
     },
   },
   pLDO: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.LDO,
     decimals: '18',
@@ -3660,7 +3660,7 @@ module.exports = {
     },
   },
   amDAI: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.amDAI,
     decimals: '18',
@@ -3671,7 +3671,7 @@ module.exports = {
     },
   },
   amUSDC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.amUSDC,
     decimals: '6',
@@ -3682,7 +3682,7 @@ module.exports = {
     },
   },
   amUSDT: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.amUSDT,
     decimals: '6',
@@ -3693,40 +3693,40 @@ module.exports = {
     },
   },
   wamDAI: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.wamDAI,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.WRAPPED_TOKEN,
-      params: [addresses.MATIC.wamDAI, addresses.MATIC.amDAI, CHAINS_ID.MATIC_MAINNET],
+      params: [addresses.MATIC.wamDAI, addresses.MATIC.amDAI, CHAIN_IDS.POLYGON_MAINNET],
     },
   },
   wamUSDC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.wamUSDC,
     decimals: '6',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.WRAPPED_TOKEN,
-      params: [addresses.MATIC.wamUSDC, addresses.MATIC.amUSDC, CHAINS_ID.MATIC_MAINNET],
+      params: [addresses.MATIC.wamUSDC, addresses.MATIC.amUSDC, CHAIN_IDS.POLYGON_MAINNET],
     },
   },
   wamUSDT: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.wamUSDT,
     decimals: '6',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.WRAPPED_TOKEN,
-      params: [addresses.MATIC.wamUSDT, addresses.MATIC.amUSDT, CHAINS_ID.MATIC_MAINNET],
+      params: [addresses.MATIC.wamUSDT, addresses.MATIC.amUSDT, CHAIN_IDS.POLYGON_MAINNET],
     },
   },
   'bb-amDAI': {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.bbamDAI,
     decimals: '18',
@@ -3736,12 +3736,12 @@ module.exports = {
       params: [
         addresses.MATIC.bbamDAI,
         '0x178e029173417b1f9c8bc16dcec6f697bc323746000000000000000000000758',
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
   },
   'bb-amUSDC': {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.bbamUSDC,
     decimals: '18',
@@ -3751,12 +3751,12 @@ module.exports = {
       params: [
         addresses.MATIC.bbamUSDC,
         '0xf93579002dbe8046c43fefe86ec78b1112247bb8000000000000000000000759',
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
   },
   'bb-amUSDT': {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.bbamUSDT,
     decimals: '18',
@@ -3766,13 +3766,13 @@ module.exports = {
       params: [
         addresses.MATIC.bbamUSDT,
         '0xff4ce5aaab5a627bf82f4a571ab1ce94aa365ea600000000000000000000075a',
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
   },
   balancer_tetuBal: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/80bal-20eth.svg', './icons/tetu-bal.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -3787,7 +3787,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_tetuBal.Underlying,
         addresses.MATIC.V2.balancer_tetuBal.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -3797,7 +3797,7 @@ module.exports = {
           'balancer_tetuBal',
           addresses.MATIC.V2.balancer_tetuBal.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
@@ -3805,7 +3805,7 @@ module.exports = {
   },
   bal_MaticX: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/maticx.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/sd.png'],
     apyTokenSymbols: ['BAL', 'SD'],
@@ -3819,7 +3819,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.bal_MaticX.Underlying,
         addresses.MATIC.V2.bal_MaticX.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -3829,7 +3829,7 @@ module.exports = {
           'bal_MaticX',
           addresses.MATIC.V2.bal_MaticX.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
@@ -3837,7 +3837,7 @@ module.exports = {
   },
   bal_stMatic: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/stmatic.svg', './icons/matic.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/ldo.svg'],
     apyTokenSymbols: ['BAL', 'LDO'],
@@ -3852,7 +3852,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.bal_stMatic.Underlying,
         addresses.MATIC.V2.bal_stMatic.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -3862,14 +3862,14 @@ module.exports = {
           'bal_stMatic',
           addresses.MATIC.V2.bal_stMatic.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'LDO'],
   },
   bal_POLYBASE: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/usdc.svg', './icons/eth.svg', './icons/balancer.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
     apyTokenSymbols: ['BAL'],
@@ -3884,7 +3884,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_POLYBASE.Underlying,
         addresses.MATIC.V2.balancer_POLYBASE.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -3894,7 +3894,7 @@ module.exports = {
           'bal_POLYBASE',
           addresses.MATIC.V2.balancer_POLYBASE.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
@@ -3902,7 +3902,7 @@ module.exports = {
   },
   balancer_bbamusd: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/am-dai.svg', './icons/am-usdc.svg', './icons/am-usdt.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -3917,7 +3917,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_bbamusd.Underlying,
         addresses.MATIC.V2.balancer_bbamusd.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -3927,14 +3927,14 @@ module.exports = {
           'balancer_bbamusd',
           addresses.MATIC.V2.balancer_bbamusd.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   '80BAL-20WETH': {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.balWeth,
     decimals: '18',
@@ -3944,12 +3944,12 @@ module.exports = {
       params: [
         addresses.MATIC.balWeth,
         '0x3d468ab2329f296e1b9d8476bb54dd77d8c2320f000200000000000000000426',
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
   },
   tetuBal: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.tetuBal,
     decimals: '18',
@@ -3959,13 +3959,13 @@ module.exports = {
       params: [
         addresses.MATIC.balWeth,
         '0x3d468ab2329f296e1b9d8476bb54dd77d8c2320f000200000000000000000426',
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
   },
   balancer_2BRLUSD: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [
       './icons/2brl.svg',
       './icons/am-dai.svg',
@@ -3985,7 +3985,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_2BRLUSD.Underlying,
         addresses.MATIC.V2.balancer_2BRLUSD.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -3995,14 +3995,14 @@ module.exports = {
           'balancer_2BRLUSD',
           addresses.MATIC.V2.balancer_2BRLUSD.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   jBRL: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.jBRL,
     decimals: '18',
@@ -4013,7 +4013,7 @@ module.exports = {
     },
   },
   BRZ: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.BRZ,
     decimals: '4',
@@ -4025,7 +4025,7 @@ module.exports = {
   },
   balancer_2BRL: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/2brl.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
     apyTokenSymbols: ['BAL'],
@@ -4040,7 +4040,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_2BRL.Underlying,
         addresses.MATIC.V2.balancer_2BRL.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -4050,14 +4050,14 @@ module.exports = {
           'balancer_2BRL',
           addresses.MATIC.V2.balancer_2BRL.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'SD'],
   },
   APE: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/apestake.svg'],
     tokenAddress: addresses.APE,
     decimals: '18',
@@ -4068,7 +4068,7 @@ module.exports = {
     },
   },
   apeStake: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/apestake.svg'],
     apyIconUrls: ['./icons/apestake.svg'],
     apyTokenSymbols: ['APE'],
@@ -4091,7 +4091,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'APE'],
   },
   USDD: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/usdd.png'],
     tokenAddress: addresses.USDD,
     decimals: '18',
@@ -4102,7 +4102,7 @@ module.exports = {
     },
   },
   convex_USDD: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -4131,7 +4131,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   DOLA: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/dola.svg'],
     tokenAddress: addresses.DOLA,
     decimals: '18',
@@ -4142,7 +4142,7 @@ module.exports = {
     },
   },
   FRAX: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/frax.svg'],
     tokenAddress: addresses.FRAX,
     decimals: '18',
@@ -4153,7 +4153,7 @@ module.exports = {
     },
   },
   FRAXBP: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/fraxbp.png'],
     tokenAddress: addresses.FRAXBP,
     decimals: '18',
@@ -4164,7 +4164,7 @@ module.exports = {
     },
   },
   convex_DOLA_FRAXBP: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -4193,7 +4193,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   pETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/peth.svg'],
     tokenAddress: addresses.pETH,
     decimals: '18',
@@ -4204,7 +4204,7 @@ module.exports = {
     },
   },
   convex_pETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/peth.svg', './icons/eth.svg'],
@@ -4232,7 +4232,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   pBTC: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/pbtc.png'],
     tokenAddress: addresses.pBTC,
     decimals: '18',
@@ -4243,7 +4243,7 @@ module.exports = {
     },
   },
   sBTC: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/sbtc.png'],
     tokenAddress: addresses.sBTC,
     decimals: '18',
@@ -4254,7 +4254,7 @@ module.exports = {
     },
   },
   sbtcCrv: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/sbtccrv.png'],
     tokenAddress: addresses.sbtcCrv,
     decimals: '18',
@@ -4265,7 +4265,7 @@ module.exports = {
     },
   },
   CVX: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/cvx.svg'],
     tokenAddress: addresses.CVX,
     decimals: '18',
@@ -4276,7 +4276,7 @@ module.exports = {
     },
   },
   convex_CVX_ETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/eth.svg', './icons/cvx.svg'],
@@ -4304,7 +4304,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   crv_CRV_ETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/eth.svg', './icons/curve.svg'],
@@ -4332,7 +4332,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   stETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/steth.svg'],
     tokenAddress: addresses.stETH,
     decimals: '18',
@@ -4343,7 +4343,7 @@ module.exports = {
     },
   },
   crvSTETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg', './icons/ldo.svg'],
     apyTokenSymbols: ['CRV', 'CVX', 'LDO'],
     logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
@@ -4371,7 +4371,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'CVX', 'LDO', 'CRV'],
   },
   USDN: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/usdn.svg'],
     tokenAddress: addresses.USDN,
     decimals: '18',
@@ -4383,7 +4383,7 @@ module.exports = {
   },
   crvUSDN: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
     logoUrl: ['./icons/usdn.svg'],
@@ -4406,7 +4406,7 @@ module.exports = {
   },
   crvThreeCrypto: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
     logoUrl: ['./icons/usdt.svg', './icons/btc.svg', './icons/eth.svg'],
@@ -4433,7 +4433,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   MESH: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/mesh.svg'],
     tokenAddress: addresses.MATIC.MESH,
     decimals: '18',
@@ -4444,7 +4444,7 @@ module.exports = {
     },
   },
   oMOOI: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/omooi.png'],
     tokenAddress: addresses.MATIC.oMOOI,
     decimals: '18',
@@ -4455,7 +4455,7 @@ module.exports = {
     },
   },
   oZEMIT: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/ozemit.png'],
     tokenAddress: addresses.MATIC.oZEMIT,
     decimals: '18',
@@ -4466,7 +4466,7 @@ module.exports = {
     },
   },
   oUSDC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/ousdc.png'],
     tokenAddress: addresses.MATIC.oUSDC,
     decimals: '6',
@@ -4477,7 +4477,7 @@ module.exports = {
     },
   },
   oUSDT: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/ousdt.png'],
     tokenAddress: addresses.MATIC.oUSDT,
     decimals: '6',
@@ -4489,7 +4489,7 @@ module.exports = {
   },
   meshswap_MESH_oMOOI: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/omooi.png', './icons/mesh.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -4512,7 +4512,7 @@ module.exports = {
   },
   meshswap_MESH_oZEMIT: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/ozemit.png', './icons/mesh.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -4535,7 +4535,7 @@ module.exports = {
   },
   meshswap_USDC_oUSDC: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/ousdc.png'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -4558,7 +4558,7 @@ module.exports = {
   },
   meshswap_USDT_oUSDT: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdt.svg', './icons/ousdt.png'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -4581,7 +4581,7 @@ module.exports = {
   },
   meshswap_WMATIC_MESH: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/mesh.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -4603,7 +4603,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'MESH'],
   },
   meshswap_WMATIC_USDC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/mesh.svg'],
     apyTokenSymbols: ['MESH'],
@@ -4626,7 +4626,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'MESH'],
   },
   meshswap_WMATIC_USDT: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/usdt.svg'],
     apyIconUrls: ['./icons/mesh.svg'],
     apyTokenSymbols: ['MESH'],
@@ -4649,7 +4649,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'MESH'],
   },
   note: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/notional.svg'],
     tokenAddress: addresses.NOTE,
     decimals: '8',
@@ -4660,7 +4660,7 @@ module.exports = {
     },
   },
   notional_DAI: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/dai.svg'],
     apyIconUrls: ['./icons/notional.svg'],
     apyTokenSymbols: ['NOTE'],
@@ -4684,7 +4684,7 @@ module.exports = {
   },
   notional_ETH: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/eth.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -4707,7 +4707,7 @@ module.exports = {
   },
   notional_USDC: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/usdc.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -4730,7 +4730,7 @@ module.exports = {
   },
   notional_WBTC: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/wbtc.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -4752,7 +4752,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'NOTE'],
   },
   pEURe: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.pEURe,
     decimals: '18',
@@ -4764,7 +4764,7 @@ module.exports = {
   },
   jarvis_2JPY_HODL: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/2jpy.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -4781,7 +4781,7 @@ module.exports = {
         addresses.MATIC.V2.jarvis_2JPY_HODL.Underlying,
         18,
         ['JJPY', 'JPYC2'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -4804,7 +4804,7 @@ module.exports = {
   },
   jarvis_2CAD_HODL: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/2cad.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -4821,7 +4821,7 @@ module.exports = {
         addresses.MATIC.V2.jarvis_2CAD_HODL.Underlying,
         18,
         ['JCAD', 'CADC'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -4844,7 +4844,7 @@ module.exports = {
   },
   jarvis_2SGD_HODL: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/2sgd.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -4861,7 +4861,7 @@ module.exports = {
         addresses.MATIC.V2.jarvis_2SGD_HODL.Underlying,
         18,
         ['JSGD', 'XSGD'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -4884,7 +4884,7 @@ module.exports = {
   },
   jarvis_2EUR_EURT_HODL: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jeur.svg', './icons/eurt.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -4901,7 +4901,7 @@ module.exports = {
         addresses.MATIC.V2.jarvis_2EUR_EURT_HODL.Underlying,
         18,
         ['JEUR', 'pEURT'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -4923,7 +4923,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'JRT_NOV22'],
   },
   jarvis_2EUR_agEUR_HODL: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.V2.balancer_2EUR_agEUR.OldUnderlying,
     decimals: '18',
@@ -4935,12 +4935,12 @@ module.exports = {
         addresses.MATIC.V2.balancer_2EUR_agEUR.OldUnderlying,
         18,
         ['JEUR', 'agEUR'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
   },
   jarvis_2EUR_PAR_HODL: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.V2.balancer_2EUR_PAR.OldUnderlying,
     decimals: '18',
@@ -4952,13 +4952,13 @@ module.exports = {
         addresses.MATIC.V2.balancer_2EUR_PAR.OldUnderlying,
         18,
         ['JEUR', 'PAR'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
   },
   ape_BTC_MATIC: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/btc.svg', './icons/matic.svg'],
     apyIconUrls: ['./icons/banana.svg'],
     apyTokenSymbols: ['BANANA'],
@@ -4980,14 +4980,14 @@ module.exports = {
           'pWBTC',
           'WMATIC',
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['miFARM', 'BANANA'],
   },
   convex_cvxCRV: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg', './icons/3crv.svg'],
     apyTokenSymbols: ['CRV', 'CVX', '3CRV'],
     logoUrl: ['./icons/curve.svg', './icons/cvx.svg'],
@@ -5007,7 +5007,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   USDC: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC'],
     platform: ['Idle'],
@@ -5027,7 +5027,7 @@ module.exports = {
     ],
   },
   DAI: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/dai.svg'],
     tokenNames: ['DAI'],
     platform: ['Idle'],
@@ -5047,7 +5047,7 @@ module.exports = {
     ],
   },
   USDT: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/usdt.svg'],
     tokenNames: ['USDT'],
     platform: ['Idle'],
@@ -5068,7 +5068,7 @@ module.exports = {
   },
   UniV3_USDC_ETH_1400_2400: {
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'Range: 1.4K⟷2.4K',
     apyIconUrls: ['./icons/univ3.svg'],
     apyTokenSymbols: ['UNI'],
@@ -5098,7 +5098,7 @@ module.exports = {
   },
   UniV3_DAI_ETH_1400_2400: {
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'Range: 1.4K⟷2.4K',
     apyIconUrls: ['./icons/univ3.svg'],
     apyTokenSymbols: ['UNI'],
@@ -5128,7 +5128,7 @@ module.exports = {
   },
   UniV3_USDT_ETH_1400_2400: {
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'Range: 1.4K⟷2.4K',
     apyIconUrls: ['./icons/univ3.svg'],
     apyTokenSymbols: ['UNI'],
@@ -5157,7 +5157,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'USDT', 'WETH'],
   },
   JNZD: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.JNZD,
     decimals: '18',
@@ -5168,7 +5168,7 @@ module.exports = {
     },
   },
   NZDS: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.NZDS,
     decimals: '6',
@@ -5179,7 +5179,7 @@ module.exports = {
     },
   },
   UNT: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/unt.png'],
     tokenAddress: addresses.UNT,
     decimals: '18',
@@ -5190,7 +5190,7 @@ module.exports = {
     },
   },
   amWBTC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.amWBTC,
     decimals: '8',
@@ -5198,7 +5198,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.WBTC] },
   },
   amWETH: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.amWETH,
     decimals: '18',
@@ -5206,7 +5206,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.WETH] },
   },
   am3CRV: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.am3CRVToken,
     decimals: '18',
@@ -5218,12 +5218,12 @@ module.exports = {
         addresses.MATIC.am3CRVToken,
         18,
         ['amDAI', 'amUSDC', 'amUSDT'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
   },
   pTUSD: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.pTUSD,
     decimals: '18',
@@ -5234,7 +5234,7 @@ module.exports = {
     },
   },
   JSGD: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jsgd.svg'],
     tokenAddress: addresses.MATIC.JSGD,
     decimals: '18',
@@ -5245,7 +5245,7 @@ module.exports = {
     },
   },
   XSGD: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/xsgd.png'],
     tokenAddress: addresses.MATIC.XSGD,
     decimals: '6',
@@ -5256,7 +5256,7 @@ module.exports = {
     },
   },
   JJPY: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jjpy.png'],
     tokenAddress: addresses.MATIC.JJPY,
     decimals: '18',
@@ -5264,7 +5264,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.JPYC] },
   },
   JPYC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jpyc.png'],
     tokenAddress: addresses.MATIC.JPYC,
     decimals: '18',
@@ -5272,7 +5272,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.JPYC] },
   },
   JPYC2: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jpyc.png'],
     tokenAddress: addresses.MATIC.JPYC2,
     decimals: '18',
@@ -5280,7 +5280,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.JPYC] },
   },
   JCAD: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jcad.png'],
     tokenAddress: addresses.MATIC.JCAD,
     decimals: '18',
@@ -5288,7 +5288,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.CADC] },
   },
   CADC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/cadc.png'],
     tokenAddress: addresses.MATIC.CADC,
     decimals: '18',
@@ -5297,7 +5297,7 @@ module.exports = {
   },
   bal_TUSD_STABLE: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg', './icons/dai.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -5312,7 +5312,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.bal_TUSD_STABLE.Underlying,
         addresses.MATIC.V2.bal_TUSD_STABLE.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -5323,7 +5323,7 @@ module.exports = {
           addresses.MATIC.V2.bal_TUSD_STABLE.PoolId,
           '800',
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
           [addresses.MATIC.pTUSD],
           ['55000'],
         ],
@@ -5332,7 +5332,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['miFARM', 'BAL'],
   },
   pPSP: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/psp.png'],
     tokenAddress: addresses.MATIC.pPSP,
     decimals: '18',
@@ -5343,7 +5343,7 @@ module.exports = {
     },
   },
   quick_YEL_MATIC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/yel.svg', './icons/matic.svg'],
     apyIconUrls: ['./icons/yel.svg'],
     apyTokenSymbols: ['YEL'],
@@ -5367,7 +5367,7 @@ module.exports = {
   },
   mUSD: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/musd.svg'],
     apyIconUrls: ['./icons/mta.svg'],
     apyTokenSymbols: ['MTA'],
@@ -5387,7 +5387,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['miFARM', 'wMATIC'],
   },
   LOOKS: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/looks.svg'],
     tokenAddress: addresses.LOOKS,
     decimals: '18',
@@ -5410,7 +5410,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LOOKS'],
   },
   uni_LOOKS_ETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: ['./icons/looks.svg'],
     apyTokenSymbols: ['LOOKS'],
@@ -5433,7 +5433,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LOOKS'],
   },
   pGENE: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/gene.svg'],
     tokenAddress: addresses.MATIC.pGENE,
     decimals: '18',
@@ -5444,7 +5444,7 @@ module.exports = {
     },
   },
   pGNOME: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/gnome.svg'],
     tokenAddress: addresses.MATIC.pGNOME,
     decimals: '18',
@@ -5455,7 +5455,7 @@ module.exports = {
     },
   },
   pYEL: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/yel.svg'],
     tokenAddress: addresses.MATIC.pYEL,
     decimals: '18',
@@ -5466,7 +5466,7 @@ module.exports = {
     },
   },
   pICE: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/ice.png'],
     tokenAddress: addresses.MATIC.pICE,
     decimals: '18',
@@ -5477,7 +5477,7 @@ module.exports = {
     },
   },
   SUSHI_GENE_ETH: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/gene.svg', './icons/eth.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -5500,7 +5500,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['miFARM', 'pGNOME'],
   },
   SUSHI_GNOME_ETH: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/gnome.svg', './icons/eth.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -5524,7 +5524,7 @@ module.exports = {
   },
   crvCVXCRV: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
     logoUrl: ['./icons/curve.svg', './icons/cvx.svg'],
@@ -5551,7 +5551,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   IDLE: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/idle.svg'],
     tokenAddress: addresses.IDLE,
     decimals: '18',
@@ -5562,7 +5562,7 @@ module.exports = {
     },
   },
   ORC: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/orc.svg'],
     tokenAddress: addresses.ORC,
     decimals: '18',
@@ -5575,7 +5575,7 @@ module.exports = {
   UniV3_ORC_ETH: {
     disableAutoSwap: true,
     isSingleAssetWithdrawalAllowed: false,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'Orbit Chain',
     isUniv3: true,
     apyIconUrls: ['./icons/univ3.svg'],
@@ -5601,7 +5601,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'ORC', 'WETH'],
   },
   BABL: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/babl.png'],
     tokenAddress: addresses.BABL,
     decimals: '18',
@@ -5612,7 +5612,7 @@ module.exports = {
     },
   },
   DON: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/don.png'],
     tokenAddress: addresses.DON,
     decimals: '18',
@@ -5623,7 +5623,7 @@ module.exports = {
     },
   },
   CNG: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/cng.svg'],
     tokenAddress: addresses.CNG,
     decimals: '18',
@@ -5634,7 +5634,7 @@ module.exports = {
     },
   },
   ecoCNG: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/ecocng.svg'],
     tokenAddress: addresses.ecoCNG,
     decimals: '18',
@@ -5647,7 +5647,7 @@ module.exports = {
   UniV3_USDC_ETH_4200_5500: {
     zapFrontrunProtection: true,
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     subLabel: 'ETH Range: 4.2K⟷5.5K',
     apyIconUrls: [],
@@ -5678,7 +5678,7 @@ module.exports = {
   UniV3_DAI_ETH_4200_5500: {
     zapFrontrunProtection: true,
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     subLabel: 'ETH Range: 4.2K⟷5.5K',
     apyIconUrls: [],
@@ -5709,7 +5709,7 @@ module.exports = {
   UniV3_ETH_USDT_4200_5500: {
     zapFrontrunProtection: true,
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     subLabel: 'ETH Range: 4.2K⟷5.5K',
     apyIconUrls: [],
@@ -5738,7 +5738,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'WETH', 'USDT'],
   },
   UniV3_CNG_ETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'Changer',
     isUniv3: true,
     apyIconUrls: ['./icons/univ3.svg'],
@@ -5768,7 +5768,7 @@ module.exports = {
     inactive: true,
     zapFrontrunProtection: true,
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'ETH Range: 3K⟷4.5K',
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -5799,7 +5799,7 @@ module.exports = {
     inactive: true,
     zapFrontrunProtection: true,
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'ETH Range: 3K⟷4.5K',
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -5830,7 +5830,7 @@ module.exports = {
     inactive: true,
     zapFrontrunProtection: true,
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'ETH Range: 3K⟷4.5K',
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -5861,7 +5861,7 @@ module.exports = {
     inactive: true,
     subLabel: 'Donkey',
     isDegen: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
     logoUrl: ['./icons/don.png', './icons/eth.svg'],
@@ -5885,7 +5885,7 @@ module.exports = {
     disableAutoSwap: true,
   },
   YEL: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/yel.svg'],
     tokenAddress: addresses.YEL,
     decimals: '18',
@@ -5896,7 +5896,7 @@ module.exports = {
     },
   },
   sushi_YEL_ETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/yel.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/yel.svg'],
     apyTokenSymbols: ['YEL'],
@@ -5921,7 +5921,7 @@ module.exports = {
   UniV3_ETH_sETH2: {
     zapFrontrunProtection: true,
     subLabel: 'StakeWise',
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     isUniv3: true,
     apyIconUrls: ['./icons/univ3.svg', './icons/reth2.svg', './icons/swise.svg'],
     apyTokenSymbols: ['UNI', 'rETH2', 'SWISE'],
@@ -5953,7 +5953,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'WETH', 'sETH2', 'rETH2', 'SWISE'],
   },
   zUSD: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/zusd.png'],
     tokenAddress: addresses.zUSD,
     decimals: '18',
@@ -5965,7 +5965,7 @@ module.exports = {
   },
   quick_IFARM_QUICK: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
     logoUrl: ['./icons/ifarm.svg', './icons/quick.svg'],
@@ -5989,7 +5989,7 @@ module.exports = {
   },
   pWETH: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/eth.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6009,14 +6009,14 @@ module.exports = {
           'pWETH',
           '0xfdA25D931258Df948ffecb66b5518299Df6527C4',
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'wMATIC'],
   },
   pUSDT: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdt.svg'],
     tokenAddress: addresses.MATIC.pUSDT,
     decimals: '6',
@@ -6027,7 +6027,7 @@ module.exports = {
     },
   },
   pWBTC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/wbtc.svg'],
     tokenAddress: addresses.MATIC.pWBTC,
     decimals: '8',
@@ -6038,7 +6038,7 @@ module.exports = {
     },
   },
   pBNB: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/wbnb.svg'],
     tokenAddress: addresses.MATIC.pBNB,
     decimals: '18',
@@ -6050,7 +6050,7 @@ module.exports = {
   },
   pUSDC: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6070,14 +6070,14 @@ module.exports = {
           'pUSDC',
           '0x1ee6470CD75D5686d0b2b90C0305Fa46fb0C89A1',
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'wMATIC'],
   },
   MAI: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.MAI,
     decimals: '18',
@@ -6088,7 +6088,7 @@ module.exports = {
     },
   },
   pDAI: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.DAI,
     decimals: '18',
@@ -6099,7 +6099,7 @@ module.exports = {
     },
   },
   BANANA: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/banana.svg'],
     tokenAddress: addresses.MATIC.BANANA,
     decimals: '18',
@@ -6110,7 +6110,7 @@ module.exports = {
     },
   },
   miFARM: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     decimals: '18',
     tokenAddress: addresses.MATIC.miFARM,
     tokenNames: ['miFARM'],
@@ -6118,7 +6118,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.F_TOKEN, params: [addresses.iFARM, '18'] },
   },
   WMATIC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     decimals: '18',
     logoUrl: ['./icons/matic.svg'],
     tokenAddress: addresses.MATIC.WMATIC,
@@ -6130,7 +6130,7 @@ module.exports = {
     },
   },
   QUICK: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/quick.svg'],
     tokenAddress: addresses.MATIC.QUICK,
     decimals: '18',
@@ -6141,7 +6141,7 @@ module.exports = {
     },
   },
   dQUICK: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/quick.svg'],
     tokenAddress: addresses.MATIC.dQUICK,
     decimals: '18',
@@ -6152,7 +6152,7 @@ module.exports = {
     },
   },
   LUNA: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/luna.png'],
     tokenAddress: addresses.LUNA,
     decimals: '18',
@@ -6163,7 +6163,7 @@ module.exports = {
     },
   },
   UMA: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/uma.png'],
     tokenAddress: addresses.UMA,
     decimals: '18',
@@ -6174,7 +6174,7 @@ module.exports = {
     },
   },
   pUMA: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/uma.png'],
     tokenAddress: addresses.MATIC.UMA,
     decimals: '18',
@@ -6185,7 +6185,7 @@ module.exports = {
     },
   },
   JRT: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jrt.png'],
     tokenAddress: addresses.MATIC.JRT,
     decimals: '18',
@@ -6196,7 +6196,7 @@ module.exports = {
     },
   },
   KNC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [], // not used
     tokenAddress: addresses.MATIC.KNC,
     decimals: '18',
@@ -6207,7 +6207,7 @@ module.exports = {
     },
   },
   REI: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/rei.png'],
     tokenAddress: addresses.REI,
     decimals: '18',
@@ -6219,7 +6219,7 @@ module.exports = {
   },
   UniV3_zUSD_USDC_full_range: {
     subLabel: 'Zerogoki',
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6245,7 +6245,7 @@ module.exports = {
   },
   UniV3_zUSD_ETH: {
     subLabel: 'Zerogoki',
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6275,7 +6275,7 @@ module.exports = {
   },
   UniV3_REI_ETH_full_range: {
     subLabel: 'Zerogoki',
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6300,7 +6300,7 @@ module.exports = {
     disableAutoSwap: true,
   },
   FOX: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/fox.png'],
     tokenAddress: addresses.FOX,
     decimals: '18',
@@ -6312,7 +6312,7 @@ module.exports = {
   },
   LQTY: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
     logoUrl: ['./icons/lqty.png'],
@@ -6334,7 +6334,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'ETH'],
   },
   AURA: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.AURA,
     decimals: '18',
@@ -6345,7 +6345,7 @@ module.exports = {
     },
   },
   BAL: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/balancer.svg'],
     tokenAddress: addresses.BAL,
     decimals: '18',
@@ -6356,7 +6356,7 @@ module.exports = {
     },
   },
   pBAL: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/balancer.svg'],
     tokenAddress: addresses.MATIC.pBAL,
     decimals: '18',
@@ -6367,7 +6367,7 @@ module.exports = {
     },
   },
   BAL_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/balancer.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.BAL,
     decimals: '18',
@@ -6378,7 +6378,7 @@ module.exports = {
     },
   },
   LDO_arbitrum: {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [],
     tokenAddress: addresses.ARBITRUM_ONE.LDO,
     decimals: '18',
@@ -6389,7 +6389,7 @@ module.exports = {
     },
   },
   bal_BAL_WETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     subLabel: '80%/20%',
     apyIconUrls: [],
@@ -6405,7 +6405,7 @@ module.exports = {
       params: [
         addresses.V2.bal_BAL_WETH.Underlying,
         addresses.V2.bal_BAL_WETH.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -6416,14 +6416,14 @@ module.exports = {
           addresses.V2.bal_BAL_WETH.PoolId,
           '25750',
           profitSharingCut30Percent,
-          CHAINS_ID.ETH_MAINNET,
+          CHAIN_IDS.ETH_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'WETH'],
   },
   bal_DAI_WETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     subLabel: '40%/60%',
     apyIconUrls: [],
@@ -6439,7 +6439,7 @@ module.exports = {
       params: [
         addresses.V2.bal_DAI_WETH.Underlying,
         addresses.V2.bal_DAI_WETH.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -6450,14 +6450,14 @@ module.exports = {
           addresses.V2.bal_DAI_WETH.PoolId,
           '15000',
           profitSharingCut30Percent,
-          CHAINS_ID.ETH_MAINNET,
+          CHAIN_IDS.ETH_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'DAI', 'WETH'],
   },
   bal_USDC_WETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     subLabel: '50%/50%',
     apyIconUrls: [],
@@ -6473,7 +6473,7 @@ module.exports = {
       params: [
         addresses.V2.bal_USDC_WETH.Underlying,
         addresses.V2.bal_USDC_WETH.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -6484,14 +6484,14 @@ module.exports = {
           addresses.V2.bal_USDC_WETH.PoolId,
           '1100',
           profitSharingCut30Percent,
-          CHAINS_ID.ETH_MAINNET,
+          CHAIN_IDS.ETH_MAINNET,
         ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'USDC', 'WETH'],
   },
   bal_USDT_WETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     subLabel: '50%/50%',
     apyIconUrls: [],
@@ -6507,7 +6507,7 @@ module.exports = {
       params: [
         addresses.V2.bal_USDT_WETH.Underlying,
         addresses.V2.bal_USDT_WETH.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -6518,7 +6518,7 @@ module.exports = {
           addresses.V2.bal_USDT_WETH.PoolId,
           '120',
           profitSharingCut30Percent,
-          CHAINS_ID.ETH_MAINNET,
+          CHAIN_IDS.ETH_MAINNET,
         ],
       },
     ],
@@ -6526,7 +6526,7 @@ module.exports = {
   },
   bal_WBTC_WETH: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: '50%/50%',
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6541,7 +6541,7 @@ module.exports = {
       params: [
         addresses.V2.bal_WBTC_WETH.Underlying,
         addresses.V2.bal_WBTC_WETH.PoolId,
-        CHAINS_ID.ETH_MAINNET,
+        CHAIN_IDS.ETH_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -6552,7 +6552,7 @@ module.exports = {
           addresses.V2.bal_WBTC_WETH.PoolId,
           '15000',
           profitSharingCut30Percent,
-          CHAINS_ID.ETH_MAINNET,
+          CHAIN_IDS.ETH_MAINNET,
         ],
       },
     ],
@@ -6561,7 +6561,7 @@ module.exports = {
   UniV3_USDC_ETH: {
     inactive: true,
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'ETH Range: 1.9K⟷3.5K',
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6592,7 +6592,7 @@ module.exports = {
     inactive: true,
     isManaged: true,
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'Test Mode - no deposits allowed',
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6622,7 +6622,7 @@ module.exports = {
   UniV3_ETH_USDT: {
     inactive: true,
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'ETH Range: 1.9K⟷3.5K',
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6652,7 +6652,7 @@ module.exports = {
   UniV3_DAI_ETH: {
     inactive: true,
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'ETH Range: 1.9K⟷3.5K',
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6681,7 +6681,7 @@ module.exports = {
   },
   UniV3_UST_USDT: {
     zapFrontrunProtection: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6710,7 +6710,7 @@ module.exports = {
   },
   UniV3_USDC_USDT: {
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/univ3.svg'],
     apyTokenSymbols: ['UNI'],
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
@@ -6737,7 +6737,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'USDC', 'USDT'],
   },
   UniV3_BUSD_USDC: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/univ3.svg'],
     apyTokenSymbols: ['UNI'],
     logoUrl: ['./icons/busd.svg', './icons/usdc.svg'],
@@ -6765,7 +6765,7 @@ module.exports = {
   },
   UniV3_WBTC_ETH: {
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     isUniv3: true,
     apyIconUrls: ['./icons/univ3.svg'],
     apyTokenSymbols: ['UNI'],
@@ -6794,7 +6794,7 @@ module.exports = {
   },
   UniV3_DAI_USDC: {
     isSingleAssetWithdrawalAllowed: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6828,7 +6828,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'DAI', 'USDC'],
   },
   UniV3_UNI_ETH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6927,7 +6927,7 @@ module.exports = {
     },
   },
   crvHBTC: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6948,7 +6948,7 @@ module.exports = {
   },
   crvOBTC: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
     logoUrl: ['./icons/curve-obtc.png'],
@@ -6967,7 +6967,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'CVX', 'CRV'],
   },
   TBTCMixed: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -6987,7 +6987,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'CRV', 'CVX'],
   },
   CRVRENWBTC: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     logoUrl: ['./icons/ren.svg'],
     apyIconUrls: [],
@@ -7007,7 +7007,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'CVX', 'CRV'],
   },
   WBTC: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     logoUrl: ['./icons/wbtc.svg'],
     tokenNames: ['WBTC'],
@@ -7027,7 +7027,7 @@ module.exports = {
     ],
   },
   sETH2: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/seth.svg'],
     tokenAddress: addresses.sETH2,
     decimals: '18',
@@ -7068,7 +7068,7 @@ module.exports = {
     },
   },
   INDEX: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/index.png'],
     tokenAddress: addresses.INDEX,
     decimals: '18',
@@ -7079,7 +7079,7 @@ module.exports = {
     },
   },
   'ETH-MVI': {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     logoUrl: ['./icons/eth.svg', './icons/mvi.png'],
     apyIconUrls: [],
@@ -7114,7 +7114,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.MVI] },
   },
   KLONDIKE_KXUSD_DAI: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     fullBuyback: true,
     inactive: true,
     logoUrl: ['./icons/kxusd.png', './icons/dai.svg'],
@@ -7165,7 +7165,7 @@ module.exports = {
   },
   'SUSHI-PHTR-ETH': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/phtr.png', './icons/eth.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -7187,7 +7187,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'PHTR', 'WETH'],
   },
   'SUSHI-SUSHI-ETH': {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     logoUrl: ['./icons/sushi.svg', './icons/eth.svg'],
     apyIconUrls: [],
@@ -7210,7 +7210,7 @@ module.exports = {
     ],
   },
   'SUSHI-ETH-PERP': {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     logoUrl: ['./icons/sushi-perp.png'],
     apyIconUrls: [],
@@ -7233,7 +7233,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'ETH', 'PERP'],
   },
   'SUSHI-ETH-DAI': {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     logoUrl: ['./icons/eth.svg', './icons/dai.svg'],
     apyIconUrls: [],
@@ -7257,7 +7257,7 @@ module.exports = {
   },
   'SUSHI-ETH-USDC': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/sushi.svg', './icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -7279,7 +7279,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'ETH', 'USDC'],
   },
   'SUSHI-ETH-USDT': {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     logoUrl: ['./icons/eth.svg', './icons/usdt.svg'],
     apyIconUrls: [],
@@ -7303,7 +7303,7 @@ module.exports = {
   },
   'SUSHI-ETH-WBTC': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/eth.svg', './icons/wbtc.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -7325,7 +7325,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'ETH', 'WBTC'],
   },
   'SUSHI-ETH-UST': {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     logoUrl: ['./icons/eth.svg', './icons/ust.png'],
     apyIconUrls: [],
@@ -7349,7 +7349,7 @@ module.exports = {
   },
   SUSHI_HODL: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
     subLabel: 'HODL',
@@ -7373,7 +7373,7 @@ module.exports = {
   },
   'SUSHI-ETH-DAI-HODL': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
     subLabel: 'HODL',
@@ -7400,7 +7400,7 @@ module.exports = {
   },
   'SUSHI-ETH-USDC-HODL': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
     subLabel: 'HODL',
@@ -7427,7 +7427,7 @@ module.exports = {
   },
   'SUSHI-ETH-USDT-HODL': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
     subLabel: 'HODL',
@@ -7454,7 +7454,7 @@ module.exports = {
   },
   'SUSHI-ETH-WBTC-HODL': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
     subLabel: 'HODL',
@@ -7481,7 +7481,7 @@ module.exports = {
   },
   '1INCH-ETH-DAI': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     hodlVaultId: 'SUSHI-ETH-DAI-HODL',
     subLabel: '(migrated from 1INCH)',
     logoUrl: ['./icons/1inch.png', './icons/eth.svg', './icons/dai.svg'],
@@ -7509,7 +7509,7 @@ module.exports = {
   },
   '1INCH-ETH-USDC': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     hodlVaultId: 'SUSHI-ETH-USDC-HODL',
     subLabel: '(migrated from 1INCH)',
     logoUrl: ['./icons/1inch.png', './icons/eth.svg', './icons/usdc.svg'],
@@ -7537,7 +7537,7 @@ module.exports = {
   },
   '1INCH-ETH-USDT': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     hodlVaultId: 'SUSHI-ETH-USDT-HODL',
     subLabel: '(migrated from 1INCH)',
     logoUrl: ['./icons/1inch.png', './icons/eth.svg', './icons/usdt.svg'],
@@ -7565,7 +7565,7 @@ module.exports = {
   },
   'MUSE-ETH': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
     isNFT: true,
     apyIconUrls: [],
@@ -7591,7 +7591,7 @@ module.exports = {
   },
   'DUDES20-ETH': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
     isNFT: true,
     apyIconUrls: [],
@@ -7616,7 +7616,7 @@ module.exports = {
     ],
   },
   'MASK20-ETH': {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
     isNFT: true,
     inactive: true,
@@ -7643,7 +7643,7 @@ module.exports = {
   },
   'MOONCAT20-ETH': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
     isNFT: true,
     apyIconUrls: [],
@@ -7668,7 +7668,7 @@ module.exports = {
     ],
   },
   YCRV: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -7688,7 +7688,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'CVX', 'CRV'],
   },
   ThreePool: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/dai.svg', './icons/usdc.svg', './icons/usdt.svg'],
@@ -7711,7 +7711,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'CVX', 'CRV'],
   },
   crvCOMPOUND: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -7731,7 +7731,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'CVX', 'CRV'],
   },
   UNI: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/univ3.svg'],
     tokenNames: ['UNISWAP'],
     platform: ['Uniswap'],
@@ -7744,7 +7744,7 @@ module.exports = {
     },
   },
   FARM_GRAIN_LP: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/farm.svg', './icons/grain.svg'],
     tokenNames: ['FARM', 'GRAIN'],
     platform: ['Uniswap'],
@@ -7758,7 +7758,7 @@ module.exports = {
   },
   FARMSteadUSDC: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/farmstead-usdc.png'],
     tokenNames: ['farmsteadUSDC'],
     platform: ['Rari Fuse'],
@@ -7771,7 +7771,7 @@ module.exports = {
     },
   },
   FARM_WETH_LP: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/farm.svg', './icons/eth.svg'],
     tokenAddress: addresses.FARM_WETH_LP,
     decimals: '18',
@@ -7799,7 +7799,7 @@ module.exports = {
     },
   },
   BAS: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/bas.png'],
     tokenAddress: addresses.BAS,
     decimals: '18',
@@ -7830,7 +7830,7 @@ module.exports = {
     },
   },
   MIS: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/mis.png'],
     tokenAddress: addresses.MIS,
     decimals: '18',
@@ -7838,7 +7838,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['mithril-share'] },
   },
   MIC: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/mic.png'],
     tokenAddress: addresses.MIC,
     decimals: '18',
@@ -7874,7 +7874,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.DPI] },
   },
   sUSD: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/susd.png'],
     tokenAddress: addresses.sUSD,
     decimals: '18',
@@ -7882,7 +7882,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.sUSD] },
   },
   CRV: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/curve.svg'],
     tokenAddress: addresses.CRV,
     decimals: '18',
@@ -7890,7 +7890,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.CRV] },
   },
   cvxCRV: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.cvxCRV,
     decimals: '18',
@@ -7898,7 +7898,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.cvxCRV] },
   },
   HARVEST_AP: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.HARVEST_AP,
     decimals: '18',
@@ -7910,7 +7910,7 @@ module.exports = {
   },
   crvEURS: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: [],
     apyTokenSymbols: [],
     logoUrl: ['./icons/eurs.svg'],
@@ -7929,7 +7929,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'CVX', 'CRV'],
   },
   crvGUSD: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -7954,7 +7954,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'CRV'],
   },
   IFARM: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/ifarm.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -7976,7 +7976,7 @@ module.exports = {
     ],
   },
   KLON: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/klon.png'],
     tokenAddress: addresses.KLON,
     decimals: '18',
@@ -7998,7 +7998,7 @@ module.exports = {
   },
   'MEME20-ETH': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
     isNFT: true,
     apyIconUrls: [],
@@ -8033,7 +8033,7 @@ module.exports = {
     },
   },
   'GPUNKS20-ETH': {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
     isNFT: true,
     inactive: true,
@@ -8149,7 +8149,7 @@ module.exports = {
     },
   },
   crvLink: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -8179,7 +8179,7 @@ module.exports = {
     },
   },
   'ETH-DPI': {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     logoUrl: ['./icons/eth.svg', './icons/dpi.svg'],
     apyIconUrls: [],
@@ -8207,7 +8207,7 @@ module.exports = {
     ],
   },
   'ROPE20-ETH': {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     fullBuyback: true,
     hideFarmApy: true,
     inactive: true,
@@ -8234,7 +8234,7 @@ module.exports = {
   },
   RENBTC: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/ren.svg'],
     tokenNames: ['RENBTC'],
     platform: [],
@@ -8255,7 +8255,7 @@ module.exports = {
   },
   'MIC-USDT': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/mic.png', './icons/usdt.svg'],
     tokenNames: ['MIC', 'USDT'],
     platform: [],
@@ -8281,7 +8281,7 @@ module.exports = {
   },
   'MIS-USDT': {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/mis.png', './icons/usdt.svg'],
     tokenNames: ['MIS', 'USDT'],
     platform: [],
@@ -8306,7 +8306,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'MIS', 'USDT'],
   },
   '1INCH-USDC-1INCH': {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     inactive: true,
     logoUrl: ['./icons/1inch.png', './icons/usdc.svg', './icons/1inch.png'],
     tokenNames: ['1INCH', 'USDC'],
@@ -8338,7 +8338,7 @@ module.exports = {
   },
   TUSD: {
     inactive: true,
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/tusd.png'],
     tokenNames: ['TUSD'],
     platform: [],
@@ -8357,7 +8357,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'TUSD'],
   },
   FCASH: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     tokenNames: ['FCASH'],
     logoUrl: ['./icons/ifarm.svg'],
     tokenAddress: addresses.FCASH,
@@ -8369,7 +8369,7 @@ module.exports = {
     },
   },
   BUSD: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/busd.png'],
     tokenAddress: addresses.BUSD,
     decimals: '18',
@@ -8380,18 +8380,18 @@ module.exports = {
     },
   },
   fAUR0112_USDC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [], // unused
     tokenAddress: addresses.MATIC.V2.jarvis_AUR_USDC.NewVault,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.F_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_AUR_USDC.NewVault, '18', CHAINS_ID.MATIC_MAINNET],
+      params: [addresses.MATIC.V2.jarvis_AUR_USDC.NewVault, '18', CHAIN_IDS.POLYGON_MAINNET],
     },
   },
   fSUSHI: {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: [], // unused
     tokenAddress: addresses.V2.SUSHI.NewVault,
     decimals: '18',
@@ -8399,7 +8399,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.F_TOKEN, params: [addresses.V2.SUSHI.NewVault, '18'] },
   },
   AUR0112: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [], // unused
     tokenAddress: addresses.MATIC.AUR0112,
     decimals: '18',
@@ -8416,7 +8416,7 @@ module.exports = {
     },
   },
   agEUR: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/ageur.svg'],
     tokenAddress: addresses.MATIC.agEUR,
     decimals: '18',
@@ -8427,7 +8427,7 @@ module.exports = {
     },
   },
   JEUR: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jeur.svg'],
     tokenAddress: addresses.MATIC.JEUR,
     decimals: '18',
@@ -8438,7 +8438,7 @@ module.exports = {
     },
   },
   JCHF: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jchf.png'],
     tokenAddress: addresses.MATIC.JCHF,
     decimals: '18',
@@ -8449,7 +8449,7 @@ module.exports = {
     },
   },
   JGBP: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jgbp.png'],
     tokenAddress: addresses.MATIC.JGBP,
     decimals: '18',
@@ -8460,7 +8460,7 @@ module.exports = {
     },
   },
   'DEN-JUL22': {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.DEN_JUL22,
     decimals: '18',
@@ -8475,7 +8475,7 @@ module.exports = {
     },
   },
   'DEN-MAY22': {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.DEN_MAY22,
     decimals: '18',
@@ -8490,7 +8490,7 @@ module.exports = {
     },
   },
   'DEN-MAR22': {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.DEN_MAR22,
     decimals: '18',
@@ -8505,7 +8505,7 @@ module.exports = {
     },
   },
   DEN: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.DEN,
     decimals: '18',
@@ -8520,7 +8520,7 @@ module.exports = {
     },
   },
   pMIMO: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.pMIMO,
     decimals: '18',
@@ -8531,7 +8531,7 @@ module.exports = {
     },
   },
   pEURT: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.pEURT,
     decimals: '6',
@@ -8542,7 +8542,7 @@ module.exports = {
     },
   },
   pEURS: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.pEURS,
     decimals: '2',
@@ -8553,7 +8553,7 @@ module.exports = {
     },
   },
   PAR: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.PAR,
     decimals: '18',
@@ -8564,73 +8564,73 @@ module.exports = {
     },
   },
   fDENJUL22_4EUR: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [], // unused
     tokenAddress: addresses.MATIC.V2.jarvis_DENJUL22_4EUR.NewVault,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.F_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_DENJUL22_4EUR.NewVault, '18', CHAINS_ID.MATIC_MAINNET],
+      params: [addresses.MATIC.V2.jarvis_DENJUL22_4EUR.NewVault, '18', CHAIN_IDS.POLYGON_MAINNET],
     },
   },
   fDENMAY22_4EUR: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [], // unused
     tokenAddress: addresses.MATIC.V2.jarvis_DENMAY22_4EUR.NewVault,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.F_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_DENMAY22_4EUR.NewVault, '18', CHAINS_ID.MATIC_MAINNET],
+      params: [addresses.MATIC.V2.jarvis_DENMAY22_4EUR.NewVault, '18', CHAIN_IDS.POLYGON_MAINNET],
     },
   },
   fDEN2_4EUR: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [], // unused
     tokenAddress: addresses.MATIC.V2.jarvis_DEN2_4EUR.NewVault,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.F_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_DEN2_4EUR.NewVault, '18', CHAINS_ID.MATIC_MAINNET],
+      params: [addresses.MATIC.V2.jarvis_DEN2_4EUR.NewVault, '18', CHAIN_IDS.POLYGON_MAINNET],
     },
   },
   fDEN_4EUR: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [], // unused
     tokenAddress: addresses.MATIC.V2.jarvis_DEN_4EUR.NewVault,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.F_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_DEN_4EUR.NewVault, '18', CHAINS_ID.MATIC_MAINNET],
+      params: [addresses.MATIC.V2.jarvis_DEN_4EUR.NewVault, '18', CHAIN_IDS.POLYGON_MAINNET],
     },
   },
   fAURFEB22_USDC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [], // unused
     tokenAddress: addresses.MATIC.V2.jarvis_AUR_USDC_V2.NewVault,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.F_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_AUR_USDC_V2.NewVault, '18', CHAINS_ID.MATIC_MAINNET],
+      params: [addresses.MATIC.V2.jarvis_AUR_USDC_V2.NewVault, '18', CHAIN_IDS.POLYGON_MAINNET],
     },
   },
   fAURAPR22_USDC: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [], // unused
     tokenAddress: addresses.MATIC.V2.jarvis_AUR3_USDC.NewVault,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.F_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_AUR3_USDC.NewVault, '18', CHAINS_ID.MATIC_MAINNET],
+      params: [addresses.MATIC.V2.jarvis_AUR3_USDC.NewVault, '18', CHAIN_IDS.POLYGON_MAINNET],
     },
   },
   pMTA: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/mta.svg'],
     tokenAddress: addresses.MATIC.pMTA,
     decimals: '18',
@@ -8638,7 +8638,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['meta'] },
   },
   'AUR-APR22': {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [], // unused
     tokenAddress: addresses.MATIC.AUR_APR22,
     decimals: '18',
@@ -8653,7 +8653,7 @@ module.exports = {
     },
   },
   AURFEB22: {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [], // unused
     tokenAddress: addresses.MATIC.AURFEB22,
     decimals: '18',
@@ -8669,7 +8669,7 @@ module.exports = {
   },
   jarvis_AUR_USDC_V2: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/aur.png', './icons/usdc.svg'],
     tokenNames: ['AUR(FEB22)', 'USDC'],
     platform: ['Jarvis'],
@@ -8693,7 +8693,7 @@ module.exports = {
   },
   FOUR_EUR: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/2eur.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -8709,7 +8709,7 @@ module.exports = {
         addresses.MATIC.V2.jarvis_4EUR_HODL.Underlying,
         18,
         ['JEUR', 'pEURT', 'pEURS', 'PAR'],
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -8732,7 +8732,7 @@ module.exports = {
   },
   jarvis_DENJUL22_4EUR: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jrtmay22.svg', './icons/2eir.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -8761,7 +8761,7 @@ module.exports = {
   },
   jarvis_DENMAY22_4EUR: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jrtmay22.svg', './icons/2eir.svg'],
     apyIconUrls: ['./icons/den.png'],
     apyTokenSymbols: ['DEN-MAY22'],
@@ -8790,7 +8790,7 @@ module.exports = {
   },
   jarvis_DEN2_4EUR: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jrtmay22.svg', './icons/2eir.svg'],
     apyIconUrls: ['./icons/den.png'],
     apyTokenSymbols: ['DEN-MAR22'],
@@ -8819,7 +8819,7 @@ module.exports = {
   },
   jarvis_DEN_4EUR: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jrtmay22.svg', './icons/2eir.svg'],
     apyIconUrls: ['./icons/den.png'],
     apyTokenSymbols: ['DEN'],
@@ -8848,7 +8848,7 @@ module.exports = {
   },
   jarvis_JEUR_USDC_HODL: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jeur.svg', './icons/usdc.svg'],
     apyTokenSymbols: [],
     apyIconUrls: [],
@@ -8882,7 +8882,7 @@ module.exports = {
   },
   jarvis_JGBP_USDC_HODL: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jgbp.png', './icons/usdc.svg'],
     apyTokenSymbols: [],
     apyIconUrls: [],
@@ -8916,7 +8916,7 @@ module.exports = {
   },
   jarvis_JCHF_USDC_HODL: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jchf.png', './icons/usdc.svg'],
     apyTokenSymbols: [],
     apyIconUrls: [],
@@ -8950,7 +8950,7 @@ module.exports = {
   },
   jarvis_AUR3_USDC: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/aur.png', './icons/usdc.svg'],
     apyTokenSymbols: [],
     apyIconUrls: [],
@@ -8979,7 +8979,7 @@ module.exports = {
   },
   jarvis_AUR_USDC: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/aur.png', './icons/usdc.svg'],
     apyIconUrls: ['./icons/jaur.png'],
     apyTokenSymbols: ['AUR0112'],
@@ -9004,7 +9004,7 @@ module.exports = {
   },
   bal_STABLE: {
     inactive: true,
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/dai.svg', './icons/mai.svg', './icons/usdt.svg'],
     apyIconUrls: [],
     apyTokenSymbols: [],
@@ -9018,7 +9018,7 @@ module.exports = {
       params: [
         addresses.MATIC.V2.balancer_STABLE.Underlying,
         addresses.MATIC.V2.balancer_STABLE.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     estimateApyFunctions: [
@@ -9028,7 +9028,7 @@ module.exports = {
           'bal_STABLE',
           addresses.MATIC.V2.balancer_STABLE.Gauge,
           profitSharingCut8Percent,
-          CHAINS_ID.MATIC_MAINNET,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],

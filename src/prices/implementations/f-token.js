@@ -7,9 +7,9 @@ const { getUIData } = require('../../lib/data')
 
 const { vault: vaultContractData } = require('../../lib/web3/contracts')
 
-const { UI_DATA_FILES, CHAIN_TYPES } = require('../../lib/constants')
+const { UI_DATA_FILES, CHAIN_IDS } = require('../../lib/constants')
 
-const getPrice = async (tokenAddress, tokenDecimals, chain = CHAIN_TYPES.ETH) => {
+const getPrice = async (tokenAddress, tokenDecimals, chain = CHAIN_IDS.ETH) => {
   const {
     contract: { abi: vaultAbi },
     methods: { getPricePerFullShare },
