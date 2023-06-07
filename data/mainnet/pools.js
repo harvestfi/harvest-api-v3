@@ -674,7 +674,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokenSymbols: ['iFARM', 'JEUR', 'JRT'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
