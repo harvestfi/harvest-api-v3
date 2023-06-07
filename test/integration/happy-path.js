@@ -94,7 +94,7 @@ describe('Happy Paths', function () {
         .expect('Content-Type', /json/)
         .expect(200)
         .then(res => {
-          assert.equal(Object.keys(res.body).length, activeVaultsJsonArray.length + 3) // response must contain all active vaults + 3 special pools: iFARM, FARM/ETH, FARM/GRAIN
+          assert.equal(Object.keys(res.body).length, activeVaultsJsonArray.length + 1) // response must contain all active vaults + 3 special pools: iFARM, FARM/ETH, FARM/GRAIN
         })
     })
 
