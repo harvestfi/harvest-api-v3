@@ -1030,5 +1030,23 @@
         "id": 174,
         "currency": "ETH",
         "name": "oeth"
+    },
+    {
+        "lptoken": "0x390f3595bCa2Df7d23783dFd126427CCeb997BF4",
+        "token": " 0x939e4C11E391a28CD81248163f3a2e595f12CE5E",
+        "crvRewards": "0xD1DdB0a0815fD28932fBb194C84003683AF8a824",
+        "swap": "0x390f3595bCa2Df7d23783dFd126427CCeb997BF4",
+        "id": 179,
+        "currency": "USD",
+        "name": "crvusdt"
+    },
+    {
+        "lptoken": "0x4DEcE678ceceb27446b35C672dC7d61F30bAD69E",
+        "token": " 0x75A2F59eC37c18962c53b0244D60B53f749DF25E",
+        "crvRewards": "0x44D8FaB7CD8b7877D5F79974c2F501aF6E65AbBA",
+        "swap": "0x4DEcE678ceceb27446b35C672dC7d61F30bAD69E",
+        "id": 182,
+        "currency": "USD",
+        "name": "crvusdc"
     }
 ]

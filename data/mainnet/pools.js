@@ -509,6 +509,10 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['factory-crvusd-0'],
+    },
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -530,6 +534,10 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['factory-crvusd-1'],
+    },
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies

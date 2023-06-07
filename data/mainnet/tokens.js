@@ -902,9 +902,7 @@ module.exports = {
     tokenAddress: addresses.crvUSD,
     decimals: '18',
     vaultAddress: null,
-    //HOTFIX
-    priceFunction: { type: GET_PRICE_TYPES.MANUAL, params: ['1'] },
-    // priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['crvusd'] },
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['crvusd'] },
   },
   curve_crvUSD_USDC: {
     chain: CHAINS_ID.ETH_MAINNET,
@@ -930,13 +928,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.CURVE_GAUGE,
-        params: [
-          'curve_crvUSD_USDC',
-          addresses.V2.curve_crvUSD_USDC.Gauge,
-          profitSharingCut15Percent,
-          CHAINS_ID.ETH_MAINNET,
-        ],
+        type: ESTIMATED_APY_TYPES.CONVEX,
+        params: ['crvusdc', profitSharingCut15Percent],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
@@ -965,13 +958,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.CURVE_GAUGE,
-        params: [
-          'curve_crvUSD_USDT',
-          addresses.V2.curve_crvUSD_USDT.Gauge,
-          profitSharingCut15Percent,
-          CHAINS_ID.ETH_MAINNET,
-        ],
+        type: ESTIMATED_APY_TYPES.CONVEX,
+        params: ['crvusdt', profitSharingCut15Percent],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
