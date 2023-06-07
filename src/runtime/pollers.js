@@ -568,7 +568,8 @@ const getNanolyData = async () => {
             (pool.collateralAddress &&
               pool.collateralAddress.toLowerCase() === vault.vaultAddress.toLowerCase()),
         )
-        const address = vault.vaultAddress
+        const vaultAddress = vault.vaultAddress
+        const tokenAddress = vault.tokenAddress
         const tokens = vault.tokenNames
         let base
         if (pool && pool.tradingApy) {
@@ -606,7 +607,8 @@ const getNanolyData = async () => {
         let result = {
           chain: networkId == 'matic' ? 'polygon' : networkId,
           tokens,
-          address,
+          vaultAddress,
+          tokenAddress,
           base,
           reward,
           rewards,
