@@ -591,15 +591,16 @@ const getNanolyData = async () => {
         const tvl = Number(vault.totalValueLocked).toFixed(2)
 
         let url
-        if (networkId == CHAIN_IDS.ETH) {
+        if (networkId == 'eth') {
           if (vault.id == 'IFARM') {
             url = `https://app.harvest.finance/ethereum/${vault.tokenAddress}`
           } else {
             url = `https://app.harvest.finance/ethereum/${vault.vaultAddress}`
           }
-        } else if (networkId == CHAIN_IDS.POLYGON) {
+        } else if (networkId == 'matic') {
           url = `https://app.harvest.finance/polygon/${vault.vaultAddress}`
-        } else if (networkId == CHAIN_IDS.ARBITRUM_ONE) {
+          networkId = 'polygon'
+        } else if (networkId == 'arbitrum') {
           url = `https://app.harvest.finance/arbitrum/${vault.vaultAddress}`
         }
 
@@ -619,46 +620,6 @@ const getNanolyData = async () => {
     }
   }
 
-  //For special vaults
-  const farmWethPool = pools.eth.find(pool => pool.id === 'farm-weth')
-  if (farmWethPool) {
-    const reward = Number(farmWethPool.rewardAPY[0]) / 100
-    const rewards = {
-      FARM: reward,
-    }
-    const tvl = Number(farmWethPool.totalValueLocked).toFixed(2)
-    results.push({
-      chain: 'eth',
-      tokens: 'FARM-ETH',
-      address: farmWethPool.contractAddress,
-      base: Number(farmWethPool.tradingApy) / 100,
-      reward,
-      rewards,
-      url: 'https://app.harvest.finance/',
-      tvl,
-      active: true,
-    })
-  }
-
-  const farmGrainPool = pools.eth.find(pool => pool.id === 'farm-grain')
-  if (farmGrainPool) {
-    const reward = Number(farmGrainPool.rewardAPY[0]) / 100
-    const rewards = {
-      FARM: reward,
-    }
-    const tvl = Number(farmGrainPool.totalValueLocked).toFixed(2)
-    results.push({
-      chain: 'eth',
-      tokens: 'FARM-GRAIN',
-      address: farmGrainPool.contractAddress,
-      base: Number(farmGrainPool.tradingApy) / 100,
-      reward,
-      rewards,
-      url: 'https://app.harvest.finance/',
-      tvl,
-      active: true,
-    })
-  }
   await storeData(
     Cache,
     DB_CACHE_IDS.STATS,
