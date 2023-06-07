@@ -599,13 +599,12 @@ const getNanolyData = async () => {
           }
         } else if (networkId == 'matic') {
           url = `https://app.harvest.finance/polygon/${vault.vaultAddress}`
-          networkId = 'polygon'
         } else if (networkId == 'arbitrum') {
           url = `https://app.harvest.finance/arbitrum/${vault.vaultAddress}`
         }
 
         let result = {
-          chain: networkId,
+          chain: networkId == 'matic' ? 'polygon' : networkId,
           tokens,
           address,
           base,
