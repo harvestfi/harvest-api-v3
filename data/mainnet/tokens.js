@@ -887,8 +887,8 @@ module.exports = {
   curve_crvUSD_USDC: {
     chain: CHAINS_ID.ETH_MAINNET,
     logoUrl: ['./icons/curve.svg', './icons/usdc.svg'],
-    apyIconUrls: ['./icons/curve.svg'],
-    apyTokenSymbols: ['CRV'],
+    apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
+    apyTokenSymbols: ['CRV', 'CVX'],
     platform: ['Curve'],
     tags: ['Advanced', 'Stable'],
     tokenNames: ['crvUSD', 'USDC'],
@@ -916,8 +916,8 @@ module.exports = {
   curve_crvUSD_USDT: {
     chain: CHAINS_ID.ETH_MAINNET,
     logoUrl: ['./icons/curve.svg', './icons/usdt.svg'],
-    apyIconUrls: ['./icons/curve.svg'],
-    apyTokenSymbols: ['CRV'],
+    apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
+    apyTokenSymbols: ['CRV', 'CVX'],
     platform: ['Curve'],
     tags: ['Advanced', 'Stable'],
     tokenNames: ['crvUSD', 'USDT'],
