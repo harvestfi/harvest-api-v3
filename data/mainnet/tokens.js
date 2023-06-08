@@ -3305,7 +3305,7 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.AURA,
-        params: ['rETH', profitSharingCut15Percent],
+        params: ['rETHv2', profitSharingCut15Percent],
       },
     ],
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],

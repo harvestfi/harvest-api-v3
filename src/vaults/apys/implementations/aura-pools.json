@@ -110,5 +110,12 @@
     "rewardPool": "0x4d585a29dF0a8E18c26f662C6586ded6703062a8",
     "balancerPoolId": "0x60683b05e9a39e3509d8fdb9c959f23170f8a0fa000000000000000000000489",
     "name": "bbiUSD"
+  },
+  {
+    "id": 109,
+    "lptoken": "0x1e19cf2d73a72ef1332c882f20534b6519be0276",
+    "rewardPool": "0xdd1fe5ad401d4777ce89959b7fa587e569bf125d",
+    "balancerPoolId": "0x1e19cf2d73a72ef1332c882f20534b6519be0276000200000000000000000112",
+    "name": "rETHv2"
   }
 ]
