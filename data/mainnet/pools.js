@@ -673,7 +673,7 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.balancer_2EUR_PAR_v2.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokens: [addresses.MATIC.miFARM, addresses.MATIC.JEUR, addresses.MATIC.JRT],
     rewardTokenSymbols: ['iFARM', 'JEUR', 'JRT'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
