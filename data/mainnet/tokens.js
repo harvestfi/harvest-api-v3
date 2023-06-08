@@ -129,7 +129,6 @@ module.exports = {
     },
   },
   camelot_SILO_ETH: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/silo.png', './icons/eth.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/silo.png'],
