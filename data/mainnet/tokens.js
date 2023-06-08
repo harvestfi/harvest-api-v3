@@ -1121,8 +1121,8 @@ module.exports = {
   balancer_2EUR_PAR_v2: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jeur.svg', './icons/par.svg'],
-    apyIconUrls: ['./icons/balancer.svg'],
-    apyTokenSymbols: ['BAL'],
+    apyIconUrls: [],
+    apyTokenSymbols: [],
     tokenNames: ['jEUR', 'PAR'],
     platform: ['Balancer'],
     tags: ['Advanced', 'Stable'],
