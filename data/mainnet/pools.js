@@ -635,6 +635,10 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.verse_VERSE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.verse_VERSE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Verse LP tokens</a> by supplying liquidity on 
+      <a href="https://verse.bitcoin.com/pools/eth/verse-eth/deposit/" target="_blank" rel="noopener noreferrer">Verse Dex</a>.
+      </p>
     </div>
    `,
   },
