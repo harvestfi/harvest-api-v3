@@ -560,6 +560,10 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.curve_OETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_OETH.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/factory-v2-298/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
@@ -585,6 +589,10 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.curve_crvUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_crvUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/factory-crvusd-0/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
@@ -609,6 +617,10 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.curve_crvUSD_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_crvUSD_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/factory-crvusd-1/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
    `,
@@ -797,6 +809,10 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_aCRV_CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_aCRV_CRV.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/polygon/pools/factory-crypto-9/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
@@ -826,6 +842,10 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_USDR_3CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_USDR_3CRV.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/polygon/pools/factory-v2-339/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
    `,
@@ -935,6 +955,10 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/arbitrum/pools/factory-v2-41/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
    `,
@@ -1083,6 +1107,10 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_3CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_3CRV.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/polygon/pools/aave/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
@@ -1112,6 +1140,10 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/polygon/pools/atricrypto3/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
    `,
@@ -1143,6 +1175,10 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_CRV_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_CRV_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/polygon/pools/factory-crypto-1/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
@@ -1172,6 +1208,10 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_MATIC_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_MATIC_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/polygon/pools/factory-crypto-83/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
    `,
@@ -1465,6 +1505,10 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.curve_lvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_lvUSD.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/factory-v2-268/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
@@ -1734,6 +1778,10 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/arbitrum/pools/tricrypto/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
@@ -1763,6 +1811,10 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/arbitrum/pools/2pool/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
    `,
@@ -2537,6 +2589,10 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.convex_pETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.convex_pETH.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/factory-v2-194/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
@@ -2562,6 +2618,10 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.convex_CVX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.convex_CVX_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/cvxeth/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
    `,
