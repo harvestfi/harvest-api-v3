@@ -80,7 +80,12 @@ const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor)
     const positionInfo = await nftPoolMethods.getStakingPosition(posId, nftPoolInstance)
     const posAmount = new BigNumber(positionInfo.amount)
     const posAmountMul = new BigNumber(positionInfo.amountWithMultiplier)
-    const posMultiplier = posAmountMul.div(posAmount)
+    let posMultiplier
+    if (posAmount > 0) {
+      posMultiplier = posAmountMul.div(posAmount)
+    } else {
+      posMultiplier = 1
+    }
     xGrailUsdPerSecond = xGrailUsdPerSecond.div(totalMultiplier).times(posMultiplier)
     compoundingUsdPerSecond = compoundingUsdPerSecond.div(totalMultiplier).times(posMultiplier)
   }
