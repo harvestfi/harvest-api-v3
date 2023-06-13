@@ -596,7 +596,7 @@ const getNanolyData = async () => {
 
         const ppfs = new BigNumber(vault.pricePerFullShare).div(10 ** vault.decimals)
         const composition = {
-          [vaultAddress]: ppfs.toFixed(),
+          [tokenAddress]: ppfs.toFixed(),
         }
 
         let url
