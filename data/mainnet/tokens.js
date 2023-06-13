@@ -854,7 +854,7 @@ module.exports = {
     logoUrl: ['./icons/oeth.png', './icons/eth.svg'],
     tokenNames: ['OETH', 'ETH'],
     platform: ['Convex Finance'],
-    tags: ['Advanced'],
+    tags: ['Advanced', 'LSD'],
     tokenAddress: addresses.V2.curve_OETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.V2.curve_OETH.NewVault,
