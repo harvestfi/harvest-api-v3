@@ -558,6 +558,9 @@ const getNanolyData = async () => {
     hasErrors
   for (let networkId in vaults) {
     for (let symbol in vaults[networkId]) {
+      if (symbol.toLowerCase().includes('univ3')) {
+        continue
+      }
       const vault = vaults[networkId][symbol]
       let reward = 0
       let rewards = {}
@@ -591,6 +594,11 @@ const getNanolyData = async () => {
         }
         const tvl = Number(vault.totalValueLocked).toFixed(2)
 
+        const ppfs = new BigNumber(vault.pricePerFullShare).div(10 ** vault.decimals)
+        const composition = {
+          tokenAddress: ppfs.toFixed(),
+        }
+
         let url
         if (networkId == 'eth') {
           if (vault.id == 'IFARM') {
@@ -614,6 +622,7 @@ const getNanolyData = async () => {
           rewards,
           url,
           tvl,
+          composition,
           active: true,
         }
         results.push(result)
