@@ -5,6 +5,7 @@ const {
   camelotNFTPool,
   camelotNitroPool,
   camelotMaster,
+  camelotStrategy,
   token: tokenContract,
 } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
@@ -30,6 +31,10 @@ const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor)
     methods: nitroPoolMethods,
   } = camelotNitroPool
   const {
+    contract: { abi: strategyAbi },
+    methods: { getPosId },
+  } = camelotStrategy
+  const {
     contract: { abi: tokenAbi },
     methods: { getDecimals },
   } = tokenContract
@@ -37,6 +42,7 @@ const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor)
   const nftPoolInstance = new web3.eth.Contract(nftPoolAbi, ntfPoolAddress)
   const masterAddress = await nftPoolMethods.getMaster(nftPoolInstance)
   const masterInstance = new web3.eth.Contract(masterAbi, masterAddress)
+  const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddress)
 
   let nitroInstance
   if (nitroPoolAddress != '0') {
@@ -65,7 +71,7 @@ const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor)
 
   let posId
   try {
-    posId = await nftPoolMethods.getPosId(strategyAddress, nftPoolInstance)
+    posId = await getPosId(strategyInstance)
   } catch (e) {
     posId = 0
   }
