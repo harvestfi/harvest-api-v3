@@ -4,6 +4,7 @@ const {
   ACTIVE_ENDPOINTS,
   DB_CACHE_IDS,
   HEALTH_ALERT_TIME_MS,
+  TVL_LISTS,
 } = require('../../lib/constants')
 const { validateAPIKey, asyncWrap, validateTokenSymbol } = require('./middleware')
 const { Cache } = require('../../lib/db/models/cache')
@@ -203,6 +204,24 @@ const initRouter = app => {
         const queryResponse = await Cache.findOne({ type: DB_CACHE_IDS.STATS }, { [dbField]: 1 })
 
         res.send(get(queryResponse, dbField, {}))
+      }),
+    )
+
+    app.get(
+      '/tvl',
+      asyncWrap(async (req, res) => {
+        const ethTvlList = await Cache.findOne({ type: DB_CACHE_IDS.TVL }, { [TVL_LISTS.ETH]: 1 })
+        const polTvlList = await Cache.findOne({ type: DB_CACHE_IDS.TVL }, { [TVL_LISTS.MATIC]: 1 })
+        const arbTvlList = await Cache.findOne(
+          { type: DB_CACHE_IDS.TVL },
+          { [TVL_LISTS.ARBITRUM]: 1 },
+        )
+
+        res.send({
+          ETH: get(ethTvlList, TVL_LISTS.ETH, []),
+          MATIC: get(polTvlList, TVL_LISTS.MATIC, []),
+          ARBITRUM: get(arbTvlList, TVL_LISTS.ARBITRUM, []),
+        })
       }),
     )
   }

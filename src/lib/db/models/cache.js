@@ -7,9 +7,18 @@ const stringHash = require('string-hash')
 const CacheSchema = new mongoose.Schema({
   type: {
     type: Number,
-    enum: [DB_CACHE_IDS.VAULTS, DB_CACHE_IDS.POOLS, DB_CACHE_IDS.STATS, DB_CACHE_IDS.CMC],
+    enum: [
+      DB_CACHE_IDS.VAULTS,
+      DB_CACHE_IDS.POOLS,
+      DB_CACHE_IDS.STATS,
+      DB_CACHE_IDS.CMC,
+      DB_CACHE_IDS.TVL,
+    ],
   },
   data: { type: mongoose.Schema.Types.Mixed, default: [] },
+  ethTvl: { type: mongoose.Schema.Types.Mixed, default: [] },
+  polTvl: { type: mongoose.Schema.Types.Mixed, default: [] },
+  arbTvl: { type: mongoose.Schema.Types.Mixed, default: [] },
   updatedAt: { type: Date, default: new Date() },
 })
 
@@ -28,6 +37,25 @@ const storeData = (dbSchema, type, data, hasErrors, upsert = true) => {
       type,
     },
     [{ $addFields: { data, updatedAt: new Date() } }],
+    { upsert },
+  )
+}
+
+const appendData = (dbSchema, type, data, hasErrors, upsert = true) => {
+  if (hasErrors) {
+    console.error(
+      `Something went wrong during the ${
+        Object.keys(DB_CACHE_IDS)[type]
+      } loops. Skipping the storing in the database.`,
+    )
+    return
+  }
+
+  return dbSchema.collection.updateOne(
+    {
+      type,
+    },
+    { $push: data },
     { upsert },
   )
 }
@@ -105,6 +133,7 @@ const cachedAxios = {
 module.exports = {
   Cache: mongoose.model('cache', CacheSchema),
   storeData,
+  appendData,
   loadData,
   clearAllDataTestOnly,
   cachedAxios,
