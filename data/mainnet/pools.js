@@ -4840,17 +4840,20 @@ module.exports = [
     rewardTokenSymbols: ['FARM'],
     tradingApyFunction: {
       type: TRADING_APY_TYPES.CONVEX,
-      params: ['14'],
+      params: ['factory-v2-303'],
     },
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.V2.crvSTETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
-       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a> & 
-       <a href="https://etherscan.io/token/${addresses.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>. 
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.crvSTETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.crvSTETH.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/factory-v2-303/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
    `,
