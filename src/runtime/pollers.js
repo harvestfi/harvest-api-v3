@@ -650,9 +650,9 @@ const getTVL = async () => {
   let hasErrors
 
   const chains = [
-    { name: 'ETH', type: CHAIN_TYPES.ETH, list: TVL_LISTS.ETH },
-    { name: 'Polygon', type: CHAIN_TYPES.MATIC, list: TVL_LISTS.MATIC },
-    { name: 'Arbitrum', type: CHAIN_TYPES.ARBITRUM_ONE, list: TVL_LISTS.ARBITRUM },
+    { name: 'ETH', type: CHAIN_IDS.ETH, list: TVL_LISTS.ETH },
+    { name: 'Polygon', type: CHAIN_IDS.POLYGON, list: TVL_LISTS.MATIC },
+    { name: 'Arbitrum', type: CHAIN_IDS.ARBITRUM_ONE, list: TVL_LISTS.ARBITRUM },
   ]
 
   for (const chain of chains) {
@@ -675,8 +675,8 @@ const getTVL = async () => {
           savedTimestamp = parseInt(response[j].timestamp)
         }
       }
-      if (chain.type === CHAIN_TYPES.ETH) data = { ethTvl: { $each: result } }
-      else if (chain.type === CHAIN_TYPES.MATIC) data = { polTvl: { $each: result } }
+      if (chain.type === CHAIN_IDS.ETH) data = { ethTvl: { $each: result } }
+      else if (chain.type === CHAIN_IDS.POLYGON) data = { polTvl: { $each: result } }
       else data = { arbTvl: { $each: result } }
       await appendData(Cache, DB_CACHE_IDS.TVL, data, hasErrors)
     }
