@@ -70,6 +70,9 @@ const camelotNitroContract = require('../contracts/camelot-nitropool/contract.js
 const camelotMasterMethods = require('../contracts/camelot-master/methods')
 const camelotMasterContract = require('../contracts/camelot-master/contract.json')
 
+const camelotStrategyMethods = require('../contracts/camelot-strategy/methods')
+const camelotStrategyContract = require('../contracts/camelot-strategy/contract.json')
+
 module.exports = {
   xgrailStrategy: {
     methods: xgrailStrategyMethods,
@@ -86,6 +89,10 @@ module.exports = {
   camelotNitroPool: {
     methods: camelotNitroMethods,
     contract: camelotNitroContract,
+  },
+  camelotStrategy: {
+    methods: camelotStrategyMethods,
+    contract: camelotStrategyContract,
   },
   camelotMaster: {
     methods: camelotMasterMethods,

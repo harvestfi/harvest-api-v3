@@ -102,7 +102,7 @@ const CORS_SETTINGS = {
 const UPDATE_LOOP_INTERVAL_MS = parseInt(process.env.UPDATE_LOOP_INTERVAL_MS, 10) || 3600000 // Default: 1 Hour
 const HEALTH_ALERT_TIME_MS = parseInt(process.env.HEALTH_ALERT_TIME_MS, 10) || 5400000 // Default: 1.5 Hour
 
-const ACTIVE_ENDPOINTS = (process.env.ACTIVE_ENDPOINTS || ENDPOINT_TYPES.INTERNAL).toLowerCase() // Default: ENDPOINT_TYPES.ALL
+const ACTIVE_ENDPOINTS = (process.env.ACTIVE_ENDPOINTS || ENDPOINT_TYPES.ALL).toLowerCase() // Default: ENDPOINT_TYPES.ALL
 
 const CG_CACHE_TTL = parseInt(process.env.CG_CACHE_TTL, 10) || 600000 // Default: 10 Mins in ms
 
@@ -171,9 +171,9 @@ const SUSHI_GRAPHQL_ENDPOINTS = {
   ETH: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
 }
 
-const CHAIN_TYPES = {
+const CHAIN_IDS = {
   ETH: '1',
-  MATIC: '137',
+  POLYGON: '137',
   ARBITRUM_ONE: '42161',
 }
 
@@ -236,7 +236,7 @@ module.exports = {
   WEB3_CALL_COUNT_STATS_KEY,
   WEB3_CALL_COUNT_KEY,
   GET_POOL_DATA_BATCH_SIZE,
-  CHAIN_TYPES,
+  CHAIN_IDS,
   INFURA_URL,
   INFURA_WS_URL,
   COINGECKO_PRICE_API_ENDPOINT_CONTRACT,

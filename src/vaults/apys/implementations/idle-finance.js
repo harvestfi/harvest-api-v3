@@ -2,7 +2,7 @@ const BigNumber = require('bignumber.js')
 const { getWeb3 } = require('../../../lib/web3')
 const tokenAddresses = require('../../../lib/data/addresses.json')
 
-const { UI_DATA_FILES, CHAIN_TYPES } = require('../../../lib/constants')
+const { UI_DATA_FILES, CHAIN_IDS } = require('../../../lib/constants')
 const { getUIData } = require('../../../lib/data')
 const { cache } = require('../../../lib/cache')
 
@@ -32,7 +32,7 @@ const getApy = async (tokenSymbol, idleLendingTokenAddress, factor, network = '1
 
   let currentRate, rewardTokenInUsd
 
-  if (network == CHAIN_TYPES.ETH) {
+  if (network == CHAIN_IDS.ETH) {
     const {
       contract: {
         abi: idleControllerAbi,
@@ -54,7 +54,7 @@ const getApy = async (tokenSymbol, idleLendingTokenAddress, factor, network = '1
       .dividedBy(new BigNumber(10).exponentiatedBy(18))
 
     rewardTokenInUsd = new BigNumber(await getTokenPrice(tokenAddresses.IDLE))
-  } else if (network == CHAIN_TYPES.MATIC) {
+  } else if (network == CHAIN_IDS.POLYGON) {
     //Will add this implemenation later, it represents a tiny part of the APY.
     currentRate = new BigNumber(0)
     rewardTokenInUsd = new BigNumber(0)

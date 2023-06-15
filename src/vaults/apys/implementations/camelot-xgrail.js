@@ -2,7 +2,7 @@ const BigNumber = require('bignumber.js')
 const { web3ARBITRUM } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
 const { xgrailStrategy, camelotDividends } = require('../../../lib/web3/contracts')
-const { CHAIN_TYPES } = require('../../../lib/constants')
+const { CHAIN_IDS } = require('../../../lib/constants')
 
 const getApy = async (strategyAddress, factor) => {
   const web3 = web3ARBITRUM
@@ -36,7 +36,7 @@ const getApy = async (strategyAddress, factor) => {
     const rewardAmount = new BigNumber(rewardInfo.currentDistributionAmount)
     const rewardPerSecond = rewardAmount.div(rewardDuration)
 
-    const rewardPrice = new BigNumber(await getTokenPrice(rewardToken, CHAIN_TYPES.ARBITRUM_ONE))
+    const rewardPrice = new BigNumber(await getTokenPrice(rewardToken, CHAIN_IDS.ARBITRUM_ONE))
     const usdPerSecond = rewardPerSecond.times(rewardPrice).div(1e18)
     totalUsdPerSecond = totalUsdPerSecond.plus(usdPerSecond)
   }

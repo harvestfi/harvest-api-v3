@@ -12,7 +12,7 @@ const getTradingApy = async poolAddress => {
     apy = 0
   }
 
-  return apy.toFixed(2)
+  return apy
 }
 
 module.exports = {

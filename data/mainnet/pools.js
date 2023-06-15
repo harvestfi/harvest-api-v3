@@ -1,11 +1,11 @@
-const { CHAINS_ID, TRADING_APY_TYPES, POOL_TYPES } = require('../constants')
+const { CHAIN_IDS, TRADING_APY_TYPES, POOL_TYPES } = require('../constants')
 const addresses = require('./addresses.json')
 
 const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelot_GRAIL_ARB',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -28,11 +28,15 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GRAIL_ARB.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
+      <p> Get the 
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GRAIL_ARB.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+        <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+     </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelot_GMX_USDC',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -55,11 +59,15 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GMX_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GMX_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelot_SILO_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -83,11 +91,15 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_SILO_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_SILO_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelot_VELA_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -111,11 +123,15 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_VELA_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_VELA_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'verse_WBTC_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -136,11 +152,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.verse_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.verse_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Verse LP tokens</a> by supplying liquidity on 
+      <a href="https://verse.bitcoin.com/pools/eth/wbtc-eth/deposit/" target="_blank" rel="noopener noreferrer">Verse Dex</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'verse_USDC_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -161,11 +181,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.verse_USDC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.verse_USDC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Verse LP tokens</a> by supplying liquidity on 
+      <a href="https://verse.bitcoin.com/pools/eth/usdc-eth/deposit/" target="_blank" rel="noopener noreferrer">Verse Dex</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelot_ETH_USDC',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -188,11 +212,15 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelot_GRAIL_USDC',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -215,11 +243,15 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GRAIL_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GRAIL_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelot_ARB_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -242,11 +274,15 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_ARB_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_ARB_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelot_iFARM_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -270,11 +306,15 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL and iFARM rewards can be claimed with the "Claim All" button.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'xGRAIL',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.NewPool,
@@ -296,7 +336,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'balancer_bbwstETH_bbaUSD_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -305,7 +345,7 @@ module.exports = [
         addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.Underlying,
         'balancerv2_arbitrum',
         true,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.NewPool,
@@ -323,11 +363,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'balancer_wstETH_aWETH_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -336,7 +380,7 @@ module.exports = [
         addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.Underlying,
         'balancerv2_arbitrum',
         true,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.NewPool,
@@ -354,11 +398,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'balancer_rETH_aWETH_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -367,7 +415,7 @@ module.exports = [
         addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying,
         'balancerv2_arbitrum',
         true,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.NewPool,
@@ -384,11 +432,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_wstETH_amETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -397,7 +449,7 @@ module.exports = [
         addresses.MATIC.V2.balancer_wstETH_amETH.Underlying,
         'balancerv2_matic',
         true,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     contractAddress: addresses.MATIC.V2.balancer_wstETH_amETH.NewPool,
@@ -415,11 +467,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wstETH_amETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_wstETH_amETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_wstETH_amETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_WBTC_ETH_USDC_polygon',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -440,11 +496,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_WBTC_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_WBTC_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_WBTC_ETH_USDC.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_frxETH_amETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -453,7 +513,7 @@ module.exports = [
         addresses.MATIC.V2.balancer_frxETH_amETH.Underlying,
         'balancerv2_matic',
         true,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     contractAddress: addresses.MATIC.V2.balancer_frxETH_amETH.NewPool,
@@ -470,11 +530,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_frxETH_amETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_frxETH_amETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_frxETH_amETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'curve_OETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.curve_OETH.NewPool,
@@ -496,11 +560,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.curve_OETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_OETH.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/factory-v2-298/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'curve_crvUSD_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.curve_crvUSD_USDC.NewPool,
@@ -509,6 +577,10 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['factory-crvusd-0'],
+    },
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -517,11 +589,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.curve_crvUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_crvUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/factory-crvusd-0/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'curve_crvUSD_USDT',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.curve_crvUSD_USDT.NewPool,
@@ -530,6 +606,10 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['factory-crvusd-1'],
+    },
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -538,11 +618,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.curve_crvUSD_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_crvUSD_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/factory-crvusd-1/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'verse_VERSE_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -563,11 +647,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.verse_VERSE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.verse_VERSE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Verse LP tokens</a> by supplying liquidity on 
+      <a href="https://verse.bitcoin.com/pools/eth/verse-eth/deposit/" target="_blank" rel="noopener noreferrer">Verse Dex</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_TNGBL_USDC',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -588,11 +676,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_TNGBL_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_TNGBL_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_TNGBL_USDC.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_MaticX_amMatic',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -601,7 +693,7 @@ module.exports = [
         addresses.MATIC.V2.balancer_MaticX_amMatic.Underlying,
         'balancerv2_matic',
         true,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     contractAddress: addresses.MATIC.V2.balancer_MaticX_amMatic.NewPool,
@@ -619,11 +711,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_MaticX_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_MaticX_amMatic.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_MaticX_amMatic.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_stMatic_amMatic',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -632,7 +728,7 @@ module.exports = [
         addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying,
         'balancerv2_matic',
         true,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     contractAddress: addresses.MATIC.V2.balancer_stMatic_amMatic.NewPool,
@@ -650,11 +746,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_stMatic_amMatic.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_2EUR_PAR_v2',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -665,8 +765,8 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.balancer_2EUR_PAR_v2.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.MATIC.miFARM, addresses.MATIC.JEUR, addresses.MATIC.JRT],
+    rewardTokenSymbols: ['iFARM', 'JEUR', 'JRT'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -675,11 +775,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_2EUR_PAR_v2.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'curve_aCRV_CRV',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.curve_aCRV_CRV.NewPool,
@@ -693,7 +797,7 @@ module.exports = [
       params: [
         addresses.MATIC.V2.curve_aCRV_CRV.Miner,
         addresses.MATIC.V2.curve_aCRV_CRV.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     stakeAndDepositHelpMessage: `
@@ -705,11 +809,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_aCRV_CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_aCRV_CRV.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/polygon/pools/factory-crypto-9/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'curve_USDR_3CRV',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.curve_USDR_3CRV.NewPool,
@@ -723,7 +831,7 @@ module.exports = [
       params: [
         addresses.MATIC.V2.curve_USDR_3CRV.Miner,
         addresses.MATIC.V2.curve_USDR_3CRV.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     stakeAndDepositHelpMessage: `
@@ -735,11 +843,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_USDR_3CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_USDR_3CRV.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/polygon/pools/factory-v2-339/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'balancer_OHM_DAI',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -760,11 +872,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.balancer_OHM_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.balancer_OHM_DAI.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_OHM_DAI.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'balancer_RDNT_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -785,11 +901,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'lizard_etsGamma_usdPlus',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.lizard_etsGamma_usdPlus.NewPool,
@@ -810,7 +930,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'convex_FRAX_USDC_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.NewPool,
@@ -824,7 +944,7 @@ module.exports = [
       params: [
         addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.Miner,
         addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.PoolId,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     stakeAndDepositHelpMessage: `
@@ -836,11 +956,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_FRAX_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/arbitrum/pools/factory-v2-41/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'lizard_ARB_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.lizard_ARB_ETH.NewPool,
@@ -861,7 +985,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'lizard_ARB_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.lizard_ARB_USDC.NewPool,
@@ -882,7 +1006,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'sushi_MAGIC_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.sushi_MAGIC_ETH.NewPool,
@@ -907,7 +1031,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'sushi_DPX_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.sushi_DPX_ETH.NewPool,
@@ -932,7 +1056,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'sushi_RDPX_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.sushi_RDPX_ETH.NewPool,
@@ -957,7 +1081,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'curve_3CRV_polygon',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.curve_3CRV.NewPool,
@@ -971,7 +1095,7 @@ module.exports = [
       params: [
         addresses.MATIC.V2.curve_3CRV.Miner,
         addresses.MATIC.V2.curve_3CRV.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     stakeAndDepositHelpMessage: `
@@ -983,11 +1107,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_3CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_3CRV.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/polygon/pools/aave/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'curve_3Crypto_polygon',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.curve_3Crypto.NewPool,
@@ -1001,7 +1129,7 @@ module.exports = [
       params: [
         addresses.MATIC.V2.curve_3Crypto.Miner,
         addresses.MATIC.V2.curve_3Crypto.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     stakeAndDepositHelpMessage: `
@@ -1013,11 +1141,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/polygon/pools/atricrypto3/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'curve_CRV_3Crypto_polygon',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.curve_CRV_3Crypto.NewPool,
@@ -1031,7 +1163,7 @@ module.exports = [
       params: [
         addresses.MATIC.V2.curve_CRV_3Crypto.Miner,
         addresses.MATIC.V2.curve_CRV_3Crypto.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     stakeAndDepositHelpMessage: `
@@ -1043,11 +1175,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_CRV_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_CRV_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/polygon/pools/factory-crypto-1/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'curve_MATIC_3Crypto_polygon',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.curve_MATIC_3Crypto.NewPool,
@@ -1061,7 +1197,7 @@ module.exports = [
       params: [
         addresses.MATIC.V2.curve_MATIC_3Crypto.Miner,
         addresses.MATIC.V2.curve_MATIC_3Crypto.PoolId,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     stakeAndDepositHelpMessage: `
@@ -1073,11 +1209,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_MATIC_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_MATIC_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/polygon/pools/factory-crypto-83/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_frxETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -1086,7 +1226,7 @@ module.exports = [
         addresses.MATIC.V2.balancer_frxETH.Underlying,
         'balancerv2_matic',
         true,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     contractAddress: addresses.MATIC.V2.balancer_frxETH.NewPool,
@@ -1103,11 +1243,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_frxETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_frxETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_frxETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_SPHERE_MATIC',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -1128,11 +1272,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_SPHERE_MATIC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_SPHERE_MATIC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_SPHERE_MATIC.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_stETH_polygon',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -1141,7 +1289,7 @@ module.exports = [
         addresses.MATIC.V2.balancer_stETH.Underlying,
         'balancerv2_matic',
         true,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     contractAddress: addresses.MATIC.V2.balancer_stETH.NewPool,
@@ -1158,11 +1306,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_stETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_stETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_wUSDR_USDC_polygon',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -1183,11 +1335,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_wUSDR_USDC.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'balancer_OHM_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -1208,11 +1364,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.balancer_OHM_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.balancer_OHM_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_OHM_ETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'balancer_PENDLE_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -1233,11 +1393,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.balancer_PENDLE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.balancer_PENDLE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_PENDLE_ETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'balancer_rETH_BADGER',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -1258,11 +1422,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.balancer_rETH_BADGER.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.balancer_rETH_BADGER.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_rETH_BADGER.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'balancer_stETH_rETH_sfrxETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -1283,11 +1451,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.balancer_stETH_rETH_sfrxETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.balancer_stETH_rETH_sfrxETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_stETH_rETH_sfrxETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'balancer_wUSDR_USDC',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -1308,11 +1480,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_wUSDR_USDC.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'curve_lvUSD',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.curve_lvUSD.NewPool,
@@ -1329,11 +1505,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.curve_lvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_lvUSD.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/factory-v2-268/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'iPoison',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.iPoison.NewPool,
@@ -1354,7 +1534,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'pGOLD',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.pGOLD.NewPool,
@@ -1375,7 +1555,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'pSLVR',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.pSLVR.NewPool,
@@ -1396,7 +1576,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'poison_pGOLD_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.poison_pGOLD_USDC.NewPool,
@@ -1417,7 +1597,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'poison_pSLVR_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.poison_pSLVR_USDC.NewPool,
@@ -1438,7 +1618,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'poison_pTSLA_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.poison_pTSLA_USDC.NewPool,
@@ -1459,7 +1639,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'aura_bbiUSD',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -1480,11 +1660,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.aura_bbiUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.aura_bbiUSD.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.aura_bbiUSD.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'lizard_SLIZ_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.lizard_SLIZ_ETH.NewPool,
@@ -1505,7 +1689,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'lizard_ETH_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.lizard_ETH_USDC.NewPool,
@@ -1526,7 +1710,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'lizard_agEUR_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.lizard_agEUR_USDC.NewPool,
@@ -1547,7 +1731,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'lizard_LUSD_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.lizard_LUSD_USDC.NewPool,
@@ -1568,7 +1752,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'convex_USDT_WBTC_WETH_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.NewPool,
@@ -1582,7 +1766,7 @@ module.exports = [
       params: [
         addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.Miner,
         addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.PoolId,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     stakeAndDepositHelpMessage: `
@@ -1594,11 +1778,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_USDT_WBTC_WETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/arbitrum/pools/tricrypto/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'convex_USDC_USDT_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.NewPool,
@@ -1612,7 +1800,7 @@ module.exports = [
       params: [
         addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.Miner,
         addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.PoolId,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     stakeAndDepositHelpMessage: `
@@ -1624,11 +1812,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_USDC_USDT_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/arbitrum/pools/2pool/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'balancer_wstETH_wETH_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -1637,7 +1829,7 @@ module.exports = [
         addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.Underlying,
         'balancerv2_arbitrum',
         true,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.NewPool,
@@ -1655,11 +1847,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'balancer_wstETH_USDC_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -1668,7 +1864,7 @@ module.exports = [
         addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.Underlying,
         'balancerv2_arbitrum',
         true,
-        CHAINS_ID.ARBITRUM_ONE,
+        CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.NewPool,
@@ -1686,11 +1882,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'balancer_wBTC_wETH_USDC_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -1714,11 +1914,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wBTC_wETH_USDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wBTC_wETH_USDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_wBTC_wETH_USDC_arbitrum.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'Curve_2pool_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.Curve_2pool_arbitrum.NewPool,
@@ -1742,7 +1946,7 @@ module.exports = [
     },
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'Curve_EursUsd_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.Curve_EursUsd_arbitrum.NewPool,
@@ -1766,7 +1970,7 @@ module.exports = [
     },
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'Curve_RenWbtc_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.Curve_RenWbtc_arbitrum.NewPool,
@@ -1790,7 +1994,7 @@ module.exports = [
     },
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'Curve_TriCrypto_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.Curve_TriCrypto_arbitrum.NewPool,
@@ -1814,7 +2018,7 @@ module.exports = [
     },
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'StargateUSDC_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.StargateUSDC_arbitrum.NewPool,
@@ -1834,7 +2038,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'StargateUSDT_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.StargateUSDT_arbitrum.NewPool,
@@ -1854,7 +2058,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'Sushi_ETHDAI_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHDAI_arbitrum.NewPool,
@@ -1879,7 +2083,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'Sushi_ETHGOHM_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHGOHM_arbitrum.NewPool,
@@ -1904,7 +2108,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'Sushi_ETHMAGIC_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHMAGIC_arbitrum.NewPool,
@@ -1929,7 +2133,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'Sushi_ETHMIM_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHMIM_arbitrum.NewPool,
@@ -1954,7 +2158,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'Sushi_ETHSPELL_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHSPELL_arbitrum.NewPool,
@@ -1979,7 +2183,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ARBITRUM_ONE,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'Sushi_ETHSUSHI_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.Sushi_ETHSUSHI_arbitrum.NewPool,
@@ -2004,7 +2208,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'quickGamma_MATIC_ETH_narrow',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2020,17 +2224,21 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens </a>in a Gamma farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://quickswap.gamma.xyz/vault-detail/WMATIC-WETH-0-Narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'quickGamma_MATIC_ETH_wide',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2046,17 +2254,21 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens </a>in a Gamma farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://quickswap.gamma.xyz/vault-detail/WMATIC-WETH-0-Wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'quickGamma_MATIC_USDC_narrow',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2072,17 +2284,21 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens </a>in a Gamma farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://quickswap.gamma.xyz/vault-detail/WMATIC-USDC-0-Narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'quickGamma_MATIC_USDC_wide',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2098,17 +2314,21 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens </a>in a Gamma farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://quickswap.gamma.xyz/vault-detail/WMATIC-USDC-0-Wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'quickGamma_USDC_ETH_narrow',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2124,17 +2344,21 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens </a>in a Gamma farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://quickswap.gamma.xyz/vault-detail/USDC-WETH-0-Narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'quickGamma_USDC_ETH_wide',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2150,17 +2374,21 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens </a>in a Gamma farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Quickswap LP tokens</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://quickswap.gamma.xyz/vault-detail/USDC-WETH-0-Wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_bbamusd',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2169,7 +2397,7 @@ module.exports = [
         addresses.MATIC.V2.balancer_bbamusd.Underlying,
         'balancerv2_matic',
         true,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     contractAddress: addresses.MATIC.V2.balancer_bbamusd.NewPool,
@@ -2186,11 +2414,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_bbamusd.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_bbamusd.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_bbamusd.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_tetuBal',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2199,7 +2431,7 @@ module.exports = [
         addresses.MATIC.V2.balancer_tetuBal.Underlying,
         'balancerv2_matic',
         true,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     contractAddress: addresses.MATIC.V2.balancer_tetuBal.NewPool,
@@ -2216,11 +2448,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_tetuBal.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_tetuBal.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_tetuBal.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_2BRLUSD',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2229,7 +2465,7 @@ module.exports = [
         addresses.MATIC.V2.balancer_2BRLUSD.Underlying,
         'balancerv2_matic',
         true,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     contractAddress: addresses.MATIC.V2.balancer_2BRLUSD.NewPool,
@@ -2246,11 +2482,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2BRLUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_2BRLUSD.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_2BRLUSD.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_2BRL',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2271,11 +2511,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2BRL.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_2BRL.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_2BRL.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'apeStake',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.apeStake.NewPool,
@@ -2295,7 +2539,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'convex_DOLA_FRAXBP',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.convex_DOLA_FRAXBP.NewPool,
@@ -2321,7 +2565,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'convex_USDD',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.convex_USDD.NewPool,
@@ -2347,7 +2591,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'convex_pETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.convex_pETH.NewPool,
@@ -2369,11 +2613,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.convex_pETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.convex_pETH.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/factory-v2-194/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'convex_CVX_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.convex_CVX_ETH.NewPool,
@@ -2395,11 +2643,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.convex_CVX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.convex_CVX_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/cvxeth/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'meshswap_MESH_oMOOI',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.meshswap_MESH_oMOOI.NewPool,
@@ -2419,7 +2671,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'meshswap_MESH_oZEMIT',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.meshswap_MESH_oZEMIT.NewPool,
@@ -2439,7 +2691,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'meshswap_USDC_oUSDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.meshswap_USDC_oUSDC.NewPool,
@@ -2459,7 +2711,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'meshswap_USDT_oUSDT',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.meshswap_USDT_oUSDT.NewPool,
@@ -2479,7 +2731,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'meshswap_WMATIC_MESH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.meshswap_WMATIC_MESH.NewPool,
@@ -2499,7 +2751,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'meshswap_WMATIC_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.meshswap_WMATIC_USDC.NewPool,
@@ -2519,7 +2771,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'meshswap_WMATIC_USDT',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.meshswap_WMATIC_USDT.NewPool,
@@ -2539,7 +2791,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'notional_DAI',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.notional_DAI.NewPool,
@@ -2559,7 +2811,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'notional_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.notional_ETH.NewPool,
@@ -2579,7 +2831,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'notional_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.notional_USDC.NewPool,
@@ -2599,7 +2851,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'notional_WBTC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.notional_WBTC.NewPool,
@@ -2619,7 +2871,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_2EUR_EURT_HODL',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_2EUR_EURT_HODL.NewPool,
@@ -2643,7 +2895,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.balancer_2EUR_PAR.Underlying, 'balancerv2_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_2EUR_PAR',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.balancer_2EUR_PAR.NewPool,
@@ -2659,11 +2911,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_PAR.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_2EUR_PAR.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_2EUR_PAR.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'convex_cvxCRV',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.convex_cvxCRV.NewPool,
@@ -2685,7 +2941,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'aura_auraBAL',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.aura_auraBAL.NewPool,
@@ -2706,7 +2962,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'aura_auraBAL_lp',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2727,11 +2983,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.aura_auraBAL_lp.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.aura_auraBAL_lp.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.aura_auraBAL_lp.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'aura_bbaUSD',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2752,11 +3012,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.aura_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.aura_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.aura_bbaUSD.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'aura_rETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2777,11 +3041,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.aura_rETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.aura_rETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.aura_rETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'aura_wstETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2802,11 +3070,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.aura_wstETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.aura_wstETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.aura_wstETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'bal_MaticX',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2815,7 +3087,7 @@ module.exports = [
         addresses.MATIC.V2.bal_MaticX.Underlying,
         'balancerv2_matic',
         true,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     contractAddress: addresses.MATIC.V2.bal_MaticX.NewPool,
@@ -2833,11 +3105,15 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.bal_MaticX.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.bal_MaticX.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.bal_MaticX.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'bal_stMatic',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2846,7 +3122,7 @@ module.exports = [
         addresses.MATIC.V2.bal_stMatic.Underlying,
         'balancerv2_matic',
         true,
-        CHAINS_ID.MATIC_MAINNET,
+        CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
     contractAddress: addresses.MATIC.V2.bal_stMatic.NewPool,
@@ -2864,6 +3140,10 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.bal_stMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.bal_stMatic.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.bal_stMatic.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
@@ -2872,7 +3152,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.balancer_2EUR_agEUR.Underlying, 'balancerv2_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_2EUR_agEUR',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.balancer_2EUR_agEUR.NewPool,
@@ -2888,6 +3168,10 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_agEUR.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
+      <p> Get the 
+      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_2EUR_agEUR.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_2EUR_agEUR.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
     </div>
    `,
   },
@@ -2896,7 +3180,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.jarvis_DENJUL22_4EUR.Underlying, 'kyber_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_DENJUL22_4EUR',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_DENJUL22_4EUR.NewPool,
@@ -2916,7 +3200,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_2SGD_HODL',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_2SGD_HODL.NewPool,
@@ -2943,7 +3227,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_2JPY_HODL',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_2JPY_HODL.NewPool,
@@ -2971,7 +3255,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_2CAD_HODL',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_2CAD_HODL.NewPool,
@@ -2999,7 +3283,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'crv_CRV_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.crv_CRV_ETH.NewPool,
@@ -3029,7 +3313,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.jarvis_AUR3_USDC.Underlying, 'kyber_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_AUR3_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_AUR3_USDC.NewPool,
@@ -3050,7 +3334,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_ORC_ETH',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -3075,7 +3359,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'bal_TUSD_STABLE',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -3104,7 +3388,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LOOKS,
       params: [addresses.V2.looks_LOOKS.RewardPool],
     },
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'LOOKS',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.looks_LOOKS.NewPool,
@@ -3128,7 +3412,7 @@ module.exports = [
       type: TRADING_APY_TYPES.MSTABLE,
       params: ['imUSD', 'polygon'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'mUSD',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.mUSD.NewPool,
@@ -3153,7 +3437,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.V2.uni_LOOKS_ETH.Underlying, 'uniswap_eth'],
     },
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'uni_LOOKS_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.uni_LOOKS_ETH.NewPool,
@@ -3177,7 +3461,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.SUSHI_GENE_ETH.Underlying, 'sushiswap_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'SUSHI_GENE_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.SUSHI_GENE_ETH.NewPool,
@@ -3202,7 +3486,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.SUSHI_GNOME_ETH.Underlying, 'sushiswap_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'SUSHI_GNOME_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.SUSHI_GNOME_ETH.NewPool,
@@ -3227,7 +3511,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.jarvis_AUR_USDC_V2.Underlying, 'kyber_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_AUR_USDC_V2',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_AUR_USDC_V2.NewPool,
@@ -3252,7 +3536,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.jarvis_DENMAY22_4EUR.Underlying, 'kyber_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_DENMAY22_4EUR',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_DENMAY22_4EUR.NewPool,
@@ -3276,7 +3560,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.jarvis_DEN2_4EUR.Underlying, 'kyber_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_DEN2_4EUR',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_DEN2_4EUR.NewPool,
@@ -3300,7 +3584,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.jarvis_DEN_4EUR.Underlying, 'kyber_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_DEN_4EUR',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_DEN_4EUR.NewPool,
@@ -3320,7 +3604,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_4EUR_HODL',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_4EUR_HODL.NewPool,
@@ -3351,7 +3635,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.quick_YEL_MATIC.Underlying, 'quickswap_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'quick_YEL_MATIC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.quick_YEL_MATIC.NewPool,
@@ -3372,7 +3656,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'polygon_WETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.polygon_WETH.NewPool,
@@ -3391,7 +3675,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'polygon_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.polygon_USDC.NewPool,
@@ -3410,7 +3694,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_USDC_ETH_4200_5500',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -3436,7 +3720,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_DAI_ETH_4200_5500',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -3462,7 +3746,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_ETH_USDT_4200_5500',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -3488,7 +3772,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_CNG_ETH',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -3510,7 +3794,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_USDC_ETH_3000_4500',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -3536,7 +3820,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_DAI_ETH_3000_4500',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -3562,7 +3846,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_USDT_ETH_3000_4500',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -3588,7 +3872,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_DON_WETH_full_range',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -3617,7 +3901,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'liquity_LQTY',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.liquity_LQTY.NewPool,
@@ -3642,7 +3926,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.quickswap_IFARM_QUICK.Underlying, 'quickswap_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'quickswap_IFARM_QUICK',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.quickswap_IFARM_QUICK.NewPool,
@@ -3663,7 +3947,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'profit-sharing-farm',
     type: POOL_TYPES.PROFIT_SHARING,
     contractAddress: addresses.pools.ProfitSharingFARMUpstream,
@@ -3696,7 +3980,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -3726,7 +4010,7 @@ module.exports = [
     },
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'farm-weth',
     displayName: 'FARM/ETH',
     tradingApyFunction: {
@@ -3753,7 +4037,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'farm-grain',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -3779,7 +4063,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'YCRV',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.YCRV.NewPool,
@@ -3805,7 +4089,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'ThreePool',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.ThreePool.NewPool,
@@ -3831,7 +4115,7 @@ module.exports = [
     zapperFiTokens: ['USDC', 'DAI', 'USDT', 'WETH'],
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'crvHBTC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.crvHBTC.NewPool,
@@ -3857,7 +4141,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'crvCOMPOUND',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.crvCOMPOUND.NewPool,
@@ -3883,7 +4167,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'crvUSDN',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.crvUSDN.NewPool,
@@ -3909,7 +4193,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.USDC.NewPool,
@@ -3932,7 +4216,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'USDT',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.USDT.NewPool,
@@ -3955,7 +4239,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'TUSD',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.pools.TUSDPool,
@@ -3975,7 +4259,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'DAI',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.DAI.NewPool,
@@ -3998,7 +4282,7 @@ module.exports = [
   `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'crvOBTC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.crvOBTC.NewPool,
@@ -4023,7 +4307,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'TBTCMixed',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.TBTCMixed.NewPool,
@@ -4048,7 +4332,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'crvRenWBTC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.crvRenWBTC.NewPool,
@@ -4074,7 +4358,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'WBTC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.WBTC.NewPool,
@@ -4096,7 +4380,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'renBTC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.renBTC.NewPool,
@@ -4116,7 +4400,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     uniPool: true,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -4142,7 +4426,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'WETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.WETH.NewPool,
@@ -4164,7 +4448,7 @@ module.exports = [
   `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UNI_MIC_USDT',
     fullBuyback: true,
     type: POOL_TYPES.INCENTIVE,
@@ -4187,7 +4471,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UNI_MIS_USDT',
     fullBuyback: true,
     type: POOL_TYPES.INCENTIVE,
@@ -4210,7 +4494,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     fullBuyback: true,
     id: 'sushi_PERP_ETH',
     tradingApyFunction: {
@@ -4237,7 +4521,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_SUSHI_WETH',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -4263,7 +4547,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_DAI_WETH',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -4289,7 +4573,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_USDC_WETH',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -4315,7 +4599,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_USDT_WETH',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -4341,7 +4625,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_WBTC_WETH',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -4367,7 +4651,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_UST_WETH',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -4393,7 +4677,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
       params: [addresses.V2.oneInch_ETH_DAI.Underlying],
@@ -4419,7 +4703,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
       params: [addresses.V2.oneInch_ETH_USDC.Underlying],
@@ -4445,7 +4729,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
       params: [addresses.V2.oneInch_ETH_USDT.Underlying],
@@ -4471,7 +4755,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
       params: [addresses.V2.oneInch_1INCH_USDC.Underlying],
@@ -4497,7 +4781,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'crvEURS',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.crvEURS.NewPool,
@@ -4522,7 +4806,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'crvGUSD',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.crvGUSD.NewPool,
@@ -4546,7 +4830,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'crvSTETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.crvSTETH.NewPool,
@@ -4556,23 +4840,26 @@ module.exports = [
     rewardTokenSymbols: ['FARM'],
     tradingApyFunction: {
       type: TRADING_APY_TYPES.CONVEX,
-      params: ['14'],
+      params: ['factory-v2-303'],
     },
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.V2.crvSTETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
-       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a> & 
-       <a href="https://etherscan.io/token/${addresses.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>. 
        At every harvest, the earned rewards are reinvested into more
        <a href="https://etherscan.io/token/${addresses.V2.crvSTETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.crvSTETH.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/factory-v2-303/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'crvLink',
     type: POOL_TYPES.INCENTIVE_BUYBACK,
     contractAddress: addresses.V2.crvLink.NewPool,
@@ -4598,7 +4885,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'SUSHI',
     type: POOL_TYPES.INCENTIVE_BUYBACK,
     contractAddress: addresses.V2.SUSHI.NewPool,
@@ -4623,7 +4910,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.sushi_DAI_WETH, 'sushiswap_eth'],
     },
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_DAI_WETH_HODL',
     type: POOL_TYPES.INCENTIVE_BUYBACK,
     contractAddress: addresses.V2.sushi_DAI_WETH_HODL.NewPool,
@@ -4649,7 +4936,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.sushi_USDC_WETH, 'sushiswap_eth'],
     },
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_USDC_WETH_HODL',
     type: POOL_TYPES.INCENTIVE_BUYBACK,
     contractAddress: addresses.V2.sushi_USDC_WETH_HODL.NewPool,
@@ -4675,7 +4962,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.sushi_USDT_WETH, 'sushiswap_eth'],
     },
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_USDT_WETH_HODL',
     type: POOL_TYPES.INCENTIVE_BUYBACK,
     contractAddress: addresses.V2.sushi_USDT_WETH_HODL.NewPool,
@@ -4701,7 +4988,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.sushi_WBTC_WETH, 'sushiswap_eth'],
     },
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_WBTC_WETH_HODL',
     type: POOL_TYPES.INCENTIVE_BUYBACK,
     contractAddress: addresses.V2.sushi_WBTC_WETH_HODL.NewPool,
@@ -4723,7 +5010,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -4750,7 +5037,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -4777,7 +5064,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -4804,7 +5091,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
       params: [addresses.V2.nft20_Rope.Underlying, 'uniswap_eth'],
@@ -4830,7 +5117,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -4857,7 +5144,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -4884,7 +5171,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -4911,7 +5198,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     uniPool: true,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
@@ -4941,7 +5228,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.V2.klondike_KXUSD_DAI.Underlying],
     },
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'klondike_KXUSD_DAI',
     fullBuyback: true,
     type: POOL_TYPES.INCENTIVE_BUYBACK,
@@ -4964,7 +5251,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_ZUSD_ETH',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3,
@@ -4986,7 +5273,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_zUSD_USDC_full_range',
     tradingApyFunction: {
       type: 'UNIV3_V2',
@@ -5008,7 +5295,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_ETH_sETH2',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -5030,7 +5317,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_USDC_ETH',
     type: POOL_TYPES.UNIV3,
     tradingApyFunction: {
@@ -5052,7 +5339,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_USDC_ETH_MANAGED',
     type: POOL_TYPES.UNIV3,
     tradingApyFunction: {
@@ -5074,7 +5361,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_UST_USDT',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -5096,7 +5383,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_USDC_USDT',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -5118,7 +5405,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_WBTC_ETH',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -5140,7 +5427,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_ETH_USDT',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -5162,7 +5449,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_DAI_USDC',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -5184,7 +5471,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_DAI_ETH',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -5206,7 +5493,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_UNI_ETH',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -5228,7 +5515,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_USDT_ETH_1400_2400',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -5254,7 +5541,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_USDC_ETH_1400_2400',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -5280,7 +5567,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_DAI_ETH_1400_2400',
     tradingApyFunction: {
       type: TRADING_APY_TYPES.UNIV3_APYVISION,
@@ -5306,7 +5593,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'crvThreeCrypto',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.crvThreeCrypto.NewPool,
@@ -5332,7 +5619,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'crvCVXCRV',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.crvCVXCRV.NewPool,
@@ -5358,7 +5645,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'bal_BAL_WETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.bal_BAL_WETH.NewPool,
@@ -5384,14 +5671,14 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'bal_DAI_WETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.bal_DAI_WETH.NewPool,
     collateralAddress: addresses.V2.bal_DAI_WETH.NewVault,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.BALANCER,
-      params: [addresses.V2.bal_DAI_WETH.PoolId, CHAINS_ID.ETH_MAINNET],
+      params: [addresses.V2.bal_DAI_WETH.PoolId, CHAIN_IDS.ETH_MAINNET],
     },
     rewardAPY: [],
     rewardAPR: null,
@@ -5410,14 +5697,14 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'bal_USDC_WETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.bal_USDC_WETH.NewPool,
     collateralAddress: addresses.V2.bal_USDC_WETH.NewVault,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.BALANCER,
-      params: [addresses.V2.bal_USDC_WETH.PoolId, CHAINS_ID.ETH_MAINNET],
+      params: [addresses.V2.bal_USDC_WETH.PoolId, CHAIN_IDS.ETH_MAINNET],
     },
     rewardAPY: [],
     rewardAPR: null,
@@ -5436,14 +5723,14 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'bal_USDT_WETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.bal_USDT_WETH.NewPool,
     collateralAddress: addresses.V2.bal_USDT_WETH.NewVault,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.BALANCER,
-      params: [addresses.V2.bal_USDT_WETH.PoolId, CHAINS_ID.ETH_MAINNET],
+      params: [addresses.V2.bal_USDT_WETH.PoolId, CHAIN_IDS.ETH_MAINNET],
     },
     rewardAPY: [],
     rewardAPR: null,
@@ -5462,14 +5749,14 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'bal_WBTC_WETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.bal_WBTC_WETH.NewPool,
     collateralAddress: addresses.V2.bal_WBTC_WETH.NewVault,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.BALANCER,
-      params: [addresses.V2.bal_WBTC_WETH.PoolId, CHAINS_ID.ETH_MAINNET],
+      params: [addresses.V2.bal_WBTC_WETH.PoolId, CHAIN_IDS.ETH_MAINNET],
     },
     rewardAPY: [],
     rewardAPR: null,
@@ -5488,7 +5775,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_BUSD_USDC',
     type: POOL_TYPES.UNIV3,
     contractAddress: addresses.V2.UniV3_BUSD_USDC.NewPool,
@@ -5506,7 +5793,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.V2.sushi_PHTR_ETH.Underlying, 'sushiswap_eth'],
     },
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_PHTR_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.sushi_PHTR_ETH.NewPool,
@@ -5528,7 +5815,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'UniV3_REI_ETH_full_range',
     tradingApyFunction: {
       type: 'UNIV3_V2',
@@ -5546,7 +5833,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.jarvis_JEUR_USDC_HODL.Underlying, 'kyber_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_JEUR_USDC_HODL',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_JEUR_USDC_HODL.NewPool,
@@ -5572,7 +5859,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.jarvis_JGBP_USDC_HODL.Underlying, 'kyber_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_JGBP_USDC_HODL',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_JGBP_USDC_HODL.NewPool,
@@ -5598,7 +5885,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.MATIC.V2.jarvis_JCHF_USDC_HODL.Underlying, 'kyber_matic'],
     },
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_JCHF_USDC_HODL',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_JCHF_USDC_HODL.NewPool,
@@ -5620,7 +5907,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'jarvis_AUR_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.jarvis_AUR_USDC.NewPool,
@@ -5641,7 +5928,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'bal_POLYBASE',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -5667,7 +5954,7 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'balancer_STABLE',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -5697,7 +5984,7 @@ module.exports = [
       type: TRADING_APY_TYPES.LP,
       params: [addresses.V2.sushi_YEL_ETH.Underlying, 'sushiswap_eth'],
     },
-    chain: CHAINS_ID.ETH_MAINNET,
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_YEL_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.sushi_YEL_ETH.NewPool,
@@ -5717,12 +6004,12 @@ module.exports = [
    `,
   },
   {
-    chain: CHAINS_ID.MATIC_MAINNET,
+    chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'ape_BTC_MATIC',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.APE,
-      params: [addresses.MATIC.V2.ape_BTC_MATIC.ApePoolId, CHAINS_ID.MATIC_MAINNET],
+      params: [addresses.MATIC.V2.ape_BTC_MATIC.ApePoolId, CHAIN_IDS.POLYGON_MAINNET],
     },
     contractAddress: addresses.MATIC.V2.ape_BTC_MATIC.NewPool,
     collateralAddress: addresses.MATIC.V2.ape_BTC_MATIC.NewVault,

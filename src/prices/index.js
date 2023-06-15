@@ -1,6 +1,6 @@
 const { toArray, isArray } = require('lodash')
 const { cache } = require('../lib/cache')
-const { UI_DATA_FILES, GET_PRICE_TYPES, CHAIN_TYPES } = require('../lib/constants')
+const { UI_DATA_FILES, GET_PRICE_TYPES, CHAIN_IDS } = require('../lib/constants')
 const { getUIData } = require('../lib/data')
 const {
   getTokenPriceByAddress,
@@ -26,7 +26,7 @@ const executePriceFunction = async (type, params) => {
   return Promise.resolve(price)
 }
 
-const getTokenPrice = async (selectedToken, ourChainId = CHAIN_TYPES.ETH) => {
+const getTokenPrice = async (selectedToken, ourChainId = CHAIN_IDS.ETH) => {
   const currency = 'usd'
   const normalizedSelectedToken = selectedToken.toLowerCase()
   const cachedPriceKey1 = `tokenPrice${normalizedSelectedToken}${ourChainId}${currency}`

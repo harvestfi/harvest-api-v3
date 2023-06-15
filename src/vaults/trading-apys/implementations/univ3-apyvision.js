@@ -52,7 +52,7 @@ const getTradingApy = async (vaultAddress, providerKey, reduction) => {
       get(fetchedPools, 'data.eth', []),
       pool => pool && pool.collateralAddress === vaultAddress,
     )
-    if (currentPool.tradingApy > 0) {
+    if (currentPool && currentPool.tradingApy > 0) {
       apy = currentPool.tradingApy
     } else {
       apy = 0

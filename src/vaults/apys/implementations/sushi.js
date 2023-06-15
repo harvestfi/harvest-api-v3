@@ -19,7 +19,7 @@ const {
   getSushiLpToken,
 } = require('../../../lib/web3/contracts/sushi-masterchef-matic/methods')
 
-const { CHAIN_TYPES } = require('../../../lib/constants')
+const { CHAIN_IDS } = require('../../../lib/constants')
 const { token: tokenContractData } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
 
@@ -40,9 +40,9 @@ const getApy = async (poolId, firstToken, secondToken, reduction, chain) => {
   const selectedChain = chain
   const selectedWeb3 = getWeb3(selectedChain)
   const masterChefContract =
-    selectedChain === CHAIN_TYPES.MATIC
+    selectedChain === CHAIN_IDS.POLYGON
       ? sushiMasterContractMatic
-      : selectedChain === CHAIN_TYPES.ARBITRUM_ONE
+      : selectedChain === CHAIN_IDS.ARBITRUM_ONE
       ? sushiMasterContractArbitrum
       : sushiMasterContract
 
@@ -61,14 +61,14 @@ const getApy = async (poolId, firstToken, secondToken, reduction, chain) => {
     masterChefContract.address.mainnet,
   )
 
-  if (selectedChain === CHAIN_TYPES.MATIC) {
+  if (selectedChain === CHAIN_IDS.POLYGON) {
     sushiPerSecond = new BigNumber(await getSushiPerSecond(sushiInstance)).dividedBy(
       new BigNumber(10).exponentiatedBy(18),
     )
     secondsPerYear = 31536000
     poolInfo = await getPoolInfoSushi(poolId, sushiInstance)
     poolInfo.lpToken = await getSushiLpToken(poolId, sushiInstance)
-  } else if (selectedChain === CHAIN_TYPES.ARBITRUM_ONE) {
+  } else if (selectedChain === CHAIN_IDS.ARBITRUM_ONE) {
     secondsPerYear = 31536000
     poolInfo = await getPoolInfoSushi(poolId, sushiInstance)
     poolInfo.lpToken = await getSushiLpToken(poolId, sushiInstance)
@@ -81,7 +81,7 @@ const getApy = async (poolId, firstToken, secondToken, reduction, chain) => {
       const rewardTokenPerSecond = new BigNumber(
         await getRewardPerSecond(rewarderInstance),
       ).dividedBy(OneEthInWei)
-      const rewardTokenPrice = await getTokenPrice(rewardToken, CHAIN_TYPES.ARBITRUM_ONE)
+      const rewardTokenPrice = await getTokenPrice(rewardToken, CHAIN_IDS.ARBITRUM_ONE)
       extraUsdPerSecond = rewardTokenPerSecond.times(rewardTokenPrice)
     }
   } else {
@@ -106,7 +106,7 @@ const getApy = async (poolId, firstToken, secondToken, reduction, chain) => {
 
   apy = new BigNumber(sushiPriceInUsd)
 
-  if (selectedChain !== CHAIN_TYPES.ETH) {
+  if (selectedChain !== CHAIN_IDS.ETH) {
     apy = apy.times(sushiPerSecond.times(poolWeight)).plus(extraUsdPerSecond).times(secondsPerYear)
   } else {
     apy = apy.times(sushiPerBlock).times(blocksPerYear).times(poolWeight)

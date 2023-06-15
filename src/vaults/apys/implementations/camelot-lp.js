@@ -5,9 +5,10 @@ const {
   camelotNFTPool,
   camelotNitroPool,
   camelotMaster,
+  camelotStrategy,
   token: tokenContract,
 } = require('../../../lib/web3/contracts')
-const { CHAIN_TYPES } = require('../../../lib/constants')
+const { CHAIN_IDS } = require('../../../lib/constants')
 
 const { UI_DATA_FILES } = require('../../../lib/constants')
 const { getUIData } = require('../../../lib/data')
@@ -30,6 +31,10 @@ const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor)
     methods: nitroPoolMethods,
   } = camelotNitroPool
   const {
+    contract: { abi: strategyAbi },
+    methods: { getPosId },
+  } = camelotStrategy
+  const {
     contract: { abi: tokenAbi },
     methods: { getDecimals },
   } = tokenContract
@@ -37,6 +42,7 @@ const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor)
   const nftPoolInstance = new web3.eth.Contract(nftPoolAbi, ntfPoolAddress)
   const masterAddress = await nftPoolMethods.getMaster(nftPoolInstance)
   const masterInstance = new web3.eth.Contract(masterAbi, masterAddress)
+  const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddress)
 
   let nitroInstance
   if (nitroPoolAddress != '0') {
@@ -45,7 +51,7 @@ const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor)
 
   const poolInfo = await nftPoolMethods.getPoolInfo(nftPoolInstance)
   const lpToken = poolInfo.lpToken
-  const lpPrice = await getTokenPrice(lpToken, CHAIN_TYPES.ARBITRUM_ONE)
+  const lpPrice = await getTokenPrice(lpToken, CHAIN_IDS.ARBITRUM_ONE)
   const grailPrice = await getTokenPrice('GRAIL')
 
   const totalSupply = new BigNumber(poolInfo.lpSupply)
@@ -65,7 +71,7 @@ const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor)
 
   let posId
   try {
-    posId = await nftPoolMethods.getPosId(strategyAddress, nftPoolInstance)
+    posId = await getPosId(strategyInstance)
   } catch (e) {
     posId = 0
   }
@@ -74,7 +80,12 @@ const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor)
     const positionInfo = await nftPoolMethods.getStakingPosition(posId, nftPoolInstance)
     const posAmount = new BigNumber(positionInfo.amount)
     const posAmountMul = new BigNumber(positionInfo.amountWithMultiplier)
-    const posMultiplier = posAmountMul.div(posAmount)
+    let posMultiplier
+    if (posAmount > 0) {
+      posMultiplier = posAmountMul.div(posAmount)
+    } else {
+      posMultiplier = 1
+    }
     xGrailUsdPerSecond = xGrailUsdPerSecond.div(totalMultiplier).times(posMultiplier)
     compoundingUsdPerSecond = compoundingUsdPerSecond.div(totalMultiplier).times(posMultiplier)
   }
@@ -98,7 +109,7 @@ const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor)
       await nitroPoolMethods.getReward2PerSecond(nitroInstance),
     )
     if (reward1PerSecond > 0 && reward1Info.token != addresses.iFARM_arbitrum) {
-      const reward1Price = await getTokenPrice(reward1Info.token, CHAIN_TYPES.ARBITRUM_ONE)
+      const reward1Price = await getTokenPrice(reward1Info.token, CHAIN_IDS.ARBITRUM_ONE)
       const token1Instance = new web3.eth.Contract(tokenAbi, reward1Info.token)
       const token1Decimals = await getDecimals(token1Instance)
       const reward1UsdPerSecond = reward1PerSecond.times(reward1Price).div(10 ** token1Decimals)
@@ -114,7 +125,7 @@ const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor)
       }
     }
     if (reward2PerSecond > 0 && reward2Info.token != addresses.iFARM_arbitrum) {
-      const reward2Price = await getTokenPrice(reward2Info.token, CHAIN_TYPES.ARBITRUM_ONE)
+      const reward2Price = await getTokenPrice(reward2Info.token, CHAIN_IDS.ARBITRUM_ONE)
       const token2Instance = new web3.eth.Contract(tokenAbi, reward2Info.token)
       const token2Decimals = await getDecimals(token2Instance)
       const reward2UsdPerSecond = reward2PerSecond.times(reward2Price).div(10 ** token2Decimals)
