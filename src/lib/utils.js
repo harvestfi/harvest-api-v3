@@ -40,10 +40,20 @@ const formatTimeago = date => {
   }
 }
 
+const getStartTimestamp = timestamp => {
+  const date = new Date(timestamp * 1000) // convert to milliseconds
+  date.setHours(0)
+  date.setMinutes(0)
+  date.setSeconds(0)
+  date.setMilliseconds(0)
+  return Math.floor(date.getTime() / 1000)
+}
+
 module.exports = {
   isSpecialPool,
   shouldGetPoolWithChain,
   getDailyCompound,
   getWeeklyCompound,
   formatTimeago,
+  getStartTimestamp,
 }
