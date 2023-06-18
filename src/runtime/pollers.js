@@ -599,21 +599,24 @@ const getNanolyData = async () => {
           [tokenAddress]: ppfs.toFixed(),
         }
 
-        let url
+        let url, chain
         if (networkId == 'eth') {
+          chain = 'ethereum'
           if (vault.id == 'IFARM') {
             url = `https://app.harvest.finance/ethereum/${vault.tokenAddress}`
           } else {
             url = `https://app.harvest.finance/ethereum/${vault.vaultAddress}`
           }
         } else if (networkId == 'matic') {
+          chain = 'polygon'
           url = `https://app.harvest.finance/polygon/${vault.vaultAddress}`
         } else if (networkId == 'arbitrum') {
+          chain = 'arbitrum'
           url = `https://app.harvest.finance/arbitrum/${vault.vaultAddress}`
         }
 
         let result = {
-          chain: networkId == 'matic' ? 'polygon' : networkId,
+          chain,
           tokens,
           vaultAddress,
           tokenAddress,
