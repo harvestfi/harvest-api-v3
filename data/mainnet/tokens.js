@@ -4308,7 +4308,7 @@ module.exports = {
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/eth.svg', './icons/curve.svg'],
     tokenNames: ['CRV', 'ETH'],
-    platform: ['Curve'],
+    platform: ['Convex Finance'],
     tags: ['Advanced'],
     tokenAddress: addresses.V2.crv_CRV_ETH.Underlying,
     decimals: '18',
@@ -4343,11 +4343,11 @@ module.exports = {
   },
   crvSTETH: {
     chain: CHAIN_IDS.ETH_MAINNET,
-    apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg', './icons/ldo.svg'],
-    apyTokenSymbols: ['CRV', 'CVX', 'LDO'],
+    apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
+    apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
     tokenNames: ['stETH', 'ETH'],
-    platform: ['Curve'],
+    platform: ['Convex Finance'],
     tags: ['Advanced', 'LSD'],
     tokenAddress: addresses.V2.crvSTETH.Underlying,
     decimals: '18',
@@ -4364,10 +4364,10 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.CONVEX,
-        params: ['steth', profitSharingCut30Percent],
+        params: ['steth-ng', profitSharingCut15Percent],
       },
     ],
-    cmcRewardTokenSymbols: ['FARM', 'CVX', 'LDO', 'CRV'],
+    cmcRewardTokenSymbols: ['FARM', 'CVX', 'CRV'],
   },
   USDN: {
     chain: CHAIN_IDS.ETH_MAINNET,

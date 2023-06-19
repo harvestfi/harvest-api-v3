@@ -130,6 +130,18 @@ const CONVEX_API_URLS = {
   42161: 'https://www.convexfinance.com/api/curve-arbitrum-apys',
 }
 
+const HARVEST_SUBGRAPH_URLS = {
+  1: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance',
+  137: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-polygon',
+  42161: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-arbitrum',
+}
+
+const TVL_LISTS = {
+  ETH: 'ethTvl',
+  MATIC: 'polTvl',
+  ARBITRUM: 'arbTvl',
+}
+
 const SUSHI_POOLS_IDS = {
   USDT: 0,
   USDC: 1,
@@ -209,6 +221,7 @@ const DB_CACHE_IDS = {
   CMC: 3,
   UI_DATA: 4,
   EXTERNAL_API: 5,
+  TVL: 6,
 }
 
 const PROFIT_SHARING_POOL_ID = 'profit-sharing-farm'
@@ -271,4 +284,6 @@ module.exports = {
   ARBITRUM_RPC_URL,
   CONVEX_API_URLS,
   COINGECKO_API_KEY,
+  HARVEST_SUBGRAPH_URLS,
+  TVL_LISTS,
 }

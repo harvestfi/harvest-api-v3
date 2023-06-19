@@ -27,11 +27,13 @@ const {
   DEBUG_MODE,
   DB_CACHE_IDS,
   UI_DATA_FILES,
+  TVL_LISTS,
 } = require('../lib/constants')
 const { Cache } = require('../lib/db/models/cache')
-const { storeData, loadData } = require('../lib/db/models/cache')
+const { storeData, appendData, loadData } = require('../lib/db/models/cache')
 const { getUIData } = require('../lib/data')
 const addresses = require('../lib/data/addresses.json')
+const { getTvlDataLength, getTvlData } = require('../lib/third-party/tvl')
 
 const getProfitSharingFactor = chain => {
   switch (chain) {
@@ -644,6 +646,48 @@ const getNanolyData = async () => {
   console.log('-- Done getting Nanoly endpoint data --\n')
 }
 
+const getTVL = async () => {
+  console.log('\n-- Getting TVL data --')
+  const type = DB_CACHE_IDS.TVL
+  const token_tvl = await Cache.collection.findOne({ type })
+  let hasErrors
+
+  const chains = [
+    { name: 'ETH', type: CHAIN_IDS.ETH, list: TVL_LISTS.ETH },
+    { name: 'Polygon', type: CHAIN_IDS.POLYGON, list: TVL_LISTS.MATIC },
+    { name: 'Arbitrum', type: CHAIN_IDS.ARBITRUM_ONE, list: TVL_LISTS.ARBITRUM },
+  ]
+
+  for (const chain of chains) {
+    console.log(`\n-- Get TVL data on ${chain.name} --`)
+
+    const curList = token_tvl?.[chain.list] || []
+    const length = await getTvlDataLength(parseInt(chain.type))
+    let savedTimestamp = curList.length > 0 ? parseInt(curList[curList.length - 1].timestamp) : 0
+
+    const lastId = parseInt(curList?.[curList.length - 1]?.sequenceId) || 0
+
+    for (let i = lastId; i < length; i += 1000) {
+      const response = await getTvlData(parseInt(chain.type), Math.min(length - i, 1000), 0, i)
+      let data = {},
+        result = []
+
+      for (let j = 0; j < response.length; j++) {
+        if (parseInt(response[j].timestamp) >= savedTimestamp + 86400) {
+          result.push(response[j])
+          savedTimestamp = parseInt(response[j].timestamp)
+        }
+      }
+      if (chain.type === CHAIN_IDS.ETH) data = { ethTvl: { $each: result } }
+      else if (chain.type === CHAIN_IDS.POLYGON) data = { polTvl: { $each: result } }
+      else data = { arbTvl: { $each: result } }
+      await appendData(Cache, DB_CACHE_IDS.TVL, data, hasErrors)
+    }
+  }
+
+  console.log('-- Done getting TVL data --\n')
+}
+
 const getCmc = async () => {
   console.log('\n-- Getting CMC data --')
   const pools = await loadData(Cache, DB_CACHE_IDS.POOLS)
@@ -907,13 +951,15 @@ const runUpdateLoop = async () => {
       resetCallCount()
     }
 
-    await getCmc()
+    await getTVL()
+
+    await getNanolyData()
     if (DEBUG_MODE) {
       updateCallCountCache('cmc')
       resetCallCount()
     }
 
-    await getNanolyData()
+    await getCmc()
     if (DEBUG_MODE) {
       updateCallCountCache('cmc')
       resetCallCount()

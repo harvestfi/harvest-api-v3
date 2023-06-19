@@ -6,6 +6,7 @@ const { isArray } = require('lodash')
 const addresses = require('../../src/lib/data/addresses.json')
 const initDb = require('../../src/lib/db')
 const { Cache, clearAllDataTestOnly } = require('../../src/lib/db/models/cache')
+const { getStartTimestamp } = require('../../src/lib/utils')
 
 const app = require('../../src/runtime/app')
 const { sleep, assertValidPositiveNumber, assertArraySize, assertIsDate } = require('./utils')
@@ -88,6 +89,25 @@ describe('Happy Paths', function () {
   })
 
   describe('External ACTIVE_ENDPOINTS', () => {
+    it('queries /tvl', () => {
+      return request(`http://localhost:${testPort}`)
+        .get(`/tvl?key=${harvestKey}`)
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .then(res => {
+          assert(res.body.ETH)
+          assert(res.body.MATIC)
+          assert(res.body.ARBITRUM)
+          assert.equal(
+            getStartTimestamp(parseInt(res.body.ETH[res.body.ETH.length - 1].timestamp)),
+            getStartTimestamp(parseInt(res.body.MATIC[res.body.MATIC.length - 1].timestamp)),
+          )
+          assert.equal(
+            getStartTimestamp(parseInt(res.body.MATIC[res.body.MATIC.length - 1].timestamp)),
+            getStartTimestamp(parseInt(res.body.ARBITRUM[res.body.ARBITRUM.length - 1].timestamp)),
+          )
+        })
+    })
     it('queries /nanoly', () => {
       return request(`http://localhost:${testPort}`)
         .get(`/nanoly?key=${harvestKey}`)

@@ -1032,6 +1032,15 @@
         "name": "oeth"
     },
     {
+        "lptoken": "0x21E27a5E5513D6e65C4f830167390997aA84843a",
+        "token": " 0x1b74fa5951dfa4c03D0127011548fA79b956f63B",
+        "crvRewards": "0x6B27D7BC63F1999D14fF9bA900069ee516669ee8",
+        "swap": "0x21E27a5E5513D6e65C4f830167390997aA84843a",
+        "id": 177,
+        "currency": "ETH",
+        "name": "steth-ng"
+    },
+    {
         "lptoken": "0x390f3595bCa2Df7d23783dFd126427CCeb997BF4",
         "token": " 0x939e4C11E391a28CD81248163f3a2e595f12CE5E",
         "crvRewards": "0xD1DdB0a0815fD28932fBb194C84003683AF8a824",
