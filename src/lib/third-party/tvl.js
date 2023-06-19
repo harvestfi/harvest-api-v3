@@ -25,7 +25,7 @@ const executeGraphCall = (chain, query, variables) =>
     })
 
 const getTvlData = async (chain, first, skip, sequence_gt) => {
-  const query = `
+  const arbQuery = `
   query getTVLsQuery($first: Int!, $skip: Int!, $sequence_gt: Int!) {
     totalTvlHistories(
       orderBy: createAtBlock
@@ -41,7 +41,7 @@ const getTvlData = async (chain, first, skip, sequence_gt) => {
   }
     `
 
-  const ethQuery = `
+  const query = `
   query getTVLsQuery($first: Int!, $skip: Int!, $sequence_gt: Int!) {
     totalTvlHistoryV2S(
       orderBy: createAtBlock
@@ -57,12 +57,12 @@ const getTvlData = async (chain, first, skip, sequence_gt) => {
   }
     `
 
-  const queryReponse = await executeGraphCall(chain, chain == 1 ? ethQuery : query, {
+  const queryReponse = await executeGraphCall(chain, chain == 42161 ? arbQuery : query, {
     first,
     skip,
     sequence_gt,
   })
-  return chain == 1 ? queryReponse.totalTvlHistoryV2S : queryReponse.totalTvlHistories
+  return chain == 42161 ? queryReponse.totalTvlHistories : queryReponse.totalTvlHistoryV2S
 }
 
 const getTvlDataLength = async chain => {
