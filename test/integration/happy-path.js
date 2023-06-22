@@ -98,6 +98,7 @@ describe('Happy Paths', function () {
           assert(res.body.ETH)
           assert(res.body.MATIC)
           assert(res.body.ARBITRUM)
+          assert(res.body.FARM)
           assert.equal(
             getStartTimestamp(parseInt(res.body.ETH[res.body.ETH.length - 1].timestamp)),
             getStartTimestamp(parseInt(res.body.MATIC[res.body.MATIC.length - 1].timestamp)),

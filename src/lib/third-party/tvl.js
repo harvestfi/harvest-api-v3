@@ -24,8 +24,8 @@ const executeGraphCall = (chain, query, variables) =>
       return null
     })
 
-const getTvlData = async (chain, first, skip, sequence_gt) => {
-  const arbQuery = `
+const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
+  const arbTQuery = `
   query getTVLsQuery($first: Int!, $skip: Int!, $sequence_gt: Int!) {
     totalTvlHistories(
       orderBy: createAtBlock
@@ -41,7 +41,7 @@ const getTvlData = async (chain, first, skip, sequence_gt) => {
   }
     `
 
-  const query = `
+  const tQuery = `
   query getTVLsQuery($first: Int!, $skip: Int!, $sequence_gt: Int!) {
     totalTvlHistoryV2S(
       orderBy: createAtBlock
@@ -57,12 +57,28 @@ const getTvlData = async (chain, first, skip, sequence_gt) => {
   }
     `
 
-  const queryReponse = await executeGraphCall(chain, chain == 42161 ? arbQuery : query, {
-    first,
-    skip,
-    sequence_gt,
-  })
-  return chain == 42161 ? queryReponse.totalTvlHistories : queryReponse.totalTvlHistoryV2S
+  const vaultQuery = `
+  query getTVLsQuery($vault: String!, $first: Int!, $skip: Int!, $sequence_gt: BigInt!) {
+    tvls(
+      orderBy: createAtBlock
+      orderDirection: asc
+      first: $first
+      skip: $skip
+      where: {vault: $vault, sequenceId_gt: $sequence_gt}
+    ) {
+      value
+      timestamp
+      sequenceId
+    }
+  }
+  `
+  const query = vault ? vaultQuery : chain === 42161 ? arbTQuery : tQuery
+  const variables = vault ? { vault, first, skip, sequence_gt } : { first, skip, sequence_gt }
+  const resultKey = vault ? 'tvls' : chain === 42161 ? 'totalTvlHistories' : 'totalTvlHistoryV2S'
+
+  const { [resultKey]: result } = await executeGraphCall(chain, query, variables)
+
+  return result
 }
 
 const getTvlDataLength = async chain => {
@@ -79,7 +95,23 @@ const getTvlDataLength = async chain => {
   return length
 }
 
+const getFarmTvlLength = async () => {
+  const query = `
+  query {
+    tvlSequnceIds{
+      lastSequenceId
+    }
+  }
+    `
+
+  const queryResponse = await executeGraphCall(1, query, {})
+
+  const length = parseInt(queryResponse?.tvlSequnceIds[0].lastSequenceId ?? 0)
+  return length
+}
+
 module.exports = {
   getTvlDataLength,
+  getFarmTvlLength,
   getTvlData,
 }
