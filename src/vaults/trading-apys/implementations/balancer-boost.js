@@ -30,7 +30,13 @@ const getBoostAPY = async (poolAddress, networkId) => {
     } else if (types[i] == 'Idle') {
       partApy = await getIdleApy(poolBoostInfo.symbols[i], poolBoostInfo.idleTokens[i], 1)
     } else if (types[i] == 'balLP') {
-      partApy = await getLPApy(token, networkId)
+      let boost
+      if (Object.keys(boostInfo).includes(token)) {
+        boost = true
+      } else {
+        boost = false
+      }
+      partApy = await getLPApy(token, networkId, boost)
     } else if (types[i] == 'stakedMatic') {
       partApy = await getStakedMaticApy(token)
     } else if (types[i] == 'stakedEth') {
@@ -44,7 +50,7 @@ const getBoostAPY = async (poolAddress, networkId) => {
   return apy.toNumber()
 }
 
-const getLPApy = async (token, networkId) => {
+const getLPApy = async (token, networkId, boost) => {
   let id
   if (networkId == '1') {
     id = 'balancerv2_eth'
@@ -56,7 +62,12 @@ const getLPApy = async (token, networkId) => {
     console.error(`Network ID: ${networkId} not supported`)
     return 0
   }
-  const apy = await executeTradingApyFunction('LP', [token, id])
+  let apy
+  if (boost) {
+    apy = await executeTradingApyFunction('LP', [token, id, true, networkId])
+  } else {
+    apy = await executeTradingApyFunction('LP', [token, id])
+  }
   return apy
 }
 

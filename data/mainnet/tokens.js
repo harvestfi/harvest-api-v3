@@ -573,20 +573,37 @@ module.exports = {
       ],
     },
   },
-  'bb-aUSD_arbitrum': {
+  balancer_bbaUSD_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: [''],
-    tokenAddress: addresses.ARBITRUM_ONE.bbaUSD,
+    logoUrl: ['./icons/am-dai.svg', './icons/am-usdc.svg', './icons/am-usdt.svg'],
+    apyIconUrls: ['./icons/balancer.svg'],
+    apyTokenSymbols: ['BAL'],
+    tokenNames: ['aDAI', 'aUSDC', 'aUSDT'],
+    platform: ['Balancer'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.Underlying,
     decimals: '18',
-    vaultAddress: null,
+    vaultAddress: addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.BALANCER,
       params: [
-        addresses.ARBITRUM_ONE.bbaUSD,
-        '0xee02583596aee94cccb7e8ccd3921d955f17982a00000000000000000000040a',
+        addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.Underlying,
+        addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.PoolId,
         CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.BALANCER_GAUGE_SIDECHAIN,
+        params: [
+          'balancer_bbaUSD_arbitrum',
+          addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.Gauge,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   balancer_bbwstETH_bbaUSD_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,

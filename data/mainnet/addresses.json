@@ -2318,6 +2318,14 @@
         "NewVault": "0xFA10759780304c2B8d34B051C039899dFBbcad7f",
         "NewStrategy": "0xd97da915530e7d6946781BF332598aa5F336a76B",
         "NewPool": "0xd57a5F9BC4856107D184C49f98bfD7DDf175ac2A"
+      },
+      "balancer_bbaUSD": {
+        "Underlying": "0xEE02583596AEE94ccCB7e8ccd3921d955f17982A",
+        "NewVault": "0x56Fd301D739BF538c1B751A80675b952E40f74b3",
+        "NewStrategy": "0x3bb0e02c77C67033f53e9bf49aa9A4dB8B85a396",
+        "NewPool": "0xe998f314A6c54f7de8BeB01704e819C7abEAa7D9",
+        "Gauge": "0xb0Bdd5000307144Ed7d30Cf4025Ec1FBA9D79D65",
+        "PoolId": "0xee02583596aee94cccb7e8ccd3921d955f17982a00000000000000000000040a"
       }
     }
   }
