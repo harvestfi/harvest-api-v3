@@ -689,7 +689,7 @@ const getTVL = async () => {
   const length = Math.ceil(lastSeqId / 1000) * 1000
   let savedTimestamp = FarmList.length > 0 ? parseInt(FarmList[FarmList.length - 1].timestamp) : 0
   const lastId = parseInt(FarmList?.[FarmList.length - 1]?.sequenceId) || 0
-  for (let i = lastId; i <= length; i += 1000) {
+  for (let i = lastId; i < length; i += 1000) {
     const response = await getTvlData(
       1,
       Math.min(length - i, 1000),
