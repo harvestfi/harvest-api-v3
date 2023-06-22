@@ -6,6 +6,64 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'balancer_tBTC_WBTC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.Underlying, 'balancerv2_arbitrum'],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>. 
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'balancer_tBTC_WETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.Underlying, 'balancerv2_arbitrum'],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>. 
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelot_GRAIL_ARB',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -357,11 +415,11 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
-       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
-       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
-       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_bbwstETH_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
@@ -392,14 +450,14 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
-       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
-       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
-       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_aWETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -427,13 +485,13 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
-       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
-       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://polygonscan.com/token/${addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -468,7 +526,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wstETH_amETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_wstETH_amETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wstETH_amETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_wstETH_amETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -497,7 +555,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_WBTC_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_WBTC_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_WBTC_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_WBTC_ETH_USDC.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -531,7 +589,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_frxETH_amETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_frxETH_amETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_frxETH_amETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_frxETH_amETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -677,7 +735,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_TNGBL_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_TNGBL_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_TNGBL_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_TNGBL_USDC.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -712,7 +770,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_MaticX_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_MaticX_amMatic.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_MaticX_amMatic.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_MaticX_amMatic.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -747,7 +805,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_stMatic_amMatic.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -776,7 +834,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_2EUR_PAR_v2.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -810,7 +868,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_aCRV_CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_aCRV_CRV.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_aCRV_CRV.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
       <a href="https://curve.fi/#/polygon/pools/factory-crypto-9/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
@@ -844,7 +902,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_USDR_3CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_USDR_3CRV.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_USDR_3CRV.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
       <a href="https://curve.fi/#/polygon/pools/factory-v2-339/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
@@ -1108,7 +1166,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_3CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_3CRV.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_3CRV.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
       <a href="https://curve.fi/#/polygon/pools/aave/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
@@ -1142,7 +1200,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
       <a href="https://curve.fi/#/polygon/pools/atricrypto3/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
@@ -1176,7 +1234,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_CRV_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_CRV_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_CRV_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
       <a href="https://curve.fi/#/polygon/pools/factory-crypto-1/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
@@ -1210,7 +1268,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_MATIC_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.curve_MATIC_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_MATIC_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
       <a href="https://curve.fi/#/polygon/pools/factory-crypto-83/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
@@ -1244,7 +1302,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_frxETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_frxETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_frxETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_frxETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -1273,7 +1331,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_SPHERE_MATIC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_SPHERE_MATIC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_SPHERE_MATIC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_SPHERE_MATIC.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -1307,7 +1365,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_stETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_stETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -1336,7 +1394,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_wUSDR_USDC.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -2231,7 +2289,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
       <a href="https://quickswap.gamma.xyz/vault-detail/WMATIC-WETH-0-Narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
@@ -2261,7 +2319,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
       <a href="https://quickswap.gamma.xyz/vault-detail/WMATIC-WETH-0-Wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
@@ -2291,7 +2349,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
       <a href="https://quickswap.gamma.xyz/vault-detail/WMATIC-USDC-0-Narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
@@ -2321,7 +2379,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
       <a href="https://quickswap.gamma.xyz/vault-detail/WMATIC-USDC-0-Wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
@@ -2351,7 +2409,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
       <a href="https://quickswap.gamma.xyz/vault-detail/USDC-WETH-0-Narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
@@ -2381,7 +2439,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
       <a href="https://quickswap.gamma.xyz/vault-detail/USDC-WETH-0-Wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
@@ -2415,7 +2473,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_bbamusd.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_bbamusd.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_bbamusd.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_bbamusd.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -2449,7 +2507,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_tetuBal.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_tetuBal.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_tetuBal.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_tetuBal.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -2483,7 +2541,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2BRLUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_2BRLUSD.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2BRLUSD.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_2BRLUSD.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -2512,7 +2570,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2BRL.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_2BRL.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2BRL.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_2BRL.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -2912,7 +2970,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_PAR.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_2EUR_PAR.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_PAR.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_2EUR_PAR.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -3106,7 +3164,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.bal_MaticX.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.bal_MaticX.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.bal_MaticX.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.bal_MaticX.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -3141,7 +3199,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.bal_stMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.bal_stMatic.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.bal_stMatic.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.bal_stMatic.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -3169,7 +3227,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_agEUR.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://polygonscan.io/token/${addresses.MATIC.V2.balancer_2EUR_agEUR.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_agEUR.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_2EUR_agEUR.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>

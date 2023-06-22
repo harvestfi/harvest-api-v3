@@ -48,6 +48,81 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  tBTC_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/tbtc.svg'],
+    tokenAddress: addresses.ARBITRUM_ONE.TBTC,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['tbtc'],
+    },
+  },
+  balancer_tBTC_WBTC: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/tbtc.svg', './icons/wbtc.svg'],
+    apyIconUrls: ['./icons/balancer.svg'],
+    apyTokenSymbols: ['BAL'],
+    tokenNames: ['tBTC', 'WBTC'],
+    platform: ['Balancer'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.BALANCER,
+      params: [
+        addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.Underlying,
+        addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.PoolId,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.BALANCER_GAUGE_SIDECHAIN,
+        params: [
+          'balancer_tBTC_WBTC',
+          addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.Gauge,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'BAL'],
+  },
+  balancer_tBTC_WETH: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/tbtc.svg', './icons/eth.svg'],
+    apyIconUrls: ['./icons/balancer.svg'],
+    apyTokenSymbols: ['BAL'],
+    tokenNames: ['tBTC', 'ETH'],
+    platform: ['Balancer'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.BALANCER,
+      params: [
+        addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.Underlying,
+        addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.PoolId,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.BALANCER_GAUGE_SIDECHAIN,
+        params: [
+          'balancer_tBTC_WETH',
+          addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.Gauge,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'BAL'],
+  },
   camelot_GRAIL_ARB: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/grail.svg', './icons/arb.svg'],
