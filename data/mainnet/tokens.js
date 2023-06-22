@@ -589,7 +589,6 @@ module.exports = {
     },
   },
   balancer_bbwstETH_bbaUSD_arbitrum: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [
       './icons/steth.svg',
