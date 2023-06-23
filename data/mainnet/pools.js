@@ -6,6 +6,64 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelot_GENE_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.Underlying],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GNOME}" target="_blank" rel="noopener noreferrer">GNOME</a> & 
+       At every harvest, the earned GNOME is reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+        <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+     </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelot_GNOME_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.Underlying],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GENE}" target="_blank" rel="noopener noreferrer">GENE</a> & 
+       At every harvest, the earned GENE is reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+        <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+     </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelot_GRAIL_ARB',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -799,8 +857,13 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.balancer_2EUR_PAR_v2.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.MATIC.miFARM, addresses.MATIC.JEUR, addresses.MATIC.JRT],
-    rewardTokenSymbols: ['iFARM', 'JEUR', 'JRT'],
+    rewardTokens: [
+      addresses.MATIC.miFARM,
+      addresses.MATIC.JEUR,
+      addresses.MATIC.JRT,
+      addresses.MATIC.pMIMO,
+    ],
+    rewardTokenSymbols: ['iFARM', 'JEUR', 'JRT', 'pMIMO'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
