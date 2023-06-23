@@ -33,7 +33,7 @@ const { Cache } = require('../lib/db/models/cache')
 const { storeData, appendData, loadData } = require('../lib/db/models/cache')
 const { getUIData } = require('../lib/data')
 const addresses = require('../lib/data/addresses.json')
-const { getTvlDataLength, getTvlData } = require('../lib/third-party/tvl')
+const { getTvlDataLength, getTvlData, getFarmTvlLength } = require('../lib/third-party/tvl')
 
 const getProfitSharingFactor = chain => {
   switch (chain) {
@@ -685,6 +685,33 @@ const getTVL = async () => {
     }
   }
 
+  console.log(`\n-- Get FARM TVL data --`)
+
+  const FarmList = token_tvl?.[TVL_LISTS.FARM] || []
+  const lastSeqId = await getFarmTvlLength()
+  const length = Math.ceil(lastSeqId / 1000) * 1000
+  let savedTimestamp = FarmList.length > 0 ? parseInt(FarmList[FarmList.length - 1].timestamp) : 0
+  const lastId = parseInt(FarmList?.[FarmList.length - 1]?.sequenceId) || 0
+  for (let i = lastId; i < length; i += 1000) {
+    const response = await getTvlData(
+      1,
+      Math.min(length - i, 1000),
+      0,
+      i,
+      addresses.FARM.toLowerCase(),
+    )
+    let data = {},
+      result = []
+
+    for (let j = 0; j < response.length; j++) {
+      if (parseInt(response[j].timestamp) >= savedTimestamp + 86400) {
+        result.push(response[j])
+        savedTimestamp = parseInt(response[j].timestamp)
+      }
+    }
+    data = { farmTvl: { $each: result } }
+    await appendData(Cache, DB_CACHE_IDS.TVL, data, hasErrors)
+  }
   console.log('-- Done getting TVL data --\n')
 }
 

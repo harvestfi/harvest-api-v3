@@ -140,6 +140,7 @@ const TVL_LISTS = {
   ETH: 'ethTvl',
   MATIC: 'polTvl',
   ARBITRUM: 'arbTvl',
+  FARM: 'farmTvl',
 }
 
 const SUSHI_POOLS_IDS = {
