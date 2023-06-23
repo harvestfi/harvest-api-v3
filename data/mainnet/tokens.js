@@ -90,7 +90,7 @@ module.exports = {
   },
   camelot_GMX_USDC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: ['./icons/gmx.png', './icons/usdc.svg'],
+    logoUrl: ['./icons/gmx.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
     apyTokenSymbols: ['GRAIL', 'xGRAIL'],
     tokenNames: ['GMX', 'USDC'],
@@ -130,8 +130,8 @@ module.exports = {
   },
   camelot_SILO_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: ['./icons/silo.png', './icons/eth.svg'],
-    apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/silo.png'],
+    logoUrl: ['./icons/silo.svg', './icons/eth.svg'],
+    apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/silo.svg'],
     apyTokenSymbols: ['GRAIL', 'xGRAIL', 'SILO'],
     tokenNames: ['SILO', 'ETH'],
     platform: ['Camelot'],
