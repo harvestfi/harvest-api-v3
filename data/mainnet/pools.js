@@ -863,7 +863,7 @@ module.exports = [
       addresses.MATIC.JRT,
       addresses.MATIC.pMIMO,
     ],
-    rewardTokenSymbols: ['iFARM', 'JEUR', 'JRT', 'pMIMO'],
+    rewardTokenSymbols: ['iFARM', 'JEUR', 'JRT', 'MIMO'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
