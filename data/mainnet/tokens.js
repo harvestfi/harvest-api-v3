@@ -123,6 +123,94 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
+  GENE_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/gene.svg'],
+    tokenAddress: addresses.ARBITRUM_ONE.GENE,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['genomesdao'],
+    },
+  },
+  GNOME_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/gnome.svg'],
+    tokenAddress: addresses.ARBITRUM_ONE.GNOME,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['gnome'],
+    },
+  },
+  camelot_GENE_ETH: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/gene.svg', './icons/eth.svg'],
+    apyIconUrls: ['./icons/gnome.svg'],
+    apyTokenSymbols: ['GNOME'],
+    tokenNames: ['GENE', 'ETH'],
+    platform: ['Camelot'],
+    tags: ['Advanced', 'DeSci'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.Underlying,
+        'GENE_arbitrum',
+        'WETH_arbitrum',
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.CAMELOT_LP,
+        params: [
+          addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.NewStrategy,
+          addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.NFTPool,
+          addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.NitroPool,
+          profitSharingCut10Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'GNOME'],
+  },
+  camelot_GNOME_ETH: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/gnome.svg', './icons/eth.svg'],
+    apyIconUrls: ['./icons/gene.svg'],
+    apyTokenSymbols: ['GENE'],
+    tokenNames: ['GNOME', 'ETH'],
+    platform: ['Camelot'],
+    tags: ['Advanced', 'DeSci'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.Underlying,
+        'GNOME_arbitrum',
+        'WETH_arbitrum',
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.CAMELOT_LP,
+        params: [
+          addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.NewStrategy,
+          addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.NFTPool,
+          addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.NitroPool,
+          profitSharingCut10Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'GENE'],
+  },
   camelot_GRAIL_ARB: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/grail.svg', './icons/arb.svg'],
@@ -165,7 +253,7 @@ module.exports = {
   },
   camelot_GMX_USDC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: ['./icons/gmx.png', './icons/usdc.svg'],
+    logoUrl: ['./icons/gmx.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
     apyTokenSymbols: ['GRAIL', 'xGRAIL'],
     tokenNames: ['GMX', 'USDC'],
@@ -205,8 +293,8 @@ module.exports = {
   },
   camelot_SILO_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: ['./icons/silo.png', './icons/eth.svg'],
-    apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/silo.png'],
+    logoUrl: ['./icons/silo.svg', './icons/eth.svg'],
+    apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/silo.svg'],
     apyTokenSymbols: ['GRAIL', 'xGRAIL', 'SILO'],
     tokenNames: ['SILO', 'ETH'],
     platform: ['Camelot'],
@@ -648,23 +736,39 @@ module.exports = {
       ],
     },
   },
-  'bb-aUSD_arbitrum': {
+  balancer_bbaUSD_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: [''],
-    tokenAddress: addresses.ARBITRUM_ONE.bbaUSD,
+    logoUrl: ['./icons/am-dai.svg', './icons/am-usdc.svg', './icons/am-usdt.svg'],
+    apyIconUrls: ['./icons/balancer.svg'],
+    apyTokenSymbols: ['BAL'],
+    tokenNames: ['aDAI', 'aUSDC', 'aUSDT'],
+    platform: ['Balancer'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.Underlying,
     decimals: '18',
-    vaultAddress: null,
+    vaultAddress: addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.BALANCER,
       params: [
-        addresses.ARBITRUM_ONE.bbaUSD,
-        '0xee02583596aee94cccb7e8ccd3921d955f17982a00000000000000000000040a',
+        addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.Underlying,
+        addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.PoolId,
         CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.BALANCER_GAUGE_SIDECHAIN,
+        params: [
+          'balancer_bbaUSD_arbitrum',
+          addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.Gauge,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   balancer_bbwstETH_bbaUSD_arbitrum: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [
       './icons/steth.svg',

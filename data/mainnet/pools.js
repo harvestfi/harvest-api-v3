@@ -64,6 +64,64 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelot_GENE_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.Underlying],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GNOME}" target="_blank" rel="noopener noreferrer">GNOME</a> & 
+       At every harvest, the earned GNOME is reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+        <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+     </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelot_GNOME_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.Underlying],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GENE}" target="_blank" rel="noopener noreferrer">GENE</a> & 
+       At every harvest, the earned GENE is reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+        <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+     </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelot_GRAIL_ARB',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -389,6 +447,40 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot ETH-USDC LP tokens</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'balancer_bbaUSD_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [
+        addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.Underlying,
+        'balancerv2_arbitrum',
+        true,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>. 
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_bbaUSD.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
    `,
@@ -823,8 +915,13 @@ module.exports = [
     collateralAddress: addresses.MATIC.V2.balancer_2EUR_PAR_v2.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.MATIC.miFARM, addresses.MATIC.JEUR, addresses.MATIC.JRT],
-    rewardTokenSymbols: ['iFARM', 'JEUR', 'JRT'],
+    rewardTokens: [
+      addresses.MATIC.miFARM,
+      addresses.MATIC.JEUR,
+      addresses.MATIC.JRT,
+      addresses.MATIC.pMIMO,
+    ],
+    rewardTokenSymbols: ['iFARM', 'JEUR', 'JRT', 'MIMO'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
