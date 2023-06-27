@@ -583,9 +583,9 @@ const getNanolyData = async () => {
           base = Number(vault.estimatedApy) / 100
         }
         if (pool && vault.id != 'IFARM') {
-          pool.rewardTokenSymbols.forEach((e, i) => {
-            e = e === 'miFARM' ? 'iFARM' : e
-            rewards[e] = Number(pool.rewardAPY[i]) / 100
+          pool.rewardAPY.forEach((e, i) => {
+            symbol = pool.rewardTokenSymbols[i] === 'miFARM' ? 'iFARM' : pool.rewardTokenSymbols[i]
+            rewards[symbol] = Number(pool.rewardAPY[i]) / 100
             reward = reward + Number(pool.rewardAPY[i]) / 100
           })
         } else {
