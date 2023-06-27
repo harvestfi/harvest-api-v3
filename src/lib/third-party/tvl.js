@@ -98,7 +98,9 @@ const getTvlDataLength = async chain => {
 const getFarmTvlLength = async () => {
   const query = `
   query {
-    tvlSequnceIds{
+    tvlSequnceIds(
+      where:{id:"0xa0246c9032bc3a600820415ae600c6388619a14d"}
+    ) {
       lastSequenceId
     }
   }
