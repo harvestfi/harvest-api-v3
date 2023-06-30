@@ -983,6 +983,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   balancer_WBTC_ETH_USDC_polygon: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
@@ -1338,6 +1339,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['aladdin-cvxcrv'] },
   },
   curve_aCRV_CRV: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -1602,6 +1604,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['arbitrum'] },
   },
   lizard_ARB_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
@@ -1629,6 +1632,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   lizard_ARB_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
@@ -1767,6 +1771,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'ETH', 'DPX'],
   },
   curve_3CRV_polygon: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -2138,6 +2143,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   balancer_PENDLE_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -2577,6 +2583,7 @@ module.exports = {
     },
   },
   lizard_SLIZ_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/sliz.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
@@ -2604,6 +2611,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   lizard_ETH_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
@@ -2635,6 +2643,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   lizard_agEUR_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/ageur.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
@@ -2666,6 +2675,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   lizard_LUSD_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/lusd.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/sliz.svg'],
@@ -3385,6 +3395,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.SUSHI] },
   },
   aura_auraBAL: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -3408,6 +3419,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA', 'bbaUSD'],
   },
   aura_auraBAL_lp: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -3463,6 +3475,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA', 'bbaUSD'],
   },
   aura_rETH: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -3490,6 +3503,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   aura_wstETH: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/ldo.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'LDO'],
@@ -4047,6 +4061,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'LDO'],
   },
   bal_POLYBASE: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/usdc.svg', './icons/eth.svg', './icons/balancer.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
@@ -4781,6 +4796,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'MESH'],
   },
   meshswap_WMATIC_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/mesh.svg'],
@@ -4804,6 +4820,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'MESH'],
   },
   meshswap_WMATIC_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/usdt.svg'],
     apyIconUrls: ['./icons/mesh.svg'],
@@ -4838,6 +4855,7 @@ module.exports = {
     },
   },
   notional_DAI: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/dai.svg'],
     apyIconUrls: ['./icons/notional.svg'],
