@@ -1057,7 +1057,7 @@ module.exports = {
   },
   crvUSD: {
     chain: CHAIN_IDS.ETH_MAINNET,
-    logoUrl: ['./icons/curve.svg'],
+    logoUrl: ['./icons/crvusd.svg'],
     tokenAddress: addresses.crvUSD,
     decimals: '18',
     vaultAddress: null,
@@ -1066,7 +1066,7 @@ module.exports = {
   curve_crvUSD_USDC: {
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/curve.svg', './icons/usdc.svg'],
-    apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
+    apyIconUrls: ['./icons/crvusd.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     platform: ['Convex Finance'],
     tags: ['Advanced', 'Stable'],
@@ -1095,7 +1095,7 @@ module.exports = {
   curve_crvUSD_USDT: {
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/curve.svg', './icons/usdt.svg'],
-    apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
+    apyIconUrls: ['./icons/crvusd.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     platform: ['Convex Finance'],
     tags: ['Advanced', 'Stable'],
