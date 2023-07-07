@@ -9,7 +9,6 @@ const { getTokenPrice } = require('../../../prices/index')
 
 //** Constants */
 const BAL_ADDRESS = '0xba100000625a3754423978a60c9317c58a424e3D'
-const BAL_ADDRESS_ARBITRUM = '0x040d1EdC9569d4Bab2D15287Dc5A4F10F56a56B8'
 const AURA_ADDRESS = '0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF'
 // const AURA_ADDRESS_ARBITRUM = '0x1509706a6c66CA549ff0cB464de88231DDBe213B'
 
@@ -59,11 +58,10 @@ const auraAPRWithPrice = async (poolName, networkId, balPrice, auraPrice) => {
 
   // BAL per year.
   const balPerYear = balPerUnderlying * 86400 * 365
-  if (balPrice <= 0)
-    balPrice = await getTokenPrice(networkId == '1' ? BAL_ADDRESS : BAL_ADDRESS_ARBITRUM, networkId)
+  if (balPrice <= 0) balPrice = await getTokenPrice(BAL_ADDRESS)
   // AURA per year.
   const auraPerYear = await getAuraMintAmount(balPerYear)
-  if (auraPrice <= 0) auraPrice = await getTokenPrice(AURA_ADDRESS, networkId)
+  if (auraPrice <= 0) auraPrice = await getTokenPrice(AURA_ADDRESS)
 
   let apr = balPerYear * balPrice
   apr += auraPerYear * auraPrice

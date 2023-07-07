@@ -21,14 +21,14 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_MAGIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aura LP tokens</a> in a Aura farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_MAGIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in an Aura farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_MAGIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aura LP tokens</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_MAGIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_MAGIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Aura LP tokens</a> by supplying liquidity on 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_MAGIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_MAGIC_USDC.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
@@ -110,7 +110,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault deposits 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GNOME}" target="_blank" rel="noopener noreferrer">GNOME</a>
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GNOME}" target="_blank" rel="noopener noreferrer">GNOME</a>.
        At every harvest, the earned GNOME is reinvested into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>.
       </p>
@@ -139,7 +139,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault deposits 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GENE}" target="_blank" rel="noopener noreferrer">GENE</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GENE}" target="_blank" rel="noopener noreferrer">GENE</a>. 
        At every harvest, the earned GENE is reinvested into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>.
       </p>
