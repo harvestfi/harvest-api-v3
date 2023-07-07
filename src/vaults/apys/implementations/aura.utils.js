@@ -2,14 +2,16 @@ const pools = require('./aura-pools.json')
 
 const BigNumber = require('bignumber.js')
 
-const { web3 } = require('../../../lib/web3')
+const { web3, web3ARBITRUM } = require('../../../lib/web3')
 const { token, pool } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices/index')
 //const getBalancerTokenPrice = require('../../../prices/implementations/balancer.js').getPrice
 
 //** Constants */
 const BAL_ADDRESS = '0xba100000625a3754423978a60c9317c58a424e3D'
+const BAL_ADDRESS_ARBITRUM = '0x040d1EdC9569d4Bab2D15287Dc5A4F10F56a56B8'
 const AURA_ADDRESS = '0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF'
+// const AURA_ADDRESS_ARBITRUM = '0x1509706a6c66CA549ff0cB464de88231DDBe213B'
 
 //// ----------- APRs ----------- ////
 
@@ -34,19 +36,18 @@ const auraAPR = (poolName, networkId) => auraAPRWithPrice(poolName, networkId, -
 const auraAPRWithPrice = async (poolName, networkId, balPrice, auraPrice) => {
   const pool = pools.find(pool => pool.name == poolName)
   const stakeContract = pool.rewardPool
-
   // Get Reward Rate.
   // The ratio between accumulated reward amount and the elapsed time since the last update.
   // uint256 rewardRate = reward.div(duration)
-  const rate = await rewardRate(stakeContract)
+  const rate = await rewardRate(stakeContract, networkId)
 
   // Get Virtual Price.
   // The current price of the pool LP token relative to the underlying pool assets.
-  const virtualPrice = await getTokenPrice(pool.lptoken, pool.currency)
+  const virtualPrice = await getTokenPrice(pool.lptoken, networkId)
 
   // Get Supply of Underlying Tokens(BPT).
   // The supply of all underlying tokens from corresponding Aura Pool.
-  const supply = await supplyOf(stakeContract)
+  const supply = await supplyOf(stakeContract, networkId)
 
   // Calculate Pool Total Value Locked.
   // The total value locked of a pool.
@@ -58,11 +59,11 @@ const auraAPRWithPrice = async (poolName, networkId, balPrice, auraPrice) => {
 
   // BAL per year.
   const balPerYear = balPerUnderlying * 86400 * 365
-  if (balPrice <= 0) balPrice = await getTokenPrice(BAL_ADDRESS)
-
+  if (balPrice <= 0)
+    balPrice = await getTokenPrice(networkId == '1' ? BAL_ADDRESS : BAL_ADDRESS_ARBITRUM, networkId)
   // AURA per year.
   const auraPerYear = await getAuraMintAmount(balPerYear)
-  if (auraPrice <= 0) auraPrice = await getTokenPrice(AURA_ADDRESS)
+  if (auraPrice <= 0) auraPrice = await getTokenPrice(AURA_ADDRESS, networkId)
 
   let apr = balPerYear * balPrice
   apr += auraPerYear * auraPrice
@@ -70,10 +71,10 @@ const auraAPRWithPrice = async (poolName, networkId, balPrice, auraPrice) => {
   if (pool.extras != undefined && pool.extras.length > 0) {
     for (const i in pool.extras) {
       const ex = pool.extras[i]
-      const exRate = await rewardRate(ex.contract)
+      const exRate = await rewardRate(ex.contract, networkId)
       const perUnderlying = exRate / tvl
       const perYear = perUnderlying * 86400 * 365
-      let price = await getTokenPrice(ex.token)
+      let price = await getTokenPrice(ex.token, networkId)
       apr += perYear * price
     }
   }
@@ -86,22 +87,29 @@ const auraAPRWithPrice = async (poolName, networkId, balPrice, auraPrice) => {
 /**
  * Fetch the reward rate of the Aura reward pool
  * @param {string} contract
+ * @param {string} networkId
  * @returns {number}
  */
-const rewardRate = async contract => {
-  const poolInstance = new web3.eth.Contract(pool.contract.abi, contract)
+const rewardRate = async (contract, networkId) => {
+  const poolInstance =
+    networkId == '1'
+      ? new web3.eth.Contract(pool.contract.abi, contract)
+      : new web3ARBITRUM.eth.Contract(pool.contract.abi, contract)
   const fetchedRewardRate = await pool.methods.rewardRate(poolInstance)
-
   return new BigNumber(fetchedRewardRate).dividedBy(new BigNumber(10).pow(18)).toNumber()
 }
 
 /**
  * Fetch the total supply of a token
  * @param {string} contract
+ * @param {string} networkId
  * @returns {number}
  */
-const supplyOf = async contract => {
-  const tokenInstance = new web3.eth.Contract(token.contract.abi, contract)
+const supplyOf = async (contract, networkId = '1') => {
+  const tokenInstance =
+    networkId == '1'
+      ? new web3.eth.Contract(token.contract.abi, contract)
+      : new web3ARBITRUM.eth.Contract(token.contract.abi, contract)
 
   const fetchedTotalSupply = await token.methods.getTotalSupply(tokenInstance)
   const totalSupply = new BigNumber(fetchedTotalSupply)
