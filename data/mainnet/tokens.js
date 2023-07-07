@@ -48,6 +48,33 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  balancer_MAGIC_USDC: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
+    apyTokenSymbols: ['BAL', 'AURA'],
+    logoUrl: ['./icons/magic.svg', './icons/usdc.svg'],
+    platform: ['Aura Finance'],
+    tags: ['Advanced'],
+    tokenNames: ['MAGIC', 'USDC'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.balancer_MAGIC_USDC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.balancer_MAGIC_USDC.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.BALANCER,
+      params: [
+        addresses.ARBITRUM_ONE.V2.balancer_MAGIC_USDC.Underlying,
+        addresses.ARBITRUM_ONE.V2.balancer_MAGIC_USDC.PoolId,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AURA,
+        params: ['aura50MAGIC_50USDC', profitSharingCut10Percent, CHAIN_IDS.ARBITRUM_ONE],
+      },
+    ],
+    cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
+  },
   tBTC_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/tbtc.svg'],
