@@ -52,6 +52,7 @@ const getVaults = async () => {
   let fetchedETHVaults = [],
     fetchedMATICVaults = [],
     fetchedARBITRUMVaults = [],
+    fetchedBASEVaults = [],
     fetchedVaults,
     hasErrors = false
 
@@ -71,6 +72,11 @@ const getVaults = async () => {
     Object.keys(tokensWithVault).filter(
       tokenId => tokens[tokenId].chain === CHAIN_IDS.ARBITRUM_ONE,
     ),
+    GET_VAULT_DATA_BATCH_SIZE,
+  )
+
+  const baseVaultsBatches = chunk(
+    Object.keys(tokensWithVault).filter(tokenId => tokens[tokenId].chain === CHAIN_IDS.BASE),
     GET_VAULT_DATA_BATCH_SIZE,
   )
 
@@ -115,6 +121,21 @@ const getVaults = async () => {
   })
   console.log('\n-- Done getting ETH vaults data --')
 
+  console.log('\n-- Getting BASE vaults data --')
+  await forEach(baseVaultsBatches, async batch => {
+    if (batch) {
+      try {
+        console.log('Getting vault data for: ', batch)
+        const vaultsData = await getVaultsData(batch)
+        fetchedBASEVaults = fetchedBASEVaults.concat(vaultsData)
+      } catch (err) {
+        hasErrors = true
+        console.error(`Failed to get vault data for: ${batch}`, err)
+      }
+    }
+  })
+  console.log('\n-- Done getting BASE vaults data --')
+
   fetchedVaults = {
     eth: fetchedETHVaults.reduce((acc, vault) => {
       acc[vault.id] = vault
@@ -125,6 +146,10 @@ const getVaults = async () => {
       return acc
     }, {}),
     arbitrum: fetchedARBITRUMVaults.reduce((acc, vault) => {
+      acc[vault.id] = vault
+      return acc
+    }, {}),
+    base: fetchedBASEVaults.reduce((acc, vault) => {
       acc[vault.id] = vault
       return acc
     }, {}),
@@ -203,6 +228,7 @@ const getPools = async () => {
   let fetchedETHPools = [],
     fetchedMATICPools = [],
     fetchedARBITRUMPools = [],
+    fetchedBASEPools = [],
     fetchedPools = [],
     hasErrors
 
@@ -243,6 +269,24 @@ const getPools = async () => {
 
     console.log('-- Done getting ARBITRUM pool data --\n')
 
+    console.log('\n-- Getting ARBITRUM pool data --')
+
+    const basePoolBatches = chunk(
+      pools.filter(pool => pool.chain === CHAIN_IDS.BASE),
+      GET_POOL_DATA_BATCH_SIZE,
+    )
+
+    if (size(basePoolBatches)) {
+      await forEach(basePoolBatches, async poolBatch => {
+        const poolData = await getPoolsData(poolBatch)
+        fetchedBASEPools = fetchedBASEPools.concat(poolData)
+      })
+    } else {
+      console.log('No pools available')
+    }
+
+    console.log('-- Done getting BASE pool data --\n')
+
     console.log('\n-- Getting ETH pool data --')
 
     const ethPoolBatches = chunk(
@@ -267,6 +311,7 @@ const getPools = async () => {
     eth: fetchedETHPools,
     matic: fetchedMATICPools,
     arbitrum: fetchedARBITRUMPools,
+    base: fetchedBASEPools,
   }
   hasErrors =
     (isArray(fetchedETHPools) &&
@@ -274,7 +319,9 @@ const getPools = async () => {
     (isArray(fetchedMATICPools) &&
       (fetchedMATICPools.includes(undefined) || fetchedMATICPools.includes(null))) ||
     (isArray(fetchedARBITRUMPools) &&
-      (fetchedARBITRUMPools.includes(undefined) || fetchedARBITRUMPools.includes(null)))
+      (fetchedARBITRUMPools.includes(undefined) || fetchedARBITRUMPools.includes(null))) ||
+    (isArray(fetchedBASEPools) &&
+      (fetchedBASEPools.includes(undefined) || fetchedBASEPools.includes(null)))
 
   await storeData(
     Cache,
@@ -615,6 +662,9 @@ const getNanolyData = async () => {
         } else if (networkId == 'arbitrum') {
           chain = 'arbitrum'
           url = `https://app.harvest.finance/arbitrum/${vault.vaultAddress}`
+        } else if (networkId == 'base') {
+          chain = 'base'
+          url = `https://app.harvest.finance/base/${vault.vaultAddress}`
         }
 
         let result = {
@@ -656,6 +706,7 @@ const getTVL = async () => {
     { name: 'ETH', type: CHAIN_IDS.ETH, list: TVL_LISTS.ETH },
     { name: 'Polygon', type: CHAIN_IDS.POLYGON, list: TVL_LISTS.MATIC },
     { name: 'Arbitrum', type: CHAIN_IDS.ARBITRUM_ONE, list: TVL_LISTS.ARBITRUM },
+    // { name: 'Base', type: CHAIN_IDS.BASE, list: TVL_LISTS.BASE },
   ]
 
   for (const chain of chains) {

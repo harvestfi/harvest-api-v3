@@ -59,13 +59,15 @@ describe('Happy Paths', function () {
         .expect('Content-Type', /json/)
         .expect(200)
         .then(res => {
+          assert.exists(res.body.base)
           assert.exists(res.body.arbitrum)
           assert.exists(res.body.matic)
           assert.exists(res.body.eth)
           assert.equal(
             Object.keys(res.body.matic).length +
               Object.keys(res.body.eth).length +
-              Object.keys(res.body.arbitrum).length,
+              Object.keys(res.body.arbitrum).length +
+              Object.keys(res.body.base).length,
             allVaultsJsonArray.length,
           )
         })
@@ -77,11 +79,15 @@ describe('Happy Paths', function () {
         .expect('Content-Type', /json/)
         .expect(200)
         .then(res => {
+          assert(res.body.base)
           assert(res.body.arbitrum)
           assert(res.body.matic)
           assert(res.body.eth)
           assert.equal(
-            res.body.matic.length + res.body.eth.length + res.body.arbitrum.length,
+            res.body.matic.length +
+              res.body.eth.length +
+              res.body.arbitrum.length +
+              res.body.base.length,
             poolsJson.length,
           )
         })
@@ -98,6 +104,7 @@ describe('Happy Paths', function () {
           assert(res.body.ETH)
           assert(res.body.MATIC)
           assert(res.body.ARBITRUM)
+          assert(res.body.BASE)
           assert(res.body.FARM)
           assert.equal(
             getStartTimestamp(parseInt(res.body.ETH[res.body.ETH.length - 1].timestamp)),

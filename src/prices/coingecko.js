@@ -32,6 +32,8 @@ const getPlatformId = chain => {
       return 'polygon-pos'
     case CHAIN_IDS.ARBITRUM_ONE:
       return 'arbitrum-one'
+    case CHAIN_IDS.BASE:
+      return 'base'
     default:
       return 'ethereum'
   }

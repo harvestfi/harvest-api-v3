@@ -27,6 +27,7 @@ jobs:
         MAINNET_RPC_URL: https://rpc.ankr.com/eth
         MAINNET_WS_URL: wss://eth.llamarpc.com
         ARBITRUM_RPC_URL: https://rpc.ankr.com/arbitrum
+        BASE_RPC_URL: https://developer-access-mainnet.base.org
         GET_POOL_DATA_BATCH_SIZE: 2
         GET_VAULT_DATA_BATCH_SIZE: 2
       run: yarn test

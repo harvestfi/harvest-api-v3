@@ -5,6 +5,40 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'test_FARM',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.test_FARM.NewPool,
+    collateralAddress: addresses.BASE.V2.test_FARM.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> Test Farm
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'test_iFARM',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.test_iFARM.NewPool,
+    collateralAddress: addresses.BASE.V2.test_iFARM.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> Test iFarm
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'balancer_MAGIC_USDC',
     type: POOL_TYPES.INCENTIVE,

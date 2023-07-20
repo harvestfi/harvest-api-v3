@@ -140,6 +140,7 @@ const TVL_LISTS = {
   ETH: 'ethTvl',
   MATIC: 'polTvl',
   ARBITRUM: 'arbTvl',
+  BASE: 'baseTvl',
   FARM: 'farmTvl',
 }
 
@@ -175,15 +176,14 @@ const SUSHI_GRAPHQL_ENDPOINTS = {
 const CHAIN_IDS = {
   ETH: '1',
   POLYGON: '137',
+  BASE: '8453',
   ARBITRUM_ONE: '42161',
 }
 
 const MATIC_RPC_URL =
   process.env.MATIC_RPC_URL ||
   `https://polygon-mainnet.infura.io/v3/${process.env.MATIC_INFURA_KEY}`
-const BASE_RPC_URL =
-  process.env.BASE_RPC_URL ||
-  `https://developer-access-mainnet.base.org`
+const BASE_RPC_URL = process.env.BASE_RPC_URL || `https://developer-access-mainnet.base.org`
 const ARBITRUM_RPC_URL =
   process.env.ARBITRUM_RPC_URL ||
   `https://arbitrum-mainnet.infura.io/v3/${process.env.ARBITRUM_INFURA_KEY}`

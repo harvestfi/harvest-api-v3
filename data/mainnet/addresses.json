@@ -2388,5 +2388,40 @@
         "PoolId": "0xb3028ca124b80cfe6e9ca57b70ef2f0ccc41ebd40002000000000000000000ba"
       }
     }
+  },
+  "BASE": {
+    "Storage": "0x98E03c6Ed7374F1e58FF022f1D2D8239526E13F9",
+    "RewardForwarder": "0x88937abfc8C6A88cc70bfc686E4fBba80DE8d329",
+    "UniversalLiquidator": "0x0000000000000000000000000000000000000000",
+    "UniversalLiquidatorRegistry": "0x0000000000000000000000000000000000000000",
+    "Controller": "0xF90FF0F7c8Db52bF1bF869F74226eAD125EFa745",
+    "Governance": "0x6a74649aCFD7822ae8Fb78463a9f2192752E5Aa2",
+    "FARM": "0xD08a2917653d4E460893203471f0000826fb4034",
+    "iFARM": "0xE7798f023fC62146e8Aa1b36Da45fb70855a77Ea",
+    "WETH": "0x4200000000000000000000000000000000000006",
+    "VaultImplementation": "0xC0cE53f755feAe93Fd219b2Cd0F58a4Fd0d535Dd",
+    "CommunityMsig": "0x97b3e5712CDE7Db13e939a188C8CA90Db5B05131",
+    "ProfitShare": "0xCD719739C3Ece8b576D649BE97195aD03e676a2c",
+    "Reader": "0x061886648F40C3F38bAdF2f64705bFDF0F6B12b3",
+    "Factory": {
+      "VaultFactory": "0x9c0F3393e3c0df870F7B1878bc9a5D313665a891",
+      "PotPoolFactory": "0xC0cE53f755feAe93Fd219b2Cd0F58a4Fd0d535Dd",
+      "MegaFactory": "0x9c0F3393e3c0df870F7B1878bc9a5D313665a891",
+      "UpgradableStrategyFactory": "0x8F0d40c95047c6B09f08905C110d002E65e96C7d"
+    },
+    "V2": {
+      "test_FARM": {
+        "Underlying": "0xD08a2917653d4E460893203471f0000826fb4034",
+        "NewVault": "0x619e743bF98FD371de6475621Ffdf771BC2293DA",
+        "NewStrategy": "0xF10C1180fc639667812e95bee3b68789a5130909",
+        "NewPool": "0xb65b019982aca61AC84144cc577d52B7E2155BAb"
+      },
+      "test_iFARM": {
+        "Underlying": "0xE7798f023fC62146e8Aa1b36Da45fb70855a77Ea",
+        "NewVault": "0xBD3F5A581b47dE7DE57646Af4dFD41eb96Dc2Ded",
+        "NewStrategy": "0xfca3d931DF4547034B65F4441415d2a3D67345e7",
+        "NewPool": "0x82edb3c728e193F77B3F247e8c92a8CeAbd2B66E"
+      }
+    }
   }
 }

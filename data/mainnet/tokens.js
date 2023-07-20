@@ -48,6 +48,50 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  test_FARM: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/farm.svg'],
+    apyTokenSymbols: ['TEST_Farm'],
+    logoUrl: ['./icons/farm.svg'],
+    platform: ['TEST FARM VAULT'],
+    tags: ['Advanced'],
+    tokenNames: ['FARM'],
+    tokenAddress: addresses.BASE.V2.test_FARM.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.test_FARM.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.MANUAL,
+      params: ['1'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
+      },
+    ],
+  },
+  test_iFARM: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/ifarm.svg'],
+    apyTokenSymbols: ['TEST_iFARM'],
+    logoUrl: ['./icons/farm.svg'],
+    platform: ['TEST IFARM VAULT'],
+    tags: ['Advanced'],
+    tokenNames: ['iFARM'],
+    tokenAddress: addresses.BASE.V2.test_iFARM.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.test_iFARM.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.MANUAL,
+      params: ['1'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
+      },
+    ],
+  },
   balancer_MAGIC_USDC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
