@@ -74,7 +74,7 @@ module.exports = {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/ifarm.svg'],
     apyTokenSymbols: ['TEST_iFARM'],
-    logoUrl: ['./icons/farm.svg'],
+    logoUrl: ['./icons/ifarm.svg'],
     platform: ['TEST IFARM VAULT'],
     tags: ['Advanced'],
     tokenNames: ['iFARM'],
