@@ -183,7 +183,7 @@ const getTokenStats = async () => {
 
   const hasErrors =
     !tokenStats.percentStaked ||
-    !tokenStats.historicalAverageProfitSharingAPY ||
+    (tokenStats.historicalAverageProfitSharingAPY == undefined ||  tokenStats.historicalAverageProfitSharingAPY == null) ||
     !tokenStats.totalGasSaved ||
     !tokenStats.totalMarketCap
 
