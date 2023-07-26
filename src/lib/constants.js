@@ -153,7 +153,7 @@ const SUSHI_POOLS_IDS = {
   PERP: 156,
 }
 
-const HISTORICAL_AVERAGE_PROFIT_SHARING_APY_DAYS = 14
+const HISTORICAL_AVERAGE_PROFIT_SHARING_APY_DAYS = 28
 const HISTORICAL_AVERAGE_PROFIT_SHARING_APY_ENDPOINT = `https://ethparser-api.herokuapp.com/apy/average/0x25550cccbd68533fa04bfd3e3ac4d09f9e00fc50?days=${HISTORICAL_AVERAGE_PROFIT_SHARING_APY_DAYS}`
 
 const TOTAL_GAS_SAVED_ENDPOINT = `https://ethparser-api.herokuapp.com/last_saved_gas_sum`
