@@ -915,6 +915,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'AURA'],
   },
   balancer_bbwstETH_bbaUSD_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [
       './icons/steth.svg',
@@ -2919,6 +2920,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   balancer_wBTC_wETH_USDC_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/balancer.svg'],
@@ -2951,6 +2953,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL'],
   },
   convex_USDT_WBTC_WETH_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -4517,6 +4520,7 @@ module.exports = {
     },
   },
   convex_pETH: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
