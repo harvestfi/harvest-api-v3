@@ -140,6 +140,27 @@
     "name": "bbwsteth_bbausd_arbitrum"
   },
   {
+    "id": 9,
+    "lptoken": "0xc7FA3A3527435720f0e2a4c1378335324dd4F9b3",
+    "rewardPool": "0x1597010ffE2e25a584D9705C1e48585BbfE56fC0",
+    "balancerPoolId": "0xc7fa3a3527435720f0e2a4c1378335324dd4f9b3000200000000000000000459",
+    "name": "aurabal_wsteth_arbitrum"
+  },
+  {
+    "id": 11,
+    "lptoken": "0x8d333f82e0693f53fA48c40d5D4547142E907e1D",
+    "rewardPool": "0x9fC8196aAdCd24a5ea90e65d975Ef3332D7435db",
+    "balancerPoolId": "0x8d333f82e0693f53fa48c40d5d4547142e907e1d000200000000000000000437",
+    "name": "pal_ohm_arbitrum"
+  },
+  {
+    "id": 12,
+    "lptoken": "0x8bc65Eed474D1A00555825c91FeAb6A8255C2107",
+    "rewardPool": "0xAc7025Dec5E216025C76414f6ac1976227c20Ff0",
+    "balancerPoolId": "0x8bc65eed474d1a00555825c91feab6a8255c2107000000000000000000000453",
+    "name": "dola_usdc_arbitrum"
+  },
+  {
     "id": 50,
     "lptoken": "0x5aEe1e99fE86960377DE9f88689616916D5DcaBe",
     "rewardPool": "0xd26948E7a0223700e3C3cdEA21cA2471abCb8d47",
@@ -194,5 +215,12 @@
     "rewardPool": "0xdd1fe5ad401d4777ce89959b7fa587e569bf125d",
     "balancerPoolId": "0x1e19cf2d73a72ef1332c882f20534b6519be0276000200000000000000000112",
     "name": "rETHv2"
+  },
+  {
+    "id": 135,
+    "lptoken": "0xc2B021133D1b0cF07dba696fd5DD89338428225B",
+    "rewardPool": "0xF937b186687C0B11Dc0F7AFBA3B4458c30d9CF89",
+    "balancerPoolId": "0xc2b021133d1b0cf07dba696fd5dd89338428225b000000000000000000000598",
+    "name": "gho_bbausd"
   }
 ]
