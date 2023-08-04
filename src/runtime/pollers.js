@@ -41,6 +41,8 @@ const getProfitSharingFactor = chain => {
       return 0.92
     case CHAIN_IDS.ARBITRUM_ONE:
       return 0.9
+    case CHAIN_IDS.BASE:
+      return 0.9  
     default:
       return 0.85
   }
@@ -270,7 +272,7 @@ const getPools = async () => {
 
     console.log('-- Done getting ARBITRUM pool data --\n')
 
-    console.log('\n-- Getting ARBITRUM pool data --')
+    console.log('\n-- Getting BASE pool data --')
 
     const basePoolBatches = chunk(
       pools.filter(pool => pool.chain === CHAIN_IDS.BASE),
