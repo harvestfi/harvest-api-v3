@@ -101,6 +101,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.F_TOKEN, params: [addresses.iFARM, '18'] },
   },
   balancer_BALD_WETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/balancer.svg', './icons/usdc.svg'],
     apyTokenSymbols: ['BAL', 'USDC'],
