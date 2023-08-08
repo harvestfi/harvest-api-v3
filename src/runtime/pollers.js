@@ -42,7 +42,7 @@ const getProfitSharingFactor = chain => {
     case CHAIN_IDS.ARBITRUM_ONE:
       return 0.9
     case CHAIN_IDS.BASE:
-      return 0.9  
+      return 0.9
     default:
       return 0.85
   }

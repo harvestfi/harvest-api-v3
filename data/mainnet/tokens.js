@@ -1037,6 +1037,7 @@ module.exports = {
     },
   },
   balancer_bbaUSD_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/am-dai.svg', './icons/am-usdc.svg', './icons/am-usdt.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -1098,6 +1099,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'AURA', 'LDO'],
   },
   balancer_wstETH_aWETH_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/steth.svg', './icons/am-weth.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'ARB'],
@@ -1136,6 +1138,7 @@ module.exports = {
     },
   },
   balancer_rETH_aWETH_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/reth.svg', './icons/am-weth.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
