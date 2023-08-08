@@ -272,7 +272,7 @@ const getPools = async () => {
 
     console.log('-- Done getting ARBITRUM pool data --\n')
 
-    console.log('\n-- Getting ARBITRUM pool data --')
+    console.log('\n-- Getting BASE pool data --')
 
     const basePoolBatches = chunk(
       pools.filter(pool => pool.chain === CHAIN_IDS.BASE),
