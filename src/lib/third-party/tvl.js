@@ -25,7 +25,7 @@ const executeGraphCall = (chain, query, variables) =>
     })
 
 const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
-  const arbTQuery = `
+  const arb_baseTQuery = `
   query getTVLsQuery($first: Int!, $skip: Int!, $sequence_gt: Int!) {
     totalTvlHistories(
       orderBy: createAtBlock
@@ -72,9 +72,13 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
     }
   }
   `
-  const query = vault ? vaultQuery : chain === 42161 ? arbTQuery : tQuery
+  const query = vault ? vaultQuery : chain === 42161 || chain === 8453 ? arb_baseTQuery : tQuery
   const variables = vault ? { vault, first, skip, sequence_gt } : { first, skip, sequence_gt }
-  const resultKey = vault ? 'tvls' : chain === 42161 ? 'totalTvlHistories' : 'totalTvlHistoryV2S'
+  const resultKey = vault
+    ? 'tvls'
+    : chain === 42161 || chain === 8453
+    ? 'totalTvlHistories'
+    : 'totalTvlHistoryV2S'
 
   const { [resultKey]: result } = await executeGraphCall(chain, query, variables)
 

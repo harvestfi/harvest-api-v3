@@ -133,6 +133,7 @@ const CONVEX_API_URLS = {
 const HARVEST_SUBGRAPH_URLS = {
   1: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance',
   137: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-polygon',
+  8453: 'https://api.thegraph.com/subgraphs/name/alexandersazonof/harvest-base',
   42161: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-arbitrum',
 }
 
