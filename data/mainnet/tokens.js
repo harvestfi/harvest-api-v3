@@ -4684,13 +4684,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.V2.convex_pETH.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.CURVE_POOL,
-      params: [
-        addresses.V2.convex_pETH.Underlying,
-        addresses.V2.convex_pETH.Underlying,
-        '18',
-        ['pETH', 'ETH'],
-      ],
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['weth'],
     },
     estimateApyFunctions: [
       {
