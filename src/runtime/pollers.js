@@ -42,7 +42,7 @@ const getProfitSharingFactor = chain => {
     case CHAIN_IDS.ARBITRUM_ONE:
       return 0.9
     case CHAIN_IDS.BASE:
-      return 0.9  
+      return 0.9
     default:
       return 0.85
   }
@@ -709,12 +709,12 @@ const getTVL = async () => {
     { name: 'ETH', type: CHAIN_IDS.ETH, list: TVL_LISTS.ETH },
     { name: 'Polygon', type: CHAIN_IDS.POLYGON, list: TVL_LISTS.MATIC },
     { name: 'Arbitrum', type: CHAIN_IDS.ARBITRUM_ONE, list: TVL_LISTS.ARBITRUM },
-    // { name: 'Base', type: CHAIN_IDS.BASE, list: TVL_LISTS.BASE },
+    { name: 'Base', type: CHAIN_IDS.BASE, list: TVL_LISTS.BASE },
   ]
 
   for (const chain of chains) {
     console.log(`\n-- Get TVL data on ${chain.name} --`)
-
+    const defaultTimeSpac = chain.type != 8453 ? 86400 : 43200
     const curList = token_tvl?.[chain.list] || []
     const length = await getTvlDataLength(parseInt(chain.type))
     let savedTimestamp = curList.length > 0 ? parseInt(curList[curList.length - 1].timestamp) : 0
@@ -727,13 +727,14 @@ const getTVL = async () => {
         result = []
 
       for (let j = 0; j < response.length; j++) {
-        if (parseInt(response[j].timestamp) >= savedTimestamp + 86400) {
+        if (parseInt(response[j].timestamp) >= savedTimestamp + defaultTimeSpac) {
           result.push(response[j])
           savedTimestamp = parseInt(response[j].timestamp)
         }
       }
       if (chain.type === CHAIN_IDS.ETH) data = { ethTvl: { $each: result } }
       else if (chain.type === CHAIN_IDS.POLYGON) data = { polTvl: { $each: result } }
+      else if (chain.type === CHAIN_IDS.BASE) data = { baseTvl: { $each: result } }
       else data = { arbTvl: { $each: result } }
       await appendData(Cache, DB_CACHE_IDS.TVL, data, hasErrors)
     }
