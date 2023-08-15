@@ -34,6 +34,8 @@ const getPlatformId = chain => {
       return 'arbitrum-one'
     case CHAIN_IDS.BASE:
       return 'base'
+    case CHAIN_IDS.ERA:
+      return 'era'
     default:
       return 'ethereum'
   }

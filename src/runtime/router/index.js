@@ -217,6 +217,7 @@ const initRouter = app => {
           { [TVL_LISTS.ARBITRUM]: 1 },
         )
         const baseTvlList = await Cache.findOne({ type: DB_CACHE_IDS.TVL }, { [TVL_LISTS.BASE]: 1 })
+        const eraTvlList = await Cache.findOne({ type: DB_CACHE_IDS.TVL }, { [TVL_LISTS.ERA]: 1 })
         const farmTvlList = await Cache.findOne({ type: DB_CACHE_IDS.TVL }, { [TVL_LISTS.FARM]: 1 })
 
         res.send({
@@ -224,6 +225,7 @@ const initRouter = app => {
           MATIC: get(polTvlList, TVL_LISTS.MATIC, []),
           ARBITRUM: get(arbTvlList, TVL_LISTS.ARBITRUM, []),
           BASE: get(baseTvlList, TVL_LISTS.BASE, []),
+          ERA: get(eraTvlList, TVL_LISTS.ERA, []),
           FARM: get(farmTvlList, TVL_LISTS.FARM, []),
         })
       }),

@@ -133,7 +133,7 @@ const CONVEX_API_URLS = {
 const HARVEST_SUBGRAPH_URLS = {
   1: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance',
   137: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-polygon',
-  8453: 'https://api.thegraph.com/subgraphs/name/alexandersazonof/harvest-base',
+  8453: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-base',
   42161: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-arbitrum',
 }
 
@@ -142,6 +142,7 @@ const TVL_LISTS = {
   MATIC: 'polTvl',
   ARBITRUM: 'arbTvl',
   BASE: 'baseTvl',
+  ERA: 'eraTvl',
   FARM: 'farmTvl',
 }
 
@@ -177,6 +178,7 @@ const SUSHI_GRAPHQL_ENDPOINTS = {
 const CHAIN_IDS = {
   ETH: '1',
   POLYGON: '137',
+  ERA: '324',
   BASE: '8453',
   ARBITRUM_ONE: '42161',
 }
@@ -184,6 +186,7 @@ const CHAIN_IDS = {
 const MATIC_RPC_URL =
   process.env.MATIC_RPC_URL ||
   `https://polygon-mainnet.infura.io/v3/${process.env.MATIC_INFURA_KEY}`
+const ERA_RPC_URL = process.env.ERA_RPC_URL || `https://mainnet.era.zksync.io`
 const BASE_RPC_URL = process.env.BASE_RPC_URL || `https://developer-access-mainnet.base.org`
 const ARBITRUM_RPC_URL =
   process.env.ARBITRUM_RPC_URL ||
@@ -292,4 +295,5 @@ module.exports = {
   HARVEST_SUBGRAPH_URLS,
   TVL_LISTS,
   BASE_RPC_URL,
+  ERA_RPC_URL,
 }

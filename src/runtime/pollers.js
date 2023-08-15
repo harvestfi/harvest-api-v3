@@ -43,6 +43,8 @@ const getProfitSharingFactor = chain => {
       return 0.9
     case CHAIN_IDS.BASE:
       return 0.9
+    case CHAIN_IDS.ERA:
+      return 0.9
     default:
       return 0.85
   }
@@ -55,6 +57,7 @@ const getVaults = async () => {
     fetchedMATICVaults = [],
     fetchedARBITRUMVaults = [],
     fetchedBASEVaults = [],
+    fetchedERAVaults = [],
     fetchedVaults,
     hasErrors = false
 
@@ -79,6 +82,11 @@ const getVaults = async () => {
 
   const baseVaultsBatches = chunk(
     Object.keys(tokensWithVault).filter(tokenId => tokens[tokenId].chain === CHAIN_IDS.BASE),
+    GET_VAULT_DATA_BATCH_SIZE,
+  )
+
+  const eraVaultsBatches = chunk(
+    Object.keys(tokensWithVault).filter(tokenId => tokens[tokenId].chain === CHAIN_IDS.ERA),
     GET_VAULT_DATA_BATCH_SIZE,
   )
 
@@ -138,6 +146,21 @@ const getVaults = async () => {
   })
   console.log('\n-- Done getting BASE vaults data --')
 
+  console.log('\n-- Getting ERA vaults data --')
+  await forEach(eraVaultsBatches, async batch => {
+    if (batch) {
+      try {
+        console.log('Getting vault data for: ', batch)
+        const vaultsData = await getVaultsData(batch)
+        fetchedERAVaults = fetchedERAVaults.concat(vaultsData)
+      } catch (err) {
+        hasErrors = true
+        console.error(`Failed to get vault data for: ${batch}`, err)
+      }
+    }
+  })
+  console.log('\n-- Done getting ERA vaults data --')
+
   fetchedVaults = {
     eth: fetchedETHVaults.reduce((acc, vault) => {
       acc[vault.id] = vault
@@ -152,6 +175,10 @@ const getVaults = async () => {
       return acc
     }, {}),
     base: fetchedBASEVaults.reduce((acc, vault) => {
+      acc[vault.id] = vault
+      return acc
+    }, {}),
+    era: fetchedERAVaults.reduce((acc, vault) => {
       acc[vault.id] = vault
       return acc
     }, {}),
@@ -232,6 +259,7 @@ const getPools = async () => {
     fetchedMATICPools = [],
     fetchedARBITRUMPools = [],
     fetchedBASEPools = [],
+    fetchedERAPools = [],
     fetchedPools = [],
     hasErrors
 
@@ -290,6 +318,24 @@ const getPools = async () => {
 
     console.log('-- Done getting BASE pool data --\n')
 
+    console.log('\n-- Getting ERA pool data --')
+
+    const eraPoolBatches = chunk(
+      pools.filter(pool => pool.chain === CHAIN_IDS.ERA),
+      GET_POOL_DATA_BATCH_SIZE,
+    )
+
+    if (size(eraPoolBatches)) {
+      await forEach(eraPoolBatches, async poolBatch => {
+        const poolData = await getPoolsData(poolBatch)
+        fetchedERAPools = fetchedBASEPools.concat(poolData)
+      })
+    } else {
+      console.log('No pools available')
+    }
+
+    console.log('-- Done getting ERA pool data --\n')
+
     console.log('\n-- Getting ETH pool data --')
 
     const ethPoolBatches = chunk(
@@ -315,6 +361,7 @@ const getPools = async () => {
     matic: fetchedMATICPools,
     arbitrum: fetchedARBITRUMPools,
     base: fetchedBASEPools,
+    era: fetchedERAPools,
   }
   hasErrors =
     (isArray(fetchedETHPools) &&
@@ -324,7 +371,9 @@ const getPools = async () => {
     (isArray(fetchedARBITRUMPools) &&
       (fetchedARBITRUMPools.includes(undefined) || fetchedARBITRUMPools.includes(null))) ||
     (isArray(fetchedBASEPools) &&
-      (fetchedBASEPools.includes(undefined) || fetchedBASEPools.includes(null)))
+      (fetchedBASEPools.includes(undefined) || fetchedBASEPools.includes(null))) ||
+    (isArray(fetchedERAPools) &&
+      (fetchedERAPools.includes(undefined) || fetchedERAPools.includes(null)))
 
   await storeData(
     Cache,
@@ -668,6 +717,9 @@ const getNanolyData = async () => {
         } else if (networkId == 'base') {
           chain = 'base'
           url = `https://app.harvest.finance/base/${vault.vaultAddress}`
+        } else if (networkId == 'era') {
+          chain = 'era'
+          url = `https://app.harvest.finance/era/${vault.vaultAddress}`
         }
 
         let result = {
@@ -710,6 +762,7 @@ const getTVL = async () => {
     { name: 'Polygon', type: CHAIN_IDS.POLYGON, list: TVL_LISTS.MATIC },
     { name: 'Arbitrum', type: CHAIN_IDS.ARBITRUM_ONE, list: TVL_LISTS.ARBITRUM },
     { name: 'Base', type: CHAIN_IDS.BASE, list: TVL_LISTS.BASE },
+    { name: 'Era', type: CHAIN_IDS.ERA, list: TVL_LISTS.ERA },
   ]
 
   for (const chain of chains) {
