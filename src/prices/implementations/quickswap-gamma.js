@@ -8,7 +8,7 @@ const getPrice = async poolAddress => {
     response
   try {
     response = await axios.get(`${QUICKSWAP_GAMMA_ENDPOINT}hypervisors/allData`)
-    const tvlUSD = get(response, `data.${poolAddress.toLowerCase()}.poolTvlUSD`, 0)
+    const tvlUSD = get(response, `data.${poolAddress.toLowerCase()}.tvlUSD`, 0)
     let totalSupply = get(response, `data.${poolAddress.toLowerCase()}.totalSupply`, 0)
     totalSupply = new BigNumber(totalSupply).dividedBy(new BigNumber(10).pow(18))
     if (totalSupply && totalSupply > 0) {
