@@ -485,6 +485,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'USDC'],
   },
   balancer_GHO_bbaUSD: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
