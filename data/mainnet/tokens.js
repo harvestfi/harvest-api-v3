@@ -59,6 +59,17 @@ module.exports = {
       params: ['baseswap'],
     },
   },
+  BSX: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/bsx.svg'],
+    tokenAddress: addresses.BASE.BSX,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.BASESWAP_PAIR,
+      params: [addresses.BASE.BSX, addresses.BASE.WETH],
+    },
+  },
   CBETH_base: {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/cbeth.svg'],
@@ -72,8 +83,8 @@ module.exports = {
   },
   baseswap_BSWAP_ETH: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/bswap.svg'],
-    apyTokenSymbols: ['BSWAP'],
+    apyIconUrls: ['./icons/bsx.svg', './icons/bswap.svg'],
+    apyTokenSymbols: ['BSX', 'BSWAP'],
     logoUrl: ['./icons/bswap.svg', './icons/eth.svg'],
     tokenNames: ['BSWAP', 'ETH'],
     platform: ['BaseSwap'],
@@ -87,10 +98,10 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.BASESWAP,
+        type: ESTIMATED_APY_TYPES.BASESWAP_V2,
         params: [
-          addresses.BASE.V2.baseswap_BSWAP_ETH.Underlying,
-          addresses.BASE.V2.baseswap_BSWAP_ETH.PoolId,
+          addresses.BASE.V2.baseswap_BSWAP_ETH.NewStrategy,
+          addresses.BASE.V2.baseswap_BSWAP_ETH.NFTPool,
           profitSharingCut10Percent,
         ],
       },
@@ -99,8 +110,8 @@ module.exports = {
   },
   baseswap_CBETH_ETH: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/bswap.svg'],
-    apyTokenSymbols: ['BSWAP'],
+    apyIconUrls: ['./icons/bsx.svg', './icons/bswap.svg'],
+    apyTokenSymbols: ['BSX', 'BSWAP'],
     logoUrl: ['./icons/cbeth.svg', './icons/eth.svg'],
     tokenNames: ['CBETH', 'ETH'],
     platform: ['BaseSwap'],
@@ -114,10 +125,10 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.BASESWAP,
+        type: ESTIMATED_APY_TYPES.BASESWAP_V2,
         params: [
-          addresses.BASE.V2.baseswap_CBETH_ETH.Underlying,
-          addresses.BASE.V2.baseswap_CBETH_ETH.PoolId,
+          addresses.BASE.V2.baseswap_CBETH_ETH.NewStrategy,
+          addresses.BASE.V2.baseswap_CBETH_ETH.NFTPool,
           profitSharingCut10Percent,
         ],
       },
@@ -126,8 +137,8 @@ module.exports = {
   },
   baseswap_DAI_USDC: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/bswap.svg'],
-    apyTokenSymbols: ['BSWAP'],
+    apyIconUrls: ['./icons/bsx.svg', './icons/bswap.svg'],
+    apyTokenSymbols: ['BSX', 'BSWAP'],
     logoUrl: ['./icons/dai.svg', './icons/usdc.svg'],
     tokenNames: ['DAI', 'USDC'],
     platform: ['BaseSwap'],
@@ -141,10 +152,10 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.BASESWAP,
+        type: ESTIMATED_APY_TYPES.BASESWAP_V2,
         params: [
-          addresses.BASE.V2.baseswap_DAI_USDC.Underlying,
-          addresses.BASE.V2.baseswap_DAI_USDC.PoolId,
+          addresses.BASE.V2.baseswap_DAI_USDC.NewStrategy,
+          addresses.BASE.V2.baseswap_DAI_USDC.NFTPool,
           profitSharingCut10Percent,
         ],
       },
@@ -153,8 +164,8 @@ module.exports = {
   },
   baseswap_ETH_USDC: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/bswap.svg'],
-    apyTokenSymbols: ['BSWAP'],
+    apyIconUrls: ['./icons/bsx.svg', './icons/bswap.svg'],
+    apyTokenSymbols: ['BSX', 'BSWAP'],
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     tokenNames: ['ETH', 'USDC'],
     platform: ['BaseSwap'],
@@ -168,10 +179,10 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.BASESWAP,
+        type: ESTIMATED_APY_TYPES.BASESWAP_V2,
         params: [
-          addresses.BASE.V2.baseswap_ETH_USDC.Underlying,
-          addresses.BASE.V2.baseswap_ETH_USDC.PoolId,
+          addresses.BASE.V2.baseswap_ETH_USDC.NewStrategy,
+          addresses.BASE.V2.baseswap_ETH_USDC.NFTPool,
           profitSharingCut10Percent,
         ],
       },
