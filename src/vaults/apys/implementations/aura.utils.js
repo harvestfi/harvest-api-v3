@@ -2,7 +2,7 @@ const pools = require('./aura-pools.json')
 
 const BigNumber = require('bignumber.js')
 
-const { web3, web3ARBITRUM } = require('../../../lib/web3')
+const { getWeb3 } = require('../../../lib/web3')
 const { token, pool } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices/index')
 //const getBalancerTokenPrice = require('../../../prices/implementations/balancer.js').getPrice
@@ -89,10 +89,8 @@ const auraAPRWithPrice = async (poolName, networkId, balPrice, auraPrice) => {
  * @returns {number}
  */
 const rewardRate = async (contract, networkId) => {
-  const poolInstance =
-    networkId == '1'
-      ? new web3.eth.Contract(pool.contract.abi, contract)
-      : new web3ARBITRUM.eth.Contract(pool.contract.abi, contract)
+  const web3 = getWeb3(networkId)
+  const poolInstance = new web3.eth.Contract(pool.contract.abi, contract)
   const fetchedRewardRate = await pool.methods.rewardRate(poolInstance)
   return new BigNumber(fetchedRewardRate).dividedBy(new BigNumber(10).pow(18)).toNumber()
 }
@@ -104,10 +102,8 @@ const rewardRate = async (contract, networkId) => {
  * @returns {number}
  */
 const supplyOf = async (contract, networkId = '1') => {
-  const tokenInstance =
-    networkId == '1'
-      ? new web3.eth.Contract(token.contract.abi, contract)
-      : new web3ARBITRUM.eth.Contract(token.contract.abi, contract)
+  const web3 = getWeb3(networkId)
+  const tokenInstance = new web3.eth.Contract(token.contract.abi, contract)
 
   const fetchedTotalSupply = await token.methods.getTotalSupply(tokenInstance)
   const totalSupply = new BigNumber(fetchedTotalSupply)

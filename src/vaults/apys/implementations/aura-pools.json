@@ -46,7 +46,14 @@
     "lptoken": "0x32dF62dc3aEd2cD6224193052Ce665DC18165841",
     "rewardPool": "0xa17492d89cB2D0bE1dDbd0008F8585EDc5B0ACf3",
     "balancerPoolId": "0x32df62dc3aed2cd6224193052ce665dc181658410002000000000000000003bd",
-    "name": "rdnt_eth_arbitrum"
+    "name": "rdnt_eth_arbitrum",
+    "extras": [
+      {
+        "contract": "0xF4abef3Ce505182B6A9c05Cf4F1EFAA888eEd425",
+        "token": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        "name": "ARB"
+      }
+    ]
   },
   {
     "id": 2,
@@ -74,7 +81,14 @@
     "lptoken": "0xc9f52540976385A84BF416903e1Ca3983c539E34",
     "rewardPool": "0x9626E4D2b444f386fD63181f65dfEB8D141E1824",
     "balancerPoolId": "0xc9f52540976385a84bf416903e1ca3983c539e34000200000000000000000434",
-    "name": "tbtc_weth_arbitrum"
+    "name": "tbtc_weth_arbitrum",
+    "extras": [
+      {
+        "contract": "0x48DfE3A8436FED9B4e712aF93Ffa26E3e1091527",
+        "token": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        "name": "ARB"
+      }
+    ]
   },
   {
     "id": 4,
@@ -109,14 +123,35 @@
     "lptoken": "0x542F16DA0efB162D20bF4358EfA095B70A100f9E",
     "rewardPool": "0xFCC94454061b7fDF0B03b0D2107Ecd9c6c74ddfd",
     "balancerPoolId": "0x542f16da0efb162d20bf4358efa095b70a100f9e000000000000000000000436",
-    "name": "tbtc_wbtc_arbitrum"
+    "name": "tbtc_wbtc_arbitrum",
+    "extras": [
+      {
+        "contract": "0x17705667E39cDCD861559D8d84f8D76259818350",
+        "token": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        "name": "ARB"
+      }
+    ]
   },
   {
     "id": 6,
     "lptoken": "0xb3028ca124b80cfe6e9ca57b70ef2f0ccc41ebd4",
     "rewardPool": "0xa4a5be1f830a6e94b844e12f86d97ff54a01a573",
     "balancerPoolId": "0xb3028ca124b80cfe6e9ca57b70ef2f0ccc41ebd40002000000000000000000ba",
-    "name": "magic_usdc_arbitrum"
+    "name": "magic_usdc_arbitrum",
+    "extras": [
+      {
+        "contract": "0xf93065629128C0F75C784fd3CBE057FbD71A5BbA",
+        "token": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        "name": "ARB"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "lptoken": "0x513CdEE00251F39DE280d9E5f771A6eaFebCc88E",
+    "rewardPool": "0x333122d446A950a951942a6C065b6ebBEE72EA98",
+    "balancerPoolId": "0x513cdee00251f39de280d9e5f771a6eafebcc88e000000000000000000000a6b",
+    "name": "jeur_par_polygon"
   },
   {
     "id": 7,
@@ -126,7 +161,7 @@
     "name": "wsteth_aweth_arbitrum",
     "extras": [
       {
-        "contract": "0xa05AC321229d98544FcDBAA24824A11dE7B400Aa",
+        "contract": "0x9d964B3dBdfB95485F85F9baa131EE8c72557595",
         "token": "0x912CE59144191C1204E64559FE8253a0e49E6548",
         "name": "ARB"
       }
@@ -144,21 +179,42 @@
     "lptoken": "0xc7FA3A3527435720f0e2a4c1378335324dd4F9b3",
     "rewardPool": "0x1597010ffE2e25a584D9705C1e48585BbfE56fC0",
     "balancerPoolId": "0xc7fa3a3527435720f0e2a4c1378335324dd4f9b3000200000000000000000459",
-    "name": "aurabal_wsteth_arbitrum"
+    "name": "aurabal_wsteth_arbitrum",
+    "extras": [
+      {
+        "contract": "0x7Ee4Dc875Dbd5f8f864E7E3EE93Af862316bb3E0",
+        "token": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        "name": "ARB"
+      }
+    ]
   },
   {
     "id": 11,
     "lptoken": "0x8d333f82e0693f53fA48c40d5D4547142E907e1D",
     "rewardPool": "0x9fC8196aAdCd24a5ea90e65d975Ef3332D7435db",
     "balancerPoolId": "0x8d333f82e0693f53fa48c40d5d4547142e907e1d000200000000000000000437",
-    "name": "pal_ohm_arbitrum"
+    "name": "pal_ohm_arbitrum",
+    "extras": [
+      {
+        "contract": "0xa87933d815DE5827Da3713260Eb91A7e754729c8",
+        "token": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        "name": "ARB"
+      }
+    ]
   },
   {
     "id": 12,
     "lptoken": "0x8bc65Eed474D1A00555825c91FeAb6A8255C2107",
     "rewardPool": "0xAc7025Dec5E216025C76414f6ac1976227c20Ff0",
     "balancerPoolId": "0x8bc65eed474d1a00555825c91feab6a8255c2107000000000000000000000453",
-    "name": "dola_usdc_arbitrum"
+    "name": "dola_usdc_arbitrum",
+    "extras": [
+      {
+        "contract": "0x11A3317F7A08F4f247b19914beeCc817B0F033CC",
+        "token": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        "name": "ARB"
+      }
+    ]
   },
   {
     "id": 50,

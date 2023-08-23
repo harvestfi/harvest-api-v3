@@ -6,6 +6,126 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.BASE,
+    id: 'balancer_axlUSDC_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.BASE.V2.balancer_axlUSDC_USDC.Underlying, 'balancerv2_base'],
+    },
+    contractAddress: addresses.BASE.V2.balancer_axlUSDC_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.balancer_axlUSDC_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_axlUSDC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_axlUSDC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_axlUSDC_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/base/pool/${addresses.BASE.V2.balancer_axlUSDC_USDC.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'balancer_cbETH_WETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.BASE.V2.balancer_cbETH_WETH.Underlying, 'balancerv2_base'],
+    },
+    contractAddress: addresses.BASE.V2.balancer_cbETH_WETH.NewPool,
+    collateralAddress: addresses.BASE.V2.balancer_cbETH_WETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_cbETH_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_cbETH_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_cbETH_WETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/base/pool/${addresses.BASE.V2.balancer_cbETH_WETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'balancer_GOLD_WETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.BASE.V2.balancer_GOLD_WETH.Underlying, 'balancerv2_base'],
+    },
+    contractAddress: addresses.BASE.V2.balancer_GOLD_WETH.NewPool,
+    collateralAddress: addresses.BASE.V2.balancer_GOLD_WETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_GOLD_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.GOLD}" target="_blank" rel="noopener noreferrer">GOLD</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_GOLD_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_GOLD_WETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/base/pool/${addresses.BASE.V2.balancer_GOLD_WETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'baseswap_BSX_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.BASE.V2.baseswap_BSX_ETH.Underlying, 'baseswap'],
+    },
+    contractAddress: addresses.BASE.V2.baseswap_BSX_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.baseswap_BSX_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_BSX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a>. 
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_BSX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>.
+      </p>
+      <p> Get the
+      <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_BSX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a> by supplying liquidity on 
+      <a href="https://baseswap.fi/add/0x4200000000000000000000000000000000000006/0xd5046B976188EB40f6DE40fB527F89c05b323385" target="_blank" rel="noopener noreferrer">BaseSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
     id: 'baseswap_BSWAP_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -22,6 +142,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_BSWAP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a>. 
        At every harvest, the earned rewards are reinvested into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_BSWAP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>.
@@ -51,6 +172,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_CBETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a>. 
        At every harvest, the earned rewards are reinvested into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_CBETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>.
@@ -80,6 +202,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_DAI_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a>. 
        At every harvest, the earned rewards are reinvested into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_DAI_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>.
@@ -109,6 +232,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a>. 
        At every harvest, the earned rewards are reinvested into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>.
