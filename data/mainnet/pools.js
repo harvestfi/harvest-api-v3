@@ -6,6 +6,122 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.BASE,
+    id: 'baseswap_BSWAP_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.BASE.V2.baseswap_BSWAP_ETH.Underlying, 'baseswap'],
+    },
+    contractAddress: addresses.BASE.V2.baseswap_BSWAP_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.baseswap_BSWAP_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_BSWAP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a>. 
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_BSWAP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>.
+      </p>
+      <p> Get the
+      <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_BSWAP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a> by supplying liquidity on 
+      <a href="https://baseswap.fi/add/0x4200000000000000000000000000000000000006/0x78a087d713Be963Bf307b18F2Ff8122EF9A63ae9" target="_blank" rel="noopener noreferrer">BaseSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'baseswap_CBETH_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.BASE.V2.baseswap_CBETH_ETH.Underlying, 'baseswap'],
+    },
+    contractAddress: addresses.BASE.V2.baseswap_CBETH_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.baseswap_CBETH_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_CBETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a>. 
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_CBETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>.
+      </p>
+      <p> Get the
+      <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_CBETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a> by supplying liquidity on 
+      <a href="https://baseswap.fi/add/0x4200000000000000000000000000000000000006/0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22" target="_blank" rel="noopener noreferrer">BaseSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'baseswap_DAI_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.BASE.V2.baseswap_DAI_USDC.Underlying, 'baseswap'],
+    },
+    contractAddress: addresses.BASE.V2.baseswap_DAI_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.baseswap_DAI_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_DAI_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a>. 
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_DAI_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>.
+      </p>
+      <p> Get the
+      <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_DAI_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a> by supplying liquidity on 
+      <a href="https://baseswap.fi/add/0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb/0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA" target="_blank" rel="noopener noreferrer">BaseSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'baseswap_ETH_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.BASE.V2.baseswap_ETH_USDC.Underlying, 'baseswap'],
+    },
+    contractAddress: addresses.BASE.V2.baseswap_ETH_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.baseswap_ETH_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a>. 
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>.
+      </p>
+      <p> Get the
+      <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a> by supplying liquidity on 
+      <a href="https://baseswap.fi/add/0x4200000000000000000000000000000000000006/0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA" target="_blank" rel="noopener noreferrer">BaseSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
     id: 'balancer_BALD_WETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2626,7 +2742,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
-      <a href="https://quickswap.gamma.xyz/vault-detail/WMATIC-WETH-0-Narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/wmatic-weth-narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
@@ -2656,7 +2772,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
-      <a href="https://quickswap.gamma.xyz/vault-detail/WMATIC-WETH-0-Wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/wmatic-weth-wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
@@ -2686,7 +2802,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
-      <a href="https://quickswap.gamma.xyz/vault-detail/WMATIC-USDC-0-Narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/wmatic-usdc-narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
@@ -2716,7 +2832,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
-      <a href="https://quickswap.gamma.xyz/vault-detail/WMATIC-USDC-0-Wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/wmatic-usdc-wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
@@ -2746,7 +2862,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
-      <a href="https://quickswap.gamma.xyz/vault-detail/USDC-WETH-0-Narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/usdc-weth-narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
@@ -2776,7 +2892,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
-      <a href="https://quickswap.gamma.xyz/vault-detail/USDC-WETH-0-Wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/usdc-weth-wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
