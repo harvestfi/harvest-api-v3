@@ -73,6 +73,12 @@ const camelotMasterContract = require('../contracts/camelot-master/contract.json
 const camelotStrategyMethods = require('../contracts/camelot-strategy/methods')
 const camelotStrategyContract = require('../contracts/camelot-strategy/contract.json')
 
+const baseswapMasterV2Methods = require('../contracts/baseswap-masterchef-v2/methods')
+const baseswapMasterV2Contract = require('../contracts/baseswap-masterchef-v2/contract.json')
+
+const baseswapNFTMethods = require('../contracts/baseswap-nftpool/methods')
+const baseswapNFTContract = require('../contracts/baseswap-nftpool/contract.json')
+
 module.exports = {
   xgrailStrategy: {
     methods: xgrailStrategyMethods,
@@ -97,6 +103,14 @@ module.exports = {
   camelotMaster: {
     methods: camelotMasterMethods,
     contract: camelotMasterContract,
+  },
+  baseswapMasterchefV2: {
+    methods: baseswapMasterV2Methods,
+    contract: baseswapMasterV2Contract,
+  },
+  baseswapNFTPool: {
+    methods: baseswapNFTMethods,
+    contract: baseswapNFTContract,
   },
   vault: {
     methods: vaultMethods,
