@@ -48,6 +48,73 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  COMP: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    logoUrl: ['./icons/comp.svg'],
+    tokenAddress: addresses.COMP,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['compound-governance-token'],
+    },
+  },
+  USDC_base: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/comp.svg'],
+    apyTokenSymbols: ['COMP'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Compound'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.BASE.V2.USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.USDC.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.COMPOUND_V3,
+        params: [
+          addresses.BASE.V2.USDC.Underlying,
+          addresses.BASE.V2.USDC.Market,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'COMP'],
+  },
+  WETH_base: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/comp.svg'],
+    apyTokenSymbols: ['COMP'],
+    logoUrl: ['./icons/eth.svg'],
+    tokenNames: ['ETH'],
+    platform: ['Compound'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.BASE.V2.WETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.WETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['weth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.COMPOUND_V3,
+        params: [
+          addresses.BASE.V2.WETH.Underlying,
+          addresses.BASE.V2.WETH.Market,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'COMP'],
+  },
   axlUSDC: {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/axlusdc.svg'],
@@ -345,17 +412,6 @@ module.exports = {
       params: ['bald'],
     },
   },
-  USDC_base: {
-    chain: CHAIN_IDS.BASE,
-    logoUrl: ['./icons/usdc.svg'],
-    tokenAddress: addresses.BASE.USDC,
-    decimals: '6',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['usd-coin'],
-    },
-  },
   DAI_base: {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/dai.svg'],
@@ -365,17 +421,6 @@ module.exports = {
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['dai'],
-    },
-  },
-  WETH_base: {
-    chain: CHAIN_IDS.BASE,
-    logoUrl: ['./icons/eth.svg'],
-    tokenAddress: addresses.BASE.WETH,
-    decimals: '18',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['weth'],
     },
   },
   iFARM_base: {
