@@ -82,10 +82,17 @@ const baseswapNFTContract = require('../contracts/baseswap-nftpool/contract.json
 const cometMethods = require('../contracts/comet/methods')
 const cometContract = require('../contracts/comet/contract.json')
 
+const aeroGaugeMethods = require('../contracts/aerodrome-gauge/methods')
+const aeroGaugeContract = require('../contracts/aerodrome-gauge/contract.json')
+
 module.exports = {
   comet: {
     methods: cometMethods,
     contract: cometContract,
+  },
+  aeroGauge: {
+    methods: aeroGaugeMethods,
+    contract: aeroGaugeContract,
   },
   xgrailStrategy: {
     methods: xgrailStrategyMethods,
