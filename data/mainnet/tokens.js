@@ -66,7 +66,7 @@ module.exports = {
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC'],
     platform: ['Compound'],
-    tags: ['Beginner', 'Stable'],
+    tags: ['Beginners', 'Stable'],
     tokenAddress: addresses.BASE.V2.USDC.Underlying,
     decimals: '6',
     vaultAddress: addresses.BASE.V2.USDC.NewVault,
@@ -94,7 +94,7 @@ module.exports = {
     logoUrl: ['./icons/eth.svg'],
     tokenNames: ['ETH'],
     platform: ['Compound'],
-    tags: ['Beginner', 'Stable'],
+    tags: ['Beginners', 'Stable'],
     tokenAddress: addresses.BASE.V2.WETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.WETH.NewVault,
@@ -110,6 +110,62 @@ module.exports = {
           addresses.BASE.V2.WETH.Market,
           profitSharingCut10Percent,
           CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'COMP'],
+  },
+  USDC_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/comp.svg'],
+    apyTokenSymbols: ['COMP'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Compound'],
+    tags: ['Beginners', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.USDC.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.COMPOUND_V3,
+        params: [
+          addresses.ARBITRUM_ONE.V2.USDC.Underlying,
+          addresses.ARBITRUM_ONE.V2.USDC.Market,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'COMP'],
+  },
+  USDC_polygon: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    apyIconUrls: ['./icons/comp.svg'],
+    apyTokenSymbols: ['COMP'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Compound'],
+    tags: ['Beginners', 'Stable'],
+    tokenAddress: addresses.MATIC.V2.USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.MATIC.V2.USDC.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.COMPOUND_V3,
+        params: [
+          addresses.MATIC.V2.USDC.Underlying,
+          addresses.MATIC.V2.USDC.Market,
+          profitSharingCut8Percent,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
@@ -3640,14 +3696,6 @@ module.exports = {
     apyTokenSymbols: ['CRV'],
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
-  USDC_arbitrum: {
-    chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: ['./icons/usdc.svg'],
-    tokenAddress: addresses.ARBITRUM_ONE.USDC,
-    decimals: '6',
-    vaultAddress: null,
-    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.USDC] },
-  },
   USDT_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdt.svg'],
@@ -5350,7 +5398,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.meshswap_USDC_oUSDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.meshswap_USDC_oUSDC.Underlying, 'pUSDC', 'oUSDC'],
+      params: [addresses.MATIC.V2.meshswap_USDC_oUSDC.Underlying, 'USDC_polygon', 'oUSDC'],
     },
     estimateApyFunctions: [
       {
@@ -5420,7 +5468,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.meshswap_WMATIC_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.meshswap_WMATIC_USDC.Underlying, 'WMATIC', 'pUSDC'],
+      params: [addresses.MATIC.V2.meshswap_WMATIC_USDC.Underlying, 'WMATIC', 'USDC_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -6170,7 +6218,7 @@ module.exports = {
         params: [addresses.MATIC.V2.quick_YEL_MATIC.PoolId, profitSharingCut8Percent],
       },
     ],
-    cmcRewardTokenSymbols: ['miFARM', 'pUSDC', 'pWETH'],
+    cmcRewardTokenSymbols: ['miFARM', 'USDC_polygon', 'pWETH'],
   },
   mUSD: {
     inactive: true,
@@ -6854,34 +6902,6 @@ module.exports = {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['wbnb'],
     },
-  },
-  pUSDC: {
-    inactive: true,
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: ['./icons/usdc.svg'],
-    apyIconUrls: [],
-    apyTokenSymbols: [],
-    tokenNames: ['USDC'],
-    platform: ['IDLE'],
-    tokenAddress: addresses.MATIC.V2.polygon_USDC.Underlying,
-    decimals: '6',
-    vaultAddress: addresses.MATIC.V2.polygon_USDC.NewVault,
-    priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_CONTRACT,
-      params: [addresses.USDC],
-    },
-    estimateApyFunctions: [
-      {
-        type: ESTIMATED_APY_TYPES.IDLE_FINANCE,
-        params: [
-          'pUSDC',
-          '0x1ee6470CD75D5686d0b2b90C0305Fa46fb0C89A1',
-          profitSharingCut8Percent,
-          CHAIN_IDS.POLYGON_MAINNET,
-        ],
-      },
-    ],
-    cmcRewardTokenSymbols: ['iFARM', 'wMATIC'],
   },
   MAI: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
@@ -9489,7 +9509,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.jarvis_AUR_USDC_V2.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_AUR_USDC_V2.Underlying, 'AURFEB22', 'pUSDC'],
+      params: [addresses.MATIC.V2.jarvis_AUR_USDC_V2.Underlying, 'AURFEB22', 'USDC_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -9668,7 +9688,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.jarvis_JEUR_USDC_HODL.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_JEUR_USDC_HODL.Underlying, 'JEUR', 'pUSDC'],
+      params: [addresses.MATIC.V2.jarvis_JEUR_USDC_HODL.Underlying, 'JEUR', 'USDC_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -9702,7 +9722,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.jarvis_JGBP_USDC_HODL.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_JGBP_USDC_HODL.Underlying, 'JGBP', 'pUSDC'],
+      params: [addresses.MATIC.V2.jarvis_JGBP_USDC_HODL.Underlying, 'JGBP', 'USDC_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -9736,7 +9756,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.jarvis_JCHF_USDC_HODL.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_JCHF_USDC_HODL.Underlying, 'JCHF', 'pUSDC'],
+      params: [addresses.MATIC.V2.jarvis_JCHF_USDC_HODL.Underlying, 'JCHF', 'USDC_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -9770,7 +9790,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.jarvis_AUR3_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_AUR3_USDC.Underlying, 'AUR-APR22', 'pUSDC'],
+      params: [addresses.MATIC.V2.jarvis_AUR3_USDC.Underlying, 'AUR-APR22', 'USDC_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -9799,7 +9819,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.jarvis_AUR_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_AUR_USDC.Underlying, 'AUR0112', 'pUSDC'],
+      params: [addresses.MATIC.V2.jarvis_AUR_USDC.Underlying, 'AUR0112', 'USDC_polygon'],
     },
     estimateApyFunctions: [
       {
