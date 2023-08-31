@@ -79,7 +79,14 @@ const baseswapMasterV2Contract = require('../contracts/baseswap-masterchef-v2/co
 const baseswapNFTMethods = require('../contracts/baseswap-nftpool/methods')
 const baseswapNFTContract = require('../contracts/baseswap-nftpool/contract.json')
 
+const cometMethods = require('../contracts/comet/methods')
+const cometContract = require('../contracts/comet/contract.json')
+
 module.exports = {
+  comet: {
+    methods: cometMethods,
+    contract: cometContract,
+  },
   xgrailStrategy: {
     methods: xgrailStrategyMethods,
     contract: xgrailStrategyContract,

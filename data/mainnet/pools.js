@@ -6,6 +6,48 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.BASE,
+    id: 'USDC_base',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Compound V3, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.COMP}" target="_blank" rel="noopener noreferrer">COMP</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'WETH_base',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.WETH.NewPool,
+    collateralAddress: addresses.BASE.V2.WETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.WETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to Compound V3, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.COMP}" target="_blank" rel="noopener noreferrer">COMP</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.WETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
     id: 'balancer_axlUSDC_USDC',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
