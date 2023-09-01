@@ -105,19 +105,16 @@
   "BASED_sUSD": "0xaAD22f5543FCDaA694B68f94Be177B561836AE57",
   "NOTE": "0xCFEAead4947f0705A14ec42aC3D44129E1Ef3eD5",
   "APE": "0x4d224452801ACEd8B2F0aebE155379bb5D594381",
-
   "UNI_LP_WETH_DPI": "0x4d5ef58aAc27d99935E5b6B4A6778ff292059991",
   "UNI_LP_WETH_USDT": "0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852",
   "UNI_LP_WETH_USDC": "0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc",
   "UNI_LP_WETH_DAI": "0xa478c2975ab1ea89e8196811f51a7b7ade33eb11",
   "UNI_LP_WETH_WBTC": "0xbb2b8038a1640196fbe3e38816f3e67cba72d940",
-
   "VaultUNI_LP_WETH_USDT": "0x7ddc3fff0612e75ea5ddc0d6bd4e268f70362cff",
   "VaultUNI_LP_WETH_USDC": "0xA79a083FDD87F73c2f983c5551EC974685D6bb36",
   "VaultUNI_LP_WETH_DAI": "0x307E2752e8b8a9C29005001Be66B1c012CA9CDB7",
   "VaultUNI_LP_WETH_WBTC": "0x01112a60f427205dcA6E229425306923c3Cc2073",
   "VaultUNI_LP_WETH_DPI": "0x2a32dcBB121D48C106F6d94cf2B4714c0b4Dfe48",
-
   "CRVStrategyYCRVMainnet": "0xCf5F83F8FE0AB0f9E9C1db07E6606dD598b2bbf5",
   "SNXRewardStrategyWETH": "",
   "SNXRewardStrategyLINK": "",
@@ -889,7 +886,9 @@
       "DataContract": "0x7D2574BD588F24E554321d7edf4BbE8FB9057Df1",
       "NewPool": "0x7931D6263798f99A082Caf1416b2457605628e2D",
       "FeeAmount": "3000",
-      "PosId": [139984],
+      "PosId": [
+        139984
+      ],
       "Underlying": [
         "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
@@ -901,7 +900,9 @@
       "DataContract": "0x99b54e1CCb28137c382796b7b7b5ed61Eda98695",
       "FeeAmount": "3000",
       "NewPool": "0xEFb78d1E3BA4272E7D806b9dC88e239e08e4082D",
-      "PosId": [139989],
+      "PosId": [
+        139989
+      ],
       "Underlying": [
         "0x6B175474E89094C44Da98b954EedeAC495271d0F",
         "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
@@ -913,7 +914,9 @@
       "DataContract": "0x4E73454a1DC53daCd7Cc98F124E4D459Dea0DD1b",
       "FeeAmount": "3000",
       "NewPool": "0x6055d7f2E84e334176889f6d8c3F84580cA4F507",
-      "PosId": [139990],
+      "PosId": [
+        139990
+      ],
       "Underlying": [
         "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         "0xdAC17F958D2ee523a2206206994597C13D831ec7"
@@ -925,7 +928,9 @@
       "DataContract": "0x7a535F44A86D20076dDE031A28E4f3500d00D628",
       "NewPool": "0x1A0E125Ba607714d83260B8e28A68CAb97Db8E52",
       "FeeAmount": "10000",
-      "PosId": [144051],
+      "PosId": [
+        144051
+      ],
       "Underlying": [
         "0x5C1d9aA868a30795F92fAe903eDc9eFF269044bf",
         "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
@@ -935,7 +940,9 @@
       "NewVault": "0xC74075F5c9aD58C655a6160bA955B4aCD5dE8d0B",
       "DataContract": "0xC388352C326D6B53a9AC872d6ed54c5c763da504",
       "FeeAmount": "3000",
-      "PosId": [149295],
+      "PosId": [
+        149295
+      ],
       "Underlying": [
         "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
@@ -947,7 +954,9 @@
       "NewVault": "0x8137ac6dF358fe2D0DFbB1b5aA87C110950A16Cd",
       "DataContract": "0x9221474Ba87867af85681Df08d6aF7f8387E4380",
       "FeeAmount": "3000",
-      "PosId": [149296],
+      "PosId": [
+        149296
+      ],
       "Underlying": [
         "0x6B175474E89094C44Da98b954EedeAC495271d0F",
         "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
@@ -959,7 +968,9 @@
       "NewVault": "0xEA46CfcB43D5274991344cF6F56765e39A7Eae1a",
       "DataContract": "0x1073CAb7DAab7a7002a17E5AA43a72BE5f2AbaB8",
       "FeeAmount": "3000",
-      "PosId": [149297],
+      "PosId": [
+        149297
+      ],
       "Underlying": [
         "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         "0xdAC17F958D2ee523a2206206994597C13D831ec7"
@@ -992,7 +1003,9 @@
       "NewPool": "0x1c28790a5cd03e2516c38cb06c6D6c688C8cf668",
       "DataContract": "0x72523EE797dfEF865C214906B381F863f8989529",
       "FeeAmount": 3000,
-      "PosId": [186833]
+      "PosId": [
+        186833
+      ]
     },
     "crv_CRV_ETH": {
       "Underlying": "0xEd4064f376cB8d68F770FB1Ff088a3d0F3FF5c4d",
@@ -1978,6 +1991,13 @@
     "auraBAL": "0x223738a747383d6F9f827d95964e4d8E8AC754cE",
     "COMP": "0x354A6dA3fcde098F8389cad84b0182725c6C91dE",
     "OHM": "0xf0cb2dc0db5e6c66B9a70Ac27B06b878da017028",
+    "EQB": "0xBfbCFe8873fE28Dfa25f1099282b088D52bbAD9C",
+    "JONES": "0x10393c20975cF177a3513071bC110f7962CD67da",
+    "LODE": "0xF19547f9ED24aA66b03c3a552D181Ae334FBb8DB",
+    "RELAY": "0x1426CF37CAA89628C4DA2864e40cF75E6d66Ac6b",
+    "THALES": "0xE85B662Fe97e8562f4099d8A1d5A92D4B453bF30",
+    "UMAMI": "0x1622bF67e6e5747b81866fE0b85178a93C7F86e3",
+    "UWU": "0x05d35769a222AfFd6185e20F3f3676Abde56C25F",
     "V2": {
       "lizard_SLIZ_ETH": {
         "Underlying": "0x751F3B8ca139bC1F3482b193297485f14208826a",
@@ -2452,7 +2472,63 @@
         "NewStrategy": "0xc78F89F0b995b79233d248C83447905BBbB5cC69",
         "NewPool": "0xb9A2912D15fDD5cB656BC995e6131E0216aED790",
         "Market": "0xA5EDBDD9646f8dFF606d7448e414884C7d905dCA"
-      }      
+      },
+      "camelot_EQB_ETH": {
+        "Underlying": "0x69B545997BD6aBC81CaE39Fe9bdC94d2242a0f92",
+        "NewVault": "0xEbCb1881165DEC931BF113025fBd115e31da6aA5",
+        "NewStrategy": "0x617D866273bFcDfB8F2A232bD909f7DCeb892E6c",
+        "NewPool": "0x25C69d255e8FED5f71e83d4D062b06770139841A",
+        "NFTPool": "0x76075F03e0Ae34bF0B63bcFb731F9DB5F826dcAe",
+        "NitroPool": "0xE13B64C33eCB0501C21e0423fcd2efAF5e0a2592"
+      },
+      "camelot_JONES_ETH": {
+        "Underlying": "0x460c2c075340EbC19Cf4af68E5d83C194E7D21D0",
+        "NewVault": "0xf8b14d9f2B477E916082Cd633E114C2cfC555B0F",
+        "NewStrategy": "0x7e20d31764f17B3ed1e8D692352751EbdeFc78f9",
+        "NewPool": "0x1f03F21ea31313b1c9d779242e1b86C4f31949B4",
+        "NFTPool": "0xE20cE7d800934eC568Fe94E135E84b1e919AbB2a",
+        "NitroPool": "0xda2257dd3501Cd96164eEf0C744E2ee30E646A40"
+      },
+      "camelot_LODE_ETH": {
+        "Underlying": "0x49bB23DfAe944059C2403BCc255c5a9c0F851a8D",
+        "NewVault": "0x85a78E8EAb33daF25b4E18D84D6FBc2eC05b6C40",
+        "NewStrategy": "0x9f927951D39d678262d94f68DbB72C755f221206",
+        "NewPool": "0x907c58826104bfAea2F477b719dCc95c82697B50",
+        "NFTPool": "0x48D45129b58f0d464Bdd5023E013FFFc40512c30",
+        "NitroPool": "0x9c33453927D6698A141BdE5DDbc2fBa88BaA2d51"
+      },
+      "camelot_RELAY_ETH": {
+        "Underlying": "0xBbcF0B7F070B170909C9ff430878e92ceAd990F3",
+        "NewVault": "0xc62001b3595882aa26942b3C731a989007c18936",
+        "NewStrategy": "0x6eEA49f4235C459958B318B4810596ec6700742F",
+        "NewPool": "0xA7a4825E35893c2018E2A8Dd540A1f314cd0DD8E",
+        "NFTPool": "0x30cbcBbd793501690d9Ca6f78fC798Ce987Af7d9",
+        "NitroPool": "0xe9b80ffd7Bd59189487Ab15866F88eBc8E7937A1"
+      },
+      "camelot_THALES_ETH": {
+        "Underlying": "0x8971dFb268B961a9270632f28B24F2f637c94244",
+        "NewVault": "0x82F77E43bC514525e01B0c0ce896214C00869b08",
+        "NewStrategy": "0x7aEDe853c958AD993863B7d97e626def87011829",
+        "NewPool": "0x893c361c2E6cD68fbB67485bFa761f296Faeab99",
+        "NFTPool": "0xB5108062de111F61E0dD585f4225ae18d1BB21D9",
+        "NitroPool": "0x41b52A004EeDacf5CAfb8cf76b8360b679372070"
+      },
+      "camelot_UMAMI_ETH": {
+        "Underlying": "0xa1e48225215d9e656F4f9d779fc32817C50de0E5",
+        "NewVault": "0x049e1a97882fcd5f852Be65b3002102B16f879CB",
+        "NewStrategy": "0x551c1D658AcfEe24b3027F85AfEAe56CC90a78dc",
+        "NewPool": "0xa7EB91B04F17fbcE2B88Ab940D53b1Ad7323B1f3",
+        "NFTPool": "0x5CC05f1D98FA65E3de125DA9006579e991905ab2",
+        "NitroPool": "0x36Cf5b4aA422e3EA2581Cd7C0E21BdFff09F9c5B"
+      },
+      "camelot_UWU_USDC": {
+        "Underlying": "0x6B8b78554Db2f017CCA749dad38E445cd8A3b5B4",
+        "NewVault": "0xeE0b2F18cE69b718Ea6499fC62C5Eed132C819dC",
+        "NewStrategy": "0xdC76a583501B4eb56d57EF27245eAf90089561dA",
+        "NewPool": "0x475aB1157F8E26838710Ed3F6d4df302fE61b19E",
+        "NFTPool": "0x4B51d227db5d0508320479532618383dA81A9539",
+        "NitroPool": "0x0fB1ADe48A1f567Ba31D3d3CAda701E0705D5077"
+      }
     }
   },
   "BASE": {
