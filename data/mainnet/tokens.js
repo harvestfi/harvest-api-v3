@@ -1215,6 +1215,17 @@ module.exports = {
       params: ['paladin'],
     },
   },
+  OHM_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/ohm.png'],
+    tokenAddress: addresses.ARBITRUM_ONE.OHM,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['olympus'],
+    },
+  },
   balancer_PAL_OHM: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/arb.svg'],
