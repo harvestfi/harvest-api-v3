@@ -260,7 +260,7 @@ module.exports = {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/umami.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.UMAMI,
-    decimals: '18',
+    decimals: '9',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
