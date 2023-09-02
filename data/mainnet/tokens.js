@@ -2258,6 +2258,17 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'USDC'],
   },
+  AURA_polygon: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    logoUrl: [''],
+    tokenAddress: addresses.MATIC.AURA,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['aura-finance'],
+    },
+  },
   balancer_2EUR_PAR_v2: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jeur.svg', './icons/par.svg'],
