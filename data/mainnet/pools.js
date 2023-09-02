@@ -5,6 +5,229 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelot_EQB_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelot_EQB_ETH.Underlying],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelot_EQB_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_EQB_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_EQB_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> &
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.EQB}" target="_blank" rel="noopener noreferrer">EQB</a>.
+       At every harvest, the earned GRAIL and EQB are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_EQB_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_EQB_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelot_JONES_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelot_JONES_ETH.Underlying],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelot_JONES_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_JONES_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_JONES_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+       At every harvest, the earned GRAIL is reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_JONES_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_JONES_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelot_LODE_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelot_LODE_ETH.Underlying],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelot_LODE_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_LODE_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_LODE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a>.
+       At every harvest, the earned GRAIL and LODE are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_LODE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_LODE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelot_RELAY_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelot_RELAY_ETH.Underlying],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelot_RELAY_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_RELAY_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_RELAY_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RELAY}" target="_blank" rel="noopener noreferrer">RELAY</a>.
+       At every harvest, the earned GRAIL and RELAY are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_RELAY_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_RELAY_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelot_THALES_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelot_THALES_ETH.Underlying],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelot_THALES_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_THALES_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_THALES_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.THALES}" target="_blank" rel="noopener noreferrer">THALES</a>.
+       At every harvest, the earned GRAIL and THALES are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_THALES_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_THALES_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelot_UMAMI_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelot_UMAMI_ETH.Underlying],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelot_UMAMI_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_UMAMI_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_UMAMI_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+       At every harvest, the earned GRAIL is reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_UMAMI_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_UMAMI_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelot_UWU_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelot_UWU_USDC.Underlying],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelot_UWU_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_UWU_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_UWU_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> &
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.UWU}" target="_blank" rel="noopener noreferrer">UWU</a> &
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
+       At every harvest, the earned GRAIL ,UWU and USDC are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_UWU_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_UWU_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V2 and the "Liquidity Only" option.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'aerodrome_AERO_USDC',
     type: POOL_TYPES.INCENTIVE,
