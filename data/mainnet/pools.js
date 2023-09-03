@@ -23,6 +23,10 @@ module.exports = [
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer"> CVR</a>.
       </p>
+      <p> Get  
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> through 
+      <a href="https://www.tangible.store/caviar" target="_blank" rel="noopener noreferrer">Tangible</a>.
+      </p>
     </div>
    `,
   },
