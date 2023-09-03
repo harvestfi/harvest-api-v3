@@ -1786,15 +1786,6 @@
         "PoolId": "0x65fe9314be50890fb01457be076fafd05ff32b9a000000000000000000000a96",
         "doHardwork": false
       },
-      "balancer_wUSDR_USDC": {
-        "Underlying": "0x34A81e8956BF20b7448b31990A2c06F96830a6e4",
-        "NewVault": "0xC5562171fFC7b4fE691B1E5C18460AA07800a3D0",
-        "NewStrategy": "0x0964331793ebe0fCb5627A4B93Cb3E8CB38EC3d9",
-        "NewPool": "0xe3a0Bd1b2aa42231ccf41e0e6Ed85E523CdF5325",
-        "Gauge": "0x80f392Bf3FA6973C3e14bb276e04931Ec12DE05E",
-        "PoolId": "0x34a81e8956bf20b7448b31990a2c06f96830a6e4000200000000000000000a14",
-        "doHardwork": false
-      },
       "curve_3CRV": {
         "Underlying": "0xE7a24EF0C5e95Ffb0f6684b813A78F2a3AD7D171",
         "NewVault": "0x7919ba4Fe387C64449E970a1b9e59Ee439ff142B",

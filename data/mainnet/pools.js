@@ -2481,35 +2481,6 @@ module.exports = [
    `,
   },
   {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    id: 'balancer_wUSDR_USDC_polygon',
-    type: POOL_TYPES.INCENTIVE,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying, 'balancerv2_matic'],
-    },
-    contractAddress: addresses.MATIC.V2.balancer_wUSDR_USDC.NewPool,
-    collateralAddress: addresses.MATIC.V2.balancer_wUSDR_USDC.NewVault,
-    rewardAPY: [],
-    rewardAPR: null,
-    rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['iFARM'],
-    stakeAndDepositHelpMessage: `
-    <div class="help-message">
-      <p> The vault supplies
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
-       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
-       At every harvest, the earned rewards are reinvested into more
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
-      </p>
-      <p> Get the 
-      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
-      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_wUSDR_USDC.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
-      </p>
-    </div>
-   `,
-  },
-  {
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'balancer_OHM_ETH',
     type: POOL_TYPES.INCENTIVE,

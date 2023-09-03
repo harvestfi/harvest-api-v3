@@ -3359,39 +3359,6 @@ module.exports = {
       params: ['wrapped-usdr'],
     },
   },
-  balancer_wUSDR_USDC_polygon: {
-    inactive: true,
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: ['./icons/wusdr.svg', './icons/usdc.svg'],
-    apyIconUrls: ['./icons/balancer.svg'],
-    apyTokenSymbols: ['BAL'],
-    platform: ['Balancer'],
-    tags: ['Advanced', 'Stable'],
-    tokenNames: ['wUSDR', 'USDC'],
-    tokenAddress: addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying,
-    decimals: '18',
-    vaultAddress: addresses.MATIC.V2.balancer_wUSDR_USDC.NewVault,
-    priceFunction: {
-      type: GET_PRICE_TYPES.BALANCER,
-      params: [
-        addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying,
-        addresses.MATIC.V2.balancer_wUSDR_USDC.PoolId,
-        CHAIN_IDS.POLYGON_MAINNET,
-      ],
-    },
-    estimateApyFunctions: [
-      {
-        type: ESTIMATED_APY_TYPES.BALANCER_GAUGE_SIDECHAIN,
-        params: [
-          'balancer_wUSDR_USDC_polygon',
-          addresses.MATIC.V2.balancer_wUSDR_USDC.Gauge,
-          profitSharingCut8Percent,
-          CHAIN_IDS.POLYGON_MAINNET,
-        ],
-      },
-    ],
-    cmcRewardTokenSymbols: ['iFARM', 'BAL'],
-  },
   balancer_OHM_ETH: {
     inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
