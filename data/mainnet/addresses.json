@@ -1340,7 +1340,7 @@
     "wamMATIC": "0x0D6135b2cFBAE3b1c58368a93b855fa54FA5aae1",
     "amMATIC": "0x6d80113e533a2C0fe82EaBD35f1875DcEA89Ea97",
     "DAI": "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063",
-    "wUSDR": "0xAF0D9D65fC54de245cdA37af3d18cbEc860A4D4b",
+    "wUSDR": "0x00e8c0E92eB3Ad88189E7125Ec8825eDc03Ab265",
     "bbamETH": "0x43894DE14462B421372bCFe445fA51b1b4A0Ff3D",
     "wamETH": "0xa5bBf0f46B9dc8a43147862ba35c8134eB45f1F5",
     "amETH": "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
@@ -1914,6 +1914,73 @@
         "NewStrategy": "0xA1C0207c9D6f7992Aa828052B21AC939eb877be3",
         "NewPool": "0x62E8CA7cC5a2C822429A6490481E9b4A96453144",
         "Market": "0xF25212E676D1F7F89Cd72fFEe66158f541246445"
+      },
+      "CVR": {
+        "Underlying": "0x6AE96Cc93331c19148541D4D2f31363684917092",
+        "NewVault": "0xCB2f2895208c36F38c9B13aB0C9e49Ad69B14e9d",
+        "NewStrategy": "0xc51F111D610d5855675908693C7a00cd64Ab4581",
+        "NewPool": "0x7616963C1e0e70E672940B17080CA91f28bC104d",
+        "RewardPool": "0x83C5022745B2511Bd199687a42D27BEFd025A9A9"
+      },
+      "pearl_CVR_PEARL": {
+        "Underlying": "0x700D6E1167472bDc312D9cBBdc7c58C7f4F45120",
+        "NewVault": "0x9b243f86fc5039C4EC1542A68E019B41a125b9e2",
+        "NewStrategy": "0x75b3DA6c5F8b9ACE152A9184583381A69E264019",
+        "NewPool": "0xB3238749a2b9b07EAc192F9Bf40e70DFb6C6c02b"
+      },
+      "pearl_DAI_USDR": {
+        "Underlying": "0xBD02973b441Aa83c8EecEA158b98B5984bb1036E",
+        "NewVault": "0xCa3f117eA3ad79DC98b2aF41C4d5fd457ff8205C",
+        "NewStrategy": "0xed0c3E2c87F66a53ae82050b433355499C067fd1",
+        "NewPool": "0x91Fe5CD7e6E52bC268FD372A0C63DD5EC6596377"
+      },
+      "pearl_ETH_USDR": {
+        "Underlying": "0x74c64d1976157E7Aaeeed46EF04705F4424b27eC",
+        "NewVault": "0x6FC6ec4f3F1E0291e1Fd4964Efed4e4E50f8f654",
+        "NewStrategy": "0x523B3809AB7cf39db63f343e16485cAB4b557762",
+        "NewPool": "0x154C04B94b6B219631DCCab51FB2Ae308DaF578d"
+      },
+      "pearl_MATIC_USDR": {
+        "Underlying": "0xB4d852b92148eAA16467295975167e640E1FE57A",
+        "NewVault": "0x19BC4dB3b59324d5f3F227323f516dBF587734BC",
+        "NewStrategy": "0xB137ae6CDFD4Ea05bAc229618cE5C6CD60EeaC3a",
+        "NewPool": "0x1d10dFECF26b35048Ba82E42c5f014D1245d759C"
+      },
+      "pearl_PEARL_USDR": {
+        "Underlying": "0xf68c20d6C50706f6C6bd8eE184382518C93B368c",
+        "NewVault": "0xBa9777906028783a2255798B070ed463ec0664BC",
+        "NewStrategy": "0x2BD017EdcD748B275f34a8072c4080376aF80A5d",
+        "NewPool": "0xC187da0Ec03c7dcF6f1B6e79bC3655C706c3BB69"
+      },
+      "pearl_TNGBL_USDR": {
+        "Underlying": "0x0Edc235693C20943780b76D79DD763236E94C751",
+        "NewVault": "0xCfC220fEff1300e6f461457636Aba2078cbb79E7",
+        "NewStrategy": "0xEEd0cD75a046a9F2B5c2EBC91c49f0083134eb5c",
+        "NewPool": "0xC81b6396c42fC138F54d7B5115F6Aa53729716C8"
+      },
+      "pearl_USDC_USDR": {
+        "Underlying": "0xD17cb0f162f133e339C0BbFc18c36c357E681D6b",
+        "NewVault": "0xE5Cd0e5f1a7c2471f338a25904c67DD1f6EC3187",
+        "NewStrategy": "0x717584a17Fa89aa271361dCAA4F7A51592E36591",
+        "NewPool": "0x12d80e7FECB4e20aB68C1f53B95754440b203909"
+      },
+      "pearl_USDT_USDR": {
+        "Underlying": "0x3f69055F203861abFd5D986dC81a2eFa7c915b0c",
+        "NewVault": "0x0E94267AE8EcaBD2091f31F9B2B07580b4993646",
+        "NewStrategy": "0x8f125362B9B20D0c9c13915D3513D60AdC2315D7",
+        "NewPool": "0x072848FDc0662B43f29e20170d7Ca096DE4C1857"
+      },
+      "pearl_WBTC_USDR": {
+        "Underlying": "0xb95E1C22dd965FafE926b2A793e9D6757b6613F4",
+        "NewVault": "0xE5c1b13Be1945A1788a6667cEd774e10F85A4fB3",
+        "NewStrategy": "0x1DCbdDB6d966A4Aa9eDB1149e2b3C976329Dc1C7",
+        "NewPool": "0x48Bd89ea9452d653e4680c056Aa5F7123160Cd9a"
+      },
+      "pearl_wUSDR_USDR": {
+        "Underlying": "0x8711a1a52c34EDe8E61eF40496ab2618a8F6EA4B",
+        "NewVault": "0x84006FB37B7693cfC59aC82abF6fC75d65DbDC0f",
+        "NewStrategy": "0x8Eb364bbD5C0c3DeA29d30cf264652F341FB2b9C",
+        "NewPool": "0x708b8E2956826e3855c31176FBfB979dCFC1E412"
       }
     }
   },

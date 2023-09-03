@@ -85,7 +85,21 @@ const cometContract = require('../contracts/comet/contract.json')
 const aeroGaugeMethods = require('../contracts/aerodrome-gauge/methods')
 const aeroGaugeContract = require('../contracts/aerodrome-gauge/contract.json')
 
+const caviarChefMethods = require('../contracts/caviar-chef/methods')
+const caviarChefContract = require('../contracts/caviar-chef/contract.json')
+
+const caviarRebaseChefMethods = require('../contracts/caviar-rebase-chef/methods')
+const caviarRebaseChefContract = require('../contracts/caviar-rebase-chef/contract.json')
+
 module.exports = {
+  caviarChef: {
+    methods: caviarChefMethods,
+    contract: caviarChefContract,
+  },
+  caviarRebaseChef: {
+    methods: caviarRebaseChefMethods,
+    contract: caviarRebaseChefContract,
+  },
   comet: {
     methods: cometMethods,
     contract: cometContract,

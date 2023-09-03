@@ -48,6 +48,33 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  CVR: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    apyIconUrls: ['./icons/cvr.svg', './icons/usdr.svg'],
+    apyTokenSymbols: ['CVR', 'USDR'],
+    logoUrl: ['./icons/cvr.svg'],
+    tokenNames: ['CVR'],
+    platform: ['Caviar'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.MATIC.V2.CVR.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.CVR.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['pearl'], //HOTFIX
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.CAVIAR,
+        params: [
+          addresses.MATIC.V2.CVR.Underlying,
+          addresses.MATIC.V2.CVR.RewardPool,
+          profitSharingCut8Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'CVR', 'USDR'],
+  },
   EQB: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eqb.svg'],
@@ -2563,7 +2590,7 @@ module.exports = {
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
     tokenNames: ['jEUR', 'PAR'],
-    platform: ['Balancer'],
+    platform: ['Aura Finance'],
     tags: ['Advanced', 'Stable'],
     tokenAddress: addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying,
     decimals: '18',
