@@ -196,6 +196,7 @@ const APE_API_URL = 'https://ape-swap-api.herokuapp.com'
 const BALANCER_SUBGRAPH_URLS = {
   ETH: 'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2',
   MATIC: 'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-polygon-v2',
+  BASE: 'https://api.studio.thegraph.com/query/24660/balancer-base-v2/version/latest',
 }
 
 const LIDO_API_URLS = { ETH: 'https://eth-api.lido.fi/v1/protocol/steth/apr/sma' }

@@ -1462,6 +1462,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'USDC'],
   },
   balancer_DAI_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/balancer.svg', './icons/usdc.svg'],
     apyTokenSymbols: ['BAL', 'USDC'],
