@@ -151,7 +151,14 @@
     "lptoken": "0x513CdEE00251F39DE280d9E5f771A6eaFebCc88E",
     "rewardPool": "0x333122d446A950a951942a6C065b6ebBEE72EA98",
     "balancerPoolId": "0x513cdee00251f39de280d9e5f771a6eafebcc88e000000000000000000000a6b",
-    "name": "jeur_par_polygon"
+    "name": "jeur_par_polygon",
+    "extras": [
+      {
+        "contract": "0xCdd71497618A040f152049499a70D24b97b714Ee",
+        "token": "0x1509706a6c66CA549ff0cB464de88231DDBe213B",
+        "name": "ARB"
+      }
+    ]
   },
   {
     "id": 7,

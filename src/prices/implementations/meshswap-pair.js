@@ -8,7 +8,7 @@ const addresses = require('../../../data/mainnet/addresses.json')
 
 const getPrice = async (
   inTokenAddress,
-  outTokenAddress = addresses.MATIC.pUSDC,
+  outTokenAddress = addresses.MATIC.USDC,
   outTokenDecimals = 6,
 ) => {
   const selectedAddresses = [inTokenAddress, outTokenAddress]

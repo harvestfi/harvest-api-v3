@@ -5,6 +5,292 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'pearl_CVR_PEARL',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.pearl_CVR_PEARL.NewPool,
+    collateralAddress: addresses.MATIC.V2.pearl_CVR_PEARL.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM', 'fCVR'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_CVR_PEARL.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> in to a Pearl farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.PEARL}" target="_blank" rel="noopener noreferrer">PEARL</a>.
+       The earned PEARL is converted into 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> and deposited in to 
+       <a href="https://app.harvest.finance/polygon/${addresses.MATIC.V2.CVR.NewVault}" target="_blank" rel="noopener noreferrer">fCVR</a> where it is earning auto-compounding CVR rewards. The fCVR rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the  
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_CVR_PEARL.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> by supply liquidity on  
+      <a href="https://www.pearl.exchange/liquidity/manage/${addresses.MATIC.V2.pearl_CVR_PEARL.Underlying}" target="_blank" rel="noopener noreferrer">Pearl</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'pearl_DAI_USDR',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.pearl_DAI_USDR.NewPool,
+    collateralAddress: addresses.MATIC.V2.pearl_DAI_USDR.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM', 'fCVR'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_DAI_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> in to a Pearl farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.PEARL}" target="_blank" rel="noopener noreferrer">PEARL</a>.
+       The earned PEARL is converted into 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> and deposited in to 
+       <a href="https://app.harvest.finance/polygon/${addresses.MATIC.V2.CVR.NewVault}" target="_blank" rel="noopener noreferrer">fCVR</a> where it is earning auto-compounding CVR rewards. The fCVR rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the  
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_DAI_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> by supply liquidity on  
+      <a href="https://www.pearl.exchange/liquidity/manage/${addresses.MATIC.V2.pearl_DAI_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'pearl_ETH_USDR',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.pearl_ETH_USDR.NewPool,
+    collateralAddress: addresses.MATIC.V2.pearl_ETH_USDR.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM', 'fCVR'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_ETH_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> in to a Pearl farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.PEARL}" target="_blank" rel="noopener noreferrer">PEARL</a>.
+       The earned PEARL is converted into 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> and deposited in to 
+       <a href="https://app.harvest.finance/polygon/${addresses.MATIC.V2.CVR.NewVault}" target="_blank" rel="noopener noreferrer">fCVR</a> where it is earning auto-compounding CVR rewards. The fCVR rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the  
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_ETH_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> by supply liquidity on  
+      <a href="https://www.pearl.exchange/liquidity/manage/${addresses.MATIC.V2.pearl_ETH_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'pearl_MATIC_USDR',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.pearl_MATIC_USDR.NewPool,
+    collateralAddress: addresses.MATIC.V2.pearl_MATIC_USDR.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM', 'fCVR'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_MATIC_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> in to a Pearl farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.PEARL}" target="_blank" rel="noopener noreferrer">PEARL</a>.
+       The earned PEARL is converted into 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> and deposited in to 
+       <a href="https://app.harvest.finance/polygon/${addresses.MATIC.V2.CVR.NewVault}" target="_blank" rel="noopener noreferrer">fCVR</a> where it is earning auto-compounding CVR rewards. The fCVR rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the  
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_MATIC_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> by supply liquidity on  
+      <a href="https://www.pearl.exchange/liquidity/manage/${addresses.MATIC.V2.pearl_MATIC_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'pearl_PEARL_USDR',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.pearl_PEARL_USDR.NewPool,
+    collateralAddress: addresses.MATIC.V2.pearl_PEARL_USDR.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM', 'fCVR'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_PEARL_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> in to a Pearl farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.PEARL}" target="_blank" rel="noopener noreferrer">PEARL</a>.
+       The earned PEARL is converted into 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> and deposited in to 
+       <a href="https://app.harvest.finance/polygon/${addresses.MATIC.V2.CVR.NewVault}" target="_blank" rel="noopener noreferrer">fCVR</a> where it is earning auto-compounding CVR rewards. The fCVR rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the  
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_PEARL_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> by supply liquidity on  
+      <a href="https://www.pearl.exchange/liquidity/manage/${addresses.MATIC.V2.pearl_PEARL_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'pearl_TNGBL_USDR',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.pearl_TNGBL_USDR.NewPool,
+    collateralAddress: addresses.MATIC.V2.pearl_TNGBL_USDR.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM', 'fCVR'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_TNGBL_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> in to a Pearl farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.PEARL}" target="_blank" rel="noopener noreferrer">PEARL</a>.
+       The earned PEARL is converted into 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> and deposited in to 
+       <a href="https://app.harvest.finance/polygon/${addresses.MATIC.V2.CVR.NewVault}" target="_blank" rel="noopener noreferrer">fCVR</a> where it is earning auto-compounding CVR rewards. The fCVR rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the  
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_TNGBL_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> by supply liquidity on  
+      <a href="https://www.pearl.exchange/liquidity/manage/${addresses.MATIC.V2.pearl_TNGBL_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'pearl_USDC_USDR',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.pearl_USDC_USDR.NewPool,
+    collateralAddress: addresses.MATIC.V2.pearl_USDC_USDR.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM', 'fCVR'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_USDC_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> in to a Pearl farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.PEARL}" target="_blank" rel="noopener noreferrer">PEARL</a>.
+       The earned PEARL is converted into 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> and deposited in to 
+       <a href="https://app.harvest.finance/polygon/${addresses.MATIC.V2.CVR.NewVault}" target="_blank" rel="noopener noreferrer">fCVR</a> where it is earning auto-compounding CVR rewards. The fCVR rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the  
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_USDC_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> by supply liquidity on  
+      <a href="https://www.pearl.exchange/liquidity/manage/${addresses.MATIC.V2.pearl_USDC_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'pearl_USDT_USDR',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.pearl_USDT_USDR.NewPool,
+    collateralAddress: addresses.MATIC.V2.pearl_USDT_USDR.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM', 'fCVR'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_USDT_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> in to a Pearl farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.PEARL}" target="_blank" rel="noopener noreferrer">PEARL</a>.
+       The earned PEARL is converted into 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> and deposited in to 
+       <a href="https://app.harvest.finance/polygon/${addresses.MATIC.V2.CVR.NewVault}" target="_blank" rel="noopener noreferrer">fCVR</a> where it is earning auto-compounding CVR rewards. The fCVR rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the  
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_USDT_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> by supply liquidity on  
+      <a href="https://www.pearl.exchange/liquidity/manage/${addresses.MATIC.V2.pearl_USDT_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'pearl_WBTC_USDR',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.pearl_WBTC_USDR.NewPool,
+    collateralAddress: addresses.MATIC.V2.pearl_WBTC_USDR.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM', 'fCVR'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_WBTC_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> in to a Pearl farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.PEARL}" target="_blank" rel="noopener noreferrer">PEARL</a>.
+       The earned PEARL is converted into 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> and deposited in to 
+       <a href="https://app.harvest.finance/polygon/${addresses.MATIC.V2.CVR.NewVault}" target="_blank" rel="noopener noreferrer">fCVR</a> where it is earning auto-compounding CVR rewards. The fCVR rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the  
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_WBTC_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> by supply liquidity on  
+      <a href="https://www.pearl.exchange/liquidity/manage/${addresses.MATIC.V2.pearl_WBTC_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'pearl_wUSDR_USDR',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.pearl_wUSDR_USDR.NewPool,
+    collateralAddress: addresses.MATIC.V2.pearl_wUSDR_USDR.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM', 'fCVR'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_wUSDR_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> in to a Pearl farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.PEARL}" target="_blank" rel="noopener noreferrer">PEARL</a>.
+       The earned PEARL is converted into 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> and deposited in to 
+       <a href="https://app.harvest.finance/polygon/${addresses.MATIC.V2.CVR.NewVault}" target="_blank" rel="noopener noreferrer">fCVR</a> where it is earning auto-compounding CVR rewards. The fCVR rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the  
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_wUSDR_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> by supply liquidity on  
+      <a href="https://www.pearl.exchange/liquidity/manage/${addresses.MATIC.V2.pearl_wUSDR_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'CVR',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.CVR.NewPool,
+    collateralAddress: addresses.MATIC.V2.CVR.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer"> CVR </a>to Caviar, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.USDR}" target="_blank" rel="noopener noreferrer">USDR</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer"> CVR</a>.
+      </p>
+      <p> Get  
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> through 
+      <a href="https://www.tangible.store/caviar" target="_blank" rel="noopener noreferrer">Tangible</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelot_EQB_ETH',
     type: POOL_TYPES.INCENTIVE,
@@ -1599,7 +1885,7 @@ module.exports = [
       <p> The vault supplies 
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wstETH_amETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
-       <a href="https://polygonscan.com/token/${addresses.MATIC.pUSDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wstETH_amETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
@@ -1878,7 +2164,7 @@ module.exports = [
       <p> The vault supplies 
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
-       <a href="https://polygonscan.com/token/${addresses.MATIC.pUSDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
+       <a href="https://polygonscan.com/token/${addresses.MATIC.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
@@ -2450,35 +2736,6 @@ module.exports = [
       <p> Get the 
       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
       <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_stETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
-      </p>
-    </div>
-   `,
-  },
-  {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    id: 'balancer_wUSDR_USDC_polygon',
-    type: POOL_TYPES.INCENTIVE,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying, 'balancerv2_matic'],
-    },
-    contractAddress: addresses.MATIC.V2.balancer_wUSDR_USDC.NewPool,
-    collateralAddress: addresses.MATIC.V2.balancer_wUSDR_USDC.NewVault,
-    rewardAPY: [],
-    rewardAPR: null,
-    rewardTokens: [addresses.MATIC.miFARM],
-    rewardTokenSymbols: ['iFARM'],
-    stakeAndDepositHelpMessage: `
-    <div class="help-message">
-      <p> The vault supplies
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
-       <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
-       At every harvest, the earned rewards are reinvested into more
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
-      </p>
-      <p> Get the 
-      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
-      <a href="https://app.balancer.fi/#/polygon/pool/${addresses.MATIC.V2.balancer_wUSDR_USDC.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
       </p>
     </div>
    `,
