@@ -91,7 +91,14 @@ const caviarChefContract = require('../contracts/caviar-chef/contract.json')
 const caviarRebaseChefMethods = require('../contracts/caviar-rebase-chef/methods')
 const caviarRebaseChefContract = require('../contracts/caviar-rebase-chef/contract.json')
 
+const pearlGaugeMethods = require('../contracts/pearl-gauge/methods')
+const pearlGaugeContract = require('../contracts/pearl-gauge/contract.json')
+
 module.exports = {
+  pearlGauge: {
+    methods: pearlGaugeMethods,
+    contract: pearlGaugeContract,
+  },
   caviarChef: {
     methods: caviarChefMethods,
     contract: caviarChefContract,

@@ -48,6 +48,318 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  PEARL: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    logoUrl: ['./icons/pearl.svg'],
+    tokenAddress: addresses.MATIC.PEARL,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['pearl'],
+    },
+  },
+  pearl_CVR_PEARL: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    apyIconUrls: ['./icons/pearl.png'],
+    apyTokenSymbols: ['PEARL'],
+    logoUrl: ['./icons/cvr.png', './icons/pearl.svg'],
+    tokenNames: ['CVR', 'PEARL'],
+    platform: ['Pearl'],
+    subLabel: 'HODL in fCVR',
+    tokenAddress: addresses.MATIC.V2.pearl_CVR_PEARL.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.pearl_CVR_PEARL.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.MATIC.V2.pearl_CVR_PEARL.Underlying, 'CVR', 'PEARL'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PEARL_HODL,
+        params: [
+          addresses.MATIC.V2.pearl_CVR_PEARL.Underlying,
+          addresses.MATIC.V2.pearl_CVR_PEARL.Gauge,
+          'CVR',
+          profitSharingCut8Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
+  },
+  pearl_DAI_USDR: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    apyIconUrls: ['./icons/pearl.png'],
+    apyTokenSymbols: ['PEARL'],
+    logoUrl: ['./icons/dai.png', './icons/usdr.svg'],
+    tokenNames: ['DAI', 'USDR'],
+    platform: ['Pearl'],
+    subLabel: 'HODL in fCVR',
+    tokenAddress: addresses.MATIC.V2.pearl_DAI_USDR.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.pearl_DAI_USDR.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.MATIC.V2.pearl_DAI_USDR.Underlying, 'DAI_polygon', 'USDR_polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PEARL_HODL,
+        params: [
+          addresses.MATIC.V2.pearl_DAI_USDR.Underlying,
+          addresses.MATIC.V2.pearl_DAI_USDR.Gauge,
+          'CVR',
+          profitSharingCut8Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
+  },
+  pearl_ETH_USDR: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    apyIconUrls: ['./icons/pearl.png'],
+    apyTokenSymbols: ['PEARL'],
+    logoUrl: ['./icons/eth.png', './icons/usdr.svg'],
+    tokenNames: ['ETH', 'USDR'],
+    platform: ['Pearl'],
+    subLabel: 'HODL in fCVR',
+    tokenAddress: addresses.MATIC.V2.pearl_ETH_USDR.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.pearl_ETH_USDR.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.MATIC.V2.pearl_ETH_USDR.Underlying, 'WETH_polygon', 'USDR_polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PEARL_HODL,
+        params: [
+          addresses.MATIC.V2.pearl_ETH_USDR.Underlying,
+          addresses.MATIC.V2.pearl_ETH_USDR.Gauge,
+          'CVR',
+          profitSharingCut8Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
+  },
+  pearl_MATIC_USDR: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    apyIconUrls: ['./icons/pearl.png'],
+    apyTokenSymbols: ['PEARL'],
+    logoUrl: ['./icons/matic.png', './icons/usdr.svg'],
+    tokenNames: ['MATIC', 'USDR'],
+    platform: ['Pearl'],
+    subLabel: 'HODL in fCVR',
+    tokenAddress: addresses.MATIC.V2.pearl_MATIC_USDR.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.pearl_MATIC_USDR.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.MATIC.V2.pearl_MATIC_USDR.Underlying, 'WMATIC', 'USDR_polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PEARL_HODL,
+        params: [
+          addresses.MATIC.V2.pearl_MATIC_USDR.Underlying,
+          addresses.MATIC.V2.pearl_MATIC_USDR.Gauge,
+          'CVR',
+          profitSharingCut8Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
+  },
+  pearl_PEARL_USDR: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    apyIconUrls: ['./icons/pearl.png'],
+    apyTokenSymbols: ['PEARL'],
+    logoUrl: ['./icons/pearl.png', './icons/usdr.svg'],
+    tokenNames: ['PEARL', 'USDR'],
+    platform: ['Pearl'],
+    subLabel: 'HODL in fCVR',
+    tokenAddress: addresses.MATIC.V2.pearl_PEARL_USDR.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.pearl_PEARL_USDR.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.MATIC.V2.pearl_PEARL_USDR.Underlying, 'PEARL', 'USDR_polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PEARL_HODL,
+        params: [
+          addresses.MATIC.V2.pearl_PEARL_USDR.Underlying,
+          addresses.MATIC.V2.pearl_PEARL_USDR.Gauge,
+          'CVR',
+          profitSharingCut8Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
+  },
+  pearl_TNGBL_USDR: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    apyIconUrls: ['./icons/pearl.png'],
+    apyTokenSymbols: ['PEARL'],
+    logoUrl: ['./icons/tngbl.png', './icons/usdr.svg'],
+    tokenNames: ['TNGBL', 'USDR'],
+    platform: ['Pearl'],
+    subLabel: 'HODL in fCVR',
+    tokenAddress: addresses.MATIC.V2.pearl_TNGBL_USDR.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.pearl_TNGBL_USDR.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.MATIC.V2.pearl_TNGBL_USDR.Underlying, 'TNGBL', 'USDR_polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PEARL_HODL,
+        params: [
+          addresses.MATIC.V2.pearl_TNGBL_USDR.Underlying,
+          addresses.MATIC.V2.pearl_TNGBL_USDR.Gauge,
+          'CVR',
+          profitSharingCut8Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
+  },
+  pearl_USDC_USDR: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    apyIconUrls: ['./icons/pearl.png'],
+    apyTokenSymbols: ['PEARL'],
+    logoUrl: ['./icons/usdc.png', './icons/usdr.svg'],
+    tokenNames: ['USDC', 'USDR'],
+    platform: ['Pearl'],
+    subLabel: 'HODL in fCVR',
+    tokenAddress: addresses.MATIC.V2.pearl_USDC_USDR.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.pearl_USDC_USDR.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.MATIC.V2.pearl_USDC_USDR.Underlying, 'USDC_polygon', 'USDR_polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PEARL_HODL,
+        params: [
+          addresses.MATIC.V2.pearl_USDC_USDR.Underlying,
+          addresses.MATIC.V2.pearl_USDC_USDR.Gauge,
+          'CVR',
+          profitSharingCut8Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
+  },
+  pearl_USDT_USDR: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    apyIconUrls: ['./icons/pearl.png'],
+    apyTokenSymbols: ['PEARL'],
+    logoUrl: ['./icons/usdt.png', './icons/usdr.svg'],
+    tokenNames: ['USDT', 'USDR'],
+    platform: ['Pearl'],
+    subLabel: 'HODL in fCVR',
+    tokenAddress: addresses.MATIC.V2.pearl_USDT_USDR.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.pearl_USDT_USDR.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.MATIC.V2.pearl_USDT_USDR.Underlying, 'USDT_polygon', 'USDR_polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PEARL_HODL,
+        params: [
+          addresses.MATIC.V2.pearl_USDT_USDR.Underlying,
+          addresses.MATIC.V2.pearl_USDT_USDR.Gauge,
+          'CVR',
+          profitSharingCut8Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
+  },
+  pearl_WBTC_USDR: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    apyIconUrls: ['./icons/pearl.png'],
+    apyTokenSymbols: ['PEARL'],
+    logoUrl: ['./icons/wbtc.png', './icons/usdr.svg'],
+    tokenNames: ['WBTC', 'USDR'],
+    platform: ['Pearl'],
+    subLabel: 'HODL in fCVR',
+    tokenAddress: addresses.MATIC.V2.pearl_WBTC_USDR.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.pearl_WBTC_USDR.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.MATIC.V2.pearl_WBTC_USDR.Underlying, 'WBTC_polygon', 'USDR_polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PEARL_HODL,
+        params: [
+          addresses.MATIC.V2.pearl_WBTC_USDR.Underlying,
+          addresses.MATIC.V2.pearl_WBTC_USDR.Gauge,
+          'CVR',
+          profitSharingCut8Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
+  },
+  pearl_wUSDR_USDR: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    apyIconUrls: ['./icons/pearl.png'],
+    apyTokenSymbols: ['PEARL'],
+    logoUrl: ['./icons/wusdr.png', './icons/usdr.svg'],
+    tokenNames: ['wUSDR', 'USDR'],
+    platform: ['Pearl'],
+    subLabel: 'HODL in fCVR',
+    tokenAddress: addresses.MATIC.V2.pearl_wUSDR_USDR.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.pearl_wUSDR_USDR.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.MATIC.V2.pearl_wUSDR_USDR.Underlying, 'wUSDR_polygon', 'USDR_polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PEARL_HODL,
+        params: [
+          addresses.MATIC.V2.pearl_wUSDR_USDR.Underlying,
+          addresses.MATIC.V2.pearl_wUSDR_USDR.Gauge,
+          'CVR',
+          profitSharingCut8Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
+  },
+  fCVR: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    logoUrl: [''],
+    tokenAddress: addresses.MATIC.V2.CVR.NewVault,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.F_TOKEN,
+      params: [addresses.MATIC.V2.CVR.NewVault, '18', CHAIN_IDS.POLYGON_MAINNET],
+    },
+  },
   CVR: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/cvr.svg', './icons/usdr.svg'],
@@ -2662,6 +2974,14 @@ module.exports = {
     vaultAddress: null,
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['real-usd'] },
   },
+  USDR_old_polygon: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    logoUrl: ['./icons/usdr.svg'],
+    tokenAddress: addresses.MATIC.USDR_old,
+    decimals: '9',
+    vaultAddress: null,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['real-usd'] },
+  },
   am3CRV_gauge: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/am-dai.svg', './icons/am-usdc.svg', './icons/am-usdt.svg'],
@@ -2702,7 +3022,7 @@ module.exports = {
         addresses.MATIC.V2.curve_USDR_3CRV.Miner,
         addresses.MATIC.V2.curve_USDR_3CRV.Underlying,
         '18',
-        ['USDR_polygon', 'am3CRV_gauge'],
+        ['USDR_old_polygon', 'am3CRV_gauge'],
         CHAIN_IDS.POLYGON_MAINNET,
       ],
     },
@@ -5996,7 +6316,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.meshswap_USDT_oUSDT.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.meshswap_USDT_oUSDT.Underlying, 'pUSDT', 'oUSDT'],
+      params: [addresses.MATIC.V2.meshswap_USDT_oUSDT.Underlying, 'USDT_polygon', 'oUSDT'],
     },
     estimateApyFunctions: [
       {
@@ -6067,7 +6387,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.meshswap_WMATIC_USDT.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.meshswap_WMATIC_USDT.Underlying, 'WMATIC', 'pUSDT'],
+      params: [addresses.MATIC.V2.meshswap_WMATIC_USDT.Underlying, 'WMATIC', 'USDT_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -6400,14 +6720,14 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.ape_BTC_MATIC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.ape_BTC_MATIC.Underlying, 'pWBTC', 'WMATIC'],
+      params: [addresses.MATIC.V2.ape_BTC_MATIC.Underlying, 'WBTC_polygon', 'WMATIC'],
     },
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.APE,
         params: [
           addresses.MATIC.V2.ape_BTC_MATIC.ApePoolId,
-          'pWBTC',
+          'WBTC_polygon',
           'WMATIC',
           profitSharingCut8Percent,
           CHAIN_IDS.POLYGON_MAINNET,
@@ -6793,7 +7113,7 @@ module.exports = {
         params: [addresses.MATIC.V2.quick_YEL_MATIC.PoolId, profitSharingCut8Percent],
       },
     ],
-    cmcRewardTokenSymbols: ['miFARM', 'USDC_polygon', 'pWETH'],
+    cmcRewardTokenSymbols: ['miFARM', 'USDC_polygon', 'WETH_polygon'],
   },
   mUSD: {
     inactive: true,
@@ -6919,7 +7239,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.SUSHI_GENE_ETH.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.SUSHI_GENE_ETH.Underlying, 'pGENE', 'pWETH'],
+      params: [addresses.MATIC.V2.SUSHI_GENE_ETH.Underlying, 'pGENE', 'WETH_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -6942,7 +7262,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.SUSHI_GNOME_ETH.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.SUSHI_GNOME_ETH.Underlying, 'pGNOME', 'pWETH'],
+      params: [addresses.MATIC.V2.SUSHI_GNOME_ETH.Underlying, 'pGNOME', 'WETH_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -7417,7 +7737,7 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['miFARM'],
   },
-  pWETH: {
+  WETH_polygon: {
     inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/eth.svg'],
@@ -7436,7 +7756,7 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.IDLE_FINANCE,
         params: [
-          'pWETH',
+          'WETH_polygon',
           '0xfdA25D931258Df948ffecb66b5518299Df6527C4',
           profitSharingCut8Percent,
           CHAIN_IDS.POLYGON_MAINNET,
@@ -7445,10 +7765,10 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'wMATIC'],
   },
-  pUSDT: {
+  USDT_polygon: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdt.svg'],
-    tokenAddress: addresses.MATIC.pUSDT,
+    tokenAddress: addresses.MATIC.USDT,
     decimals: '6',
     vaultAddress: null,
     priceFunction: {
@@ -7456,10 +7776,10 @@ module.exports = {
       params: [addresses.USDT],
     },
   },
-  pWBTC: {
+  WBTC_polygon: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/wbtc.svg'],
-    tokenAddress: addresses.MATIC.pWBTC,
+    tokenAddress: addresses.MATIC.WBTC,
     decimals: '8',
     vaultAddress: null,
     priceFunction: {
@@ -7467,10 +7787,10 @@ module.exports = {
       params: [addresses.WBTC],
     },
   },
-  pBNB: {
+  BNB_polygon: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/wbnb.svg'],
-    tokenAddress: addresses.MATIC.pBNB,
+    tokenAddress: addresses.MATIC.BNB,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
@@ -7489,7 +7809,7 @@ module.exports = {
       params: ['mimatic'],
     },
   },
-  pDAI: {
+  DAI_polygon: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: [],
     tokenAddress: addresses.MATIC.DAI,
@@ -7757,10 +8077,10 @@ module.exports = {
       params: ['balancer'],
     },
   },
-  pBAL: {
+  BAL_polygon: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/balancer.svg'],
-    tokenAddress: addresses.MATIC.pBAL,
+    tokenAddress: addresses.MATIC.BAL,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
@@ -10050,7 +10370,7 @@ module.exports = {
       type: GET_PRICE_TYPES.KYBER_PAIR,
       params: [
         addresses.MATIC.AUR_APR22,
-        addresses.MATIC.pUSDC,
+        addresses.MATIC.USDC,
         addresses.MATIC.V2.jarvis_AUR3_USDC.Underlying,
       ],
     },
@@ -10065,7 +10385,7 @@ module.exports = {
       type: GET_PRICE_TYPES.KYBER_PAIR,
       params: [
         addresses.MATIC.AURFEB22,
-        addresses.MATIC.pUSDC,
+        addresses.MATIC.USDC,
         addresses.MATIC.V2.jarvis_AUR_USDC_V2.Underlying,
       ],
     },
