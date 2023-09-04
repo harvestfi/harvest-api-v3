@@ -12,6 +12,8 @@ const executeBalancerCall = (type, query, networkId) => {
     subgraphURL = BALANCER_SUBGRAPH_URLS.ETH
   } else if (networkId == CHAIN_IDS.POLYGON) {
     subgraphURL = BALANCER_SUBGRAPH_URLS.MATIC
+  } else if (networkId == CHAIN_IDS.BASE) {
+    subgraphURL = BALANCER_SUBGRAPH_URLS.BASE
   }
   return cachedAxios
     .post(subgraphURL, JSON.stringify({ query }))
