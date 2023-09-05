@@ -295,11 +295,14 @@
       "doHardwork": false
     },
     "WETH": {
+      "Underlying": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       "OldVault": "0x8e298734681adbfC41ee5d17FF8B0d6d803e7098",
       "MigrationStrategy": "0x0Df24F8FD05279b34C432B165A470E9146199d92",
       "NewVault": "0xFE09e53A81Fe2808bc493ea64319109B5bAa573e",
-      "NewStrategy": "0xa23c6F2d85fe47e613ce6bBb40E74aCB49Ae281a",
-      "NewPool": "0x3DA9D911301f8144bdF5c3c67886e5373DCdff8e"
+      "OldStrategy": "0xa23c6F2d85fe47e613ce6bBb40E74aCB49Ae281a",
+      "NewStrategy": "0x41c66337214247cB2B6eDeF4772C694D03403F57",
+      "NewPool": "0x3DA9D911301f8144bdF5c3c67886e5373DCdff8e",
+      "Market": "0xA17581A9E3356d9A858b789D68B4d866e593aE94"
     },
     "DAI": {
       "OldVault": "0xe85C8581e60D7Cd32Bbfd86303d2A4FA6a951Dac",
