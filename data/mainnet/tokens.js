@@ -30,10 +30,10 @@ module.exports = {
   WETH: {
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/eth.svg'],
-    apyIconUrls: ['./icons/comp.svg', './icons/idle.svg'],
-    apyTokenSymbols: ['COMP', 'IDLE'],
+    apyIconUrls: ['./icons/comp.svg'],
+    apyTokenSymbols: ['COMP'],
     tokenNames: ['ETH'],
-    platform: ['Idle'],
+    platform: ['Compound V3'],
     tags: ['Beginners'],
     tokenAddress: addresses.WETH,
     decimals: '18',
@@ -41,9 +41,13 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.WETH] },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.IDLE_FINANCE,
-        params: ['WETH', '0xc8e6ca6e96a326dc448307a5fde90a0b21fd7f80', '0.7'],
-        extraDailyCompound: false,
+        type: ESTIMATED_APY_TYPES.COMPOUND_V3,
+        params: [
+          addresses.V2.WETH.Underlying,
+          addresses.V2.WETH.Market,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
       },
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
