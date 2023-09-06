@@ -17,7 +17,7 @@ const getApy = async (tokenSymbol, gaugeAddress, factor, chainId) => {
     methods: childMethods,
   } = crvChildGauge
 
-  if (chainId == CHAIN_IDS.BASE){
+  if (chainId == CHAIN_IDS.BASE) {
     gaugeAbi = childAbi
     gaugeMethods = childMethods
   }
@@ -45,7 +45,7 @@ const getApy = async (tokenSymbol, gaugeAddress, factor, chainId) => {
       const tokenPerWeek = inflationRate.times(7).times(86400)
       const shareForOneLpt = new BigNumber(1).dividedBy(totalSupply).plus(1)
       const rewardPerWeek = shareForOneLpt.times(tokenPerWeek)
-  
+
       const rewardTokenInUsd = await getTokenPrice(rewardToken, chainId)
       const rewardPerWeekUsd = rewardPerWeek.times(rewardTokenInUsd)
       totalRewardPerWeekUsd = totalRewardPerWeekUsd.plus(rewardPerWeekUsd)

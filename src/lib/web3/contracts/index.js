@@ -100,7 +100,21 @@ const pearlGaugeContract = require('../contracts/pearl-gauge/contract.json')
 const basedRewardsMethods = require('../contracts/based-rewards/methods')
 const basedRewardsContract = require('../contracts/based-rewards/contract.json')
 
+const mTokenMethods = require('../contracts/mtoken/methods')
+const mTokenContract = require('../contracts/mtoken/contract.json')
+
+const comptrollerMethods = require('../contracts/comptroller/methods')
+const comptrollerContract = require('../contracts/comptroller/contract.json')
+
 module.exports = {
+  comptroller: {
+    methods: comptrollerMethods,
+    contract: comptrollerContract,
+  },
+  mToken: {
+    methods: mTokenMethods,
+    contract: mTokenContract,
+  },
   basedRewards: {
     methods: basedRewardsMethods,
     contract: basedRewardsContract,
