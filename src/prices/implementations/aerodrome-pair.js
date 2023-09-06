@@ -10,6 +10,7 @@ const getPrice = async (
   inTokenAddress,
   outTokenAddress = addresses.BASE.USDC,
   outTokenDecimals = 6,
+  useStable = false,
 ) => {
   const selectedAddresses = [inTokenAddress, outTokenAddress]
   const isOutTokenWETH = outTokenAddress === addresses.BASE.WETH
@@ -19,10 +20,16 @@ const getPrice = async (
 
   let routes = []
   for (let i = 0; i < selectedAddresses.length - 1; i++) {
+    let stable
+    if (i == 0 && useStable) {
+      stable = true
+    } else {
+      stable = false
+    }
     let route = {}
     route.from = selectedAddresses[i]
     route.to = selectedAddresses[i + 1]
-    route.stable = false
+    route.stable = stable
     route.factory = '0x420DD381b31aEf6683db6B902084cB0FFECe40Da'
     routes.push(route)
   }

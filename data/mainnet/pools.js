@@ -5,6 +5,108 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'based_BASED_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.based_BASED_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.based_BASED_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.based_BASED_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in the Based.Farm Armory, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BASED}" target="_blank" rel="noopener noreferrer">BASED</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.based_BASED_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.based_BASED_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
+      <a href="https://aerodrome.finance/deposit?token0=0x4200000000000000000000000000000000000006&token1=0x9CBD543f1B1166b2Df36b68Eb6bB1DcE24E6aBDf&stable=true" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
+      And check out the Armory on 
+      <a href="https://based.farm/app/armory" target="_blank" rel="noopener noreferrer">Based.Farm</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'aerodrome_DAIp_USDp',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.aerodrome_DAIp_USDp.NewPool,
+    collateralAddress: addresses.BASE.V2.aerodrome_DAIp_USDp.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DAIp_USDp.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DAIp_USDp.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DAIp_USDp.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
+      <a href="https://aerodrome.finance/deposit?token0=0x65a2508c429a6078a7bc2f7df81ab575bd9d9275&token1=0xb79dd08ea68a908a97220c76d19a6aa9cbde4376&stable=true" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'aerodrome_USDp_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.aerodrome_USDp_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.aerodrome_USDp_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_USDp_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_USDp_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_USDp_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
+      <a href="https://aerodrome.finance/deposit?token0=0xb79dd08ea68a908a97220c76d19a6aa9cbde4376&token1=0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca&stable=true" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'aerodrome_DOLA_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.aerodrome_DOLA_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.aerodrome_DOLA_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
+      <a href="https://aerodrome.finance/deposit?token0=0x4621b7a9c75199271f773ebd9a499dbd165c3191&token1=0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca&stable=true" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'pearl_CVR_PEARL',
     type: POOL_TYPES.INCENTIVE,

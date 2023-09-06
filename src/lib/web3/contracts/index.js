@@ -94,7 +94,14 @@ const caviarRebaseChefContract = require('../contracts/caviar-rebase-chef/contra
 const pearlGaugeMethods = require('../contracts/pearl-gauge/methods')
 const pearlGaugeContract = require('../contracts/pearl-gauge/contract.json')
 
+const basedRewardsMethods = require('../contracts/based-rewards/methods')
+const basedRewardsContract = require('../contracts/based-rewards/contract.json')
+
 module.exports = {
+  basedRewards: {
+    methods: basedRewardsMethods,
+    contract: basedRewardsContract,
+  },
   pearlGauge: {
     methods: pearlGaugeMethods,
     contract: pearlGaugeContract,
