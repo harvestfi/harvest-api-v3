@@ -1560,7 +1560,7 @@ module.exports = {
   },
   PAL_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: ['./icons/pal.png'],
+    logoUrl: ['./icons/pal.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.PAL,
     decimals: '18',
     vaultAddress: null,
@@ -1571,7 +1571,7 @@ module.exports = {
   },
   OHM_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: ['./icons/ohm.png'],
+    logoUrl: ['./icons/ohm.svg'],
     tokenAddress: addresses.ARBITRUM_ONE.OHM,
     decimals: '18',
     vaultAddress: null,
@@ -1584,7 +1584,7 @@ module.exports = {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/arb.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'ARB'],
-    logoUrl: ['./icons/pal.png', './icons/ohm.png'],
+    logoUrl: ['./icons/pal.svg', './icons/ohm.svg'],
     platform: ['Aura Finance'],
     tags: ['Advanced'],
     tokenNames: ['PAL', 'OHM'],
@@ -1951,8 +1951,8 @@ module.exports = {
   },
   camelot_VELA_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: ['./icons/vela.png', './icons/eth.svg'],
-    apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/vela.png'],
+    logoUrl: ['./icons/vela.svg', './icons/eth.svg'],
+    apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/vela.svg'],
     apyTokenSymbols: ['GRAIL', 'xGRAIL', 'VELA'],
     tokenNames: ['VELA', 'ETH'],
     platform: ['Camelot'],
@@ -2618,7 +2618,7 @@ module.exports = {
   },
   OETH: {
     chain: CHAIN_IDS.ETH_MAINNET,
-    logoUrl: ['./icons/oeth.png'],
+    logoUrl: ['./icons/oeth.svg'],
     tokenAddress: addresses.OETH,
     decimals: '18',
     vaultAddress: null,
@@ -2631,7 +2631,7 @@ module.exports = {
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
-    logoUrl: ['./icons/oeth.png', './icons/eth.svg'],
+    logoUrl: ['./icons/oeth.svg', './icons/eth.svg'],
     tokenNames: ['OETH', 'ETH'],
     platform: ['Convex Finance'],
     tags: ['Advanced', 'LSD'],
@@ -2657,7 +2657,7 @@ module.exports = {
   },
   crvUSD: {
     chain: CHAIN_IDS.ETH_MAINNET,
-    logoUrl: ['./icons/crvusd.png'],
+    logoUrl: ['./icons/crvusd.svg'],
     tokenAddress: addresses.crvUSD,
     decimals: '18',
     vaultAddress: null,
@@ -2665,7 +2665,7 @@ module.exports = {
   },
   curve_crvUSD_USDC: {
     chain: CHAIN_IDS.ETH_MAINNET,
-    logoUrl: ['./icons/crvusd.png', './icons/usdc.svg'],
+    logoUrl: ['./icons/crvusd.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     platform: ['Convex Finance'],
@@ -2694,7 +2694,7 @@ module.exports = {
   },
   curve_crvUSD_USDT: {
     chain: CHAIN_IDS.ETH_MAINNET,
-    logoUrl: ['./icons/crvusd.png', './icons/usdt.svg'],
+    logoUrl: ['./icons/crvusd.svg', './icons/usdt.svg'],
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     platform: ['Convex Finance'],
