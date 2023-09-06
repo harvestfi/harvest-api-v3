@@ -13,6 +13,9 @@ const crvYPoolContract = require('../contracts/crv-ypool/contract.json')
 const crvGaugeMethods = require('../contracts/crv-gauge/methods')
 const crvGaugeContract = require('../contracts/crv-gauge/contract.json')
 
+const crvChildGaugeMethods = require('../contracts/crv-child-gauge/methods')
+const crvChildGaugeContract = require('../contracts/crv-child-gauge/contract.json')
+
 const balGaugeMethods = require('../contracts/bal-gauge/methods')
 const balGaugeContract = require('../contracts/bal-gauge/contract.json')
 
@@ -173,6 +176,10 @@ module.exports = {
   crvGauge: {
     methods: crvGaugeMethods,
     contract: crvGaugeContract,
+  },
+  crvChildGauge: {
+    methods: crvChildGaugeMethods,
+    contract: crvChildGaugeContract,
   },
   balGauge: {
     methods: balGaugeMethods,

@@ -107,6 +107,131 @@ module.exports = [
    `,
   },
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'curve_USDC_axlUSDC_crvUSD',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.curve_USDC_axlUSDC_crvUSD.NewPool,
+    collateralAddress: addresses.BASE.V2.curve_USDC_axlUSDC_crvUSD.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.curve_USDC_axlUSDC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.curve_USDC_axlUSDC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.curve_USDC_axlUSDC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/base/pools/factory-v2-0/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'curve_USDC_USDBc_axlUSDC_crvUSD',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.curve_USDC_USDBc_axlUSDC_crvUSD.NewPool,
+    collateralAddress: addresses.BASE.V2.curve_USDC_USDBc_axlUSDC_crvUSD.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.curve_USDC_USDBc_axlUSDC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.curve_USDC_USDBc_axlUSDC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.curve_USDC_USDBc_axlUSDC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/base/pools/factory-v2-1/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'curve_CBETH_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.curve_CBETH_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.curve_CBETH_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.curve_CBETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.curve_CBETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.curve_CBETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/base/pools/factory-crypto-1/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'curve_CRV_crvUSD',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.curve_CRV_crvUSD.NewPool,
+    collateralAddress: addresses.BASE.V2.curve_CRV_crvUSD.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.curve_CRV_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.curve_CRV_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.curve_CRV_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/base/pools/factory-crypto-4/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'curve_ETH_tBTC_crvUSD',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.curve_ETH_tBTC_crvUSD.NewPool,
+    collateralAddress: addresses.BASE.V2.curve_ETH_tBTC_crvUSD.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.curve_ETH_tBTC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.curve_ETH_tBTC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.curve_ETH_tBTC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/base/pools/factory-tricrypto-1/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'pearl_CVR_PEARL',
     type: POOL_TYPES.INCENTIVE,
