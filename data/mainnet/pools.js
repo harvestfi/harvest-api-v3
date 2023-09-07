@@ -1203,8 +1203,11 @@ module.exports = [
     id: 'baseswap_BSX_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.BASE.V2.baseswap_BSX_ETH.Underlying, 'baseswap'],
+      type: TRADING_APY_TYPES.BASESWAP,
+      params: [
+        addresses.BASE.V2.baseswap_BSX_ETH.Underlying,
+        addresses.BASE.V2.baseswap_BSX_ETH.BaseToken,
+      ],
     },
     contractAddress: addresses.BASE.V2.baseswap_BSX_ETH.NewPool,
     collateralAddress: addresses.BASE.V2.baseswap_BSX_ETH.NewVault,
@@ -1233,8 +1236,11 @@ module.exports = [
     id: 'baseswap_BSWAP_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.BASE.V2.baseswap_BSWAP_ETH.Underlying, 'baseswap'],
+      type: TRADING_APY_TYPES.BASESWAP,
+      params: [
+        addresses.BASE.V2.baseswap_BSWAP_ETH.Underlying,
+        addresses.BASE.V2.baseswap_BSWAP_ETH.BaseToken,
+      ],
     },
     contractAddress: addresses.BASE.V2.baseswap_BSWAP_ETH.NewPool,
     collateralAddress: addresses.BASE.V2.baseswap_BSWAP_ETH.NewVault,
@@ -1263,8 +1269,11 @@ module.exports = [
     id: 'baseswap_CBETH_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.BASE.V2.baseswap_CBETH_ETH.Underlying, 'baseswap'],
+      type: TRADING_APY_TYPES.BASESWAP,
+      params: [
+        addresses.BASE.V2.baseswap_CBETH_ETH.Underlying,
+        addresses.BASE.V2.baseswap_CBETH_ETH.BaseToken,
+      ],
     },
     contractAddress: addresses.BASE.V2.baseswap_CBETH_ETH.NewPool,
     collateralAddress: addresses.BASE.V2.baseswap_CBETH_ETH.NewVault,
@@ -1293,8 +1302,11 @@ module.exports = [
     id: 'baseswap_DAI_USDC',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.BASE.V2.baseswap_DAI_USDC.Underlying, 'baseswap'],
+      type: TRADING_APY_TYPES.BASESWAP,
+      params: [
+        addresses.BASE.V2.baseswap_DAI_USDC.Underlying,
+        addresses.BASE.V2.baseswap_DAI_USDC.BaseToken,
+      ],
     },
     contractAddress: addresses.BASE.V2.baseswap_DAI_USDC.NewPool,
     collateralAddress: addresses.BASE.V2.baseswap_DAI_USDC.NewVault,
@@ -1323,8 +1335,11 @@ module.exports = [
     id: 'baseswap_ETH_USDC',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.BASE.V2.baseswap_ETH_USDC.Underlying, 'baseswap'],
+      type: TRADING_APY_TYPES.BASESWAP,
+      params: [
+        addresses.BASE.V2.baseswap_ETH_USDC.Underlying,
+        addresses.BASE.V2.baseswap_ETH_USDC.BaseToken,
+      ],
     },
     contractAddress: addresses.BASE.V2.baseswap_ETH_USDC.NewPool,
     collateralAddress: addresses.BASE.V2.baseswap_ETH_USDC.NewVault,
