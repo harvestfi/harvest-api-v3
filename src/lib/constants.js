@@ -207,6 +207,8 @@ const STAKEWISE_API_URLS = {
   STAKING: 'https://api.stakewise.io/pool-stats/',
 }
 
+const DEXSCREENER_API_URL = 'https://api.dexscreener.com/latest/dex/tokens'
+
 const QUICKSWAP_GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/quickswap/polygon/'
 
 const DEBUG_MODE = process.env.DEBUG_MODE
@@ -294,4 +296,5 @@ module.exports = {
   HARVEST_SUBGRAPH_URLS,
   TVL_LISTS,
   BASE_RPC_URL,
+  DEXSCREENER_API_URL,
 }
