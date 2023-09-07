@@ -2600,7 +2600,37 @@
         "NewPool": "0x475aB1157F8E26838710Ed3F6d4df302fE61b19E",
         "NFTPool": "0x4B51d227db5d0508320479532618383dA81A9539",
         "NitroPool": "0x0fB1ADe48A1f567Ba31D3d3CAda701E0705D5077"
-      }
+      },
+      "lodestar_ETH": {
+        "Underlying": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        "NewVault": "0x2b70238022589f17E7b266BC753E74027D57009F",
+        "NewStrategy": "0x26b0D8Aa6a3CDCBDe864eD7D987E57eD8E37Cf48",
+        "NewPool": "0x68a00b4cEd402fA6A034f1808742F24776D8debd"
+      },
+      "lodestar_DAI": {
+        "Underlying": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+        "NewVault": "0xDfd2214236B60FC0485288c959CB07dA4f6A15F7",
+        "NewStrategy": "0xb05502D1EC391b46681b71778f84Ba5Ac6b5410c",
+        "NewPool": "0x1D899a8281F755D18879625011D3AbB9F71b82e9"
+      },
+      "lodestar_USDCe": {
+        "Underlying": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+        "NewVault": "0x2EC0160246461F0ce477887DdE2C931Ee8233de7",
+        "NewStrategy": "0x3564c8302D678E80a0961E792d29d816Bad48870",
+        "NewPool": "0x6327bEf507A96127EF5c8931B975d3C7C98E8305"
+      },
+      "lodestar_USDT": {
+        "Underlying": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+        "NewVault": "0x0D15225454474ab3cb124083278c7bE03f8a99Ff",
+        "NewStrategy": "0x0eADA6Cd7443756B934c33D8aA494e633F6D6930",
+        "NewPool": "0xFb105353F4B6E48660b499F4bCCCb01b5A04F978"
+      },
+      "lodestar_WBTC": {
+        "Underlying": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+        "NewVault": "0x24174022D382CD155C33A847404cDA5Bc7978802",
+        "NewStrategy": "0xb814ef177ac10b6f8284fd2E24c1d458338f22fe",
+        "NewPool": "0xd51B47cF044F27d2115798b05d3c40C5766840F0"
+      }      
     }
   },
   "BASE": {
