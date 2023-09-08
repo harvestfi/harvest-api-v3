@@ -209,6 +209,8 @@ const STAKEWISE_API_URLS = {
 
 const DEXSCREENER_API_URL = 'https://api.dexscreener.com/latest/dex/tokens'
 
+const CURVE_FINANCE_API_URL = 'https://api.curve.fi/api'
+
 const QUICKSWAP_GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/quickswap/polygon/'
 
 const DEBUG_MODE = process.env.DEBUG_MODE
@@ -297,4 +299,5 @@ module.exports = {
   TVL_LISTS,
   BASE_RPC_URL,
   DEXSCREENER_API_URL,
+  CURVE_FINANCE_API_URL,
 }

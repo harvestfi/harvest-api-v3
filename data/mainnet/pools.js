@@ -219,6 +219,10 @@ module.exports = [
     chain: CHAIN_IDS.BASE,
     id: 'curve_USDC_USDBc_axlUSDC_crvUSD',
     type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CURVE_BASE,
+      params: [addresses.BASE.V2.curve_USDC_USDBc_axlUSDC_crvUSD.Underlying],
+    },
     contractAddress: addresses.BASE.V2.curve_USDC_USDBc_axlUSDC_crvUSD.NewPool,
     collateralAddress: addresses.BASE.V2.curve_USDC_USDBc_axlUSDC_crvUSD.NewVault,
     rewardAPY: [],
@@ -244,6 +248,10 @@ module.exports = [
     chain: CHAIN_IDS.BASE,
     id: 'curve_CBETH_ETH',
     type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CURVE_BASE,
+      params: [addresses.BASE.V2.curve_CBETH_ETH.Pool],
+    },
     contractAddress: addresses.BASE.V2.curve_CBETH_ETH.NewPool,
     collateralAddress: addresses.BASE.V2.curve_CBETH_ETH.NewVault,
     rewardAPY: [],
@@ -269,6 +277,10 @@ module.exports = [
     chain: CHAIN_IDS.BASE,
     id: 'curve_CRV_crvUSD',
     type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CURVE_BASE,
+      params: [addresses.BASE.V2.curve_CRV_crvUSD.Pool],
+    },
     contractAddress: addresses.BASE.V2.curve_CRV_crvUSD.NewPool,
     collateralAddress: addresses.BASE.V2.curve_CRV_crvUSD.NewVault,
     rewardAPY: [],
@@ -294,6 +306,10 @@ module.exports = [
     chain: CHAIN_IDS.BASE,
     id: 'curve_ETH_tBTC_crvUSD',
     type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CURVE_BASE,
+      params: [addresses.BASE.V2.curve_ETH_tBTC_crvUSD.Underlying],
+    },
     contractAddress: addresses.BASE.V2.curve_ETH_tBTC_crvUSD.NewPool,
     collateralAddress: addresses.BASE.V2.curve_ETH_tBTC_crvUSD.NewVault,
     rewardAPY: [],
