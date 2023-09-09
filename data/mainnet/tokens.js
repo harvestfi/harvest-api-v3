@@ -396,7 +396,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   curve_USDC_USDBc_axlUSDC_crvUSD: {
-    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/curve.svg'],
     apyTokenSymbols: ['CRV'],
@@ -431,7 +430,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   curve_CBETH_ETH: {
-    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/curve.svg'],
     apyTokenSymbols: ['CRV'],
@@ -500,7 +498,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   curve_ETH_tBTC_crvUSD: {
-    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/curve.svg'],
     apyTokenSymbols: ['CRV'],
