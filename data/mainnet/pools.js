@@ -1042,7 +1042,7 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.BASE,
-    id: 'USDC_base',
+    id: 'USDBc_base',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.BASE.V2.USDC.NewPool,
     collateralAddress: addresses.BASE.V2.USDC.NewVault,
