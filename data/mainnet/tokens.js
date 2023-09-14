@@ -1272,6 +1272,7 @@ module.exports = {
     },
   },
   aerodrome_fBOMB_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -1507,6 +1508,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'COMP'],
   },
   USDC_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/comp.svg'],
     apyTokenSymbols: ['COMP'],
@@ -3172,6 +3174,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   curve_crvUSD_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/crvusd.svg', './icons/usdt.svg'],
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
@@ -3752,6 +3755,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'SLIZ'],
   },
   sushi_MAGIC_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/magic.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sushi.svg', './icons/magic.svg'],
@@ -3830,6 +3834,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'ETH', 'DPX'],
   },
   sushi_RDPX_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/rdpx.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sushi.svg', './icons/dpx.svg'],
