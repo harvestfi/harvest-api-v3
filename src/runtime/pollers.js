@@ -510,7 +510,6 @@ const getTotalRevenue = async () => {
 
   for (let networkId in vaults) {
     for (let symbol in vaults[networkId]) {
-      console.log("Getting revenue for:", symbol)
       const vault = vaults[networkId][symbol]
       let revenue = 0,
         revenueMonthly = 0
