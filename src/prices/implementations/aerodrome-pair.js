@@ -40,13 +40,13 @@ const getPrice = async (
   )
 
   const result = await routerMethods.getAmountsOut(
-    new BigNumber(10).pow(18).toString(),
+    new BigNumber(10).pow(17).toString(),
     routes,
     routerInstance,
   )
 
   const price = new BigNumber(result[isOutTokenWETH ? 2 : 1]).dividedBy(
-    new BigNumber(10).pow(outTokenDecimals),
+    new BigNumber(10).pow(outTokenDecimals - 1),
   )
   return price.toString()
 }

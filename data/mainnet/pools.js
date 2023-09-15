@@ -102,13 +102,40 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.based_BASED_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in the Based.Farm Armory, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.BASED}" target="_blank" rel="noopener noreferrer">BASED</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.bSHARE}" target="_blank" rel="noopener noreferrer">bSHARE</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.based_BASED_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
       <a href="https://basescan.org/token/${addresses.BASE.V2.based_BASED_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
       <a href="https://aerodrome.finance/deposit?token0=0x4200000000000000000000000000000000000006&token1=0x9CBD543f1B1166b2Df36b68Eb6bB1DcE24E6aBDf&stable=true" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
+      And check out the Armory on 
+      <a href="https://based.farm/app/armory" target="_blank" rel="noopener noreferrer">Based.Farm</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'based_bSHARE_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.based_bSHARE_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.based_bSHARE_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.based_bSHARE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in the Based.Farm Armory, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.bSHARE}" target="_blank" rel="noopener noreferrer">bSHARE</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.based_bSHARE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.based_bSHARE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
+      <a href="https://aerodrome.finance/deposit?token0=0x4200000000000000000000000000000000000006&token1=0xD0A96c9b21565a7B73d006C02E56E09438b51C1B&stable=false" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
       And check out the Armory on 
       <a href="https://based.farm/app/armory" target="_blank" rel="noopener noreferrer">Based.Farm</a>.
       </p>

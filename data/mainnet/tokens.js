@@ -186,10 +186,21 @@ module.exports = {
       params: [addresses.BASE.BASED, addresses.BASE.WETH, 6, true],
     },
   },
+  bSHARE: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/bshare.svg'],
+    tokenAddress: addresses.BASE.bSHARE,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.AERODROME_PAIR,
+      params: [addresses.BASE.bSHARE, addresses.BASE.WETH, 6],
+    },
+  },
   based_BASED_ETH: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/based.svg'],
-    apyTokenSymbols: ['BASED'],
+    apyIconUrls: ['./icons/bshare.svg'],
+    apyTokenSymbols: ['bSHARE'],
     logoUrl: ['./icons/based.svg', './icons/eth.svg'],
     tokenNames: ['BASED', 'ETH'],
     platform: ['Based.Farm'],
@@ -207,11 +218,40 @@ module.exports = {
         params: [
           addresses.BASE.V2.based_BASED_ETH.Underlying,
           addresses.BASE.V2.based_BASED_ETH.RewardPool,
+          0,
           profitSharingCut10Percent,
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'BASED'],
+    cmcRewardTokenSymbols: ['iFARM', 'bSHARE'],
+  },
+  based_bSHARE_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/bshare.svg'],
+    apyTokenSymbols: ['bSHARE'],
+    logoUrl: ['./icons/bshare.svg', './icons/eth.svg'],
+    tokenNames: ['bSHARE', 'ETH'],
+    platform: ['Based.Farm'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.BASE.V2.based_bSHARE_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.based_bSHARE_ETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.based_bSHARE_ETH.Underlying, 'bSHARE', 'WETH_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.BASED,
+        params: [
+          addresses.BASE.V2.based_bSHARE_ETH.Underlying,
+          addresses.BASE.V2.based_bSHARE_ETH.RewardPool,
+          1,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'bSHARE'],
   },
   'DAI+_base': {
     chain: CHAIN_IDS.BASE,
@@ -3125,7 +3165,7 @@ module.exports = {
         ['amDAI', 'amUSDC', 'amUSDT'],
         CHAIN_IDS.POLYGON_MAINNET,
       ],
-    }
+    },
   },
   curve_3Crypto_polygon: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
