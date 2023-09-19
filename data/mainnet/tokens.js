@@ -158,7 +158,7 @@ module.exports = {
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
     logoUrl: ['./icons/usdc.svg'],
-    tokenNames: ['USDBc'],
+    tokenNames: ['USDbC'],
     platform: ['Moonwell'],
     tags: ['Beginners', 'Stable'],
     tokenAddress: addresses.BASE.V2.moonwell_USDC.Underlying,
@@ -352,7 +352,7 @@ module.exports = {
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
     logoUrl: ['./icons/dola.svg', './icons/usdc.svg'],
-    tokenNames: ['DOLA', 'USDBc'],
+    tokenNames: ['DOLA', 'USDbC'],
     platform: ['Aerodrome'],
     tags: ['Advanced', 'Stable'],
     tokenAddress: addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying,
@@ -360,7 +360,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aerodrome_DOLA_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying, 'DOLA_base', 'USDBc_base'],
+      params: [addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying, 'DOLA_base', 'USDbC_base'],
     },
     estimateApyFunctions: [
       {
@@ -379,7 +379,7 @@ module.exports = {
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
     logoUrl: ['./icons/usdplus.svg', './icons/usdc.svg'],
-    tokenNames: ['USD+', 'USDBc'],
+    tokenNames: ['USD+', 'USDbC'],
     platform: ['Aerodrome'],
     tags: ['Advanced', 'Stable'],
     tokenAddress: addresses.BASE.V2.aerodrome_USDp_USDC.Underlying,
@@ -387,7 +387,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aerodrome_USDp_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_USDp_USDC.Underlying, 'USD+_base', 'USDBc_base'],
+      params: [addresses.BASE.V2.aerodrome_USDp_USDC.Underlying, 'USD+_base', 'USDbC_base'],
     },
     estimateApyFunctions: [
       {
@@ -434,24 +434,24 @@ module.exports = {
       params: ['curve-dao-token'],
     },
   },
-  curve_USDC_USDBc_axlUSDC_crvUSD: {
+  curve_USDC_USDbC_axlUSDC_crvUSD: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/curve.svg'],
     apyTokenSymbols: ['CRV'],
     logoUrl: ['./icons/usdc.svg', './icons/usdc.svg', './icons/axlusdc.svg', './icons/crvusd.svg'],
-    tokenNames: ['USDC', 'USDBc', 'axlUSDC', 'crvUSD'],
+    tokenNames: ['USDC', 'USDbC', 'axlUSDC', 'crvUSD'],
     platform: ['Curve'],
     tags: ['Advanced', 'Stable'],
-    tokenAddress: addresses.BASE.V2.curve_USDC_USDBc_axlUSDC_crvUSD.Underlying,
+    tokenAddress: addresses.BASE.V2.curve_USDC_USDbC_axlUSDC_crvUSD.Underlying,
     decimals: '18',
-    vaultAddress: addresses.BASE.V2.curve_USDC_USDBc_axlUSDC_crvUSD.NewVault,
+    vaultAddress: addresses.BASE.V2.curve_USDC_USDbC_axlUSDC_crvUSD.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.CURVE_POOL,
       params: [
-        addresses.BASE.V2.curve_USDC_USDBc_axlUSDC_crvUSD.Underlying,
-        addresses.BASE.V2.curve_USDC_USDBc_axlUSDC_crvUSD.Underlying,
+        addresses.BASE.V2.curve_USDC_USDbC_axlUSDC_crvUSD.Underlying,
+        addresses.BASE.V2.curve_USDC_USDbC_axlUSDC_crvUSD.Underlying,
         '18',
-        ['USDBc_base', 'USDC_base_bridged', 'axlUSDC', 'crvUSD_base'],
+        ['USDbC_base', 'USDC_base_bridged', 'axlUSDC', 'crvUSD_base'],
         CHAIN_IDS.BASE,
       ],
     },
@@ -459,8 +459,8 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.CURVE_GAUGE,
         params: [
-          'curve_USDC_USDBc_axlUSDC_crvUSD',
-          addresses.BASE.V2.curve_USDC_USDBc_axlUSDC_crvUSD.Gauge,
+          'curve_USDC_USDbC_axlUSDC_crvUSD',
+          addresses.BASE.V2.curve_USDC_USDbC_axlUSDC_crvUSD.Gauge,
           profitSharingCut10Percent,
           CHAIN_IDS.BASE,
         ],
@@ -1223,7 +1223,7 @@ module.exports = {
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
     logoUrl: ['./icons/aero.svg', './icons/usdc.svg'],
-    tokenNames: ['AERO', 'USDBc'],
+    tokenNames: ['AERO', 'USDbC'],
     platform: ['Aerodrome'],
     tags: ['Advanced'],
     tokenAddress: addresses.BASE.V2.aerodrome_AERO_USDC.Underlying,
@@ -1231,7 +1231,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aerodrome_AERO_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_AERO_USDC.Underlying, 'AERO', 'USDBc_base'],
+      params: [addresses.BASE.V2.aerodrome_AERO_USDC.Underlying, 'AERO', 'USDbC_base'],
     },
     estimateApyFunctions: [
       {
@@ -1277,7 +1277,7 @@ module.exports = {
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
-    tokenNames: ['ETH', 'USDBc'],
+    tokenNames: ['ETH', 'USDbC'],
     platform: ['Aerodrome'],
     tags: ['Advanced'],
     tokenAddress: addresses.BASE.V2.aerodrome_ETH_USDC.Underlying,
@@ -1285,7 +1285,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aerodrome_ETH_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_ETH_USDC.Underlying, 'USDBc_base', 'WETH_base'],
+      params: [addresses.BASE.V2.aerodrome_ETH_USDC.Underlying, 'USDbC_base', 'WETH_base'],
     },
     estimateApyFunctions: [
       {
@@ -1391,7 +1391,7 @@ module.exports = {
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
     logoUrl: ['./icons/tbtc.svg', './icons/usdc.svg'],
-    tokenNames: ['tBTC', 'USDBc'],
+    tokenNames: ['tBTC', 'USDbC'],
     platform: ['Aerodrome'],
     tags: ['Advanced'],
     tokenAddress: addresses.BASE.V2.aerodrome_tBTC_USDC.Underlying,
@@ -1399,7 +1399,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aerodrome_tBTC_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_tBTC_USDC.Underlying, 'tBTC_base', 'USDBc_base'],
+      params: [addresses.BASE.V2.aerodrome_tBTC_USDC.Underlying, 'tBTC_base', 'USDbC_base'],
     },
     estimateApyFunctions: [
       {
@@ -1429,7 +1429,7 @@ module.exports = {
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
     logoUrl: ['./icons/wusdr.svg', './icons/usdc.svg'],
-    tokenNames: ['wUSDR', 'USDBc'],
+    tokenNames: ['wUSDR', 'USDbC'],
     platform: ['Aerodrome'],
     tags: ['Advanced', 'Stable'],
     tokenAddress: addresses.BASE.V2.aerodrome_wUSDR_USDC.Underlying,
@@ -1437,7 +1437,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aerodrome_wUSDR_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_wUSDR_USDC.Underlying, 'wUSDR_base', 'USDBc_base'],
+      params: [addresses.BASE.V2.aerodrome_wUSDR_USDC.Underlying, 'wUSDR_base', 'USDbC_base'],
     },
     estimateApyFunctions: [
       {
@@ -1462,12 +1462,12 @@ module.exports = {
       params: ['compound-governance-token'],
     },
   },
-  USDBc_base: {
+  USDbC_base: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/comp.svg'],
     apyTokenSymbols: ['COMP'],
     logoUrl: ['./icons/usdc.svg'],
-    tokenNames: ['USDBc'],
+    tokenNames: ['USDbC'],
     platform: ['Compound'],
     tags: ['Beginners', 'Stable'],
     tokenAddress: addresses.BASE.V2.USDC.Underlying,
@@ -1601,9 +1601,9 @@ module.exports = {
     inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/balancer.svg', './icons/usdc.svg'],
-    apyTokenSymbols: ['BAL', 'USDBc'],
+    apyTokenSymbols: ['BAL', 'USDbC'],
     logoUrl: ['./icons/axlusdc.svg', './icons/usdc.svg'],
-    tokenNames: ['axlUSDC', 'USDBc'],
+    tokenNames: ['axlUSDC', 'USDbC'],
     platform: ['Balancer'],
     tags: ['Advanced', 'Stable'],
     tokenAddress: addresses.BASE.V2.balancer_axlUSDC_USDC.Underlying,
@@ -1628,12 +1628,12 @@ module.exports = {
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'BAL', 'USDBc'],
+    cmcRewardTokenSymbols: ['iFARM', 'BAL', 'USDbC'],
   },
   balancer_cbETH_WETH: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/balancer.svg', './icons/usdc.svg'],
-    apyTokenSymbols: ['BAL', 'USDBc'],
+    apyTokenSymbols: ['BAL', 'USDbC'],
     logoUrl: ['./icons/cbeth.svg', './icons/eth.svg'],
     tokenNames: ['CBETH', 'ETH'],
     platform: ['Balancer'],
@@ -1660,7 +1660,7 @@ module.exports = {
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'BAL', 'USDBc'],
+    cmcRewardTokenSymbols: ['iFARM', 'BAL', 'USDbC'],
   },
   balancer_GOLD_WETH: {
     chain: CHAIN_IDS.BASE,
@@ -1816,7 +1816,7 @@ module.exports = {
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
     apyTokenSymbols: ['BSX', 'xBSX', 'BSWAP'],
     logoUrl: ['./icons/dai.svg', './icons/usdc.svg'],
-    tokenNames: ['DAI', 'USDBc'],
+    tokenNames: ['DAI', 'USDbC'],
     platform: ['BaseSwap'],
     tags: ['Advanced', 'Stable'],
     tokenAddress: addresses.BASE.V2.baseswap_DAI_USDC.Underlying,
@@ -1824,7 +1824,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.baseswap_DAI_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.baseswap_DAI_USDC.Underlying, 'DAI_base', 'USDBc_base'],
+      params: [addresses.BASE.V2.baseswap_DAI_USDC.Underlying, 'DAI_base', 'USDbC_base'],
     },
     estimateApyFunctions: [
       {
@@ -1844,7 +1844,7 @@ module.exports = {
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
     apyTokenSymbols: ['BSX', 'xBSX', 'BSWAP'],
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
-    tokenNames: ['ETH', 'USDBc'],
+    tokenNames: ['ETH', 'USDbC'],
     platform: ['BaseSwap'],
     tags: ['Advanced'],
     tokenAddress: addresses.BASE.V2.baseswap_ETH_USDC.Underlying,
@@ -1852,7 +1852,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.baseswap_ETH_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.baseswap_ETH_USDC.Underlying, 'WETH_base', 'USDBc_base'],
+      params: [addresses.BASE.V2.baseswap_ETH_USDC.Underlying, 'WETH_base', 'USDbC_base'],
     },
     estimateApyFunctions: [
       {

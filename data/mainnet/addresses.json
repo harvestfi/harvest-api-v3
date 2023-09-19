@@ -2301,7 +2301,7 @@
         "NewPool": "0xE139ecB031b6877645f5198e43b3F1CF9E594957",
         "Gauge": "0xa5972f0C07a2D1cc5A8457c28d88ec4f3C009864"
       },
-      "curve_USDC_USDBc_axlUSDC_crvUSD": {
+      "curve_USDC_USDbC_axlUSDC_crvUSD": {
         "Underlying": "0xf6C5F01C7F3148891ad0e19DF78743D31E390D1f",
         "NewVault": "0x492A07E2f2BD6a85597052f6497aC830DA0a5f63",
         "NewStrategy": "0x22819ABfFeBfdD2ffF1a147741440068ca63Af33",
