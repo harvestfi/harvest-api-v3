@@ -8,7 +8,12 @@ const {
 } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
 
+const { UI_DATA_FILES } = require('../../../lib/constants')
+const { getUIData } = require('../../../lib/data')
+const { executeEstimateApyFunctions } = require('..')
+
 const getApy = async (strategyAddress, ntfPoolAddress, factor) => {
+  const tokens = await getUIData(UI_DATA_FILES.TOKENS)
   const web3 = web3BASE
   const {
     contract: { abi: nftPoolAbi },
@@ -50,10 +55,17 @@ const getApy = async (strategyAddress, ntfPoolAddress, factor) => {
   const poolRewardRate2 = new BigNumber(totalRewardRates[1])
     .times(allocPoint2)
     .div(totalAllocPoint2)
-  let poolUsdPerSecond = poolRewardRate1
+
+  const xTokenShare = new BigNumber(await nftPoolMethods.getXTokenShare(nftPoolInstance)).div(10000)
+  let xTokenUsdPerSecond = poolRewardRate1.times(bsxPrice).times(xTokenShare).div(1e18)
+  let compoundingUsdPerSecond = poolRewardRate1
     .times(bsxPrice)
+    .times(1 - xTokenShare)
     .div(1e18)
     .plus(poolRewardRate2.times(bswapPrice).div(1e18))
+
+  console.log(xTokenUsdPerSecond.toFixed())
+  console.log(compoundingUsdPerSecond.toFixed())
 
   let posId
   try {
@@ -72,12 +84,43 @@ const getApy = async (strategyAddress, ntfPoolAddress, factor) => {
     } else {
       posMultiplier = 1
     }
-    poolUsdPerSecond = poolUsdPerSecond.div(totalMultiplier).times(posMultiplier)
+    xTokenUsdPerSecond = xTokenUsdPerSecond.div(totalMultiplier).times(posMultiplier)
+    compoundingUsdPerSecond = compoundingUsdPerSecond.div(totalMultiplier).times(posMultiplier)
   }
 
-  let apr = poolUsdPerSecond.times(86400).times(365.25).div(totalSupplyUsd).times(100).times(factor)
+  let xTokenAPR = xTokenUsdPerSecond.times(86400).times(365).div(totalSupplyUsd).times(100)
+  let compoundingAPR = compoundingUsdPerSecond
+    .times(86400)
+    .times(365)
+    .div(totalSupplyUsd)
+    .times(100)
 
-  return apr.toFixed(2)
+  console.log(xTokenAPR.toFixed())
+  console.log(compoundingAPR.toFixed())
+
+  const compoundingAPY = compoundingAPR
+    .div(36500)
+    .times(factor)
+    .plus(1)
+    .pow(365)
+    .minus(1)
+    .times(100)
+
+  const xTokenData = tokens['xBSX']
+  const { estimatedApy: fxTokenAPY } = await executeEstimateApyFunctions(
+    'xBSX',
+    xTokenData.estimateApyFunctions,
+  )
+  let xTokenHodlAPY
+  if (fxTokenAPY > 0) {
+    const fxTokenAPR = new BigNumber((Math.pow(fxTokenAPY / 100 + 1, 1 / 365) - 1) * 36500)
+    xTokenHodlAPY = xTokenAPR.times(fxTokenAPY).div(fxTokenAPR)
+  } else {
+    xTokenHodlAPY = xTokenAPR
+  }
+
+  const result = compoundingAPY.plus(xTokenHodlAPY).toFixed(2)
+  return result
 }
 
 module.exports = {

@@ -6,5 +6,6 @@ const getStakingPosition = (id, instance) =>
 const getMaster = instance => countFunctionCall(instance.methods.master().call())
 const getPosId = (strategyAddress, instance) =>
   countFunctionCall(instance.methods.tokenOfOwnerByIndex(strategyAddress, 0).call())
+const getXTokenShare = instance => countFunctionCall(instance.methods.xTokenRewardsShare().call())
 
-module.exports = { getPoolInfo, getStakingPosition, getMaster, getPosId }
+module.exports = { getPoolInfo, getStakingPosition, getMaster, getPosId, getXTokenShare }
