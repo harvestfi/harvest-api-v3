@@ -64,9 +64,6 @@ const getApy = async (strategyAddress, ntfPoolAddress, factor) => {
     .div(1e18)
     .plus(poolRewardRate2.times(bswapPrice).div(1e18))
 
-  console.log(xTokenUsdPerSecond.toFixed())
-  console.log(compoundingUsdPerSecond.toFixed())
-
   let posId
   try {
     posId = await getPosId(strategyInstance)
@@ -94,9 +91,6 @@ const getApy = async (strategyAddress, ntfPoolAddress, factor) => {
     .times(365)
     .div(totalSupplyUsd)
     .times(100)
-
-  console.log(xTokenAPR.toFixed())
-  console.log(compoundingAPR.toFixed())
 
   const compoundingAPY = compoundingAPR
     .div(36500)
