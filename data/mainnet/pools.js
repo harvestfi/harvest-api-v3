@@ -6,6 +6,216 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.BASE,
+    id: 'baseswap_axlUSDC_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.BASESWAP,
+      params: [
+        addresses.BASE.V2.baseswap_axlUSDC_ETH.Underlying,
+        addresses.BASE.V2.baseswap_axlUSDC_ETH.BaseToken,
+      ],
+    },
+    contractAddress: addresses.BASE.V2.baseswap_axlUSDC_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.baseswap_axlUSDC_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxBSX'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_axlUSDC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
+       <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_axlUSDC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
+       <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the
+      <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_axlUSDC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a> by supplying liquidity on 
+      <a href="https://baseswap.fi/add/0xEB466342C4d449BC9f53A865D5Cb90586f405215/0x4200000000000000000000000000000000000006" target="_blank" rel="noopener noreferrer">BaseSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'baseswap_axlWBTC_USDbC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.BASESWAP,
+      params: [
+        addresses.BASE.V2.baseswap_axlWBTC_USDbC.Underlying,
+        addresses.BASE.V2.baseswap_axlWBTC_USDbC.BaseToken,
+      ],
+    },
+    contractAddress: addresses.BASE.V2.baseswap_axlWBTC_USDbC.NewPool,
+    collateralAddress: addresses.BASE.V2.baseswap_axlWBTC_USDbC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxBSX'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_axlWBTC_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
+       <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_axlWBTC_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
+       <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the
+      <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_axlWBTC_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a> by supplying liquidity on 
+      <a href="https://baseswap.fi/add/0x1a35EE4640b0A3B87705B0A4B45D227Ba60Ca2ad/0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA" target="_blank" rel="noopener noreferrer">BaseSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'baseswap_ETH_DAI',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.BASESWAP,
+      params: [
+        addresses.BASE.V2.baseswap_ETH_DAI.Underlying,
+        addresses.BASE.V2.baseswap_ETH_DAI.BaseToken,
+      ],
+    },
+    contractAddress: addresses.BASE.V2.baseswap_ETH_DAI.NewPool,
+    collateralAddress: addresses.BASE.V2.baseswap_ETH_DAI.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxBSX'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_ETH_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
+       <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_ETH_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
+       <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the
+      <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_ETH_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a> by supplying liquidity on 
+      <a href="https://baseswap.fi/add/0x4200000000000000000000000000000000000006/0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb" target="_blank" rel="noopener noreferrer">BaseSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'baseswap_USDbC_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.BASESWAP,
+      params: [
+        addresses.BASE.V2.baseswap_USDbC_USDC.Underlying,
+        addresses.BASE.V2.baseswap_USDbC_USDC.BaseToken,
+      ],
+    },
+    contractAddress: addresses.BASE.V2.baseswap_USDbC_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.baseswap_USDbC_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxBSX'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_USDbC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
+       <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_USDbC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
+       <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the
+      <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_USDbC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a> by supplying liquidity on 
+      <a href="https://baseswap.fi/add/0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA/0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913" target="_blank" rel="noopener noreferrer">BaseSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'baseswap_USDp_USDbC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.BASESWAP,
+      params: [
+        addresses.BASE.V2.baseswap_USDp_USDbC.Underlying,
+        addresses.BASE.V2.baseswap_USDp_USDbC.BaseToken,
+      ],
+    },
+    contractAddress: addresses.BASE.V2.baseswap_USDp_USDbC.NewPool,
+    collateralAddress: addresses.BASE.V2.baseswap_USDp_USDbC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxBSX'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_USDp_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
+       <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_USDp_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
+       <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the
+      <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_USDp_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a> by supplying liquidity on 
+      <a href="https://baseswap.fi/add/0xB79DD08EA68A908A97220C76d19A6aA9cBDE4376/0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA" target="_blank" rel="noopener noreferrer">BaseSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'baseswap_USDC_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.BASESWAP,
+      params: [
+        addresses.BASE.V2.baseswap_USDC_ETH.Underlying,
+        addresses.BASE.V2.baseswap_USDC_ETH.BaseToken,
+      ],
+    },
+    contractAddress: addresses.BASE.V2.baseswap_USDC_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.baseswap_USDC_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxBSX'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_USDC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens </a>in a BaseSwap farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
+       <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_USDC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
+       <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the
+      <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_USDC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a> by supplying liquidity on 
+      <a href="https://baseswap.fi/add/0x4200000000000000000000000000000000000006/0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913" target="_blank" rel="noopener noreferrer">BaseSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
     id: 'xBSX',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.BASE.V2.xBSX.NewPool,
