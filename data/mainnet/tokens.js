@@ -63,6 +63,64 @@ module.exports = {
       params: ['axlwbtc'],
     },
   },
+  pearl_STAR_USDR: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    apyIconUrls: ['./icons/pearl.svg'],
+    apyTokenSymbols: ['PEARL'],
+    logoUrl: ['./icons/star.svg', './icons/usdr.svg'],
+    tokenNames: ['STAR', 'USDR'],
+    platform: ['Pearl'],
+    tags: ['Advanced', 'Stable'],
+    subLabel: 'HODL in fCVR',
+    tokenAddress: addresses.MATIC.V2.pearl_STAR_USDR.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.pearl_STAR_USDR.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.MATIC.V2.pearl_STAR_USDR.Underlying, 'STAR_polygon', 'USDR_polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PEARL_HODL,
+        params: [
+          addresses.MATIC.V2.pearl_STAR_USDR.Underlying,
+          addresses.MATIC.V2.pearl_STAR_USDR.Gauge,
+          'CVR',
+          profitSharingCut8Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
+  },
+  moonwell_USDC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/well.svg'],
+    apyTokenSymbols: ['WELL'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Moonwell'],
+    tags: ['Beginners', 'Stable'],
+    tokenAddress: addresses.BASE.V2.moonwell_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.moonwell_USDC.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
+        params: [
+          addresses.BASE.V2.moonwell_USDC.Underlying,
+          addresses.BASE.V2.moonwell_USDC.mToken,
+          78,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'WELL'],
+  },
   baseswap_axlUSDC_ETH: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
@@ -332,7 +390,7 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
-  moonwell_USDC: {
+  moonwell_USDbC: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -340,9 +398,9 @@ module.exports = {
     tokenNames: ['USDbC'],
     platform: ['Moonwell'],
     tags: ['Beginners', 'Stable'],
-    tokenAddress: addresses.BASE.V2.moonwell_USDC.Underlying,
+    tokenAddress: addresses.BASE.V2.moonwell_USDbC.Underlying,
     decimals: '6',
-    vaultAddress: addresses.BASE.V2.moonwell_USDC.NewVault,
+    vaultAddress: addresses.BASE.V2.moonwell_USDbC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
@@ -351,8 +409,8 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
         params: [
-          addresses.BASE.V2.moonwell_USDC.Underlying,
-          addresses.BASE.V2.moonwell_USDC.mToken,
+          addresses.BASE.V2.moonwell_USDbC.Underlying,
+          addresses.BASE.V2.moonwell_USDbC.mToken,
           78,
           profitSharingCut10Percent,
         ],
@@ -3560,6 +3618,17 @@ module.exports = {
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['wrapped-usdr'],
+    },
+  },
+  STAR_polygon: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    logoUrl: [''],
+    tokenAddress: addresses.MATIC.STAR,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['preon-star'],
     },
   },
   lvUSD: {

@@ -5,6 +5,53 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'pearl_STAR_USDR',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.pearl_STAR_USDR.NewPool,
+    collateralAddress: addresses.MATIC.V2.pearl_STAR_USDR.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM', 'fCVR'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_STAR_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> in to a Pearl farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.PEARL}" target="_blank" rel="noopener noreferrer">PEARL</a>.
+       The earned PEARL is converted into 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> and deposited in to 
+       <a href="https://app.harvest.finance/polygon/${addresses.MATIC.V2.CVR.NewVault}" target="_blank" rel="noopener noreferrer">fCVR</a> where it is earning auto-compounding CVR rewards. The fCVR rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the  
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.pearl_STAR_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl LP tokens</a> by supply liquidity on  
+      <a href="https://www.pearl.exchange/liquidity/manage/${addresses.MATIC.V2.pearl_STAR_USDR.Underlying}" target="_blank" rel="noopener noreferrer">Pearl</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'moonwell_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.moonwell_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.moonwell_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Moonwell, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'baseswap_axlUSDC_ETH',
     type: POOL_TYPES.INCENTIVE,
@@ -278,10 +325,10 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.BASE,
-    id: 'moonwell_USDC',
+    id: 'moonwell_USDbC',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.BASE.V2.moonwell_USDC.NewPool,
-    collateralAddress: addresses.BASE.V2.moonwell_USDC.NewVault,
+    contractAddress: addresses.BASE.V2.moonwell_USDbC.NewPool,
+    collateralAddress: addresses.BASE.V2.moonwell_USDbC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
@@ -289,10 +336,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Moonwell, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> USDbC </a>to Moonwell, earning 
        <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> USDbC</a>.
       </p>
     </div>
    `,
