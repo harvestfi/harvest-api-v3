@@ -673,8 +673,8 @@ module.exports = {
   },
   curve_USDC_USDbC_axlUSDC_crvUSD: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/curve.svg'],
-    apyTokenSymbols: ['CRV'],
+    apyIconUrls: ['./icons/curve.svg', './icons/crvusd.svg'],
+    apyTokenSymbols: ['CRV', 'crvUSD'],
     logoUrl: ['./icons/usdc.svg', './icons/usdc.svg', './icons/axlusdc.svg', './icons/crvusd.svg'],
     tokenNames: ['USDC', 'USDbC', 'axlUSDC', 'crvUSD'],
     platform: ['Curve'],
@@ -707,8 +707,8 @@ module.exports = {
   },
   curve_CBETH_ETH: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/curve.svg'],
-    apyTokenSymbols: ['CRV'],
+    apyIconUrls: ['./icons/curve.svg', './icons/crvusd.svg'],
+    apyTokenSymbols: ['CRV', 'crvUSD'],
     logoUrl: ['./icons/cbeth.svg', './icons/eth.svg'],
     tokenNames: ['CBETH', 'ETH'],
     platform: ['Curve'],
@@ -741,8 +741,8 @@ module.exports = {
   },
   curve_CRV_crvUSD: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/curve.svg'],
-    apyTokenSymbols: ['CRV'],
+    apyIconUrls: ['./icons/curve.svg', './icons/crvusd.svg'],
+    apyTokenSymbols: ['CRV', 'crvUSD'],
     logoUrl: ['./icons/curve.svg', './icons/crvusd.svg'],
     tokenNames: ['CRV', 'crvUSD'],
     platform: ['Curve'],
@@ -775,8 +775,8 @@ module.exports = {
   },
   curve_ETH_tBTC_crvUSD: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/curve.svg'],
-    apyTokenSymbols: ['CRV'],
+    apyIconUrls: ['./icons/curve.svg', './icons/crvusd.svg'],
+    apyTokenSymbols: ['CRV', 'crvUSD'],
     logoUrl: ['./icons/eth.svg', './icons/tbtc.svg', './icons/crvusd.svg'],
     tokenNames: ['ETH', 'tBTC', 'crvUSD'],
     platform: ['Curve'],
