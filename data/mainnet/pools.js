@@ -512,7 +512,8 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_USDC_USDbC_axlUSDC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.crvUSD}" target="_blank" rel="noopener noreferrer">crvUSD</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_USDC_USDbC_axlUSDC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
@@ -541,7 +542,8 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_CBETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.crvUSD}" target="_blank" rel="noopener noreferrer">crvUSD</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_CBETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
@@ -570,7 +572,8 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_CRV_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.crvUSD}" target="_blank" rel="noopener noreferrer">crvUSD</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_CRV_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
@@ -599,7 +602,8 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_ETH_tBTC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.crvUSD}" target="_blank" rel="noopener noreferrer">crvUSD</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_ETH_tBTC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
