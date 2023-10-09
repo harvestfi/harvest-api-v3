@@ -211,7 +211,7 @@ const DEXSCREENER_API_URL = 'https://api.dexscreener.com/latest/dex/tokens'
 
 const CURVE_FINANCE_API_URL = 'https://api.curve.fi/api'
 
-const QUICKSWAP_GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/quickswap/polygon/'
+const QUICKSWAP_GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/'
 
 const DEBUG_MODE = process.env.DEBUG_MODE
 

@@ -52,6 +52,233 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  camelotV3_ARB_USDC: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/arb.svg', './icons/usdc.svg'],
+    apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
+    apyTokenSymbols: ['GRAIL', 'xGRAIL'],
+    tokenNames: ['ARB', 'USDC'],
+    platform: ['Camelot-V3'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.Underlying, 'camelot/arbitrum'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.CAMELOT_LP,
+        params: [
+          addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.NewStrategy,
+          addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.NFTPool,
+          addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.NitroPool,
+          profitSharingCut10Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
+  },
+  camelotV3_ETH_USDT: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/eth.svg', './icons/usdt.svg'],
+    apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
+    apyTokenSymbols: ['GRAIL', 'xGRAIL'],
+    tokenNames: ['ETH', 'USDT'],
+    platform: ['Camelot-V3'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.Underlying, 'camelot/arbitrum'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.CAMELOT_LP,
+        params: [
+          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.NewStrategy,
+          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.NFTPool,
+          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.NitroPool,
+          profitSharingCut10Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
+  },
+  camelotV3_ETH_USDC: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
+    apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
+    apyTokenSymbols: ['GRAIL', 'xGRAIL'],
+    tokenNames: ['ETH', 'USDC'],
+    platform: ['Camelot-V3'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.Underlying, 'camelot/arbitrum'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.CAMELOT_LP,
+        params: [
+          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.NewStrategy,
+          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.NFTPool,
+          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.NitroPool,
+          profitSharingCut10Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
+  },
+  quickGamma_wstETH_ETH: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    logoUrl: ['./icons/wsteth.svg', './icons/eth.svg'],
+    apyIconUrls: ['./icons/quick.svg'],
+    apyTokenSymbols: ['dQUICK'],
+    subLabel: 'Pegged Price',
+    tokenNames: ['WSTETH', 'ETH'],
+    platform: ['Quickswap', 'Gamma'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.quickGamma_wstETH_ETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying, 'quickswap/polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        params: [
+          addresses.MATIC.V2.quickGamma_wstETH_ETH.MasterChef,
+          addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying,
+          profitSharingCut8Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'dQUICK'],
+  },
+  quickGamma_WBTC_USDC_narrow: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    logoUrl: ['./icons/wbtc.svg', './icons/usdc.svg'],
+    apyIconUrls: ['./icons/quick.svg'],
+    apyTokenSymbols: ['dQUICK'],
+    subLabel: 'Narrow',
+    tokenNames: ['WBTC', 'USDC'],
+    platform: ['Quickswap', 'Gamma'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying, 'quickswap/polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        params: [
+          addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.MasterChef,
+          addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying,
+          profitSharingCut8Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'dQUICK'],
+  },
+  quickGamma_WBTC_ETH_narrow: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    logoUrl: ['./icons/wbtc.svg', './icons/eth.svg'],
+    apyIconUrls: ['./icons/quick.svg'],
+    apyTokenSymbols: ['dQUICK'],
+    subLabel: 'Narrow',
+    tokenNames: ['WBTC', 'ETH'],
+    platform: ['Quickswap', 'Gamma'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying, 'quickswap/polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        params: [
+          addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.MasterChef,
+          addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying,
+          profitSharingCut8Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'dQUICK'],
+  },
+  quickGamma_USDC_USDT: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
+    apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
+    apyTokenSymbols: ['dQUICK', 'WMATIC'],
+    subLabel: 'Stable',
+    tokenNames: ['USDC', 'USDT'],
+    platform: ['Quickswap', 'Gamma'],
+    tags: ['Stable'],
+    tokenAddress: addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.quickGamma_USDC_USDT.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying, 'quickswap/polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        params: [
+          addresses.MATIC.V2.quickGamma_USDC_USDT.MasterChef,
+          addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying,
+          profitSharingCut8Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
+  },
+  quickGamma_USDC_DAI: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    logoUrl: ['./icons/usdc.svg', './icons/dai.svg'],
+    apyIconUrls: ['./icons/quick.svg'],
+    apyTokenSymbols: ['dQUICK'],
+    subLabel: 'Stable',
+    tokenNames: ['USDC', 'DAI'],
+    platform: ['Quickswap', 'Gamma'],
+    tags: ['Stable'],
+    tokenAddress: addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.MATIC.V2.quickGamma_USDC_DAI.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying, 'quickswap/polygon'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        params: [
+          addresses.MATIC.V2.quickGamma_USDC_DAI.MasterChef,
+          addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying,
+          profitSharingCut8Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'dQUICK'],
+  },
   axlWBTC: {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/axlwbtc.svg'],
@@ -4247,7 +4474,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying],
+      params: [addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying, 'quickswap/polygon'],
     },
     estimateApyFunctions: [
       {
@@ -4275,7 +4502,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying],
+      params: [addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying, 'quickswap/polygon'],
     },
     estimateApyFunctions: [
       {
@@ -4303,7 +4530,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying],
+      params: [addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying, 'quickswap/polygon'],
     },
     estimateApyFunctions: [
       {
@@ -4331,7 +4558,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying],
+      params: [addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying, 'quickswap/polygon'],
     },
     estimateApyFunctions: [
       {
@@ -4359,7 +4586,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying],
+      params: [addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying, 'quickswap/polygon'],
     },
     estimateApyFunctions: [
       {
@@ -4387,7 +4614,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_USDC_ETH_wide.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying],
+      params: [addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying, 'quickswap/polygon'],
     },
     estimateApyFunctions: [
       {

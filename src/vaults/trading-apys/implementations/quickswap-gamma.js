@@ -6,7 +6,7 @@ const getTradingApy = async poolAddress => {
   let response, apy
 
   try {
-    response = await axios.get(`${QUICKSWAP_GAMMA_ENDPOINT}hypervisors/allData`)
+    response = await axios.get(`${QUICKSWAP_GAMMA_ENDPOINT}quickswap/polygon/hypervisors/allData`)
     apy = get(response, `data.${poolAddress.toLowerCase()}.returns.daily.feeApr`, 0)
     apy = parseFloat(apy) * 100
   } catch (err) {
