@@ -78,13 +78,13 @@ const getRewardApr = async (liquidityPercent, tvl, lpAddress) => {
       await swiseDistributionInstance.getPastEvents('PeriodicDistributionAdded', {
         filter: { beneficiary: lpAddress },
         fromBlock: fromBlock, //start of distribution
-        toBlock: 'latest',
+        toBlock: currentBlock - 100,
       })
     ).concat(
       await swiseDistributionInstance.getPastEvents('DistributionAdded', {
         filter: { beneficiary: lpAddress },
         fromBlock: fromBlock, //start of distribution
-        toBlock: 'latest',
+        toBlock: currentBlock - 100,
       }),
     ),
     'blockNumber',
