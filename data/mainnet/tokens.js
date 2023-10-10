@@ -144,11 +144,11 @@ module.exports = {
   },
   quickGamma_wstETH_ETH: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: ['./icons/wsteth.svg', './icons/eth.svg'],
+    logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg'],
     apyTokenSymbols: ['dQUICK'],
     subLabel: 'Pegged Price',
-    tokenNames: ['WSTETH', 'ETH'],
+    tokenNames: ['stETH', 'ETH'],
     platform: ['Quickswap', 'Gamma'],
     tags: ['Advanced', 'LSD'],
     tokenAddress: addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying,

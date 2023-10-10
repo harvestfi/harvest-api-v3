@@ -30,7 +30,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
-      <a href="https://app.camelot.exchange/liquidity?token1=0x912CE59144191C1204E64559FE8253a0e49E6548&token2=0xaf88d065e77c8cC2239327C5EDb3A432268e5831&type=v3" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "GAMMA" and "Narrow" options.
+      <a href="https://app.camelot.exchange/liquidity?token1=0xaf88d065e77c8cC2239327C5EDb3A432268e5831&token2=0x912CE59144191C1204E64559FE8253a0e49E6548&type=v3" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "GAMMA" and "Narrow" options.
       </p>
     </div>
    `,
