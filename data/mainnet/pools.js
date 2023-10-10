@@ -5,6 +5,245 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelotV3_ARB_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.AlgebraPool, true],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+       At every harvest, the earned GRAIL is reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V3 and the "Liquidity Only" option.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelotV3_ETH_USDT',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.AlgebraPool, true],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+       At every harvest, the earned GRAIL is reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V3 and the "Liquidity Only" option.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelotV3_ETH_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.AlgebraPool, true],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+       At every harvest, the earned GRAIL is reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity" target="_blank" rel="noopener noreferrer">Camelot</a>, using V3 and the "Liquidity Only" option.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'quickGamma_wstETH_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying],
+    },
+    contractAddress: addresses.MATIC.V2.quickGamma_wstETH_ETH.NewPool,
+    collateralAddress: addresses.MATIC.V2.quickGamma_wstETH_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/wsteth-weth-pegged-price" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'quickGamma_WBTC_USDC_narrow',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying],
+    },
+    contractAddress: addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.NewPool,
+    collateralAddress: addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/wbtc-usdc-narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'quickGamma_WBTC_ETH_narrow',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying],
+    },
+    contractAddress: addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.NewPool,
+    collateralAddress: addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/wbtc-weth-narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'quickGamma_USDC_USDT',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying],
+    },
+    contractAddress: addresses.MATIC.V2.quickGamma_USDC_USDT.NewPool,
+    collateralAddress: addresses.MATIC.V2.quickGamma_USDC_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/usdc-usdt-stable" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'quickGamma_USDC_DAI',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying],
+    },
+    contractAddress: addresses.MATIC.V2.quickGamma_USDC_DAI.NewPool,
+    collateralAddress: addresses.MATIC.V2.quickGamma_USDC_DAI.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/usdc-dai-stable" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'pearl_STAR_USDR',
     type: POOL_TYPES.INCENTIVE,
