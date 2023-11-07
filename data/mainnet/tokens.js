@@ -294,6 +294,7 @@ module.exports = {
     },
   },
   pearl_STAR_USDR: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/pearl.svg'],
     apyTokenSymbols: ['PEARL'],
@@ -1049,6 +1050,7 @@ module.exports = {
     },
   },
   pearl_CVR_PEARL: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/pearl.svg'],
     apyTokenSymbols: ['PEARL'],
@@ -1079,6 +1081,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
   },
   pearl_DAI_USDR: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/pearl.svg'],
     apyTokenSymbols: ['PEARL'],
@@ -1109,6 +1112,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
   },
   pearl_ETH_USDR: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/pearl.svg'],
     apyTokenSymbols: ['PEARL'],
@@ -1139,6 +1143,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
   },
   pearl_MATIC_USDR: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/pearl.svg'],
     apyTokenSymbols: ['PEARL'],
@@ -1169,6 +1174,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
   },
   pearl_PEARL_USDR: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/pearl.svg'],
     apyTokenSymbols: ['PEARL'],
@@ -1199,6 +1205,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
   },
   pearl_TNGBL_USDR: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/pearl.svg'],
     apyTokenSymbols: ['PEARL'],
@@ -1229,6 +1236,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
   },
   pearl_USDC_USDR: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/pearl.svg'],
     apyTokenSymbols: ['PEARL'],
@@ -1259,6 +1267,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
   },
   pearl_USDT_USDR: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/pearl.svg'],
     apyTokenSymbols: ['PEARL'],
@@ -1289,6 +1298,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
   },
   pearl_WBTC_USDR: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/pearl.svg'],
     apyTokenSymbols: ['PEARL'],
@@ -1319,6 +1329,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'PEARL'],
   },
   pearl_wUSDR_USDR: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/pearl.svg'],
     apyTokenSymbols: ['PEARL'],
@@ -1789,6 +1800,7 @@ module.exports = {
     },
   },
   aerodrome_TAROT_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -2130,6 +2142,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'USDbC'],
   },
   balancer_GOLD_WETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/gold.svg', './icons/eth.svg'],
     apyTokenSymbols: ['GOLD', 'WETH'],
@@ -2414,6 +2427,7 @@ module.exports = {
     },
   },
   balancer_PAL_OHM: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/arb.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'ARB'],
@@ -2452,6 +2466,7 @@ module.exports = {
     },
   },
   balancer_auraBAL_wstETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/arb.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'ARB'],
@@ -2479,6 +2494,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   balancer_MAGIC_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/arb.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'ARB'],
@@ -4059,6 +4075,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   balancer_wstETH_wETH_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'ARB'],
