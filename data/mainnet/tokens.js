@@ -2886,8 +2886,8 @@ module.exports = {
   camelot_iFARM_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/ifarm.svg', './icons/eth.svg'],
-    apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/ifarm.svg'],
-    apyTokenSymbols: ['GRAIL', 'xGRAIL', 'iFARM'],
+    apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/arb.svg'],
+    apyTokenSymbols: ['GRAIL', 'xGRAIL', 'ARB'],
     tokenNames: ['iFARM', 'ETH'],
     platform: ['Camelot'],
     tags: ['Advanced'],
@@ -2914,7 +2914,7 @@ module.exports = {
         extraDailyCompound: false,
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
+    cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelot_GRAIL_USDC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
