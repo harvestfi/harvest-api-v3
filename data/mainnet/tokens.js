@@ -1411,8 +1411,8 @@ module.exports = {
   camelot_EQB_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eqb.svg', './icons/eth.svg'],
-    apyIconUrls: ['./icons/grail.svg', './icons/eqb.svg'],
-    apyTokenSymbols: ['GRAIL', 'EQB'],
+    apyIconUrls: ['./icons/eqb.svg', './icons/arb.svg'],
+    apyTokenSymbols: ['EQB', 'ARB'],
     tokenNames: ['EQB', 'ETH'],
     platform: ['Camelot'],
     tags: ['Advanced'],
@@ -1449,6 +1449,7 @@ module.exports = {
     },
   },
   camelot_JONES_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/jones.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
@@ -1531,8 +1532,8 @@ module.exports = {
   camelot_RELAY_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/relay.svg', './icons/eth.svg'],
-    apyIconUrls: ['./icons/grail.svg', './icons/relay.svg'],
-    apyTokenSymbols: ['GRAIL', 'RELAY'],
+    apyIconUrls: ['./icons/grail.svg', './icons/relay.svg', './icons/arb.svg'],
+    apyTokenSymbols: ['GRAIL', 'RELAY', 'ARB'],
     tokenNames: ['RELAY', 'ETH'],
     platform: ['Camelot'],
     tags: ['Advanced'],
@@ -1575,8 +1576,8 @@ module.exports = {
   camelot_THALES_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/thales.svg', './icons/eth.svg'],
-    apyIconUrls: ['./icons/grail.svg', './icons/thales.svg'],
-    apyTokenSymbols: ['GRAIL', 'THALES'],
+    apyIconUrls: ['./icons/grail.svg', './icons/thales.svg', './icons/arb.svg'],
+    apyTokenSymbols: ['GRAIL', 'THALES', 'ARB'],
     tokenNames: ['THALES', 'ETH'],
     platform: ['Camelot'],
     tags: ['Advanced'],
@@ -1617,6 +1618,7 @@ module.exports = {
     },
   },
   camelot_UMAMI_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/umami.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
@@ -2611,8 +2613,8 @@ module.exports = {
   camelot_GENE_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/gene.svg', './icons/eth.svg'],
-    apyIconUrls: ['./icons/gnome.svg'],
-    apyTokenSymbols: ['GNOME'],
+    apyIconUrls: ['./icons/gnome.svg', './icons/arb.svg'],
+    apyTokenSymbols: ['GNOME', 'ARB'],
     tokenNames: ['GENE', 'ETH'],
     platform: ['Camelot'],
     tags: ['Advanced', 'DeSci'],
@@ -2755,6 +2757,7 @@ module.exports = {
     },
   },
   camelot_SILO_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/silo.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/silo.svg'],
@@ -2799,6 +2802,7 @@ module.exports = {
     },
   },
   camelot_VELA_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/vela.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/vela.svg'],

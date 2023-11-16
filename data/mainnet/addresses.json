@@ -1981,7 +1981,7 @@
         "NewStrategy": "0x633f16e526A05B82BddDCef4fa2100582cF443C8",
         "NewPool": "0x54963179f98F29fCC096a233843F3c3094B7eAcb",
         "NFTPool": "0xc7044561328BE256a37b2Aaf44b42D0E4c86eFED",
-        "NitroPool": "0x1ceEA34c280346DC539281EAb8b61EBe6CF7e496"
+        "NitroPool": "0x5106544C41867A2e1fbEa42327aD5c043e3f172a"
       },
       "camelot_GNOME_ETH": {
         "Underlying": "0x60F7116d7c451ac5a5159F60Fc5fC36336b742c4",
@@ -2082,7 +2082,7 @@
         "NewStrategy": "0x617D866273bFcDfB8F2A232bD909f7DCeb892E6c",
         "NewPool": "0x25C69d255e8FED5f71e83d4D062b06770139841A",
         "NFTPool": "0x76075F03e0Ae34bF0B63bcFb731F9DB5F826dcAe",
-        "NitroPool": "0xE13B64C33eCB0501C21e0423fcd2efAF5e0a2592"
+        "NitroPool": "0x2A7543e3e2f1998B1E54744AfC7E857715f1F645"
       },
       "camelot_JONES_ETH": {
         "Underlying": "0x460c2c075340EbC19Cf4af68E5d83C194E7D21D0",
@@ -2106,7 +2106,7 @@
         "NewStrategy": "0x6eEA49f4235C459958B318B4810596ec6700742F",
         "NewPool": "0xA7a4825E35893c2018E2A8Dd540A1f314cd0DD8E",
         "NFTPool": "0x30cbcBbd793501690d9Ca6f78fC798Ce987Af7d9",
-        "NitroPool": "0xe9b80ffd7Bd59189487Ab15866F88eBc8E7937A1"
+        "NitroPool": "0x7F40F41Ea66E79895C2299a0164584eD25C0e43e"
       },
       "camelot_THALES_ETH": {
         "Underlying": "0x8971dFb268B961a9270632f28B24F2f637c94244",
@@ -2114,7 +2114,7 @@
         "NewStrategy": "0x7aEDe853c958AD993863B7d97e626def87011829",
         "NewPool": "0x893c361c2E6cD68fbB67485bFa761f296Faeab99",
         "NFTPool": "0xB5108062de111F61E0dD585f4225ae18d1BB21D9",
-        "NitroPool": "0x41b52A004EeDacf5CAfb8cf76b8360b679372070"
+        "NitroPool": "0x0b0f2d79e2Da8a72B3c6C7EfD094B87D2469829C"
       },
       "camelot_UMAMI_ETH": {
         "Underlying": "0xa1e48225215d9e656F4f9d779fc32817C50de0E5",

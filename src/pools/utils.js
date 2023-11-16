@@ -1,14 +1,10 @@
 const { cache } = require('../lib/cache')
 const { size, isUndefined } = require('lodash')
 const { POOL_TYPES, CHAIN_IDS, GENERAL_CACHE_TTL } = require('../lib/constants')
-const { forEach } = require('promised-loops')
 const addresses = require('../lib/data/addresses.json')
 const { default: BigNumber } = require('bignumber.js')
 const { getWeeklyCompound, getDailyCompound } = require('../lib/utils')
 const { getTokenPrice } = require('../prices')
-const tokenAddresses = require('../lib/data/addresses.json')
-const { web3 } = require('../lib/web3')
-const { pool: poolContractInfo, potPool: potPoolContractInfo } = require('../lib/web3/contracts')
 
 const getIncentivePoolStats = async (
   pool,
@@ -99,8 +95,7 @@ const getPoolStatsPerType = async (pool, poolContractData, lpTokenData, weeklyRe
   const allPoolStats = []
 
   for (let rewardTokenAddress of pool.rewardTokens) {
-    let poolStats = {},
-      weeklyRewardRateOverride
+    let poolStats = {}
     switch (pool.type) {
       case POOL_TYPES.INCENTIVE:
         poolStats = await getIncentivePoolStats(
