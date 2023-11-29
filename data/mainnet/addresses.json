@@ -1721,7 +1721,8 @@
         "NewVault": "0xCB2f2895208c36F38c9B13aB0C9e49Ad69B14e9d",
         "NewStrategy": "0xc51F111D610d5855675908693C7a00cd64Ab4581",
         "NewPool": "0x7616963C1e0e70E672940B17080CA91f28bC104d",
-        "RewardPool": "0x83C5022745B2511Bd199687a42D27BEFd025A9A9"
+        "RewardPool": "0x83C5022745B2511Bd199687a42D27BEFd025A9A9",
+        "doHardwork": false
       }
     }
   },
@@ -2527,7 +2528,8 @@
         "NewVault": "0xc4F28CAE78550b4d85d6F928805483cEE3bcB3E5",
         "NewStrategy": "0xEf1c16bd57418382b33aEa88E713Dc1390ecC457",
         "NewPool": "0xeD05b21b403543255d262eADD928f4bF1710c6a1",
-        "mToken": "0x703843C3379b52F9FF486c9f5892218d2a065cC8"
+        "mToken": "0x703843C3379b52F9FF486c9f5892218d2a065cC8",
+        "doHardwork": false
       },
       "moonwell_USDC": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",

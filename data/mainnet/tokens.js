@@ -862,6 +862,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
   moonwell_USDbC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -1611,6 +1612,7 @@ module.exports = {
     },
   },
   CVR: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/cvr.svg', './icons/usdr.svg'],
     apyTokenSymbols: ['CVR', 'USDR'],
