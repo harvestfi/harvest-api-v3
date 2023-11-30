@@ -994,7 +994,8 @@
       "NewVault": "0x744F77705749541926294f7b35A63f8691374640",
       "NewStrategy": "0x14d46cB6dFbD0587A0fF5fB42c3673b01F864F8a",
       "NewPool": "0x2549A5195D069dBa83eFa28CF1C05059c005D169",
-      "RewardPool": "0xBcD7254A1D759EFA08eC7c3291B2E85c5dCC12ce"
+      "RewardPool": "0xBcD7254A1D759EFA08eC7c3291B2E85c5dCC12ce",
+      "doHardwork": false
     },
     "UniV3_ORC_ETH": {
       "Underlying": [

@@ -6297,6 +6297,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['miFARM', 'wMATIC'],
   },
   LOOKS: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/looks.svg'],
     tokenAddress: addresses.LOOKS,
