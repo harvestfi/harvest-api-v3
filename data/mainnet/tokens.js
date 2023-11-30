@@ -52,6 +52,33 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  jones_wjAURA: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/wjaura.svg'],
+    apyIconUrls: ['./icons/arb.svg'],
+    apyTokenSymbols: ['ARB'],
+    platform: ['JonesDAO'],
+    tags: ['Advanced'],
+    tokenNames: ['wjAURA'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.jones_wjAURA.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.jones_wjAURA.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['wrapped-jones-aura'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.JONES,
+        params: [
+          addresses.ARBITRUM_ONE.V2.jones_wjAURA.PoolId,
+          addresses.ARBITRUM_ONE.V2.jones_wjAURA.Underlying,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['FARM', 'ARB'],
+  },
   camelotV3_ARB_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/eth.svg'],

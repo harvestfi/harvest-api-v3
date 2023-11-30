@@ -6,6 +6,31 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'jones_wjAURA',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.jones_wjAURA.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.jones_wjAURA.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.jones_wjAURA.Underlying}" target="_blank" rel="noopener noreferrer">wjAURA</a> in to a JonesDAO farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.jones_wjAURA.Underlying}" target="_blank" rel="noopener noreferrer">wjAURA</a>.
+      </p>
+      <p> Get 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.jones_wjAURA.Underlying}" target="_blank" rel="noopener noreferrer">wjAURA</a> on 
+      <a href="https://app.jonesdao.io/vaults/auto-compounders/aura" target="_blank" rel="noopener noreferrer">JonesDAO</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelotV3_ARB_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {

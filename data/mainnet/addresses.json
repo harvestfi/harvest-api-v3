@@ -2266,7 +2266,14 @@
         "NFTPool": "0xA562803Aa6FC35C3f3AB2d42b4281fE462dfb620",
         "NitroPool": "0x773B2db85b0cb5f647F8708d783d04f659Be28e9",
         "AlgebraPool": "0xd845f7D4f4DeB9Ff5bCf09D140Ef13718F6f6C71"
-      }      
+      },
+      "jones_wjAURA": {
+        "Underlying": "0xcB9295ac65De60373A25C18d2044D517ed5da8A9",
+        "NewVault": "0x283D712e32B9465b1B9AFf14e902C75C8B999cF5",
+        "NewStrategy": "0x540101eadF05e711c1a7AF259586C16126123759",
+        "NewPool": "0x0D443205972Cf4222D3FEfB9023f542Eb7B33a9B",
+        "PoolId": "2"
+      }
     }
   },
   "BASE": {
