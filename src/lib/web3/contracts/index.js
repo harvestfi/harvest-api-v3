@@ -106,7 +106,21 @@ const mTokenContract = require('../contracts/mtoken/contract.json')
 const comptrollerMethods = require('../contracts/comptroller/methods')
 const comptrollerContract = require('../contracts/comptroller/contract.json')
 
+const lodestarCTokenMethods = require('../contracts/lodestar-ctoken/methods')
+const lodestarCTokenContract = require('../contracts/lodestar-ctoken/contract.json')
+
+const lodestarComptrollerMethods = require('../contracts/lodestar-comptroller/methods')
+const lodestarComptrollerContract = require('../contracts/lodestar-comptroller/contract.json')
+
 module.exports = {
+  lodestarCToken: {
+    methods: lodestarCTokenMethods,
+    contract: lodestarCTokenContract,
+  },
+  lodestarComptroller: {
+    methods: lodestarComptrollerMethods,
+    contract: lodestarComptrollerContract,
+  },
   comptroller: {
     methods: comptrollerMethods,
     contract: comptrollerContract,
