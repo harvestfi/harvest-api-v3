@@ -2533,14 +2533,14 @@
       "moonwell_CBETH": {
         "Underlying": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
         "NewVault": "0x99946CEFb02249270373f7F2DC0bd9b085d52ae5",
-        "NewStrategy": "0x85e90d12DE1a50eE56dD696028fedAF8db10585D",
+        "NewStrategy": "0x43FE585E9B52ba622a184aE07810213Da869496E",
         "NewPool": "0x6a021efA7467078d2b30e07502832DB842B0a42A",
         "mToken": "0x3bf93770f2d4a794c3d9EBEfBAeBAE2a8f09A5E5"
       },
       "moonwell_DAI": {
         "Underlying": "0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb",
         "NewVault": "0x6a149EBe60f157C64cA731c1D67C2b8c547bf872",
-        "NewStrategy": "0x6150c6B1d2ED51a1f17720dC70524B04f33d67ef",
+        "NewStrategy": "0x8323824d05620244238d6053f148409d9dcCBcb7",
         "NewPool": "0xbecA2C0888a8c79698aCFd4D76977F16C426CdF4",
         "mToken": "0x73b06D8d18De422E269645eaCe15400DE7462417"
       },
@@ -2562,7 +2562,7 @@
       "moonwell_WETH": {
         "Underlying": "0x4200000000000000000000000000000000000006",
         "NewVault": "0x0B0193fAD49DE45F5E2B0A9f5D6Bc3BB7D281688",
-        "NewStrategy": "0x525779bB64FFf50BB0c04F017DDd442C364fF4A6",
+        "NewStrategy": "0x2696E8017A422af7ee764Fa598C7AC3B75007FdB",
         "NewPool": "0x2E602943C0a1B1027B2AC998facB698fD4F689A7",
         "mToken": "0x628ff693426583D9a7FB391E54366292F509D457"
       },
@@ -2619,6 +2619,20 @@
         "NewVault": "0x40455352Dd3c5D65A40729C22B12265C17B37b75",
         "NewStrategy": "0xe8EA847d87faE07f4F31535b72F1772d468cfb7b",
         "NewPool": "0xa36fa89A9133b1974Efb5206e24F1A9d49a31319"
+      },
+      "moonwell_rETH": {
+        "Underlying": "0xB6fe221Fe9EeF5aBa221c348bA20A1Bf5e73624c",
+        "NewVault": "0x3ef3a16367A82436cE64b25907db3dC58664A727",
+        "NewStrategy": "0xb8443907963f708d8d44369B3e5AAA42F8eF078c",
+        "NewPool": "0x57e46d910933cb3d84d6c44a93cbb503A5136265",
+        "mToken": "0xCB1DaCd30638ae38F2B94eA64F066045B7D45f44"
+      },
+      "moonwell_wstETH": {
+        "Underlying": "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
+        "NewVault": "0x6C90F6cC42cC64d6fC110f02dE964089b6298dE7",
+        "NewStrategy": "0x7d57Cd133785ba497c1D0259D7b3AF5334418735",
+        "NewPool": "0xA9Da08B43E7B650527CE6254E0efBB26fba7D928",
+        "mToken": "0x627Fe393Bc6EdDA28e99AE648fD6fF362514304b"
       }
     }
   }

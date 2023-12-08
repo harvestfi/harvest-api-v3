@@ -5,6 +5,50 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'moonwell_wstETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.moonwell_wstETH.NewPool,
+    collateralAddress: addresses.BASE.V2.moonwell_wstETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_wstETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH </a>to Moonwell, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and
+       <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_wstETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'moonwell_rETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.moonwell_rETH.NewPool,
+    collateralAddress: addresses.BASE.V2.moonwell_rETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_rETH.Underlying}" target="_blank" rel="noopener noreferrer"> rETH </a>to Moonwell, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and
+       <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_rETH.Underlying}" target="_blank" rel="noopener noreferrer"> rETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'lodestar_ETH',
     type: POOL_TYPES.INCENTIVE,
@@ -699,7 +743,8 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Moonwell, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and
+       <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
@@ -950,7 +995,8 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_CBETH.Underlying}" target="_blank" rel="noopener noreferrer"> CBETH </a>to Moonwell, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and
+       <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_CBETH.Underlying}" target="_blank" rel="noopener noreferrer"> CBETH</a>.
       </p>
@@ -971,7 +1017,8 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Moonwell, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and
+       <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> DAI</a>.
       </p>
@@ -1013,7 +1060,8 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to Moonwell, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and
+       <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
        At every harvest, the earned rewards are reinvested into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
       </p>
