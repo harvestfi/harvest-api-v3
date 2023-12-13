@@ -1429,6 +1429,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   curve_CBETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/curve.svg', './icons/crvusd.svg'],
     apyTokenSymbols: ['CRV', 'crvUSD'],
@@ -2606,6 +2607,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'USDbC'],
   },
   balancer_cbETH_WETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/balancer.svg', './icons/usdbc.svg'],
     apyTokenSymbols: ['BAL', 'USDbC'],
@@ -3416,6 +3418,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelot_GRAIL_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/grail.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
@@ -3893,6 +3896,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.VERSE] },
   },
   verse_VERSE_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/verse.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/verse.svg'],
@@ -4143,6 +4147,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['dopex-rebate-token'] },
   },
   sushi_DPX_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/dpx.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sushi.svg', './icons/dpx.svg'],
@@ -5508,6 +5513,7 @@ module.exports = {
     },
   },
   apeStake: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/apestake.svg'],
     apyIconUrls: ['./icons/apestake.svg'],
@@ -6504,6 +6510,7 @@ module.exports = {
     },
   },
   quick_YEL_MATIC: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/yel.svg', './icons/matic.svg'],
     apyIconUrls: ['./icons/yel.svg'],
