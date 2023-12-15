@@ -52,6 +52,63 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  MGP: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/mgp.png'],
+    tokenAddress: addresses.ARBITRUM_ONE.MGP,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['magpie'],
+    },
+  },
+  magpie_DAI_main: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/dai.svg'],
+    apyIconUrls: ['./icons/mgp.png', './icons/wom.png'],
+    apyTokenSymbols: ['MGP', 'WOM'],
+    platform: ['Magpie'],
+    tags: ['Advanced'],
+    tokenNames: ['DAI'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.magpie_DAI_main.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.magpie_DAI_main.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['dai'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MAGPIE,
+        params: [addresses.ARBITRUM_ONE.V2.magpie_DAI_main.Underlying, profitSharingCut10Percent],
+      },
+    ],
+    cmcRewardTokenSymbols: ['FARM', 'MGP', 'WOM'],
+  },
+  magpie_ETH_frxeth: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/eth.svg'],
+    apyIconUrls: ['./icons/mgp.png', './icons/wom.png'],
+    apyTokenSymbols: ['MGP', 'WOM'],
+    platform: ['Magpie'],
+    tags: ['Advanced'],
+    tokenNames: ['ETH'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['weth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MAGPIE,
+        params: [addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.Underlying, profitSharingCut10Percent],
+      },
+    ],
+    cmcRewardTokenSymbols: ['FARM', 'MGP', 'WOM'],
+  },
   jones_wjAURA: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/wjaura.svg'],

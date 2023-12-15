@@ -6,6 +6,50 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'magpie_DAI_main',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.magpie_DAI_main.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.magpie_DAI_main.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_DAI_main.Underlying}" target="_blank" rel="noopener noreferrer">LP-DAI</a> in to a Magpie farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WOM}" target="_blank" rel="noopener noreferrer">WOM</a>,
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MGP}" target="_blank" rel="noopener noreferrer">MGP</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_DAI_main.Underlying}" target="_blank" rel="noopener noreferrer">LP-DAI</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'magpie_ETH_frxeth',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.Underlying}" target="_blank" rel="noopener noreferrer">LP-WETH</a> in to a Magpie farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WOM}" target="_blank" rel="noopener noreferrer">WOM</a>,
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MGP}" target="_blank" rel="noopener noreferrer">MGP</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.Underlying}" target="_blank" rel="noopener noreferrer">LP-WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'jones_wjAURA',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.jones_wjAURA.NewPool,

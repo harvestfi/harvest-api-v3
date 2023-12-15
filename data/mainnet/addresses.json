@@ -1810,6 +1810,8 @@
     "UMAMI": "0x1622bF67e6e5747b81866fE0b85178a93C7F86e3",
     "UWU": "0x05d35769a222AfFd6185e20F3f3676Abde56C25F",
     "pGOLD": "0xF602A45812040D90B202355bdc05438918CD3FE3",
+    "MGP": "0xa61F74247455A40b01b0559ff6274441FAfa22A3",
+    "WOM": "0x7B5EB3940021Ec0e8e463D5dBB4B7B09a89DDF96",
     "V2": {
       "Curve_2pool_arbitrum": {
         "doHardwork": false,
@@ -2273,6 +2275,18 @@
         "NewStrategy": "0x540101eadF05e711c1a7AF259586C16126123759",
         "NewPool": "0x0D443205972Cf4222D3FEfB9023f542Eb7B33a9B",
         "PoolId": "2"
+      },
+      "magpie_DAI_main": {
+        "Underlying": "0x0Fa7b744F18D8E8c3D61B64b110F25CC27E73055",
+        "NewVault": "0xbF353C369Aa753b211374D7ecB286da499991C94",
+        "NewStrategy": "0xAfef0501Cd1e1C00e095e0E1c6B178754aCEB150",
+        "NewPool": "0x06Df71bD8C9d3a8d5f2ce1111EE7F59379b72b46"
+      },
+      "magpie_ETH_frxeth": {
+        "Underlying": "0xe62880CC6872c9E9Fb1DDd73f400850fdaBE798D",
+        "NewVault": "0x02Ab76B19944BdEc4d4c612468bB6aF3AC76B15D",
+        "NewStrategy": "0x903dF5C4C10c4e8AD218A0C41D8A51e4cde1e574",
+        "NewPool": "0xcf0d31C0Df29592Ec415634Dc4727f99b961E680"
       }
     }
   },

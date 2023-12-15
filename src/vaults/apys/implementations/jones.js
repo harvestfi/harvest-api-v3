@@ -27,11 +27,8 @@ const getApy = async (poolId, lpToken, reduction) => {
   const rewardPriceUSD = await getTokenPrice('ARB')
   const lpPriceUSD = await getTokenPrice(lpToken, 42161)
 
-  const masterInstance = new web3.eth.Contract(
-    masterContract.abi,
-    masterContract.address.mainnet,
-  )
-  
+  const masterInstance = new web3.eth.Contract(masterContract.abi, masterContract.address.mainnet)
+
   const secondsPerYear = 31536000
   const rewardPerSecond = new BigNumber(await getRewardPerSecond(masterInstance)).dividedBy(
     new BigNumber(10).exponentiatedBy(18),
@@ -47,7 +44,11 @@ const getApy = async (poolId, lpToken, reduction) => {
 
   const totalSupplyUSD = totalSupply.multipliedBy(lpPriceUSD)
 
-  let apy = new BigNumber(rewardPriceUSD).times(rewardPerSecond).times(secondsPerYear).times(poolWeight).div(totalSupplyUSD)
+  let apy = new BigNumber(rewardPriceUSD)
+    .times(rewardPerSecond)
+    .times(secondsPerYear)
+    .times(poolWeight)
+    .div(totalSupplyUSD)
 
   if (reduction) {
     apy = apy.multipliedBy(reduction)
