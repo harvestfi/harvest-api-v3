@@ -63,6 +63,17 @@ module.exports = {
       params: ['magpie'],
     },
   },
+  WOM: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/wom.png'],
+    tokenAddress: addresses.ARBITRUM_ONE.WOM,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['wom-token'],
+    },
+  },
   magpie_DAI_main: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/dai.svg'],
@@ -84,7 +95,7 @@ module.exports = {
         params: [addresses.ARBITRUM_ONE.V2.magpie_DAI_main.Underlying, profitSharingCut10Percent],
       },
     ],
-    cmcRewardTokenSymbols: ['FARM', 'MGP', 'WOM'],
+    cmcRewardTokenSymbols: ['iFARM', 'MGP', 'WOM'],
   },
   magpie_ETH_frxeth: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
@@ -107,7 +118,7 @@ module.exports = {
         params: [addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.Underlying, profitSharingCut10Percent],
       },
     ],
-    cmcRewardTokenSymbols: ['FARM', 'MGP', 'WOM'],
+    cmcRewardTokenSymbols: ['iFARM', 'MGP', 'WOM'],
   },
   jones_wjAURA: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
@@ -134,7 +145,7 @@ module.exports = {
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['FARM', 'ARB'],
+    cmcRewardTokenSymbols: ['iFARM', 'ARB'],
   },
   camelotV3_ARB_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,

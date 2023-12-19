@@ -1,30 +1,20 @@
 const BigNumber = require('bignumber.js')
 const { web3ARBITRUM } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
-const {
-  magpieMaster,
-  wombatStaking,
-  wombatFeePool,
-  wombatAsset,
-} = require('../../../lib/web3/contracts')
-const { getWomAprSubgraph } = require('../../../lib/third-party/wombat')
+const { magpieMaster, wombatStaking, wombatMaster } = require('../../../lib/web3/contracts')
+const { CHAIN_IDS } = require('../../../lib/constants')
 
 const getApy = async (underlyingAddress, reduction) => {
   const web3 = web3ARBITRUM
   const {
-    contract: { abi: wombatStakingContractAbi, address: wombatStakingAddress },
+    contract: { abi: wombatStakingAbi, address: wombatStakingAddress },
     methods: wombatStakingMethods,
   } = wombatStaking
 
   const {
-    contract: { abi: wombatFeePoolAbi },
-    methods: wombatFeePoolMethods,
-  } = wombatFeePool
-
-  const {
-    contract: { abi: wombatAssetAbi },
-    methods: wombatAssetMethods,
-  } = wombatAsset
+    contract: { abi: wombatMasterAbi, address: wombatMasterAddress },
+    methods: wombatMasterMethods,
+  } = wombatMaster
 
   const {
     contract: { abi: magpieMasterAbi },
@@ -32,54 +22,42 @@ const getApy = async (underlyingAddress, reduction) => {
   } = magpieMaster
 
   const wombatStakingInstance = new web3.eth.Contract(
-    wombatStakingContractAbi,
+    wombatStakingAbi,
     wombatStakingAddress.mainnet,
   )
-  const wombatAssetInstance = new web3.eth.Contract(wombatAssetAbi, underlyingAddress)
-
-  const poolAddr = await wombatAssetMethods.getPoolAddr(wombatAssetInstance)
-
-  const underlyingToken = await wombatAssetMethods.getUnderlyingToken(wombatAssetInstance)
-
-  const wombatFeePoolInstance = new web3.eth.Contract(wombatFeePoolAbi, poolAddr)
+  const wombatMasterInstance = new web3.eth.Contract(wombatMasterAbi, wombatMasterAddress.mainnet)
 
   const wsPoolInfo = await wombatStakingMethods.getPools(underlyingAddress, wombatStakingInstance)
   const stakingToken = wsPoolInfo.receiptToken
+  const poolId = wsPoolInfo.pid
+
   const magpieMasterAddress = await wombatStakingMethods.getMasterMagpie(wombatStakingInstance)
   const magpieMasterInstance = new web3.eth.Contract(magpieMasterAbi, magpieMasterAddress)
   const magpiePoolInfo = await mgpMasterMethods.getPoolData(stakingToken, magpieMasterInstance)
-  const allocPoint = new BigNumber(magpiePoolInfo.allocpoint)
-  const totalAllocPoint = new BigNumber(magpiePoolInfo.totalPoint)
-  const underlyingPrice = await getTokenPrice(underlyingToken)
-  const underlyingValue = await wombatFeePoolMethods.getQuoteValue(
-    underlyingToken,
-    magpiePoolInfo.sizeOfPool,
-    wombatFeePoolInstance,
+
+  const mgpRate = new BigNumber(magpiePoolInfo.emission)
+  const totalSupply = new BigNumber(magpiePoolInfo.sizeOfPool)
+  const underlyingPrice = await getTokenPrice(underlyingAddress, CHAIN_IDS.ARBITRUM_ONE)
+  const mgpPrice = await getTokenPrice('MGP')
+  const poolSizeInUsd = totalSupply.div(1e18).times(underlyingPrice)
+  const mgpUsdPerSecond = mgpRate.div(1e18).times(mgpPrice)
+
+  const wmPoolInfo = await wombatMasterMethods.getPoolInfo(poolId, wombatMasterInstance)
+  const wmUserInfo = await wombatMasterMethods.getUserInfo(
+    poolId,
+    wombatStakingAddress.mainnet,
+    wombatMasterInstance,
   )
+  const userFactor = new BigNumber(wmUserInfo.factor)
+  const totalFactor = new BigNumber(wmPoolInfo.sumOfFactors)
+  const totalWomRate = new BigNumber(wmPoolInfo.rewardRate)
+  const womRate = totalWomRate.times(userFactor).div(totalFactor)
+  const womPrice = await getTokenPrice('WOM')
+  const womUsdPerSecond = womRate.div(1e18).times(womPrice)
 
-  const underlyingSize = new BigNumber(underlyingValue.amount).dividedBy(
-    new BigNumber(10).exponentiatedBy(18),
-  )
-
-  const mgpPerSec = await mgpMasterMethods.getMGPPerSec(magpieMasterInstance)
-  const totalRate = new BigNumber(mgpPerSec).dividedBy(new BigNumber(10).exponentiatedBy(18))
-
-  const poolRewardRate = totalRate.times(allocPoint).div(totalAllocPoint)
-  const rewardTokenInUsd = await getTokenPrice('MGP')
-  const poolSizeInUsd = underlyingSize.times(underlyingPrice)
-
-  const rewardUsdPerSecond = poolRewardRate.times(rewardTokenInUsd)
-
-  let apy
-  const mgpApr = rewardUsdPerSecond.times(86400).times(365.25).div(poolSizeInUsd).times(100)
-  console.log('mgpApr: ', mgpApr.toFixed(2))
-  const womAprData = await getWomAprSubgraph(underlyingAddress)
-
-  const womApr = new BigNumber(womAprData.apr)
-    .multipliedBy(new BigNumber(womAprData.ratio))
-    .multipliedBy(100)
-  console.log('womApr : ', womApr.toFixed(2))
-  apy = mgpApr.plus(womApr)
+  const mgpApr = mgpUsdPerSecond.times(86400).times(365.25).div(poolSizeInUsd).times(100)
+  const womApr = womUsdPerSecond.times(86400).times(365.25).div(poolSizeInUsd).times(100)
+  let apy = mgpApr.plus(womApr)
   if (reduction) {
     apy = apy.multipliedBy(reduction)
   }

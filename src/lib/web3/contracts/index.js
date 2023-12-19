@@ -112,11 +112,8 @@ const magpieMasterContract = require('../contracts/mgp-master/contract.json')
 const wombatStakingMethods = require('../contracts/wombat-staking/methods')
 const wombatStakingContract = require('../contracts/wombat-staking/contract.json')
 
-const wombatFeePoolMethods = require('../contracts/wombat-fee-pool/methods')
-const wombatFeePoolContract = require('../contracts/wombat-fee-pool/contract.json')
-
-const wombatAssetMethods = require('../contracts/wombat-asset/methods')
-const wombatAssetContract = require('../contracts/wombat-asset/contract.json')
+const wombatMasterMethods = require('../contracts/wom-master/methods')
+const wombatMasterContract = require('../contracts/wom-master/contract.json')
 
 module.exports = {
   comptroller: {
@@ -271,12 +268,8 @@ module.exports = {
     contract: wombatStakingContract,
     methods: wombatStakingMethods,
   },
-  wombatFeePool: {
-    contract: wombatFeePoolContract,
-    methods: wombatFeePoolMethods,
-  },
-  wombatAsset: {
-    contract: wombatAssetContract,
-    methods: wombatAssetMethods,
+  wombatMaster: {
+    contract: wombatMasterContract,
+    methods: wombatMasterMethods,
   },
 }
