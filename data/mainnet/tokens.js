@@ -71,7 +71,7 @@ module.exports = {
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['wom-token'],
+      params: ['wombat-exchange'],
     },
   },
   magpie_DAI_main: {
@@ -116,6 +116,98 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.MAGPIE,
         params: [addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.Underlying, profitSharingCut10Percent],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'MGP', 'WOM'],
+  },
+  magpie_USDCe_main: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/usdc.svg'],
+    apyIconUrls: ['./icons/mgp.png', './icons/wom.png'],
+    apyTokenSymbols: ['MGP', 'WOM'],
+    platform: ['Magpie'],
+    tags: ['Advanced'],
+    tokenNames: ['USDC.e'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.magpie_USDCe_main.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.magpie_USDCe_main.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MAGPIE,
+        params: [addresses.ARBITRUM_ONE.V2.magpie_USDCe_main.Underlying, profitSharingCut10Percent],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'MGP', 'WOM'],
+  },
+  magpie_USDC_main: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/usdc.svg'],
+    apyIconUrls: ['./icons/mgp.png', './icons/wom.png'],
+    apyTokenSymbols: ['MGP', 'WOM'],
+    platform: ['Magpie'],
+    tags: ['Advanced'],
+    tokenNames: ['USDC'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.magpie_USDC_main.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.magpie_USDC_main.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MAGPIE,
+        params: [addresses.ARBITRUM_ONE.V2.magpie_USDC_main.Underlying, profitSharingCut10Percent],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'MGP', 'WOM'],
+  },
+  magpie_USDT_main: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/usdt.svg'],
+    apyIconUrls: ['./icons/mgp.png', './icons/wom.png'],
+    apyTokenSymbols: ['MGP', 'WOM'],
+    platform: ['Magpie'],
+    tags: ['Advanced'],
+    tokenNames: ['USDT'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.magpie_USDT_main.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.magpie_USDT_main.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['tether'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MAGPIE,
+        params: [addresses.ARBITRUM_ONE.V2.magpie_USDT_main.Underlying, profitSharingCut10Percent],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'MGP', 'WOM'],
+  },
+  magpie_WOM_mwom: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/wom.png'],
+    apyIconUrls: ['./icons/mgp.png', './icons/wom.png'],
+    apyTokenSymbols: ['MGP', 'WOM'],
+    platform: ['Magpie'],
+    tags: ['Advanced'],
+    tokenNames: ['WOM'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.magpie_WOM_mwom.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.magpie_WOM_mwom.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['wombat-exchange'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MAGPIE,
+        params: [addresses.ARBITRUM_ONE.V2.magpie_WOM_mwom.Underlying, profitSharingCut10Percent],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'MGP', 'WOM'],
