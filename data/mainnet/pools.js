@@ -61,11 +61,15 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_DAI_main.Underlying}" target="_blank" rel="noopener noreferrer">LP-DAI</a> in to a Magpie farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_DAI_main.Underlying}" target="_blank" rel="noopener noreferrer">DAI-LP</a> in to a Magpie farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WOM}" target="_blank" rel="noopener noreferrer">WOM</a>,
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MGP}" target="_blank" rel="noopener noreferrer">MGP</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_DAI_main.Underlying}" target="_blank" rel="noopener noreferrer">LP-DAI</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_DAI_main.Underlying}" target="_blank" rel="noopener noreferrer">DAI-LP</a>.
+      </p>
+      <p> Get 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_DAI_main.Underlying}" target="_blank" rel="noopener noreferrer">DAI-LP</a> on 
+      <a href="https://app.wombat.exchange/pool?pool=MAIN&token=DAI&action=DEPOSIT&chain=arbitrum" target="_blank" rel="noopener noreferrer">Wombat Exchange</a>.
       </p>
     </div>
    `,
@@ -83,11 +87,15 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.Underlying}" target="_blank" rel="noopener noreferrer">LP-WETH</a> in to a Magpie farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.Underlying}" target="_blank" rel="noopener noreferrer">WETH-LP</a> in to a Magpie farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WOM}" target="_blank" rel="noopener noreferrer">WOM</a>,
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MGP}" target="_blank" rel="noopener noreferrer">MGP</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.Underlying}" target="_blank" rel="noopener noreferrer">LP-WETH</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.Underlying}" target="_blank" rel="noopener noreferrer">WETH-LP</a>.
+      </p>
+      <p> Get 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.Underlying}" target="_blank" rel="noopener noreferrer">WETH-LP</a> on 
+      <a href="https://app.wombat.exchange/pool?pool=frxETH&token=WETH&action=DEPOSIT&chain=arbitrum" target="_blank" rel="noopener noreferrer">Wombat Exchange</a>.
       </p>
     </div>
    `,
@@ -105,11 +113,15 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDCe_main.Underlying}" target="_blank" rel="noopener noreferrer">LP-USDC.e</a> in to a Magpie farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDCe_main.Underlying}" target="_blank" rel="noopener noreferrer">USDC.e-LP</a> in to a Magpie farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WOM}" target="_blank" rel="noopener noreferrer">WOM</a>,
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MGP}" target="_blank" rel="noopener noreferrer">MGP</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDCe_main.Underlying}" target="_blank" rel="noopener noreferrer">LP-USDC.e</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDCe_main.Underlying}" target="_blank" rel="noopener noreferrer">USDC.e-LP</a>.
+      </p>
+      <p> Get 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDCe_main.Underlying}" target="_blank" rel="noopener noreferrer">USDC.e-LP</a> on 
+      <a href="https://app.wombat.exchange/pool?pool=MAIN&token=USDC.e&action=DEPOSIT&chain=arbitrum" target="_blank" rel="noopener noreferrer">Wombat Exchange</a>.
       </p>
     </div>
    `,
@@ -127,11 +139,15 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDC_main.Underlying}" target="_blank" rel="noopener noreferrer">LP-USDC</a> in to a Magpie farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDC_main.Underlying}" target="_blank" rel="noopener noreferrer">USDC-LP</a> in to a Magpie farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WOM}" target="_blank" rel="noopener noreferrer">WOM</a>,
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MGP}" target="_blank" rel="noopener noreferrer">MGP</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDC_main.Underlying}" target="_blank" rel="noopener noreferrer">LP-USDC</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDC_main.Underlying}" target="_blank" rel="noopener noreferrer">USDC-LP</a>.
+      </p>
+      <p> Get 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDC_main.Underlying}" target="_blank" rel="noopener noreferrer">USDC-LP</a> on 
+      <a href="https://app.wombat.exchange/pool?pool=MAIN&token=USDC&action=DEPOSIT&chain=arbitrum" target="_blank" rel="noopener noreferrer">Wombat Exchange</a>.
       </p>
     </div>
    `,
@@ -149,11 +165,15 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDT_main.Underlying}" target="_blank" rel="noopener noreferrer">LP-USDT</a> in to a Magpie farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDT_main.Underlying}" target="_blank" rel="noopener noreferrer">USDT-LP</a> in to a Magpie farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WOM}" target="_blank" rel="noopener noreferrer">WOM</a>,
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MGP}" target="_blank" rel="noopener noreferrer">MGP</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDT_main.Underlying}" target="_blank" rel="noopener noreferrer">LP-USDT</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDT_main.Underlying}" target="_blank" rel="noopener noreferrer">USDT-LP</a>.
+      </p>
+      <p> Get 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDT_main.Underlying}" target="_blank" rel="noopener noreferrer">USDT-LP</a> on 
+      <a href="https://app.wombat.exchange/pool?pool=MAIN&token=USDT&action=DEPOSIT&chain=arbitrum" target="_blank" rel="noopener noreferrer">Wombat Exchange</a>.
       </p>
     </div>
    `,
@@ -171,11 +191,15 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_WOM_mwom.Underlying}" target="_blank" rel="noopener noreferrer">LP-WOM</a> in to a Magpie farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_WOM_mwom.Underlying}" target="_blank" rel="noopener noreferrer">WOM-LP</a> in to a Magpie farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WOM}" target="_blank" rel="noopener noreferrer">WOM</a>,
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MGP}" target="_blank" rel="noopener noreferrer">MGP</a>.
        At every harvest, the earned rewards are reinvested into more
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_WOM_mwom.Underlying}" target="_blank" rel="noopener noreferrer">LP-WOM</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_WOM_mwom.Underlying}" target="_blank" rel="noopener noreferrer">WOM-LP</a>.
+      </p>
+      <p> Get 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_WOM_mwom.Underlying}" target="_blank" rel="noopener noreferrer">WOM-LP</a> on 
+      <a href="https://app.wombat.exchange/pool?pool=mWOM&token=WOM&action=DEPOSIT&chain=arbitrum" target="_blank" rel="noopener noreferrer">Wombat Exchange</a>.
       </p>
     </div>
    `,
