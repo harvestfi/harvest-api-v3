@@ -106,6 +106,15 @@ const mTokenContract = require('../contracts/mtoken/contract.json')
 const comptrollerMethods = require('../contracts/comptroller/methods')
 const comptrollerContract = require('../contracts/comptroller/contract.json')
 
+const magpieMasterMethods = require('../contracts/mgp-master/methods')
+const magpieMasterContract = require('../contracts/mgp-master/contract.json')
+
+const wombatStakingMethods = require('../contracts/wombat-staking/methods')
+const wombatStakingContract = require('../contracts/wombat-staking/contract.json')
+
+const wombatMasterMethods = require('../contracts/wom-master/methods')
+const wombatMasterContract = require('../contracts/wom-master/contract.json')
+
 const lodestarCTokenMethods = require('../contracts/lodestar-ctoken/methods')
 const lodestarCTokenContract = require('../contracts/lodestar-ctoken/contract.json')
 
@@ -264,5 +273,17 @@ module.exports = {
   balBoostLpToken: {
     contract: balBoostLpTokenContract,
     methods: balBoostLpTokenMethods,
+  },
+  magpieMaster: {
+    contract: magpieMasterContract,
+    methods: magpieMasterMethods,
+  },
+  wombatStaking: {
+    contract: wombatStakingContract,
+    methods: wombatStakingMethods,
+  },
+  wombatMaster: {
+    contract: wombatMasterContract,
+    methods: wombatMasterMethods,
   },
 }

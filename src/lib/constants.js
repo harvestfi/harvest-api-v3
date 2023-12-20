@@ -1,8 +1,8 @@
 require('dotenv').config()
 const INFURA_URL =
-  process.env.MAINNET_RPC_URL || `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`
+  process.env.MAINNET_RPC_URL || `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
 const INFURA_WS_URL =
-  process.env.MAINNET_WS_URL || `wss://mainnet.infura.io/ws/v3/${process.env.INFURA_KEY}`
+  process.env.MAINNET_WS_URL || `wss://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
 const COINGECKO_PRICE_API_ENDPOINT_CONTRACT = process.env.COINGECKO_API_KEY
   ? 'https://pro-api.coingecko.com/api/v3/simple/token_price'
   : 'https://api.coingecko.com/api/v3/simple/token_price'
@@ -183,15 +183,16 @@ const CHAIN_IDS = {
 }
 
 const MATIC_RPC_URL =
-  process.env.MATIC_RPC_URL ||
-  `https://polygon-mainnet.infura.io/v3/${process.env.MATIC_INFURA_KEY}`
+  process.env.MATIC_RPC_URL || `https://polygon-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
 const BASE_RPC_URL = process.env.BASE_RPC_URL || `https://developer-access-mainnet.base.org`
 const ARBITRUM_RPC_URL =
-  process.env.ARBITRUM_RPC_URL ||
-  `https://arbitrum-mainnet.infura.io/v3/${process.env.ARBITRUM_INFURA_KEY}`
+  process.env.ARBITRUM_RPC_URL || `https://arb-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
 const SWIRL_API_URL = 'https://api.swirl.cash/'
 const MSTABLE_API_URL = 'https://api.mstable.org/pools'
 const APE_API_URL = 'https://ape-swap-api.herokuapp.com'
+
+const WOMBAT_ARB_SUBGRAPH_URL =
+  'https://api.thegraph.com/subgraphs/name/wombat-exchange/wombat-exchange-arbone'
 
 const BALANCER_SUBGRAPH_URLS = {
   ETH: 'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2',
@@ -300,4 +301,5 @@ module.exports = {
   BASE_RPC_URL,
   DEXSCREENER_API_URL,
   CURVE_FINANCE_API_URL,
+  WOMBAT_ARB_SUBGRAPH_URL,
 }

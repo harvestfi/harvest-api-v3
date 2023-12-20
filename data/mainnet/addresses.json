@@ -1813,6 +1813,8 @@
     "UMAMI": "0x1622bF67e6e5747b81866fE0b85178a93C7F86e3",
     "UWU": "0x05d35769a222AfFd6185e20F3f3676Abde56C25F",
     "pGOLD": "0xF602A45812040D90B202355bdc05438918CD3FE3",
+    "MGP": "0xa61F74247455A40b01b0559ff6274441FAfa22A3",
+    "WOM": "0x7B5EB3940021Ec0e8e463D5dBB4B7B09a89DDF96",
     "V2": {
       "Curve_2pool_arbitrum": {
         "doHardwork": false,
@@ -2289,6 +2291,42 @@
         "NewStrategy": "0x540101eadF05e711c1a7AF259586C16126123759",
         "NewPool": "0x0D443205972Cf4222D3FEfB9023f542Eb7B33a9B",
         "PoolId": "2"
+      },
+      "magpie_DAI_main": {
+        "Underlying": "0x0Fa7b744F18D8E8c3D61B64b110F25CC27E73055",
+        "NewVault": "0xbF353C369Aa753b211374D7ecB286da499991C94",
+        "NewStrategy": "0xAfef0501Cd1e1C00e095e0E1c6B178754aCEB150",
+        "NewPool": "0x06Df71bD8C9d3a8d5f2ce1111EE7F59379b72b46"
+      },
+      "magpie_ETH_frxeth": {
+        "Underlying": "0xe62880CC6872c9E9Fb1DDd73f400850fdaBE798D",
+        "NewVault": "0x02Ab76B19944BdEc4d4c612468bB6aF3AC76B15D",
+        "NewStrategy": "0x903dF5C4C10c4e8AD218A0C41D8A51e4cde1e574",
+        "NewPool": "0xcf0d31C0Df29592Ec415634Dc4727f99b961E680"
+      },
+      "magpie_USDCe_main": {
+        "Underlying": "0x2977b0B54a76c2b56D32cef19f8ea83Cc766cFD9",
+        "NewVault": "0x48ad8eE28af1057Cdec42080D3Fd57b3E877d59C",
+        "NewStrategy": "0x143279F98F0d37725eB6C477495F482fef0CB3E4",
+        "NewPool": "0x6132bd5AE55873b2E42E4EeB80623B10022E9dc8"
+      },
+      "magpie_USDC_main": {
+        "Underlying": "0xE5232c2837204ee66952f365f104C09140FB2E43",
+        "NewVault": "0xc49bebC972f5390eE1EC8A69E4151838f59334Fc",
+        "NewStrategy": "0xC68695d12b436617928aBb6FD53e3c6047C93c75",
+        "NewPool": "0xc9e36DC26354C5689fe2b17A3BC5F0fF88Fe5472"
+      },
+      "magpie_USDT_main": {
+        "Underlying": "0x85cEBD962861be410a777755dFa06914de6af003",
+        "NewVault": "0x5Ef78a0966BD47dEd63034678083714b4DE6e013",
+        "NewStrategy": "0x9496DE9d1C2a33F029D9fdD1b8b41126953b3f22",
+        "NewPool": "0xC2F4cB1dEA44278A78d59792dE7EF6fA38A51A46"
+      },
+      "magpie_WOM_mwom": {
+        "Underlying": "0x59d8DCA660b71Ba97a16f781A40809a0fC350769",
+        "NewVault": "0x05518Ea14e694E5eD6afc6085548cdE8c2eB6751",
+        "NewStrategy": "0xB442627E420e210bC7267acAa7c7f6f4Ec843083",
+        "NewPool": "0x1FEC8450AD85E6b7C6377Da08B517cC0f0348E33"
       }
     }
   },
