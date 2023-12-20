@@ -20,6 +20,7 @@ const getApy = async (underlying, mTokenAddr, foldPerc, reduction) => {
   } = token
 
   const well = '0xFF8adeC2221f9f4D8dfbAFa6B9a297d17603493D'
+  const usdc = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913'
   const secondsPerYear = 60 * 60 * 24 * 365.25
   const suppliedMul = foldPerc / (100 - foldPerc)
   const borrowedMul = suppliedMul - 1
@@ -31,35 +32,49 @@ const getApy = async (underlying, mTokenAddr, foldPerc, reduction) => {
   const borrowAPR = borrowRate.div(1e18).times(secondsPerYear).times(100).times(borrowedMul)
 
   const comptrollerInstance = new web3.eth.Contract(comptrollerAbi, comptrollerAddress.mainnet)
-  const marketConfig = await comptrollerMethods.getMarketConfig(
+  const marketConfigWell = await comptrollerMethods.getMarketConfig(
     mTokenAddr,
     well,
     comptrollerInstance,
   )
+  const marketConfigUsdc = await comptrollerMethods.getMarketConfig(
+    mTokenAddr,
+    usdc,
+    comptrollerInstance,
+  )
 
-  const rewardRateSupply = new BigNumber(marketConfig.supplyEmissionsPerSec)
-  const rewardRateBorrow = new BigNumber(marketConfig.borrowEmissionsPerSec)
-  const rewardPerYearSupply = rewardRateSupply.times(secondsPerYear).div(1e18)
-  const rewardPerYearBorrow = rewardRateBorrow.times(secondsPerYear).div(1e18)
+  const wellRateSupply = new BigNumber(marketConfigWell.supplyEmissionsPerSec)
+  const wellRateBorrow = new BigNumber(marketConfigWell.borrowEmissionsPerSec)
+  const wellPerYearSupply = wellRateSupply.times(secondsPerYear).div(1e18)
+  const wellPerYearBorrow = wellRateBorrow.times(secondsPerYear).div(1e18)
+
+  const usdcRateSupply = new BigNumber(marketConfigUsdc.supplyEmissionsPerSec)
+  const usdcRateBorrow = new BigNumber(marketConfigUsdc.borrowEmissionsPerSec)
+  const usdcPerYearSupply = usdcRateSupply.times(secondsPerYear).div(1e6)
+  const usdcPerYearBorrow = usdcRateBorrow.times(secondsPerYear).div(1e6)
+
   let totalSupply = new BigNumber(await mTokenMethods.totalSupply(mTokenInstance))
   const exchangeRate = new BigNumber(await mTokenMethods.getExchangeRate(mTokenInstance))
   totalSupply = totalSupply.times(exchangeRate).div(1e18)
   const totalBorrows = new BigNumber(await mTokenMethods.totalBorrows(mTokenInstance))
 
   const underlyingPrice = await getTokenPrice(underlying, CHAIN_IDS.BASE)
-  const rewardPrice = await getTokenPrice(well, CHAIN_IDS.BASE)
+  const wellPrice = await getTokenPrice(well, CHAIN_IDS.BASE)
+  const usdcPrice = await getTokenPrice(usdc, CHAIN_IDS.BASE)
 
   const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
   const underlyingDecimals = await getDecimals(underlyingInstance)
 
-  const rewardAPRSupply = rewardPerYearSupply
-    .times(rewardPrice)
+  const rewardAPRSupply = wellPerYearSupply
+    .times(wellPrice)
+    .plus(usdcPerYearSupply.times(usdcPrice))
     .div(totalSupply.div(10 ** underlyingDecimals).times(underlyingPrice))
     .times(100)
     .times(reduction)
     .times(suppliedMul)
-  const rewardAPRBorrow = rewardPerYearBorrow
-    .times(rewardPrice)
+  const rewardAPRBorrow = wellPerYearBorrow
+    .times(wellPrice)
+    .plus(usdcPerYearBorrow.times(usdcPrice))
     .div(totalBorrows.div(10 ** underlyingDecimals).times(underlyingPrice))
     .times(100)
     .times(reduction)

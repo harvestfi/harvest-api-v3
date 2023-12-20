@@ -211,6 +211,61 @@ module.exports = {
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'MGP', 'WOM'],
+  moonwell_wstETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/well.svg', './icons/usdc.svg'],
+    apyTokenSymbols: ['WELL', 'USDC'],
+    logoUrl: ['./icons/wsteth.svg'],
+    tokenNames: ['wstETH'],
+    platform: ['Moonwell'],
+    tags: ['Beginners', 'LSD'],
+    tokenAddress: addresses.BASE.V2.moonwell_wstETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.moonwell_wstETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['wrapped-steth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
+        params: [
+          addresses.BASE.V2.moonwell_wstETH.Underlying,
+          addresses.BASE.V2.moonwell_wstETH.mToken,
+          73,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'WELL', 'USDC'],
+  },
+  moonwell_rETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/well.svg', './icons/usdc.svg'],
+    apyTokenSymbols: ['WELL', 'USDC'],
+    logoUrl: ['./icons/reth.svg'],
+    tokenNames: ['rETH'],
+    platform: ['Moonwell'],
+    tags: ['Beginners', 'LSD'],
+    tokenAddress: addresses.BASE.V2.moonwell_rETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.moonwell_rETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['rocket-pool-eth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
+        params: [
+          addresses.BASE.V2.moonwell_rETH.Underlying,
+          addresses.BASE.V2.moonwell_rETH.mToken,
+          73,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'WELL', 'USDC'],
   },
   lodestar_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
@@ -921,8 +976,8 @@ module.exports = {
   },
   moonwell_USDC: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/well.svg'],
-    apyTokenSymbols: ['WELL'],
+    apyIconUrls: ['./icons/well.svg', './icons/usdc.svg'],
+    apyTokenSymbols: ['WELL', 'USDC'],
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC'],
     platform: ['Moonwell'],
@@ -945,7 +1000,7 @@ module.exports = {
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'WELL'],
+    cmcRewardTokenSymbols: ['iFARM', 'WELL', 'USDC'],
   },
   baseswap_axlUSDC_ETH: {
     chain: CHAIN_IDS.BASE,
@@ -1162,8 +1217,8 @@ module.exports = {
   },
   moonwell_CBETH: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/well.svg'],
-    apyTokenSymbols: ['WELL'],
+    apyIconUrls: ['./icons/well.svg', './icons/usdc.svg'],
+    apyTokenSymbols: ['WELL', 'USDC'],
     logoUrl: ['./icons/cbeth.svg'],
     tokenNames: ['CBETH'],
     platform: ['Moonwell'],
@@ -1181,17 +1236,17 @@ module.exports = {
         params: [
           addresses.BASE.V2.moonwell_CBETH.Underlying,
           addresses.BASE.V2.moonwell_CBETH.mToken,
-          71,
+          74,
           profitSharingCut10Percent,
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'WELL'],
+    cmcRewardTokenSymbols: ['iFARM', 'WELL', 'USDC'],
   },
   moonwell_DAI: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/well.svg'],
-    apyTokenSymbols: ['WELL'],
+    apyIconUrls: ['./icons/well.svg', './icons/usdc.svg'],
+    apyTokenSymbols: ['WELL', 'USDC'],
     logoUrl: ['./icons/dai.svg'],
     tokenNames: ['DAI'],
     platform: ['Moonwell'],
@@ -1209,12 +1264,12 @@ module.exports = {
         params: [
           addresses.BASE.V2.moonwell_DAI.Underlying,
           addresses.BASE.V2.moonwell_DAI.mToken,
-          78,
+          80,
           profitSharingCut10Percent,
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'WELL'],
+    cmcRewardTokenSymbols: ['iFARM', 'WELL', 'USDC'],
   },
   moonwell_USDbC: {
     inactive: true,
@@ -1247,8 +1302,8 @@ module.exports = {
   },
   moonwell_WETH: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/well.svg'],
-    apyTokenSymbols: ['WELL'],
+    apyIconUrls: ['./icons/well.svg', './icons/usdc.svg'],
+    apyTokenSymbols: ['WELL', 'USDC'],
     logoUrl: ['./icons/eth.svg'],
     tokenNames: ['ETH'],
     platform: ['Moonwell'],
@@ -1266,12 +1321,12 @@ module.exports = {
         params: [
           addresses.BASE.V2.moonwell_WETH.Underlying,
           addresses.BASE.V2.moonwell_WETH.mToken,
-          73,
+          79,
           profitSharingCut10Percent,
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'WELL'],
+    cmcRewardTokenSymbols: ['iFARM', 'WELL', 'USDC'],
   },
   BASED: {
     chain: CHAIN_IDS.BASE,
@@ -1533,6 +1588,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   curve_CBETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/curve.svg', './icons/crvusd.svg'],
     apyTokenSymbols: ['CRV', 'crvUSD'],
@@ -2710,6 +2766,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'USDbC'],
   },
   balancer_cbETH_WETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/balancer.svg', './icons/usdbc.svg'],
     apyTokenSymbols: ['BAL', 'USDbC'],
@@ -3520,6 +3577,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelot_GRAIL_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/grail.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
@@ -3997,6 +4055,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.VERSE] },
   },
   verse_VERSE_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/verse.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/verse.svg'],
@@ -4247,6 +4306,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['dopex-rebate-token'] },
   },
   sushi_DPX_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/dpx.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/sushi.svg', './icons/dpx.svg'],
@@ -5612,6 +5672,7 @@ module.exports = {
     },
   },
   apeStake: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/apestake.svg'],
     apyIconUrls: ['./icons/apestake.svg'],
@@ -6608,6 +6669,7 @@ module.exports = {
     },
   },
   quick_YEL_MATIC: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/yel.svg', './icons/matic.svg'],
     apyIconUrls: ['./icons/yel.svg'],
