@@ -184,7 +184,8 @@ const CHAIN_IDS = {
 
 const MATIC_RPC_URL =
   process.env.MATIC_RPC_URL || `https://polygon-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
-const BASE_RPC_URL = process.env.BASE_RPC_URL || `https://developer-access-mainnet.base.org`
+const BASE_RPC_URL =
+  process.env.BASE_RPC_URL || `https://base-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
 const ARBITRUM_RPC_URL =
   process.env.ARBITRUM_RPC_URL || `https://arb-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
 const SWIRL_API_URL = 'https://api.swirl.cash/'
