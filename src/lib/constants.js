@@ -193,6 +193,8 @@ const APE_API_URL = 'https://ape-swap-api.herokuapp.com'
 
 const WOMBAT_ARB_SUBGRAPH_URL =
   'https://api.thegraph.com/subgraphs/name/wombat-exchange/wombat-exchange-arbone'
+const WOMBAT_ARB_ONE_BLOCK_URL =
+  'https://api.thegraph.com/subgraphs/name/wombat-exchange/arbitrum-one-block'
 
 const BALANCER_SUBGRAPH_URLS = {
   ETH: 'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2',
@@ -302,4 +304,5 @@ module.exports = {
   DEXSCREENER_API_URL,
   CURVE_FINANCE_API_URL,
   WOMBAT_ARB_SUBGRAPH_URL,
+  WOMBAT_ARB_ONE_BLOCK_URL,
 }
