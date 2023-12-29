@@ -1352,6 +1352,7 @@ module.exports = {
     },
   },
   based_BASED_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bshare.svg'],
     apyTokenSymbols: ['bSHARE'],
@@ -1380,6 +1381,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'bSHARE'],
   },
   based_bSHARE_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bshare.svg'],
     apyTokenSymbols: ['bSHARE'],
