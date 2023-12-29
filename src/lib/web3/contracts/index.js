@@ -115,6 +115,12 @@ const wombatStakingContract = require('../contracts/wombat-staking/contract.json
 const wombatMasterMethods = require('../contracts/wom-master/methods')
 const wombatMasterContract = require('../contracts/wom-master/contract.json')
 
+const wombatAssetMethods = require('../contracts/wombat-asset/methods')
+const wombatAssetContract = require('../contracts/wombat-asset/contract.json')
+
+const wombatFeePoolMethods = require('../contracts/wombat-fee-pool/methods')
+const wombatFeePoolContract = require('../contracts/wombat-fee-pool/contract.json')
+
 const lodestarCTokenMethods = require('../contracts/lodestar-ctoken/methods')
 const lodestarCTokenContract = require('../contracts/lodestar-ctoken/contract.json')
 
@@ -285,5 +291,13 @@ module.exports = {
   wombatMaster: {
     contract: wombatMasterContract,
     methods: wombatMasterMethods,
+  },
+  wombatAsset: {
+    contract: wombatAssetContract,
+    methods: wombatAssetMethods,
+  },
+  wombatFeePool: {
+    contract: wombatFeePoolContract,
+    methods: wombatFeePoolMethods,
   },
 }
