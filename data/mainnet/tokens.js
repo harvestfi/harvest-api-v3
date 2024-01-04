@@ -464,6 +464,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'ARB'],
   },
   camelotV3_ARB_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/eth.svg'],
     tokenNames: ['ARB', 'ETH'],
@@ -494,6 +495,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_DAI_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/dai.svg', './icons/usdc.svg'],
     tokenNames: ['DAI', 'USDC'],
@@ -524,6 +526,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_GMX_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/gmx.svg', './icons/eth.svg'],
     tokenNames: ['GMX', 'ETH'],
@@ -554,6 +557,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_GRAIL_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/grail.svg', './icons/eth.svg'],
     tokenNames: ['GRAIL', 'ETH'],
@@ -584,6 +588,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_LINK_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/link.svg', './icons/eth.svg'],
     tokenNames: ['LINK', 'ETH'],
@@ -614,6 +619,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_LUSD_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/lusd.svg', './icons/usdc.svg'],
     tokenNames: ['LUSD', 'USDC'],
@@ -644,6 +650,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_USDCe_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
     tokenNames: ['USDC.e', 'USDT'],
@@ -674,6 +681,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_WBTC_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg'],
     tokenNames: ['WBTC', 'ETH'],
@@ -704,6 +712,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_ARB_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/arb.svg'],
@@ -764,6 +773,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   camelotV3_ETH_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/arb.svg'],
@@ -794,6 +804,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   quickGamma_wstETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg'],
@@ -822,6 +833,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK'],
   },
   quickGamma_WBTC_USDC_narrow: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/wbtc.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/quick.svg'],
@@ -850,6 +862,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK'],
   },
   quickGamma_WBTC_ETH_narrow: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg'],
@@ -878,6 +891,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK'],
   },
   quickGamma_USDC_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -906,6 +920,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_USDC_DAI: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/dai.svg'],
     apyIconUrls: ['./icons/quick.svg'],
@@ -5147,6 +5162,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   quickGamma_MATIC_ETH_narrow: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -5175,6 +5191,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_MATIC_ETH_wide: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -5203,6 +5220,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_MATIC_USDC_narrow: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -5231,6 +5249,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_MATIC_USDC_wide: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -5259,6 +5278,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_USDC_ETH_narrow: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -5287,6 +5307,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_USDC_ETH_wide: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
