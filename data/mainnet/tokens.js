@@ -743,6 +743,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   camelotV3_ETH_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/usdt.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/arb.svg'],
