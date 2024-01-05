@@ -2557,14 +2557,16 @@
         "NewVault": "0xAe6F5f28463FB7A872f06aC8ABFAFFD56bb13F89",
         "NewStrategy": "0xb30EAD2fACcd5dff5921f16fC470F436aD9cEabe",
         "NewPool": "0x19C7881d02cb1A09DAAD0407963B42ef42276027",
-        "RewardPool": "0x227F33775f1320959bAA17280310Fab9ACc4Aa6C"
+        "RewardPool": "0x227F33775f1320959bAA17280310Fab9ACc4Aa6C",
+        "doHardwork": false
       },
       "based_bSHARE_ETH": {
         "Underlying": "0xbE23ce31C665225E27521D3d7DB9Bb7E5A76aeb8",
         "NewVault": "0x37e6FAcfFF094E108A424926ed54d33EAEF8a20C",
         "NewStrategy": "0x1ABB720436eE6A0f066B00019FDBC0C5d66a0728",
         "NewPool": "0x4C967a2A63106Cd68dF56DeBEdf6f2680A475e79",
-        "RewardPool": "0x227F33775f1320959bAA17280310Fab9ACc4Aa6C"
+        "RewardPool": "0x227F33775f1320959bAA17280310Fab9ACc4Aa6C",
+        "doHardwork": false
       },
       "aerodrome_DAIp_USDp": {
         "Underlying": "0x1b05e4e814b3431a48b8164c41eaC834d9cE2Da6",
