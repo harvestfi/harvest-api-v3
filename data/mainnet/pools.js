@@ -6,6 +6,27 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'lodestar_LODE',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault stakes 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.Underlying}" target="_blank" rel="noopener noreferrer">LODE</a> with Lodestar, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.Underlying}" target="_blank" rel="noopener noreferrer">LODE</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'lodestar_ARB',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.lodestar_ARB.NewPool,

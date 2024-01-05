@@ -52,6 +52,29 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  lodestar_LODE: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/eth.svg'],
+    apyTokenSymbols: ['WETH'],
+    logoUrl: ['./icons/lode.svg'],
+    tokenNames: ['LODE'],
+    platform: ['Lodestar'],
+    tags: ['Beginners'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_LODE.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['lodestar'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.LODESTAR_STAKE,
+        params: [profitSharingCut10Percent],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'WETH'],
+  },
   lodestar_ARB: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg', './icons/arb.svg'],
