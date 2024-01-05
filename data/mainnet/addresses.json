@@ -2327,6 +2327,52 @@
         "NewVault": "0x05518Ea14e694E5eD6afc6085548cdE8c2eB6751",
         "NewStrategy": "0xB442627E420e210bC7267acAa7c7f6f4Ec843083",
         "NewPool": "0x1FEC8450AD85E6b7C6377Da08B517cC0f0348E33"
+      },
+      "lodestar_ARB": {
+        "Underlying": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        "NewVault": "0x32DB5Cbac1C278696875eB9F27eD4cD7423dd126",
+        "NewStrategy": "0xbe02051ff97047e63783867933132C29FcA88c49",
+        "NewPool": "0x45E7Be22594924166c90c1E29ffF4b3FD8796598",
+        "cToken": "0x8991d64fe388fA79A4f7Aa7826E8dA09F0c3C96a",
+        "doHardwork": "noSim"
+      },
+      "lodestar_DPX": {
+        "Underlying": "0x6C2C06790b3E3E3c38e12Ee22F8183b37a13EE55",
+        "NewVault": "0x95eC830d2345202776895825d82DBb1bFD7D857E",
+        "NewStrategy": "0x859E64e5bb36b3e9cF201d72d5126a3225858d92",
+        "NewPool": "0x26715b0E3b81577DF23a3097C43faFB01a9cEc5F",
+        "cToken": "0x5d27cFf80dF09f28534bb37d386D43aA60f88e25",
+        "doHardwork": "noSim"
+      },
+      "lodestar_FRAX": {
+        "Underlying": "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F",
+        "NewVault": "0xaEF3C262569e56FB494755110ca6F481f8A2e353",
+        "NewStrategy": "0xe01bcD9059DC711eD52F0BB59773FA10ECF039eA",
+        "NewPool": "0x13bD21AD0a6b730Eb7B50Ed5ACDAb9f0EAcc924d",
+        "cToken": "0xD12d43Cdf498e377D3bfa2c6217f05B466E14228",
+        "doHardwork": "noSim"
+      },
+      "lodestar_GMX": {
+        "Underlying": "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
+        "NewVault": "0x76FE2516D16d93fd20b03873aD0413a7c0AC9773",
+        "NewStrategy": "0x64B3BA3b83B7783460d22AA5083e66d6FA11CF43",
+        "NewPool": "0xC220F78AceC3Ff2D7fdE937e2bD578D386734fb1",
+        "cToken": "0x79B6c5e1A7C0aD507E1dB81eC7cF269062BAb4Eb",
+        "doHardwork": "noSim"
+      },
+      "lodestar_wstETH": {
+        "Underlying": "0x5979D7b546E38E414F7E9822514be443A4800529",
+        "NewVault": "0xEF39eF2069A9A65cD6476b6C9a6FB7dD2910f370",
+        "NewStrategy": "0x30D9D40760D047A6f3320048b5F672EAC90110B8",
+        "NewPool": "0x923DDa73E85c3532f2B2E428a7b3391a91423714",
+        "cToken": "0xfECe754D92bd956F681A941Cef4632AB65710495",
+        "doHardwork": "noSim"
+      },
+      "lodestar_LODE": {
+        "Underlying": "0xF19547f9ED24aA66b03c3a552D181Ae334FBb8DB",
+        "NewVault": "0x710A1AB6Cb8412DE9613ad6c7195453Ce8b5ca71",
+        "NewStrategy": "0x3Fd1835a620a74B79B9621A43022a247bBf1E6cd",
+        "NewPool": "0xDE750fBAcc4f63C68e09aE0C0F74fFA14672d8b2"
       }
     }
   },

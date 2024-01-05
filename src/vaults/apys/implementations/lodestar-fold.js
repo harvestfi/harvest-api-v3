@@ -72,7 +72,7 @@ const getApy = async (underlying, cTokenAddr, foldPerc, reduction) => {
 
   const lode = '0xF19547f9ED24aA66b03c3a552D181Ae334FBb8DB'
   const blocksPerYear = 2628000
-  const suppliedMul = foldPerc / (100 - foldPerc)
+  const suppliedMul = foldPerc / (100 - foldPerc) + 1
   const borrowedMul = suppliedMul - 1
 
   const cTokenInstance = new web3.eth.Contract(cTokenAbi, cTokenAddr)

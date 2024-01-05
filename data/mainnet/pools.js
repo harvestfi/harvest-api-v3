@@ -5,6 +5,116 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'lodestar_ARB',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lodestar_ARB.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_ARB.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_ARB.Underlying}" target="_blank" rel="noopener noreferrer">ARB</a> to Lodestar, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_ARB.Underlying}" target="_blank" rel="noopener noreferrer">ARB</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'lodestar_DPX',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lodestar_DPX.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_DPX.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_DPX.Underlying}" target="_blank" rel="noopener noreferrer">DPX</a> to Lodestar, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_DPX.Underlying}" target="_blank" rel="noopener noreferrer">DPX</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'lodestar_FRAX',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lodestar_FRAX.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_FRAX.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_FRAX.Underlying}" target="_blank" rel="noopener noreferrer">FRAX</a> to Lodestar, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_FRAX.Underlying}" target="_blank" rel="noopener noreferrer">FRAX</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'lodestar_GMX',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lodestar_GMX.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_GMX.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_GMX.Underlying}" target="_blank" rel="noopener noreferrer">GMX</a> to Lodestar, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_GMX.Underlying}" target="_blank" rel="noopener noreferrer">GMX</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'lodestar_wstETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lodestar_wstETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_wstETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_wstETH.Underlying}" target="_blank" rel="noopener noreferrer">wstETH</a> to Lodestar, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_wstETH.Underlying}" target="_blank" rel="noopener noreferrer">wstETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'moonwell_wstETH',
     type: POOL_TYPES.INCENTIVE,
