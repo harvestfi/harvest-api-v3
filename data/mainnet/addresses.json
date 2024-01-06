@@ -2373,6 +2373,14 @@
         "NewVault": "0x710A1AB6Cb8412DE9613ad6c7195453Ce8b5ca71",
         "NewStrategy": "0x3Fd1835a620a74B79B9621A43022a247bBf1E6cd",
         "NewPool": "0xDE750fBAcc4f63C68e09aE0C0F74fFA14672d8b2"
+      },
+      "lodestarHodl_USDC": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0x42f7Cd0A7dc5d8e84a06A5Bf6e2df649B230A4BC",
+        "NewStrategy": "0xc042BB4a99E0E41f9bB59DC40ef7D2C0364E8e87",
+        "NewPool": "0x5fC80281e4d397db0D9D509832273C14Bf0e9B4D",
+        "cToken": "0x4C9aAed3b8c443b4b634D1A189a5e25C604768dE",
+        "doHardwork": "noSim"
       }
     }
   },

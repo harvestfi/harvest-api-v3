@@ -52,6 +52,51 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  fLODE: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: [''],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.F_TOKEN,
+      params: [addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault, '18', CHAIN_IDS.ARBITRUM_ONE],
+    },
+  },
+  lodestarHodl_USDC: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
+    apyTokenSymbols: ['ARB', 'LODE'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Lodestar'],
+    tags: ['Beginners', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
+        params: [addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.cToken, 80, profitSharingCut10Percent],
+      },
+      {
+        type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_HODLING,
+        params: [
+          addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.Underlying,
+          addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.cToken,
+          80,
+          'lodestar_LODE',
+          profitSharingCut10Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
+  },
   lodestar_LODE: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/eth.svg'],
