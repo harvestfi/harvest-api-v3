@@ -1498,49 +1498,56 @@
         "NewVault": "0x506337cc631726A21788B9fDFb6BE6292bA7A835",
         "NewStrategy": "0x20D5A2a81a2b23EE3D4ac94EB356f962f037e65A",
         "NewPool": "0x55740C3a15394EBb635bdAfcbD7Fa8E285122606",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d"
+        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
+        "doHardwork": false
       },
       "quickGamma_MATIC_ETH_wide": {
         "Underlying": "0x81Cec323BF8C4164c66ec066F53cc053A535f03D",
         "NewVault": "0x2eD9699441CE48F2AA9C03Af66510D6d72750591",
         "NewStrategy": "0xC17581fd31140313e634d47c4b001E9926a06087",
         "NewPool": "0xdC331E735f820a306ae74ED10F6FFDdC210D0497",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d"
+        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
+        "doHardwork": false
       },
       "quickGamma_MATIC_USDC_narrow": {
         "Underlying": "0x04d521E2c414E6d898c6F2599FdD863Edf49e247",
         "NewVault": "0xa5422F737F24b10A0928D5E7f6cf404D077e1CD1",
         "NewStrategy": "0x713613550CA9dbE91fAc20fB0e8fa33F1fb5822e",
         "NewPool": "0xe0F5000e14367930A4781d2cEDa450888C7de163",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d"
+        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
+        "doHardwork": false
       },
       "quickGamma_MATIC_USDC_wide": {
         "Underlying": "0x4A83253e88e77E8d518638974530d0cBbbF3b675",
         "NewVault": "0xd76BC58b95acAC968Fe0Cf9fa210Bf4bE95cd249",
         "NewStrategy": "0x20EB0769422c932ad34800A0211Fa136274c4B45",
         "NewPool": "0x291e6768aA66Aa2c91D6aeaA917b1E79999D92f9",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d"
+        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
+        "doHardwork": false
       },
       "quickGamma_USDC_ETH_narrow": {
         "Underlying": "0x3Cc20A6795c4b57d9817399F68E83e71C8626580",
         "NewVault": "0x548E84517b2891E0316f604f4f5326a306F1830e",
         "NewStrategy": "0xD5F0e427aeD0eB51077BA4b078e6431058526Dcb",
         "NewPool": "0xD94c25aD1C9F6E39a20E7Ec598B4a88062bCa268",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d"
+        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
+        "doHardwork": false
       },
       "quickGamma_USDC_ETH_wide": {
         "Underlying": "0x6077177d4c41E114780D9901C9b5c784841C523f",
         "NewVault": "0x0eFe7d1E2C286833e592e887aA48a6A65F21Ee7B",
         "NewStrategy": "0x84f6AA524c74D565d5A01E0e6ad388E4246E0378",
         "NewPool": "0xFcC9682E08E3B001e9516683cbAAf573aFFc6415",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d"
+        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
+        "doHardwork": false
       },
       "quickGamma_USDC_DAI": {
         "Underlying": "0x9E31214Db6931727B7d63a0D2b6236DB455c0965",
         "NewVault": "0xFDAf1446978F4c221d29967143d5d0Cdf342bb25",
         "NewStrategy": "0x4976E487Bc36f5dCc1AB2048EA299dE16F6c61c5",
         "NewPool": "0x7Cd65Fe0d765Ade3d36bf47FCEDf815fBE675200",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d"
+        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
+        "doHardwork": false
       },
       "quickGamma_USDC_USDT": {
         "Underlying": "0x795f8c9B0A0Da9Cd8dea65Fc10f9B57AbC532E58",
@@ -1554,21 +1561,24 @@
         "NewVault": "0x43483723c6b1A8d24a9DbaEEbce02b48adE78951",
         "NewStrategy": "0x0A4Cd298782Aa6115d61e2D89905A49942Ec3A11",
         "NewPool": "0x6f73274dF7BDfAFB57A47735Da9A51728daBDC38",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d"
+        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
+        "doHardwork": false
       },
       "quickGamma_WBTC_USDC_narrow": {
         "Underlying": "0x3f35705479d9d77c619b2aAC9dd7a64e57151506",
         "NewVault": "0xdB16a05C8B58D7385bC6fe4d9D5e6E1f261cdF46",
         "NewStrategy": "0x6639C4e591BCeC23BDc56e6e265ddc3ce1B58814",
         "NewPool": "0xb3117DD0aE35Ba2Bf4E1f1b21f3016E8b9fB0c11",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d"
+        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
+        "doHardwork": false
       },
       "quickGamma_wstETH_ETH": {
         "Underlying": "0x6A6d4d17c2E38D076264081676FfCDDDF32C9715",
         "NewVault": "0x466506EB97bDdF4B4b2B50979E251bF92FB26799",
         "NewStrategy": "0x4800A07DcbA4d5D85adcf6B95Ea8464A8F380368",
         "NewPool": "0x1B60B0bE815C317B166b003EAa755be23f4788a9",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d"
+        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
+        "doHardwork": false
       },
       "curve_3CRV": {
         "Underlying": "0xE7a24EF0C5e95Ffb0f6684b813A78F2a3AD7D171",
@@ -2024,7 +2034,8 @@
         "NewPool": "0x5f0AB004Ab2a3c35461e0E5Ce89839DA22B2E598",
         "NFTPool": "0x3b6486154b9dAe942C393b1cB3d11E3395B02Df8",
         "NitroPool": "0x84EDB15BcBf6818879C6FDf26A69700D43100A74",
-        "AlgebraPool": "0xB1026b8e7276e7AC75410F1fcbbe21796e8f7526"
+        "AlgebraPool": "0xB1026b8e7276e7AC75410F1fcbbe21796e8f7526",
+        "doHardwork": false
       },
       "camelotV3_ETH_USDT": {
         "Underlying": "0x9330e26b5Fc0b7c417C6bD901528d5c65BE5cdf2",
@@ -2033,7 +2044,8 @@
         "NewPool": "0x7e4d7C473d090ff0C70ee41A50116e0b7463EB46",
         "NFTPool": "0xF42884071fFe17Bdd7d1710C31191023419e0CA7",
         "NitroPool": "0xe364CF2dd75192D2b04059D6c0aE559699b1E31A",
-        "AlgebraPool": "0x7CcCBA38E2D959fe135e79AEBB57CCb27B128358"
+        "AlgebraPool": "0x7CcCBA38E2D959fe135e79AEBB57CCb27B128358",
+        "doHardwork": false
       },
       "camelotV3_ARB_USDC": {
         "Underlying": "0x29237292F15BC3615BFCc0D958C265Aa64527FB2",
@@ -2042,7 +2054,8 @@
         "NewPool": "0x39bC1a41e9b77De48bb1D6cBDb5E36635c4c28b9",
         "NFTPool": "0x14AD01d5f496e9C40358629f6a95a7C3B5c4b767",
         "NitroPool": "0x6aCdfD8Bd4f5AC6F5E0cA54024663C251e9Cf0f4",
-        "AlgebraPool": "0xfaE2AE0a9f87FD35b5b0E24B47BAC796A7EEfEa1"
+        "AlgebraPool": "0xfaE2AE0a9f87FD35b5b0E24B47BAC796A7EEfEa1",
+        "doHardwork": false
       },
       "xGRAIL": {
         "Underlying": "0x3CAaE25Ee616f2C8E13C74dA0813402eae3F496b",
@@ -2220,7 +2233,8 @@
         "NewPool": "0x33B5ea1d8f505d2D32FBE525f185CdE94c621611",
         "NFTPool": "0xbFf9F4591b423ce63e9Ef803533C70ae8a03bEed",
         "NitroPool": "0xe105b532cb42bf065D152643B29feDA85625Dce9",
-        "AlgebraPool": "0xe51635ae8136aBAc44906A8f230C2D235E9c195F"
+        "AlgebraPool": "0xe51635ae8136aBAc44906A8f230C2D235E9c195F",
+        "doHardwork": false
       },
       "camelotV3_DAI_USDC": {
         "Underlying": "0x2766Ba1B6772d23E1F58260a1dF57bFFB4661953",
@@ -2229,7 +2243,8 @@
         "NewPool": "0xB3fD6bD2BC195a535F1836D868c7bC557FC1Fe8A",
         "NFTPool": "0x31089a2df37AC97A405377CBA2Bb4Fc993984B1d",
         "NitroPool": "0x9320C0e76D56F9aA0dB60016A2430d38a0D42A26",
-        "AlgebraPool": "0x45FaE8D0D2acE73544baab452f9020925AfCCC75"
+        "AlgebraPool": "0x45FaE8D0D2acE73544baab452f9020925AfCCC75",
+        "doHardwork": false
       },
       "camelotV3_GMX_ETH": {
         "Underlying": "0x9bdb8335619bA4E20Bea1321f8E32f45fD6e6e22",
@@ -2238,7 +2253,8 @@
         "NewPool": "0x4DA925543a7F311A871aA196DEC09aA18fa4C652",
         "NFTPool": "0x4242fbeEcF6b1Db01a50B8878f85c31E5e53a5c6",
         "NitroPool": "0x2Ed02f03a7EC25Acd2BcE9C32d359A8fE02e798B",
-        "AlgebraPool": "0xC99be44383BC8d82357F5A1D9ae9976EE9d75bee"
+        "AlgebraPool": "0xC99be44383BC8d82357F5A1D9ae9976EE9d75bee",
+        "doHardwork": false
       },
       "camelotV3_GRAIL_ETH": {
         "Underlying": "0x97D81162B96D57476CcF170595a39c1DC76676c9",
@@ -2247,7 +2263,8 @@
         "NewPool": "0xD177De9f61611503377B4A16f60666a98152bCB2",
         "NFTPool": "0x06Bd22D16B6fB79380fF3DD49F0801a62eDD943b",
         "NitroPool": "0xd599c5B68D89213d2eEC9dDdfc92fFc9Ca1795ca",
-        "AlgebraPool": "0x60451B6aC55E3C5F0f3aeE31519670EcC62DC28f"
+        "AlgebraPool": "0x60451B6aC55E3C5F0f3aeE31519670EcC62DC28f",
+        "doHardwork": false
       },
       "camelotV3_LINK_ETH": {
         "Underlying": "0xF3557102C0cCBE07EE237B6eE70984f313886432",
@@ -2256,7 +2273,8 @@
         "NewPool": "0x959237003765A20b17796Cd40986263EAae806C7",
         "NFTPool": "0xf49926092302B0c18385a7069f98456dF0e5C8Fe",
         "NitroPool": "0xE651C9562F471bE685c1faE9EFaa0b5932974172",
-        "AlgebraPool": "0xe8795cF9c2309eCfe05Df028eB0F21D5D6e3a951"
+        "AlgebraPool": "0xe8795cF9c2309eCfe05Df028eB0F21D5D6e3a951",
+        "doHardwork": false
       },
       "camelotV3_LUSD_USDC": {
         "Underlying": "0x439e2D51BA26Fa062a1E4F0eDAA68F3B830Ca6da",
@@ -2265,7 +2283,8 @@
         "NewPool": "0x05D03EA122af00cA3823B2DF16b778cEb9A09fb4",
         "NFTPool": "0xaF3bFe781ffEe9f77867C556ab6A604E26FA678A",
         "NitroPool": "0xDcF6fD8BB2Fbd5D9241a1eF961a36f55DB1BBE47",
-        "AlgebraPool": "0x3d7412e255c04239285cAd57f82220D07D6874B0"
+        "AlgebraPool": "0x3d7412e255c04239285cAd57f82220D07D6874B0",
+        "doHardwork": false
       },
       "camelotV3_USDCe_USDT": {
         "Underlying": "0x61A7b3dae70D943C6f2eA9ba4FfD2fEcc6AF15E4",
@@ -2274,7 +2293,8 @@
         "NewPool": "0x3f522f0312B3A9F64b0f27b4D3767199978eE77d",
         "NFTPool": "0xD07F046a75Eac939488e40f52196dF43eDe28e00",
         "NitroPool": "0x3c81626E537E41f8b3C86F3da07F12A44DEe4a0e",
-        "AlgebraPool": "0x3AB5DD69950a948c55D1FBFb7500BF92B4Bd4C48"
+        "AlgebraPool": "0x3AB5DD69950a948c55D1FBFb7500BF92B4Bd4C48",
+        "doHardwork": false
       },
       "camelotV3_WBTC_ETH": {
         "Underlying": "0x56c87c3892d3917895bAe1A4cAcf6ea23a4DB84d",
@@ -2283,7 +2303,8 @@
         "NewPool": "0xB68Dd4331F2060e09858a727E089Da4fF5EeeC5B",
         "NFTPool": "0xA562803Aa6FC35C3f3AB2d42b4281fE462dfb620",
         "NitroPool": "0x773B2db85b0cb5f647F8708d783d04f659Be28e9",
-        "AlgebraPool": "0xd845f7D4f4DeB9Ff5bCf09D140Ef13718F6f6C71"
+        "AlgebraPool": "0xd845f7D4f4DeB9Ff5bCf09D140Ef13718F6f6C71",
+        "doHardwork": false
       },
       "jones_wjAURA": {
         "Underlying": "0xcB9295ac65De60373A25C18d2044D517ed5da8A9",
