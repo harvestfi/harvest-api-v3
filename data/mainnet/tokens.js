@@ -69,7 +69,7 @@ module.exports = {
     apyTokenSymbols: ['ARB', 'LODE'],
     apyDescriptionOverride: [
       'Auto compounding <u>ARB</u>',
-      'Auto harvested <u>LODE</u> deposited into <u>fLODE</u>',
+      'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
     ],
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC'],
