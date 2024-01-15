@@ -1,10 +1,4 @@
-const {
-  CHAIN_IDS,
-  GET_PRICE_TYPES,
-  ESTIMATED_APY_TYPES,
-  SUSHI_POOLS_IDS,
-  ARBITRUM_SUSHI_POOLS_IDS,
-} = require('../constants')
+const { CHAIN_IDS, GET_PRICE_TYPES, ESTIMATED_APY_TYPES, SUSHI_POOLS_IDS } = require('../constants')
 
 const addresses = require('./addresses.json')
 
@@ -12,7 +6,6 @@ const profitSharingCut8Percent = '0.92'
 const profitSharingCut10Percent = '0.90'
 const profitSharingCut15Percent = '0.85'
 const profitSharingCut30Percent = '0.7'
-const profitSharingCut25Percent = '0.75'
 
 module.exports = {
   FARM: {
@@ -86,7 +79,11 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
-        params: [addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.cToken, 80, profitSharingCut10Percent],
+        params: [
+          addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.cToken,
+          addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.NewStrategy,
+          profitSharingCut10Percent,
+        ],
       },
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_HODLING,
