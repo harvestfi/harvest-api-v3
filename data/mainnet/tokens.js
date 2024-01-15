@@ -93,7 +93,7 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.cToken,
-          80,
+          addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.NewStrategy,
           'lodestar_LODE',
           profitSharingCut10Percent,
         ],
@@ -146,7 +146,7 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestar_ARB.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestar_ARB.cToken,
-          68,
+          addresses.ARBITRUM_ONE.V2.lodestar_ARB.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -174,7 +174,7 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestar_DPX.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestar_DPX.cToken,
-          13,
+          addresses.ARBITRUM_ONE.V2.lodestar_DPX.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -202,7 +202,7 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestar_FRAX.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestar_FRAX.cToken,
-          73,
+          addresses.ARBITRUM_ONE.V2.lodestar_FRAX.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -230,7 +230,7 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestar_GMX.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestar_GMX.cToken,
-          68,
+          addresses.ARBITRUM_ONE.V2.lodestar_GMX.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -258,7 +258,7 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestar_wstETH.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestar_wstETH.cToken,
-          73,
+          addresses.ARBITRUM_ONE.V2.lodestar_wstETH.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -502,7 +502,7 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestar_ETH.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestar_ETH.cToken,
-          78,
+          addresses.ARBITRUM_ONE.V2.lodestar_ETH.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -530,7 +530,7 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestar_DAI.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestar_DAI.cToken,
-          73,
+          addresses.ARBITRUM_ONE.V2.lodestar_DAI.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -558,7 +558,7 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestar_USDC.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestar_USDC.cToken,
-          80,
+          addresses.ARBITRUM_ONE.V2.lodestar_USDC.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -586,7 +586,7 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestar_USDCe.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestar_USDCe.cToken,
-          80,
+          addresses.ARBITRUM_ONE.V2.lodestar_USDCe.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -614,7 +614,7 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestar_USDT.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestar_USDT.cToken,
-          68,
+          addresses.ARBITRUM_ONE.V2.lodestar_USDT.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -642,7 +642,7 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestar_WBTC.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestar_WBTC.cToken,
-          73,
+          addresses.ARBITRUM_ONE.V2.lodestar_WBTC.NewStrategy,
           profitSharingCut10Percent,
         ],
       },

@@ -127,7 +127,14 @@ const lodestarCTokenContract = require('../contracts/lodestar-ctoken/contract.js
 const lodestarComptrollerMethods = require('../contracts/lodestar-comptroller/methods')
 const lodestarComptrollerContract = require('../contracts/lodestar-comptroller/contract.json')
 
+const lodestarStrategyMethods = require('../contracts/lodestar-strategy/methods')
+const lodestarStrategyContract = require('../contracts/lodestar-strategy/contract.json')
+
 module.exports = {
+  lodestarStrategy: {
+    methods: lodestarStrategyMethods,
+    contract: lodestarStrategyContract,
+  },
   lodestarCToken: {
     methods: lodestarCTokenMethods,
     contract: lodestarCTokenContract,

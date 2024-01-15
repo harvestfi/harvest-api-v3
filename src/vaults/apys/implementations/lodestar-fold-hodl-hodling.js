@@ -4,6 +4,7 @@ const { getTokenPrice } = require('../../../prices')
 const {
   lodestarCToken: cToken,
   lodestarComptroller: comptroller,
+  lodestarStrategy,
   token,
 } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
@@ -11,7 +12,7 @@ const { UI_DATA_FILES } = require('../../../lib/constants')
 const { getUIData } = require('../../../lib/data')
 const { executeEstimateApyFunctions } = require('..')
 
-const getApy = async (underlying, cTokenAddr, foldPerc, hodlVaultId, reduction) => {
+const getApy = async (underlying, cTokenAddr, strategyAddr, hodlVaultId, reduction) => {
   const web3 = web3ARBITRUM
   const {
     contract: { abi: cTokenAbi },
@@ -25,11 +26,19 @@ const getApy = async (underlying, cTokenAddr, foldPerc, hodlVaultId, reduction) 
     contract: { abi: tokenAbi },
     methods: { getDecimals },
   } = token
+  const {
+    contract: { abi: strategyAbi },
+    methods: strategyMethods,
+  } = lodestarStrategy
 
   const lode = '0xF19547f9ED24aA66b03c3a552D181Ae334FBb8DB'
   const blocksPerYear = 2628000
-  const borrowedMul = foldPerc / (100 - foldPerc)
-  const suppliedMul = borrowedMul + 1
+  const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddr)
+  const invested = new BigNumber(await strategyMethods.getInvestedBalance(strategyInstance))
+  const supplied = new BigNumber(await strategyMethods.getSupplyBalance(strategyInstance))
+  const borrowed = new BigNumber(await strategyMethods.getBorrowBalance(strategyInstance))
+  const suppliedMul = supplied.div(invested)
+  const borrowedMul = borrowed.div(invested)
 
   const cTokenInstance = new web3.eth.Contract(cTokenAbi, cTokenAddr)
 

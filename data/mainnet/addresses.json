@@ -2197,7 +2197,7 @@
       "lodestar_USDC": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
         "NewVault": "0xBCC2B58Ab9a4F6bb576F80Def62ea2BC91fC49c2",
-        "NewStrategy": "0x8A74a487C3B8a2B6236C8E6d417b7eCDBbbC2Bd0",
+        "NewStrategy": "0x77A362A640866C198B7bD84b0F3068c1328C04d7",
         "NewPool": "0x331440228e6f3c2270cFC196acB3283E8D689A08",
         "cToken": "0x4C9aAed3b8c443b4b634D1A189a5e25C604768dE",
         "doHardwork": "noSim"
