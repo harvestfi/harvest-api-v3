@@ -1554,7 +1554,8 @@
         "NewVault": "0x261923287De9f91b855406DFC6F30FEe4A5825fa",
         "NewStrategy": "0x7ca8D398C08f06D55C062F78E3ed8F32Fef15530",
         "NewPool": "0xcB78B76238B19EF54733fD3Ec0f7172B27911BFF",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d"
+        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
+        "doHardwork": false
       },
       "quickGamma_WBTC_ETH_narrow": {
         "Underlying": "0x4B9e26a02121a1C541403a611b542965Bd4b68Ce",
