@@ -2184,7 +2184,7 @@
         "NewStrategy": "0x2B659a275666874172eA62cdEB00F380Bcd99A49",
         "NewPool": "0x68a00b4cEd402fA6A034f1808742F24776D8debd",
         "cToken": "0x2193c45244AF12C280941281c8aa67dD08be0a64",
-        "doHardwork": false
+        "doHardwork": "noSim"
       },
       "lodestar_DAI": {
         "Underlying": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
