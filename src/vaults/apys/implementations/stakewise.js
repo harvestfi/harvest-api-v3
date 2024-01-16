@@ -91,16 +91,21 @@ const getRewardApr = async (liquidityPercent, tvl, lpAddress) => {
     'desc',
   )
 
-  const lastDistribution = distributionEvents[0]
-  const swiseAddress = lastDistribution.returnValues.token
-  const swisePrice = await getTokenPrice(swiseAddress)
-  let swiseAmount = new BigNumber(lastDistribution.returnValues.amount).div(1e18)
-  if (currentBlock > lastDistribution.returnValues.endBlock) {
-    swiseAmount = new BigNumber(0)
+  let swisePrice, swiseAmount, durationBlocks
+  if (distributionEvents.length > 0) {
+    const lastDistribution = distributionEvents[0]
+    const swiseAddress = lastDistribution.returnValues.token
+    swisePrice = await getTokenPrice(swiseAddress)
+    swiseAmount = new BigNumber(lastDistribution.returnValues.amount).div(1e18)
+    if (currentBlock > lastDistribution.returnValues.endBlock) {
+      swiseAmount = new BigNumber(0)
+    }
+    durationBlocks = new BigNumber(lastDistribution.returnValues.endBlock).minus(
+      lastDistribution.returnValues.startBlock,
+    )
+  } else {
+    ;(swisePrice = 0), (swiseAmount = 0), (durationBlocks = 1)
   }
-  const durationBlocks = new BigNumber(lastDistribution.returnValues.endBlock).minus(
-    lastDistribution.returnValues.startBlock,
-  )
   const blocksPerYear = new BigNumber(2336000)
 
   const yearlyRewardsInUsd = new BigNumber(swisePrice)
