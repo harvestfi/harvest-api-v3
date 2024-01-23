@@ -75,6 +75,29 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'lodestarHodl_FRAX',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fLODE'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.Underlying}" target="_blank" rel="noopener noreferrer">FRAX</a> to Lodestar, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned ARB is reinvested into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.Underlying}" target="_blank" rel="noopener noreferrer">FRAX</a>. The earned LODE is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault}" target="_blank" rel="noopener noreferrer">fLODE</a> where it is earning auto-compounding LODE rewards. The fLODE rewards can be claimed with the "Claim All" button.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'lodestarHodl_GMX',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_GMX.NewPool,

@@ -174,6 +174,49 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
+  lodestarHodl_FRAX: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
+    apyTokenSymbols: ['ARB', 'LODE'],
+    apyDescriptionOverride: [
+      'Auto compounding <u>ARB</u>',
+      'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
+    ],
+    logoUrl: ['./icons/frax.svg'],
+    tokenNames: ['FRAX'],
+    subLabel: 'HODL',
+    platform: ['Lodestar'],
+    tags: ['Beginners', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['frax'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
+        params: [
+          addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.cToken,
+          addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.NewStrategy,
+          profitSharingCut10Percent,
+        ],
+      },
+      {
+        type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_HODLING,
+        params: [
+          addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.Underlying,
+          addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.cToken,
+          addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.NewStrategy,
+          'lodestar_LODE',
+          profitSharingCut10Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
+  },
   lodestarHodl_GMX: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
