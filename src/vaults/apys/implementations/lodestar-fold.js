@@ -81,8 +81,14 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, reduction) => {
   const invested = new BigNumber(await strategyMethods.getInvestedBalance(strategyInstance))
   const supplied = new BigNumber(await strategyMethods.getSupplyBalance(strategyInstance))
   const borrowed = new BigNumber(await strategyMethods.getBorrowBalance(strategyInstance))
-  const suppliedMul = supplied.div(invested)
-  const borrowedMul = borrowed.div(invested)
+  let suppliedMul, borrowedMul
+  if (invested.gt(0)) {
+    suppliedMul = supplied.div(invested)
+    borrowedMul = borrowed.div(invested)
+  } else {
+    suppliedMul = new BigNumber(1)
+    borrowedMul = new BigNumber(0)
+  }
 
   const cTokenInstance = new web3.eth.Contract(cTokenAbi, cTokenAddr)
   const supplyRate = new BigNumber(await cTokenMethods.getSupplyRate(cTokenInstance))

@@ -2345,7 +2345,79 @@
         "NewPool": "0x5fC80281e4d397db0D9D509832273C14Bf0e9B4D",
         "cToken": "0x4C9aAed3b8c443b4b634D1A189a5e25C604768dE",
         "doHardwork": "noSim"
-      }
+      },
+      "lodestarHodl_ARB": {
+        "Underlying": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        "NewVault": "0xC86A216Cd1b82830f8663a11FA2aC4b911E86b31",
+        "NewStrategy": "0x043b7fA3Ff8a4E0AF193D5328B64470FfcaC95cB",
+        "NewPool": "0xFa48dF9984e65dF1844134765f325cCBaFA66C2F",
+        "cToken": "0x8991d64fe388fA79A4f7Aa7826E8dA09F0c3C96a",
+        "doHardwork": "noSim"
+      },
+      "lodestarHodl_DAI": {
+        "Underlying": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+        "NewVault": "0x2Aa935cF382e5bAD8353b36b044367294A8Ed154",
+        "NewStrategy": "0xC9124EB99820B60783b5f0dCb2dA5Be9b9F763ba",
+        "NewPool": "0xA70BB689Dcc3f9034608A4F2377831a707ac5Ec9",
+        "cToken": "0x4987782da9a63bC3ABace48648B15546D821c720",
+        "doHardwork": "noSim"
+      },
+      "lodestarHodl_ETH": {
+        "Underlying": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        "NewVault": "0x3EeC57F8F3947D02e40B3C5616043eCCE755BD9d",
+        "NewStrategy": "0x58bd5b390211E6F27992506CA8Ea6815947acd01",
+        "NewPool": "0xaF4436964d01f0dC0C2819EF8a1E606E5A531b47",
+        "cToken": "0x2193c45244AF12C280941281c8aa67dD08be0a64",
+        "doHardwork": "noSim"
+      },
+      "lodestarHodl_FRAX": {
+        "Underlying": "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F",
+        "NewVault": "0x028DD741997F0612E47b2099Fa311A7667227b6E",
+        "NewStrategy": "0x4E0260528fAf5DFA4EdedEB8e868eD38BEa59e2b",
+        "NewPool": "0x364027A7F42ebDc37867E00285D924ebba6571a9",
+        "cToken": "0xD12d43Cdf498e377D3bfa2c6217f05B466E14228",
+        "doHardwork": "noSim"
+      },
+      "lodestarHodl_GMX": {
+        "Underlying": "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
+        "NewVault": "0x56ae35dCFC776Ca2d2475A2374cf2FFA95391E01",
+        "NewStrategy": "0x3f0C8AF191Ee9F5Eb6a09fBd074455b9FE56D651",
+        "NewPool": "0x47d01c58a2Dc6B2c42805Df9691f6954a56fE5E5",
+        "cToken": "0x79B6c5e1A7C0aD507E1dB81eC7cF269062BAb4Eb",
+        "doHardwork": "noSim"
+      },
+      "lodestarHodl_USDCe": {
+        "Underlying": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+        "NewVault": "0xF2BDf16EfDCAD65B95eabACb4bbE5431C5CA227E",
+        "NewStrategy": "0xE12170327765C324F74B9b1A4352B3cA2fF09ac7",
+        "NewPool": "0x7d15f5536657e6762704BCd23Cc0c4550008173c",
+        "cToken": "0x1ca530f02DD0487cef4943c674342c5aEa08922F",
+        "doHardwork": "noSim"
+      },
+      "lodestarHodl_USDT": {
+        "Underlying": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+        "NewVault": "0x638bC199795E1E09A5D20e0e4E204594Cc5CFB92",
+        "NewStrategy": "0x70893e39F5dDF5f7D54850EcE3753240Bf156Bb7",
+        "NewPool": "0x0EA3a7cf38CAEa9748bD17Dd9813B0b786f2681d",
+        "cToken": "0x9365181A7df82a1cC578eAE443EFd89f00dbb643",
+        "doHardwork": "noSim"
+      },
+      "lodestarHodl_WBTC": {
+        "Underlying": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+        "NewVault": "0x7234433aC39035D75F3668A4187Af7b7B45Ea34f",
+        "NewStrategy": "0x00A3cE6CCAeaea5C1961185821b9A563cFa6e149",
+        "NewPool": "0x97639f88bF607eE0A6DD6da6Ef5Cb09d92C768dA",
+        "cToken": "0xC37896BF3EE5a2c62Cdbd674035069776f721668",
+        "doHardwork": "noSim"
+      },
+      "lodestarHodl_wstETH": {
+        "Underlying": "0x5979D7b546E38E414F7E9822514be443A4800529",
+        "NewVault": "0xB150B4246A7027F2e32c083Eeb6df4DD76B1a3EF",
+        "NewStrategy": "0x4103f5E2B686e71f54dCaF4C561aA314EF7Bb432",
+        "NewPool": "0x29cfA1b7E371C6478A81847ce2679a52aE842874",
+        "cToken": "0xfECe754D92bd956F681A941Cef4632AB65710495",
+        "doHardwork": "noSim"
+      }      
     }
   },
   "BASE": {
