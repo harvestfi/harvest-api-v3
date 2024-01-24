@@ -114,7 +114,7 @@ module.exports = {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/seam.svg'],
     apyTokenSymbols: ['SEAM'],
-    logoUrl: ['./icons/usdc.svg'],
+    logoUrl: ['./icons/usdbc.svg'],
     tokenNames: ['USDbC'],
     platform: ['Seamless'],
     tags: ['Beginners', 'Stable'],
