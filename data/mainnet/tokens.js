@@ -47,7 +47,7 @@ module.exports = {
   },
   SEAM: {
     chain: CHAIN_IDS.BASE,
-    logoUrl: ['./icons/seam.png'],
+    logoUrl: ['./icons/seam.svg'],
     tokenAddress: addresses.BASE.SEAM,
     decimals: '18',
     vaultAddress: null,
@@ -119,7 +119,7 @@ module.exports = {
     platform: ['Seamless'],
     tags: ['Beginners', 'Stable'],
     tokenAddress: addresses.BASE.V2.seamless_USDbC.Underlying,
-    decimals: '18',
+    decimals: '6',
     vaultAddress: addresses.BASE.V2.seamless_USDbC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
@@ -146,7 +146,7 @@ module.exports = {
     platform: ['Seamless'],
     tags: ['Beginners', 'Stable'],
     tokenAddress: addresses.BASE.V2.seamless_USDC.Underlying,
-    decimals: '18',
+    decimals: '6',
     vaultAddress: addresses.BASE.V2.seamless_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
