@@ -130,7 +130,28 @@ const lodestarComptrollerContract = require('../contracts/lodestar-comptroller/c
 const lodestarStrategyMethods = require('../contracts/lodestar-strategy/methods')
 const lodestarStrategyContract = require('../contracts/lodestar-strategy/contract.json')
 
+const seamlessPoolMethods = require('../contracts/seamless-pool/methods')
+const seamlessPoolContract = require('../contracts/seamless-pool/contract.json')
+
+const seamlessStrategyMethods = require('../contracts/seamless-strategy/methods')
+const seamlessStrategyContract = require('../contracts/seamless-strategy/contract.json')
+
+const seamlessIncentivesMethods = require('../contracts/seamless-incentives/methods')
+const seamlessIncentivesContract = require('../contracts/seamless-incentives/contract.json')
+
 module.exports = {
+  seamlessPool: {
+    methods: seamlessPoolMethods,
+    contract: seamlessPoolContract,
+  },
+  seamlessIncentives: {
+    methods: seamlessIncentivesMethods,
+    contract: seamlessIncentivesContract,
+  },
+  seamlessStrategy: {
+    methods: seamlessStrategyMethods,
+    contract: seamlessStrategyContract,
+  },
   lodestarStrategy: {
     methods: lodestarStrategyMethods,
     contract: lodestarStrategyContract,
