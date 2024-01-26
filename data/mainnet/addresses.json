@@ -2332,12 +2332,6 @@
         "cToken": "0xfECe754D92bd956F681A941Cef4632AB65710495",
         "doHardwork": "noSim"
       },
-      "lodestar_LODE": {
-        "Underlying": "0xF19547f9ED24aA66b03c3a552D181Ae334FBb8DB",
-        "NewVault": "0x710A1AB6Cb8412DE9613ad6c7195453Ce8b5ca71",
-        "NewStrategy": "0x3Fd1835a620a74B79B9621A43022a247bBf1E6cd",
-        "NewPool": "0xDE750fBAcc4f63C68e09aE0C0F74fFA14672d8b2"
-      },
       "lodestarHodl_USDC": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
         "NewVault": "0x42f7Cd0A7dc5d8e84a06A5Bf6e2df649B230A4BC",
@@ -2417,7 +2411,13 @@
         "NewPool": "0x29cfA1b7E371C6478A81847ce2679a52aE842874",
         "cToken": "0xfECe754D92bd956F681A941Cef4632AB65710495",
         "doHardwork": "noSim"
-      }      
+      },
+      "lodestar_LODE": {
+        "Underlying": "0xF19547f9ED24aA66b03c3a552D181Ae334FBb8DB",
+        "NewVault": "0x710A1AB6Cb8412DE9613ad6c7195453Ce8b5ca71",
+        "NewStrategy": "0x3Fd1835a620a74B79B9621A43022a247bBf1E6cd",
+        "NewPool": "0xDE750fBAcc4f63C68e09aE0C0F74fFA14672d8b2"
+      }
     }
   },
   "BASE": {
