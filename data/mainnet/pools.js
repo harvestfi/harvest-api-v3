@@ -19,7 +19,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Seamless, earning 
        <a href="https://basescan.org/token/${addresses.BASE.SEAM}" target="_blank" rel="noopener noreferrer">SEAM</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> DAI</a>.
       </p>
     </div>
@@ -40,7 +40,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to Seamless, earning 
        <a href="https://basescan.org/token/${addresses.BASE.SEAM}" target="_blank" rel="noopener noreferrer">SEAM</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
       </p>
     </div>
@@ -61,7 +61,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> USDbC </a>to Seamless, earning 
        <a href="https://basescan.org/token/${addresses.BASE.SEAM}" target="_blank" rel="noopener noreferrer">SEAM</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> USDbC</a>.
       </p>
     </div>
@@ -82,7 +82,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Seamless, earning 
        <a href="https://basescan.org/token/${addresses.BASE.SEAM}" target="_blank" rel="noopener noreferrer">SEAM</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
@@ -104,7 +104,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_ARB.Underlying}" target="_blank" rel="noopener noreferrer">ARB</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned ARB is reinvested into more
+       At every harvest, the earned ARB is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_ARB.Underlying}" target="_blank" rel="noopener noreferrer">ARB</a>. The earned LODE is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault}" target="_blank" rel="noopener noreferrer">fLODE</a> where it is earning auto-compounding LODE rewards. The fLODE rewards can be claimed with the "Claim All" button.
       </p>
@@ -127,7 +127,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_DAI.Underlying}" target="_blank" rel="noopener noreferrer">DAI</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned ARB is reinvested into more
+       At every harvest, the earned ARB is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_DAI.Underlying}" target="_blank" rel="noopener noreferrer">DAI</a>. The earned LODE is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault}" target="_blank" rel="noopener noreferrer">fLODE</a> where it is earning auto-compounding LODE rewards. The fLODE rewards can be claimed with the "Claim All" button.
       </p>
@@ -150,7 +150,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_ETH.Underlying}" target="_blank" rel="noopener noreferrer">WETH</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned ARB is reinvested into more
+       At every harvest, the earned ARB is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_ETH.Underlying}" target="_blank" rel="noopener noreferrer">WETH</a>. The earned LODE is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault}" target="_blank" rel="noopener noreferrer">fLODE</a> where it is earning auto-compounding LODE rewards. The fLODE rewards can be claimed with the "Claim All" button.
       </p>
@@ -173,7 +173,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.Underlying}" target="_blank" rel="noopener noreferrer">FRAX</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned ARB is reinvested into more
+       At every harvest, the earned ARB is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.Underlying}" target="_blank" rel="noopener noreferrer">FRAX</a>. The earned LODE is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault}" target="_blank" rel="noopener noreferrer">fLODE</a> where it is earning auto-compounding LODE rewards. The fLODE rewards can be claimed with the "Claim All" button.
       </p>
@@ -196,7 +196,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_GMX.Underlying}" target="_blank" rel="noopener noreferrer">GMX</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned ARB is reinvested into more
+       At every harvest, the earned ARB is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_GMX.Underlying}" target="_blank" rel="noopener noreferrer">GMX</a>. The earned LODE is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault}" target="_blank" rel="noopener noreferrer">fLODE</a> where it is earning auto-compounding LODE rewards. The fLODE rewards can be claimed with the "Claim All" button.
       </p>
@@ -219,7 +219,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">USDC.e</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned ARB is reinvested into more
+       At every harvest, the earned ARB is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">USDC.e</a>. The earned LODE is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault}" target="_blank" rel="noopener noreferrer">fLODE</a> where it is earning auto-compounding LODE rewards. The fLODE rewards can be claimed with the "Claim All" button.
       </p>
@@ -242,7 +242,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_USDT.Underlying}" target="_blank" rel="noopener noreferrer">USDT</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned ARB is reinvested into more
+       At every harvest, the earned ARB is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_USDT.Underlying}" target="_blank" rel="noopener noreferrer">USDT</a>. The earned LODE is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault}" target="_blank" rel="noopener noreferrer">fLODE</a> where it is earning auto-compounding LODE rewards. The fLODE rewards can be claimed with the "Claim All" button.
       </p>
@@ -265,7 +265,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_WBTC.Underlying}" target="_blank" rel="noopener noreferrer">WBTC</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned ARB is reinvested into more
+       At every harvest, the earned ARB is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_WBTC.Underlying}" target="_blank" rel="noopener noreferrer">WBTC</a>. The earned LODE is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault}" target="_blank" rel="noopener noreferrer">fLODE</a> where it is earning auto-compounding LODE rewards. The fLODE rewards can be claimed with the "Claim All" button.
       </p>
@@ -288,7 +288,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_wstETH.Underlying}" target="_blank" rel="noopener noreferrer">wstETH</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned ARB is reinvested into more
+       At every harvest, the earned ARB is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_wstETH.Underlying}" target="_blank" rel="noopener noreferrer">wstETH</a>. The earned LODE is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault}" target="_blank" rel="noopener noreferrer">fLODE</a> where it is earning auto-compounding LODE rewards. The fLODE rewards can be claimed with the "Claim All" button.
       </p>
@@ -311,7 +311,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned ARB is reinvested into more
+       At every harvest, the earned ARB is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a>. The earned LODE is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault}" target="_blank" rel="noopener noreferrer">fLODE</a> where it is earning auto-compounding LODE rewards. The fLODE rewards can be claimed with the "Claim All" button.
       </p>
@@ -333,7 +333,7 @@ module.exports = [
       <p> The vault stakes 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.Underlying}" target="_blank" rel="noopener noreferrer">LODE</a> with Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.Underlying}" target="_blank" rel="noopener noreferrer">LODE</a>.
       </p>
     </div>
@@ -355,7 +355,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_ARB.Underlying}" target="_blank" rel="noopener noreferrer">ARB</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_ARB.Underlying}" target="_blank" rel="noopener noreferrer">ARB</a>.
       </p>
     </div>
@@ -377,7 +377,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_DPX.Underlying}" target="_blank" rel="noopener noreferrer">DPX</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_DPX.Underlying}" target="_blank" rel="noopener noreferrer">DPX</a>.
       </p>
     </div>
@@ -399,7 +399,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_FRAX.Underlying}" target="_blank" rel="noopener noreferrer">FRAX</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_FRAX.Underlying}" target="_blank" rel="noopener noreferrer">FRAX</a>.
       </p>
     </div>
@@ -421,7 +421,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_GMX.Underlying}" target="_blank" rel="noopener noreferrer">GMX</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_GMX.Underlying}" target="_blank" rel="noopener noreferrer">GMX</a>.
       </p>
     </div>
@@ -443,7 +443,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_wstETH.Underlying}" target="_blank" rel="noopener noreferrer">wstETH</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_wstETH.Underlying}" target="_blank" rel="noopener noreferrer">wstETH</a>.
       </p>
     </div>
@@ -465,7 +465,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_wstETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH </a>to Moonwell, earning 
        <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and
        <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_wstETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH</a>.
       </p>
     </div>
@@ -487,7 +487,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_rETH.Underlying}" target="_blank" rel="noopener noreferrer"> rETH </a>to Moonwell, earning 
        <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and
        <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_rETH.Underlying}" target="_blank" rel="noopener noreferrer"> rETH</a>.
       </p>
     </div>
@@ -513,7 +513,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_DAI_main.Underlying}" target="_blank" rel="noopener noreferrer">DAI-LP</a> in to a Magpie farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WOM}" target="_blank" rel="noopener noreferrer">WOM</a>,
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MGP}" target="_blank" rel="noopener noreferrer">MGP</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_DAI_main.Underlying}" target="_blank" rel="noopener noreferrer">DAI-LP</a>.
       </p>
       <p> Get 
@@ -543,7 +543,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.Underlying}" target="_blank" rel="noopener noreferrer">WETH-LP</a> in to a Magpie farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WOM}" target="_blank" rel="noopener noreferrer">WOM</a>,
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MGP}" target="_blank" rel="noopener noreferrer">MGP</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.Underlying}" target="_blank" rel="noopener noreferrer">WETH-LP</a>.
       </p>
       <p> Get 
@@ -573,7 +573,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDCe_main.Underlying}" target="_blank" rel="noopener noreferrer">USDC.e-LP</a> in to a Magpie farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WOM}" target="_blank" rel="noopener noreferrer">WOM</a>,
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MGP}" target="_blank" rel="noopener noreferrer">MGP</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDCe_main.Underlying}" target="_blank" rel="noopener noreferrer">USDC.e-LP</a>.
       </p>
       <p> Get 
@@ -603,7 +603,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDC_main.Underlying}" target="_blank" rel="noopener noreferrer">USDC-LP</a> in to a Magpie farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WOM}" target="_blank" rel="noopener noreferrer">WOM</a>,
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MGP}" target="_blank" rel="noopener noreferrer">MGP</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDC_main.Underlying}" target="_blank" rel="noopener noreferrer">USDC-LP</a>.
       </p>
       <p> Get 
@@ -633,7 +633,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDT_main.Underlying}" target="_blank" rel="noopener noreferrer">USDT-LP</a> in to a Magpie farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WOM}" target="_blank" rel="noopener noreferrer">WOM</a>,
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MGP}" target="_blank" rel="noopener noreferrer">MGP</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_USDT_main.Underlying}" target="_blank" rel="noopener noreferrer">USDT-LP</a>.
       </p>
       <p> Get 
@@ -663,7 +663,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_WOM_mwom.Underlying}" target="_blank" rel="noopener noreferrer">WOM-LP</a> in to a Magpie farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WOM}" target="_blank" rel="noopener noreferrer">WOM</a>,
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.MGP}" target="_blank" rel="noopener noreferrer">MGP</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.magpie_WOM_mwom.Underlying}" target="_blank" rel="noopener noreferrer">WOM-LP</a>.
       </p>
       <p> Get 
@@ -689,7 +689,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_ETH.Underlying}" target="_blank" rel="noopener noreferrer">wETH</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_ETH.Underlying}" target="_blank" rel="noopener noreferrer">wETH</a>.
       </p>
     </div>
@@ -711,7 +711,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_DAI.Underlying}" target="_blank" rel="noopener noreferrer">DAI</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_DAI.Underlying}" target="_blank" rel="noopener noreferrer">DAI</a>.
       </p>
     </div>
@@ -733,7 +733,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a>.
       </p>
     </div>
@@ -755,7 +755,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">USDCe</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">USDCe</a>.
       </p>
     </div>
@@ -777,7 +777,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_USDT.Underlying}" target="_blank" rel="noopener noreferrer">USDT</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_USDT.Underlying}" target="_blank" rel="noopener noreferrer">USDT</a>.
       </p>
     </div>
@@ -799,7 +799,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_WBTC.Underlying}" target="_blank" rel="noopener noreferrer">WBTC</a> to Lodestar, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_WBTC.Underlying}" target="_blank" rel="noopener noreferrer">WBTC</a>.
       </p>
     </div>
@@ -820,7 +820,7 @@ module.exports = [
       <p> The vault deposits 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.jones_wjAURA.Underlying}" target="_blank" rel="noopener noreferrer">wjAURA</a> in to a JonesDAO farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.jones_wjAURA.Underlying}" target="_blank" rel="noopener noreferrer">wjAURA</a>.
       </p>
       <p> Get 
@@ -851,7 +851,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ARB_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -883,7 +883,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_DAI_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -915,7 +915,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_GMX_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -947,7 +947,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -979,7 +979,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_LINK_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -1011,7 +1011,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -1043,7 +1043,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_USDCe_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -1075,7 +1075,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -1107,7 +1107,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -1139,7 +1139,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -1171,7 +1171,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -1201,7 +1201,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
@@ -1230,7 +1230,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
@@ -1259,7 +1259,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
@@ -1289,7 +1289,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
@@ -1318,7 +1318,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
@@ -1370,7 +1370,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Moonwell, earning 
        <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and
        <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
@@ -1400,7 +1400,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_axlUSDC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
        <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
       </p>
@@ -1435,7 +1435,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_axlWBTC_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
        <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
       </p>
@@ -1470,7 +1470,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_ETH_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
        <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
       </p>
@@ -1505,7 +1505,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_USDbC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
        <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
       </p>
@@ -1540,7 +1540,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_USDp_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
        <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
       </p>
@@ -1575,7 +1575,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_USDC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
        <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
       </p>
@@ -1622,7 +1622,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_CBETH.Underlying}" target="_blank" rel="noopener noreferrer"> CBETH </a>to Moonwell, earning 
        <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and
        <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_CBETH.Underlying}" target="_blank" rel="noopener noreferrer"> CBETH</a>.
       </p>
     </div>
@@ -1644,7 +1644,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Moonwell, earning 
        <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and
        <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> DAI</a>.
       </p>
     </div>
@@ -1665,7 +1665,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> USDbC </a>to Moonwell, earning 
        <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> USDbC</a>.
       </p>
     </div>
@@ -1687,7 +1687,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to Moonwell, earning 
        <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and
        <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
       </p>
     </div>
@@ -1708,7 +1708,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.based_BASED_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in the Based.Farm Armory, earning 
        <a href="https://basescan.org/token/${addresses.BASE.bSHARE}" target="_blank" rel="noopener noreferrer">bSHARE</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.based_BASED_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
@@ -1735,7 +1735,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.based_bSHARE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in the Based.Farm Armory, earning 
        <a href="https://basescan.org/token/${addresses.BASE.bSHARE}" target="_blank" rel="noopener noreferrer">bSHARE</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.based_bSHARE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
@@ -1762,7 +1762,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DAIp_USDp.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DAIp_USDp.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
@@ -1787,7 +1787,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_USDp_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_USDp_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
@@ -1812,7 +1812,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
@@ -1842,7 +1842,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_USDC_USDbC_axlUSDC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
        <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.crvUSD}" target="_blank" rel="noopener noreferrer">crvUSD</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_USDC_USDbC_axlUSDC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
@@ -1872,7 +1872,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_CBETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
        <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.crvUSD}" target="_blank" rel="noopener noreferrer">crvUSD</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_CBETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
@@ -1902,7 +1902,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_CRV_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
        <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.crvUSD}" target="_blank" rel="noopener noreferrer">crvUSD</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_CRV_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
@@ -1932,7 +1932,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_ETH_tBTC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
        <a href="https://basescan.org/token/${addresses.BASE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.crvUSD}" target="_blank" rel="noopener noreferrer">crvUSD</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.curve_ETH_tBTC_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
@@ -2218,7 +2218,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer"> CVR </a>to Caviar, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer">CVR</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.USDR}" target="_blank" rel="noopener noreferrer">USDR</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.CVR.Underlying}" target="_blank" rel="noopener noreferrer"> CVR</a>.
       </p>
       <p> Get  
@@ -2249,7 +2249,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> &
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.EQB}" target="_blank" rel="noopener noreferrer">EQB</a>.
-       At every harvest, the earned GRAIL and EQB are reinvested into more
+       At every harvest, the earned GRAIL and EQB are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_EQB_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -2280,7 +2280,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_JONES_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned GRAIL is reinvested into more
+       At every harvest, the earned GRAIL is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_JONES_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -2312,7 +2312,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a>.
-       At every harvest, the earned GRAIL and LODE are reinvested into more
+       At every harvest, the earned GRAIL and LODE are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_LODE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -2344,7 +2344,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RELAY}" target="_blank" rel="noopener noreferrer">RELAY</a>.
-       At every harvest, the earned GRAIL and RELAY are reinvested into more
+       At every harvest, the earned GRAIL and RELAY are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_RELAY_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -2376,7 +2376,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.THALES}" target="_blank" rel="noopener noreferrer">THALES</a>.
-       At every harvest, the earned GRAIL and THALES are reinvested into more
+       At every harvest, the earned GRAIL and THALES are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_THALES_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -2407,7 +2407,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_UMAMI_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned GRAIL is reinvested into more
+       At every harvest, the earned GRAIL is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_UMAMI_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -2440,7 +2440,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> &
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.UWU}" target="_blank" rel="noopener noreferrer">UWU</a> &
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
-       At every harvest, the earned GRAIL ,UWU and USDC are reinvested into more
+       At every harvest, the earned GRAIL ,UWU and USDC are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_UWU_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -2466,7 +2466,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_AERO_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_AERO_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
@@ -2491,7 +2491,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_cbETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_cbETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
@@ -2516,7 +2516,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
@@ -2541,7 +2541,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_TAROT_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_TAROT_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
@@ -2566,7 +2566,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_tBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_tBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
@@ -2591,7 +2591,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_tBTC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_tBTC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
@@ -2616,7 +2616,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_wUSDR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
@@ -2641,7 +2641,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Compound V3, earning 
        <a href="https://basescan.org/token/${addresses.BASE.COMP}" target="_blank" rel="noopener noreferrer">COMP</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
@@ -2662,7 +2662,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.WETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to Compound V3, earning 
        <a href="https://basescan.org/token/${addresses.BASE.COMP}" target="_blank" rel="noopener noreferrer">COMP</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.WETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
       </p>
     </div>
@@ -2683,7 +2683,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Compound V3, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.COMP}" target="_blank" rel="noopener noreferrer">COMP</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
@@ -2704,7 +2704,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Compound V3, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.COMP}" target="_blank" rel="noopener noreferrer">COMP</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
@@ -2730,7 +2730,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_axlUSDC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_axlUSDC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -2760,7 +2760,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_cbETH_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_cbETH_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -2790,7 +2790,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_GOLD_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.GOLD}" target="_blank" rel="noopener noreferrer">GOLD</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.balancer_GOLD_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -2824,7 +2824,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_BSX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
        <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
       </p>
@@ -2859,7 +2859,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_BSX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
        <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
       </p>
@@ -2894,7 +2894,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_BSX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
        <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
       </p>
@@ -2929,7 +2929,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_BSX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
        <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
       </p>
@@ -2964,7 +2964,7 @@ module.exports = [
        <a href="https://basescan.org/token/${addresses.BASE.BSX}" target="_blank" rel="noopener noreferrer">BSX</a>, 
        <a href="https://basescan.org/token/${addresses.BASE.BSWAP}" target="_blank" rel="noopener noreferrer">BSWAP</a> & 
        <a href="https://basescan.org/token/${addresses.BASE.V2.xBSX.Underlying}" target="_blank" rel="noopener noreferrer">xBSX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.baseswap_BSX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> BaseSwap LP tokens</a>. The earned xBSX is deposited in to 
        <a href="https://app.harvest.finance/base/${addresses.BASE.V2.xBSX.NewVault}" target="_blank" rel="noopener noreferrer">fxBSX</a>. The fxBSX rewards can be claimed with the "Claim All" button.
       </p>
@@ -2995,7 +2995,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_DOLA_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in an Aura farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_DOLA_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -3025,7 +3025,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_PAL_OHM.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in an Aura farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_PAL_OHM.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -3055,7 +3055,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_auraBAL_wstETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in an Aura farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_auraBAL_wstETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -3085,7 +3085,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_MAGIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in an Aura farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_MAGIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -3114,7 +3114,7 @@ module.exports = [
       <p> The vault supplies 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>. 
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -3143,7 +3143,7 @@ module.exports = [
       <p> The vault supplies 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>. 
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -3172,7 +3172,7 @@ module.exports = [
       <p> The vault deposits 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GNOME}" target="_blank" rel="noopener noreferrer">GNOME</a>.
-       At every harvest, the earned GNOME is reinvested into more
+       At every harvest, the earned GNOME is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GENE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>.
       </p>
       <p> Get the 
@@ -3201,7 +3201,7 @@ module.exports = [
       <p> The vault deposits 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GENE}" target="_blank" rel="noopener noreferrer">GENE</a>. 
-       At every harvest, the earned GENE is reinvested into more
+       At every harvest, the earned GENE is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GNOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>.
       </p>
       <p> Get the 
@@ -3231,7 +3231,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GRAIL_ARB.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned GRAIL is reinvested into more
+       At every harvest, the earned GRAIL is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GRAIL_ARB.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -3262,7 +3262,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GMX_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned GRAIL is reinvested into more
+       At every harvest, the earned GRAIL is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GMX_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -3294,7 +3294,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> &
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.SILO}" target="_blank" rel="noopener noreferrer">SILO</a>.
-       At every harvest, the earned GRAIL and SILO are reinvested into more
+       At every harvest, the earned GRAIL and SILO are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_SILO_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -3326,7 +3326,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> &
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.VELA}" target="_blank" rel="noopener noreferrer">VELA</a>.
-       At every harvest, the earned GRAIL and VELA are reinvested into more
+       At every harvest, the earned GRAIL and VELA are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_VELA_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -3356,7 +3356,7 @@ module.exports = [
       <p> The vault supplies 
        <a href="https://etherscan.io/token/${addresses.V2.verse_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a> in a Verse farm, earning 
        <a href="https://etherscan.io/token/${addresses.VERSE}" target="_blank" rel="noopener noreferrer">VERSE</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.verse_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a>.
       </p>
       <p> Get the 
@@ -3385,7 +3385,7 @@ module.exports = [
       <p> The vault supplies 
        <a href="https://etherscan.io/token/${addresses.V2.verse_USDC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a> in a Verse farm, earning 
        <a href="https://etherscan.io/token/${addresses.VERSE}" target="_blank" rel="noopener noreferrer">VERSE</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.verse_USDC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a>.
       </p>
       <p> Get the 
@@ -3415,7 +3415,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned GRAIL is reinvested into more
+       At every harvest, the earned GRAIL is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -3446,7 +3446,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GRAIL_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned GRAIL is reinvested into more
+       At every harvest, the earned GRAIL is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_GRAIL_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -3477,7 +3477,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_ARB_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a> in to a Camelot farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
-       At every harvest, the earned GRAIL is reinvested into more
+       At every harvest, the earned GRAIL is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_ARB_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
       </p>
@@ -3509,7 +3509,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.iFARM}" target="_blank" rel="noopener noreferrer">iFARM</a>.
-       At every harvest, the earned GRAIL is reinvested into more
+       At every harvest, the earned GRAIL is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Camelot LP tokens</a>. The earned xGRAIL is deposited in to 
        <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL and iFARM rewards can be claimed with the "Claim All" button.
       </p>
@@ -3536,7 +3536,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> in to Camelot Dividens and Yield Boost, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelot_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Camelot ETH-USDC LP tokens</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
       </p>
     </div>
@@ -3566,7 +3566,7 @@ module.exports = [
       <p> The vault supplies 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_rETH_aWETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -3601,7 +3601,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wstETH_amETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_wstETH_amETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -3631,7 +3631,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.curve_OETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.curve_OETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
@@ -3660,7 +3660,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.V2.curve_crvUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.curve_crvUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
@@ -3689,7 +3689,7 @@ module.exports = [
       <p> The vault supplies 
        <a href="https://etherscan.io/token/${addresses.V2.verse_VERSE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a> in a Verse farm, earning 
        <a href="https://etherscan.io/token/${addresses.VERSE}" target="_blank" rel="noopener noreferrer">VERSE</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.verse_VERSE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Verse LP tokens</a>.
       </p>
       <p> Get the 
@@ -3724,7 +3724,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in a Balancer farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_stMatic_amMatic.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -3758,7 +3758,7 @@ module.exports = [
       <p> The vault supplies 
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a> in a Balancer farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -3787,7 +3787,7 @@ module.exports = [
       <p> The vault supplies 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a> in a Balancer farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -3816,7 +3816,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.sushi_DPX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.SUSHI}" target="_blank" rel="noopener noreferrer">SUSHI</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.DPX}" target="_blank" rel="noopener noreferrer">DPX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.sushi_DPX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -3846,7 +3846,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
@@ -3880,7 +3880,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_CRV_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_CRV_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
@@ -3914,7 +3914,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_MATIC_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.curve_MATIC_3Crypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
@@ -3939,7 +3939,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.iPoison.Underlying}" target="_blank" rel="noopener noreferrer"> iPOISON </a>in a Poison farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.POISON}" target="_blank" rel="noopener noreferrer">POISON</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.iPoison.Underlying}" target="_blank" rel="noopener noreferrer"> iPOISON</a>.
       </p>
     </div>
@@ -3960,7 +3960,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.poison_pGOLD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Posion LP tokens </a>in a Poison farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.POISON}" target="_blank" rel="noopener noreferrer">POISON</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.poison_pGOLD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Posion LP tokens</a>.
       </p>
     </div>
@@ -3985,7 +3985,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.aura_bbiUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in an Aura farm, earning 
        <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
        <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.aura_bbiUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -4020,7 +4020,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Lido farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_wETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -4055,7 +4055,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Lido farm, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LDO}" target="_blank" rel="noopener noreferrer">LDO</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_USDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -4085,7 +4085,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
@@ -4115,7 +4115,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
@@ -4145,7 +4145,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
@@ -4175,7 +4175,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
@@ -4205,7 +4205,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
@@ -4235,7 +4235,7 @@ module.exports = [
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a> & 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
       </p>
       <p> Get the 
@@ -4259,7 +4259,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.V2.apeStake.Underlying}" target="_blank" rel="noopener noreferrer"> APE </a>in an APE farm, earning 
        <a href="https://etherscan.io/token/${addresses.V2.apeStake.Underlying}" target="_blank" rel="noopener noreferrer">APE</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.apeStake.Underlying}" target="_blank" rel="noopener noreferrer"> APE</a>.
       </p>
     </div>
@@ -4285,7 +4285,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.convex_pETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.convex_pETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
@@ -4315,7 +4315,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.convex_CVX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.convex_CVX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
@@ -4339,7 +4339,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_WMATIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens </a>in a Meshswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.MESH}" target="_blank" rel="noopener noreferrer">MESH</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.meshswap_WMATIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Meshswap LP tokens</a>.
       </p>
     </div>
@@ -4359,7 +4359,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.V2.notional_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> nDAI </a>in a Notional farm, earning 
        <a href="https://etherscan.io/token/${addresses.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.notional_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> nDAI</a>.
       </p>
     </div>
@@ -4379,7 +4379,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.V2.notional_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> nETH </a>in a Notional farm, earning 
        <a href="https://etherscan.io/token/${addresses.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.notional_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> nETH</a>.
       </p>
     </div>
@@ -4399,7 +4399,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.V2.notional_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> nWBTC </a>in a Notional farm, earning 
        <a href="https://etherscan.io/token/${addresses.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.notional_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> nWBTC</a>.
       </p>
     </div>
@@ -4419,7 +4419,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2EUR_EURT_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.JRT_NOV22}" target="_blank" rel="noopener noreferrer">JRT_NOV22</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2EUR_EURT_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
     </div>
@@ -4443,7 +4443,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_PAR.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_PAR.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -4469,7 +4469,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a> & 
        <a href="https://etherscan.io/token/${addresses.THREE_POOL}" target="_blank" rel="noopener noreferrer">3CRV</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.convex_cvxCRV.Underlying}" target="_blank" rel="noopener noreferrer"> cvxCRV</a>.
       </p>
     </div>
@@ -4490,7 +4490,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.aura_auraBAL.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in an Aura farm, earning 
        <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
        <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.aura_auraBAL.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
     </div>
@@ -4515,7 +4515,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.aura_rETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in an Aura farm, earning 
        <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
        <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.aura_rETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -4543,7 +4543,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_agEUR.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>. 
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_2EUR_agEUR.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
       <p> Get the 
@@ -4571,7 +4571,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DENJUL22_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.DEN_JUL22}" target="_blank" rel="noopener noreferrer">DEN-JUL22</a>. 
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DENJUL22_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
       </p>
     </div>
@@ -4598,7 +4598,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2SGD_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.JRT_NOV22}" target="_blank" rel="noopener noreferrer">JRT_NOV22</a>. 
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2SGD_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
     </div>
@@ -4626,7 +4626,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2JPY_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.JRT_NOV22}" target="_blank" rel="noopener noreferrer">JRT_NOV22</a>. 
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2JPY_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
     </div>
@@ -4654,7 +4654,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2CAD_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.JRT_NOV22}" target="_blank" rel="noopener noreferrer">JRT_NOV22</a>. 
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_2CAD_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
     </div>
@@ -4679,7 +4679,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_AUR3_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.AUR_APR22}" target="_blank" rel="noopener noreferrer">AUR_APR22</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_AUR3_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
       </p>
     </div>
@@ -4704,7 +4704,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.UniV3_ORC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Orbit farm, earning 
        <a href="https://etherscan.io/token/${addresses.ORC}" target="_blank" rel="noopener noreferrer">ORC</a> & 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.UniV3_ORC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
       </p>
     </div>
@@ -4729,7 +4729,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.bal_TUSD_STABLE.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.bal_TUSD_STABLE.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
     </div>
@@ -4753,7 +4753,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.V2.looks_LOOKS.Underlying}" target="_blank" rel="noopener noreferrer"> LOOKS </a>in a LooksRare farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.looks_LOOKS.Underlying}" target="_blank" rel="noopener noreferrer"> LOOKS</a>.
       </p>
     </div>
@@ -4778,7 +4778,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.mUSD.Underlying}" target="_blank" rel="noopener noreferrer"> mUSD </a>in a mStable farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.pMTA}" target="_blank" rel="noopener noreferrer">MTA</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.mUSD.Underlying}" target="_blank" rel="noopener noreferrer"> mUSD</a>.
       </p>
     </div>
@@ -4802,7 +4802,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.V2.uni_LOOKS_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a LooksRare farm, earning 
        <a href="https://etherscan.io/token/${addresses.LOOKS}" target="_blank" rel="noopener noreferrer">LOOKS</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.uni_LOOKS_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
       </p>
     </div>
@@ -4827,7 +4827,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.SUSHI_GENE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Harvest farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.pGNOME}" target="_blank" rel="noopener noreferrer">pGNOME</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.SUSHI_GENE_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -4852,7 +4852,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.SUSHI_GNOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Harvest farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.pGENE}" target="_blank" rel="noopener noreferrer">pGENE</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.SUSHI_GNOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -4877,7 +4877,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_AUR_USDC_V2.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.AURFEB22}" target="_blank" rel="noopener noreferrer">AURFEB22</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_AUR_USDC_V2.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
       </p>
     </div>
@@ -4901,7 +4901,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DENMAY22_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.DEN_MAY22}" target="_blank" rel="noopener noreferrer">DEN-MAY22</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DENMAY22_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
       </p>
     </div>
@@ -4925,7 +4925,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DEN2_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.DEN_MAR22}" target="_blank" rel="noopener noreferrer">DEN-MAR22</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DEN2_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
       </p>
     </div>
@@ -4949,7 +4949,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DEN_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.DEN}" target="_blank" rel="noopener noreferrer">DEN</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_DEN_4EUR.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
       </p>
     </div>
@@ -4976,7 +4976,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_4EUR_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.DEN_JUL22}" target="_blank" rel="noopener noreferrer">DEN_JUL22</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_4EUR_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
     </div>
@@ -5001,7 +5001,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quick_YEL_MATIC.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap V2 LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.pYEL}" target="_blank" rel="noopener noreferrer">pYEL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quick_YEL_MATIC.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap V2 LP tokens</a>.
       </p>
     </div>
@@ -5020,7 +5020,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.polygon_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>in an IDLE farm.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.polygon_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
       </p>
     </div>
@@ -5047,7 +5047,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -5073,7 +5073,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -5099,7 +5099,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>and 
-       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -5121,7 +5121,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.CNG}" target="_blank" rel="noopener noreferrer"> CNG </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -5147,7 +5147,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -5173,7 +5173,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -5199,7 +5199,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -5228,7 +5228,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.DON}" target="_blank" rel="noopener noreferrer"> DON </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -5248,7 +5248,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.V2.liquity_LQTY.Underlying}" target="_blank" rel="noopener noreferrer"> Liquity </a>in a Harvest farm, earning 
        <a href="https://etherscan.io/token/${addresses.V2.liquity_LQTY.Underlying}" target="_blank" rel="noopener noreferrer">Liquity</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.liquity_LQTY.Underlying}" target="_blank" rel="noopener noreferrer"> Liquity</a>.
       </p>
     </div>
@@ -5273,7 +5273,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickswap_IFARM_QUICK.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap V2 LP tokens </a>in a Quickswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.QUICK}" target="_blank" rel="noopener noreferrer">QUICK</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickswap_IFARM_QUICK.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap V2 LP tokens</a>.
       </p>
     </div>
@@ -5319,7 +5319,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.FARMSteadUSDC}" target="_blank" rel="noopener noreferrer"> FARMSteadUSDC </a>in a Harvest farm, earning 
        <a href="https://etherscan.io/token/${addresses.FARMSteadUSDC}" target="_blank" rel="noopener noreferrer">FARMSteadUSDC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.FARMSteadUSDC}" target="_blank" rel="noopener noreferrer"> FARMSteadUSDC</a>.
       </p>
     </div>
@@ -5363,7 +5363,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.pools.FARM_WETHPool}" target="_blank" rel="noopener noreferrer"> Farm LP tokens </a>in a Harvest farm, earning 
        <a href="https://etherscan.io/token/${addresses.FARM}" target="_blank" rel="noopener noreferrer">FARM</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.pools.FARM_WETHPool}" target="_blank" rel="noopener noreferrer"> Farm LP tokens</a>.
       </p>
     </div>
@@ -5389,7 +5389,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.pools.GRAINPool}" target="_blank" rel="noopener noreferrer"> Farm LP tokens </a>in a Harvest farm, earning 
        <a href="https://etherscan.io/token/${addresses.FARM}" target="_blank" rel="noopener noreferrer">FARM</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.pools.GRAINPool}" target="_blank" rel="noopener noreferrer"> Farm LP tokens</a>.
       </p>
     </div>
@@ -5415,7 +5415,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.YCRV}" target="_blank" rel="noopener noreferrer"> YCRV </a>in a Convex farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.YCRV}" target="_blank" rel="noopener noreferrer"> YCRV</a>.
       </p>
     </div>
@@ -5440,7 +5440,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.THREE_POOL}" target="_blank" rel="noopener noreferrer"> 3CRV </a>in a Convex farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.THREE_POOL}" target="_blank" rel="noopener noreferrer"> 3CRV</a>.
       </p>
     </div>
@@ -5467,7 +5467,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.crvHBTC}" target="_blank" rel="noopener noreferrer"> HBTC </a>in a Convex farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.crvHBTC}" target="_blank" rel="noopener noreferrer"> HBTC</a>.
       </p>
     </div>
@@ -5493,7 +5493,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.crvCOMPOUND}" target="_blank" rel="noopener noreferrer"> CRV:COMPOUND </a>in a Convex farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.crvCOMPOUND}" target="_blank" rel="noopener noreferrer"> CRV:COMPOUND</a>.
       </p>
     </div>
@@ -5519,7 +5519,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.crvUSDN}" target="_blank" rel="noopener noreferrer"> crvUSDN </a>in a Convex farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.crvUSDN}" target="_blank" rel="noopener noreferrer"> crvUSDN</a>.
       </p>
     </div>
@@ -5542,7 +5542,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>to Idle's Best Yield vault. Idle strategies rely on a combination of different protocols to boost your earnings (Compound, Aave, Clearpool, Morpho). The vault earns  
        <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
        <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a> rewards.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC</a> to compound your earnings. By participating to this vault, farmers are also entitled to FARM rewards that can be claimed separately.
       </p>
     </div>
@@ -5565,7 +5565,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>to Idle's Best Yield vault. Idle strategies rely on a combination of different protocols to boost your earnings (Compound, Aave, Clearpool, Morpho). The vault earns  
        <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
        <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a> rewards.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT</a> to compound your earnings. By participating to this vault, farmers are also entitled to FARM rewards that can be claimed separately.
       </p>
     </div>
@@ -5585,7 +5585,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.TUSD}" target="_blank" rel="noopener noreferrer"> TUSD </a>in a farm.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.TUSD}" target="_blank" rel="noopener noreferrer"> TUSD</a>.
       </p>
     </div>
@@ -5608,7 +5608,7 @@ module.exports = [
         <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>to Idle's Best Yield vault. Idle strategies rely on a combination of different protocols to boost your earnings (Compound, Aave, Clearpool, Morpho). The vault earns  
         <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
         <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a> rewards.
-        At every harvest, the earned rewards are reinvested into more
+        At every harvest, the earned rewards are converted into more
         <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI</a> to compound your earnings. By participating to this vault, farmers are also entitled to FARM rewards that can be claimed separately.
       </p>
     </div>
@@ -5633,7 +5633,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.crvOBTC.Underlying}" target="_blank" rel="noopener noreferrer"> OBTC </a>in a Curve farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.crvOBTC.Underlying}" target="_blank" rel="noopener noreferrer"> OBTC</a>.
       </p>
     </div>
@@ -5658,7 +5658,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.TBTC_MIXED}" target="_blank" rel="noopener noreferrer"> TBTC </a>in a Curve farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.TBTC_MIXED}" target="_blank" rel="noopener noreferrer"> TBTC</a>.
       </p>
     </div>
@@ -5684,7 +5684,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.CRVRENWBTC}" target="_blank" rel="noopener noreferrer"> RENWBTC </a>in a Curve farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.CRVRENWBTC}" target="_blank" rel="noopener noreferrer"> RENWBTC</a>.
       </p>
     </div>
@@ -5706,7 +5706,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.WBTC}" target="_blank" rel="noopener noreferrer"> WBTC </a>in an Idle farm, earning 
        <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
        <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.WBTC}" target="_blank" rel="noopener noreferrer"> WBTC</a>.
       </p>
     </div>
@@ -5726,7 +5726,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.RENBTC}" target="_blank" rel="noopener noreferrer"> renBTC </a>in a farm.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.RENBTC}" target="_blank" rel="noopener noreferrer"> renBTC</a>.
       </p>
     </div>
@@ -5752,7 +5752,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.UNI_LP_WETH_DPI}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
        <a href="https://etherscan.io/token/${addresses.DPI}" target="_blank" rel="noopener noreferrer">DPI</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.UNI_LP_WETH_DPI}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
       </p>
     </div>
@@ -5774,7 +5774,7 @@ module.exports = [
         <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH </a>to Idle's Best Yield vault. Idle strategies rely on a combination of different protocols to boost your earnings (Compound, Aave, Clearpool, Morpho). The vault earns  
         <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
         <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a> rewards.
-        At every harvest, the earned rewards are reinvested into more
+        At every harvest, the earned rewards are converted into more
         <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> WETH</a> to compound your earnings. By participating to this vault, farmers are also entitled to FARM rewards that can be claimed separately.
       </p>
     </div>
@@ -5797,7 +5797,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.UNI_MIC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
        <a href="https://etherscan.io/token/${addresses.MIC}" target="_blank" rel="noopener noreferrer">MIC</a> & 
        <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer">USDT</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.UNI_MIC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
       </p>
     </div>
@@ -5820,7 +5820,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.UNI_MIS_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
        <a href="https://etherscan.io/token/${addresses.MIS}" target="_blank" rel="noopener noreferrer">MIS</a> & 
        <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer">USDT</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.UNI_MIS_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
       </p>
     </div>
@@ -5847,7 +5847,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.sushi_PERP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
        <a href="https://etherscan.io/token/${addresses.PERP}" target="_blank" rel="noopener noreferrer">PERP</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.sushi_PERP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -5873,7 +5873,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.sushi_SUSHI_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
        <a href="https://etherscan.io/token/${addresses.SUSHI}" target="_blank" rel="noopener noreferrer">SUSHI</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.sushi_SUSHI_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -5899,7 +5899,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.sushi_DAI_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
        <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer">DAI</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.sushi_DAI_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -5925,7 +5925,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.sushi_USDC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.sushi_USDC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -5951,7 +5951,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.sushi_USDT_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
        <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer">USDT</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.sushi_USDT_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -5977,7 +5977,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.sushi_WBTC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
        <a href="https://etherscan.io/token/${addresses.WBTC}" target="_blank" rel="noopener noreferrer">WBTC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.sushi_WBTC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -6003,7 +6003,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.sushi_UST_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
        <a href="https://etherscan.io/token/${addresses.UST}" target="_blank" rel="noopener noreferrer">UST</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.sushi_UST_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -6029,7 +6029,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.oneInch_ETH_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a 1Inch farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
        <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer">DAI</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.oneInch_ETH_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -6055,7 +6055,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.oneInch_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a 1Inch farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.oneInch_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -6081,7 +6081,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.oneInch_ETH_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a 1Inch farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">ETH</a> & 
        <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer">USDT</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.oneInch_ETH_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -6107,7 +6107,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.oneInch_1INCH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a 1Inch farm, earning 
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer">USDC</a> & 
        <a href="https://etherscan.io/token/${addresses['1INCH']}" target="_blank" rel="noopener noreferrer">1INCH</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.oneInch_1INCH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -6132,7 +6132,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.crvEURS.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.crvEURS.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
     </div>
@@ -6156,7 +6156,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.V2.crvGUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.crvGUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
     </div>
@@ -6181,7 +6181,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.crvSTETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>. 
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.crvSTETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
@@ -6211,7 +6211,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.crvLink.Underlying}" target="_blank" rel="noopener noreferrer"> CRV:LINK </a>in a Curve farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.crvLink.Underlying}" target="_blank" rel="noopener noreferrer"> CRV:LINK</a>.
       </p>
     </div>
@@ -6232,7 +6232,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.V2.SUSHI.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://etherscan.io/token/${addresses.SUSHI}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.SUSHI.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -6258,7 +6258,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.sushi_DAI_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
        <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer">DAI</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.sushi_DAI_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -6284,7 +6284,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.sushi_USDC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer">USDC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.sushi_USDC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -6310,7 +6310,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.sushi_USDT_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
        <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer">USDT</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.sushi_USDT_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -6336,7 +6336,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.sushi_WBTC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
        <a href="https://etherscan.io/token/${addresses.WBTC}" target="_blank" rel="noopener noreferrer">WBTC</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.sushi_WBTC_WETH}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -6363,7 +6363,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.nft20_Muse.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
        <a href="https://etherscan.io/token/${addresses.MUSE}" target="_blank" rel="noopener noreferrer">MUSE</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.nft20_Muse.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
       </p>
     </div>
@@ -6390,7 +6390,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.nft20_Dudes.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
        <a href="https://etherscan.io/token/${addresses.NUDES20}" target="_blank" rel="noopener noreferrer">NUDES20</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.nft20_Dudes.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
       </p>
     </div>
@@ -6417,7 +6417,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.nft20_Mask.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
        <a href="https://etherscan.io/token/${addresses.MASK20}" target="_blank" rel="noopener noreferrer">MASK20</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.nft20_Mask.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
       </p>
     </div>
@@ -6443,7 +6443,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.nft20_Rope.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
        <a href="https://etherscan.io/token/${addresses.ROPE20}" target="_blank" rel="noopener noreferrer">ROPE20</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.nft20_Rope.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
       </p>
     </div>
@@ -6470,7 +6470,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.nft20_Mooncat.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
        <a href="https://etherscan.io/token/${addresses.MCAT20}" target="_blank" rel="noopener noreferrer">MCAT20</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.nft20_Mooncat.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
       </p>
     </div>
@@ -6497,7 +6497,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.nft20_Meme.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
        <a href="https://etherscan.io/token/${addresses.MEME20}" target="_blank" rel="noopener noreferrer">MEME20</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.nft20_Meme.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
       </p>
     </div>
@@ -6524,7 +6524,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.nft20_Gpunks.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
        <a href="https://etherscan.io/token/${addresses.GPUNKS20}" target="_blank" rel="noopener noreferrer">GPUNKS20</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.nft20_Gpunks.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
       </p>
     </div>
@@ -6550,7 +6550,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.uni_ETH_MVI.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
        <a href="https://etherscan.io/token/${addresses.MVI}" target="_blank" rel="noopener noreferrer">MVI</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.uni_ETH_MVI.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
       </p>
     </div>
@@ -6577,7 +6577,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.klondike_KXUSD_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Klondike farm, earning 
        <a href="https://etherscan.io/token/${addresses.KXUSD}" target="_blank" rel="noopener noreferrer">KXUSD</a> & 
        <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer">DAI</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.klondike_KXUSD_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
       </p>
     </div>
@@ -6600,7 +6600,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.zUSD}" target="_blank" rel="noopener noreferrer"> zUSD </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6622,7 +6622,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.zUSD}" target="_blank" rel="noopener noreferrer"> zUSD </a>and 
-       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6644,7 +6644,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>and 
-       <a href="https://etherscan.io/token/${addresses.sETH2}" target="_blank" rel="noopener noreferrer"> sETH2 </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.sETH2}" target="_blank" rel="noopener noreferrer"> sETH2 </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6666,7 +6666,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6688,7 +6688,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6710,7 +6710,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.UST}" target="_blank" rel="noopener noreferrer"> UST </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6732,7 +6732,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>and
-       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6754,7 +6754,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.WBTC}" target="_blank" rel="noopener noreferrer"> WBTC </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6776,7 +6776,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>and 
-       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6798,7 +6798,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>and 
-       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6820,7 +6820,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6842,7 +6842,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.UNI}" target="_blank" rel="noopener noreferrer"> UNI </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6868,7 +6868,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6894,7 +6894,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6920,7 +6920,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>and 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are reinvested into the UniswapV3 position.
+       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a>in a UniswapV3 liquidity position, earning swap fees. At every harvest, the earned swap fees are converted into the UniswapV3 position.
       </p>
     </div>
    `,
@@ -6945,7 +6945,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.crvThreeCrypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.crvThreeCrypto.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
     </div>
@@ -6971,7 +6971,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.crvCVXCRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.crvCVXCRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
     </div>
@@ -6997,7 +6997,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.bal_BAL_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
        <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.bal_BAL_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
     </div>
@@ -7023,7 +7023,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.bal_DAI_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
        <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer">DAI</a> & 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.bal_DAI_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
     </div>
@@ -7049,7 +7049,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.bal_USDC_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer">USDC</a> & 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.bal_USDC_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
     </div>
@@ -7075,7 +7075,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.bal_USDT_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer">USDC</a> & 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.bal_USDT_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
     </div>
@@ -7101,7 +7101,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.bal_WBTC_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
        <a href="https://etherscan.io/token/${addresses.WBTC}" target="_blank" rel="noopener noreferrer">WBTC</a> & 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.bal_WBTC_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
     </div>
@@ -7141,7 +7141,7 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.V2.sushi_PHTR_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://etherscan.io/token/${addresses.PHTR}" target="_blank" rel="noopener noreferrer">PHTR</a> & 
        <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.sushi_PHTR_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
@@ -7181,7 +7181,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_JEUR_USDC_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.AUR_APR22}" target="_blank" rel="noopener noreferrer">AUR_APR22</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_JEUR_USDC_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
       </p>
     </div>
@@ -7207,7 +7207,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_JGBP_USDC_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.AUR_APR22}" target="_blank" rel="noopener noreferrer">AUR_APR22</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_JGBP_USDC_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
       </p>
     </div>
@@ -7233,7 +7233,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_JCHF_USDC_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.AUR_APR22}" target="_blank" rel="noopener noreferrer">AUR_APR22</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_JCHF_USDC_HODL.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
       </p>
     </div>
@@ -7254,7 +7254,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_AUR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens </a>in a Jarvis farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.AUR0112}" target="_blank" rel="noopener noreferrer">AUR0112</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.jarvis_AUR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> KyberDMM LP tokens</a>.
       </p>
     </div>
@@ -7280,7 +7280,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_POLYBASE.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_POLYBASE.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
     </div>
@@ -7306,7 +7306,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_STABLE.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens </a>in a Balancer farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.BAL}" target="_blank" rel="noopener noreferrer">BAL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.balancer_STABLE.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
       </p>
     </div>
@@ -7330,7 +7330,7 @@ module.exports = [
       <p> The vault supplies
        <a href="https://polygonscan.com/token/${addresses.V2.sushi_YEL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.pYEL}" target="_blank" rel="noopener noreferrer">pYEL</a>.
-       At every harvest, the earned rewards are reinvested into more
+       At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.V2.sushi_YEL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
