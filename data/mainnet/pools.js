@@ -149,7 +149,8 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.radpie_WBTC.Underlying}" target="_blank" rel="noopener noreferrer">WBTC</a> to Radpie, earning 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RDNT}" target="_blank" rel="noopener noreferrer">RDNT</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RDNT}" target="_blank" rel="noopener noreferrer">RDNT</a> &
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RDP}" target="_blank" rel="noopener noreferrer">RDP</a>.
        At every harvest, the earned RDNT is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.radpie_WBTC.Underlying}" target="_blank" rel="noopener noreferrer">WBTC</a>.
       </p>

@@ -47,7 +47,7 @@ module.exports = {
   },
   RDP: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: ['./icons/mgp.png'],
+    logoUrl: ['./icons/rdp.png'],
     tokenAddress: addresses.ARBITRUM_ONE.RDP,
     decimals: '18',
     vaultAddress: null,
@@ -191,8 +191,8 @@ module.exports = {
   radpie_WBTC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/rdnt.svg'],
-    apyTokenSymbols: ['RDNT'],
-    logoUrl: ['./icons/wbtc.svg'],
+    apyTokenSymbols: ['RDNT', 'RDP'],
+    logoUrl: ['./icons/wbtc.svg', './icons/RDP.PNG'],
     tokenNames: ['WBTC'],
     platform: ['Radpie'],
     tags: ['Advanced'],
