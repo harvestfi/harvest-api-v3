@@ -70,7 +70,7 @@ const getApy = async (poolId, rewarder, reduction) => {
 
   rdpAPY = rdpUsdPerSecond.times(86400).times(365.25).div(poolSizeInUsd).times(100)
 
-  if (isARBRewardToken) {
+  if (isARBRewardToken && stakingToken.toLowerCase() !== addresses.ARB_arbitrum.toLowerCase()) {
     const arbPerDay = 1681.428571 // can be changed randomly depends on Radpie
     const stakedBal = new BigNumber(totalStaked).dividedBy(
       new BigNumber(10).exponentiatedBy(stakingTokenDecimal),

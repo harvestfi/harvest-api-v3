@@ -190,9 +190,9 @@ module.exports = {
   },
   radpie_WBTC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/rdnt.svg'],
+    apyIconUrls: ['./icons/rdnt.svg', './icons/rdp.png'],
     apyTokenSymbols: ['RDNT', 'RDP'],
-    logoUrl: ['./icons/wbtc.svg', './icons/RDP.PNG'],
+    logoUrl: ['./icons/wbtc.svg'],
     tokenNames: ['WBTC'],
     platform: ['Radpie'],
     tags: ['Advanced'],
