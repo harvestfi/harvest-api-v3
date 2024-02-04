@@ -253,6 +253,33 @@ module.exports = {
       params: ['seamless-protocol'],
     },
   },
+  seamless_cbETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/seam.svg'],
+    apyTokenSymbols: ['SEAM'],
+    logoUrl: ['./icons/cbeth.svg'],
+    tokenNames: ['cbETH'],
+    platform: ['Seamless'],
+    tags: ['Beginners', 'LSD'],
+    tokenAddress: addresses.BASE.V2.seamless_cbETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.seamless_cbETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['coinbase-wrapped-staked-eth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.SEAMLESS_FOLD,
+        params: [
+          addresses.BASE.V2.seamless_cbETH.Underlying,
+          addresses.BASE.V2.seamless_cbETH.NewStrategy,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'SEAM'],
+  },
   seamless_DAI: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/seam.svg'],

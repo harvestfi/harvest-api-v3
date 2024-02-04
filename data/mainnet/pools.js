@@ -184,6 +184,27 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.BASE,
+    id: 'seamless_cbETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.seamless_cbETH.NewPool,
+    collateralAddress: addresses.BASE.V2.seamless_cbETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_cbETH.Underlying}" target="_blank" rel="noopener noreferrer"> cbETH </a>to Seamless, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.SEAM}" target="_blank" rel="noopener noreferrer">SEAM</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_cbETH.Underlying}" target="_blank" rel="noopener noreferrer"> cbETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
     id: 'seamless_DAI',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.BASE.V2.seamless_DAI.NewPool,
