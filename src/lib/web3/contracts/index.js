@@ -139,6 +139,15 @@ const seamlessStrategyContract = require('../contracts/seamless-strategy/contrac
 const seamlessIncentivesMethods = require('../contracts/seamless-incentives/methods')
 const seamlessIncentivesContract = require('../contracts/seamless-incentives/contract.json')
 
+const radpieReaderMethods = require('../contracts/rdp-reader/methods')
+const radpieReaderContract = require('../contracts/rdp-reader/contract.json')
+
+const radpieRewarderMethods = require('../contracts/rdp-rewarder/methods')
+const radpieRewarderContract = require('../contracts/rdp-rewarder/contract.json')
+
+const radpieMasterMethods = require('../contracts/rdp-master/methods')
+const radpieMasterContract = require('../contracts/rdp-master/contract.json')
+
 module.exports = {
   seamlessPool: {
     methods: seamlessPoolMethods,
@@ -327,5 +336,17 @@ module.exports = {
   wombatFeePool: {
     contract: wombatFeePoolContract,
     methods: wombatFeePoolMethods,
+  },
+  radpieReader: {
+    contract: radpieReaderContract,
+    methods: radpieReaderMethods,
+  },
+  radpieRewarder: {
+    contract: radpieRewarderContract,
+    methods: radpieRewarderMethods,
+  },
+  radpieMaster: {
+    contract: radpieMasterContract,
+    methods: radpieMasterMethods,
   },
 }
