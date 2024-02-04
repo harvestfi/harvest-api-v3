@@ -791,6 +791,7 @@ module.exports = {
     },
   },
   magpie_DAI_main: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/dai.svg'],
     apyIconUrls: ['./icons/mgp.png', './icons/wom.png'],
@@ -837,6 +838,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'MGP', 'WOM'],
   },
   magpie_USDCe_main: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdc.svg'],
     apyIconUrls: ['./icons/mgp.png', './icons/wom.png'],
@@ -860,6 +862,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'MGP', 'WOM'],
   },
   magpie_USDC_main: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdc.svg'],
     apyIconUrls: ['./icons/mgp.png', './icons/wom.png'],
@@ -883,6 +886,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'MGP', 'WOM'],
   },
   magpie_USDT_main: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdt.svg'],
     apyIconUrls: ['./icons/mgp.png', './icons/wom.png'],
@@ -906,6 +910,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'MGP', 'WOM'],
   },
   magpie_WOM_mwom: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/wom.png'],
     apyIconUrls: ['./icons/mgp.png', './icons/wom.png'],
@@ -1153,6 +1158,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   jones_wjAURA: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/wjaura.svg'],
     apyIconUrls: ['./icons/arb.svg'],
@@ -1180,7 +1186,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'ARB'],
   },
   camelotV3_ARB_ETH: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/eth.svg'],
     tokenNames: ['ARB', 'ETH'],
@@ -1211,7 +1216,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_DAI_USDC: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/dai.svg', './icons/usdc.svg'],
     tokenNames: ['DAI', 'USDC'],
@@ -1242,7 +1246,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_GMX_ETH: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/gmx.svg', './icons/eth.svg'],
     tokenNames: ['GMX', 'ETH'],
@@ -1273,7 +1276,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_GRAIL_ETH: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/grail.svg', './icons/eth.svg'],
     tokenNames: ['GRAIL', 'ETH'],
@@ -1304,7 +1306,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_LINK_ETH: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/link.svg', './icons/eth.svg'],
     tokenNames: ['LINK', 'ETH'],
@@ -1335,7 +1336,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_LUSD_USDC: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/lusd.svg', './icons/usdc.svg'],
     tokenNames: ['LUSD', 'USDC'],
@@ -1366,7 +1366,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_USDCe_USDT: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
     tokenNames: ['USDC.e', 'USDT'],
@@ -1397,7 +1396,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_WBTC_ETH: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg'],
     tokenNames: ['WBTC', 'ETH'],
@@ -1428,7 +1426,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_ARB_USDC: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/arb.svg'],
@@ -1459,7 +1456,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   camelotV3_ETH_USDT: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/usdt.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/arb.svg'],
@@ -1490,7 +1486,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   camelotV3_ETH_USDC: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/arb.svg'],

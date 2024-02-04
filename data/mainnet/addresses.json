@@ -1977,8 +1977,7 @@
         "NewPool": "0x5f0AB004Ab2a3c35461e0E5Ce89839DA22B2E598",
         "NFTPool": "0x3b6486154b9dAe942C393b1cB3d11E3395B02Df8",
         "NitroPool": "0x84EDB15BcBf6818879C6FDf26A69700D43100A74",
-        "AlgebraPool": "0xB1026b8e7276e7AC75410F1fcbbe21796e8f7526",
-        "doHardwork": false
+        "AlgebraPool": "0xB1026b8e7276e7AC75410F1fcbbe21796e8f7526"
       },
       "camelotV3_ETH_USDT": {
         "Underlying": "0x9330e26b5Fc0b7c417C6bD901528d5c65BE5cdf2",
@@ -1987,8 +1986,7 @@
         "NewPool": "0x7e4d7C473d090ff0C70ee41A50116e0b7463EB46",
         "NFTPool": "0xF42884071fFe17Bdd7d1710C31191023419e0CA7",
         "NitroPool": "0xe364CF2dd75192D2b04059D6c0aE559699b1E31A",
-        "AlgebraPool": "0x7CcCBA38E2D959fe135e79AEBB57CCb27B128358",
-        "doHardwork": false
+        "AlgebraPool": "0x7CcCBA38E2D959fe135e79AEBB57CCb27B128358"
       },
       "camelotV3_ARB_USDC": {
         "Underlying": "0x29237292F15BC3615BFCc0D958C265Aa64527FB2",
@@ -1997,8 +1995,7 @@
         "NewPool": "0x39bC1a41e9b77De48bb1D6cBDb5E36635c4c28b9",
         "NFTPool": "0x14AD01d5f496e9C40358629f6a95a7C3B5c4b767",
         "NitroPool": "0x6aCdfD8Bd4f5AC6F5E0cA54024663C251e9Cf0f4",
-        "AlgebraPool": "0xfaE2AE0a9f87FD35b5b0E24B47BAC796A7EEfEa1",
-        "doHardwork": false
+        "AlgebraPool": "0xfaE2AE0a9f87FD35b5b0E24B47BAC796A7EEfEa1"
       },
       "xGRAIL": {
         "Underlying": "0x3CAaE25Ee616f2C8E13C74dA0813402eae3F496b",
@@ -2176,8 +2173,7 @@
         "NewPool": "0x33B5ea1d8f505d2D32FBE525f185CdE94c621611",
         "NFTPool": "0xbFf9F4591b423ce63e9Ef803533C70ae8a03bEed",
         "NitroPool": "0xe105b532cb42bf065D152643B29feDA85625Dce9",
-        "AlgebraPool": "0xe51635ae8136aBAc44906A8f230C2D235E9c195F",
-        "doHardwork": false
+        "AlgebraPool": "0xe51635ae8136aBAc44906A8f230C2D235E9c195F"
       },
       "camelotV3_DAI_USDC": {
         "Underlying": "0x2766Ba1B6772d23E1F58260a1dF57bFFB4661953",
@@ -2186,8 +2182,7 @@
         "NewPool": "0xB3fD6bD2BC195a535F1836D868c7bC557FC1Fe8A",
         "NFTPool": "0x31089a2df37AC97A405377CBA2Bb4Fc993984B1d",
         "NitroPool": "0x9320C0e76D56F9aA0dB60016A2430d38a0D42A26",
-        "AlgebraPool": "0x45FaE8D0D2acE73544baab452f9020925AfCCC75",
-        "doHardwork": false
+        "AlgebraPool": "0x45FaE8D0D2acE73544baab452f9020925AfCCC75"
       },
       "camelotV3_GMX_ETH": {
         "Underlying": "0x9bdb8335619bA4E20Bea1321f8E32f45fD6e6e22",
@@ -2196,8 +2191,7 @@
         "NewPool": "0x4DA925543a7F311A871aA196DEC09aA18fa4C652",
         "NFTPool": "0x4242fbeEcF6b1Db01a50B8878f85c31E5e53a5c6",
         "NitroPool": "0x2Ed02f03a7EC25Acd2BcE9C32d359A8fE02e798B",
-        "AlgebraPool": "0xC99be44383BC8d82357F5A1D9ae9976EE9d75bee",
-        "doHardwork": false
+        "AlgebraPool": "0xC99be44383BC8d82357F5A1D9ae9976EE9d75bee"
       },
       "camelotV3_GRAIL_ETH": {
         "Underlying": "0x97D81162B96D57476CcF170595a39c1DC76676c9",
@@ -2206,8 +2200,7 @@
         "NewPool": "0xD177De9f61611503377B4A16f60666a98152bCB2",
         "NFTPool": "0x06Bd22D16B6fB79380fF3DD49F0801a62eDD943b",
         "NitroPool": "0xd599c5B68D89213d2eEC9dDdfc92fFc9Ca1795ca",
-        "AlgebraPool": "0x60451B6aC55E3C5F0f3aeE31519670EcC62DC28f",
-        "doHardwork": false
+        "AlgebraPool": "0x60451B6aC55E3C5F0f3aeE31519670EcC62DC28f"
       },
       "camelotV3_LINK_ETH": {
         "Underlying": "0xF3557102C0cCBE07EE237B6eE70984f313886432",
@@ -2216,8 +2209,7 @@
         "NewPool": "0x959237003765A20b17796Cd40986263EAae806C7",
         "NFTPool": "0xf49926092302B0c18385a7069f98456dF0e5C8Fe",
         "NitroPool": "0xE651C9562F471bE685c1faE9EFaa0b5932974172",
-        "AlgebraPool": "0xe8795cF9c2309eCfe05Df028eB0F21D5D6e3a951",
-        "doHardwork": false
+        "AlgebraPool": "0xe8795cF9c2309eCfe05Df028eB0F21D5D6e3a951"
       },
       "camelotV3_LUSD_USDC": {
         "Underlying": "0x439e2D51BA26Fa062a1E4F0eDAA68F3B830Ca6da",
@@ -2226,8 +2218,7 @@
         "NewPool": "0x05D03EA122af00cA3823B2DF16b778cEb9A09fb4",
         "NFTPool": "0xaF3bFe781ffEe9f77867C556ab6A604E26FA678A",
         "NitroPool": "0xDcF6fD8BB2Fbd5D9241a1eF961a36f55DB1BBE47",
-        "AlgebraPool": "0x3d7412e255c04239285cAd57f82220D07D6874B0",
-        "doHardwork": false
+        "AlgebraPool": "0x3d7412e255c04239285cAd57f82220D07D6874B0"
       },
       "camelotV3_USDCe_USDT": {
         "Underlying": "0x61A7b3dae70D943C6f2eA9ba4FfD2fEcc6AF15E4",
@@ -2236,8 +2227,7 @@
         "NewPool": "0x3f522f0312B3A9F64b0f27b4D3767199978eE77d",
         "NFTPool": "0xD07F046a75Eac939488e40f52196dF43eDe28e00",
         "NitroPool": "0x3c81626E537E41f8b3C86F3da07F12A44DEe4a0e",
-        "AlgebraPool": "0x3AB5DD69950a948c55D1FBFb7500BF92B4Bd4C48",
-        "doHardwork": false
+        "AlgebraPool": "0x3AB5DD69950a948c55D1FBFb7500BF92B4Bd4C48"
       },
       "camelotV3_WBTC_ETH": {
         "Underlying": "0x56c87c3892d3917895bAe1A4cAcf6ea23a4DB84d",
@@ -2246,21 +2236,22 @@
         "NewPool": "0xB68Dd4331F2060e09858a727E089Da4fF5EeeC5B",
         "NFTPool": "0xA562803Aa6FC35C3f3AB2d42b4281fE462dfb620",
         "NitroPool": "0x773B2db85b0cb5f647F8708d783d04f659Be28e9",
-        "AlgebraPool": "0xd845f7D4f4DeB9Ff5bCf09D140Ef13718F6f6C71",
-        "doHardwork": false
+        "AlgebraPool": "0xd845f7D4f4DeB9Ff5bCf09D140Ef13718F6f6C71"
       },
       "jones_wjAURA": {
         "Underlying": "0xcB9295ac65De60373A25C18d2044D517ed5da8A9",
         "NewVault": "0x283D712e32B9465b1B9AFf14e902C75C8B999cF5",
         "NewStrategy": "0x540101eadF05e711c1a7AF259586C16126123759",
         "NewPool": "0x0D443205972Cf4222D3FEfB9023f542Eb7B33a9B",
-        "PoolId": "2"
+        "PoolId": "2",
+        "doHardwork": false
       },
       "magpie_DAI_main": {
         "Underlying": "0x0Fa7b744F18D8E8c3D61B64b110F25CC27E73055",
         "NewVault": "0xbF353C369Aa753b211374D7ecB286da499991C94",
         "NewStrategy": "0xAfef0501Cd1e1C00e095e0E1c6B178754aCEB150",
-        "NewPool": "0x06Df71bD8C9d3a8d5f2ce1111EE7F59379b72b46"
+        "NewPool": "0x06Df71bD8C9d3a8d5f2ce1111EE7F59379b72b46",
+        "doHardwork": false
       },
       "magpie_ETH_frxeth": {
         "Underlying": "0xe62880CC6872c9E9Fb1DDd73f400850fdaBE798D",
@@ -2272,25 +2263,29 @@
         "Underlying": "0x2977b0B54a76c2b56D32cef19f8ea83Cc766cFD9",
         "NewVault": "0x48ad8eE28af1057Cdec42080D3Fd57b3E877d59C",
         "NewStrategy": "0x143279F98F0d37725eB6C477495F482fef0CB3E4",
-        "NewPool": "0x6132bd5AE55873b2E42E4EeB80623B10022E9dc8"
+        "NewPool": "0x6132bd5AE55873b2E42E4EeB80623B10022E9dc8",
+        "doHardwork": false
       },
       "magpie_USDC_main": {
         "Underlying": "0xE5232c2837204ee66952f365f104C09140FB2E43",
         "NewVault": "0xc49bebC972f5390eE1EC8A69E4151838f59334Fc",
         "NewStrategy": "0xC68695d12b436617928aBb6FD53e3c6047C93c75",
-        "NewPool": "0xc9e36DC26354C5689fe2b17A3BC5F0fF88Fe5472"
+        "NewPool": "0xc9e36DC26354C5689fe2b17A3BC5F0fF88Fe5472",
+        "doHardwork": false
       },
       "magpie_USDT_main": {
         "Underlying": "0x85cEBD962861be410a777755dFa06914de6af003",
         "NewVault": "0x5Ef78a0966BD47dEd63034678083714b4DE6e013",
         "NewStrategy": "0x9496DE9d1C2a33F029D9fdD1b8b41126953b3f22",
-        "NewPool": "0xC2F4cB1dEA44278A78d59792dE7EF6fA38A51A46"
+        "NewPool": "0xC2F4cB1dEA44278A78d59792dE7EF6fA38A51A46",
+        "doHardwork": false
       },
       "magpie_WOM_mwom": {
         "Underlying": "0x59d8DCA660b71Ba97a16f781A40809a0fC350769",
         "NewVault": "0x05518Ea14e694E5eD6afc6085548cdE8c2eB6751",
         "NewStrategy": "0xB442627E420e210bC7267acAa7c7f6f4Ec843083",
-        "NewPool": "0x1FEC8450AD85E6b7C6377Da08B517cC0f0348E33"
+        "NewPool": "0x1FEC8450AD85E6b7C6377Da08B517cC0f0348E33",
+        "doHardwork": false
       },
       "lodestar_ARB": {
         "Underlying": "0x912CE59144191C1204E64559FE8253a0e49E6548",
