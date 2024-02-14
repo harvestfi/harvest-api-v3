@@ -28,7 +28,6 @@ const getApy = async (underlying, strategyAddr, reduction) => {
     methods: strategyMethods,
   } = seamlessStrategy
 
-  const seam = '0x1C7a460413dD4e964f96D8dFC56E7223cE88CD85'
   const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddr)
   const invested = new BigNumber(await strategyMethods.getInvestedBalance(strategyInstance))
   const supplied = new BigNumber(await strategyMethods.getSupplyBalance(strategyInstance))
@@ -54,41 +53,55 @@ const getApy = async (underlying, strategyAddr, reduction) => {
     .times(borrowedMul)
 
   const incentivesInstance = new web3.eth.Contract(incentivesAbi, incentivesAddress.mainnet)
-  const rewardDataSupply = await incentivesMethods.getRewardsData(
-    assetData.aTokenAddress,
-    seam,
-    incentivesInstance,
-  )
-  const rewardDataBorrow = await incentivesMethods.getRewardsData(
-    assetData.variableDebtTokenAddress,
-    seam,
-    incentivesInstance,
-  )
+  const rewardsList = await incentivesMethods.getRewardsList(incentivesInstance)
+  let usdPerYearSupply = new BigNumber(0)
+  let usdPerYearBorrow = new BigNumber(0)
+  for (let idx in rewardsList) {
+    const reward = rewardsList[idx]
+    const rewardDataSupply = await incentivesMethods.getRewardsData(
+      assetData.aTokenAddress,
+      reward,
+      incentivesInstance,
+    )
+    const rewardDataBorrow = await incentivesMethods.getRewardsData(
+      assetData.variableDebtTokenAddress,
+      reward,
+      incentivesInstance,
+    )
+    const now = Date.now() / 1000
+    if (rewardDataSupply[3] < now && rewardDataBorrow[3] < now) {
+      continue
+    } else if (rewardDataSupply[3] < now) {
+      rewardDataSupply[1] = '0'
+    } else if (rewardDataBorrow[3] < now) {
+      rewardDataBorrow[1] = '0'
+    }
+    const rewardRateSupply = new BigNumber(rewardDataSupply[1])
+    const rewardRateBorrow = new BigNumber(rewardDataBorrow[1])
+    const secondsPerYear = 3600 * 24 * 365.25
+    const rewardPerYearSupply = rewardRateSupply.times(secondsPerYear).div(1e18)
+    const rewardPerYearBorrow = rewardRateBorrow.times(secondsPerYear).div(1e18)
+    const rewardPrice = await getTokenPrice(reward, CHAIN_IDS.BASE)
+    usdPerYearSupply = usdPerYearSupply.plus(rewardPerYearSupply.times(rewardPrice))
+    usdPerYearBorrow = usdPerYearBorrow.plus(rewardPerYearBorrow.times(rewardPrice))
+  }
 
-  const rewardRateSupply = new BigNumber(rewardDataSupply[1])
-  const rewardRateBorrow = new BigNumber(rewardDataBorrow[1])
-  const secondsPerYear = 3600 * 24 * 365.25
-  const rewardPerYearSupply = rewardRateSupply.times(secondsPerYear).div(1e18)
-  const rewardPerYearBorrow = rewardRateBorrow.times(secondsPerYear).div(1e18)
   const supplyToken = new web3.eth.Contract(tokenAbi, assetData.aTokenAddress)
   const borrowToken = new web3.eth.Contract(tokenAbi, assetData.variableDebtTokenAddress)
   const totalSupplySupply = new BigNumber(await getTotalSupply(supplyToken))
   const totalSupplyBorrow = new BigNumber(await getTotalSupply(borrowToken))
 
   const underlyingPrice = await getTokenPrice(underlying, CHAIN_IDS.BASE)
-  const rewardPrice = await getTokenPrice(seam, CHAIN_IDS.BASE)
 
   const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
   const underlyingDecimals = await getDecimals(underlyingInstance)
 
-  const rewardAPRSupply = rewardPerYearSupply
-    .times(rewardPrice)
+  const rewardAPRSupply = usdPerYearSupply
     .div(totalSupplySupply.div(10 ** underlyingDecimals).times(underlyingPrice))
     .times(100)
     .times(reduction)
     .times(suppliedMul)
-  const rewardAPRBorrow = rewardPerYearBorrow
-    .times(rewardPrice)
+  const rewardAPRBorrow = usdPerYearBorrow
     .div(totalSupplyBorrow.div(10 ** underlyingDecimals).times(underlyingPrice))
     .times(100)
     .times(reduction)

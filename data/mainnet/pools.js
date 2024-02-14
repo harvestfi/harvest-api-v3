@@ -5,6 +5,32 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'seamless_wstETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.seamless_wstETH.NewPool,
+    collateralAddress: addresses.BASE.V2.seamless_wstETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_wstETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH </a>to Seamless, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.esSEAM}" target="_blank" rel="noopener noreferrer">esSEAM</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_cbETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH</a>.
+      </p>
+      <p> Note that the <b>esSEAM</b> rewards are released through a vesting schedule with a year's duration.
+        Due to this mechanic, it might take some time for the presented APY to come to fruition.
+        More about <b>esSEAM</b> can be found in the 
+        <a href="https://docs.seamlessprotocol.com/governance/escrow-seam-esseam" target="_blank" rel="noopener noreferrer">Seamless Docs</a>
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'radpie_ARB',
     type: POOL_TYPES.INCENTIVE,
@@ -196,9 +222,14 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_cbETH.Underlying}" target="_blank" rel="noopener noreferrer"> cbETH </a>to Seamless, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.SEAM}" target="_blank" rel="noopener noreferrer">SEAM</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.esSEAM}" target="_blank" rel="noopener noreferrer">esSEAM</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_cbETH.Underlying}" target="_blank" rel="noopener noreferrer"> cbETH</a>.
+      </p>
+      <p> Note that the <b>esSEAM</b> rewards are released through a vesting schedule with a year's duration.
+        Due to this mechanic, it might take some time for the presented APY to come to fruition.
+        More about <b>esSEAM</b> can be found in the 
+        <a href="https://docs.seamlessprotocol.com/governance/escrow-seam-esseam" target="_blank" rel="noopener noreferrer">Seamless Docs</a>
       </p>
     </div>
    `,
@@ -217,9 +248,14 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Seamless, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.SEAM}" target="_blank" rel="noopener noreferrer">SEAM</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.esSEAM}" target="_blank" rel="noopener noreferrer">esSEAM</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> DAI</a>.
+      </p>
+      <p> Note that the <b>esSEAM</b> rewards are released through a vesting schedule with a year's duration.
+        Due to this mechanic, it might take some time for the presented APY to come to fruition.
+        More about <b>esSEAM</b> can be found in the 
+        <a href="https://docs.seamlessprotocol.com/governance/escrow-seam-esseam" target="_blank" rel="noopener noreferrer">Seamless Docs</a>
       </p>
     </div>
    `,
@@ -238,9 +274,14 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to Seamless, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.SEAM}" target="_blank" rel="noopener noreferrer">SEAM</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.esSEAM}" target="_blank" rel="noopener noreferrer">esSEAM</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+      <p> Note that the <b>esSEAM</b> rewards are released through a vesting schedule with a year's duration.
+        Due to this mechanic, it might take some time for the presented APY to come to fruition.
+        More about <b>esSEAM</b> can be found in the 
+        <a href="https://docs.seamlessprotocol.com/governance/escrow-seam-esseam" target="_blank" rel="noopener noreferrer">Seamless Docs</a>
       </p>
     </div>
    `,
@@ -259,9 +300,14 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> USDbC </a>to Seamless, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.SEAM}" target="_blank" rel="noopener noreferrer">SEAM</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.esSEAM}" target="_blank" rel="noopener noreferrer">esSEAM</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> USDbC</a>.
+      </p>
+      <p> Note that the <b>esSEAM</b> rewards are released through a vesting schedule with a year's duration.
+        Due to this mechanic, it might take some time for the presented APY to come to fruition.
+        More about <b>esSEAM</b> can be found in the 
+        <a href="https://docs.seamlessprotocol.com/governance/escrow-seam-esseam" target="_blank" rel="noopener noreferrer">Seamless Docs</a>
       </p>
     </div>
    `,
@@ -280,9 +326,14 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Seamless, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.SEAM}" target="_blank" rel="noopener noreferrer">SEAM</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.esSEAM}" target="_blank" rel="noopener noreferrer">esSEAM</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.seamless_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+      <p> Note that the <b>esSEAM</b> rewards are released through a vesting schedule with a year's duration.
+        Due to this mechanic, it might take some time for the presented APY to come to fruition.
+        More about <b>esSEAM</b> can be found in the 
+        <a href="https://docs.seamlessprotocol.com/governance/escrow-seam-esseam" target="_blank" rel="noopener noreferrer">Seamless Docs</a>
       </p>
     </div>
    `,
