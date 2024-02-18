@@ -2228,7 +2228,8 @@
         "NewPool": "0x3f522f0312B3A9F64b0f27b4D3767199978eE77d",
         "NFTPool": "0xD07F046a75Eac939488e40f52196dF43eDe28e00",
         "NitroPool": "0x3c81626E537E41f8b3C86F3da07F12A44DEe4a0e",
-        "AlgebraPool": "0x3AB5DD69950a948c55D1FBFb7500BF92B4Bd4C48"
+        "AlgebraPool": "0x3AB5DD69950a948c55D1FBFb7500BF92B4Bd4C48",
+        "doHardwork": false
       },
       "camelotV3_WBTC_ETH": {
         "Underlying": "0x56c87c3892d3917895bAe1A4cAcf6ea23a4DB84d",
