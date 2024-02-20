@@ -3305,6 +3305,7 @@ module.exports = {
     },
   },
   camelot_UWU_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/uwu.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/usdc.svg', './icons/uwu.svg'],

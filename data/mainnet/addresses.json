@@ -2117,7 +2117,8 @@
         "NewStrategy": "0xdC76a583501B4eb56d57EF27245eAf90089561dA",
         "NewPool": "0x475aB1157F8E26838710Ed3F6d4df302fE61b19E",
         "NFTPool": "0x4B51d227db5d0508320479532618383dA81A9539",
-        "NitroPool": "0x0fB1ADe48A1f567Ba31D3d3CAda701E0705D5077"
+        "NitroPool": "0x0fB1ADe48A1f567Ba31D3d3CAda701E0705D5077",
+        "doHardwork": false
       },
       "lodestar_ETH": {
         "Underlying": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
