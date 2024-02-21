@@ -5,6 +5,166 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelotV3_MAGIC_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.AlgebraPool, true],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity?token1=0x539bdE0d7Dbd336b79148AA742883198BBF60342&token2=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelotV3_PENDLE_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.AlgebraPool, true],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity?token1=0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8&token2=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelotV3_RDNT_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.AlgebraPool, true],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity?token1=0x3082CC23568eA640225c2467653dB90e9250AaA0&token2=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelotV3_USDC_USDT',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.AlgebraPool, true],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity?token1=0xaf88d065e77c8cC2239327C5EDb3A432268e5831&token2=0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Stable" options.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'camelotV3_wstETH_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CAMELOT,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.AlgebraPool, true],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault deposits 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> in to a Camelot farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.GRAIL}" target="_blank" rel="noopener noreferrer">GRAIL</a>, 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a>. The earned xGRAIL is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault}" target="_blank" rel="noopener noreferrer">fxGRAIL</a> where it is earning auto-compounding xGRAIL rewards. The fxGRAIL rewards can be claimed with the "Claim All" button.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
+      <a href="https://app.camelot.exchange/liquidity?token1=0x5979D7b546E38E414F7E9822514be443A4800529&token2=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Pegged" options.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'seamless_wstETH',
     type: POOL_TYPES.INCENTIVE,
@@ -1107,7 +1267,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ARB_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
-      <a href="https://app.camelot.exchange/liquidity?token1=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&token2=0x912CE59144191C1204E64559FE8253a0e49E6548&type=v3&position=lp" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
+      <a href="https://app.camelot.exchange/liquidity?token1=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&token2=0x912CE59144191C1204E64559FE8253a0e49E6548&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
       </p>
     </div>
    `,
@@ -1139,7 +1299,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_DAI_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
-      <a href="https://app.camelot.exchange/liquidity?token1=0xaf88d065e77c8cC2239327C5EDb3A432268e5831&token2=0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1&type=v3&position=lp" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
+      <a href="https://app.camelot.exchange/liquidity?token1=0xaf88d065e77c8cC2239327C5EDb3A432268e5831&token2=0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
       </p>
     </div>
    `,
@@ -1171,7 +1331,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_GMX_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
-      <a href="https://app.camelot.exchange/liquidity?token1=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&token2=0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a&type=v3&position=lp" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
+      <a href="https://app.camelot.exchange/liquidity?token1=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&token2=0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
       </p>
     </div>
    `,
@@ -1203,7 +1363,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
-      <a href="https://app.camelot.exchange/liquidity?token1=0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8&token2=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&type=v3&position=lp" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
+      <a href="https://app.camelot.exchange/liquidity?token1=0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8&token2=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
       </p>
     </div>
    `,
@@ -1235,7 +1395,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_LINK_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
-      <a href="https://app.camelot.exchange/liquidity?token1=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&token2=0xf97f4df75117a78c1A5a0DBb814Af92458539FB4&type=v3&position=lp" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
+      <a href="https://app.camelot.exchange/liquidity?token1=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&token2=0xf97f4df75117a78c1A5a0DBb814Af92458539FB4&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
       </p>
     </div>
    `,
@@ -1267,7 +1427,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
-      <a href="https://app.camelot.exchange/liquidity?token1=0x93b346b6BC2548dA6A1E7d98E9a421B42541425b&token2=0xaf88d065e77c8cC2239327C5EDb3A432268e5831&type=v3&position=lp" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Stable" options.
+      <a href="https://app.camelot.exchange/liquidity?token1=0x93b346b6BC2548dA6A1E7d98E9a421B42541425b&token2=0xaf88d065e77c8cC2239327C5EDb3A432268e5831&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Stable" options.
       </p>
     </div>
    `,
@@ -1299,7 +1459,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_USDCe_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
-      <a href="https://app.camelot.exchange/liquidity?token1=0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9&token2=0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8&type=v3&position=lp" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Stable" options.
+      <a href="https://app.camelot.exchange/liquidity?token1=0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9&token2=0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Stable" options.
       </p>
     </div>
    `,
@@ -1331,7 +1491,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
-      <a href="https://app.camelot.exchange/liquidity?token1=0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f&token2=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&type=v3&position=lp" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
+      <a href="https://app.camelot.exchange/liquidity?token1=0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f&token2=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
       </p>
     </div>
    `,
@@ -1363,7 +1523,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
-      <a href="https://app.camelot.exchange/liquidity?token1=0x912CE59144191C1204E64559FE8253a0e49E6548&token2=0xaf88d065e77c8cC2239327C5EDb3A432268e5831&type=v3&position=lp" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
+      <a href="https://app.camelot.exchange/liquidity?token1=0x912CE59144191C1204E64559FE8253a0e49E6548&token2=0xaf88d065e77c8cC2239327C5EDb3A432268e5831&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
       </p>
     </div>
    `,
@@ -1395,7 +1555,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
-      <a href="https://app.camelot.exchange/liquidity?token1=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&token2=0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9&type=v3&position=lp" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
+      <a href="https://app.camelot.exchange/liquidity?token1=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&token2=0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
       </p>
     </div>
    `,
@@ -1427,7 +1587,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Gamma Vault tokens</a> by supplying liquidity on 
-      <a href="https://app.camelot.exchange/liquidity?token1=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&token2=0xaf88d065e77c8cC2239327C5EDb3A432268e5831&type=v3&position=lp" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
+      <a href="https://app.camelot.exchange/liquidity?token1=0x82aF49447D8a07e3bd95BD0d56f35241523fBab1&token2=0xaf88d065e77c8cC2239327C5EDb3A432268e5831&type=v3&mode=auto" target="_blank" rel="noopener noreferrer">Camelot</a>, using the "Auto", "GAMMA" and "Narrow" options.
       </p>
     </div>
    `,

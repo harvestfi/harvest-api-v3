@@ -2471,6 +2471,51 @@
         "NewPool": "0x593d275b14a65C40F02c3A60056Fc701e0bC7FCa",
         "Rewarder": "0x63614e576F8295Aa8Ac2c8D3AE8f261bE4E9484b",
         "PoolId": 6
+      },
+      "camelotV3_MAGIC_ETH": {
+        "Underlying": "0x6F8401bd348B3f8cDabc8C81dbD0Ac255abCB4e5",
+        "NewVault": "0xcC24852806165319252205E2ED0b5985D7d79164",
+        "NewStrategy": "0x1F76596ceA4A2AD5687221fb8e942f7818B1D595",
+        "NewPool": "0x59223C5eE37573B8F7c8a55b8a26cf35b5F46535",
+        "NFTPool": "0xFc9708721166af67881F528A10dd8ddE5a755CF2",
+        "NitroPool": "0xD610523fb01f2C5d17aF11F864F0558B07FF6EF1",
+        "AlgebraPool": "0x1106dB7165A8d4a8559B441eCdEe14a5d5070DbC"
+      },
+      "camelotV3_PENDLE_ETH": {
+        "Underlying": "0x05F3ABD2B008e8b36a410F3C42E703cB776CeCD0",
+        "NewVault": "0x0B41D4728446FB4600c43b8fC468A245C092324a",
+        "NewStrategy": "0xFB76FA70B5D70c5eB8E4465B078D40C7a75E1a83",
+        "NewPool": "0xEbA3200E4B4F610877E40E33dA8ca91B67A88d3b",
+        "NFTPool": "0x2d1334195Ce78a4dCFe28005f8275b9703129E75",
+        "NitroPool": "0x32535535d4C5442ddFD9B7d14CEf458F4B94A4ec",
+        "AlgebraPool": "0xE461f84C3fE6BCDd1162Eb0Ef4284F3bB6e4CAD3"
+      },
+      "camelotV3_RDNT_ETH": {
+        "Underlying": "0x5E2a78bAcDEE3b34aCc1242Dbc2daCEf794083Ea",
+        "NewVault": "0x196a84018cAF01D2B43d87B69e0D8e839EAE9604",
+        "NewStrategy": "0x0A71eF66719ff0AE2A553Ef048888132E348a0bD",
+        "NewPool": "0xEB8343a6F54c390027c50E32E781F02efbB5068F",
+        "NFTPool": "0xDBD2090F24672594A95a65eFEdC319D0aB781F14",
+        "NitroPool": "0x858826F811dD2a4ee037462989f84de8257CaDCe",
+        "AlgebraPool": "0xD51F7383C906cfD995d7f24729F37933Ff264Fa6"
+      },
+      "camelotV3_USDC_USDT": {
+        "Underlying": "0xf662d78C79F6a3a6Fa70160fcE1085A9218D114e",
+        "NewVault": "0x64769B9469A3F859320aD1811f08AbF6ACA5E991",
+        "NewStrategy": "0xeB94B01cf9EcdFe7E4fF298D1121077B7dA97260",
+        "NewPool": "0x0b7c1D6c844EdFfd6910cDbEA93bbFe5eE5Bead5",
+        "NFTPool": "0x72ce5abAa4293447fa9d4B612922E50681ce8baC",
+        "NitroPool": "0xD5a4D419b48aE61A3974c2F86D9B494C9Ceb7801",
+        "AlgebraPool": "0xa17aFCAb059F3C6751F5B64347b5a503C3291868"
+      },
+      "camelotV3_wstETH_ETH": {
+        "Underlying": "0x3D53aC3Abec01827cAaE5Bc934d46b171cEa2206",
+        "NewVault": "0x6Cb48c28E66e7E5C028c489b901Ad89d9E8f78b9",
+        "NewStrategy": "0xf2fbeaF11a32e5A8f04fBB93ec330be360a81Aa6",
+        "NewPool": "0x7C9D94192afeE86CB59Cb220f4aEdaEFd7FFb4AC",
+        "NFTPool": "0x9B65AbBB9Ce32f44232bb2eA21d1fa7d8bc0E1c5",
+        "NitroPool": "0xd505758A31cBfBDeCc1DE616086C2696e970a7cD",
+        "AlgebraPool": "0xdEb89DE4bb6ecf5BFeD581EB049308b52d9b2Da7"
       }
     }
   },
