@@ -2516,6 +2516,38 @@
         "NFTPool": "0x9B65AbBB9Ce32f44232bb2eA21d1fa7d8bc0E1c5",
         "NitroPool": "0xd505758A31cBfBDeCc1DE616086C2696e970a7cD",
         "AlgebraPool": "0xdEb89DE4bb6ecf5BFeD581EB049308b52d9b2Da7"
+      },
+      "lodestarHodl_MAGIC": {
+        "Underlying": "0x539bdE0d7Dbd336b79148AA742883198BBF60342",
+        "NewVault": "0x29C53Aeb23F5927ae97d85389Fee9628CfF29eea",
+        "NewStrategy": "0x8077889D7aaaf96F953577aBEE6Fb7fcbCD7cC08",
+        "NewPool": "0x97bfE23CAD9bdf55D7Cb9635d706582c0aD12146",
+        "cToken": "0xf21Ef887CB667f84B8eC5934C1713A7Ade8c38Cf",
+        "doHardwork": "noSim"
+      },
+      "lodestarHodl_PENDLE": {
+        "Underlying": "0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8",
+        "NewVault": "0x2C136356A46681ded6BC37A5B49fbE7574f37743",
+        "NewStrategy": "0xc7b4CDa26E83745618FC30424D61fF9A84553CD9",
+        "NewPool": "0x159c4A356c398fFb1C127A9794FDACe51307b07E",
+        "cToken": "0x39c27DfdC9364a976926a820c8CAA8Fd035D0727",
+        "doHardwork": "noSim"
+      },
+      "lodestar_MAGIC": {
+        "Underlying": "0x539bdE0d7Dbd336b79148AA742883198BBF60342",
+        "NewVault": "0x36e53BFC4A8c306B8297A4A79fB2aC5CbFa391FB",
+        "NewStrategy": "0xe0721Ef8fbA63a8AF593FCD925dDF1cD2a23d012",
+        "NewPool": "0x20803A2f9c6EEbb8B01Fa4068a9DAF6d204e2590",
+        "cToken": "0xf21Ef887CB667f84B8eC5934C1713A7Ade8c38Cf",
+        "doHardwork": "noSim"
+      },
+      "lodestar_PENDLE": {
+        "Underlying": "0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8",
+        "NewVault": "0xc76387330F1614D7e10e045cfcc7C9f7Ff2AdC1F",
+        "NewStrategy": "0x4C7C9e2Eef3741a0c26B7505EfD0B3fA0a57958E",
+        "NewPool": "0x67C82F7b3A2947ab57Df12bD0c6e5E918ea2fab5",
+        "cToken": "0x39c27DfdC9364a976926a820c8CAA8Fd035D0727",
+        "doHardwork": "noSim"
       }
     }
   },

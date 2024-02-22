@@ -6,6 +6,96 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'lodestarHodl_MAGIC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fLODE'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.Underlying}" target="_blank" rel="noopener noreferrer">MAGIC</a> to Lodestar, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned ARB is converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.Underlying}" target="_blank" rel="noopener noreferrer">MAGIC</a>. The earned LODE is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault}" target="_blank" rel="noopener noreferrer">fLODE</a> where it is earning auto-compounding LODE rewards. The fLODE rewards can be claimed with the "Claim All" button.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'lodestarHodl_PENDLE',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM', 'fLODE'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.Underlying}" target="_blank" rel="noopener noreferrer">PENDLE</a> to Lodestar, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned ARB is converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.Underlying}" target="_blank" rel="noopener noreferrer">PENDLE</a>. The earned LODE is deposited in to 
+       <a href="https://app.harvest.finance/arbitrum/${addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault}" target="_blank" rel="noopener noreferrer">fLODE</a> where it is earning auto-compounding LODE rewards. The fLODE rewards can be claimed with the "Claim All" button.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'lodestar_MAGIC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lodestar_MAGIC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_MAGIC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_MAGIC.Underlying}" target="_blank" rel="noopener noreferrer">MAGIC</a> to Lodestar, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_MAGIC.Underlying}" target="_blank" rel="noopener noreferrer">MAGIC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'lodestar_PENDLE',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.lodestar_PENDLE.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_PENDLE.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_PENDLE.Underlying}" target="_blank" rel="noopener noreferrer">PENDLE</a> to Lodestar, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_PENDLE.Underlying}" target="_blank" rel="noopener noreferrer">PENDLE</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelotV3_MAGIC_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
