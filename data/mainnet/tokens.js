@@ -9111,6 +9111,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'UST', 'USDT'],
   },
   UniV3_USDC_USDT: {
+    inactive: true,
     isSingleAssetWithdrawalAllowed: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/univ3.svg'],
