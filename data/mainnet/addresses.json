@@ -1730,6 +1730,27 @@
         "NewPool": "0x7616963C1e0e70E672940B17080CA91f28bC104d",
         "RewardPool": "0x83C5022745B2511Bd199687a42D27BEFd025A9A9",
         "doHardwork": false
+      },
+      "gammaMerkl_QS_ETH_USDC": {
+        "Underlying": "0x3974FbDC22741A1632E024192111107b202F214f",
+        "NewVault": "0x4500f2B359E030AB15e90F8Ae319420e43c81270",
+        "NewStrategy": "0xB7734b67f28AE94Db66eE93d477Dff02c08b0Cf0",
+        "NewPool": "0x70E05ACd24Df08E26545C2280562da28FEC81893",
+        "PoolAddress": "0xa6AeDF7c4Ed6e821E67a6BfD56FD1702aD9a9719"
+      },
+      "gammaMerkl_QS_ETH_USDT": {
+        "Underlying": "0x5928f9f61902b139e1c40cBa59077516734ff09f",
+        "NewVault": "0xD3C2586f65261a6f0f6a74a18d3122D9B2dcc05C",
+        "NewStrategy": "0x239FF91e9736C37d602f4eceF3Da97632B55eD3B",
+        "NewPool": "0xD735aa495d454F1d3fD61c59b86DF3B615B087CE",
+        "PoolAddress": "0x9CEff2F5138fC59eB925d270b8A7A9C02a1810f2"
+      },
+      "gammaMerkl_QS_MATIC_USDT": {
+        "Underlying": "0x598cA33b7F5FAB560ddC8E76D94A4b4AA52566d7",
+        "NewVault": "0xB0EAc31f7F2984d8Ac70b32785cfFcc0c0BC7690",
+        "NewStrategy": "0xCb0A2089eA7D4CfBC6ebE4E62a38337E8c1D7F16",
+        "NewPool": "0x83719a5bBE41A09d1d6F534E8d432fa3c3928b43",
+        "PoolAddress": "0x5b41EEDCfC8e0AE47493d4945Aa1AE4fe05430ff"
       }
     }
   },
