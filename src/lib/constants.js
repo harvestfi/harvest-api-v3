@@ -216,6 +216,7 @@ const DEXSCREENER_API_URL = 'https://api.dexscreener.com/latest/dex/tokens'
 const CURVE_FINANCE_API_URL = 'https://api.curve.fi/api'
 
 const QUICKSWAP_GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/'
+const MERKL_ENDPOINT = 'https://api.angle.money/v2/merkl'
 
 const DEBUG_MODE = process.env.DEBUG_MODE
 
@@ -296,6 +297,7 @@ module.exports = {
   STAKEWISE_API_URLS,
   APE_API_URL,
   QUICKSWAP_GAMMA_ENDPOINT,
+  MERKL_ENDPOINT,
   ARBITRUM_RPC_URL,
   CONVEX_API_URLS,
   COINGECKO_API_KEY,

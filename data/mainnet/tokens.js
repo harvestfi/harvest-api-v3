@@ -2070,7 +2070,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   quickGamma_wstETH_ETH: {
-    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg'],
@@ -2088,10 +2087,11 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.quickGamma_wstETH_ETH.MasterChef,
           addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying,
+          addresses.MATIC.V2.quickGamma_wstETH_ETH.PoolAddress,
+          CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
         ],
       },
@@ -2099,7 +2099,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK'],
   },
   quickGamma_WBTC_USDC_narrow: {
-    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/wbtc.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/quick.svg'],
@@ -2117,10 +2116,11 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.MasterChef,
           addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying,
+          addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.PoolAddress,
+          CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
         ],
       },
@@ -2128,7 +2128,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK'],
   },
   quickGamma_WBTC_ETH_narrow: {
-    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg'],
@@ -2146,10 +2145,11 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.MasterChef,
           addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying,
+          addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.PoolAddress,
+          CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
         ],
       },
@@ -2157,7 +2157,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK'],
   },
   quickGamma_USDC_USDT: {
-    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -2175,10 +2174,11 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.quickGamma_USDC_USDT.MasterChef,
           addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying,
+          addresses.MATIC.V2.quickGamma_USDC_USDT.PoolAddress,
+          CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
         ],
       },
@@ -2186,7 +2186,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_USDC_DAI: {
-    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/dai.svg'],
     apyIconUrls: ['./icons/quick.svg'],
@@ -2204,10 +2203,11 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.quickGamma_USDC_DAI.MasterChef,
           addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying,
+          addresses.MATIC.V2.quickGamma_USDC_DAI.PoolAddress,
+          CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
         ],
       },
@@ -6240,7 +6240,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'BAL', 'AURA'],
   },
   quickGamma_MATIC_ETH_narrow: {
-    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -6258,10 +6257,11 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.MasterChef,
           addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying,
+          addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.PoolAddress,
+          CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
         ],
       },
@@ -6298,7 +6298,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_MATIC_USDC_narrow: {
-    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -6316,10 +6315,11 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.MasterChef,
           addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying,
+          addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.PoolAddress,
+          CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
         ],
       },
@@ -6356,7 +6356,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK', 'WMATIC'],
   },
   quickGamma_USDC_ETH_narrow: {
-    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
@@ -6374,10 +6373,11 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.MasterChef,
           addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying,
+          addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.PoolAddress,
+          CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
         ],
       },

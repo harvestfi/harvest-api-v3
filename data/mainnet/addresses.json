@@ -1498,8 +1498,7 @@
         "NewVault": "0x506337cc631726A21788B9fDFb6BE6292bA7A835",
         "NewStrategy": "0x20D5A2a81a2b23EE3D4ac94EB356f962f037e65A",
         "NewPool": "0x55740C3a15394EBb635bdAfcbD7Fa8E285122606",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
-        "doHardwork": false
+        "PoolAddress": "0x479e1B71A702a595e19b6d5932CD5c863ab57ee0"
       },
       "quickGamma_MATIC_ETH_wide": {
         "Underlying": "0x81Cec323BF8C4164c66ec066F53cc053A535f03D",
@@ -1514,8 +1513,7 @@
         "NewVault": "0xa5422F737F24b10A0928D5E7f6cf404D077e1CD1",
         "NewStrategy": "0x713613550CA9dbE91fAc20fB0e8fa33F1fb5822e",
         "NewPool": "0xe0F5000e14367930A4781d2cEDa450888C7de163",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
-        "doHardwork": false
+        "PoolAddress": "0xAE81FAc689A1b4b1e06e7ef4a2ab4CD8aC0A087D"
       },
       "quickGamma_MATIC_USDC_wide": {
         "Underlying": "0x4A83253e88e77E8d518638974530d0cBbbF3b675",
@@ -1530,8 +1528,7 @@
         "NewVault": "0x548E84517b2891E0316f604f4f5326a306F1830e",
         "NewStrategy": "0xD5F0e427aeD0eB51077BA4b078e6431058526Dcb",
         "NewPool": "0xD94c25aD1C9F6E39a20E7Ec598B4a88062bCa268",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
-        "doHardwork": false
+        "PoolAddress": "0x55CAaBB0d2b704FD0eF8192A7E35D8837e678207"
       },
       "quickGamma_USDC_ETH_wide": {
         "Underlying": "0x6077177d4c41E114780D9901C9b5c784841C523f",
@@ -1546,40 +1543,35 @@
         "NewVault": "0xFDAf1446978F4c221d29967143d5d0Cdf342bb25",
         "NewStrategy": "0x4976E487Bc36f5dCc1AB2048EA299dE16F6c61c5",
         "NewPool": "0x7Cd65Fe0d765Ade3d36bf47FCEDf815fBE675200",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
-        "doHardwork": false
+        "PoolAddress": "0xe7E0eB9F6bCcCfe847fDf62a3628319a092F11a2"
       },
       "quickGamma_USDC_USDT": {
         "Underlying": "0x795f8c9B0A0Da9Cd8dea65Fc10f9B57AbC532E58",
         "NewVault": "0x261923287De9f91b855406DFC6F30FEe4A5825fa",
         "NewStrategy": "0x7ca8D398C08f06D55C062F78E3ed8F32Fef15530",
         "NewPool": "0xcB78B76238B19EF54733fD3Ec0f7172B27911BFF",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
-        "doHardwork": false
+        "PoolAddress": "0x7B925e617aefd7FB3a93Abe3a701135D7a1Ba710"
       },
       "quickGamma_WBTC_ETH_narrow": {
         "Underlying": "0x4B9e26a02121a1C541403a611b542965Bd4b68Ce",
         "NewVault": "0x43483723c6b1A8d24a9DbaEEbce02b48adE78951",
         "NewStrategy": "0x0A4Cd298782Aa6115d61e2D89905A49942Ec3A11",
         "NewPool": "0x6f73274dF7BDfAFB57A47735Da9A51728daBDC38",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
-        "doHardwork": false
+        "PoolAddress": "0xAC4494e30a85369e332BDB5230d6d694d4259DbC"
       },
       "quickGamma_WBTC_USDC_narrow": {
         "Underlying": "0x3f35705479d9d77c619b2aAC9dd7a64e57151506",
         "NewVault": "0xdB16a05C8B58D7385bC6fe4d9D5e6E1f261cdF46",
         "NewStrategy": "0x6639C4e591BCeC23BDc56e6e265ddc3ce1B58814",
         "NewPool": "0xb3117DD0aE35Ba2Bf4E1f1b21f3016E8b9fB0c11",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
-        "doHardwork": false
+        "PoolAddress": "0xA5CD8351Cbf30B531C7b11B0D9d3Ff38eA2E280f"
       },
       "quickGamma_wstETH_ETH": {
         "Underlying": "0x6A6d4d17c2E38D076264081676FfCDDDF32C9715",
         "NewVault": "0x466506EB97bDdF4B4b2B50979E251bF92FB26799",
         "NewStrategy": "0x4800A07DcbA4d5D85adcf6B95Ea8464A8F380368",
         "NewPool": "0x1B60B0bE815C317B166b003EAa755be23f4788a9",
-        "MasterChef": "0x20ec0d06f447d550fc6edee42121bc8c1817b97d",
-        "doHardwork": false
+        "PoolAddress": "0x370404A2A57eDfbEaF16Dc8ef8E2d1B0a2A9da15"
       },
       "curve_3CRV": {
         "Underlying": "0xE7a24EF0C5e95Ffb0f6684b813A78F2a3AD7D171",
