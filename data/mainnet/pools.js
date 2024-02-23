@@ -1735,7 +1735,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
-      <a href="https://app.gamma.xyz/vault/qi/polygon/details/wbtc-usdc-narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/wbtc-usdc.e-narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
@@ -1794,7 +1794,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
-      <a href="https://app.gamma.xyz/vault/qi/polygon/details/usdc-usdt-stable" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/usdc.e-usdt-stable" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
@@ -1823,7 +1823,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
-      <a href="https://app.gamma.xyz/vault/qi/polygon/details/usdc-dai-stable" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/usdc.e-dai-stable" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
@@ -4650,7 +4650,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
-      <a href="https://app.gamma.xyz/vault/qi/polygon/details/wmatic-usdc-narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/wmatic-usdc.e-narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
@@ -4680,7 +4680,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
-      <a href="https://app.gamma.xyz/vault/qi/polygon/details/wmatic-usdc-wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/wmatic-usdc.e-wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
@@ -4710,7 +4710,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
-      <a href="https://app.gamma.xyz/vault/qi/polygon/details/usdc-weth-narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/usdc.e-weth-narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,
@@ -4740,7 +4740,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
-      <a href="https://app.gamma.xyz/vault/qi/polygon/details/usdc-weth-wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/usdc.e-weth-wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
       </p>
     </div>
    `,

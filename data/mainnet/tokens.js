@@ -2104,7 +2104,7 @@ module.exports = {
     apyIconUrls: ['./icons/quick.svg'],
     apyTokenSymbols: ['dQUICK'],
     subLabel: 'Narrow',
-    tokenNames: ['WBTC', 'USDC'],
+    tokenNames: ['WBTC', 'USDC.e'],
     platform: ['Quickswap', 'Gamma'],
     tags: ['Advanced'],
     tokenAddress: addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying,
@@ -2162,7 +2162,7 @@ module.exports = {
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
     apyTokenSymbols: ['dQUICK', 'WMATIC'],
     subLabel: 'Stable',
-    tokenNames: ['USDC', 'USDT'],
+    tokenNames: ['USDC.e', 'USDT'],
     platform: ['Quickswap', 'Gamma'],
     tags: ['Advanced', 'Stable'],
     tokenAddress: addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying,
@@ -2191,7 +2191,7 @@ module.exports = {
     apyIconUrls: ['./icons/quick.svg'],
     apyTokenSymbols: ['dQUICK'],
     subLabel: 'Stable',
-    tokenNames: ['USDC', 'DAI'],
+    tokenNames: ['USDC.e', 'DAI'],
     platform: ['Quickswap', 'Gamma'],
     tags: ['Advanced', 'Stable'],
     tokenAddress: addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying,
@@ -3186,7 +3186,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.pearl_USDC_USDR.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.pearl_USDC_USDR.Underlying, 'USDC_polygon', 'USDR_polygon'],
+      params: [addresses.MATIC.V2.pearl_USDC_USDR.Underlying, 'USDCe_polygon', 'USDR_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -3967,12 +3967,12 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'COMP'],
   },
-  USDC_polygon: {
+  USDCe_polygon: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/comp.svg'],
     apyTokenSymbols: ['COMP'],
     logoUrl: ['./icons/usdc.svg'],
-    tokenNames: ['USDC'],
+    tokenNames: ['USDC.e'],
     platform: ['Compound'],
     tags: ['Beginners', 'Stable'],
     tokenAddress: addresses.MATIC.V2.USDC.Underlying,
@@ -6303,7 +6303,7 @@ module.exports = {
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
     apyTokenSymbols: ['dQUICK', 'WMATIC'],
     subLabel: 'Narrow',
-    tokenNames: ['MATIC', 'USDC'],
+    tokenNames: ['MATIC', 'USDC.e'],
     platform: ['Quickswap', 'Gamma'],
     tags: ['Advanced'],
     tokenAddress: addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying,
@@ -6333,7 +6333,7 @@ module.exports = {
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
     apyTokenSymbols: ['dQUICK', 'WMATIC'],
     subLabel: 'Wide',
-    tokenNames: ['MATIC', 'USDC'],
+    tokenNames: ['MATIC', 'USDC.e'],
     platform: ['Quickswap', 'Gamma'],
     tags: ['Advanced'],
     tokenAddress: addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying,
@@ -6361,7 +6361,7 @@ module.exports = {
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
     apyTokenSymbols: ['dQUICK', 'WMATIC'],
     subLabel: 'Narrow',
-    tokenNames: ['USDC', 'ETH'],
+    tokenNames: ['USDC.e', 'ETH'],
     platform: ['Quickswap', 'Gamma'],
     tags: ['Advanced'],
     tokenAddress: addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying,
@@ -6391,7 +6391,7 @@ module.exports = {
     apyIconUrls: ['./icons/quick.svg', './icons/matic.svg'],
     apyTokenSymbols: ['dQUICK', 'WMATIC'],
     subLabel: 'Wide',
-    tokenNames: ['USDC', 'ETH'],
+    tokenNames: ['USDC.e', 'ETH'],
     platform: ['Quickswap', 'Gamma'],
     tags: ['Advanced'],
     tokenAddress: addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying,
@@ -7118,7 +7118,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.meshswap_WMATIC_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.meshswap_WMATIC_USDC.Underlying, 'WMATIC', 'USDC_polygon'],
+      params: [addresses.MATIC.V2.meshswap_WMATIC_USDC.Underlying, 'WMATIC', 'USDCe_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -7792,7 +7792,7 @@ module.exports = {
         params: [addresses.MATIC.V2.quick_YEL_MATIC.PoolId, profitSharingCut8Percent],
       },
     ],
-    cmcRewardTokenSymbols: ['miFARM', 'USDC_polygon', 'WETH_polygon'],
+    cmcRewardTokenSymbols: ['miFARM', 'USDCe_polygon', 'WETH_polygon'],
   },
   mUSD: {
     inactive: true,
@@ -11085,7 +11085,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.jarvis_AUR_USDC_V2.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_AUR_USDC_V2.Underlying, 'AURFEB22', 'USDC_polygon'],
+      params: [addresses.MATIC.V2.jarvis_AUR_USDC_V2.Underlying, 'AURFEB22', 'USDCe_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -11264,7 +11264,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.jarvis_JEUR_USDC_HODL.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_JEUR_USDC_HODL.Underlying, 'JEUR', 'USDC_polygon'],
+      params: [addresses.MATIC.V2.jarvis_JEUR_USDC_HODL.Underlying, 'JEUR', 'USDCe_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -11298,7 +11298,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.jarvis_JGBP_USDC_HODL.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_JGBP_USDC_HODL.Underlying, 'JGBP', 'USDC_polygon'],
+      params: [addresses.MATIC.V2.jarvis_JGBP_USDC_HODL.Underlying, 'JGBP', 'USDCe_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -11332,7 +11332,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.jarvis_JCHF_USDC_HODL.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_JCHF_USDC_HODL.Underlying, 'JCHF', 'USDC_polygon'],
+      params: [addresses.MATIC.V2.jarvis_JCHF_USDC_HODL.Underlying, 'JCHF', 'USDCe_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -11366,7 +11366,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.jarvis_AUR3_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_AUR3_USDC.Underlying, 'AUR-APR22', 'USDC_polygon'],
+      params: [addresses.MATIC.V2.jarvis_AUR3_USDC.Underlying, 'AUR-APR22', 'USDCe_polygon'],
     },
     estimateApyFunctions: [
       {
@@ -11395,7 +11395,7 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.jarvis_AUR_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.MATIC.V2.jarvis_AUR_USDC.Underlying, 'AUR0112', 'USDC_polygon'],
+      params: [addresses.MATIC.V2.jarvis_AUR_USDC.Underlying, 'AUR0112', 'USDCe_polygon'],
     },
     estimateApyFunctions: [
       {
