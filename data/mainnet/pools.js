@@ -3278,7 +3278,7 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.POLYGON_MAINNET,
-    id: 'USDC_polygon',
+    id: 'USDCe_polygon',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.MATIC.V2.USDC.NewPool,
     collateralAddress: addresses.MATIC.V2.USDC.NewVault,
