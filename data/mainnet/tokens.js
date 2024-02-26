@@ -2048,6 +2048,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_USDCe_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
     tokenNames: ['USDC.e', 'USDT'],
