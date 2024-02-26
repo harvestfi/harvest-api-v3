@@ -2562,6 +2562,15 @@
         "NewPool": "0x67C82F7b3A2947ab57Df12bD0c6e5E918ea2fab5",
         "cToken": "0x39c27DfdC9364a976926a820c8CAA8Fd035D0727",
         "doHardwork": "noSim"
+      },
+      "camelotV3_rsETH_ETH": {
+        "Underlying": "0xF00Bf7c33eE9106d10661F7ecF5efc73F4C911E1",
+        "NewVault": "0x2F90fb9F0BdE4dC9603981a03e899e62c212ff8F",
+        "NewStrategy": "0x5D76684a8588ccdA72E46dA8Ad6c54e75f531006",
+        "NewPool": "0x16A7f678A721268a93EaBd663e997b9158f5e636",
+        "NFTPool": "0x907F788AB0d47D7fcB5c48a9a1c05A4B35aC0b82",
+        "NitroPool": "0x2b0706b44E4ee2b0781dF8fCdF3C2ff3521c639E",
+        "AlgebraPool": "0xb355ccE5CBAF411bd56e3b092F5AA10A894083ae"
       }
     }
   },

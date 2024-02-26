@@ -45,6 +45,36 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  camelotV3_rsETH_ETH: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/rseth.svg', './icons/eth.svg'],
+    tokenNames: ['rsETH', 'ETH'],
+    apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/arb.svg'],
+    apyTokenSymbols: ['GRAIL', 'xGRAIL', 'ARB'],
+    subLabel: 'Pegged',
+    platform: ['Camelot V3', 'Gamma'],
+    tags: ['Advanced', 'LSD'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.Underlying, 'camelot/arbitrum'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.CAMELOT_LP,
+        params: [
+          addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.NewStrategy,
+          addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.NFTPool,
+          addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.NitroPool,
+          profitSharingCut10Percent,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
+  },
   gammaMerkl_QS_ETH_USDC: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
