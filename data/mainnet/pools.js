@@ -5,6 +5,78 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'aave_EURS',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.aave_EURS.NewPool,
+    collateralAddress: addresses.MATIC.V2.aave_EURS.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.aave_EURS.Underlying}" target="_blank" rel="noopener noreferrer"> EURS </a>to Aave V3, where it is earning auto-compounding interest.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'aave_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.aave_USDC.NewPool,
+    collateralAddress: addresses.MATIC.V2.aave_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.aave_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Aave V3, where it is earning auto-compounding interest.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'aave_USDCe',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.aave_USDCe.NewPool,
+    collateralAddress: addresses.MATIC.V2.aave_USDCe.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.aave_USDCe.Underlying}" target="_blank" rel="noopener noreferrer"> USDC.e </a>to Aave V3, where it is earning auto-compounding interest.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'aave_USDT',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.aave_USDT.NewPool,
+    collateralAddress: addresses.MATIC.V2.aave_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.aave_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT </a>to Aave V3, where it is earning auto-compounding interest.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'camelotV3_rsETH_ETH',
     type: POOL_TYPES.INCENTIVE,

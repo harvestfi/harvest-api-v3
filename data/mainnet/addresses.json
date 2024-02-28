@@ -1751,6 +1751,34 @@
         "NewStrategy": "0xCb0A2089eA7D4CfBC6ebE4E62a38337E8c1D7F16",
         "NewPool": "0x83719a5bBE41A09d1d6F534E8d432fa3c3928b43",
         "PoolAddress": "0x5b41EEDCfC8e0AE47493d4945Aa1AE4fe05430ff"
+      },
+      "aave_EURS": {
+        "Underlying": "0xE111178A87A3BFf0c8d18DECBa5798827539Ae99",
+        "NewVault": "0x327ea1C5cA31Bc3afA2B5D9593Ab45A03D45c44b",
+        "NewStrategy": "0x9cc84944C67217cBf1c54Ddee24F18949cf32763",
+        "NewPool": "0x795B3AE6Db910aC3707ae78aD0E0614cDC093a1C",
+        "AavePool": "0x794a61358D6845594F94dc1DB02A252b5b4814aD"
+      },
+      "aave_USDC": {
+        "Underlying": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+        "NewVault": "0x346D81a5A7A6A8dA2F414d9EEbfFeC22F509245b",
+        "NewStrategy": "0x901c2cbF3770f969DbD4e662bf42D4B19f660208",
+        "NewPool": "0xc97495EFF925e51EaF52443f09288c715212f9c7",
+        "AavePool": "0x794a61358D6845594F94dc1DB02A252b5b4814aD"
+      },
+      "aave_USDCe": {
+        "Underlying": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "NewVault": "0x82FB3ec6a70774F4134f4cbfc41097396A461E35",
+        "NewStrategy": "0x85918aB210617D4cF3F4Dbfc63608ECB133a03fa",
+        "NewPool": "0x7C4A5EC3aAB1255D505357E98504Dfe10BD6cBe0",
+        "AavePool": "0x794a61358D6845594F94dc1DB02A252b5b4814aD"
+      },
+      "aave_USDT": {
+        "Underlying": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+        "NewVault": "0x0d930D467A4Fa78605106aaA570b1a1042aFca23",
+        "NewStrategy": "0x74Fdeeb094A70bd9961C00E5468069FffC61C29B",
+        "NewPool": "0xb57a05Ff221Cf0cbC0e2523Ca0DE16DCd8975e02",
+        "AavePool": "0x794a61358D6845594F94dc1DB02A252b5b4814aD"
       }
     }
   },
