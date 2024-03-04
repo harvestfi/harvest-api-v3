@@ -1451,6 +1451,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   lodestar_DPX: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg', './icons/arb.svg'],
     apyTokenSymbols: ['LODE', 'ARB'],
