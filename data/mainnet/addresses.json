@@ -2346,7 +2346,7 @@
         "NewStrategy": "0x859E64e5bb36b3e9cF201d72d5126a3225858d92",
         "NewPool": "0x26715b0E3b81577DF23a3097C43faFB01a9cEc5F",
         "cToken": "0x5d27cFf80dF09f28534bb37d386D43aA60f88e25",
-        "doHardwork": "false"
+        "doHardwork": false
       },
       "lodestar_FRAX": {
         "Underlying": "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F",
