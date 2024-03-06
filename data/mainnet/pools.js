@@ -5,6 +5,66 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'penpie_rsETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.PENPIE,
+      params: [addresses.ARBITRUM_ONE.V2.penpie_rsETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.penpie_rsETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.penpie_rsETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_rsETH.Underlying}" target="_blank" rel="noopener noreferrer">rsETH Pendle LP tokens</a> to Penpie, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.PENDLE}" target="_blank" rel="noopener noreferrer">PENDLE</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_rsETH.Underlying}" target="_blank" rel="noopener noreferrer">rsETH Pendle LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_rsETH.Underlying}" target="_blank" rel="noopener noreferrer">rsETH Pendle LP tokens</a> by supplying liquidity on 
+        <a href="https://app.pendle.finance/trade/pools/${addresses.ARBITRUM_ONE.V2.penpie_rsETH.Underlying}/zap/in?chain=arbitrum" target="_blank" rel="noopener noreferrer">Pendle</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'penpie_eETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.PENPIE,
+      params: [addresses.ARBITRUM_ONE.V2.penpie_eETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.penpie_eETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.penpie_eETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_eETH.Underlying}" target="_blank" rel="noopener noreferrer">eETH Pendle LP tokens</a> to Penpie, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.PENDLE}" target="_blank" rel="noopener noreferrer">PENDLE</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_eETH.Underlying}" target="_blank" rel="noopener noreferrer">eETH Pendle LP tokens</a>.
+       </p>
+       <p> Get the 
+         <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_eETH.Underlying}" target="_blank" rel="noopener noreferrer">eETH Pendle LP tokens</a> by supplying liquidity on 
+         <a href="https://app.pendle.finance/trade/pools/${addresses.ARBITRUM_ONE.V2.penpie_eETH.Underlying}/zap/in?chain=arbitrum" target="_blank" rel="noopener noreferrer">Pendle</a>.
+       </p>
+     </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'aave_EURS',
     type: POOL_TYPES.INCENTIVE,
@@ -475,10 +535,6 @@ module.exports = [
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'radpie_ARB',
     type: POOL_TYPES.INCENTIVE,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.RADPIE,
-      params: [addresses.ARBITRUM_ONE.V2.radpie_ARB.PoolId],
-    },
     contractAddress: addresses.ARBITRUM_ONE.V2.radpie_ARB.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.radpie_ARB.NewVault,
     rewardAPY: [],
@@ -500,10 +556,6 @@ module.exports = [
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'radpie_DAI',
     type: POOL_TYPES.INCENTIVE,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.RADPIE,
-      params: [addresses.ARBITRUM_ONE.V2.radpie_DAI.PoolId],
-    },
     contractAddress: addresses.ARBITRUM_ONE.V2.radpie_DAI.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.radpie_DAI.NewVault,
     rewardAPY: [],
@@ -525,10 +577,6 @@ module.exports = [
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'radpie_WETH',
     type: POOL_TYPES.INCENTIVE,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.RADPIE,
-      params: [addresses.ARBITRUM_ONE.V2.radpie_WETH.PoolId],
-    },
     contractAddress: addresses.ARBITRUM_ONE.V2.radpie_WETH.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.radpie_WETH.NewVault,
     rewardAPY: [],
@@ -548,12 +596,30 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'radpie_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.radpie_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.radpie_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.radpie_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> to Radpie, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RDNT}" target="_blank" rel="noopener noreferrer">RDNT</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned RDNT and ARB are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.radpie_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC.e</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'radpie_USDCe',
     type: POOL_TYPES.INCENTIVE,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.RADPIE,
-      params: [addresses.ARBITRUM_ONE.V2.radpie_USDCe.PoolId],
-    },
     contractAddress: addresses.ARBITRUM_ONE.V2.radpie_USDCe.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.radpie_USDCe.NewVault,
     rewardAPY: [],
@@ -576,10 +642,6 @@ module.exports = [
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'radpie_USDT',
     type: POOL_TYPES.INCENTIVE,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.RADPIE,
-      params: [addresses.ARBITRUM_ONE.V2.radpie_USDT.PoolId],
-    },
     contractAddress: addresses.ARBITRUM_ONE.V2.radpie_USDT.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.radpie_USDT.NewVault,
     rewardAPY: [],
@@ -602,10 +664,6 @@ module.exports = [
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'radpie_WBTC',
     type: POOL_TYPES.INCENTIVE,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.RADPIE,
-      params: [addresses.ARBITRUM_ONE.V2.radpie_WBTC.PoolId],
-    },
     contractAddress: addresses.ARBITRUM_ONE.V2.radpie_WBTC.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.radpie_WBTC.NewVault,
     rewardAPY: [],
@@ -616,8 +674,9 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.radpie_WBTC.Underlying}" target="_blank" rel="noopener noreferrer">WBTC</a> to Radpie, earning 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RDNT}" target="_blank" rel="noopener noreferrer">RDNT</a> &
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RDP}" target="_blank" rel="noopener noreferrer">RDP</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RDNT}" target="_blank" rel="noopener noreferrer">RDNT</a>,
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RDP}" target="_blank" rel="noopener noreferrer">RDP</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
        At every harvest, the earned RDNT is converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.radpie_WBTC.Underlying}" target="_blank" rel="noopener noreferrer">WBTC</a>.
       </p>
@@ -628,10 +687,6 @@ module.exports = [
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'radpie_wstETH',
     type: POOL_TYPES.INCENTIVE,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.RADPIE,
-      params: [addresses.ARBITRUM_ONE.V2.radpie_wstETH.PoolId],
-    },
     contractAddress: addresses.ARBITRUM_ONE.V2.radpie_wstETH.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.radpie_wstETH.NewVault,
     rewardAPY: [],

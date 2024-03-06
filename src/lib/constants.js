@@ -217,6 +217,7 @@ const CURVE_FINANCE_API_URL = 'https://api.curve.fi/api'
 
 const QUICKSWAP_GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/'
 const MERKL_ENDPOINT = 'https://api.angle.money/v2/merkl'
+const PENDLE_ENDPOINT = 'https://api-v2.pendle.finance/core/v2/'
 
 const DEBUG_MODE = process.env.DEBUG_MODE
 
@@ -298,6 +299,7 @@ module.exports = {
   APE_API_URL,
   QUICKSWAP_GAMMA_ENDPOINT,
   MERKL_ENDPOINT,
+  PENDLE_ENDPOINT,
   ARBITRUM_RPC_URL,
   CONVEX_API_URLS,
   COINGECKO_API_KEY,

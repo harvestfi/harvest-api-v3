@@ -148,7 +148,14 @@ const radpieRewarderContract = require('../contracts/rdp-rewarder/contract.json'
 const radpieMasterMethods = require('../contracts/rdp-master/methods')
 const radpieMasterContract = require('../contracts/rdp-master/contract.json')
 
+const pendleMarketMethods = require('../contracts/pendle-market/methods')
+const pendleMarketContract = require('../contracts/pendle-market/contract.json')
+
 module.exports = {
+  pendleMarket: {
+    methods: pendleMarketMethods,
+    contract: pendleMarketContract,
+  },
   seamlessPool: {
     methods: seamlessPoolMethods,
     contract: seamlessPoolContract,
