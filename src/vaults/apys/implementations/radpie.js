@@ -85,7 +85,6 @@ const getApy = async (poolId, rewarder, reduction = 1) => {
       //WBTC
       arbPerDay = 2142.85714272
     }
-    console.log(stakingToken, arbPerDay)
     const stakedBal = new BigNumber(totalStaked).dividedBy(
       new BigNumber(10).exponentiatedBy(stakingTokenDecimal),
     )
