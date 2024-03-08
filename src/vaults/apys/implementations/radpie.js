@@ -38,12 +38,7 @@ const getApy = async (poolId, rewarder, reduction = 1) => {
     radpieReaderInstance,
   )
 
-  const radpiePoolInfo = await radpieReaderMethods.getRadpiePoolInfo(
-    poolId,
-    account,
-    radpieInfo,
-    radpieReaderInstance,
-  )
+  const radpiePoolInfo = radpieInfo.pools[poolId]
 
   const rdntAPR = await radpieReaderMethods.getRDNTAPR(radpiePoolInfo, radpieReaderInstance)
 
