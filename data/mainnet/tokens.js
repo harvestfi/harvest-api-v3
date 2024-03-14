@@ -621,6 +621,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   seamless_wstETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/seam.svg'],
     apyTokenSymbols: ['esSEAM'],
@@ -905,6 +906,7 @@ module.exports = {
     },
   },
   seamless_cbETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/seam.svg'],
     apyTokenSymbols: ['esSEAM'],
@@ -932,6 +934,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'esSEAM'],
   },
   seamless_DAI: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/seam.svg'],
     apyTokenSymbols: ['esSEAM'],
@@ -959,6 +962,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'esSEAM'],
   },
   seamless_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/seam.svg'],
     apyTokenSymbols: ['esSEAM'],
@@ -986,6 +990,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'esSEAM'],
   },
   seamless_USDbC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/seam.svg'],
     apyTokenSymbols: ['esSEAM'],
@@ -1013,6 +1018,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'esSEAM'],
   },
   seamless_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/seam.svg'],
     apyTokenSymbols: ['esSEAM'],

@@ -2977,37 +2977,43 @@
         "Underlying": "0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb",
         "NewVault": "0xE82E813339EEE960Aa4d87d43241cc27Db9dd916",
         "NewStrategy": "0x241848754B3316f3ce3335bA1e823e245794DA4f",
-        "NewPool": "0x48AF70F0E97cEfdad20F0E4360eE2B27021C767a"
+        "NewPool": "0x48AF70F0E97cEfdad20F0E4360eE2B27021C767a",
+        "doHardwork": false
       },
       "seamless_ETH": {
         "Underlying": "0x4200000000000000000000000000000000000006",
         "NewVault": "0x21B27a241E361F6C4d430FD120B2651A89DCc942",
         "NewStrategy": "0x70194e67E050553F83dF46FD18996bA0F63Fe13A",
-        "NewPool": "0x39E3361eC4441a714b5089d5054A269f9AeDBEC9"
+        "NewPool": "0x39E3361eC4441a714b5089d5054A269f9AeDBEC9",
+        "doHardwork": false
       },
       "seamless_USDbC": {
         "Underlying": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
         "NewVault": "0xA066b2126f25C0237c0DdB293DB452597B1E0241",
         "NewStrategy": "0x406DDBd559a99d7b1c172203Dc11e760f6b13E31",
-        "NewPool": "0xDAC20e1e4bB33f5732D23Aac0cBe84E23D9fF20d"
+        "NewPool": "0xDAC20e1e4bB33f5732D23Aac0cBe84E23D9fF20d",
+        "doHardwork": false
       },
       "seamless_USDC": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         "NewVault": "0xabD5D3c1532B171Ef83b25318624d1e0143B14cE",
         "NewStrategy": "0x721514c2cAac28E482A0A281C3D7f41b3988A1E1",
-        "NewPool": "0x40cE8f857DDB40f6bEAFd237E7894cB08e2fB447"
+        "NewPool": "0x40cE8f857DDB40f6bEAFd237E7894cB08e2fB447",
+        "doHardwork": false
       },
       "seamless_cbETH": {
         "Underlying": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
         "NewVault": "0xC62e0378bb3736bcC148B9A25b1e2ACF523B5f00",
         "NewStrategy": "0x47a74c92878e436dfedA2C17610DaCed19f885e9",
-        "NewPool": "0x9b02DCB475510B87B09abea883C07Cf9Ec44271D"
+        "NewPool": "0x9b02DCB475510B87B09abea883C07Cf9Ec44271D",
+        "doHardwork": false
       },
       "seamless_wstETH": {
         "Underlying": "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
         "NewVault": "0x94012F721e059748B986394EB5fE2820025F47Ff",
         "NewStrategy": "0xF6365545e263Fb36E78F792d1212106440A04469",
-        "NewPool": "0xe948E9c99CFDe4c5A480B4e58C8CB4fC5CA7bF2c"
+        "NewPool": "0xe948E9c99CFDe4c5A480B4e58C8CB4fC5CA7bF2c",
+        "doHardwork": false
       }
     }
   }
