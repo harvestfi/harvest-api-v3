@@ -19,7 +19,7 @@ const getTradingApy = async (address, poolId, chain) => {
     const apyResult = get(response, `data.apys.` + poolName, [])
     apy = apyResult.baseApy
   } catch (err) {
-    console.error('Arbitrum Convex API error: ', err)
+    console.error('Convex API error: ', err)
     apy = 0
   }
 

@@ -20,10 +20,11 @@ const getPrice = async (minerAddress, crvTokenAddress, crvTokenDecimals, assets,
     if (
       (asset == 'ETH' && network == '1') ||
       (asset == 'MATIC' && network == '137') ||
+      (asset == 'ETH' && network == '42161') ||
       (asset == 'ETH' && network == '8453')
     ) {
       assetPoolBalance = new BigNumber(await web3.eth.getBalance(minerAddress)).dividedBy(1e18)
-      if (network == '1' || network == '8453') {
+      if (network == '1' || network == '8453' || network == '42161') {
         assetPriceUSD = await getTokenPrice('WETH')
       } else if (network == '137') {
         assetPriceUSD = await getTokenPrice('WMATIC')

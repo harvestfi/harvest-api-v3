@@ -17,12 +17,23 @@ const getApy = async (address, poolId, profitSharingFactor, chain) => {
     let poolName = prefix + address.toLowerCase() + '-' + poolId
     const response = await cachedAxios.get(url)
     const apyResult = get(response, `data.apys.` + poolName, [])
-    apy = (apyResult.crvApy + apyResult.cvxApy) * profitSharingFactor
+    if (chain == '42161') {
+      apy = apyResult.crvApy + apyResult.cvxApy
+      if (apyResult.extraRewards.length > 0) {
+        apyResult.extraRewards.forEach(instance => {
+          apy = apy + instance.apy
+        })
+      }
+    } else {
+      apy = apyResult.crvApy + apyResult.cvxApy
+    }
     if (isNaN(apy)) {
       apy = 0
+    } else {
+      apy = apy * profitSharingFactor
     }
   } catch (err) {
-    console.error('Arbitrum Convex API error: ', err)
+    console.error('Convex API error: ', err)
     apy = 0
   }
 
