@@ -9654,6 +9654,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'WBTC', 'WETH'],
   },
   UniV3_USDC_ETH: {
+    inactive: true,
     isSingleAssetWithdrawalAllowed: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'ETH Range: 1.9K⟷3.5K',
@@ -9714,6 +9715,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'USDC', 'WETH'],
   },
   UniV3_ETH_USDT: {
+    inactive: true,
     isSingleAssetWithdrawalAllowed: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'ETH Range: 1.9K⟷3.5K',
@@ -9743,6 +9745,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'WETH', 'USDT'],
   },
   UniV3_DAI_ETH: {
+    inactive: true,
     isSingleAssetWithdrawalAllowed: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'ETH Range: 1.9K⟷3.5K',
