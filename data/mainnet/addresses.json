@@ -1779,6 +1779,20 @@
         "NewStrategy": "0x74Fdeeb094A70bd9961C00E5468069FffC61C29B",
         "NewPool": "0xb57a05Ff221Cf0cbC0e2523Ca0DE16DCd8975e02",
         "AavePool": "0x794a61358D6845594F94dc1DB02A252b5b4814aD"
+      },
+      "gammaMerkl_QS_tBTC_ETH": {
+        "Underlying": "0xadFC52D48d68B235B6b9453eF5130fc6dFD2513E",
+        "NewVault": "0x84FAF04a1583A3eBF3c977eA962aE22E57e7F4b3",
+        "NewStrategy": "0xe33BD9a8a501d3962C16D818459722797FEB3943",
+        "NewPool": "0xC40f3684aEB25af5374D2D7d11a3BBDd3E64e041",
+        "PoolAddress": "0xAf16D97DF951bb8b7D876AE93367eC835c4C11b0"
+      },
+      "gammaMerkl_QS_WBTC_ETH_w": {
+        "Underlying": "0xadc7B4096C3059Ec578585Df36E6E1286d345367",
+        "NewVault": "0x209c865390fF2F0E13CE1Eda1Cf74637f364f29f",
+        "NewStrategy": "0x005B8C667E0dBD3b431Cb86637a6A1E246E65d62",
+        "NewPool": "0xed46340201117AD801E7F95691a02B3128453D9A",
+        "PoolAddress": "0xAC4494e30a85369e332BDB5230d6d694d4259DbC"
       }
     }
   },

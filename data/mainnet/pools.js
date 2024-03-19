@@ -5,6 +5,64 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'gammaMerkl_QS_tBTC_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.Underlying],
+    },
+    contractAddress: addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.NewPool,
+    collateralAddress: addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/tbtc-weth-narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'gammaMerkl_QS_WBTC_ETH_w',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      params: [addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.Underlying],
+    },
+    contractAddress: addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.NewPool,
+    collateralAddress: addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.dQUICK}" target="_blank" rel="noopener noreferrer">dQUICK</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://app.gamma.xyz/vault/qi/polygon/details/wbtc-weth-wide" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'curve_crvUSD_FRAX',
     type: POOL_TYPES.INCENTIVE,
