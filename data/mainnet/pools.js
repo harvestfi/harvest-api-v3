@@ -400,6 +400,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.pendle.finance/trade/pools/${addresses.ARBITRUM_ONE.V2.penpie_rsETH.Underlying}/zap/in?chain=arbitrum`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -430,6 +431,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.pendle.finance/trade/pools/${addresses.ARBITRUM_ONE.V2.penpie_eETH.Underlying}/zap/in?chain=arbitrum`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -532,6 +534,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/rseth-weth-pegged-price`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -564,6 +567,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.gamma.xyz/vault/qi/polygon/details/usdc-weth-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -593,6 +597,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.gamma.xyz/vault/qi/polygon/details/weth-usdt-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -622,6 +627,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.gamma.xyz/vault/qi/polygon/details/wmatic-usdt-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -741,6 +747,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/magic-weth-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -773,6 +780,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/pendle-weth-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -805,6 +813,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/rdnt-weth-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -837,6 +846,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/usdc-usdt-stable`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -869,6 +879,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/wsteth-weth-pegged-price`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -923,6 +934,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://www.radiant.magpiexyz.io/stake`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -944,6 +956,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://www.radiant.magpiexyz.io/stake`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -965,6 +978,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://www.radiant.magpiexyz.io/stake`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -986,6 +1000,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://www.radiant.magpiexyz.io/stake`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -1008,6 +1023,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://www.radiant.magpiexyz.io/stake`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -1030,6 +1046,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://www.radiant.magpiexyz.io/stake`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -1052,6 +1069,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://www.radiant.magpiexyz.io/stake`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -1075,6 +1093,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://www.radiant.magpiexyz.io/stake`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -1635,6 +1654,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.wombat.exchange/pool?pool=MAIN&token=DAI&action=DEPOSIT&chain=arbitrum`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -1665,6 +1685,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.wombat.exchange/pool?pool=frxETH&token=WETH&action=DEPOSIT&chain=arbitrum`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -1695,6 +1716,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.wombat.exchange/pool?pool=MAIN&token=USDC.e&action=DEPOSIT&chain=arbitrum`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -1725,6 +1747,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.wombat.exchange/pool?pool=MAIN&token=USDC&action=DEPOSIT&chain=arbitrum`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -1755,6 +1778,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.wombat.exchange/pool?pool=MAIN&token=USDT&action=DEPOSIT&chain=arbitrum`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -1785,6 +1809,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.wombat.exchange/pool?pool=mWOM&token=WOM&action=DEPOSIT&chain=arbitrum`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -1972,6 +1997,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/weth-arb-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -2004,6 +2030,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/usdc-dai-stable`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -2036,6 +2063,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/weth-gmx-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -2068,6 +2096,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/grail-weth-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -2100,6 +2129,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/weth-link-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -2132,6 +2162,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/lusd-usdc-stable`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -2196,6 +2227,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/wbtc-weth-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -2228,6 +2260,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/arb-usdc-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -2260,6 +2293,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/weth-usdt-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -2292,6 +2326,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/weth-usdc-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -2324,6 +2359,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.gamma.xyz/vault/qi/polygon/details/wsteth-weth-pegged-price`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -2353,6 +2389,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.gamma.xyz/vault/qi/polygon/details/wbtc-usdc.e-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -2382,6 +2419,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.gamma.xyz/vault/qi/polygon/details/wbtc-weth-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -2411,6 +2449,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.gamma.xyz/vault/qi/polygon/details/usdc.e-usdt-stable`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -2441,6 +2480,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.gamma.xyz/vault/qi/polygon/details/usdc.e-dai-stable`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
