@@ -18,6 +18,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: 'https://app.gamma.xyz/vault/qi/polygon/details/tbtc-weth-narrow',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -47,6 +48,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.MATIC.miFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: 'https://app.gamma.xyz/vault/qi/polygon/details/wbtc-weth-wide',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -80,6 +82,7 @@ module.exports = [
         CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
+    liquidityUrl: 'https://curve.fi/#/arbitrum/pools/factory-stable-ng-7/deposit',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -115,6 +118,7 @@ module.exports = [
         CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
+    liquidityUrl: 'https://curve.fi/#/arbitrum/pools/factory-stable-ng-2/deposit',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -150,6 +154,7 @@ module.exports = [
         CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
+    liquidityUrl: 'https://curve.fi/#/arbitrum/pools/factory-stable-ng-1/deposit',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -185,6 +190,7 @@ module.exports = [
         CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
+    liquidityUrl: 'https://curve.fi/#/arbitrum/pools/factory-stable-ng-0/deposit',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -220,6 +226,7 @@ module.exports = [
         CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
+    liquidityUrl: 'https://curve.fi/#/arbitrum/pools/factory-tricrypto-9/deposit',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -255,6 +262,7 @@ module.exports = [
         CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
+    liquidityUrl: 'https://curve.fi/#/arbitrum/pools/factory-tricrypto-2/deposit',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -289,6 +297,7 @@ module.exports = [
         CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
+    liquidityUrl: 'https://curve.fi/#/arbitrum/pools/factory-tricrypto-8/deposit',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -324,6 +333,7 @@ module.exports = [
         CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
+    liquidityUrl: 'https://curve.fi/#/arbitrum/pools/factory-v2-41/deposit',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -358,6 +368,7 @@ module.exports = [
         CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
+    liquidityUrl: 'https://curve.fi/#/arbitrum/pools/2pool/deposit',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies

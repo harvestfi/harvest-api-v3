@@ -31,6 +31,7 @@ module.exports = {
     tokenAddress: addresses.WETH,
     decimals: '18',
     vaultAddress: addresses.V2.WETH.NewVault,
+    strategyAddress: addresses.V2.WETH.NewStrategy,
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.WETH] },
     estimateApyFunctions: [
       {
@@ -57,6 +58,7 @@ module.exports = {
     tokenAddress: addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.NewVault,
+    strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
       params: [addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.Underlying, 'quickswap/polygon'],
@@ -86,6 +88,7 @@ module.exports = {
     tokenAddress: addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.Underlying,
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.NewVault,
+    strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
       params: [addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.Underlying, 'quickswap/polygon'],
@@ -169,6 +172,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_FRAX.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_FRAX.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_FRAX.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.CURVE_POOL,
       params: [
@@ -203,6 +207,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_USDC_arbitrum.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_USDC_arbitrum.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_USDC_arbitrum.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.CURVE_POOL,
       params: [
@@ -237,6 +242,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_USDCe.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_USDCe.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_USDCe.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.CURVE_POOL,
       params: [
@@ -271,6 +277,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_USDT.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_USDT.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_USDT.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.CURVE_POOL,
       params: [
@@ -305,6 +312,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_WBTC_WETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_WBTC_WETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.curve_crvUSD_WBTC_WETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.CURVE_POOL,
       params: [
@@ -339,6 +347,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.curve_fETH_xETH_WETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.curve_fETH_xETH_WETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.curve_fETH_xETH_WETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.CURVE_POOL,
       params: [
@@ -373,6 +382,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.curve_FRAX_tBTC_frxETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.curve_FRAX_tBTC_frxETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.curve_FRAX_tBTC_frxETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.CURVE_POOL,
       params: [
@@ -407,6 +417,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.curve_FRAX_USDCe.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.curve_FRAX_USDCe.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.curve_FRAX_USDCe.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.CURVE_POOL,
       params: [
@@ -441,6 +452,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.curve_USDCe_USDT.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.curve_USDCe_USDT.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.curve_USDCe_USDT.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.CURVE_POOL,
       params: [
@@ -475,6 +487,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_rsETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_rsETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_rsETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.PENDLE_MARKET,
       params: [addresses.ARBITRUM_ONE.V2.penpie_rsETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
@@ -502,6 +515,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_eETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_eETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_eETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.PENDLE_MARKET,
       params: [addresses.ARBITRUM_ONE.V2.penpie_eETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
@@ -529,6 +543,7 @@ module.exports = {
     tokenAddress: addresses.MATIC.V2.aave_EURS.Underlying,
     decimals: '2',
     vaultAddress: addresses.MATIC.V2.aave_EURS.NewVault,
+    strategyAddress: addresses.MATIC.V2.aave_EURS.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['stasis-eurs'],
@@ -557,6 +572,7 @@ module.exports = {
     tokenAddress: addresses.MATIC.V2.aave_USDC.Underlying,
     decimals: '6',
     vaultAddress: addresses.MATIC.V2.aave_USDC.NewVault,
+    strategyAddress: addresses.MATIC.V2.aave_USDC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
@@ -585,6 +601,7 @@ module.exports = {
     tokenAddress: addresses.MATIC.V2.aave_USDCe.Underlying,
     decimals: '6',
     vaultAddress: addresses.MATIC.V2.aave_USDCe.NewVault,
+    strategyAddress: addresses.MATIC.V2.aave_USDCe.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
@@ -613,6 +630,7 @@ module.exports = {
     tokenAddress: addresses.MATIC.V2.aave_USDT.Underlying,
     decimals: '6',
     vaultAddress: addresses.MATIC.V2.aave_USDT.NewVault,
+    strategyAddress: addresses.MATIC.V2.aave_USDT.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['tether'],
@@ -642,6 +660,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
       params: [addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.Underlying, 'camelot/arbitrum'],
@@ -672,6 +691,7 @@ module.exports = {
     tokenAddress: addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.Underlying,
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.NewVault,
+    strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
       params: [addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.Underlying, 'quickswap/polygon'],
@@ -701,6 +721,7 @@ module.exports = {
     tokenAddress: addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.Underlying,
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.NewVault,
+    strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
       params: [addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.Underlying, 'quickswap/polygon'],
@@ -730,6 +751,7 @@ module.exports = {
     tokenAddress: addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.Underlying,
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.NewVault,
+    strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
       params: [addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.Underlying, 'quickswap/polygon'],
@@ -763,6 +785,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['magic'],
@@ -806,6 +829,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['pendle'],
@@ -844,6 +868,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_MAGIC.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_MAGIC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestar_MAGIC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['magic'],
@@ -872,6 +897,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_PENDLE.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_PENDLE.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestar_PENDLE.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['pendle'],
@@ -901,6 +927,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
       params: [addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.Underlying, 'camelot/arbitrum'],
@@ -931,6 +958,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
       params: [addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.Underlying, 'camelot/arbitrum'],
@@ -961,6 +989,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
       params: [addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.Underlying, 'camelot/arbitrum'],
@@ -991,6 +1020,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
       params: [addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.Underlying, 'camelot/arbitrum'],
@@ -1021,6 +1051,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
       params: [addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.Underlying, 'camelot/arbitrum'],
@@ -1051,6 +1082,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.seamless_wstETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.seamless_wstETH.NewVault,
+    strategyAddress: addresses.BASE.V2.seamless_wstETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['wrapped-steth'],
@@ -1100,6 +1132,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.radpie_ARB.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.radpie_ARB.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.radpie_ARB.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['arbitrum'],
@@ -1127,6 +1160,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.radpie_DAI.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.radpie_DAI.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.radpie_DAI.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['dai'],
@@ -1154,6 +1188,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.radpie_WETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.radpie_WETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.radpie_WETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['weth'],
@@ -1181,6 +1216,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.radpie_USDC.Underlying,
     decimals: '6',
     vaultAddress: addresses.ARBITRUM_ONE.V2.radpie_USDC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.radpie_USDC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
@@ -1208,6 +1244,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.radpie_USDCe.Underlying,
     decimals: '6',
     vaultAddress: addresses.ARBITRUM_ONE.V2.radpie_USDCe.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.radpie_USDCe.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
@@ -1235,6 +1272,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.radpie_USDT.Underlying,
     decimals: '6',
     vaultAddress: addresses.ARBITRUM_ONE.V2.radpie_USDT.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.radpie_USDT.NewStrategy,
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.USDT] },
     estimateApyFunctions: [
       {
@@ -1259,6 +1297,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.radpie_WBTC.Underlying,
     decimals: '8',
     vaultAddress: addresses.ARBITRUM_ONE.V2.radpie_WBTC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.radpie_WBTC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['wrapped-bitcoin'],
@@ -1286,6 +1325,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.radpie_wstETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.radpie_wstETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.radpie_wstETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['wrapped-steth'],
@@ -1336,6 +1376,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.seamless_cbETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.seamless_cbETH.NewVault,
+    strategyAddress: addresses.BASE.V2.seamless_cbETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['coinbase-wrapped-staked-eth'],
@@ -1364,6 +1405,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.seamless_DAI.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.seamless_DAI.NewVault,
+    strategyAddress: addresses.BASE.V2.seamless_DAI.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['dai'],
@@ -1392,6 +1434,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.seamless_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.seamless_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.seamless_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['weth'],
@@ -1420,6 +1463,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.seamless_USDbC.Underlying,
     decimals: '6',
     vaultAddress: addresses.BASE.V2.seamless_USDbC.NewVault,
+    strategyAddress: addresses.BASE.V2.seamless_USDbC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
@@ -1448,6 +1492,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.seamless_USDC.Underlying,
     decimals: '6',
     vaultAddress: addresses.BASE.V2.seamless_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.seamless_USDC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
@@ -1480,6 +1525,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_ARB.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_ARB.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_ARB.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['arbitrum'],
@@ -1523,6 +1569,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_DAI.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_DAI.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_DAI.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['dai'],
@@ -1566,6 +1613,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_ETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['weth'],
@@ -1609,6 +1657,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['frax'],
@@ -1652,6 +1701,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_GMX.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_GMX.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_GMX.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['gmx'],
@@ -1695,6 +1745,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_USDCe.Underlying,
     decimals: '6',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_USDCe.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_USDCe.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
@@ -1738,6 +1789,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_USDT.Underlying,
     decimals: '6',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_USDT.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_USDT.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['tether'],
@@ -1781,6 +1833,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_WBTC.Underlying,
     decimals: '8',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_WBTC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_WBTC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['wrapped-bitcoin'],
@@ -1824,6 +1877,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_wstETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_wstETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_wstETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['wrapped-steth'],
@@ -1878,6 +1932,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.Underlying,
     decimals: '6',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
@@ -1916,6 +1971,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_LODE.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['lodestar'],
@@ -1939,6 +1995,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_ARB.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_ARB.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestar_ARB.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['arbitrum'],
@@ -1968,6 +2025,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_DPX.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_DPX.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestar_DPX.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['dopex'],
@@ -1996,6 +2054,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_FRAX.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_FRAX.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestar_FRAX.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['frax'],
@@ -2024,6 +2083,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_GMX.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_GMX.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestar_GMX.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['gmx'],
@@ -2052,6 +2112,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_wstETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_wstETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestar_wstETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['wrapped-steth'],
@@ -2103,6 +2164,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.magpie_DAI_main.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.magpie_DAI_main.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.magpie_DAI_main.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['dai'],
@@ -2126,6 +2188,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.magpie_ETH_frxeth.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['weth'],
@@ -2150,6 +2213,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.magpie_USDCe_main.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.magpie_USDCe_main.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.magpie_USDCe_main.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
@@ -2174,6 +2238,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.magpie_USDC_main.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.magpie_USDC_main.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.magpie_USDC_main.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
@@ -2198,6 +2263,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.magpie_USDT_main.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.magpie_USDT_main.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.magpie_USDT_main.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['tether'],
@@ -2222,6 +2288,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.magpie_WOM_mwom.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.magpie_WOM_mwom.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.magpie_WOM_mwom.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['wombat-exchange'],
@@ -2245,6 +2312,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.moonwell_wstETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.moonwell_wstETH.NewVault,
+    strategyAddress: addresses.BASE.V2.moonwell_wstETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['wrapped-steth'],
@@ -2273,6 +2341,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.moonwell_rETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.moonwell_rETH.NewVault,
+    strategyAddress: addresses.BASE.V2.moonwell_rETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['rocket-pool-eth'],
@@ -2301,6 +2370,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_ETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestar_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['ethereum'],
@@ -2329,6 +2399,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_DAI.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_DAI.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestar_DAI.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['dai'],
@@ -2357,6 +2428,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_USDC.Underlying,
     decimals: '6',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_USDC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestar_USDC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
@@ -2385,6 +2457,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_USDCe.Underlying,
     decimals: '6',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_USDCe.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestar_USDCe.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
@@ -2413,6 +2486,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_USDT.Underlying,
     decimals: '6',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_USDT.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestar_USDT.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['tether'],
@@ -2441,6 +2515,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.lodestar_WBTC.Underlying,
     decimals: '8',
     vaultAddress: addresses.ARBITRUM_ONE.V2.lodestar_WBTC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.lodestar_WBTC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['wrapped-bitcoin'],
