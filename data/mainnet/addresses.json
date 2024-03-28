@@ -2752,6 +2752,9 @@
     "axlWBTC": "0x1a35EE4640b0A3B87705B0A4B45D227Ba60Ca2ad",
     "SEAM": "0x1C7a460413dD4e964f96D8dFC56E7223cE88CD85",
     "esSEAM": "0x998e44232BEF4F8B033e5A5175BDC97F2B10d5e5",
+    "GB": "0x2aF864fb54b55900Cd58d19c7102d9e4FA8D84a3",
+    "OVN": "0xA3d1a8DEB97B111454B294E2324EfAD13a9d8396",
+    "STAR": "0xC19669A405067927865B40Ea045a2baabbbe57f5",
     "V2": {
       "baseswap_BSWAP_ETH": {
         "Underlying": "0xE80B4F755417FB4baF4dbd23C029db3F62786523",
@@ -3096,6 +3099,55 @@
         "NewStrategy": "0xF6365545e263Fb36E78F792d1212106440A04469",
         "NewPool": "0xe948E9c99CFDe4c5A480B4e58C8CB4fC5CA7bF2c",
         "doHardwork": false
+      },
+      "aerodrome_GB_ETH": {
+        "Underlying": "0x284ddaDA0B71F2D0D4e395B69b1013dBf6f3e6C1",
+        "NewVault": "0x073aDE312d3c422d43B20311F3Ef0e83E8E1AC1a",
+        "NewStrategy": "0x20Aa62AC787D2f7556c8d48e43eD15E0081B672C",
+        "NewPool": "0x1DC42246E913725eA2d4E1858b36c85C314eAdD1",
+        "Gauge": "0x83FC503345Dcde6197b2BD8eaa82ccb4b737Be40"
+      },
+      "aerodrome_OVN_USDp": {
+        "Underlying": "0x61366A4e6b1DB1b85DD701f2f4BFa275EF271197",
+        "NewVault": "0x47e3daF382C4603450905fb68766DB8308315407",
+        "NewStrategy": "0xb93201d8B3C221f14032ADE6314ac9E458300254",
+        "NewPool": "0xf4CaDf3A558C312dE522A258FeDfB41fC09723Cb",
+        "Gauge": "0x00B2149d89677a5069eD4D303941614A33700146"
+      },
+      "aerodrome_USDC_AERO": {
+        "Underlying": "0x6cDcb1C4A4D1C3C6d054b27AC5B77e89eAFb971d",
+        "NewVault": "0xE97a32D05952357C7b5D4EafC70197a0B834f0F7",
+        "NewStrategy": "0x18190885B6B8F684fd3de366c0A439eaf36a4D0A",
+        "NewPool": "0xc0d3ccD19D8b3a159c55268ac8a9c4b13f7c1146",
+        "Gauge": "0x4F09bAb2f0E15e2A078A227FE1537665F55b8360"
+      },
+      "aerodrome_WELL_ETH": {
+        "Underlying": "0xffA3F8737C39e36dec4300B162c2153c67c8352f",
+        "NewVault": "0x8d44eEdB4074E02bd418286b4Af5bD5E47F91A6f",
+        "NewStrategy": "0x0FBeA24A65b7089A9EE705f32EdD0A793A89f75b",
+        "NewPool": "0xDb08f5E56a00A1409053E31dbDae04fF643D8Cde",
+        "Gauge": "0xcEa0a2228145d0fD25dE083e3786ddB1eA184296"
+      },
+      "aerodrome_STAR_USDC": {
+        "Underlying": "0xF45F6cDBcd0D2D4Bf4d9758b032a66A2cf4e55C8",
+        "NewVault": "0x94aA414BefB207B869904f3310665A63fBA3AE50",
+        "NewStrategy": "0x96328405a3281bf7dFC46B4Ac1119e6D542b0cD9",
+        "NewPool": "0xe03481E68FC15197C17EDD3B9F38b3cc821f7446",
+        "Gauge": "0xc115982d35fe4304274FEEf5b351256342BB6C2e"
+      },
+      "aerodrome_USDC_USDbC": {
+        "Underlying": "0x27a8Afa3Bd49406e48a074350fB7b2020c43B2bD",
+        "NewVault": "0x8b99389DdF99d429b2C5b8AB004A60397a734A5c",
+        "NewStrategy": "0x39be71b2Cd3E927EE84684767f81dAb3ab6A2116",
+        "NewPool": "0x7812026Df9aB72b202BB1f2ae47dC377A0B16b20",
+        "Gauge": "0x1Cfc45C5221A07DA0DE958098A319a29FbBD66fE"
+      },
+      "aerodrome_SEAM_USDbC": {
+        "Underlying": "0x42e8dC1b1891C103291Ec01D903451E729DaAACc",
+        "NewVault": "0x86d609d98FDc11D6f45829dE0354010d636adf19",
+        "NewStrategy": "0x77Ac8D44F393aE99d392d495B2165e4f3Cb8823D",
+        "NewPool": "0x5501bE44327E2B02da51DC0e832be40675016479",
+        "Gauge": "0xf2669b18Eb18052A6fa7aA87294C629e3B158c1D"
       }
     }
   }
