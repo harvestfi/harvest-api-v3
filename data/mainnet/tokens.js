@@ -84,7 +84,7 @@ module.exports = {
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
     logoUrl: ['./icons/gb.svg', './icons/eth.svg'],
-    tokenNames: ['GB', 'WETH'],
+    tokenNames: ['GB', 'ETH'],
     platform: ['Aerodrome'],
     tags: ['Advanced'],
     tokenAddress: addresses.BASE.V2.aerodrome_GB_ETH.Underlying,
@@ -137,8 +137,8 @@ module.exports = {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
-    logoUrl: ['./icons/usdc.svg', './icons/aero.svg'],
-    tokenNames: ['USDC', 'AERO'],
+    logoUrl: ['./icons/aero.svg', './icons/usdc.svg'],
+    tokenNames: ['AERO', 'USDC'],
     platform: ['Aerodrome'],
     tags: ['Advanced'],
     tokenAddress: addresses.BASE.V2.aerodrome_USDC_AERO.Underlying,
@@ -164,8 +164,8 @@ module.exports = {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
-    logoUrl: ['./icons/eth.svg', './icons/well.svg'],
-    tokenNames: ['WETH', 'WELL'],
+    logoUrl: ['./icons/well.svg', './icons/eth.svg'],
+    tokenNames: ['WELL', 'ETH'],
     platform: ['Aerodrome'],
     tags: ['Advanced'],
     tokenAddress: addresses.BASE.V2.aerodrome_WELL_ETH.Underlying,
@@ -173,7 +173,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aerodrome_WELL_ETH.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_WELL_ETH.Underlying, 'WETH_base', 'WELL'],
+      params: [addresses.BASE.V2.aerodrome_WELL_ETH.Underlying, 'WELL', 'WETH_base'],
     },
     estimateApyFunctions: [
       {
@@ -191,8 +191,8 @@ module.exports = {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
-    logoUrl: ['./icons/usdc.svg', './icons/star.svg'],
-    tokenNames: ['USDC', 'STAR'],
+    logoUrl: ['./icons/star.svg', './icons/usdc.svg'],
+    tokenNames: ['STAR', 'USDC'],
     platform: ['Aerodrome'],
     tags: ['Advanced', 'Stable'],
     tokenAddress: addresses.BASE.V2.aerodrome_STAR_USDC.Underlying,
@@ -200,7 +200,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aerodrome_STAR_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_STAR_USDC.Underlying, 'USDC_base', 'STAR_base'],
+      params: [addresses.BASE.V2.aerodrome_STAR_USDC.Underlying, 'STAR_base', 'USDC_base'],
     },
     estimateApyFunctions: [
       {
