@@ -14,7 +14,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
     rewardTokenSymbols: ['iFARM'],
-    liquidityUrl: 'https://aerodrome.finance/connect?token0=0x2aF864fb54b55900Cd58d19c7102d9e4FA8D84a3&token1=0x4200000000000000000000000000000000000006&stable=false',
+    liquidityUrl: 'https://aerodrome.finance/deposit?token0=0x2aF864fb54b55900Cd58d19c7102d9e4FA8D84a3&token1=0x4200000000000000000000000000000000000006&stable=false',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -25,7 +25,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_GB_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
-      <a href="https://aerodrome.finance/connect?token0=0x2aF864fb54b55900Cd58d19c7102d9e4FA8D84a3&token1=0x4200000000000000000000000000000000000006&stable=false" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
+      <a href="https://aerodrome.finance/deposit?token0=0x2aF864fb54b55900Cd58d19c7102d9e4FA8D84a3&token1=0x4200000000000000000000000000000000000006&stable=false" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
       </p>
     </div>
    `,
@@ -40,7 +40,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
     rewardTokenSymbols: ['iFARM'],
-    liquidityUrl: 'https://aerodrome.finance/connect?token0=0xA3d1a8DEB97B111454B294E2324EfAD13a9d8396&token1=0xB79DD08EA68A908A97220C76d19A6aA9cBDE4376&stable=false',
+    liquidityUrl: 'https://aerodrome.finance/deposit?token0=0xA3d1a8DEB97B111454B294E2324EfAD13a9d8396&token1=0xB79DD08EA68A908A97220C76d19A6aA9cBDE4376&stable=false',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -51,7 +51,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_OVN_USDp.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
-      <a href="https://aerodrome.finance/connect?token0=0xA3d1a8DEB97B111454B294E2324EfAD13a9d8396&token1=0xB79DD08EA68A908A97220C76d19A6aA9cBDE4376&stable=false" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
+      <a href="https://aerodrome.finance/deposit?token0=0xA3d1a8DEB97B111454B294E2324EfAD13a9d8396&token1=0xB79DD08EA68A908A97220C76d19A6aA9cBDE4376&stable=false" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
       </p>
     </div>
    `,
@@ -66,7 +66,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
     rewardTokenSymbols: ['iFARM'],
-    liquidityUrl: 'https://aerodrome.finance/connect?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0x940181a94A35A4569E4529A3CDfB74e38FD98631&stable=false',
+    liquidityUrl: 'https://aerodrome.finance/deposit?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0x940181a94A35A4569E4529A3CDfB74e38FD98631&stable=false',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -77,7 +77,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_USDC_AERO.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
-      <a href="https://aerodrome.finance/connect?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0x940181a94A35A4569E4529A3CDfB74e38FD98631&stable=false" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
+      <a href="https://aerodrome.finance/deposit?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0x940181a94A35A4569E4529A3CDfB74e38FD98631&stable=false" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
       </p>
     </div>
    `,
@@ -92,7 +92,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
     rewardTokenSymbols: ['iFARM'],
-    liquidityUrl: 'https://aerodrome.finance/connect?token0=0x4200000000000000000000000000000000000006&token1=0xFF8adeC2221f9f4D8dfbAFa6B9a297d17603493D&stable=false',
+    liquidityUrl: 'https://aerodrome.finance/deposit?token0=0x4200000000000000000000000000000000000006&token1=0xFF8adeC2221f9f4D8dfbAFa6B9a297d17603493D&stable=false',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -103,7 +103,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_WELL_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
-      <a href="https://aerodrome.finance/connect?token0=0x4200000000000000000000000000000000000006&token1=0xFF8adeC2221f9f4D8dfbAFa6B9a297d17603493D&stable=false" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
+      <a href="https://aerodrome.finance/deposit?token0=0x4200000000000000000000000000000000000006&token1=0xFF8adeC2221f9f4D8dfbAFa6B9a297d17603493D&stable=false" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
       </p>
     </div>
    `,
@@ -118,7 +118,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
     rewardTokenSymbols: ['iFARM'],
-    liquidityUrl: 'https://aerodrome.finance/connect?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xC19669A405067927865B40Ea045a2baabbbe57f5&stable=true',
+    liquidityUrl: 'https://aerodrome.finance/deposit?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xC19669A405067927865B40Ea045a2baabbbe57f5&stable=true',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -129,7 +129,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_STAR_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
-      <a href="https://aerodrome.finance/connect?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xC19669A405067927865B40Ea045a2baabbbe57f5&stable=true" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
+      <a href="https://aerodrome.finance/deposit?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xC19669A405067927865B40Ea045a2baabbbe57f5&stable=true" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
       </p>
     </div>
    `,
@@ -144,7 +144,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
     rewardTokenSymbols: ['iFARM'],
-    liquidityUrl: 'https://aerodrome.finance/connect?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA&stable=true',
+    liquidityUrl: 'https://aerodrome.finance/deposit?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA&stable=true',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -155,7 +155,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_USDC_USDbC.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
-      <a href="https://aerodrome.finance/connect?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA&stable=true" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
+      <a href="https://aerodrome.finance/deposit?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA&stable=true" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
       </p>
     </div>
    `,
@@ -170,7 +170,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
     rewardTokenSymbols: ['iFARM'],
-    liquidityUrl: 'https://aerodrome.finance/connect?token0=0x1C7a460413dD4e964f96D8dFC56E7223cE88CD85&token1=0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA&stable=false',
+    liquidityUrl: 'https://aerodrome.finance/deposit?token0=0x1C7a460413dD4e964f96D8dFC56E7223cE88CD85&token1=0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA&stable=false',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -181,7 +181,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_SEAM_USDbC.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
-      <a href="https://aerodrome.finance/connect?token0=0x1C7a460413dD4e964f96D8dFC56E7223cE88CD85&token1=0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA&stable=false" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
+      <a href="https://aerodrome.finance/deposit?token0=0x1C7a460413dD4e964f96D8dFC56E7223cE88CD85&token1=0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA&stable=false" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
       </p>
     </div>
    `,
