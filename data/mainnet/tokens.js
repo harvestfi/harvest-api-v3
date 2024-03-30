@@ -60,7 +60,7 @@ module.exports = {
   OVN_base: {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/ovn.svg'],
-    tokenAddress: addresses.BASE.GB,
+    tokenAddress: addresses.BASE.OVN,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
