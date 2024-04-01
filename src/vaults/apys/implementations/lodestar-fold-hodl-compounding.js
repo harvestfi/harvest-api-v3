@@ -16,16 +16,16 @@ const getARBRewardRate = async (strategyAddr, investedUSD) => {
   const arbPrice = await getTokenPrice(arb, CHAIN_IDS.ARBITRUM_ONE)
   const strategyBalance = new BigNumber(await getBalance(strategyAddr, arbToken))
   const balanceUSD = strategyBalance.times(arbPrice).div(1e18)
-  console.log(balanceUSD.toFixed())
-  console.log(investedUSD.toFixed())
 
   const endTime = 1712556000
+  const now = Date.now() / 1000
+  if (now > endTime) {
+    return 0
+  }
   const secondsPerYear = 3600 * 24 * 365
-  const timeToGo = endTime - Date.now() / 1000
-  console.log(timeToGo)
+  const timeToGo = endTime - now
 
   const apr = balanceUSD.div(investedUSD).div(timeToGo).times(secondsPerYear)
-  console.log(apr.times(100).toFixed())
   return apr.times(100)
 }
 
