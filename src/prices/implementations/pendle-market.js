@@ -1,3 +1,4 @@
+const BigNumber = require('bignumber.js')
 const axios = require('axios')
 const { get } = require('lodash')
 const { PENDLE_ENDPOINT } = require('../../lib/constants')
@@ -7,10 +8,10 @@ const getPrice = async (marketAddress, chain) => {
     response
   try {
     response = await axios.get(`${PENDLE_ENDPOINT}${chain}/markets/${marketAddress}/data`)
-    const tvlUSD = parseFloat(get(response, `data.liquidity.usd`, 0))
-    let totalSupply = parseFloat(get(response, `data.totalLp`, 0))
-    if (totalSupply && totalSupply > 0) {
-      price = parseFloat(tvlUSD) / totalSupply.toFixed()
+    const tvlUSD = new BigNumber(get(response, `data.liquidity.usd`, 0))
+    const totalSupply = new BigNumber(get(response, `data.totalLp`, 0))
+    if (totalSupply.gt(0) && totalSupply.gt(0)) {
+      price = tvlUSD.div(totalSupply).toFixed()
     }
   } catch (e) {
     console.error('Pendle API error: ', e)
