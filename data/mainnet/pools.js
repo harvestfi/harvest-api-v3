@@ -5,6 +5,96 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'penpie_gDAI',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.PENPIE,
+      params: [addresses.ARBITRUM_ONE.V2.penpie_gDAI.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.penpie_gDAI.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.penpie_gDAI.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.pendle.finance/trade/pools/${addresses.ARBITRUM_ONE.V2.penpie_gDAI.Underlying}/zap/in?chain=arbitrum`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_gDAI.Underlying}" target="_blank" rel="noopener noreferrer">gDAI Pendle LP tokens</a> to Penpie, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.PENDLE}" target="_blank" rel="noopener noreferrer">PENDLE</a>. 
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_gDAI.Underlying}" target="_blank" rel="noopener noreferrer">gDAI Pendle LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_gDAI.Underlying}" target="_blank" rel="noopener noreferrer">gDAI Pendle LP tokens</a> by supplying liquidity on 
+        <a href="https://app.pendle.finance/trade/pools/${addresses.ARBITRUM_ONE.V2.penpie_gDAI.Underlying}/zap/in?chain=arbitrum" target="_blank" rel="noopener noreferrer">Pendle</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'penpie_aUSDC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.PENPIE,
+      params: [addresses.ARBITRUM_ONE.V2.penpie_aUSDC.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.penpie_aUSDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.penpie_aUSDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.pendle.finance/trade/pools/${addresses.ARBITRUM_ONE.V2.penpie_aUSDC.Underlying}/zap/in?chain=arbitrum`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_aUSDC.Underlying}" target="_blank" rel="noopener noreferrer">aUSDC Pendle LP tokens</a> to Penpie, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.PENDLE}" target="_blank" rel="noopener noreferrer">PENDLE</a>. 
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_aUSDC.Underlying}" target="_blank" rel="noopener noreferrer">aUSDC Pendle LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_aUSDC.Underlying}" target="_blank" rel="noopener noreferrer">aUSDC Pendle LP tokens</a> by supplying liquidity on 
+        <a href="https://app.pendle.finance/trade/pools/${addresses.ARBITRUM_ONE.V2.penpie_aUSDC.Underlying}/zap/in?chain=arbitrum" target="_blank" rel="noopener noreferrer">Pendle</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'penpie_mPENDLE',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.PENPIE,
+      params: [addresses.ARBITRUM_ONE.V2.penpie_mPENDLE.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.penpie_mPENDLE.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.penpie_mPENDLE.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.pendle.finance/trade/pools/${addresses.ARBITRUM_ONE.V2.penpie_mPENDLE.Underlying}/zap/in?chain=arbitrum`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_mPENDLE.Underlying}" target="_blank" rel="noopener noreferrer">mPENDLE Pendle LP tokens</a> to Penpie, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.PENDLE}" target="_blank" rel="noopener noreferrer">PENDLE</a>. 
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_mPENDLE.Underlying}" target="_blank" rel="noopener noreferrer">mPENDLE Pendle LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.penpie_mPENDLE.Underlying}" target="_blank" rel="noopener noreferrer">mPENDLE Pendle LP tokens</a> by supplying liquidity on 
+        <a href="https://app.pendle.finance/trade/pools/${addresses.ARBITRUM_ONE.V2.penpie_mPENDLE.Underlying}/zap/in?chain=arbitrum" target="_blank" rel="noopener noreferrer">Pendle</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'aerodrome_GB_ETH',
     type: POOL_TYPES.INCENTIVE,

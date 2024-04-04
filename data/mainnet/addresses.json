@@ -2702,6 +2702,24 @@
         "NewStrategy": "0x201f78F90Ae917F6E26D580BADc008746b4E7ccb",
         "NewPool": "0xb06F00e5b9B845561eA88986482d7FaFc74f9Dd0",
         "PoolId": "7"
+      },
+      "penpie_gDAI": {
+        "Underlying": "0x99Ed4F0Ab6524d26B31D0aEa087eBe20D5949e0f",
+        "NewVault": "0xce02d54fe9C8ACe5AcC3B361f8B8601d5E0b087D",
+        "NewStrategy": "0xf0D09581adF17FBb715C1369680777aCDAe73905",
+        "NewPool": "0xfcd35AC088285C5B47f9DAd2B698a3693908C789"
+      },
+      "penpie_aUSDC": {
+        "Underlying": "0xBa4A858d664Ddb052158168DB04AFA3cFF5CFCC8",
+        "NewVault": "0x6C3bd1bce27D5c26e28a8B3417aC7570bf51a329",
+        "NewStrategy": "0x553de4DbBcd20665dEB273DAb66eA333fE906537",
+        "NewPool": "0x97D0f4d319A46c8eB8a17272766BCdF10443B2F1"
+      },
+      "penpie_mPENDLE": {
+        "Underlying": "0xf617792eA9Dceb2208F4C440258B21d2f3FdB9A3",
+        "NewVault": "0xE28E8293226F5B9CB722ee9893456bEe821481c5",
+        "NewStrategy": "0x80174cfae85bd9a5fdA9c24aB6F0e0876D9e5a4F",
+        "NewPool": "0xC17CdAEebC325812ffc325f624BEd2b587bC14a8"
       }
     }
   },
