@@ -17,7 +17,7 @@ const getARBRewardRate = async (strategyAddr, investedUSD) => {
   const strategyBalance = new BigNumber(await getBalance(strategyAddr, arbToken))
   const balanceUSD = strategyBalance.times(arbPrice).div(1e18)
 
-  const endTime = 1712559600
+  const endTime = 1712556000
   const now = Date.now() / 1000
   if (now > endTime) {
     return 0
