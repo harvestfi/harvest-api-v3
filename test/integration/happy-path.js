@@ -63,11 +63,13 @@ describe('Happy Paths', function () {
           assert.exists(res.body.arbitrum)
           assert.exists(res.body.matic)
           assert.exists(res.body.eth)
+          assert.exists(res.body.zksync)
           assert.equal(
             Object.keys(res.body.matic).length +
               Object.keys(res.body.eth).length +
               Object.keys(res.body.arbitrum).length +
-              Object.keys(res.body.base).length,
+              Object.keys(res.body.base).length +
+              Object.keys(res.body.zksync).length,
             allVaultsJsonArray.length,
           )
         })

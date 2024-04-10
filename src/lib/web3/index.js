@@ -5,6 +5,7 @@ const {
   MATIC_RPC_URL,
   ARBITRUM_RPC_URL,
   BASE_RPC_URL,
+  ZKSYNC_RPC_URL,
   CHAIN_IDS,
   WEB3_CALL_COUNT_STATS_KEY,
   WEB3_CALL_COUNT_KEY,
@@ -16,6 +17,7 @@ const web3 = new Web3(INFURA_URL)
 const web3MATIC = new Web3(MATIC_RPC_URL)
 const web3ARBITRUM = new Web3(ARBITRUM_RPC_URL)
 const web3BASE = new Web3(BASE_RPC_URL)
+const web3ZKSYNC = new Web3(ZKSYNC_RPC_URL)
 
 const web3Socket = new Web3(new Web3.providers.WebsocketProvider(INFURA_WS_URL))
 
@@ -27,6 +29,8 @@ const getWeb3 = chainId => {
       return web3ARBITRUM
     case CHAIN_IDS.BASE:
       return web3BASE
+    case CHAIN_IDS.ZKSYNC:
+      return web3ZKSYNC
     default:
       return web3
   }
@@ -84,6 +88,7 @@ module.exports = {
   web3MATIC,
   web3ARBITRUM,
   web3BASE,
+  web3ZKSYNC,
   getWeb3,
   countFunctionCall,
   resetCallCount,

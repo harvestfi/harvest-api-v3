@@ -180,6 +180,7 @@ const CHAIN_IDS = {
   POLYGON: '137',
   BASE: '8453',
   ARBITRUM_ONE: '42161',
+  ZKSYNC: '324',
 }
 
 const MATIC_RPC_URL =
@@ -188,6 +189,7 @@ const BASE_RPC_URL =
   process.env.BASE_RPC_URL || `https://base-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
 const ARBITRUM_RPC_URL =
   process.env.ARBITRUM_RPC_URL || `https://arb-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
+const ZKSYNC_RPC_URL = process.env.ZKSYNC_RPC_URL || `https://zksync.drpc.org`
 const SWIRL_API_URL = 'https://api.swirl.cash/'
 const MSTABLE_API_URL = 'https://api.mstable.org/pools'
 const APE_API_URL = 'https://ape-swap-api.herokuapp.com'
@@ -310,4 +312,5 @@ module.exports = {
   CURVE_FINANCE_API_URL,
   WOMBAT_ARB_SUBGRAPH_URL,
   WOMBAT_ARB_ONE_BLOCK_URL,
+  ZKSYNC_RPC_URL,
 }
