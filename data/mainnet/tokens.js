@@ -46,6 +46,28 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  test_IFARM: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/ifarm.svg'],
+    apyIconUrls: [],
+    apyTokenSymbols: [],
+    tokenNames: ['iFARM'],
+    platform: ['Harvest'],
+    tags: ['Beginners'],
+    tokenAddress: addresses.ZKSYNC.iFARM,
+    decimals: '18',
+    vaultAddress: addresses.ZKSYNC.iFARM,
+    priceFunction: {
+      type: GET_PRICE_TYPES.F_TOKEN,
+      params: [addresses.iFARM, '18'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0.00'],
+      },
+    ],
+  },
   penpie_gDAI: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/pendle.svg'],

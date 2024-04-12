@@ -3168,5 +3168,15 @@
         "Gauge": "0xf2669b18Eb18052A6fa7aA87294C629e3B158c1D"
       }
     }
+  },
+  "ZKSYNC": {
+    "V2": {
+      "test_iFARM": {
+        "Underlying": "0x659EF1727551b0c9Dd78CB2c231A5d13d42216d0",
+        "NewVault": "0x79E05bcbBfa33F1807BC49b982E9532C7C9f1A21",
+        "NewStrategy": "0xFD65d266b3d902fCC8DB1B9A3447B3F020Fb324C",
+        "NewPool": "0x3b90BBa41A145ddBceEbCdfF679741E7cABFC772"
+      }
+    }
   }
 }
