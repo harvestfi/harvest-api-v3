@@ -5,6 +5,33 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'aerodrome_GENOME_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.aerodrome_GENOME_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.aerodrome_GENOME_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM, addresses.BASE.GENOME],
+    rewardTokenSymbols: ['iFARM', 'GENOME_base'],
+    liquidityUrl:
+      'https://aerodrome.finance/deposit?token0=0x4200000000000000000000000000000000000006&token1=0x1db0c569ebb4a8b57AC01833B9792F526305e062&stable=false',
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_GENOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_GENOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_GENOME_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
+      <a href="https://aerodrome.finance/deposit?token0=0x4200000000000000000000000000000000000006&token1=0x1db0c569ebb4a8b57AC01833B9792F526305e062&stable=false" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'penpie_gDAI',
     type: POOL_TYPES.INCENTIVE,

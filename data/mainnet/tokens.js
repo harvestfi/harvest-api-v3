@@ -46,6 +46,41 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  GENOME_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/genome.svg'],
+    tokenAddress: addresses.BASE.GENOME,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.AERODROME_PAIR,
+      params: [addresses.BASE.GENOME, addresses.BASE.WETH, 6],
+    },
+  },
+  aerodrome_GENOME_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/genome.svg', './icons/eth.svg'],
+    tokenNames: ['GENOME', 'ETH'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.BASE.V2.aerodrome_GENOME_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_GENOME_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_GENOME_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_GENOME_ETH.Underlying, 'GENOME_base', 'WETH_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'AERO'],
+  },
   penpie_gDAI: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/pendle.svg'],
