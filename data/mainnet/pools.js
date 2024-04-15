@@ -13,7 +13,7 @@ module.exports = [
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM, addresses.BASE.GENOME],
-    rewardTokenSymbols: ['iFARM', 'GENOME_base'],
+    rewardTokenSymbols: ['iFARM', 'GENOME'],
     liquidityUrl:
       'https://aerodrome.finance/deposit?token0=0x4200000000000000000000000000000000000006&token1=0x1db0c569ebb4a8b57AC01833B9792F526305e062&stable=false',
     stakeAndDepositHelpMessage: `
