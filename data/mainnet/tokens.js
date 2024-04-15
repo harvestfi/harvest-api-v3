@@ -64,7 +64,7 @@ module.exports = {
     logoUrl: ['./icons/genome.svg', './icons/eth.svg'],
     tokenNames: ['GENOME', 'ETH'],
     platform: ['Aerodrome'],
-    tags: ['Advanced'],
+    tags: ['Advanced', 'DeSci'],
     tokenAddress: addresses.BASE.V2.aerodrome_GENOME_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.aerodrome_GENOME_ETH.NewVault,
