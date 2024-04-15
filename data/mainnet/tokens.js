@@ -46,7 +46,7 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
-  GENOME_base: {
+  GENOME: {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/genome.svg'],
     tokenAddress: addresses.BASE.GENOME,
@@ -71,7 +71,7 @@ module.exports = {
     strategyAddress: addresses.BASE.V2.aerodrome_GENOME_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_GENOME_ETH.Underlying, 'GENOME_base', 'WETH_base'],
+      params: [addresses.BASE.V2.aerodrome_GENOME_ETH.Underlying, 'GENOME', 'WETH_base'],
     },
     estimateApyFunctions: [
       {
