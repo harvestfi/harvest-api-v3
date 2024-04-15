@@ -199,6 +199,7 @@ module.exports = {
     },
   },
   aerodrome_GB_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
