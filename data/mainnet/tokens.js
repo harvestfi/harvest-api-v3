@@ -53,8 +53,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
-      type: GET_PRICE_TYPES.AERODROME_PAIR,
-      params: [addresses.BASE.GENOME, addresses.BASE.WETH, 6],
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['genomesdao-genome'],
     },
   },
   aerodrome_GENOME_ETH: {
