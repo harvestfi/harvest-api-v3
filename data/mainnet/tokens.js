@@ -46,6 +46,41 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  USDC_polygon: {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    logoUrl: ['./icons/usdc.svg'],
+    tokenAddress: addresses.MATIC.USDC,
+    decimals: '6',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+  },
+  tBTC_polygon: {
+    logoUrl: [],
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    tokenAddress: addresses.MATIC.tBTC,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['tbtc'] },
+  },
+  rsETH_arbitrum: {
+    logoUrl: [],
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    tokenAddress: addresses.ARBITRUM_ONE.LINK,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['kelp-dao-restaked-eth'] },
+  },
+  LINK_arbitrum: {
+    logoUrl: [],
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    tokenAddress: addresses.ARBITRUM_ONE.rsETH,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['chainlink'] },
+  },
   GENOME: {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/genome.svg'],
@@ -403,7 +438,13 @@ module.exports = {
     strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.Underlying,
+        addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.PoolAddress,
+        'tBTC_polygon',
+        'WETH_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -433,7 +474,13 @@ module.exports = {
     strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.Underlying,
+        addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.PoolAddress,
+        'WBTC_polygon',
+        'WETH_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -1005,7 +1052,13 @@ module.exports = {
     strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.AlgebraPool,
+        'rsETH_arbitrum',
+        'WETH_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -1036,7 +1089,13 @@ module.exports = {
     strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.Underlying,
+        addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.PoolAddress,
+        'WETH_polygon',
+        'USDC_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -1066,7 +1125,13 @@ module.exports = {
     strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.Underlying,
+        addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.PoolAddress,
+        'WETH_polygon',
+        'USDT_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -1096,7 +1161,13 @@ module.exports = {
     strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.Underlying,
+        addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.PoolAddress,
+        'WMATIC',
+        'USDT_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -1274,7 +1345,13 @@ module.exports = {
     strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.AlgebraPool,
+        'MAGIC_arbitrum',
+        'WETH_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -1305,7 +1382,13 @@ module.exports = {
     strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.AlgebraPool,
+        'lodestarHodl_PENDLE',
+        'WETH_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -1336,7 +1419,13 @@ module.exports = {
     strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.AlgebraPool,
+        'RDNT',
+        'WETH_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -1367,7 +1456,13 @@ module.exports = {
     strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.AlgebraPool,
+        'USDCoin_arbitrum',
+        'USDT_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -1398,7 +1493,13 @@ module.exports = {
     strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.AlgebraPool,
+        'wstETH_arbitrum',
+        'WETH_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -2929,7 +3030,13 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ARB_ETH.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ARB_ETH.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_ARB_ETH.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_ARB_ETH.AlgebraPool,
+        'ARB',
+        'WETH_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -2959,7 +3066,13 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_DAI_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_DAI_USDC.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_DAI_USDC.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_DAI_USDC.AlgebraPool,
+        'DAI_arbitrum',
+        'USDCoin_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -2989,7 +3102,13 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_GMX_ETH.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_GMX_ETH.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_GMX_ETH.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_GMX_ETH.AlgebraPool,
+        'GMX',
+        'WETH_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -3019,7 +3138,13 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.AlgebraPool,
+        'GRAIL',
+        'WETH_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -3049,7 +3174,13 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_LINK_ETH.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_LINK_ETH.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_LINK_ETH.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_LINK_ETH.AlgebraPool,
+        'LINK_arbitrum',
+        'WETH_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -3079,7 +3210,13 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.AlgebraPool,
+        'LUSD_arbitrum',
+        'USDCoin_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -3110,7 +3247,13 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_USDCe_USDT.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_USDCe_USDT.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_USDCe_USDT.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_USDCe_USDT.AlgebraPool,
+        'USDC_arbitrum',
+        'USDT_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -3140,7 +3283,13 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_WBTC_ETH.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_WBTC_ETH.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_WBTC_ETH.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_WBTC_ETH.AlgebraPool,
+        'WBTC_arbitrum',
+        'WETH_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -3170,7 +3319,13 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.AlgebraPool,
+        'ARB',
+        'USDCoin_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -3200,7 +3355,13 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.AlgebraPool,
+        'WETH_arbitrum',
+        'USDT_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -3230,7 +3391,13 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.Underlying, 'camelot/arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.Underlying,
+        addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.AlgebraPool,
+        'WETH_arbitrum',
+        'USDCoin_arbitrum',
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -3260,7 +3427,13 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_wstETH_ETH.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying,
+        addresses.MATIC.V2.quickGamma_wstETH_ETH.PoolAddress,
+        'wstETH_polygon',
+        'WETH_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -3289,7 +3462,13 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying,
+        addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.PoolAddress,
+        'WBTC_polygon',
+        'USDC_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -3318,7 +3497,13 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying,
+        addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.PoolAddress,
+        'WBTC_polygon',
+        'WETH_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -3347,7 +3532,13 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_USDC_USDT.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying,
+        addresses.MATIC.V2.quickGamma_USDC_USDT.PoolAddress,
+        'USDC_polygon',
+        'USDT_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -3376,7 +3567,13 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_USDC_DAI.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying,
+        addresses.MATIC.V2.quickGamma_USDC_DAI.PoolAddress,
+        'USDC_polygon',
+        'DAI_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -7430,7 +7627,13 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying,
+        addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.PoolAddress,
+        'WMATIC',
+        'WETH_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -7460,7 +7663,13 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying,
+        addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.PoolAddress,
+        'WMATIC',
+        'WETH_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -7488,7 +7697,13 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying,
+        addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.PoolAddress,
+        'WMATIC',
+        'USDC_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -7518,7 +7733,13 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying,
+        addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.PoolAddress,
+        'WMATIC',
+        'USDC_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -7546,7 +7767,13 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying,
+        addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.PoolAddress,
+        'USDC_polygon',
+        'WETH_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -7576,7 +7803,13 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.quickGamma_USDC_ETH_wide.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying, 'quickswap/polygon'],
+      params: [
+        addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying,
+        addresses.MATIC.V2.quickGamma_USDC_ETH_wide.PoolAddress,
+        'USDC_polygon',
+        'WETH_polygon',
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -12230,7 +12463,7 @@ module.exports = {
       type: GET_PRICE_TYPES.KYBER_PAIR,
       params: [
         addresses.MATIC.AUR_APR22,
-        addresses.MATIC.USDC,
+        addresses.MATIC.USDCe,
         addresses.MATIC.V2.jarvis_AUR3_USDC.Underlying,
       ],
     },
@@ -12245,7 +12478,7 @@ module.exports = {
       type: GET_PRICE_TYPES.KYBER_PAIR,
       params: [
         addresses.MATIC.AURFEB22,
-        addresses.MATIC.USDC,
+        addresses.MATIC.USDCe,
         addresses.MATIC.V2.jarvis_AUR_USDC_V2.Underlying,
       ],
     },
