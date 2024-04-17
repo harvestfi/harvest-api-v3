@@ -43,6 +43,8 @@ const getProfitSharingFactor = chain => {
       return 0.9
     case CHAIN_IDS.BASE:
       return 0.9
+    case CHAIN_IDS.ZKSYNC:
+      return 0.9
     default:
       return 0.85
   }

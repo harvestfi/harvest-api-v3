@@ -46,6 +46,25 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  WETH_zksync: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/eth.svg'],
+    tokenAddress: addresses.ZKSYNC.WETH,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.WETH] },
+  },
+  USDC_zksync: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/usdc.svg'],
+    tokenAddress: addresses.ZKSYNC.USDC,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+  },
   test_IFARM: {
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/ifarm.svg'],
