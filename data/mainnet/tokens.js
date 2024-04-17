@@ -54,12 +54,12 @@ module.exports = {
     tokenNames: ['iFARM'],
     platform: ['Harvest'],
     tags: ['Beginners'],
-    tokenAddress: addresses.ZKSYNC.iFARM,
+    tokenAddress: addresses.ZKSYNC.V2.test_iFARM.Underlying,
     decimals: '18',
-    vaultAddress: addresses.ZKSYNC.iFARM,
+    vaultAddress: addresses.ZKSYNC.V2.test_iFARM.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.F_TOKEN,
-      params: [addresses.iFARM, '18'],
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['ifarm'],
     },
     estimateApyFunctions: [
       {

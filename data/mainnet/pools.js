@@ -5,6 +5,25 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'iFARM',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.test_iFARM.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.test_iFARM.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.V2.test_iFARM.Underlying],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault enables users to convert their assets into
+       <a href="https://explorer.zksync.io/${addresses.ZKSYNC.V2.test_iFARM.Underlying}" target="_blank" rel="noopener noreferrer"> iFARM </a>.
+       In doing so, they benefit from a portion of the fees collected by Harvest.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'penpie_gDAI',
     type: POOL_TYPES.INCENTIVE,
