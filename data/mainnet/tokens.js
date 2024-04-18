@@ -75,8 +75,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MANUAL,
-        params: ['0'],
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_GENOME_ETH.Underlying,
+          addresses.BASE.V2.aerodrome_GENOME_ETH.Gauge,
+          profitSharingCut10Percent,
+        ],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'AERO'],

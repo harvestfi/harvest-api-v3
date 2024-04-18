@@ -3172,7 +3172,8 @@
         "Underlying": "0x963ceee215e5b0B1dCB221C3bA398De66abC73D9",
         "NewVault": "0x284c60490212DB0dc0b8F93503d35744f8053381",
         "NewStrategy": "0xF1A26a78da5FA19E55C95DF13e1af9Aa289F1A5a",
-        "NewPool": "0x28f914229770e403cEB2Ae55069fF7447247470a"
+        "NewPool": "0x28f914229770e403cEB2Ae55069fF7447247470a",
+        "Gauge": "0xa4F335B6ee0f8e34F31d4C8b702080196252dAc3"
       }
     }
   }
