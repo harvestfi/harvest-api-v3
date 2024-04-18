@@ -565,7 +565,7 @@ const getTotalRevenue = async () => {
         const tokenGmv = vault.totalValueLocked
         let estimatedApy
         const pool = pools[networkId].find(pool => pool.id === symbol)
-        if (pool.type == 'UNIV3') {
+        if (pool?.type == 'UNIV3') {
           const poolToFetch = pools[networkId].find(
             pool =>
               pool.id === symbol ||
@@ -761,6 +761,7 @@ const getTVL = async () => {
     { name: 'Polygon', type: CHAIN_IDS.POLYGON, list: TVL_LISTS.MATIC },
     { name: 'Arbitrum', type: CHAIN_IDS.ARBITRUM_ONE, list: TVL_LISTS.ARBITRUM },
     { name: 'Base', type: CHAIN_IDS.BASE, list: TVL_LISTS.BASE },
+    { name: 'Zksync', type: CHAIN_IDS.ZKSYNC, list: TVL_LISTS.ZKSYNC },
   ]
 
   for (const chain of chains) {
@@ -786,6 +787,7 @@ const getTVL = async () => {
       if (chain.type === CHAIN_IDS.ETH) data = { ethTvl: { $each: result } }
       else if (chain.type === CHAIN_IDS.POLYGON) data = { polTvl: { $each: result } }
       else if (chain.type === CHAIN_IDS.BASE) data = { baseTvl: { $each: result } }
+      else if (chain.type === CHAIN_IDS.ZKSYNC) data = { zksyncTvl: { $each: result } }
       else data = { arbTvl: { $each: result } }
       await appendData(Cache, DB_CACHE_IDS.TVL, data, hasErrors)
     }
@@ -904,7 +906,7 @@ const getCmc = async () => {
             logo: logoUrlArray,
             poolRewards: vault.cmcRewardTokenSymbols, // The reward token ticker
             apr: new BigNumber(estimatedApy)
-              .plus(sumBy(relevantPool.apy, apy => Number(apy)))
+              .plus(sumBy(relevantPool?.apy, apy => Number(apy)))
               .dividedBy(100)
               .toString(), // APY, 1.1 means 110%
             totalStaked: totalStaked.toString(), // Total valued lock in USD

@@ -20,6 +20,7 @@ const CacheSchema = new mongoose.Schema({
   polTvl: { type: mongoose.Schema.Types.Mixed, default: [] },
   arbTvl: { type: mongoose.Schema.Types.Mixed, default: [] },
   baseTvl: { type: mongoose.Schema.Types.Mixed, default: [] },
+  zksyncTvl: { type: mongoose.Schema.Types.Mixed, default: [] },
   farmTvl: { type: mongoose.Schema.Types.Mixed, default: [] },
   updatedAt: { type: Date, default: new Date() },
 })

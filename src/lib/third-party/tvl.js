@@ -95,7 +95,7 @@ const getTvlDataLength = async chain => {
     `
 
   const queryResponse = await executeGraphCall(chain, query, {})
-  const length = parseInt(queryResponse?.totalTvlCounts[0].length ?? 0)
+  const length = parseInt(queryResponse?.totalTvlCounts[0]?.length ?? 0)
   return length
 }
 
