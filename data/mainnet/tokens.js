@@ -297,7 +297,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aerodrome_WELL_ETH.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_WELL_ETH.Underlying, 'WELL', 'WETH_base'],
+      params: [addresses.BASE.V2.aerodrome_WELL_ETH.Underlying, 'WELL_old', 'WETH_base'],
     },
     estimateApyFunctions: [
       {
@@ -3671,6 +3671,17 @@ module.exports = {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/well.svg'],
     tokenAddress: addresses.BASE.WELL,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['moonwell-artemis'],
+    },
+  },
+  WELL_old: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/well.svg'],
+    tokenAddress: addresses.BASE.WELL_old,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
