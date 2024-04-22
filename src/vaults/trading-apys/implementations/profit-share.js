@@ -1,26 +1,12 @@
-const { get, find } = require('lodash')
-const { Cache } = require('../../../lib/db/models/cache')
-const { cache } = require('../../../lib/cache')
-const { DB_CACHE_IDS, PROFIT_SHARING_POOL_ID } = require('../../../lib/constants')
+const { PROFIT_SHARING_POOL_ID, UI_DATA_FILES } = require('../../../lib/constants')
+const { fetchAndExpandPool } = require('../../../pools')
+const { getUIData } = require('../../../lib/data')
 
 const getTradingApy = async () => {
-  const dbData = await Cache.find({
-    type: { $in: [DB_CACHE_IDS.STATS, DB_CACHE_IDS.POOLS] },
-  })
-
-  const fetchedStats = dbData.find(result => result.type === DB_CACHE_IDS.STATS)
-  const fetchedPools = dbData.find(result => result.type === DB_CACHE_IDS.POOLS)
-
-  let profitShareAPY = get(fetchedStats, 'data.tokenStats.historicalAverageProfitSharingAPY', 0)
-
-  if (!profitShareAPY) {
-    profitShareAPY = get(
-      find(get(fetchedPools, 'data.eth', []), pool => pool && pool.id === 'profit-sharing-farm'),
-      'rewardAPY',
-      get(cache.get(`poolRewardApy${PROFIT_SHARING_POOL_ID}`), 'apy', 0),
-    )
-  }
-  return profitShareAPY
+  const pools = await getUIData(UI_DATA_FILES.POOLS)
+  const poolToFetch = pools.find(pool => pool.id === PROFIT_SHARING_POOL_ID)
+  const pool = await fetchAndExpandPool(poolToFetch)
+  return pool.rewardAPY[0]
 }
 
 module.exports = {
