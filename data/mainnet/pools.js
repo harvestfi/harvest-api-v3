@@ -5,6 +5,35 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'IFARM_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.PROFIT_SHARE,
+      params: [],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.iFARM.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.iFARM.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
+    liquidityUrl:
+      'https://app.camelot.exchange/?token1=0x82af49447d8a07e3bd95bd0d56f35241523fbab1&token2=0x9dca587dc65ac0a043828b0acd946d71eb8d46c1',
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.iFARM.Underlying}" target="_blank" rel="noopener noreferrer">iFARM</a> to Harvest, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a> rewards. 
+      </p>
+      <p> Get 
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.iFARM.Underlying}" target="_blank" rel="noopener noreferrer">iFARM</a> on 
+        <a href="https://app.camelot.exchange/?token1=0x82af49447d8a07e3bd95bd0d56f35241523fbab1&token2=0x9dca587dc65ac0a043828b0acd946d71eb8d46c1" target="_blank" rel="noopener noreferrer">Camelot</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'aerodrome_GENOME_ETH',
     type: POOL_TYPES.INCENTIVE,

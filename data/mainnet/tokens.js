@@ -46,6 +46,29 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  IFARM_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/ifarm.svg'],
+    apyIconUrls: [],
+    apyTokenSymbols: [],
+    tokenNames: ['iFARM'],
+    platform: ['Harvest'],
+    tags: ['Beginners'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.iFARM.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.iFARM.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.iFARM.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.F_TOKEN,
+      params: [addresses.iFARM, '18'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0.00'],
+      },
+    ],
+  },
   GENOME: {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/genome.svg'],

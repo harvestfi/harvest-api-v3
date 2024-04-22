@@ -2720,6 +2720,12 @@
         "NewVault": "0xE28E8293226F5B9CB722ee9893456bEe821481c5",
         "NewStrategy": "0x80174cfae85bd9a5fdA9c24aB6F0e0876D9e5a4F",
         "NewPool": "0xC17CdAEebC325812ffc325f624BEd2b587bC14a8"
+      },
+      "iFARM": {
+        "Underlying": "0x9dCA587dc65AC0a043828B0acd946d71eb8D46c1",
+        "NewVault": "0xc54a552AdA1871417b6569a512f748B023ED49BE",
+        "NewStrategy": "0x71b6f1c52e21c3028DB5364Ef2139d4AfeA81E52",
+        "NewPool": "0xf42C8C5fbb8986a7b091b746696D06b4e5b16D28"
       }
     }
   },
