@@ -2628,13 +2628,13 @@
         "NitroPool": "0x2b0706b44E4ee2b0781dF8fCdF3C2ff3521c639E",
         "AlgebraPool": "0xb355ccE5CBAF411bd56e3b092F5AA10A894083ae"
       },
-      "penpie_rsETH": {
+      "penpie_rsETH2504": {
         "Underlying": "0x6F02C88650837C8dfe89F66723c4743E9cF833cd",
         "NewVault": "0xB29b7683397Bf3D716CCA2D2F0Df25DEC6c1cA55",
         "NewStrategy": "0x5cf10e366DB607A5ccC9eF52Dc23A05D512f8d09",
         "NewPool": "0x24c3C1607D91D1C2589aFc9659706BfE41669267"
       },
-      "penpie_eETH": {
+      "penpie_eETH2504": {
         "Underlying": "0xE11f9786B06438456b044B3E21712228ADcAA0D1",
         "NewVault": "0xcD9CF66E594143f6823976d2f5Ebb523145081c0",
         "NewStrategy": "0x21a26237746158de30937104654648AD6de9e913",
@@ -2703,19 +2703,19 @@
         "NewPool": "0xb06F00e5b9B845561eA88986482d7FaFc74f9Dd0",
         "PoolId": "7"
       },
-      "penpie_gDAI": {
+      "penpie_gDAI2609": {
         "Underlying": "0x99Ed4F0Ab6524d26B31D0aEa087eBe20D5949e0f",
         "NewVault": "0xce02d54fe9C8ACe5AcC3B361f8B8601d5E0b087D",
         "NewStrategy": "0xf0D09581adF17FBb715C1369680777aCDAe73905",
         "NewPool": "0xfcd35AC088285C5B47f9DAd2B698a3693908C789"
       },
-      "penpie_aUSDC": {
+      "penpie_aUSDC2706": {
         "Underlying": "0xBa4A858d664Ddb052158168DB04AFA3cFF5CFCC8",
         "NewVault": "0x6C3bd1bce27D5c26e28a8B3417aC7570bf51a329",
         "NewStrategy": "0x553de4DbBcd20665dEB273DAb66eA333fE906537",
         "NewPool": "0x97D0f4d319A46c8eB8a17272766BCdF10443B2F1"
       },
-      "penpie_mPENDLE": {
+      "penpie_mPENDLE2609": {
         "Underlying": "0xf617792eA9Dceb2208F4C440258B21d2f3FdB9A3",
         "NewVault": "0xE28E8293226F5B9CB722ee9893456bEe821481c5",
         "NewStrategy": "0x80174cfae85bd9a5fdA9c24aB6F0e0876D9e5a4F",
@@ -2726,6 +2726,30 @@
         "NewVault": "0xc54a552AdA1871417b6569a512f748B023ED49BE",
         "NewStrategy": "0x71b6f1c52e21c3028DB5364Ef2139d4AfeA81E52",
         "NewPool": "0xf42C8C5fbb8986a7b091b746696D06b4e5b16D28"
+      },
+      "penpie_eETH2706": {
+        "Underlying": "0x952083cde7aaa11AB8449057F7de23A970AA8472",
+        "NewVault": "0xa1215Da01aE56812d5F9630a363D95468B8df781",
+        "NewStrategy": "0xDCaa92a4115FaAf6C4B9A5DFE056f3A36FE1E4e6",
+        "NewPool": "0x824F4eDB5103a77df4381CA812de630757dfcD05"
+      },
+      "penpie_ezETH2706": {
+        "Underlying": "0x5E03C94Fc5Fb2E21882000A96Df0b63d2c4312e2",
+        "NewVault": "0xa243117A028255B511187236359656b6fFBB33eb",
+        "NewStrategy": "0x3EfE00cC9E308B1DD14FCe3FeD438E05831F6730",
+        "NewPool": "0x1C997773152cBCa47EA96d3a0a911a537D988B4A"
+      },
+      "penpie_rsETH2706": {
+        "Underlying": "0x6Ae79089b2CF4be441480801bb741A531d94312b",
+        "NewVault": "0xEbE441b4DA62A6F3AD94636712134D1eE50BE6e0",
+        "NewStrategy": "0x283Db7c6977C14D00f4BD0207f72A51609AF172C",
+        "NewPool": "0x23c3843348d1132E976991e08485242204350A54"
+      },
+      "penpie_wstETH2706": {
+        "Underlying": "0xFd8AeE8FCC10aac1897F8D5271d112810C79e022",
+        "NewVault": "0x1D57718670819c8430Bd4086c77a4a8F96081f8f",
+        "NewStrategy": "0xa607C224576fa865F9a51866708BD09BAE8Ef427",
+        "NewPool": "0x4A978f4ACA97439f5c8453Fb83dcf8dd1dA09fF2"
       }
     }
   },
