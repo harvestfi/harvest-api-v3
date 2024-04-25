@@ -2632,13 +2632,15 @@
         "Underlying": "0x6F02C88650837C8dfe89F66723c4743E9cF833cd",
         "NewVault": "0xB29b7683397Bf3D716CCA2D2F0Df25DEC6c1cA55",
         "NewStrategy": "0x5cf10e366DB607A5ccC9eF52Dc23A05D512f8d09",
-        "NewPool": "0x24c3C1607D91D1C2589aFc9659706BfE41669267"
+        "NewPool": "0x24c3C1607D91D1C2589aFc9659706BfE41669267",
+        "doHardwork": false
       },
       "penpie_eETH2504": {
         "Underlying": "0xE11f9786B06438456b044B3E21712228ADcAA0D1",
         "NewVault": "0xcD9CF66E594143f6823976d2f5Ebb523145081c0",
         "NewStrategy": "0x21a26237746158de30937104654648AD6de9e913",
-        "NewPool": "0x26B28a146FaCBaa3A51563780E8f88153717D84d"
+        "NewPool": "0x26B28a146FaCBaa3A51563780E8f88153717D84d",
+        "doHardwork": false
       },
       "curve_crvUSD_FRAX": {
         "Underlying": "0x2FE7AE43591E534C256A1594D326e5779E302Ff4",
