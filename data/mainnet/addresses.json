@@ -3155,7 +3155,8 @@
         "NewVault": "0x073aDE312d3c422d43B20311F3Ef0e83E8E1AC1a",
         "NewStrategy": "0x20Aa62AC787D2f7556c8d48e43eD15E0081B672C",
         "NewPool": "0x1DC42246E913725eA2d4E1858b36c85C314eAdD1",
-        "Gauge": "0x83FC503345Dcde6197b2BD8eaa82ccb4b737Be40"
+        "Gauge": "0x83FC503345Dcde6197b2BD8eaa82ccb4b737Be40",
+        "doHardwork": false
       },
       "aerodrome_OVN_USDp": {
         "Underlying": "0x61366A4e6b1DB1b85DD701f2f4BFa275EF271197",
