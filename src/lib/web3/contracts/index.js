@@ -151,7 +151,14 @@ const radpieMasterContract = require('../contracts/rdp-master/contract.json')
 const pendleMarketMethods = require('../contracts/pendle-market/methods')
 const pendleMarketContract = require('../contracts/pendle-market/contract.json')
 
+const hypervisorMethods = require('../contracts/hypervisor/methods')
+const hypervisorContract = require('../contracts/hypervisor/contract.json')
+
 module.exports = {
+  hypervisor: {
+    methods: hypervisorMethods,
+    contract: hypervisorContract,
+  },
   pendleMarket: {
     methods: pendleMarketMethods,
     contract: pendleMarketContract,

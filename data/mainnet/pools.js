@@ -464,7 +464,7 @@ module.exports = [
     id: 'gammaMerkl_QS_tBTC_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.Underlying],
     },
     contractAddress: addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.NewPool,
@@ -494,7 +494,7 @@ module.exports = [
     id: 'gammaMerkl_QS_WBTC_ETH_w',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.Underlying],
     },
     contractAddress: addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.NewPool,
@@ -1013,7 +1013,7 @@ module.exports = [
     id: 'gammaMerkl_QS_ETH_USDC',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.Underlying],
     },
     contractAddress: addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.NewPool,
@@ -1043,7 +1043,7 @@ module.exports = [
     id: 'gammaMerkl_QS_ETH_USDT',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.Underlying],
     },
     contractAddress: addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.NewPool,
@@ -1073,7 +1073,7 @@ module.exports = [
     id: 'gammaMerkl_QS_MATIC_USDT',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.Underlying],
     },
     contractAddress: addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.NewPool,
@@ -2805,7 +2805,7 @@ module.exports = [
     id: 'quickGamma_wstETH_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying],
     },
     contractAddress: addresses.MATIC.V2.quickGamma_wstETH_ETH.NewPool,
@@ -2835,7 +2835,7 @@ module.exports = [
     id: 'quickGamma_WBTC_USDC_narrow',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying],
     },
     contractAddress: addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.NewPool,
@@ -2865,7 +2865,7 @@ module.exports = [
     id: 'quickGamma_WBTC_ETH_narrow',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying],
     },
     contractAddress: addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.NewPool,
@@ -2895,7 +2895,7 @@ module.exports = [
     id: 'quickGamma_USDC_USDT',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying],
     },
     contractAddress: addresses.MATIC.V2.quickGamma_USDC_USDT.NewPool,
@@ -2926,7 +2926,7 @@ module.exports = [
     id: 'quickGamma_USDC_DAI',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying],
     },
     contractAddress: addresses.MATIC.V2.quickGamma_USDC_DAI.NewPool,
@@ -5693,7 +5693,7 @@ module.exports = [
     id: 'quickGamma_MATIC_ETH_narrow',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying],
     },
     contractAddress: addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.NewPool,
@@ -5723,7 +5723,7 @@ module.exports = [
     id: 'quickGamma_MATIC_ETH_wide',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying],
     },
     contractAddress: addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.NewPool,
@@ -5753,7 +5753,7 @@ module.exports = [
     id: 'quickGamma_MATIC_USDC_narrow',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying],
     },
     contractAddress: addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.NewPool,
@@ -5783,7 +5783,7 @@ module.exports = [
     id: 'quickGamma_MATIC_USDC_wide',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying],
     },
     contractAddress: addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.NewPool,
@@ -5813,7 +5813,7 @@ module.exports = [
     id: 'quickGamma_USDC_ETH_narrow',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying],
     },
     contractAddress: addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.NewPool,
@@ -5843,7 +5843,7 @@ module.exports = [
     id: 'quickGamma_USDC_ETH_wide',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.QUICKSWAP_GAMMA,
+      type: TRADING_APY_TYPES.GAMMA_API,
       params: [addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying],
     },
     contractAddress: addresses.MATIC.V2.quickGamma_USDC_ETH_wide.NewPool,
