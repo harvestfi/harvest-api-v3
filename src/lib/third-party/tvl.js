@@ -25,26 +25,10 @@ const executeGraphCall = (chain, query, variables) =>
     })
 
 const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
-  const arb_baseTQuery = `
-  query getTVLsQuery($first: Int!, $skip: Int!, $sequence_gt: Int!) {
-    totalTvlHistories(
-      orderBy: createAtBlock
-      orderDirection: asc
-      first: $first
-      skip: $skip
-      where: {sequenceId_gt: $sequence_gt}
-    ) {
-      value
-      timestamp
-      sequenceId
-    }
-  }
-    `
-
   const tQuery = `
   query getTVLsQuery($first: Int!, $skip: Int!, $sequence_gt: Int!) {
     totalTvlHistoryV2S(
-      orderBy: createAtBlock
+      orderBy: timestamp
       orderDirection: asc
       first: $first
       skip: $skip
@@ -60,7 +44,7 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
   const vaultQuery = `
   query getTVLsQuery($vault: String!, $first: Int!, $skip: Int!, $sequence_gt: BigInt!) {
     tvls(
-      orderBy: createAtBlock
+      orderBy: timestamp
       orderDirection: asc
       first: $first
       skip: $skip
@@ -72,13 +56,9 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
     }
   }
   `
-  const query = vault ? vaultQuery : chain === 42161 || chain === 8453 ? arb_baseTQuery : tQuery
+  const query = vault ? vaultQuery : tQuery
   const variables = vault ? { vault, first, skip, sequence_gt } : { first, skip, sequence_gt }
-  const resultKey = vault
-    ? 'tvls'
-    : chain === 42161 || chain === 8453
-    ? 'totalTvlHistories'
-    : 'totalTvlHistoryV2S'
+  const resultKey = vault ? 'tvls' : 'totalTvlHistoryV2S'
 
   const { [resultKey]: result } = await executeGraphCall(chain, query, variables)
 
