@@ -1,6 +1,6 @@
 const { get } = require('lodash')
 const axios = require('axios')
-const { HARVEST_SUBGRAPH_URLS } = require('../../lib/constants')
+const { HARVEST_SUBGRAPH_URLS } = require('../constants')
 // const { cachedAxios } = require('../db/models/cache')
 
 const executeGraphCall = (chain, query, variables) =>
