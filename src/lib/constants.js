@@ -219,6 +219,8 @@ const QUICKSWAP_GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/'
 const MERKL_ENDPOINT = 'https://api.angle.money/v2/merkl'
 const PENDLE_ENDPOINT = 'https://api-v2.pendle.finance/core/v2/'
 
+const CURRENCY_API_URL = `https://api.freecurrencyapi.com/v1/latest?apikey=${process.env.CURRENCY_API_KEY}`
+
 const DEBUG_MODE = process.env.DEBUG_MODE
 
 const WEB3_CALL_COUNT_STATS_KEY = 'web3CallCountStats'
@@ -239,6 +241,7 @@ const DB_CACHE_IDS = {
   UI_DATA: 4,
   EXTERNAL_API: 5,
   TVL: 6,
+  RATES: 7,
 }
 
 const PROFIT_SHARING_POOL_ID = 'profit-sharing-farm'
@@ -310,4 +313,5 @@ module.exports = {
   CURVE_FINANCE_API_URL,
   WOMBAT_ARB_SUBGRAPH_URL,
   WOMBAT_ARB_ONE_BLOCK_URL,
+  CURRENCY_API_URL,
 }
