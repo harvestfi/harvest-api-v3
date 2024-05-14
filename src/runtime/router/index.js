@@ -291,6 +291,17 @@ const initRouter = app => {
       })
     }),
   )
+
+  // currency rates
+  app.get(
+    '/rates',
+    asyncWrap(async (req, res) => {
+      const rate = await Cache.findOne({ type: DB_CACHE_IDS.RATES })
+      res.send({
+        ...get(rate, 'data', {}),
+      })
+    }),
+  )
 }
 
 module.exports = { initRouter }

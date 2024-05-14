@@ -87,27 +87,201 @@ module.exports = {
       },
     ],
   },
-  penpie_gDAI: {
+  penpie_rsETH2706: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/pendle.svg'],
+    apyTokenSymbols: ['PENDLE'],
+    logoUrl: ['./icons/rsethlp.svg'],
+    tokenNames: ['rsETH-LP (27-JUN-24)'],
+    platform: ['Penpie'],
+    tags: ['Advanced', 'LSD'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_rsETH2706.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_rsETH2706.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_rsETH2706.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.PENDLE_MARKET,
+      params: [addresses.ARBITRUM_ONE.V2.penpie_rsETH2706.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PENPIE,
+        params: [
+          addresses.ARBITRUM_ONE.V2.penpie_rsETH2706.Underlying,
+          CHAIN_IDS.ARBITRUM_ONE,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PENLDE'],
+  },
+  penpie_eETH2706: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/pendle.svg'],
+    apyTokenSymbols: ['PENDLE'],
+    logoUrl: ['./icons/eethlp.svg'],
+    tokenNames: ['eETH-LP (27-JUN-24)'],
+    platform: ['Penpie'],
+    tags: ['Advanced', 'LSD'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_eETH2706.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_eETH2706.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_eETH2706.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.PENDLE_MARKET,
+      params: [addresses.ARBITRUM_ONE.V2.penpie_eETH2706.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PENPIE,
+        params: [
+          addresses.ARBITRUM_ONE.V2.penpie_eETH2706.Underlying,
+          CHAIN_IDS.ARBITRUM_ONE,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PENLDE'],
+  },
+  penpie_ezETH2706: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/pendle.svg'],
+    apyTokenSymbols: ['PENDLE'],
+    logoUrl: ['./icons/ezethlp.svg'],
+    tokenNames: ['ezETH-LP (27-JUN-24)'],
+    platform: ['Penpie'],
+    tags: ['Advanced', 'LSD'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_ezETH2706.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_ezETH2706.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_ezETH2706.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.PENDLE_MARKET,
+      params: [addresses.ARBITRUM_ONE.V2.penpie_ezETH2706.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PENPIE,
+        params: [
+          addresses.ARBITRUM_ONE.V2.penpie_ezETH2706.Underlying,
+          CHAIN_IDS.ARBITRUM_ONE,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PENLDE'],
+  },
+  penpie_wstETH2706: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/pendle.svg'],
+    apyTokenSymbols: ['PENDLE'],
+    logoUrl: ['./icons/wstethlp.svg'],
+    tokenNames: ['wstETH-LP (27-JUN-24)'],
+    platform: ['Penpie'],
+    tags: ['Advanced', 'LSD'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_wstETH2706.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_wstETH2706.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_wstETH2706.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.PENDLE_MARKET,
+      params: [addresses.ARBITRUM_ONE.V2.penpie_wstETH2706.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PENPIE,
+        params: [
+          addresses.ARBITRUM_ONE.V2.penpie_wstETH2706.Underlying,
+          CHAIN_IDS.ARBITRUM_ONE,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'PENLDE'],
+  },
+  IFARM_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/ifarm.svg'],
+    apyIconUrls: [],
+    apyTokenSymbols: [],
+    tokenNames: ['iFARM'],
+    platform: ['Harvest'],
+    tags: ['Beginners'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.iFARM.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.iFARM.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.iFARM.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.F_TOKEN,
+      params: [addresses.iFARM, '18'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0.00'],
+      },
+    ],
+  },
+  GENOME: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/genome.svg'],
+    tokenAddress: addresses.BASE.GENOME,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.AERODROME_PAIR,
+      params: [addresses.BASE.GENOME, addresses.BASE.WETH, 6],
+    },
+  },
+  aerodrome_GENOME_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/genome.svg', './icons/eth.svg'],
+    tokenNames: ['GENOME', 'ETH'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced', 'DeSci'],
+    tokenAddress: addresses.BASE.V2.aerodrome_GENOME_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_GENOME_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_GENOME_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_GENOME_ETH.Underlying, 'GENOME', 'WETH_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_GENOME_ETH.Underlying,
+          addresses.BASE.V2.aerodrome_GENOME_ETH.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+    cmcRewardTokenSymbols: ['iFARM', 'AERO'],
+  },
+  penpie_gDAI2609: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/pendle.svg'],
     apyTokenSymbols: ['PENDLE'],
     logoUrl: ['./icons/gdai.svg'],
-    tokenNames: ['gDAI-LP'],
+    tokenNames: ['gDAI-LP (26-SEP-24)'],
     platform: ['Penpie'],
     tags: ['Advanced', 'Stable'],
-    tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_gDAI.Underlying,
+    tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_gDAI2609.Underlying,
     decimals: '18',
-    vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_gDAI.NewVault,
-    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_gDAI.NewStrategy,
+    vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_gDAI2609.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_gDAI2609.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.PENDLE_MARKET,
-      params: [addresses.ARBITRUM_ONE.V2.penpie_gDAI.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+      params: [addresses.ARBITRUM_ONE.V2.penpie_gDAI2609.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.PENPIE,
         params: [
-          addresses.ARBITRUM_ONE.V2.penpie_gDAI.Underlying,
+          addresses.ARBITRUM_ONE.V2.penpie_gDAI2609.Underlying,
           CHAIN_IDS.ARBITRUM_ONE,
           profitSharingCut10Percent,
         ],
@@ -115,27 +289,27 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'PENLDE'],
   },
-  penpie_aUSDC: {
+  penpie_aUSDC2706: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/pendle.svg'],
     apyTokenSymbols: ['PENDLE'],
     logoUrl: ['./icons/ausdc.svg'],
-    tokenNames: ['aUSDC-LP'],
+    tokenNames: ['aUSDC-LP (27-JUN-24)'],
     platform: ['Penpie'],
     tags: ['Advanced', 'Stable'],
-    tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_aUSDC.Underlying,
+    tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_aUSDC2706.Underlying,
     decimals: '18',
-    vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_aUSDC.NewVault,
-    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_aUSDC.NewStrategy,
+    vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_aUSDC2706.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_aUSDC2706.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.PENDLE_MARKET,
-      params: [addresses.ARBITRUM_ONE.V2.penpie_aUSDC.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+      params: [addresses.ARBITRUM_ONE.V2.penpie_aUSDC2706.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.PENPIE,
         params: [
-          addresses.ARBITRUM_ONE.V2.penpie_aUSDC.Underlying,
+          addresses.ARBITRUM_ONE.V2.penpie_aUSDC2706.Underlying,
           CHAIN_IDS.ARBITRUM_ONE,
           profitSharingCut10Percent,
         ],
@@ -143,27 +317,27 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'PENLDE'],
   },
-  penpie_mPENDLE: {
+  penpie_mPENDLE2609: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/pendle.svg'],
     apyTokenSymbols: ['PENDLE'],
     logoUrl: ['./icons/mpendle.png'],
-    tokenNames: ['mPENDLE-LP'],
+    tokenNames: ['mPENDLE-LP (26-SEP-24)'],
     platform: ['Penpie'],
     tags: ['Advanced'],
-    tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_mPENDLE.Underlying,
+    tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_mPENDLE2609.Underlying,
     decimals: '18',
-    vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_mPENDLE.NewVault,
-    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_mPENDLE.NewStrategy,
+    vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_mPENDLE2609.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_mPENDLE2609.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.PENDLE_MARKET,
-      params: [addresses.ARBITRUM_ONE.V2.penpie_mPENDLE.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+      params: [addresses.ARBITRUM_ONE.V2.penpie_mPENDLE2609.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.PENPIE,
         params: [
-          addresses.ARBITRUM_ONE.V2.penpie_mPENDLE.Underlying,
+          addresses.ARBITRUM_ONE.V2.penpie_mPENDLE2609.Underlying,
           CHAIN_IDS.ARBITRUM_ONE,
           profitSharingCut10Percent,
         ],
@@ -205,6 +379,7 @@ module.exports = {
     },
   },
   aerodrome_GB_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -298,7 +473,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aerodrome_WELL_ETH.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_WELL_ETH.Underlying, 'WELL', 'WETH_base'],
+      params: [addresses.BASE.V2.aerodrome_WELL_ETH.Underlying, 'WELL_old', 'WETH_base'],
     },
     estimateApyFunctions: [
       {
@@ -407,8 +582,8 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.NewVault,
     strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     estimateApyFunctions: [
       {
@@ -437,8 +612,8 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.NewVault,
     strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     estimateApyFunctions: [
       {
@@ -823,27 +998,28 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CRV', 'ARB'],
   },
-  penpie_rsETH: {
+  penpie_rsETH2504: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/pendle.svg', './icons/arb.svg'],
     apyTokenSymbols: ['PENDLE', 'ARB'],
     logoUrl: ['./icons/rsethlp.svg'],
-    tokenNames: ['rsETH-LP'],
+    tokenNames: ['rsETH-LP (25-APR-24)'],
     platform: ['Penpie'],
     tags: ['Advanced'],
-    tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_rsETH.Underlying,
+    tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_rsETH2504.Underlying,
     decimals: '18',
-    vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_rsETH.NewVault,
-    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_rsETH.NewStrategy,
+    vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_rsETH2504.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_rsETH2504.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.PENDLE_MARKET,
-      params: [addresses.ARBITRUM_ONE.V2.penpie_rsETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+      params: [addresses.ARBITRUM_ONE.V2.penpie_rsETH2504.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.PENPIE,
         params: [
-          addresses.ARBITRUM_ONE.V2.penpie_rsETH.Underlying,
+          addresses.ARBITRUM_ONE.V2.penpie_rsETH2504.Underlying,
           CHAIN_IDS.ARBITRUM_ONE,
           profitSharingCut10Percent,
         ],
@@ -851,27 +1027,28 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'PENLDE'],
   },
-  penpie_eETH: {
+  penpie_eETH2504: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/pendle.svg', './icons/arb.svg'],
     apyTokenSymbols: ['PENDLE', 'ARB'],
     logoUrl: ['./icons/eethlp.svg'],
-    tokenNames: ['eETH-LP'],
+    tokenNames: ['eETH-LP (25-APR-24)'],
     platform: ['Penpie'],
     tags: ['Advanced'],
-    tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_eETH.Underlying,
+    tokenAddress: addresses.ARBITRUM_ONE.V2.penpie_eETH2504.Underlying,
     decimals: '18',
-    vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_eETH.NewVault,
-    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_eETH.NewStrategy,
+    vaultAddress: addresses.ARBITRUM_ONE.V2.penpie_eETH2504.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.penpie_eETH2504.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.PENDLE_MARKET,
-      params: [addresses.ARBITRUM_ONE.V2.penpie_eETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+      params: [addresses.ARBITRUM_ONE.V2.penpie_eETH2504.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.PENPIE,
         params: [
-          addresses.ARBITRUM_ONE.V2.penpie_eETH.Underlying,
+          addresses.ARBITRUM_ONE.V2.penpie_eETH2504.Underlying,
           CHAIN_IDS.ARBITRUM_ONE,
           profitSharingCut10Percent,
         ],
@@ -995,6 +1172,17 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM'],
   },
+  rsETH_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/rseth.svg'],
+    tokenAddress: addresses.ARBITRUM_ONE.rsETH,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['kelp-dao-restaked-eth'],
+    },
+  },
   camelotV3_rsETH_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/rseth.svg', './icons/eth.svg'],
@@ -1009,8 +1197,8 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.NewVault,
     strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_rsETH_ETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -1040,8 +1228,8 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.NewVault,
     strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     estimateApyFunctions: [
       {
@@ -1070,8 +1258,8 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.NewVault,
     strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     estimateApyFunctions: [
       {
@@ -1100,8 +1288,8 @@ module.exports = {
     vaultAddress: addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.NewVault,
     strategyAddress: addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     estimateApyFunctions: [
       {
@@ -1278,8 +1466,8 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.NewVault,
     strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_MAGIC_ETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -1309,8 +1497,8 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.NewVault,
     strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_PENDLE_ETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -1340,8 +1528,8 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.NewVault,
     strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_RDNT_ETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -1371,8 +1559,8 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.NewVault,
     strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -1402,8 +1590,8 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.NewVault,
     strategyAddress: addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_wstETH_ETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -2933,8 +3121,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ARB_ETH.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ARB_ETH.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ARB_ETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -2963,8 +3151,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_DAI_USDC.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_DAI_USDC.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_DAI_USDC.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -2993,8 +3181,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_GMX_ETH.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_GMX_ETH.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_GMX_ETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -3023,8 +3211,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -3053,8 +3241,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_LINK_ETH.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_LINK_ETH.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_LINK_ETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -3083,8 +3271,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -3114,8 +3302,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_USDCe_USDT.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_USDCe_USDT.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_USDCe_USDT.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -3144,8 +3332,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_WBTC_ETH.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_WBTC_ETH.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_WBTC_ETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -3174,8 +3362,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -3204,8 +3392,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -3234,8 +3422,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.Underlying, 'camelot/arbitrum'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.Underlying, CHAIN_IDS.ARBITRUM_ONE],
     },
     estimateApyFunctions: [
       {
@@ -3264,8 +3452,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.quickGamma_wstETH_ETH.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     estimateApyFunctions: [
       {
@@ -3293,8 +3481,11 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [
+        addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying,
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -3322,8 +3513,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     estimateApyFunctions: [
       {
@@ -3351,8 +3542,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.quickGamma_USDC_USDT.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.MATIC.V2.quickGamma_USDC_USDT.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     estimateApyFunctions: [
       {
@@ -3380,8 +3571,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.quickGamma_USDC_DAI.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.MATIC.V2.quickGamma_USDC_DAI.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     estimateApyFunctions: [
       {
@@ -3672,6 +3863,17 @@ module.exports = {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/well.svg'],
     tokenAddress: addresses.BASE.WELL,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['moonwell-artemis'],
+    },
+  },
+  WELL_old: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/well.svg'],
+    tokenAddress: addresses.BASE.WELL_old,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
@@ -7434,8 +7636,11 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [
+        addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying,
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -7464,12 +7669,12 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        type: ESTIMATED_APY_TYPES.GAMMA_API,
         params: [
           addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.MasterChef,
           addresses.MATIC.V2.quickGamma_MATIC_ETH_wide.Underlying,
@@ -7492,8 +7697,11 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [
+        addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying,
+        CHAIN_IDS.POLYGON_MAINNET,
+      ],
     },
     estimateApyFunctions: [
       {
@@ -7522,12 +7730,12 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        type: ESTIMATED_APY_TYPES.GAMMA_API,
         params: [
           addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.MasterChef,
           addresses.MATIC.V2.quickGamma_MATIC_USDC_wide.Underlying,
@@ -7550,8 +7758,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     estimateApyFunctions: [
       {
@@ -7580,12 +7788,12 @@ module.exports = {
     decimals: '18',
     vaultAddress: addresses.MATIC.V2.quickGamma_USDC_ETH_wide.NewVault,
     priceFunction: {
-      type: GET_PRICE_TYPES.QUICKSWAP_GAMMA,
-      params: [addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying, 'quickswap/polygon'],
+      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
+      params: [addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.QUICKSWAP_GAMMA,
+        type: ESTIMATED_APY_TYPES.GAMMA_API,
         params: [
           addresses.MATIC.V2.quickGamma_USDC_ETH_wide.MasterChef,
           addresses.MATIC.V2.quickGamma_USDC_ETH_wide.Underlying,

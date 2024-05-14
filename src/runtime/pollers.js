@@ -1,4 +1,5 @@
 const BigNumber = require('bignumber.js')
+const axios = require('axios')
 
 const { forEach } = require('promised-loops')
 const { pickBy, get, chunk, isArray, sumBy, size } = require('lodash')
@@ -28,6 +29,7 @@ const {
   DB_CACHE_IDS,
   UI_DATA_FILES,
   TVL_LISTS,
+  CURRENCY_API_URL,
 } = require('../lib/constants')
 const { Cache } = require('../lib/db/models/cache')
 const { storeData, appendData, loadData } = require('../lib/db/models/cache')
@@ -980,6 +982,24 @@ const getCmc = async () => {
   console.log('-- Done getting CMC data --\n')
 }
 
+const getCurrencyRates = async () => {
+  console.log('\n-- Getting Currency Rates data --')
+  let ratesData = {},
+    hasErrors
+  const type = DB_CACHE_IDS.RATES
+  try {
+    const res = (await axios.get(CURRENCY_API_URL)).data
+    ratesData = res.data
+    hasErrors = false
+  } catch (e) {
+    hasErrors = true
+    ratesData = await Cache.collection.findOne({ type })
+  }
+
+  await storeData(Cache, DB_CACHE_IDS.RATES, ratesData, hasErrors)
+  console.log('-- Done getting Currency Rates data --\n')
+}
+
 const preLoadCoingeckoPrices = async () => {
   console.log('\n-- Getting token prices from CoinGecko --')
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
@@ -1097,6 +1117,12 @@ const runUpdateLoop = async () => {
     await getCmc()
     if (DEBUG_MODE) {
       updateCallCountCache('cmc')
+      resetCallCount()
+    }
+
+    await getCurrencyRates()
+    if (DEBUG_MODE) {
+      updateCallCountCache('rates')
       resetCallCount()
     }
   }

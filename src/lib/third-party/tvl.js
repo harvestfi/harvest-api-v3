@@ -1,6 +1,6 @@
 const { get } = require('lodash')
 const axios = require('axios')
-const { HARVEST_SUBGRAPH_URLS } = require('../../lib/constants')
+const { HARVEST_SUBGRAPH_URLS } = require('../constants')
 // const { cachedAxios } = require('../db/models/cache')
 
 const executeGraphCall = (chain, query, variables) =>
@@ -25,10 +25,10 @@ const executeGraphCall = (chain, query, variables) =>
     })
 
 const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
-  const arb_baseTQuery = `
+  const arbTQuery = `
   query getTVLsQuery($first: Int!, $skip: Int!, $sequence_gt: Int!) {
     totalTvlHistories(
-      orderBy: createAtBlock
+      orderBy: timestamp
       orderDirection: asc
       first: $first
       skip: $skip
@@ -44,7 +44,7 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
   const tQuery = `
   query getTVLsQuery($first: Int!, $skip: Int!, $sequence_gt: Int!) {
     totalTvlHistoryV2S(
-      orderBy: createAtBlock
+      orderBy: timestamp
       orderDirection: asc
       first: $first
       skip: $skip
@@ -60,7 +60,7 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
   const vaultQuery = `
   query getTVLsQuery($vault: String!, $first: Int!, $skip: Int!, $sequence_gt: BigInt!) {
     tvls(
-      orderBy: createAtBlock
+      orderBy: timestamp
       orderDirection: asc
       first: $first
       skip: $skip
@@ -72,13 +72,9 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
     }
   }
   `
-  const query = vault ? vaultQuery : chain === 42161 || chain === 8453 ? arb_baseTQuery : tQuery
+  const query = vault ? vaultQuery : chain === 42161 ? arbTQuery : tQuery
   const variables = vault ? { vault, first, skip, sequence_gt } : { first, skip, sequence_gt }
-  const resultKey = vault
-    ? 'tvls'
-    : chain === 42161 || chain === 8453
-    ? 'totalTvlHistories'
-    : 'totalTvlHistoryV2S'
+  const resultKey = vault ? 'tvls' : chain === 42161 ? 'totalTvlHistories' : 'totalTvlHistoryV2S'
 
   const { [resultKey]: result } = await executeGraphCall(chain, query, variables)
 

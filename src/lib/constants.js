@@ -134,7 +134,7 @@ const CONVEX_API_URLS = {
 const HARVEST_SUBGRAPH_URLS = {
   1: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance',
   137: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-polygon',
-  8453: 'https://api.thegraph.com/subgraphs/name/alexandersazonof/harvest-base',
+  8453: 'https://api.studio.thegraph.com/query/48757/l2-base/version/latest',
   42161: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-arbitrum',
   324: 'https://api.studio.thegraph.com/query/48757/l2-zksync-era/version/latest',
 }
@@ -223,6 +223,8 @@ const QUICKSWAP_GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/'
 const MERKL_ENDPOINT = 'https://api.angle.money/v2/merkl'
 const PENDLE_ENDPOINT = 'https://api-v2.pendle.finance/core/v2/'
 
+const CURRENCY_API_URL = `https://api.freecurrencyapi.com/v1/latest?apikey=${process.env.CURRENCY_API_KEY}`
+
 const DEBUG_MODE = process.env.DEBUG_MODE
 
 const WEB3_CALL_COUNT_STATS_KEY = 'web3CallCountStats'
@@ -243,6 +245,7 @@ const DB_CACHE_IDS = {
   UI_DATA: 4,
   EXTERNAL_API: 5,
   TVL: 6,
+  RATES: 7,
 }
 
 const PROFIT_SHARING_POOL_ID = 'profit-sharing-farm'
@@ -314,5 +317,6 @@ module.exports = {
   CURVE_FINANCE_API_URL,
   WOMBAT_ARB_SUBGRAPH_URL,
   WOMBAT_ARB_ONE_BLOCK_URL,
+  CURRENCY_API_URL,
   ZKSYNC_RPC_URL,
 }

@@ -19,7 +19,7 @@ const getApy = async (underlying, mTokenAddr, foldPerc, reduction) => {
     methods: { getDecimals },
   } = token
 
-  const well = '0xFF8adeC2221f9f4D8dfbAFa6B9a297d17603493D'
+  const well = '0xA88594D404727625A9437C3f886C7643872296AE'
   const usdc = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913'
   const secondsPerYear = 60 * 60 * 24 * 365.25
   const suppliedMul = foldPerc / (100 - foldPerc)
