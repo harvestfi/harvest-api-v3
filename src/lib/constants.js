@@ -139,15 +139,6 @@ const HARVEST_SUBGRAPH_URLS = {
   324: 'https://api.studio.thegraph.com/query/48757/l2-zksync-era/version/latest',
 }
 
-const TVL_LISTS = {
-  ETH: 'ethTvl',
-  MATIC: 'polTvl',
-  ARBITRUM: 'arbTvl',
-  BASE: 'baseTvl',
-  ZKSYNC: 'zksyncTvl',
-  FARM: 'farmTvl',
-}
-
 const SUSHI_POOLS_IDS = {
   USDT: 0,
   USDC: 1,
@@ -311,7 +302,6 @@ module.exports = {
   CONVEX_API_URLS,
   COINGECKO_API_KEY,
   HARVEST_SUBGRAPH_URLS,
-  TVL_LISTS,
   BASE_RPC_URL,
   DEXSCREENER_API_URL,
   CURVE_FINANCE_API_URL,

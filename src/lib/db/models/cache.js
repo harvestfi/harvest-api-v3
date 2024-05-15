@@ -16,12 +16,12 @@ const CacheSchema = new mongoose.Schema({
     ],
   },
   data: { type: mongoose.Schema.Types.Mixed, default: [] },
-  ethTvl: { type: mongoose.Schema.Types.Mixed, default: [] },
-  polTvl: { type: mongoose.Schema.Types.Mixed, default: [] },
-  arbTvl: { type: mongoose.Schema.Types.Mixed, default: [] },
-  baseTvl: { type: mongoose.Schema.Types.Mixed, default: [] },
-  zksyncTvl: { type: mongoose.Schema.Types.Mixed, default: [] },
-  farmTvl: { type: mongoose.Schema.Types.Mixed, default: [] },
+  1: { type: mongoose.Schema.Types.Mixed, default: [] },
+  137: { type: mongoose.Schema.Types.Mixed, default: [] },
+  42161: { type: mongoose.Schema.Types.Mixed, default: [] },
+  8453: { type: mongoose.Schema.Types.Mixed, default: [] },
+  324: { type: mongoose.Schema.Types.Mixed, default: [] },
+  FARM: { type: mongoose.Schema.Types.Mixed, default: [] },
   updatedAt: { type: Date, default: new Date() },
 })
 
