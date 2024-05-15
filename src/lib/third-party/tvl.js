@@ -74,7 +74,11 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
   `
   const query = vault ? vaultQuery : chain === 42161 || chain === 8453 ? arbTQuery : tQuery
   const variables = vault ? { vault, first, skip, sequence_gt } : { first, skip, sequence_gt }
-  const resultKey = vault ? 'tvls' : chain === 42161 || chain === 8453 ? 'totalTvlHistories' : 'totalTvlHistoryV2S'
+  const resultKey = vault
+    ? 'tvls'
+    : chain === 42161 || chain === 8453
+    ? 'totalTvlHistories'
+    : 'totalTvlHistoryV2S'
 
   const { [resultKey]: result } = await executeGraphCall(chain, query, variables)
 
