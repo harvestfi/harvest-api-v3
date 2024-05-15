@@ -3213,14 +3213,70 @@
     }
   },
   "ZKSYNC": {
-    "WETH": "0x5aea5775959fbc2557cc8789bc1bf90a239d9a91",
-    "USDC": "0x1d17CBcF0D6D143135aE902365D2E5e2A16538D4",
+    "Storage": "0xA8B38fb4837c99f66f7b740b5EFfA4f15B9B2205",
+    "RewardForwarder": "0xEf5eA78927e98DEc5D2BBFbe2d8387E89539d829",
+    "Controller": "0xC04b19b91EBe5DFBE285C89ACDdDBa0f7258c2Be",
+    "Governance": "0x6a74649aCFD7822ae8Fb78463a9f2192752E5Aa2",
+    "iFARM": "0x659EF1727551b0c9Dd78CB2c231A5d13d42216d0",
+    "WETH": "0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91",
+    "VaultImplementation": "0xDF881F74F7F66e79F2A496d943fA25E0EC49593E",
+    "CommunityMsig": "0x6a74649aCFD7822ae8Fb78463a9f2192752E5Aa2",
+    "ProfitShare": "0xD8CC993c30Cc70059348bf01E11b1e61497F6335",
+    "Reader": "0xb7BB8547D61676A3b69fea17ed517b5eB2e584e8",
+    "Factory": {
+      "VaultFactory": "0xE4A9e95ced43fc65F97E1EC0d14A3e436aBCEF14",
+      "PotPoolFactory": "0x37EE957956e48570bb0db43B9c603596af83F9c8",
+      "MegaFactory": "0x7389334D4B6E6bAC0EdAE7DE2cA9a0F7493ab085",
+      "UpgradableStrategyFactory": "0x63e43b29984514fE9fa3904f14a824bC1A1d1A4d"
+    },  
+    "USDCe": "0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4",
+    "USDT": "0x493257fD37EDB34451f62EDf8D2a0C418852bA4C",
+    "WBTC": "0xBBeB516fb02a01611cBBE0453Fe3c580D7281011",
+    "wstETH": "0x703b52F2b28fEbcB60E1372858AF5b18849FE867",
+    "ZF": "0x31C2c031fDc9d33e974f327Ab0d9883Eae06cA4A",
+    "LONG": "0x5165ec33b491d7b67260b3143f96bb4ac4736398",
     "V2": {
       "test_iFARM": {
         "Underlying": "0x659EF1727551b0c9Dd78CB2c231A5d13d42216d0",
         "NewVault": "0x79E05bcbBfa33F1807BC49b982E9532C7C9f1A21",
         "NewStrategy": "0xFD65d266b3d902fCC8DB1B9A3447B3F020Fb324C",
         "NewPool": "0x3b90BBa41A145ddBceEbCdfF679741E7cABFC772"
+      },
+      "zkswap_ETH_USDCe": {
+        "Underlying": "0x7642e38867860d4512Fcce1116e2Fb539c5cdd21",
+        "NewVault": "0x71b7b93f27A4DF142e47390d22e9230EF35308B2",
+        "NewStrategy": "0x4C450a3B4943884C291aaE50F3d6889082eDC6e8",
+        "NewPool": "0xbcD3c840fAFEca3EeA10f10b1F8AB07EE13c9FA4"
+      },
+      "zkswap_LONG_ETH": {
+        "Underlying": "0xD32b34bc9690322c609c1cc15f88E440e73cE2dB",
+        "NewVault": "0xa0b5eA2f58b7480E2209e31d3265A58564BD0405",
+        "NewStrategy": "0xcb24acf92ece667920f36e8A642FB37aC035dEcD",
+        "NewPool": "0x1E120B4C7b41e448b4ffe13DF1633Dc96c1Edc6A"
+      },
+      "zkswap_USDCe_USDT": {
+        "Underlying": "0xf100ff84B363aF74e3FcdFF554E3dA3309159458",
+        "NewVault": "0x37f3bCDE181F1Fd813b842A2Bc7a30a8F6A5EFaA",
+        "NewStrategy": "0x0352ead82DF78d8CF0fd8A8affc78e4e0a3223b9",
+        "NewPool": "0x84A2AE57157F0B67612f2E08A7755f5018708a05"
+      },
+      "zkswap_WBTC_ETH": {
+        "Underlying": "0xe5716Ad6873f7d9919b0A72f5b33570f77c1a615",
+        "NewVault": "0xa9adFB464317FE57BDC52C4f9ca293af02Fa3E8d",
+        "NewStrategy": "0x9F1ea86bb64a44106b190FF593EE1Aa23dA330FA",
+        "NewPool": "0x6B722B035A0D70b0e6Ec8f5c1688711d2b9a9F05"
+      },
+      "zkswap_wstETH_ETH": {
+        "Underlying": "0x4848204d1Ee4422d91D91b1C89F6D2F9ACe09e2c",
+        "NewVault": "0x526c76022cb76fbad2A15E5b5fCC6cCF06f8B700",
+        "NewStrategy": "0x885bDBc2F945D802f5Cd629A3C6da7F8401f5f7f",
+        "NewPool": "0x325f931533971e875881Df68c49a9Cd8F44038bD"
+      },
+      "zkswap_ZF_ETH": {
+        "Underlying": "0xD33A17C883D5aA79470cd2522ABb213DC4017E01",
+        "NewVault": "0xe9d9692ca5A7c2e391949B02295d2C17583Bf680",
+        "NewStrategy": "0xe54Fa27aAb84494B6723322555eF26d1049432C9",
+        "NewPool": "0x043Fc2A5b4079584A58a833Fa9EDA44162071449"
       }
     }
   }

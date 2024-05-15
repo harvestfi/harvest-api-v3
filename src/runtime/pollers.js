@@ -90,6 +90,20 @@ const getVaults = async () => {
     Object.keys(tokensWithVault).filter(tokenId => tokens[tokenId].chain === CHAIN_IDS.ZKSYNC),
     GET_VAULT_DATA_BATCH_SIZE,
   )
+  console.log('\n-- Getting ZKSYNC vaults data --')
+  await forEach(zksyncVaultsBatches, async batch => {
+    if (batch) {
+      try {
+        console.log('Getting vault data for: ', batch)
+        const vaultsData = await getVaultsData(batch)
+        fetchedZKSYNCVaults = fetchedZKSYNCVaults.concat(vaultsData)
+      } catch (err) {
+        hasErrors = true
+        console.error(`Failed to get vault data for: ${batch}`, err)
+      }
+    }
+  })
+  console.log('\n-- Done getting ZKSYNC vaults data --')
 
   console.log('\n-- Getting MATIC vaults data --')
   await forEach(maticVaultsBatches, async batch => {
@@ -146,21 +160,6 @@ const getVaults = async () => {
     }
   })
   console.log('\n-- Done getting BASE vaults data --')
-
-  console.log('\n-- Getting ZKSYNC vaults data --')
-  await forEach(zksyncVaultsBatches, async batch => {
-    if (batch) {
-      try {
-        console.log('Getting vault data for: ', batch)
-        const vaultsData = await getVaultsData(batch)
-        fetchedZKSYNCVaults = fetchedZKSYNCVaults.concat(vaultsData)
-      } catch (err) {
-        hasErrors = true
-        console.error(`Failed to get vault data for: ${batch}`, err)
-      }
-    }
-  })
-  console.log('\n-- Done getting ZKSYNC vaults data --')
 
   fetchedVaults = {
     eth: fetchedETHVaults.reduce((acc, vault) => {
@@ -265,6 +264,24 @@ const getPools = async () => {
     hasErrors
 
   try {
+    console.log('\n-- Getting ZKSYNC pool data --')
+
+    const zksyncPoolBatches = chunk(
+      pools.filter(pool => pool.chain === CHAIN_IDS.ZKSYNC),
+      GET_POOL_DATA_BATCH_SIZE,
+    )
+
+    if (size(zksyncPoolBatches)) {
+      await forEach(zksyncPoolBatches, async poolBatch => {
+        const poolData = await getPoolsData(poolBatch)
+        fetchedZKSYNCPools = fetchedZKSYNCPools.concat(poolData)
+      })
+    } else {
+      console.log('No pools available')
+    }
+
+    console.log('-- Done getting ZKSYNC pool data --\n')
+
     console.log('\n-- Getting MATIC pool data --')
 
     const maticPoolBatches = chunk(
@@ -318,24 +335,6 @@ const getPools = async () => {
     }
 
     console.log('-- Done getting BASE pool data --\n')
-
-    console.log('\n-- Getting ZKSYNC pool data --')
-
-    const zksyncPoolBatches = chunk(
-      pools.filter(pool => pool.chain === CHAIN_IDS.ZKSYNC),
-      GET_POOL_DATA_BATCH_SIZE,
-    )
-
-    if (size(zksyncPoolBatches)) {
-      await forEach(zksyncPoolBatches, async poolBatch => {
-        const poolData = await getPoolsData(poolBatch)
-        fetchedZKSYNCPools = fetchedZKSYNCPools.concat(poolData)
-      })
-    } else {
-      console.log('No pools available')
-    }
-
-    console.log('-- Done getting ZKSYNC pool data --\n')
 
     console.log('\n-- Getting ETH pool data --')
 

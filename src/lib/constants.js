@@ -182,7 +182,8 @@ const BASE_RPC_URL =
   process.env.BASE_RPC_URL || `https://base-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
 const ARBITRUM_RPC_URL =
   process.env.ARBITRUM_RPC_URL || `https://arb-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
-const ZKSYNC_RPC_URL = process.env.ZKSYNC_RPC_URL || `https://zksync-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
+const ZKSYNC_RPC_URL =
+  process.env.ZKSYNC_RPC_URL || `https://zksync-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
 const SWIRL_API_URL = 'https://api.swirl.cash/'
 const MSTABLE_API_URL = 'https://api.mstable.org/pools'
 const APE_API_URL = 'https://ape-swap-api.herokuapp.com'

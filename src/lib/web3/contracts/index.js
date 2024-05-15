@@ -154,7 +154,14 @@ const pendleMarketContract = require('../contracts/pendle-market/contract.json')
 const hypervisorMethods = require('../contracts/hypervisor/methods')
 const hypervisorContract = require('../contracts/hypervisor/contract.json')
 
+const zfFarmMethods = require('../contracts/zf-farm/methods')
+const zfFarmContract = require('../contracts/zf-farm/contract.json')
+
 module.exports = {
+  zfFarm: {
+    methods: zfFarmMethods,
+    contract: zfFarmContract,
+  },
   hypervisor: {
     methods: hypervisorMethods,
     contract: hypervisorContract,

@@ -6,6 +6,162 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ZKSYNC,
+    id: 'zkswap_ETH_USDCe',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.zkswap_ETH_USDCe.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.zkswap_ETH_USDCe.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://zkswap.finance/add/ETH/0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_ETH_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a> to a zkSwap farm, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZF}" target="_blank" rel="noopener noreferrer">ZF</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_ETH_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_ETH_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a> by supplying liquidity on 
+        <a href="https://zkswap.finance/add/ETH/0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4" target="_blank" rel="noopener noreferrer">zkSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'zkswap_LONG_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.zkswap_LONG_ETH.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.zkswap_LONG_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://zkswap.finance/add/0x5165ec33b491d7b67260B3143f96Bb4aC4736398/ETH`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_LONG_ETH.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a> to a zkSwap farm, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZF}" target="_blank" rel="noopener noreferrer">ZF</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_LONG_ETH.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_LONG_ETH.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a> by supplying liquidity on 
+        <a href="https://zkswap.finance/add/0x5165ec33b491d7b67260B3143f96Bb4aC4736398/ETH" target="_blank" rel="noopener noreferrer">zkSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'zkswap_USDCe_USDT',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.zkswap_USDCe_USDT.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.zkswap_USDCe_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://zkswap.finance/add/0x493257fD37EDB34451f62EDf8D2a0C418852bA4C/0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_USDCe_USDT.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a> to a zkSwap farm, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZF}" target="_blank" rel="noopener noreferrer">ZF</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_USDCe_USDT.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_USDCe_USDT.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a> by supplying liquidity on 
+        <a href="https://zkswap.finance/add/0x493257fD37EDB34451f62EDf8D2a0C418852bA4C/0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4" target="_blank" rel="noopener noreferrer">zkSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'zkswap_WBTC_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.zkswap_WBTC_ETH.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.zkswap_WBTC_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://zkswap.finance/add/0xBBeB516fb02a01611cBBE0453Fe3c580D7281011/ETH`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a> to a zkSwap farm, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZF}" target="_blank" rel="noopener noreferrer">ZF</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a> by supplying liquidity on 
+        <a href="https://zkswap.finance/add/0xBBeB516fb02a01611cBBE0453Fe3c580D7281011/ETH" target="_blank" rel="noopener noreferrer">zkSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'zkswap_wstETH_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.zkswap_wstETH_ETH.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.zkswap_wstETH_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://zkswap.finance/add/0x703b52F2b28fEbcB60E1372858AF5b18849FE867/ETH`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a> to a zkSwap farm, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZF}" target="_blank" rel="noopener noreferrer">ZF</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a> by supplying liquidity on 
+        <a href="https://zkswap.finance/add/0x703b52F2b28fEbcB60E1372858AF5b18849FE867/ETH" target="_blank" rel="noopener noreferrer">zkSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'zkswap_ZF_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.zkswap_ZF_ETH.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.zkswap_ZF_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://zkswap.finance/add/0x31C2c031fDc9d33e974f327Ab0d9883Eae06cA4A/ETH`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_ZF_ETH.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a> to a zkSwap farm, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZF}" target="_blank" rel="noopener noreferrer">ZF</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_ZF_ETH.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zkswap_ZF_ETH.Underlying}" target="_blank" rel="noopener noreferrer">zkSwap LP tokens</a> by supplying liquidity on 
+        <a href="https://zkswap.finance/add/0x31C2c031fDc9d33e974f327Ab0d9883Eae06cA4A/ETH" target="_blank" rel="noopener noreferrer">zkSwap</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
     id: 'iFARM',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ZKSYNC.V2.test_iFARM.NewPool,
@@ -17,7 +173,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault enables users to convert their assets into
-       <a href="https://explorer.zksync.io/${addresses.ZKSYNC.V2.test_iFARM.Underlying}" target="_blank" rel="noopener noreferrer"> iFARM </a>.
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.test_iFARM.Underlying}" target="_blank" rel="noopener noreferrer"> iFARM </a>.
        In doing so, they benefit from a portion of the fees collected by Harvest.
       </p>
     </div>
