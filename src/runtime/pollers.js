@@ -727,7 +727,7 @@ const getTVL = async () => {
           savedTimestamp = parseInt(response[j].timestamp)
         }
       }
-      data = { chainId: { $each: result } }
+      data[chainId] = { $each: result }
       await appendData(Cache, DB_CACHE_IDS.TVL, data, hasErrors)
     }
   }
