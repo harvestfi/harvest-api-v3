@@ -6,6 +6,110 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ZKSYNC,
+    id: 'velocore_ETH_USDCe',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.velocore_ETH_USDCe.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.velocore_ETH_USDCe.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://zksync.velocore.xyz/liquidity/${addresses.ZKSYNC.V2.velocore_ETH_USDCe.Underlying}`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.velocore_ETH_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">Velocore LP tokens</a> to a zkSwap farm, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.VC}" target="_blank" rel="noopener noreferrer">VC</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.velocore_ETH_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">Velocore LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.velocore_ETH_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">Velocore LP tokens</a> by supplying liquidity on 
+        <a href="https://zksync.velocore.xyz/liquidity/${addresses.ZKSYNC.V2.velocore_ETH_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">Velocore</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'velocore_ETH_USDT',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.velocore_ETH_USDT.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.velocore_ETH_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://zksync.velocore.xyz/liquidity/${addresses.ZKSYNC.V2.velocore_ETH_USDT.Underlying}`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.velocore_ETH_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Velocore LP tokens</a> to a zkSwap farm, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.VC}" target="_blank" rel="noopener noreferrer">VC</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.velocore_ETH_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Velocore LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.velocore_ETH_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Velocore LP tokens</a> by supplying liquidity on 
+        <a href="https://zksync.velocore.xyz/liquidity/${addresses.ZKSYNC.V2.velocore_ETH_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Velocore</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'velocore_VC_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.velocore_VC_ETH.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.velocore_VC_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://zksync.velocore.xyz/liquidity/${addresses.ZKSYNC.V2.velocore_VC_ETH.Underlying}`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.velocore_VC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Velocore LP tokens</a> to a zkSwap farm, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.VC}" target="_blank" rel="noopener noreferrer">VC</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.velocore_VC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Velocore LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.velocore_VC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Velocore LP tokens</a> by supplying liquidity on 
+        <a href="https://zksync.velocore.xyz/liquidity/${addresses.ZKSYNC.V2.velocore_VC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Velocore</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'velocore_WBTC_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.velocore_WBTC_ETH.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.velocore_WBTC_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://zksync.velocore.xyz/liquidity/${addresses.ZKSYNC.V2.velocore_WBTC_ETH.Underlying}`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.velocore_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Velocore LP tokens</a> to a zkSwap farm, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.VC}" target="_blank" rel="noopener noreferrer">VC</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.velocore_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Velocore LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.velocore_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Velocore LP tokens</a> by supplying liquidity on 
+        <a href="https://zksync.velocore.xyz/liquidity/${addresses.ZKSYNC.V2.velocore_WBTC_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Velocore</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
     id: 'zkswap_ETH_USDCe',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ZKSYNC.V2.zkswap_ETH_USDCe.NewPool,

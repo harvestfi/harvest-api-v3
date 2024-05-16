@@ -157,7 +157,14 @@ const hypervisorContract = require('../contracts/hypervisor/contract.json')
 const zfFarmMethods = require('../contracts/zf-farm/methods')
 const zfFarmContract = require('../contracts/zf-farm/contract.json')
 
+const velocoreLensMethods = require('../contracts/velocore-lens/methods')
+const velocoreLensContract = require('../contracts/velocore-lens/contract.json')
+
 module.exports = {
+  velocoreLens: {
+    methods: velocoreLensMethods,
+    contract: velocoreLensContract,
+  },
   zfFarm: {
     methods: zfFarmMethods,
     contract: zfFarmContract,
