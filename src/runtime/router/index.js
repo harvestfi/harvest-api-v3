@@ -294,6 +294,20 @@ const initRouter = app => {
       })
     }),
   )
+
+  // historical currency rates
+  app.get(
+    '/historical-rates',
+    asyncWrap(async (req, res) => {
+      const rate = await Cache.findOne({ type: DB_CACHE_IDS.HISTORICAL_RATES })
+      let eur = rate.get('EUR')
+      let gbp = rate.get('GBP')
+      res.send({
+        EUR: eur,
+        GBP: gbp,
+      })
+    }),
+  )
 }
 
 module.exports = { initRouter }

@@ -132,10 +132,10 @@ const CONVEX_API_URLS = {
 }
 
 const HARVEST_SUBGRAPH_URLS = {
-  1: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance',
-  137: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-polygon',
-  8453: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-base',
-  42161: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-arbitrum',
+  1: 'https://api.studio.thegraph.com/query/48757/harvest-mainnet-test/v0.0.3',
+  137: 'https://api.studio.thegraph.com/query/48757/l2-polygon-test/version/latest',
+  8453: 'https://api.studio.thegraph.com/query/48757/l2-base/version/latest',
+  42161: 'https://api.studio.thegraph.com/query/48757/l2-arb-test/version/latest',
 }
 
 const SUSHI_POOLS_IDS = {
@@ -212,6 +212,7 @@ const MERKL_ENDPOINT = 'https://api.angle.money/v2/merkl'
 const PENDLE_ENDPOINT = 'https://api-v2.pendle.finance/core/v2/'
 
 const CURRENCY_API_URL = `https://api.freecurrencyapi.com/v1/latest?apikey=${process.env.CURRENCY_API_KEY}`
+const HISTORICAL_CURRENCY_API_URL = `https://api.freecurrencyapi.com/v1/historical?apikey=${process.env.CURRENCY_API_KEY}`
 
 const DEBUG_MODE = process.env.DEBUG_MODE
 
@@ -234,6 +235,7 @@ const DB_CACHE_IDS = {
   EXTERNAL_API: 5,
   TVL: 6,
   RATES: 7,
+  HISTORICAL_RATES: 8,
 }
 
 const PROFIT_SHARING_POOL_ID = 'profit-sharing-farm'
@@ -305,4 +307,5 @@ module.exports = {
   WOMBAT_ARB_SUBGRAPH_URL,
   WOMBAT_ARB_ONE_BLOCK_URL,
   CURRENCY_API_URL,
+  HISTORICAL_CURRENCY_API_URL,
 }
