@@ -5,7 +5,7 @@ const { get, find, sum } = require('lodash')
 const BigNumber = require('bignumber.js')
 const uniswapContract = require('./web3/contracts/uniswap/contract.json')
 const uniswapMethods = require('./web3/contracts/uniswap/methods')
-const { token: tokenContractData, pool: poolContractData } = require('./web3/contracts')
+const { pool: poolContractData } = require('./web3/contracts')
 const addresses = require('./data/addresses.json')
 const getPriceOnUniswap = require('../prices/implementations/uniswap-pair.js').getPrice
 const {
@@ -112,60 +112,18 @@ const getTotalMarketCap = async () => {
 const getPercentOfFARMStaked = async () => {
   const pools = await getUIData(UI_DATA_FILES.POOLS)
   const farmPool = find(pools, pool => pool.id === 'profit-sharing-farm')
-  const grainFarmPool = find(pools, pool => pool.id === 'farm-grain')
-  const wethFarmPool = find(pools, pool => pool.id === 'farm-weth')
 
-  const { methods: tokenMethods, contract: tokenContract } = tokenContractData
   const { methods: poolMethods, contract: poolContract } = poolContractData
 
   const totalSupply = getTotalFARMSupply()
 
-  const farmTokenInstance = new web3.eth.Contract(tokenContract.abi, addresses.FARM)
-  const farmGRAINTokeninstance = new web3.eth.Contract(tokenContract.abi, addresses.FARM_GRAIN_LP)
-  const farmWETHTokeninstance = new web3.eth.Contract(tokenContract.abi, addresses.FARM_WETH_LP)
-
   const farmPoolInstance = new web3.eth.Contract(poolContract.abi, farmPool.contractAddress)
-  const grainFarmPoolInstance = new web3.eth.Contract(
-    poolContract.abi,
-    grainFarmPool.contractAddress,
-  )
-  const wethFarmPoolInstance = new web3.eth.Contract(poolContract.abi, wethFarmPool.contractAddress)
-
-  const farmGRAINPoolBalance = await tokenMethods.getBalance(
-    addresses.FARM_GRAIN_LP,
-    farmTokenInstance,
-  )
-
-  const farmWETHPoolBalance = await tokenMethods.getBalance(
-    addresses.FARM_WETH_LP,
-    farmTokenInstance,
-  )
-
-  const grainFarmPoolTotalSupply = await poolMethods.totalSupply(grainFarmPoolInstance)
-  const wethFarmPoolTotalSupply = await poolMethods.totalSupply(wethFarmPoolInstance)
-
-  const selfProvisioningLiquidityBalance = await tokenMethods.getBalance(
-    addresses.FARM_WETH_LIQUIDITY_RECIPIENT,
-    farmWETHTokeninstance,
-  )
 
   const farmPoolTotalSupply = await poolMethods.totalSupply(farmPoolInstance)
-  const farmGRAINTotalSupply = await tokenMethods.getTotalSupply(farmGRAINTokeninstance)
-  const farmWETHTotalSupply = await tokenMethods.getTotalSupply(farmWETHTokeninstance)
 
   const profitSharingPoolStakedFarm = new BigNumber(farmPoolTotalSupply)
 
-  const farmGrainPoolStakedFarm = new BigNumber(farmGRAINPoolBalance)
-    .times(grainFarmPoolTotalSupply)
-    .dividedBy(farmGRAINTotalSupply)
-
-  const farmWETHPoolStakedFarm = new BigNumber(farmWETHPoolBalance)
-    .times(new BigNumber(wethFarmPoolTotalSupply).plus(selfProvisioningLiquidityBalance))
-    .dividedBy(farmWETHTotalSupply)
-
-  const result = BigNumber(farmGrainPoolStakedFarm)
-    .plus(farmWETHPoolStakedFarm)
-    .plus(profitSharingPoolStakedFarm)
+  const result = BigNumber(profitSharingPoolStakedFarm)
     .dividedBy(new BigNumber(10).pow(18))
     .dividedBy(totalSupply)
     .times(100)
