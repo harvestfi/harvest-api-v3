@@ -5540,21 +5540,6 @@ module.exports = {
       params: ['poison-finance'],
     },
   },
-  pTSLA: {
-    chain: CHAIN_IDS.ARBITRUM_ONE,
-    tokenAddress: addresses.ARBITRUM_ONE.pTSLA,
-    decimals: '18',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.SUSHISWAP_PAIR,
-      params: [
-        addresses.ARBITRUM_ONE.pTSLA,
-        addresses.ARBITRUM_ONE.USDC,
-        6,
-        CHAIN_IDS.ARBITRUM_ONE,
-      ],
-    },
-  },
   iPoison: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/ipoison.svg'],
