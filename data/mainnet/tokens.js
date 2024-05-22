@@ -5597,17 +5597,6 @@ module.exports = {
       ],
     },
   },
-  LUSD_arbitrum: {
-    chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: ['./icons/lusd.svg'],
-    tokenAddress: addresses.ARBITRUM_ONE.LUSD,
-    decimals: '18',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['liquity-usd'],
-    },
-  },
   iFARM_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     decimals: '18',
