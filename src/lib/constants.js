@@ -216,6 +216,7 @@ const MERKL_ENDPOINT = 'https://api.angle.money/v2/merkl'
 const PENDLE_ENDPOINT = 'https://api-v2.pendle.finance/core/v2/'
 
 const CURRENCY_API_URL = `https://api.freecurrencyapi.com/v1/latest?apikey=${process.env.CURRENCY_API_KEY}`
+const HISTORICAL_CURRENCY_API_URL = `https://api.freecurrencyapi.com/v1/historical?apikey=${process.env.CURRENCY_API_KEY}`
 
 const DEBUG_MODE = process.env.DEBUG_MODE
 
@@ -238,6 +239,7 @@ const DB_CACHE_IDS = {
   EXTERNAL_API: 5,
   TVL: 6,
   RATES: 7,
+  HISTORICAL_RATES: 8,
 }
 
 const PROFIT_SHARING_POOL_ID = 'profit-sharing-farm'
@@ -309,5 +311,6 @@ module.exports = {
   WOMBAT_ARB_SUBGRAPH_URL,
   WOMBAT_ARB_ONE_BLOCK_URL,
   CURRENCY_API_URL,
+  HISTORICAL_CURRENCY_API_URL,
   ZKSYNC_RPC_URL,
 }
