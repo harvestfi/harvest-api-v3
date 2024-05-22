@@ -132,10 +132,10 @@ const CONVEX_API_URLS = {
 }
 
 const HARVEST_SUBGRAPH_URLS = {
-  1: 'https://api.studio.thegraph.com/query/48757/harvest-mainnet-test/v0.0.3',
-  137: 'https://api.studio.thegraph.com/query/48757/l2-polygon-test/version/latest',
-  8453: 'https://api.studio.thegraph.com/query/48757/l2-base/version/latest',
-  42161: 'https://api.studio.thegraph.com/query/48757/l2-arb-test/version/latest',
+  1: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance',
+  137: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-polygon',
+  8453: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-base',
+  42161: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-arbitrum',
 }
 
 const SUSHI_POOLS_IDS = {
