@@ -1453,20 +1453,6 @@
         "NewPool": "0x36d7bd849Ae8A9e46327F0c1fF0b672862BbE5B3",
         "PoolId": "20"
       },
-      "curve_fETH_xETH_WETH": {
-        "Underlying": "0xF7Fed8Ae0c5B78c19Aadd68b700696933B0Cefd9",
-        "NewVault": "0xBecB7f62e14CBff55E81D990F87e1Af570c12B5c",
-        "NewStrategy": "0x784811056424563a208C7fd0E23baB09C34bD28a",
-        "NewPool": "0x85C84C5706D2158B133542caC77CFb749406dd0e",
-        "PoolId": "15"
-      },
-      "curve_FRAX_tBTC_frxETH": {
-        "Underlying": "0x3c64d44Ab19D63F09ebaD38fd7b913Ab7E15e341",
-        "NewVault": "0x774FBd8B939872761102d7581bCA852f166BE537",
-        "NewStrategy": "0x1C30426DBAE4E553525936BfA39C542c47E719a3",
-        "NewPool": "0x3d35d2BCaB78A6922C5860C92802F89351046c14",
-        "PoolId": "24"
-      },
       "curve_FRAX_USDCe": {
         "Underlying": "0xC9B8a3FDECB9D5b218d02555a8Baf332E5B740d5",
         "NewVault": "0xF69E400f8B01Ba54B4b55b4F16DDf966c97176f2",
@@ -1766,21 +1752,6 @@
         "Gauge": "0xE9c898BA654deC2bA440392028D2e7A194E6dc3e",
         "Pool": "0x11C1fBd4b3De66bC0565779b35171a6CF3E71f59",
         "doHardwork": false
-      },
-      "curve_CRV_crvUSD": {
-        "Underlying": "0x6DfE79cecE4f64c1a34F48cF5802492aB595257E",
-        "NewVault": "0x9bCf13aFfc360736f19141E480f9eCC157A501BC",
-        "NewStrategy": "0x40C163464eeD09421f14789DBAd14D516B95fF77",
-        "NewPool": "0x80EE6D47847EEd1AbAe41C30CE6Df9b116E90CA3",
-        "Gauge": "0x89289DC2192914a9F0674f1E9A17C56456549b8A",
-        "Pool": "0xDE37E221442Fa15C35dc19FbAE11Ed106ba52fB2"
-      },
-      "curve_ETH_tBTC_crvUSD": {
-        "Underlying": "0x6e53131F68a034873b6bFA15502aF094Ef0c5854",
-        "NewVault": "0xDF83a4f815d898b7044f227e561E3CFbBC1C21cF",
-        "NewStrategy": "0x74bAE5a2BC59B974Bc1F5b9Ff09c23aFc6564F1C",
-        "NewPool": "0x071aE42BEC0481AEf329B401d2cd32A9a2aB3Ee7",
-        "Gauge": "0x93933FA992927284e9d508339153B31eb871e1f4"
       },
       "moonwell_CBETH": {
         "Underlying": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
