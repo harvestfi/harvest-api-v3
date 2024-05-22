@@ -3272,36 +3272,6 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
-  camelotV3_LUSD_USDC: {
-    chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: ['./icons/lusd.svg', './icons/usdc.svg'],
-    tokenNames: ['LUSD', 'USDC'],
-    apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg', './icons/arb.svg'],
-    apyTokenSymbols: ['GRAIL', 'xGRAIL', 'ARB'],
-    subLabel: 'Stable',
-    platform: ['Camelot V3', 'Gamma'],
-    tags: ['Advanced', 'Stable'],
-    tokenAddress: addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.Underlying,
-    decimals: '18',
-    vaultAddress: addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.NewVault,
-    priceFunction: {
-      type: GET_PRICE_TYPES.GAMMA_ONCHAIN,
-      params: [addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.Underlying, CHAIN_IDS.ARBITRUM_ONE],
-    },
-    estimateApyFunctions: [
-      {
-        type: ESTIMATED_APY_TYPES.CAMELOT_LP,
-        params: [
-          addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.NewStrategy,
-          addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.NFTPool,
-          addresses.ARBITRUM_ONE.V2.camelotV3_LUSD_USDC.NitroPool,
-          profitSharingCut10Percent,
-        ],
-        extraDailyCompound: false,
-      },
-    ],
-    cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
-  },
   camelotV3_WBTC_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg'],
