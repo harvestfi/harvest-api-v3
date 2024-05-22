@@ -6202,17 +6202,6 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
-  note: {
-    chain: CHAIN_IDS.ETH_MAINNET,
-    logoUrl: ['./icons/notional.svg'],
-    tokenAddress: addresses.NOTE,
-    decimals: '8',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['notional-finance'],
-    },
-  },
   notional_WBTC: {
     inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
@@ -6316,39 +6305,6 @@ module.exports = {
       },
     ],
   },
-  amWBTC: {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: [],
-    tokenAddress: addresses.MATIC.amWBTC,
-    decimals: '8',
-    vaultAddress: null,
-    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.WBTC] },
-  },
-  amWETH: {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: [],
-    tokenAddress: addresses.MATIC.amWETH,
-    decimals: '18',
-    vaultAddress: null,
-    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.WETH] },
-  },
-  am3CRV: {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: [],
-    tokenAddress: addresses.MATIC.am3CRVToken,
-    decimals: '18',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.CURVE_POOL,
-      params: [
-        addresses.MATIC.am3CRVPool,
-        addresses.MATIC.am3CRVToken,
-        18,
-        ['amDAI', 'amUSDC', 'amUSDT'],
-        CHAIN_IDS.POLYGON_MAINNET,
-      ],
-    },
-  },
   LOOKS: {
     inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
@@ -6416,17 +6372,6 @@ module.exports = {
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['gnome'],
-    },
-  },
-  pYEL: {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: ['./icons/yel.svg'],
-    tokenAddress: addresses.MATIC.pYEL,
-    decimals: '18',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['yel-finance'],
     },
   },
   SUSHI_GENE_ETH: {
