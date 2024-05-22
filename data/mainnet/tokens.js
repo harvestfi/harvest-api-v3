@@ -5627,17 +5627,6 @@ module.exports = {
       ],
     },
   },
-  SLIZ: {
-    chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: ['./icons/sliz.svg'],
-    tokenAddress: addresses.ARBITRUM_ONE.SLIZ,
-    decimals: '18',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['solidlizard'],
-    },
-  },
   LUSD_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/lusd.svg'],
@@ -5697,14 +5686,6 @@ module.exports = {
     vaultAddress: null,
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.EURS] },
   },
-  STG_arbitrum: {
-    chain: CHAIN_IDS.ARBITRUM_ONE,
-    logoUrl: ['./icons/stg.svg'],
-    tokenAddress: addresses.ARBITRUM_ONE.STG,
-    decimals: '2',
-    vaultAddress: null,
-    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.STG] },
-  },
   DAI_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     tokenAddress: addresses.ARBITRUM_ONE.DAI,
@@ -5712,14 +5693,6 @@ module.exports = {
     decimals: '18',
     vaultAddress: null,
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.DAI] },
-  },
-  GOHM_arbitrum: {
-    chain: CHAIN_IDS.ARBITRUM_ONE,
-    tokenAddress: addresses.ARBITRUM_ONE.GOHM,
-    logoUrl: ['./icons/gohm.svg'],
-    decimals: '18',
-    vaultAddress: null,
-    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.GOHM] },
   },
   MAGIC_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
@@ -5961,117 +5934,6 @@ module.exports = {
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['lido-dao'],
-    },
-  },
-  amDAI: {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: [],
-    tokenAddress: addresses.MATIC.amDAI,
-    decimals: '18',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['aave-polygon-dai'],
-    },
-  },
-  amUSDC: {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: [],
-    tokenAddress: addresses.MATIC.amUSDC,
-    decimals: '6',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['aave-polygon-usdc'],
-    },
-  },
-  amUSDT: {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: [],
-    tokenAddress: addresses.MATIC.amUSDT,
-    decimals: '6',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['aave-polygon-usdt'],
-    },
-  },
-  wamDAI: {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: [],
-    tokenAddress: addresses.MATIC.wamDAI,
-    decimals: '18',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.WRAPPED_TOKEN,
-      params: [addresses.MATIC.wamDAI, addresses.MATIC.amDAI, CHAIN_IDS.POLYGON_MAINNET],
-    },
-  },
-  wamUSDC: {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: [],
-    tokenAddress: addresses.MATIC.wamUSDC,
-    decimals: '6',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.WRAPPED_TOKEN,
-      params: [addresses.MATIC.wamUSDC, addresses.MATIC.amUSDC, CHAIN_IDS.POLYGON_MAINNET],
-    },
-  },
-  wamUSDT: {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: [],
-    tokenAddress: addresses.MATIC.wamUSDT,
-    decimals: '6',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.WRAPPED_TOKEN,
-      params: [addresses.MATIC.wamUSDT, addresses.MATIC.amUSDT, CHAIN_IDS.POLYGON_MAINNET],
-    },
-  },
-  'bb-amDAI': {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: [],
-    tokenAddress: addresses.MATIC.bbamDAI,
-    decimals: '18',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.BALANCER,
-      params: [
-        addresses.MATIC.bbamDAI,
-        '0x178e029173417b1f9c8bc16dcec6f697bc323746000000000000000000000758',
-        CHAIN_IDS.POLYGON_MAINNET,
-      ],
-    },
-  },
-  'bb-amUSDC': {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: [],
-    tokenAddress: addresses.MATIC.bbamUSDC,
-    decimals: '18',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.BALANCER,
-      params: [
-        addresses.MATIC.bbamUSDC,
-        '0xf93579002dbe8046c43fefe86ec78b1112247bb8000000000000000000000759',
-        CHAIN_IDS.POLYGON_MAINNET,
-      ],
-    },
-  },
-  'bb-amUSDT': {
-    chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: [],
-    tokenAddress: addresses.MATIC.bbamUSDT,
-    decimals: '18',
-    vaultAddress: null,
-    priceFunction: {
-      type: GET_PRICE_TYPES.BALANCER,
-      params: [
-        addresses.MATIC.bbamUSDT,
-        '0xff4ce5aaab5a627bf82f4a571ab1ce94aa365ea600000000000000000000075a',
-        CHAIN_IDS.POLYGON_MAINNET,
-      ],
     },
   },
   bal_POLYBASE: {
