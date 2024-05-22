@@ -53,13 +53,12 @@ const main = async () => {
         appendDetail[currency] = { timestamp: lastTimeStamp, price: price }
       }
       await appendData(Cache, DB_CACHE_IDS.HISTORICAL_RATES, appendDetail, hasErrors)
+      lastTimeStamp = lastTimeStamp + defaultTimeSpac
       await sleep(7000) // Sleep for 7000 milliseconds (7 seconds)
     } catch (err) {
       console.error('Error getting historical rates: ', err, lastTimeStamp)
       await sleep(7000) // Sleep for 7000 milliseconds (7 seconds)
     }
-
-    lastTimeStamp = lastTimeStamp + defaultTimeSpac
   }
   console.log('-- Done getting Historical Rates data --\n')
 }

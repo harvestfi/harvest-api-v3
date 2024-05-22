@@ -72,11 +72,15 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
     }
   }
   `
-  const query = vault ? vaultQuery : chain === 42161 || chain === 8453 ? arbTQuery : tQuery
+  const query = vault
+    ? vaultQuery
+    : chain === 42161 || chain === 8453 || chain === 324
+    ? arbTQuery
+    : tQuery
   const variables = vault ? { vault, first, skip, sequence_gt } : { first, skip, sequence_gt }
   const resultKey = vault
     ? 'tvls'
-    : chain === 42161 || chain === 8453
+    : chain === 42161 || chain === 8453 || chain === 324
     ? 'totalTvlHistories'
     : 'totalTvlHistoryV2S'
 
