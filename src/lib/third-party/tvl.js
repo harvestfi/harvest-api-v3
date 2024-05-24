@@ -5,7 +5,10 @@ const { HARVEST_SUBGRAPH_URLS } = require('../constants')
 
 const executeGraphCall = (chain, query, variables) =>
   axios
-    .post(HARVEST_SUBGRAPH_URLS[chain], JSON.stringify({ query, variables }))
+    .post(HARVEST_SUBGRAPH_URLS[chain], {
+      query: query,
+      variables: variables,
+    })
     .then(response => {
       const data = get(response, 'data.data')
 
@@ -39,7 +42,7 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
       sequenceId
     }
   }
-    `
+`
 
   const tQuery = `
   query getTVLsQuery($first: Int!, $skip: Int!, $sequence_gt: Int!) {
@@ -55,7 +58,7 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
       sequenceId
     }
   }
-    `
+`
 
   const vaultQuery = `
   query getTVLsQuery($vault: String!, $first: Int!, $skip: Int!, $sequence_gt: BigInt!) {
@@ -71,7 +74,7 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
       sequenceId
     }
   }
-  `
+`
   const query = vault ? vaultQuery : chain === 42161 || chain === 8453 ? arbTQuery : tQuery
   const variables = vault ? { vault, first, skip, sequence_gt } : { first, skip, sequence_gt }
   const resultKey = vault
@@ -92,7 +95,7 @@ const getTvlDataLength = async chain => {
       length
     }
   }
-    `
+`
 
   const queryResponse = await executeGraphCall(chain, query, {})
   const length = parseInt(queryResponse?.totalTvlCounts[0].length ?? 0)
@@ -108,7 +111,7 @@ const getFarmTvlLength = async () => {
       lastSequenceId
     }
   }
-    `
+`
 
   const queryResponse = await executeGraphCall(1, query, {})
 

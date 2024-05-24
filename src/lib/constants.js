@@ -132,7 +132,7 @@ const CONVEX_API_URLS = {
 }
 
 const HARVEST_SUBGRAPH_URLS = {
-  1: 'https://api.studio.thegraph.com/query/48757/harvest-mainnet-test/v0.0.3',
+  1: 'https://api.studio.thegraph.com/proxy/48757/harvest-mainnet-test/version/latest',
   137: 'https://api.studio.thegraph.com/query/48757/l2-polygon-test/version/latest',
   8453: 'https://api.studio.thegraph.com/query/48757/l2-base/version/latest',
   42161: 'https://api.studio.thegraph.com/query/48757/l2-arb-test/version/latest',
