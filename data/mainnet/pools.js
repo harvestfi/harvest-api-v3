@@ -8951,10 +8951,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://polygonscan.com/token/${addresses.V2.sushi_YEL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
-       <a href="https://polygonscan.com/token/${addresses.MATIC.pYEL}" target="_blank" rel="noopener noreferrer">pYEL</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.sushi_YEL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens </a>in a Sushi farm, earning 
+       <a href="https://etherscan.io/token/${addresses.YEL}" target="_blank" rel="noopener noreferrer">YEL</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://polygonscan.com/token/${addresses.V2.sushi_YEL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.sushi_YEL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Sushi LP tokens</a>.
       </p>
     </div>
    `,
