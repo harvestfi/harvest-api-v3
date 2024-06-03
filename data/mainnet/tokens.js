@@ -9673,8 +9673,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_CONTRACT,
-      params: [addresses.YEL],
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['yel-finance'],
     },
   },
   sushi_YEL_ETH: {
