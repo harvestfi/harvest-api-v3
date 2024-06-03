@@ -2038,6 +2038,34 @@
         "NewVault": "0x03ce0D22691fc86B8000d2b1b80F4ad85Ca727CB",
         "NewStrategy": "0xB28C1CED6123b2a35aE4C4772e6394e70E94ef30",
         "NewPool": "0x5e3E721233bE80Af696E5183234b5a8A9621016F"
+      },
+      "reactor_ETH": {
+        "Underlying": "0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91",
+        "NewVault": "0xD35bc2E1Ee9EdF00E0Cd7EE515aAe8cE63A64B1A",
+        "NewStrategy": "0xB9DD716Dc39f2E7B137c4DF447196F7e12070929",
+        "NewPool": "0xC7F6D2C59E5A5411eB9F4378D20536f1e440ddd5",
+        "cToken": "0xC5db68F30D21cBe0C9Eac7BE5eA83468d69297e6"
+      },
+      "reactor_USDCe": {
+        "Underlying": "0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4",
+        "NewVault": "0x1B51eA0e4EDf4fac001D3CD55d3fAFc1D1f02f26",
+        "NewStrategy": "0xB556a89C3f46862B4e876830471617a8CC52eF1F",
+        "NewPool": "0x821bD24742499C39097A690d83b2111ec41b17ab",
+        "cToken": "0x04e9Db37d8EA0760072e1aCE3F2A219988Fdac29"
+      },
+      "reactor_USDT": {
+        "Underlying": "0x493257fD37EDB34451f62EDf8D2a0C418852bA4C",
+        "NewVault": "0x061366ac9867f30e4693e76394f214BFaBA04374",
+        "NewStrategy": "0x0133d00566Bd784C7Ef5C8547dBF95919d613Aa2",
+        "NewPool": "0x763ED4507B1fa667CB005f1B7295745266920CBA",
+        "cToken": "0x894cccB9908A0319381c305f947aD0EF44838591"
+      },
+      "reactor_WBTC": {
+        "Underlying": "0xBBeB516fb02a01611cBBE0453Fe3c580D7281011",
+        "NewVault": "0x0c0c49Ddd458F6a5e487d7Db8E93F94E84A0aeb9",
+        "NewStrategy": "0xf90f9c15e69558Ab15fE44e016278c54643aeC11",
+        "NewPool": "0x1270D827F15976f204E21cd656C8d33790C5164d",
+        "cToken": "0x0a976E1E7D3052bEb46085AcBE1e0DAccF4A19CF"
       }
     }
   }

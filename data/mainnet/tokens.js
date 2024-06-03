@@ -46,6 +46,34 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  reactor_ETH: {
+    chain: CHAIN_IDS.ZKSYNC,
+    apyIconUrls: ['./icons/rf.svg'],
+    apyTokenSymbols: ['RF'],
+    logoUrl: ['./icons/eth.svg'],
+    tokenNames: ['ETH'],
+    platform: ['ReactorFusion'],
+    tags: ['Beginners'],
+    tokenAddress: addresses.ZKSYNC.V2.reactor_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ZKSYNC.V2.reactor_ETH.NewVault,
+    strategyAddress: addresses.ZKSYNC.V2.reactor_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['weth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.REACTORFUSION_FOLD,
+        params: [
+          addresses.ZKSYNC.V2.reactor_ETH.Underlying,
+          addresses.ZKSYNC.V2.reactor_ETH.cToken,
+          addresses.ZKSYNC.V2.reactor_ETH.NewStrategy,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
   velocore_ETH_USDCe: {
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
