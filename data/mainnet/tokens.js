@@ -3645,6 +3645,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BSWAP'],
   },
   baseswap_axlWBTC_USDbC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
     apyTokenSymbols: ['BSX', 'xBSX', 'BSWAP'],
@@ -4811,6 +4812,7 @@ module.exports = {
     },
   },
   camelot_RELAY_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/relay.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/relay.svg', './icons/arb.svg'],
