@@ -6320,6 +6320,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['camelot-token'],
