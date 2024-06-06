@@ -6343,6 +6343,17 @@ module.exports = {
       params: ['camelot-token'],
     },
   },
+  DMT: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/dmt.svg'],
+    tokenAddress: addresses.ARBITRUM_ONE.DMT,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['dream-machine-token'],
+    },
+  },
   aWETH_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/am-weth.svg'],
