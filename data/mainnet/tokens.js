@@ -1554,7 +1554,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.NewStrategy,
           profitSharingCut10Percent,
@@ -1599,7 +1598,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.NewStrategy,
           profitSharingCut10Percent,
@@ -2296,7 +2294,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_ARB.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_ARB.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_ARB.NewStrategy,
           profitSharingCut10Percent,
@@ -2341,7 +2338,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_DAI.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_DAI.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_DAI.NewStrategy,
           profitSharingCut10Percent,
@@ -2386,7 +2382,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_ETH.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_ETH.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_ETH.NewStrategy,
           profitSharingCut10Percent,
@@ -2431,7 +2426,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.NewStrategy,
           profitSharingCut10Percent,
@@ -2476,7 +2470,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_GMX.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_GMX.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_GMX.NewStrategy,
           profitSharingCut10Percent,
@@ -2521,7 +2514,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_USDCe.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDCe.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDCe.NewStrategy,
           profitSharingCut10Percent,
@@ -2566,7 +2558,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_USDT.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDT.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDT.NewStrategy,
           profitSharingCut10Percent,
@@ -2611,7 +2602,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_WBTC.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_WBTC.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_WBTC.NewStrategy,
           profitSharingCut10Percent,
@@ -2656,7 +2646,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_wstETH.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_wstETH.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_wstETH.NewStrategy,
           profitSharingCut10Percent,
@@ -2712,7 +2701,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.NewStrategy,
           profitSharingCut10Percent,
@@ -5001,14 +4989,15 @@ module.exports = {
   xGRAIL: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/xgrail.svg'],
-    apyIconUrls: ['./icons/eth.svg', './icons/usdc.svg', './icons/xgrail.svg'],
-    apyTokenSymbols: ['ETH-USDC.e', 'xGRAIL'],
+    apyIconUrls: ['./icons/eth.svg', './icons/usdc.svg', './icons/xgrail.svg', './icons/dmt.svg'],
+    apyTokenSymbols: ['ETH-USDC.e', 'xGRAIL', 'DMT'],
     tokenNames: ['xGRAIL'],
     platform: ['Camelot'],
     tags: ['Advanced'],
     tokenAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['camelot-token'],
@@ -5030,6 +5019,17 @@ module.exports = {
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['camelot-token'],
+    },
+  },
+  DMT: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/dmt.svg'],
+    tokenAddress: addresses.ARBITRUM_ONE.DMT,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['dream-machine-token'],
     },
   },
   aWETH_arbitrum: {
