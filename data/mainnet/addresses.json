@@ -1975,13 +1975,8 @@
     "ZF": "0x31C2c031fDc9d33e974f327Ab0d9883Eae06cA4A",
     "LONG": "0x5165ec33b491d7b67260b3143f96bb4ac4736398",
     "VC": "0x99bbe51be7cce6c8b84883148fd3d12ace5787f2",
+    "RF": "0x5f7cbcb391d33988dad74d6fd683aadda1123e4d",
     "V2": {
-      "test_iFARM": {
-        "Underlying": "0x659EF1727551b0c9Dd78CB2c231A5d13d42216d0",
-        "NewVault": "0x79E05bcbBfa33F1807BC49b982E9532C7C9f1A21",
-        "NewStrategy": "0xFD65d266b3d902fCC8DB1B9A3447B3F020Fb324C",
-        "NewPool": "0x3b90BBa41A145ddBceEbCdfF679741E7cABFC772"
-      },
       "zkswap_ETH_USDCe": {
         "Underlying": "0x7642e38867860d4512Fcce1116e2Fb539c5cdd21",
         "NewVault": "0x71b7b93f27A4DF142e47390d22e9230EF35308B2",
@@ -2017,30 +2012,6 @@
         "NewVault": "0xe9d9692ca5A7c2e391949B02295d2C17583Bf680",
         "NewStrategy": "0xe54Fa27aAb84494B6723322555eF26d1049432C9",
         "NewPool": "0x043Fc2A5b4079584A58a833Fa9EDA44162071449"
-      },
-      "velocore_ETH_USDCe": {
-        "Underlying": "0x42D106c4A1d0Bc5C482c11853A3868d807A3781d",
-        "NewVault": "0xD3C4AF138281786552fEdceE8dE60fFf185a6B28",
-        "NewStrategy": "0x589AddC3eBe2617e67Cf165eCa3c3E0f75A52AC7",
-        "NewPool": "0xBEC9a2614732BCF11ea164dEe9a9323933F98995"
-      },
-      "velocore_ETH_USDT": {
-        "Underlying": "0xF0e86a60Ae7e9bC0F1e59cAf3CC56f434b3024c0",
-        "NewVault": "0x31fbef02C69f78eFFdfCC4b125B24650AcEFBBf1",
-        "NewStrategy": "0x7801Bcff5f634E0DbCF3d7eA35db73B66f9692fa",
-        "NewPool": "0x1211e4880ce280655ca5b28770dA4Fc644f67EbE"
-      },
-      "velocore_VC_ETH": {
-        "Underlying": "0xd0e8EeE2CB04F8474453d9a8a5D960788C0a3ADa",
-        "NewVault": "0x4Fc79E60544d1dB8A24389B828366A44C9d46524",
-        "NewStrategy": "0xC56b3F77259E7c66C4C042CC595D35d47A1f2Ec7",
-        "NewPool": "0xb5E99C85BB660BA2D128C4869b5A51cC72c869B9"
-      },
-      "velocore_WBTC_ETH": {
-        "Underlying": "0xf47430Bbbe7474eC024e66deE2470b4d05B48804",
-        "NewVault": "0x03ce0D22691fc86B8000d2b1b80F4ad85Ca727CB",
-        "NewStrategy": "0xB28C1CED6123b2a35aE4C4772e6394e70E94ef30",
-        "NewPool": "0x5e3E721233bE80Af696E5183234b5a8A9621016F"
       },
       "reactor_ETH": {
         "Underlying": "0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91",

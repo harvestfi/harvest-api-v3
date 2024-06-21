@@ -160,7 +160,14 @@ const zfFarmContract = require('../contracts/zf-farm/contract.json')
 const velocoreLensMethods = require('../contracts/velocore-lens/methods')
 const velocoreLensContract = require('../contracts/velocore-lens/contract.json')
 
+const reactorFusionRewardMethods = require('../contracts/reactorfusion-rewards/methods')
+const reactorFusionRewardContract = require('../contracts/reactorfusion-rewards/contract.json')
+
 module.exports = {
+  reactorFusionRewards: {
+    methods: reactorFusionRewardMethods,
+    contract: reactorFusionRewardContract,
+  },
   velocoreLens: {
     methods: velocoreLensMethods,
     contract: velocoreLensContract,
