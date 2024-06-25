@@ -158,6 +158,29 @@ module.exports = {
       },
     ],
   },
+  zkswap_ZK_ETH: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/zk.svg', './icons/eth.svg'],
+    apyIconUrls: ['./icons/zf.svg'],
+    apyTokenSymbols: ['ZF'],
+    tokenNames: ['ZK', 'ETH'],
+    platform: ['zkSwap'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ZKSYNC.V2.zkswap_ZK_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ZKSYNC.V2.zkswap_ZK_ETH.NewVault,
+    strategyAddress: addresses.ZKSYNC.V2.zkswap_ZK_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.ZKSYNC.V2.zkswap_ZK_ETH.Underlying, 'ZK', 'WETH_zksync'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.ZKSWAP,
+        params: [addresses.ZKSYNC.V2.zkswap_ZK_ETH.Underlying, 30, profitSharingCut10Percent],
+      },
+    ],
+  },
   zkswap_ETH_USDCe: {
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
@@ -316,6 +339,17 @@ module.exports = {
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['zkswap-finance'],
+    },
+  },
+  ZK: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/zk.svg'],
+    tokenAddress: addresses.ZKSYNC.ZK,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['zksync'],
     },
   },
   LONG: {

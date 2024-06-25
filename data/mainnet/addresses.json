@@ -1976,6 +1976,7 @@
     "LONG": "0x5165ec33b491d7b67260b3143f96bb4ac4736398",
     "VC": "0x99bbe51be7cce6c8b84883148fd3d12ace5787f2",
     "RF": "0x5f7cbcb391d33988dad74d6fd683aadda1123e4d",
+    "ZK": "0x5a7d6b2f92c77fad6ccabd7ee0624e64907eaf3e",
     "V2": {
       "zkswap_ETH_USDCe": {
         "Underlying": "0x7642e38867860d4512Fcce1116e2Fb539c5cdd21",
@@ -2040,7 +2041,13 @@
         "NewStrategy": "0xf90f9c15e69558Ab15fE44e016278c54643aeC11",
         "NewPool": "0x1270D827F15976f204E21cd656C8d33790C5164d",
         "cToken": "0x0a976E1E7D3052bEb46085AcBE1e0DAccF4A19CF"
-      }
+      },
+      "zkswap_ZK_ETH": {
+        "Underlying": "0x9EE3178701d91cc7b01D5b2d2Cae65cCB29B3De4",
+        "NewVault": "0xA168884D6f63e0f4B9d9Ff50848183cE61F9eDd0",
+        "NewStrategy": "0x08221C536c871b1da15aeFFC00fa241a29037E70",
+        "NewPool": "0x0E5548395ACbD5Da0CBd1aBA113605aCa06A5e96"
+      }      
     }
   }
 }
