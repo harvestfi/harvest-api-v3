@@ -5,7 +5,10 @@ const { HARVEST_SUBGRAPH_URLS } = require('../constants')
 
 const executeGraphCall = (chain, query, variables) =>
   axios
-    .post(HARVEST_SUBGRAPH_URLS[chain], JSON.stringify({ query, variables }))
+    .post(HARVEST_SUBGRAPH_URLS[chain], {
+      query: query,
+      variables: variables,
+    })
     .then(response => {
       const data = get(response, 'data.data')
 
@@ -25,22 +28,6 @@ const executeGraphCall = (chain, query, variables) =>
     })
 
 const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
-  const arbTQuery = `
-  query getTVLsQuery($first: Int!, $skip: Int!, $sequence_gt: Int!) {
-    totalTvlHistories(
-      orderBy: timestamp
-      orderDirection: asc
-      first: $first
-      skip: $skip
-      where: {sequenceId_gt: $sequence_gt}
-    ) {
-      value
-      timestamp
-      sequenceId
-    }
-  }
-    `
-
   const tQuery = `
   query getTVLsQuery($first: Int!, $skip: Int!, $sequence_gt: Int!) {
     totalTvlHistoryV2S(
@@ -55,7 +42,7 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
       sequenceId
     }
   }
-    `
+`
 
   const vaultQuery = `
   query getTVLsQuery($vault: String!, $first: Int!, $skip: Int!, $sequence_gt: BigInt!) {
@@ -71,18 +58,10 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
       sequenceId
     }
   }
-  `
-  const query = vault
-    ? vaultQuery
-    : chain === 42161 || chain === 8453 || chain === 324
-    ? arbTQuery
-    : tQuery
+`
+  const query = vault ? vaultQuery : tQuery
   const variables = vault ? { vault, first, skip, sequence_gt } : { first, skip, sequence_gt }
-  const resultKey = vault
-    ? 'tvls'
-    : chain === 42161 || chain === 8453 || chain === 324
-    ? 'totalTvlHistories'
-    : 'totalTvlHistoryV2S'
+  const resultKey = vault ? 'tvls' : 'totalTvlHistoryV2S'
 
   const { [resultKey]: result } = await executeGraphCall(chain, query, variables)
 
@@ -96,7 +75,7 @@ const getTvlDataLength = async chain => {
       length
     }
   }
-    `
+`
 
   const queryResponse = await executeGraphCall(chain, query, {})
   const length = parseInt(queryResponse?.totalTvlCounts[0]?.length ?? 0)
@@ -112,7 +91,7 @@ const getFarmTvlLength = async () => {
       lastSequenceId
     }
   }
-    `
+`
 
   const queryResponse = await executeGraphCall(1, query, {})
 

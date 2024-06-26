@@ -4048,6 +4048,7 @@ module.exports = {
           addresses.BASE.V2.curve_USDC_USDbC_axlUSDC_crvUSD.Gauge,
           profitSharingCut10Percent,
           CHAIN_IDS.BASE,
+          addresses.BASE.V2.curve_USDC_USDbC_axlUSDC_crvUSD.NewStrategy,
         ],
       },
     ],
