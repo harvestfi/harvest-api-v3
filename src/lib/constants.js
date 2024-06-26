@@ -132,10 +132,18 @@ const CONVEX_API_URLS = {
 }
 
 const HARVEST_SUBGRAPH_URLS = {
-  1: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance',
-  137: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-polygon',
-  8453: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-base',
-  42161: 'https://api.thegraph.com/subgraphs/name/harvestfi/harvest-finance-arbitrum',
+  1:
+    process.env.MAINNET_SUBGRAPH_URL ||
+    'https://api.studio.thegraph.com/query/48757/harvest-mainnet-test/v0.0.5',
+  137:
+    process.env.POLYGON_SUBGRAPH_URL ||
+    'https://api.studio.thegraph.com/query/48757/l2-polygon-test/v0.0.15',
+  8453:
+    process.env.BASE_SUBGRAPH_URL ||
+    'https://api.studio.thegraph.com/query/48757/harvest-base/v0.0.11',
+  42161:
+    process.env.ARBITRUM_SUBGRAPH_URL ||
+    'https://api.studio.thegraph.com/query/48757/harvest-arbitrum/v0.0.4',
 }
 
 const SUSHI_POOLS_IDS = {
@@ -184,15 +192,10 @@ const SWIRL_API_URL = 'https://api.swirl.cash/'
 const MSTABLE_API_URL = 'https://api.mstable.org/pools'
 const APE_API_URL = 'https://ape-swap-api.herokuapp.com'
 
-const WOMBAT_ARB_SUBGRAPH_URL =
-  'https://api.thegraph.com/subgraphs/name/wombat-exchange/wombat-exchange-arbone'
-const WOMBAT_ARB_ONE_BLOCK_URL =
-  'https://api.thegraph.com/subgraphs/name/wombat-exchange/arbitrum-one-block'
+const WOMBAT_ARB_SUBGRAPH_URL = `https://gateway-arbitrum.network.thegraph.com/api/${process.env.SUBGRAPH_KEY}/subgraphs/id/5YPaz7z5iYgboKtoShdvZYPohUKtrDLibcLSLzaC424M`
 
 const BALANCER_SUBGRAPH_URLS = {
-  ETH: 'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2',
-  MATIC: 'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-polygon-v2',
-  BASE: 'https://api.studio.thegraph.com/query/24660/balancer-base-v2/version/latest',
+  ETH: `https://gateway-arbitrum.network.thegraph.com/api/${process.env.SUBGRAPH_KEY}/subgraphs/id/C4ayEZP2yTXRAB8vSaTrgN4m9anTe9Mdm2ViyiAuV9TV`,
 }
 
 const LIDO_API_URLS = { ETH: 'https://eth-api.lido.fi/v1/protocol/steth/apr/sma' }
@@ -307,7 +310,6 @@ module.exports = {
   CURVE_FINANCE_API_URL,
   CURVE_FINANCE_BASE_API_URL,
   WOMBAT_ARB_SUBGRAPH_URL,
-  WOMBAT_ARB_ONE_BLOCK_URL,
   CURRENCY_API_URL,
   HISTORICAL_CURRENCY_API_URL,
 }

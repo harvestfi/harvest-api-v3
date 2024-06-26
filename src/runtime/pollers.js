@@ -730,6 +730,7 @@ const getTVL = async () => {
       }
       data[chainId] = { $each: result }
       await appendData(Cache, DB_CACHE_IDS.TVL, data, hasErrors)
+      console.log(`Done with ${i}/${length}`)
     }
   }
 
@@ -759,6 +760,7 @@ const getTVL = async () => {
     }
     data = { FARM: { $each: result } }
     await appendData(Cache, DB_CACHE_IDS.TVL, data, hasErrors)
+    console.log(`Done with ${i}/${length}`)
   }
   console.log('-- Done getting TVL data --\n')
 }

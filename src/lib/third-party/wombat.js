@@ -1,6 +1,6 @@
 const { get } = require('lodash')
 const { cachedAxios } = require('../db/models/cache')
-const { WOMBAT_ARB_SUBGRAPH_URL, WOMBAT_ARB_ONE_BLOCK_URL } = require('../constants')
+const { WOMBAT_ARB_SUBGRAPH_URL } = require('../constants')
 
 const executeWombatCall = (url, type, query) => {
   return cachedAxios
@@ -25,16 +25,6 @@ const executeWombatCall = (url, type, query) => {
     })
 }
 
-const getBlockNumArb = async timestamp => {
-  const blockQuery = `query {
-    blocks (first: 1, orderBy: timestamp, orderDirection:desc where:{timestamp_lte:${timestamp}}) { 
-      number
-    }}`
-
-  const blockInfo = await executeWombatCall(WOMBAT_ARB_ONE_BLOCK_URL, 'blocks[0]', blockQuery)
-  return blockInfo.number
-}
-
 const getTradingVolumeDaily = async (underlyingAddr, blockNum) => {
   const tradingVolQuery = `query {
     assetsNow:assets (where: {id: "${underlyingAddr.toLowerCase()}"}) { 
@@ -55,5 +45,4 @@ const getTradingVolumeDaily = async (underlyingAddr, blockNum) => {
 
 module.exports = {
   getTradingVolumeDaily,
-  getBlockNumArb,
 }

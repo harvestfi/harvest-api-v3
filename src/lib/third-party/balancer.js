@@ -44,7 +44,7 @@ const getPoolInfoSubgraph = async (poolId, networkId) => {
   const poolQuery = `query {
     pools (where: {id: "${poolId}"}) { 
       totalLiquidity tokensList
-      tokens (id: "${poolId}") { balance priceRate  }}
+      tokens { balance priceRate  }}
   }`
 
   const poolInfo = await executeBalancerCall('pools[0]', poolQuery, networkId)
