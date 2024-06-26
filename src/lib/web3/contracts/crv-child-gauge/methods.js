@@ -9,6 +9,8 @@ const getRewardData = (addr, instance) =>
   countFunctionCall(instance.methods.reward_data(addr).call())
 const getRewardToken = (index, instance) =>
   countFunctionCall(instance.methods.reward_tokens(index).call())
+const getInflationRate = (arg, instance) =>
+  countFunctionCall(instance.methods.inflation_rate(arg).call())
 
 module.exports = {
   getWorkingSupply,
@@ -17,4 +19,5 @@ module.exports = {
   balanceOf,
   getRewardData,
   getRewardToken,
+  getInflationRate,
 }
