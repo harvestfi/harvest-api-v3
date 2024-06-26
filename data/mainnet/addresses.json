@@ -1890,6 +1890,7 @@
     "xETH": "0x55380fe7A1910dFf29A47B622057ab4139DA42C5",
     "frxETH": "0x178412e79c25968a32e89b11f63B33F733770c2A",
     "rsETH": "0x4186BFC76E2E237523CBC30FD220FE055156b41F",
+    "DMT": "0x8B0E6f19Ee57089F7649A455D89D7bC6314D04e8",
     "V2": {
       "balancer_wstETH_wETH_arbitrum": {
         "Underlying": "0x36bf227d6BaC96e2aB1EbB5492ECec69C691943f",
@@ -2155,7 +2156,8 @@
         "NewStrategy": "0x6eEA49f4235C459958B318B4810596ec6700742F",
         "NewPool": "0xA7a4825E35893c2018E2A8Dd540A1f314cd0DD8E",
         "NFTPool": "0x30cbcBbd793501690d9Ca6f78fC798Ce987Af7d9",
-        "NitroPool": "0x7F40F41Ea66E79895C2299a0164584eD25C0e43e"
+        "NitroPool": "0x7F40F41Ea66E79895C2299a0164584eD25C0e43e",
+        "doHardwork": false
       },
       "camelot_THALES_ETH": {
         "Underlying": "0x8971dFb268B961a9270632f28B24F2f637c94244",
@@ -3057,7 +3059,8 @@
         "NewStrategy": "0x55b2Ea6709B09356Ed2f5f14C514b4896411D873",
         "NewPool": "0xbbf4c2cd1c9588587d5E182a03273F29E238Fe58",
         "NFTPool": "0x7E0F687d82D05aDb99D196Cd8E342f042803A4b6",
-        "BaseToken": "0x1a35EE4640b0A3B87705B0A4B45D227Ba60Ca2ad"
+        "BaseToken": "0x1a35EE4640b0A3B87705B0A4B45D227Ba60Ca2ad",
+        "doHardwork": false
       },
       "baseswap_ETH_DAI": {
         "Underlying": "0x0FeB1490f80B6978002c3E501753562f2F2853B2",

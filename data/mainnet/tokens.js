@@ -1288,7 +1288,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.NewStrategy,
           profitSharingCut10Percent,
@@ -1333,7 +1332,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.NewStrategy,
           profitSharingCut10Percent,
@@ -2030,7 +2028,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_ARB.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_ARB.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_ARB.NewStrategy,
           profitSharingCut10Percent,
@@ -2075,7 +2072,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_DAI.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_DAI.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_DAI.NewStrategy,
           profitSharingCut10Percent,
@@ -2120,7 +2116,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_ETH.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_ETH.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_ETH.NewStrategy,
           profitSharingCut10Percent,
@@ -2165,7 +2160,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.NewStrategy,
           profitSharingCut10Percent,
@@ -2210,7 +2204,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_GMX.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_GMX.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_GMX.NewStrategy,
           profitSharingCut10Percent,
@@ -2255,7 +2248,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_USDCe.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDCe.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDCe.NewStrategy,
           profitSharingCut10Percent,
@@ -2300,7 +2292,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_USDT.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDT.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDT.NewStrategy,
           profitSharingCut10Percent,
@@ -2345,7 +2336,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_WBTC.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_WBTC.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_WBTC.NewStrategy,
           profitSharingCut10Percent,
@@ -2390,7 +2380,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_wstETH.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_wstETH.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_wstETH.NewStrategy,
           profitSharingCut10Percent,
@@ -2446,7 +2435,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.LODESTAR_FOLD_HODL_COMPOUNDING,
         params: [
-          addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.NewStrategy,
           profitSharingCut10Percent,
@@ -2809,8 +2797,8 @@ module.exports = {
   },
   moonwell_wstETH: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/well.svg', './icons/usdc.svg'],
-    apyTokenSymbols: ['WELL', 'USDC'],
+    apyIconUrls: ['./icons/well.svg'],
+    apyTokenSymbols: ['WELL'],
     logoUrl: ['./icons/wsteth.svg'],
     tokenNames: ['wstETH'],
     platform: ['Moonwell'],
@@ -2834,12 +2822,12 @@ module.exports = {
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'WELL', 'USDC'],
+    cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
   moonwell_rETH: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/well.svg', './icons/usdc.svg'],
-    apyTokenSymbols: ['WELL', 'USDC'],
+    apyIconUrls: ['./icons/well.svg'],
+    apyTokenSymbols: ['WELL'],
     logoUrl: ['./icons/reth.svg'],
     tokenNames: ['rETH'],
     platform: ['Moonwell'],
@@ -2863,7 +2851,7 @@ module.exports = {
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'WELL', 'USDC'],
+    cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
   lodestar_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
@@ -3590,8 +3578,8 @@ module.exports = {
   },
   moonwell_USDC: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/well.svg', './icons/usdc.svg'],
-    apyTokenSymbols: ['WELL', 'USDC'],
+    apyIconUrls: ['./icons/well.svg'],
+    apyTokenSymbols: ['WELL'],
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC'],
     platform: ['Moonwell'],
@@ -3614,7 +3602,7 @@ module.exports = {
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'WELL', 'USDC'],
+    cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
   baseswap_axlUSDC_ETH: {
     chain: CHAIN_IDS.BASE,
@@ -3645,6 +3633,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BSWAP'],
   },
   baseswap_axlWBTC_USDbC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
     apyTokenSymbols: ['BSX', 'xBSX', 'BSWAP'],
@@ -3842,8 +3831,8 @@ module.exports = {
   },
   moonwell_CBETH: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/well.svg', './icons/usdc.svg'],
-    apyTokenSymbols: ['WELL', 'USDC'],
+    apyIconUrls: ['./icons/well.svg'],
+    apyTokenSymbols: ['WELL'],
     logoUrl: ['./icons/cbeth.svg'],
     tokenNames: ['CBETH'],
     platform: ['Moonwell'],
@@ -3866,12 +3855,12 @@ module.exports = {
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'WELL', 'USDC'],
+    cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
   moonwell_DAI: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/well.svg', './icons/usdc.svg'],
-    apyTokenSymbols: ['WELL', 'USDC'],
+    apyIconUrls: ['./icons/well.svg'],
+    apyTokenSymbols: ['WELL'],
     logoUrl: ['./icons/dai.svg'],
     tokenNames: ['DAI'],
     platform: ['Moonwell'],
@@ -3894,7 +3883,7 @@ module.exports = {
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'WELL', 'USDC'],
+    cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
   moonwell_USDbC: {
     inactive: true,
@@ -3927,8 +3916,8 @@ module.exports = {
   },
   moonwell_WETH: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/well.svg', './icons/usdc.svg'],
-    apyTokenSymbols: ['WELL', 'USDC'],
+    apyIconUrls: ['./icons/well.svg'],
+    apyTokenSymbols: ['WELL'],
     logoUrl: ['./icons/eth.svg'],
     tokenNames: ['ETH'],
     platform: ['Moonwell'],
@@ -3951,7 +3940,7 @@ module.exports = {
         ],
       },
     ],
-    cmcRewardTokenSymbols: ['iFARM', 'WELL', 'USDC'],
+    cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
   BASED: {
     chain: CHAIN_IDS.BASE,
@@ -4209,6 +4198,7 @@ module.exports = {
           addresses.BASE.V2.curve_USDC_USDbC_axlUSDC_crvUSD.Gauge,
           profitSharingCut10Percent,
           CHAIN_IDS.BASE,
+          addresses.BASE.V2.curve_USDC_USDbC_axlUSDC_crvUSD.NewStrategy,
         ],
       },
     ],
@@ -4244,6 +4234,7 @@ module.exports = {
           addresses.BASE.V2.curve_CBETH_ETH.Gauge,
           profitSharingCut10Percent,
           CHAIN_IDS.BASE,
+          addresses.BASE.V2.curve_CBETH_ETH.NewStrategy,
         ],
       },
     ],
@@ -4278,6 +4269,7 @@ module.exports = {
           addresses.BASE.V2.curve_CRV_crvUSD.Gauge,
           profitSharingCut10Percent,
           CHAIN_IDS.BASE,
+          addresses.BASE.V2.curve_CRV_crvUSD.NewStrategy,
         ],
       },
     ],
@@ -4312,6 +4304,7 @@ module.exports = {
           addresses.BASE.V2.curve_ETH_tBTC_crvUSD.Gauge,
           profitSharingCut10Percent,
           CHAIN_IDS.BASE,
+          addresses.BASE.V2.curve_ETH_tBTC_crvUSD.NewStrategy,
         ],
       },
     ],
@@ -4811,6 +4804,7 @@ module.exports = {
     },
   },
   camelot_RELAY_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/relay.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/relay.svg', './icons/arb.svg'],
@@ -6310,14 +6304,15 @@ module.exports = {
   xGRAIL: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/xgrail.svg'],
-    apyIconUrls: ['./icons/eth.svg', './icons/usdc.svg', './icons/xgrail.svg'],
-    apyTokenSymbols: ['ETH-USDC.e', 'xGRAIL'],
+    apyIconUrls: ['./icons/eth.svg', './icons/usdc.svg', './icons/xgrail.svg', './icons/dmt.svg'],
+    apyTokenSymbols: ['ETH-USDC.e', 'xGRAIL', 'DMT'],
     tokenNames: ['xGRAIL'],
     platform: ['Camelot'],
     tags: ['Advanced'],
     tokenAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['camelot-token'],
@@ -6339,6 +6334,17 @@ module.exports = {
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['camelot-token'],
+    },
+  },
+  DMT: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/dmt.svg'],
+    tokenAddress: addresses.ARBITRUM_ONE.DMT,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['dream-machine-token'],
     },
   },
   aWETH_arbitrum: {
@@ -9673,8 +9679,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_CONTRACT,
-      params: [addresses.YEL],
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['yel-finance'],
     },
   },
   sushi_YEL_ETH: {

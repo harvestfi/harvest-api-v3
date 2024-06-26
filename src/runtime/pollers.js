@@ -781,10 +781,6 @@ const getCurrencyRates = async () => {
   console.log('-- Done getting Currency Rates data --\n')
 }
 
-const sleep = ms => {
-  return new Promise(resolve => setTimeout(resolve, ms))
-}
-
 const getHistoricalRates = async () => {
   console.log('\n-- Getting Historical Rates data --')
   const type = DB_CACHE_IDS.HISTORICAL_RATES
@@ -801,7 +797,8 @@ const getHistoricalRates = async () => {
   const length = historical_rates?.USD?.length ?? 0
   let lastTimeStamp =
     length === 0 ? startTimeStamp : historical_rates.USD[length - 1].timestamp + defaultTimeSpac
-  while (lastTimeStamp < curTimeStamp) {
+  let x = 0
+  while (lastTimeStamp < curTimeStamp && x < 10) {
     const date = new Date(lastTimeStamp)
 
     // Get the components of the date (year, month, and day)
@@ -824,13 +821,11 @@ const getHistoricalRates = async () => {
         appendDetail[currency] = { timestamp: lastTimeStamp, price: price }
       }
       await appendData(Cache, DB_CACHE_IDS.HISTORICAL_RATES, appendDetail, hasErrors)
-      await sleep(7000) // Sleep for 7000 milliseconds (7 seconds)
+      lastTimeStamp = lastTimeStamp + defaultTimeSpac
     } catch (err) {
       console.error('Error getting historical rates: ', err, lastTimeStamp)
-      await sleep(7000) // Sleep for 7000 milliseconds (7 seconds)
     }
-
-    lastTimeStamp = lastTimeStamp + defaultTimeSpac
+    x += 1
   }
   console.log('-- Done getting Historical Rates data --\n')
 }
