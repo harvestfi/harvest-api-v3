@@ -63,7 +63,14 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
   const variables = vault ? { vault, first, skip, sequence_gt } : { first, skip, sequence_gt }
   const resultKey = vault ? 'tvls' : 'totalTvlHistoryV2S'
 
-  const { [resultKey]: result } = await executeGraphCall(chain, query, variables)
+  let result
+  try {
+    const { [resultKey]: callResult } = await executeGraphCall(chain, query, variables)
+    result = callResult
+  } catch (err) {
+    console.error('Subgraph TVL error:', err)
+    result = []
+  }
 
   return result
 }
