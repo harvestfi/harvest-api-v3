@@ -31,11 +31,16 @@ const getApy = async (poolId, rewarder, reduction = 1) => {
 
   const account = '0x0000000000000000000000000000000000000000'
 
-  const radpieInfo = await radpieReaderMethods.getRadpieInfo(
-    account.toLowerCase(),
-    radpieReaderInstance,
-  )
-
+  let radpieInfo
+  try {
+    radpieInfo = await radpieReaderMethods.getRadpieInfo(
+      account.toLowerCase(),
+      radpieReaderInstance,
+    )
+  } catch (err) {
+    console.error('RadpieInfo error:', err)
+    return '0'
+  }
   const radpiePoolInfo = radpieInfo.pools[poolId]
 
   const rdntAPR = await radpieReaderMethods.getRDNTAPR(radpiePoolInfo, radpieReaderInstance)
