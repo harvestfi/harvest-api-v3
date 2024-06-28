@@ -5,6 +5,84 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'hop_DAI',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.hop_DAI.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.hop_DAI.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.hop.exchange/#/pool/deposit?token=DAI&sourceNetwork=arbitrum`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.hop_DAI.Underlying}" target="_blank" rel="noopener noreferrer">Hop DAI-LP tokens</a> to Hop, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.hop_DAI.Underlying}" target="_blank" rel="noopener noreferrer">Hop DAI-LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.hop_DAI.Underlying}" target="_blank" rel="noopener noreferrer">Hop DAI-LP tokens</a> by supplying liquidity on 
+        <a href="https://app.hop.exchange/#/pool/deposit?token=DAI&sourceNetwork=arbitrum" target="_blank" rel="noopener noreferrer">Hop</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'hop_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.hop_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.hop_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.hop.exchange/#/pool/deposit?token=ETH&sourceNetwork=arbitrum`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.hop_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Hop ETH-LP tokens</a> to Hop, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.hop_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Hop ETH-LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.hop_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Hop ETH-LP tokens</a> by supplying liquidity on 
+        <a href="https://app.hop.exchange/#/pool/deposit?token=ETH&sourceNetwork=arbitrum" target="_blank" rel="noopener noreferrer">Hop</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'hop_USDT',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.hop_USDT.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.hop_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.hop.exchange/#/pool/deposit?token=USDT&sourceNetwork=arbitrum`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.hop_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Hop USDT-LP tokens</a> to Hop, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.hop_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Hop USDT-LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.hop_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Hop USDT-LP tokens</a> by supplying liquidity on 
+        <a href="https://app.hop.exchange/#/pool/deposit?token=USDT&sourceNetwork=arbitrum" target="_blank" rel="noopener noreferrer">Hop</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ZKSYNC,
     id: 'reactor_ETH',
     type: POOL_TYPES.INCENTIVE,

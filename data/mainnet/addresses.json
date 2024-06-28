@@ -1506,6 +1506,27 @@
         "NewVault": "0x1D57718670819c8430Bd4086c77a4a8F96081f8f",
         "NewStrategy": "0xa607C224576fa865F9a51866708BD09BAE8Ef427",
         "NewPool": "0x4A978f4ACA97439f5c8453Fb83dcf8dd1dA09fF2"
+      },
+      "hop_DAI": {
+        "Underlying": "0x68f5d998F00bB2460511021741D098c05721d8fF",
+        "NewVault": "0xbe70cEfA4E5c74093b0B26516d35ebabB840a8B3",
+        "NewStrategy": "0x19a03F18dbF810d9B5ead7D6c9A683437e017A17",
+        "NewPool": "0x5D89454769480e4178b3Ff881DFbA6F1E48F26a9",
+        "RewardPool": "0xBB9D66F7a7744C11550079045A177090E0015364"
+      },
+      "hop_ETH": {
+        "Underlying": "0x59745774Ed5EfF903e615F5A2282Cae03484985a",
+        "NewVault": "0x1eA1dF73525E5d6F258bd320653C446B057Ba506",
+        "NewStrategy": "0xaD7A4025e67c29196083f8956Cb9e0170c4A97e1",
+        "NewPool": "0x4dED00427b5b9183ad0f8385Eac59670eDB62352",
+        "RewardPool": "0x00001fcF29c5Fd7846E4332AfBFaA48701D727f5"
+      },
+      "hop_USDT": {
+        "Underlying": "0xCe3B19D820CB8B9ae370E423B0a329c4314335fE",
+        "NewVault": "0xBF6028B0af43eeE4D26c04f74F1638B7B52A39A7",
+        "NewStrategy": "0xC7B0EAc5A01218eA99a4fcB9C30Ab4afE21aF0c5",
+        "NewPool": "0xA1725f81A9446ABFAD4BF6202D1d9Db7275a95ED",
+        "RewardPool": "0xB8f90e115499082747Ba5DA94732863b12cB1F25"
       }
     }
   },

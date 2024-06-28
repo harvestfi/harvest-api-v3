@@ -46,6 +46,87 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  hop_DAI: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg'],
+    apyTokenSymbols: ['ARB'],
+    logoUrl: ['./icons/dai.svg'],
+    tokenNames: ['DAI-LP'],
+    platform: ['Hop'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.hop_DAI.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.hop_DAI.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.hop_DAI.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.HOP_LP,
+      params: [addresses.ARBITRUM_ONE.V2.hop_DAI.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.HOP,
+        params: [
+          addresses.ARBITRUM_ONE.V2.hop_DAI.RewardPool,
+          CHAIN_IDS.ARBITRUM_ONE,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  hop_ETH: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg'],
+    apyTokenSymbols: ['ARB'],
+    logoUrl: ['./icons/eth.svg'],
+    tokenNames: ['ETH-LP'],
+    platform: ['Hop'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.hop_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.hop_ETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.hop_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.HOP_LP,
+      params: [addresses.ARBITRUM_ONE.V2.hop_ETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.HOP,
+        params: [
+          addresses.ARBITRUM_ONE.V2.hop_ETH.RewardPool,
+          CHAIN_IDS.ARBITRUM_ONE,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  hop_USDT: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg'],
+    apyTokenSymbols: ['ARB'],
+    logoUrl: ['./icons/usdt.svg'],
+    tokenNames: ['USDT-LP'],
+    platform: ['Hop'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.hop_USDT.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.hop_USDT.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.hop_USDT.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.HOP_LP,
+      params: [addresses.ARBITRUM_ONE.V2.hop_USDT.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.HOP,
+        params: [
+          addresses.ARBITRUM_ONE.V2.hop_USDT.RewardPool,
+          CHAIN_IDS.ARBITRUM_ONE,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
   reactor_ETH: {
     chain: CHAIN_IDS.ZKSYNC,
     apyIconUrls: ['./icons/rf.svg'],
@@ -427,6 +508,7 @@ module.exports = {
     },
   },
   penpie_rsETH2706: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/pendle.svg'],
     apyTokenSymbols: ['PENDLE'],
@@ -455,6 +537,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'PENLDE'],
   },
   penpie_eETH2706: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/pendle.svg'],
     apyTokenSymbols: ['PENDLE'],
@@ -483,6 +566,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'PENLDE'],
   },
   penpie_ezETH2706: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/pendle.svg'],
     apyTokenSymbols: ['PENDLE'],
@@ -511,6 +595,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'PENLDE'],
   },
   penpie_wstETH2706: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/pendle.svg'],
     apyTokenSymbols: ['PENDLE'],
@@ -629,6 +714,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'PENLDE'],
   },
   penpie_aUSDC2706: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/pendle.svg'],
     apyTokenSymbols: ['PENDLE'],

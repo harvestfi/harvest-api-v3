@@ -163,7 +163,28 @@ const velocoreLensContract = require('../contracts/velocore-lens/contract.json')
 const reactorFusionRewardMethods = require('../contracts/reactorfusion-rewards/methods')
 const reactorFusionRewardContract = require('../contracts/reactorfusion-rewards/contract.json')
 
+const hopLPTokenMethods = require('../contracts/hop-lp-token/methods')
+const hopLPTokenContract = require('../contracts/hop-lp-token/contract.json')
+
+const hopRewardsMethods = require('../contracts/hop-rewards/methods')
+const hopRewardsContract = require('../contracts/hop-rewards/contract.json')
+
+const hopSwapMethods = require('../contracts/hop-swap/methods')
+const hopSwapContract = require('../contracts/hop-swap/contract.json')
+
 module.exports = {
+  hopSwap: {
+    methods: hopSwapMethods,
+    contract: hopSwapContract,
+  },
+  hopRewards: {
+    methods: hopRewardsMethods,
+    contract: hopRewardsContract,
+  },
+  hopLPToken: {
+    methods: hopLPTokenMethods,
+    contract: hopLPTokenContract,
+  },
   reactorFusionRewards: {
     methods: reactorFusionRewardMethods,
     contract: reactorFusionRewardContract,
