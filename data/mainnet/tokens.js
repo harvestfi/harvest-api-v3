@@ -6633,6 +6633,7 @@ module.exports = {
     },
   },
   sushi_YEL_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/yel.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/yel.svg'],
