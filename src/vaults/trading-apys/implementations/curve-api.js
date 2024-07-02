@@ -1,12 +1,14 @@
 const axios = require('axios')
 const { get } = require('lodash')
-const { CURVE_FINANCE_BASE_API_URL } = require('../../../lib/constants')
+const { CURVE_API_URLS } = require('../../../lib/constants')
 
-const getTradingApy = async poolAddress => {
+const getTradingApy = async (poolAddress, chainId) => {
   let response, poolDetails, poolDetail, apy
 
+  const url = CURVE_API_URLS[chainId]
+
   try {
-    response = await axios.get(`${CURVE_FINANCE_BASE_API_URL}`)
+    response = await axios.get(`${url}`)
     poolDetails = get(response, 'data.data', 0)
   } catch (err) {
     console.error('Curve API error: ', err)

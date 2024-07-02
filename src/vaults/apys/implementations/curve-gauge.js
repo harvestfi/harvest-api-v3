@@ -18,7 +18,7 @@ const getApy = async (tokenSymbol, gaugeAddress, factor, chainId, strategy = nul
     methods: childMethods,
   } = crvChildGauge
 
-  if (chainId == CHAIN_IDS.BASE) {
+  if (chainId == CHAIN_IDS.BASE || chainId == CHAIN_IDS.ARBITRUM_ONE) {
     gaugeAbi = childAbi
     gaugeMethods = childMethods
   }

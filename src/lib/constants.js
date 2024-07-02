@@ -214,8 +214,10 @@ const STAKEWISE_API_URLS = {
 
 const DEXSCREENER_API_URL = 'https://api.dexscreener.com/latest/dex/tokens'
 
-const CURVE_FINANCE_API_URL = 'https://api.curve.fi/api'
-const CURVE_FINANCE_BASE_API_URL = 'https://prices.curve.fi/v1/chains/base'
+const CURVE_API_URLS = {
+  8453: 'https://prices.curve.fi/v1/chains/base',
+  42161: 'https://prices.curve.fi/v1/chains/arbitrum',
+}
 
 const QUICKSWAP_GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/'
 const MERKL_ENDPOINT = 'https://api.angle.money/v2/merkl'
@@ -313,8 +315,7 @@ module.exports = {
   HARVEST_SUBGRAPH_URLS,
   BASE_RPC_URL,
   DEXSCREENER_API_URL,
-  CURVE_FINANCE_API_URL,
-  CURVE_FINANCE_BASE_API_URL,
+  CURVE_API_URLS,
   WOMBAT_ARB_SUBGRAPH_URL,
   CURRENCY_API_URL,
   HISTORICAL_CURRENCY_API_URL,
