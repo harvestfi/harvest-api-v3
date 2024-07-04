@@ -35,7 +35,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_FRAX.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Aave V3, where it is earning auto-compounding interest.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_FRAX.Underlying}" target="_blank" rel="noopener noreferrer"> FRAX </a>to Aave V3, where it is earning auto-compounding interest.
       </p>
     </div>
    `,
@@ -53,7 +53,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_GHO.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Aave V3, where it is earning auto-compounding interest.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_GHO.Underlying}" target="_blank" rel="noopener noreferrer"> GHO </a>to Aave V3, where it is earning auto-compounding interest.
       </p>
     </div>
    `,
@@ -71,7 +71,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_LUSD.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Aave V3, where it is earning auto-compounding interest.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_LUSD.Underlying}" target="_blank" rel="noopener noreferrer"> LUSD </a>to Aave V3, where it is earning auto-compounding interest.
       </p>
     </div>
    `,
@@ -89,7 +89,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Aave V3, where it is earning auto-compounding interest.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Aave V3, where it is earning auto-compounding interest.
       </p>
     </div>
    `,
@@ -107,7 +107,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_USDCe.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Aave V3, where it is earning auto-compounding interest.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_USDCe.Underlying}" target="_blank" rel="noopener noreferrer"> USDC.e </a>to Aave V3, where it is earning auto-compounding interest.
       </p>
     </div>
    `,
@@ -125,7 +125,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Aave V3, where it is earning auto-compounding interest.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT </a>to Aave V3, where it is earning auto-compounding interest.
       </p>
     </div>
    `,
