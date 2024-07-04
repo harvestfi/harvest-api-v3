@@ -6,6 +6,132 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'aave_DAI_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.aave_DAI.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.aave_DAI.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Aave V3, where it is earning auto-compounding interest.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'aave_FRAX_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.aave_FRAX.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.aave_FRAX.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_FRAX.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Aave V3, where it is earning auto-compounding interest.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'aave_GHO_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.aave_GHO.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.aave_GHO.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_GHO.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Aave V3, where it is earning auto-compounding interest.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'aave_LUSD_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.aave_LUSD.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.aave_LUSD.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_LUSD.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Aave V3, where it is earning auto-compounding interest.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'aave_USDC_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.aave_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.aave_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Aave V3, where it is earning auto-compounding interest.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'aave_USDCe_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.aave_USDCe.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.aave_USDCe.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_USDCe.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Aave V3, where it is earning auto-compounding interest.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'aave_USDT_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.aave_USDT.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.aave_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Aave V3, where it is earning auto-compounding interest.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'curve_ETHp_WETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -147,8 +273,8 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_OVN_stable.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RSR}" target="_blank" rel="noopener noreferrer">RSR</a> & 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.OVN}" target="_blank" rel="noopener noreferrer">OVN</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_OVN_stable.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
@@ -178,7 +304,8 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_OVN.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RSR}" target="_blank" rel="noopener noreferrer">RSR</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> ,
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.OVN}" target="_blank" rel="noopener noreferrer">OVN</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_OVN.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
@@ -209,7 +336,6 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_TriCRV_ARB.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RSR}" target="_blank" rel="noopener noreferrer">RSR</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_TriCRV_ARB.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
@@ -271,7 +397,6 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_WBTC_tBTC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RSR}" target="_blank" rel="noopener noreferrer">RSR</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_WBTC_tBTC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
