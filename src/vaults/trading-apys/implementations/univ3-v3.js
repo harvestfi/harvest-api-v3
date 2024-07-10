@@ -1,5 +1,5 @@
 const { orderBy } = require('lodash')
-const { web3, web3Socket } = require('../../../lib/web3')
+const { web3 } = require('../../../lib/web3')
 
 const uniNonFungibleContractData = require('../../../lib/web3/contracts/uni-non-fungible-manager/contract.json')
 const univ3EventsContract = require('../../../lib/web3/contracts/uniswap-v3-sharepriceEvents/contract.json')
@@ -28,7 +28,7 @@ const getTradingApy = async (
 ) => {
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
   const vaultData = tokens[symbol]
-  const vaultInstance = new web3Socket.eth.Contract(abi, vaultData.vaultAddress)
+  const vaultInstance = new web3.eth.Contract(abi, vaultData.vaultAddress)
 
   const vaultImplementation = await vaultInstance.methods.implementation().call()
   if (oldVaultImplementations.includes(vaultImplementation)) {
@@ -42,7 +42,7 @@ const getTradingApy = async (
     .dividedBy(new BigNumber(10).exponentiatedBy(Number(vaultData.decimals)))
     .decimalPlaces(6)
 
-  const instance = new web3Socket.eth.Contract(univ3EventsContract.abi, vaultAddress)
+  const instance = new web3.eth.Contract(univ3EventsContract.abi, vaultAddress)
   const vaultEvents = (
     await instance.getPastEvents('SharePriceChangeTrading', {
       fromBlock,
@@ -217,7 +217,7 @@ const getAprForLastHarvest = (lastHarvest, stratPercentFactor) => {
 }
 
 const getDecimals = async tokenAddress => {
-  const instance = new web3Socket.eth.Contract(tokenContract.contract.abi, tokenAddress)
+  const instance = new web3.eth.Contract(tokenContract.contract.abi, tokenAddress)
   const decimals = await tokenContract.methods.getDecimals(instance)
   return decimals
 }
