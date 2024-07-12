@@ -3,8 +3,7 @@ const { getPoolInfo } = require('../../../lib/third-party/balancer')
 const { getAaveV2Market } = require('../../../lib/third-party/aave')
 const boostInfo = require('./balancer-boost-info.json')
 const { executeTradingApyFunction } = require('../index.js')
-const { get7MAAPRs } = require('../../../lib/third-party/lido')
-const { getYearlyAPR } = require('../../../lib/third-party/rocket-pool')
+const { getDefiLlamaData } = require('../../../lib/third-party/defillama')
 const { getApy: getIdleApy } = require('../../apys/implementations/idle-finance')
 
 const getBoostAPY = async (poolAddress, networkId) => {
@@ -16,6 +15,9 @@ const getBoostAPY = async (poolAddress, networkId) => {
   const poolInfo = await getPoolInfo(poolId, networkId)
   const tokenValues = poolInfo.tokenValues
   const tvl = poolInfo.totalLiquidity
+
+  const stakeDataRaw = await getDefiLlamaData()
+  const stakeData = stakeDataRaw.data
 
   let apy = new BigNumber(0)
   for (let i = 0; i < tokens.length; i++) {
@@ -40,7 +42,7 @@ const getBoostAPY = async (poolAddress, networkId) => {
     } else if (types[i] == 'stakedMatic') {
       partApy = await getStakedMaticApy(token)
     } else if (types[i] == 'stakedEth') {
-      partApy = await getStakedEthApy(token)
+      partApy = await getStakedEthApy(token, stakeData)
     } else {
       console.error(`Balancer boost type: ${types[i]} not recognized`)
       continue
@@ -77,24 +79,37 @@ const getAaveApy = async tokenId => {
   return new BigNumber(aavePool[0].liquidityRate).times(100)
 }
 
-const getStakedEthApy = async token => {
+const getStakedEthApy = async (token, stakeData) => {
   if (
+    //stETH
     token == '0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0' ||
     token == '0x03b54A6e9a984069379fae1a4fC4dBAE93B3bCCD' ||
     token == '0x5979D7b546E38E414F7E9822514be443A4800529'
   ) {
-    return await get7MAAPRs('1')
+    const poolDetail = stakeData.find(obj => obj.pool == '747c1d2a-c668-4682-b9f9-296708a3dd90')
+    return poolDetail.apy
   } else if (
+    //rETH
     token == '0xae78736Cd615f374D3085123A210448E74Fc6393' ||
     token == '0xEC70Dcb4A1EFa46b8F2D97C310C9c4790ba5ffA8'
   ) {
-    return await getYearlyAPR('1')
+    const poolDetail = stakeData.find(obj => obj.pool == 'd4b3c522-6127-4b89-bedf-83641cdcd2eb')
+    return poolDetail.apy
   } else if (
+    //sfrxETH
     token == '0xac3E018457B222d93114458476f3E3416Abbe38F' ||
-    token == '0xEe327F889d5947c1dc1934Bb208a1E792F953E96'
+    token == '0xEe327F889d5947c1dc1934Bb208a1E792F953E96' ||
+    token == '0x95aB45875cFFdba1E5f451B950bC2E42c0053f39'
   ) {
-    //HOTFIX
-    return 4.88
+    const poolDetail = stakeData.find(obj => obj.pool == '77020688-e1f9-443c-9388-e51ace15cc32')
+    return poolDetail.apy
+  } else if (
+    //cbETH
+    token == '0xBe9895146f7AF43049ca1c1AE358B0541Ea49704' ||
+    token == '0x1DEBd73E752bEaF79865Fd6446b0c970EaE7732f'
+  ) {
+    const poolDetail = stakeData.find(obj => obj.pool == '0f45d730-b279-4629-8e11-ccb5cc3038b4')
+    return poolDetail.apy
   }
 }
 

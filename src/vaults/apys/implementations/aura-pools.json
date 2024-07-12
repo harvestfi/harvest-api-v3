@@ -231,6 +231,68 @@
     "name": "steth_reth_sfrxeth"
   },
   {
+    "id": 50,
+    "lptoken": "0x2d6CeD12420a9AF5a83765a8c48Be2aFcD1A8FEb",
+    "rewardPool": "0x8FFD26d63724AEa6A4208f2704d7EbEBaA790f46",
+    "balancerPoolId": "0x2d6ced12420a9af5a83765a8c48be2afcd1a8feb000000000000000000000500",
+    "name": "cbeth_reth_wsteth_arbitrum",
+    "extras": [
+      {
+        "contract": "0x949b9f6a146Be352721BF8b096f7eb88De278B0A",
+        "token": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        "name": "ARB"
+      },
+      {
+        "contract": "0x3E7B118E768b8f2b177cc3B0b9Eb068a5b54b81b",
+        "token": "0x1509706a6c66CA549ff0cB464de88231DDBe213B",
+        "name": "AURA"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "lptoken": "0xc2598280bFeA1Fe18dFcaBD21C7165c40c6859d3",
+    "rewardPool": "0x83D37cbA332ffd53A4336Ee06f3c301B8929E684",
+    "balancerPoolId": "0xc2598280bfea1fe18dfcabd21c7165c40c6859d30000000000000000000004f3",
+    "name": "wsteth_sfrxeth_arbitrum",
+    "extras": [
+      {
+        "contract": "0x2a814785f776D0FC3c8CB5ccDa839666830F5A2a",
+        "token": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        "name": "ARB"
+      },
+      {
+        "contract": "0x5c1fD01871f6B6B79D333d3d6a7b7Ce507C167CF",
+        "token": "0x1509706a6c66CA549ff0cB464de88231DDBe213B",
+        "name": "AURA"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "lptoken": "0xd0EC47c54cA5e20aaAe4616c25C825c7f48D4069",
+    "rewardPool": "0x17F061160A167d4303d5a6D32C2AC693AC87375b",
+    "balancerPoolId": "0xd0ec47c54ca5e20aaae4616c25c825c7f48d40690000000000000000000004ef",
+    "name": "reth_weth_arbitrum",
+    "extras": [
+      {
+        "contract": "0x40e05D89ac03AbC8138161723c9546df54b37d44",
+        "token": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        "name": "ARB"
+      },
+      {
+        "contract": "0xAe1322501e7FB1956a88e1Aacf6fE5DDF7B147e9",
+        "token": "0x1509706a6c66CA549ff0cB464de88231DDBe213B",
+        "name": "AURA"
+      },
+      {
+        "contract": "0xB1074A99bDC9113B53dd1Be1926a606793F058a5",
+        "token": "0xB766039cc6DB368759C1E56B79AFfE831d0Cc507",
+        "name": "RPL"
+      }
+    ]
+  },
+  {
     "id": 55,
     "lptoken": "0xD1eC5e215E8148D76F4460e4097FD3d5ae0A3558",
     "rewardPool": "0x978653C02f2fBBDfd67CbC7f45c42262f213e0b5",
@@ -257,6 +319,25 @@
     "rewardPool": "0x2a596E721A9F1824F36c484e71f5bE80675Cca2b",
     "balancerPoolId": "0x831261f44931b7da8ba0dcc547223c60bb75b47f000200000000000000000460",
     "name": "wusdr_usdc"
+  },
+  {
+    "id": 66,
+    "lptoken": "0x90e6CB5249f5e1572afBF8A96D8A1ca6aCFFd739",
+    "rewardPool": "0x90cedFDb5284a274720f1dB339eEe9798f4fa29d",
+    "balancerPoolId": "0x90e6cb5249f5e1572afbf8a96d8a1ca6acffd73900000000000000000000055c",
+    "name": "rseth_weth_arbitrum",
+    "extras": [
+      {
+        "contract": "0x3E8Cd5bFd24CCb484aAb7AE48B5182Fbe6FF294A",
+        "token": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        "name": "ARB"
+      },
+      {
+        "contract": "0xC7F493e7796b4bDFE9C527CA8259B7e9369d1199",
+        "token": "0x1509706a6c66CA549ff0cB464de88231DDBe213B",
+        "name": "AURA"
+      }
+    ]
   },
   {
     "id": 67,
