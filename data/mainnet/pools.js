@@ -23,6 +23,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_cbETH_rETH_wstETH.PoolId}/add-liquidity`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -59,6 +60,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_rETH_wETH.PoolId}/add-liquidity`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -90,6 +92,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_rsETH_wETH.PoolId}/add-liquidity`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -126,6 +129,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.balancer.fi/#/arbitrum/pool/${addresses.ARBITRUM_ONE.V2.balancer_wstETH_sfrxETH.PoolId}/add-liquidity`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
