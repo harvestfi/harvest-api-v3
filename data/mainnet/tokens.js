@@ -110,7 +110,7 @@ module.exports = {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
-    logoUrl: ['./icons/spot.png', './icons/usdc.svg'],
+    logoUrl: ['./icons/spot.svg', './icons/usdc.svg'],
     tokenNames: ['SPOT', 'USDC'],
     platform: ['Aerodrome'],
     tags: ['Advanced'],
