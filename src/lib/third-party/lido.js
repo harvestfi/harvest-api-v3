@@ -8,23 +8,21 @@ const get7MAAPRs = networkId => {
     apiURL = LIDO_API_URLS.ETH
   }
 
-  return 6.12
-
-  // return cachedAxios
-  //   .get(apiURL)
-  //   .then(response => {
-  //     const data = get(response, `data.data.smaApr`)
-  //     if (data) {
-  //       return data
-  //     } else {
-  //       console.error(get(response, 'data.errors', response))
-  //       return null
-  //     }
-  //   })
-  //   .catch(error => {
-  //     console.error(`Lido APRs api failed:`, error)
-  //     return null
-  //   })
+  return cachedAxios
+  .get(apiURL)
+  .then(response => {
+    const data = get(response, `data.data.smaApr`)
+    if (data) {
+      return data
+    } else {
+      console.error(get(response, 'data.errors', response))
+      return null
+    }
+  })
+  .catch(error => {
+    console.error(`Lido APRs api failed:`, error)
+    return null
+  })
 }
 
 module.exports = { get7MAAPRs }
