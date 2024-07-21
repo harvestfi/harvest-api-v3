@@ -50,7 +50,7 @@ module.exports = {
     chain: CHAIN_IDS.BASE,
     logoUrl: [''],
     tokenAddress: addresses.BASE.KLIMA,
-    decimals: '18',
+    decimals: '9',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
@@ -61,7 +61,7 @@ module.exports = {
     chain: CHAIN_IDS.BASE,
     logoUrl: [''],
     tokenAddress: addresses.BASE.SPOT,
-    decimals: '18',
+    decimals: '9',
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
