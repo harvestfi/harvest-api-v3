@@ -90,6 +90,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.aerodrome_KLIMA_USDC.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.aerodrome_KLIMA_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_KLIMA_USDC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
       params: [addresses.BASE.V2.aerodrome_KLIMA_USDC.Underlying, 'KLIMA_base', 'USDC_base'],
@@ -117,6 +118,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.aerodrome_SPOT_USDC.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.aerodrome_SPOT_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_SPOT_USDC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
       params: [addresses.BASE.V2.aerodrome_SPOT_USDC.Underlying, 'SPOT_base', 'USDC_base'],
@@ -144,6 +146,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.aerodrome_KLIMA_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.aerodrome_KLIMA_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_KLIMA_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
       params: [addresses.BASE.V2.aerodrome_KLIMA_ETH.Underlying, 'KLIMA_base', 'WETH_base'],
@@ -171,6 +174,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.aerodrome_WELS_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.aerodrome_WELS_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_WELS_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
       params: [addresses.BASE.V2.aerodrome_WELS_ETH.Underlying, 'WELS_base', 'WETH_base'],

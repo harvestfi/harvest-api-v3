@@ -14,6 +14,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://aerodrome.finance/deposit?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xDCEFd8C8fCc492630B943ABcaB3429F12Ea9Fea2&type=-1`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -39,6 +40,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://aerodrome.finance/deposit?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0x8f2E6758C4D6570344bd5007DEc6301cd57590A0&type=-1`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -64,6 +66,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://aerodrome.finance/deposit?token0=0x4200000000000000000000000000000000000006&token1=0xDCEFd8C8fCc492630B943ABcaB3429F12Ea9Fea2&type=-1`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -89,6 +92,7 @@ module.exports = [
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
     rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://aerodrome.finance/deposit?token0=0x4200000000000000000000000000000000000006&token1=0x7F62ac1e974D65Fab4A81821CA6AF659A5F46298&type=-1`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
