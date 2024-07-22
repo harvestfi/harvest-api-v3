@@ -28,7 +28,7 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, reduction) => {
     methods: strategyMethods,
   } = lodestarStrategy
 
-  const RF = '0x5f7CBcb391d33988DAD74D6Fd683AadDA1123E4D'
+  const ZK = '0x5A7d6b2F92C77FAD6CCaBd7EE0624E64907Eaf3E'
   const blocksPerYear = 3600 * 24 * 365
   const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddr)
   const invested = new BigNumber(await strategyMethods.getInvestedBalance(strategyInstance))
@@ -75,7 +75,7 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, reduction) => {
     .div(10 ** (18 - underlyingDecimals))
 
   const underlyingPrice = await getTokenPrice(underlying, CHAIN_IDS.ZKSYNC)
-  const rewardPrice = await getTokenPrice(RF, CHAIN_IDS.ZKSYNC)
+  const rewardPrice = await getTokenPrice(ZK, CHAIN_IDS.ZKSYNC)
 
   const rewardAPRSupply = rewardPerYearSupply
     .times(rewardPrice)
