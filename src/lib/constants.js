@@ -137,13 +137,13 @@ const HARVEST_SUBGRAPH_URLS = {
     'https://api.studio.thegraph.com/query/48757/harvest-mainnet-test/v0.0.5',
   137:
     process.env.POLYGON_SUBGRAPH_URL ||
-    'https://api.studio.thegraph.com/query/48757/l2-polygon-test/v0.0.15',
+    'https://api.studio.thegraph.com/query/48757/l2-polygon-test/v0.0.19',
   8453:
     process.env.BASE_SUBGRAPH_URL ||
-    'https://api.studio.thegraph.com/query/48757/harvest-base/v0.0.11',
+    'https://api.studio.thegraph.com/query/48757/harvest-base/v0.0.20',
   42161:
     process.env.ARBITRUM_SUBGRAPH_URL ||
-    'https://api.studio.thegraph.com/query/48757/harvest-arbitrum/v0.0.4',
+    'https://api.studio.thegraph.com/query/48757/harvest-arbitrum/v0.0.11',
   324:
     process.env.ZKSYNC_SUBGRAPH_URL ||
     'https://api.studio.thegraph.com/query/48757/l2-zksync-era/version/latest',
