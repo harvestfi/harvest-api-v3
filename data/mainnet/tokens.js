@@ -4749,7 +4749,7 @@ module.exports = {
         params: [
           addresses.BASE.V2.moonwell_DAI.Underlying,
           addresses.BASE.V2.moonwell_DAI.mToken,
-          80,
+          0,
           profitSharingCut10Percent,
         ],
       },
