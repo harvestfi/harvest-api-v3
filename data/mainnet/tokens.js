@@ -62,7 +62,7 @@ module.exports = {
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/thusd.svg', './icons/dai.svg', './icons/usdc.svg', './icons/usdt.svg'],
-    tokenNames: ['pETH', 'DAI', 'USDC', 'USDT'],
+    tokenNames: ['thUSD', 'DAI', 'USDC', 'USDT'],
     platform: ['Convex Finance'],
     tags: ['Advanced', 'Stable'],
     tokenAddress: addresses.V2.curve_thUSD_3CRV.Underlying,
