@@ -366,5 +366,12 @@
     "rewardPool": "0xF937b186687C0B11Dc0F7AFBA3B4458c30d9CF89",
     "balancerPoolId": "0xc2b021133d1b0cf07dba696fd5dd89338428225b000000000000000000000598",
     "name": "gho_bbausd"
+  },
+  {
+    "id": 225,
+    "lptoken": "0x093254005743b7Af89e24F645730Ba2dD8441333",
+    "rewardPool": "0x3Db0d3b807CdF9d22c4691503a78582cb96D0653",
+    "balancerPoolId": "0x093254005743b7af89e24f645730ba2dd84413330002000000000000000006a4",
+    "name": "apw_eth"
   }
 ]

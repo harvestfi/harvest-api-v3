@@ -1057,5 +1057,14 @@
         "id": 182,
         "currency": "USD",
         "name": "crvusdc"
+    },
+    {
+        "lptoken": "0x91553BAD9Fbc8bD69Ff5d5678Cbf7D514d00De0b",
+        "token": " 0x0cbFD287fb2c78D4864f2bE972e632d1869A21Ce",
+        "crvRewards": "0x7E44379FF8e35D9d0f81EE232e038Ca4a0968196",
+        "swap": "0x91553BAD9Fbc8bD69Ff5d5678Cbf7D514d00De0b",
+        "id": 356,
+        "currency": "USD",
+        "name": "thusd_3crv"
     }
 ]

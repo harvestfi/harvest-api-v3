@@ -46,6 +46,72 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  thUSD: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    logoUrl: [''],
+    tokenAddress: addresses.thUSD,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['threshold-usd'],
+    },
+  },
+  curve_thUSD_3CRV: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
+    apyTokenSymbols: ['CRV', 'CVX'],
+    logoUrl: ['./icons/thusd.svg', './icons/dai.svg', './icons/usdc.svg', './icons/usdt.svg'],
+    tokenNames: ['pETH', 'DAI', 'USDC', 'USDT'],
+    platform: ['Convex Finance'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.V2.curve_thUSD_3CRV.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.curve_thUSD_3CRV.NewVault,
+    strategyAddress: addresses.V2.curve_thUSD_3CRV.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.CURVE_POOL,
+      params: [
+        addresses.V2.curve_thUSD_3CRV.Underlying,
+        addresses.V2.curve_thUSD_3CRV.Underlying,
+        '18',
+        ['thUSD', 'ThreePool'],
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.CONVEX,
+        params: ['thusd_3crv', profitSharingCut15Percent],
+      },
+    ],
+  },
+  balancer_APW_ETH: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
+    apyTokenSymbols: ['BAL', 'AURA'],
+    logoUrl: ['./icons/apw.svg', './icons/eth.svg'],
+    platform: ['Aura Finance', 'Balancer'],
+    tags: ['Advanced'],
+    tokenNames: ['APW', 'ETH'],
+    tokenAddress: addresses.V2.balancer_APW_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.balancer_APW_ETH.NewVault,
+    strategyAddress: addresses.V2.balancer_APW_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.BALANCER,
+      params: [
+        addresses.V2.balancer_APW_ETH.Underlying,
+        addresses.V2.balancer_APW_ETH.PoolId,
+        CHAIN_IDS.ETH_MAINNET,
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AURA,
+        params: ['apw_eth', profitSharingCut15Percent, CHAIN_IDS.ETH_MAINNET],
+      },
+    ],
+  },
   KLIMA_base: {
     chain: CHAIN_IDS.BASE,
     logoUrl: [''],

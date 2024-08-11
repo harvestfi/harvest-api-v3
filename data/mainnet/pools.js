@@ -5,6 +5,68 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'convex_pETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.curve_thUSD_3CRV.NewPool,
+    collateralAddress: addresses.V2.curve_thUSD_3CRV.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://curve.fi/#/ethereum/pools/factory-stable-ng-150/deposit`,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['factory-stable-ng-150'],
+    },
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.curve_thUSD_3CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.curve_thUSD_3CRV.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_thUSD_3CRV.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/ethereum/pools/factory-stable-ng-150/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'balancer_APW_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.LP,
+      params: [addresses.V2.balancer_APW_ETH.Underlying, 'balancerv2_eth'],
+    },
+    contractAddress: addresses.V2.balancer_APW_ETH.NewPool,
+    collateralAddress: addresses.V2.balancer_APW_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_APW_ETH.PoolId}/add-liquidity`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://etherscan.io/token/${addresses.V2.balancer_APW_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a> in an Aura farm, earning 
+       <a href="https://etherscan.io/token/${addresses.BAL}" target="_blank" rel="noopener noreferrer">BAL</a> & 
+       <a href="https://etherscan.io/token/${addresses.AURA}" target="_blank" rel="noopener noreferrer">AURA</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.balancer_APW_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Balancer LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.balancer_APW_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Balancer LP tokens</a> by supplying liquidity on 
+      <a href="https://app.balancer.fi/#/ethereum/pool/${addresses.V2.balancer_APW_ETH.PoolId}/add-liquidity" target="_blank" rel="noopener noreferrer">Balancer</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'aerodrome_KLIMA_USDC',
     type: POOL_TYPES.INCENTIVE,
