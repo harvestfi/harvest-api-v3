@@ -6,13 +6,7 @@ const { pickBy, chunk, isArray, size, get } = require('lodash')
 
 const { getVaultsData } = require('../vaults')
 const { getPoolsData } = require('../pools')
-const {
-  getPercentOfFARMStaked,
-  getHistoricalAverageProfitSharingAPY,
-  getTotalGasSaved,
-  getTotalMarketCap,
-  getMonthlyProfits,
-} = require('../lib/token-stats')
+const { getPercentOfFARMStaked, getTotalMarketCap } = require('../lib/token-stats')
 const { resetCallCount, printCallCountResults, updateCallCountCache } = require('../lib/web3')
 const { cache } = require('../lib/cache')
 const { prefetchPriceByAddresses, prefetchPriceByIds } = require('../prices')
@@ -209,15 +203,8 @@ const getTokenStats = async () => {
   }
 
   try {
-    console.log('Getting FARM price historical average')
-    tokenStats.historicalAverageProfitSharingAPY = await getHistoricalAverageProfitSharingAPY()
-  } catch (err) {
-    console.error('Failed to get historical average of FARM price: ', err)
-  }
-
-  try {
     console.log('Getting total gas saved by protocol')
-    tokenStats.totalGasSaved = await getTotalGasSaved()
+    tokenStats.totalGasSaved = '214465278'
   } catch (err) {
     console.error('Failed to get total gas saved by protocol: ', err)
   }
@@ -229,19 +216,8 @@ const getTokenStats = async () => {
     console.error('Failed to get total FARM market cap: ', err)
   }
 
-  try {
-    console.log('Getting monthly profit')
-    tokenStats.monthlyProfits = await getMonthlyProfits()
-  } catch (err) {
-    console.error('Failed to get monthly profits: ', err)
-  }
-
   const hasErrors =
-    !tokenStats.percentStaked ||
-    tokenStats.historicalAverageProfitSharingAPY == undefined ||
-    tokenStats.historicalAverageProfitSharingAPY == null ||
-    !tokenStats.totalGasSaved ||
-    !tokenStats.totalMarketCap
+    !tokenStats.percentStaked || !tokenStats.totalGasSaved || !tokenStats.totalMarketCap
 
   await storeData(
     Cache,

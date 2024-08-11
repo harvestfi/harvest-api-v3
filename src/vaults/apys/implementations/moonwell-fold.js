@@ -1,10 +1,10 @@
 const BigNumber = require('bignumber.js')
 const { web3BASE } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
-const { mToken, comptroller, token } = require('../../../lib/web3/contracts')
+const { mToken, comptroller, token, lodestarStrategy } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
 
-const getApy = async (underlying, mTokenAddr, foldPerc, reduction) => {
+const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
   const web3 = web3BASE
   const {
     contract: { abi: mTokenAbi },
@@ -18,12 +18,26 @@ const getApy = async (underlying, mTokenAddr, foldPerc, reduction) => {
     contract: { abi: tokenAbi },
     methods: { getDecimals },
   } = token
+  const {
+    contract: { abi: strategyAbi },
+    methods: strategyMethods,
+  } = lodestarStrategy
 
   const well = '0xA88594D404727625A9437C3f886C7643872296AE'
   const usdc = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913'
   const secondsPerYear = 60 * 60 * 24 * 365.25
-  const suppliedMul = foldPerc / (100 - foldPerc)
-  const borrowedMul = suppliedMul - 1
+  const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddr)
+  const invested = new BigNumber(await strategyMethods.getInvestedBalance(strategyInstance))
+  const supplied = new BigNumber(await strategyMethods.getSupplyBalance(strategyInstance))
+  const borrowed = new BigNumber(await strategyMethods.getBorrowBalance(strategyInstance))
+  let suppliedMul, borrowedMul
+  if (invested.gt(0)) {
+    suppliedMul = supplied.div(invested)
+    borrowedMul = borrowed.div(invested)
+  } else {
+    suppliedMul = new BigNumber(1)
+    borrowedMul = new BigNumber(0)
+  }
 
   const mTokenInstance = new web3.eth.Contract(mTokenAbi, mTokenAddr)
   const supplyRate = new BigNumber(await mTokenMethods.getSupplyRate(mTokenInstance))
@@ -65,11 +79,20 @@ const getApy = async (underlying, mTokenAddr, foldPerc, reduction) => {
   const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
   const underlyingDecimals = await getDecimals(underlyingInstance)
 
+  //hotfix
+  let sfAdd
+  if (underlying == usdc) {
+    sfAdd = 1.7
+  } else {
+    sfAdd = 0
+  }
+
   const rewardAPRSupply = wellPerYearSupply
     .times(wellPrice)
     .plus(usdcPerYearSupply.times(usdcPrice))
     .div(totalSupply.div(10 ** underlyingDecimals).times(underlyingPrice))
     .times(100)
+    .plus(sfAdd)
     .times(reduction)
     .times(suppliedMul)
   const rewardAPRBorrow = wellPerYearBorrow

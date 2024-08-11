@@ -3866,7 +3866,7 @@ module.exports = {
         params: [
           addresses.BASE.V2.moonwell_wstETH.Underlying,
           addresses.BASE.V2.moonwell_wstETH.mToken,
-          73,
+          addresses.BASE.V2.moonwell_wstETH.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -3895,7 +3895,7 @@ module.exports = {
         params: [
           addresses.BASE.V2.moonwell_rETH.Underlying,
           addresses.BASE.V2.moonwell_rETH.mToken,
-          73,
+          addresses.BASE.V2.moonwell_rETH.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -4468,7 +4468,7 @@ module.exports = {
         params: [
           addresses.BASE.V2.moonwell_USDC.Underlying,
           addresses.BASE.V2.moonwell_USDC.mToken,
-          78,
+          addresses.BASE.V2.moonwell_USDC.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -4721,7 +4721,7 @@ module.exports = {
         params: [
           addresses.BASE.V2.moonwell_CBETH.Underlying,
           addresses.BASE.V2.moonwell_CBETH.mToken,
-          74,
+          addresses.BASE.V2.moonwell_CBETH.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -4749,7 +4749,7 @@ module.exports = {
         params: [
           addresses.BASE.V2.moonwell_DAI.Underlying,
           addresses.BASE.V2.moonwell_DAI.mToken,
-          0,
+          addresses.BASE.V2.moonwell_DAI.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
@@ -4777,7 +4777,7 @@ module.exports = {
         params: [
           addresses.BASE.V2.moonwell_WETH.Underlying,
           addresses.BASE.V2.moonwell_WETH.mToken,
-          79,
+          addresses.BASE.V2.moonwell_WETH.NewStrategy,
           profitSharingCut10Percent,
         ],
       },
