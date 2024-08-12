@@ -219,7 +219,7 @@ const CURVE_API_URLS = {
   42161: 'https://prices.curve.fi/v1/chains/arbitrum',
 }
 
-const QUICKSWAP_GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/'
+const GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/'
 const MERKL_ENDPOINT = 'https://api.angle.money/v2/merkl'
 const PENDLE_ENDPOINT = 'https://api-v2.pendle.finance/core/v2/'
 
@@ -306,7 +306,7 @@ module.exports = {
   ROCKETPOOL_API_URLS,
   STAKEWISE_API_URLS,
   APE_API_URL,
-  QUICKSWAP_GAMMA_ENDPOINT,
+  GAMMA_ENDPOINT,
   MERKL_ENDPOINT,
   PENDLE_ENDPOINT,
   ARBITRUM_RPC_URL,
