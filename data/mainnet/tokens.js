@@ -187,7 +187,7 @@ module.exports = {
   uniGamma_USDC_DAI: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/dai.svg'],
-    apyIconUrls: ['./icons/wmatic.svg'],
+    apyIconUrls: ['./icons/matic.svg'],
     apyTokenSymbols: ['WMATIC'],
     subLabel: 'Stable',
     tokenNames: ['USDC', 'DAI'],
@@ -216,7 +216,7 @@ module.exports = {
   uniGamma_USDC_USDT: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
-    apyIconUrls: ['./icons/wmatic.svg'],
+    apyIconUrls: ['./icons/matic.svg'],
     apyTokenSymbols: ['WMATIC'],
     subLabel: 'Stable',
     tokenNames: ['USDC', 'USDT'],
@@ -245,7 +245,7 @@ module.exports = {
   uniGamma_ETH_USDC: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
-    apyIconUrls: ['./icons/wmatic.svg'],
+    apyIconUrls: ['./icons/matic.svg'],
     apyTokenSymbols: ['WMATIC'],
     subLabel: 'Narrow',
     tokenNames: ['ETH', 'USDC'],
@@ -273,11 +273,11 @@ module.exports = {
   },
   uniGamma_MATIC_USDC: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
-    logoUrl: ['./icons/wmatic.svg', './icons/usdc.svg'],
-    apyIconUrls: ['./icons/wmatic.svg'],
+    logoUrl: ['./icons/matic.svg', './icons/usdc.svg'],
+    apyIconUrls: ['./icons/matic.svg'],
     apyTokenSymbols: ['WMATIC'],
     subLabel: 'Narrow',
-    tokenNames: ['WMATIC', 'USDC'],
+    tokenNames: ['MATIC', 'USDC'],
     platform: ['Uniswap', 'Gamma'],
     tags: ['Advanced'],
     tokenAddress: addresses.MATIC.V2.uniGamma_MATIC_USDC.Underlying,

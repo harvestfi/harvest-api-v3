@@ -8,6 +8,10 @@ module.exports = [
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'notional_nETH',
     type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.NOTIONAL_API,
+      params: [addresses.V2.notional_nETH.Underlying],
+    },
     contractAddress: addresses.V2.notional_nETH.NewPool,
     collateralAddress: addresses.V2.notional_nETH.NewVault,
     rewardAPY: [],
@@ -33,6 +37,10 @@ module.exports = [
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'notional_nGHO',
     type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.NOTIONAL_API,
+      params: [addresses.V2.notional_nGHO.Underlying],
+    },
     contractAddress: addresses.V2.notional_nGHO.NewPool,
     collateralAddress: addresses.V2.notional_nGHO.NewVault,
     rewardAPY: [],
@@ -59,6 +67,10 @@ module.exports = [
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'notional_nUSDC',
     type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.NOTIONAL_API,
+      params: [addresses.V2.notional_nUSDC.Underlying],
+    },
     contractAddress: addresses.V2.notional_nUSDC.NewPool,
     collateralAddress: addresses.V2.notional_nUSDC.NewVault,
     rewardAPY: [],
@@ -84,6 +96,10 @@ module.exports = [
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'notional_nUSDT',
     type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.NOTIONAL_API,
+      params: [addresses.V2.notional_nUSDT.Underlying],
+    },
     contractAddress: addresses.V2.notional_nUSDT.NewPool,
     collateralAddress: addresses.V2.notional_nUSDT.NewVault,
     rewardAPY: [],
@@ -2350,8 +2366,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_PENDLE.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -3125,8 +3141,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_ARB.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -3286,8 +3302,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_ETH.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -3330,8 +3346,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_USDC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -3352,8 +3368,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_USDCe.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -3374,8 +3390,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_USDT.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -3396,8 +3412,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_WBTC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
