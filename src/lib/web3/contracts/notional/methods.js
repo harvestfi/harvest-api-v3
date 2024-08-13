@@ -9,8 +9,12 @@ const getNTokenGetClaimableIncentives = (account, blockTime, instance) =>
 const getNTokenAccount = (tokenAddress, instance) =>
   countFunctionCall(instance.methods.getNTokenAccount(tokenAddress).call())
 
+const getSecondaryIncentiveRewarder = (currencyId, instance) =>
+  countFunctionCall(instance.methods.getSecondaryIncentiveRewarder(currencyId).call())
+
 module.exports = {
   getNTokenPresentValueUnderlyingDenominated,
   getNTokenGetClaimableIncentives,
   getNTokenAccount,
+  getSecondaryIncentiveRewarder,
 }

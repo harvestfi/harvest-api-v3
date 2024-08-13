@@ -5,6 +5,107 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'notional_nETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.notional_nETH.NewPool,
+    collateralAddress: addresses.V2.notional_nETH.NewVault,
+    rewardAPY: [],
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: 'https://notional.finance/liquidity-variable/mainnet/ETH',
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.notional_nETH.Underlying}" target="_blank" rel="noopener noreferrer"> nETH </a>in a Notional farm, earning 
+       <a href="https://etherscan.io/token/${addresses.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.notional_nETH.Underlying}" target="_blank" rel="noopener noreferrer"> nETH</a>.
+      </p>
+      <p> Get
+      <a href="https://etherscan.io/token/${addresses.V2.notional_nETH.Underlying}" target="_blank" rel="noopener noreferrer"> nETH </a>by supplying liquidity on 
+      <a href="https://notional.finance/liquidity-variable/mainnet/ETH" target="_blank" rel="noopener noreferrer">NotionalV3</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'notional_nGHO',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.notional_nGHO.NewPool,
+    collateralAddress: addresses.V2.notional_nGHO.NewVault,
+    rewardAPY: [],
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: 'https://notional.finance/liquidity-variable/mainnet/GHO',
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.notional_nGHO.Underlying}" target="_blank" rel="noopener noreferrer"> nGHO </a>in a Notional farm, earning 
+       <a href="https://etherscan.io/token/${addresses.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a> & 
+       <a href="https://etherscan.io/token/${addresses.GHO}" target="_blank" rel="noopener noreferrer">GHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.notional_nGHO.Underlying}" target="_blank" rel="noopener noreferrer"> nGHO</a>.
+      </p>
+      <p> Get
+      <a href="https://etherscan.io/token/${addresses.V2.notional_nGHO.Underlying}" target="_blank" rel="noopener noreferrer"> nGHO </a>by supplying liquidity on 
+      <a href="https://notional.finance/liquidity-variable/mainnet/GHO" target="_blank" rel="noopener noreferrer">NotionalV3</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'notional_nUSDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.notional_nUSDC.NewPool,
+    collateralAddress: addresses.V2.notional_nUSDC.NewVault,
+    rewardAPY: [],
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: 'https://notional.finance/liquidity-variable/mainnet/USDC',
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.notional_nUSDC.Underlying}" target="_blank" rel="noopener noreferrer"> nUSDC </a>in a Notional farm, earning 
+       <a href="https://etherscan.io/token/${addresses.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.notional_nUSDC.Underlying}" target="_blank" rel="noopener noreferrer"> nUSDC</a>.
+      </p>
+      <p> Get
+      <a href="https://etherscan.io/token/${addresses.V2.notional_nUSDC.Underlying}" target="_blank" rel="noopener noreferrer"> nUSDC </a>by supplying liquidity on 
+      <a href="https://notional.finance/liquidity-variable/mainnet/USDC" target="_blank" rel="noopener noreferrer">NotionalV3</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'notional_nUSDT',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.notional_nUSDT.NewPool,
+    collateralAddress: addresses.V2.notional_nUSDT.NewVault,
+    rewardAPY: [],
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: 'https://notional.finance/liquidity-variable/mainnet/USDT',
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.notional_nUSDT.Underlying}" target="_blank" rel="noopener noreferrer"> nUSDT </a>in a Notional farm, earning 
+       <a href="https://etherscan.io/token/${addresses.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.notional_nUSDT.Underlying}" target="_blank" rel="noopener noreferrer"> nUSDT</a>.
+      </p>
+      <p> Get
+      <a href="https://etherscan.io/token/${addresses.V2.notional_nUSDT.Underlying}" target="_blank" rel="noopener noreferrer"> nUSDT </a>by supplying liquidity on 
+      <a href="https://notional.finance/liquidity-variable/mainnet/USDT" target="_blank" rel="noopener noreferrer">NotionalV3</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'uniGamma_USDC_DAI',
     type: POOL_TYPES.INCENTIVE,
@@ -22,7 +123,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_USDC_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_USDC_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Uniswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_USDC_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
@@ -52,7 +153,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Uniswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
@@ -82,7 +183,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Uniswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
@@ -112,7 +213,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_MATIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_MATIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Uniswap farm, earning 
        <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_MATIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.

@@ -1,5 +1,10 @@
-[
-    {
+{
+    "address": {
+        "ropsten": "",
+        "mainnet": "0x6e7058c91F85E0F6db4fc9da2CA41241f5e4263f"
+      },
+      "abi": [
+        {
         "anonymous": false,
         "inputs": [
             {
@@ -4469,4 +4474,5 @@
         "stateMutability": "nonpayable",
         "type": "function"
     }
-]
+    ]
+}
