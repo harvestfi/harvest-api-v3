@@ -811,6 +811,34 @@
         "NewStrategy": "0x005B8C667E0dBD3b431Cb86637a6A1E246E65d62",
         "NewPool": "0xed46340201117AD801E7F95691a02B3128453D9A",
         "PoolAddress": "0xAC4494e30a85369e332BDB5230d6d694d4259DbC"
+      },
+      "uniGamma_USDC_DAI": {
+        "Underlying": "0x831231E16D95Eb3D54Bf2C80968F35A5F4483447",
+        "NewVault": "0x6B5a1D71CE55E00b3a11a9e81a6977c6a63dfFbc",
+        "NewStrategy": "0x935B15f04235C0be2B4b255A788304f7D546A111",
+        "NewPool": "0xBF6Fdc3399A17cE14C95f0530ab19606C980De15",
+        "StakingRewards": "0xf45c2Cb5E8145E820365618188E54F869A92B7Cb"
+      },
+      "uniGamma_USDC_USDT": {
+        "Underlying": "0x8c6FE430cf06e56BE7c092AD3A249BF0BcB388B9",
+        "NewVault": "0x01D67BC5B622246c1A049f44eE4Fb985A86ba932",
+        "NewStrategy": "0xDc6ce0C93692472Df6da1768352Bf0EC5078708e",
+        "NewPool": "0x806C444f4534a28d1dAd8A9Fb9D6E32Ba1bBee48",
+        "StakingRewards": "0xABc34b7cBE6e850694A1D8cE7C5FE88e2f1E7097"
+      },
+      "uniGamma_ETH_USDC": {
+        "Underlying": "0x1Fd452156b12FB5D74680C5Ff166303E6dd12A78",
+        "NewVault": "0x04282484B91ce0c77cB79270E087bEAD3b94d8d7",
+        "NewStrategy": "0xD939dfB9c0EFfa53d3602b032B02254A512744BB",
+        "NewPool": "0xeAAc9b4a81030C4362fB29deBe2B6a8c1ee4bD1a",
+        "StakingRewards": "0x4215bc71b52ef6D0D31046d66eE0eD9A84744Eb6"
+      },
+      "uniGamma_MATIC_USDC": {
+        "Underlying": "0xE583b04b9a8F576aa7F17ECc6eB662499B5A8793",
+        "NewVault": "0x31993DECbd9C7bf87C96dA85ff8c1C3746deCcbb",
+        "NewStrategy": "0x8FA0011008CDbFE9394f0BAb42bFa5767c1e9a47",
+        "NewPool": "0xA9EAA8d7474669b46740267d69a913BF8274c09D",
+        "StakingRewards": "0x144Dc3396976Aa0955Ca6Ee1aC4a2f9842198BA0"
       }
     }
   },

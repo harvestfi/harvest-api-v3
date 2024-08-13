@@ -172,6 +172,9 @@ const hopRewardsContract = require('../contracts/hop-rewards/contract.json')
 const hopSwapMethods = require('../contracts/hop-swap/methods')
 const hopSwapContract = require('../contracts/hop-swap/contract.json')
 
+const gammaStakingRewardsMethods = require('../contracts/gamma-stakingrewards/methods')
+const gammaStakingRewardsContract = require('../contracts/gamma-stakingrewards/contract.json')
+
 module.exports = {
   hopSwap: {
     methods: hopSwapMethods,
@@ -404,5 +407,9 @@ module.exports = {
   radpieMaster: {
     contract: radpieMasterContract,
     methods: radpieMasterMethods,
+  },
+  gammaStakingRewards: {
+    contract: gammaStakingRewardsContract,
+    methods: gammaStakingRewardsMethods,
   },
 }

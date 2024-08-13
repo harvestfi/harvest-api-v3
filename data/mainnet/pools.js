@@ -5,6 +5,126 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'uniGamma_USDC_DAI',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.UNISWAP_GAMMA_API,
+      params: [addresses.MATIC.V2.uniGamma_USDC_DAI.Underlying],
+    },
+    contractAddress: addresses.MATIC.V2.uniGamma_USDC_DAI.NewPool,
+    collateralAddress: addresses.MATIC.V2.uniGamma_USDC_DAI.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: 'https://app.gamma.xyz/vault/uni/polygon/details/usdc-dai-100-stable',
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_USDC_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_USDC_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_USDC_DAI.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://app.gamma.xyz/vault/uni/polygon/details/usdc-dai-100-stable" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'uniGamma_USDC_USDT',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.UNISWAP_GAMMA_API,
+      params: [addresses.MATIC.V2.uniGamma_USDC_USDT.Underlying],
+    },
+    contractAddress: addresses.MATIC.V2.uniGamma_USDC_USDT.NewPool,
+    collateralAddress: addresses.MATIC.V2.uniGamma_USDC_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: 'https://app.gamma.xyz/vault/uni/polygon/details/usdc-usdt-100-stable',
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_USDC_USDT.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://app.gamma.xyz/vault/uni/polygon/details/usdc-usdt-100-stable" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'uniGamma_ETH_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.UNISWAP_GAMMA_API,
+      params: [addresses.MATIC.V2.uniGamma_ETH_USDC.Underlying],
+    },
+    contractAddress: addresses.MATIC.V2.uniGamma_ETH_USDC.NewPool,
+    collateralAddress: addresses.MATIC.V2.uniGamma_ETH_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: 'https://app.gamma.xyz/vault/uni/polygon/details/usdc-weth-500-narrow',
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://app.gamma.xyz/vault/uni/polygon/details/usdc-weth-500-narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'uniGamma_MATIC_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.UNISWAP_GAMMA_API,
+      params: [addresses.MATIC.V2.uniGamma_MATIC_USDC.Underlying],
+    },
+    contractAddress: addresses.MATIC.V2.uniGamma_MATIC_USDC.NewPool,
+    collateralAddress: addresses.MATIC.V2.uniGamma_MATIC_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: 'https://app.gamma.xyz/vault/uni/polygon/details/wmatic-usdc-500-narrow',
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_MATIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens </a>in a Quickswap farm, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">WMATIC</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_MATIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Gamma LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://polygonscan.com/token/${addresses.MATIC.V2.uniGamma_MATIC_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Gamma LP tokens</a> by supplying liquidity on 
+      <a href="https://app.gamma.xyz/vault/uni/polygon/details/wmatic-usdc-500-narrow" target="_blank" rel="noopener noreferrer">Gamma</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'convex_pETH',
     type: POOL_TYPES.INCENTIVE,
