@@ -175,7 +175,21 @@ const hopSwapContract = require('../contracts/hop-swap/contract.json')
 const gammaStakingRewardsMethods = require('../contracts/gamma-stakingrewards/methods')
 const gammaStakingRewardsContract = require('../contracts/gamma-stakingrewards/contract.json')
 
+const aaveRewardsMethods = require('../contracts/aave-rewards/methods')
+const aaveRewardsContract = require('../contracts/aave-rewards/contract.json')
+
+const aTokenMethods = require('../contracts/atoken/methods')
+const aTokenContract = require('../contracts/atoken/contract.json')
+
 module.exports = {
+  aaveRewards: {
+    methods: aaveRewardsMethods,
+    contract: aaveRewardsContract,
+  },
+  aToken: {
+    methods: aTokenMethods,
+    contract: aTokenContract,
+  },
   hopSwap: {
     methods: hopSwapMethods,
     contract: hopSwapContract,
