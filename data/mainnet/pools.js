@@ -599,7 +599,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_GHO.Underlying}" target="_blank" rel="noopener noreferrer"> GHO </a>to Aave V3, where it is earning auto-compounding interest.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_GHO.Underlying}" target="_blank" rel="noopener noreferrer"> GHO </a>to Aave V3, where it is earning auto-compounding interest & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_GHO.Underlying}" target="_blank" rel="noopener noreferrer"> GHO</a>.
       </p>
     </div>
    `,

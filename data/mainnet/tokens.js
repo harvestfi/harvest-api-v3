@@ -685,8 +685,8 @@ module.exports = {
   },
   aave_GHO_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/aave.svg'],
-    apyTokenSymbols: ['AAVE'],
+    apyIconUrls: ['./icons/arb.svg', './icons/aave.svg'],
+    apyTokenSymbols: ['ARB', 'AAVE'],
     logoUrl: ['./icons/gho.svg'],
     tokenNames: ['GHO'],
     platform: ['Aave'],
