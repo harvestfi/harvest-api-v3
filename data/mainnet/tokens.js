@@ -46,6 +46,61 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  moonwell_weETH: {
+    inactive: true,
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/well.svg'],
+    apyTokenSymbols: ['WELL'],
+    logoUrl: ['./icons/weeth.svg'],
+    tokenNames: ['weETH'],
+    platform: ['Moonwell'],
+    tags: ['Beginner', 'LSD'],
+    tokenAddress: addresses.BASE.V2.moonwell_weETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.moonwell_weETH.NewVault,
+    strategyAddress: addresses.BASE.V2.moonwell_weETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['wrapped-eeth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MOONWELL_SUPPLY,
+        params: [
+          addresses.BASE.V2.moonwell_wstETH.Underlying,
+          addresses.BASE.V2.moonwell_wstETH.mToken,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  moonwell_AERO: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/well.svg'],
+    apyTokenSymbols: ['WELL'],
+    logoUrl: ['./icons/aero.svg'],
+    tokenNames: ['AERO'],
+    platform: ['Moonwell'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.BASE.V2.moonwell_AERO.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.moonwell_AERO.NewVault,
+    strategyAddress: addresses.BASE.V2.moonwell_AERO.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['aerodrome-finance'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MOONWELL_SUPPLY,
+        params: [
+          addresses.BASE.V2.moonwell_AERO.Underlying,
+          addresses.BASE.V2.moonwell_AERO.mToken,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
   NOTE: {
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: [''],
@@ -5433,8 +5488,8 @@ module.exports = {
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
-      type: GET_PRICE_TYPES.AERODROME_PAIR,
-      params: [addresses.BASE.AERO, addresses.BASE.USDC],
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['aerodrome-finance'],
     },
   },
   aerodrome_AERO_USDC: {
