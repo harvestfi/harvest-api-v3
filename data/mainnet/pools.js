@@ -3165,8 +3165,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_LODE.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault stakes 
@@ -3252,8 +3252,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_wstETH.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
@@ -5012,8 +5012,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.camelot_iFARM_ETH.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB', 'fxGRAIL'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault deposits 
@@ -5040,8 +5040,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.xGRAIL.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault allocates 
