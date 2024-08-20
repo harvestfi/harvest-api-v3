@@ -978,6 +978,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['curve-dao-token'] },
   },
   curve_ETHp_WETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/rsr.svg', './icons/arb.svg'],
     apyTokenSymbols: ['RSR', 'ARB'],
@@ -1083,6 +1084,7 @@ module.exports = {
     ],
   },
   curve_KNOX_eUSD: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/rsr.svg', './icons/arb.svg'],
     apyTokenSymbols: ['RSR', 'ARB'],
@@ -2388,6 +2390,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV', 'ARB'],
   },
   curve_crvUSD_USDC_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/arb.svg'],
     apyTokenSymbols: ['CRV', 'ARB'],
@@ -2423,6 +2426,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV', 'ARB'],
   },
   curve_crvUSD_USDCe: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/arb.svg'],
     apyTokenSymbols: ['CRV', 'ARB'],
@@ -2458,6 +2462,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV', 'ARB'],
   },
   curve_crvUSD_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/arb.svg'],
     apyTokenSymbols: ['CRV', 'ARB'],
@@ -2493,6 +2498,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV', 'ARB'],
   },
   curve_crvUSD_WBTC_WETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/arb.svg'],
     apyTokenSymbols: ['CRV', 'ARB'],
@@ -2574,6 +2580,7 @@ module.exports = {
     },
   },
   curve_USDCe_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/arb.svg'],
     apyTokenSymbols: ['CRV', 'ARB'],
@@ -6132,6 +6139,7 @@ module.exports = {
     },
   },
   camelot_GENE_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/gene.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/gnome.svg', './icons/arb.svg'],
@@ -6165,6 +6173,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GNOME'],
   },
   camelot_GNOME_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/gnome.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/gene.svg'],
