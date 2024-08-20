@@ -5,6 +5,36 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'curve_dlcBTC_WBTC',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CURVE_API,
+      params: [addresses.ARBITRUM_ONE.V2.curve_dlcBTC_WBTC.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.curve_dlcBTC_WBTC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.curve_dlcBTC_WBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://curve.fi/#/arbitrum/pools/factory-stable-ng-49/deposit`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_dlcBTC_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.dlcBTC}" target="_blank" rel="noopener noreferrer">dlcBTC</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_dlcBTC_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_dlcBTC_WBTC.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/#/arbitrum/pools/factory-stable-ng-49/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'moonwell_weETH',
     type: POOL_TYPES.INCENTIVE,
@@ -285,7 +315,7 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'convex_pETH',
+    id: 'curve_thUSD_3CRV',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.curve_thUSD_3CRV.NewPool,
     collateralAddress: addresses.V2.curve_thUSD_3CRV.NewVault,

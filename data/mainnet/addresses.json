@@ -946,6 +946,7 @@
     "USDTplus": "0xb1084db8D3C05CEbd5FA9335dF95EE4b8a0edc30",
     "OVN": "0xa3d1a8deb97b111454b294e2324efad13a9d8396",
     "CBETH": "0x1DEBd73E752bEaF79865Fd6446b0c970EaE7732f",
+    "dlcBTC": "0x050C24dBf1eEc17babE5fc585F06116A259CC77A",
     "V2": {
       "iPoison": {
         "Underlying": "0xDA016d31f2B52C73D7c1956E955ae8A507b305bB",
@@ -1753,6 +1754,13 @@
         "NewStrategy": "0x30350413FB6d31371bd21B66349802339d84b883",
         "NewPool": "0xFb040147A640ADaC2229a9AcC58eFA020cED4899",
         "PoolId": "0xc2598280bfea1fe18dfcabd21c7165c40c6859d30000000000000000000004f3"
+      },
+      "curve_dlcBTC_WBTC": {
+        "Underlying": "0xe957cE03cCdd88f02ed8b05C9a3A28ABEf38514A",
+        "NewVault": "0x493Aa6240130eD92E2B81FCFBFee500B924Ca296",
+        "NewStrategy": "0x557Ac11511b3F826582Cce1FC63a86773A1AE6ca",
+        "NewPool": "0x1e13861122B7fc524502E7Bf4fCDAa51c4f69c4F",
+        "Gauge": "0x02b8e750E68cb648dB2c2ac4BBb47A10A5c12588"
       }
     }
   },

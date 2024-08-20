@@ -1,7 +1,7 @@
 const BigNumber = require('bignumber.js')
 const { getWeb3 } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
-const { crvGauge, crvChildGauge } = require('../../../lib/web3/contracts')
+const { crvGauge, crvChildGauge, token: tokenContract } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
 
 const getApy = async (tokenSymbol, gaugeAddress, factor, chainId, strategy = null) => {
@@ -17,6 +17,10 @@ const getApy = async (tokenSymbol, gaugeAddress, factor, chainId, strategy = nul
     contract: { abi: childAbi },
     methods: childMethods,
   } = crvChildGauge
+  const {
+    contract: { abi: tokenAbi },
+    methods: { getDecimals },
+  } = tokenContract
 
   if (chainId == CHAIN_IDS.BASE || chainId == CHAIN_IDS.ARBITRUM_ONE) {
     gaugeAbi = childAbi
@@ -67,11 +71,16 @@ const getApy = async (tokenSymbol, gaugeAddress, factor, chainId, strategy = nul
     for (let i = 0; i < rewardTokens.length; i++) {
       const rewardToken = rewardTokens[i]
       if (rewardToken !== ZeroAddress) {
+        const tokenInstance = new web3.eth.Contract(tokenAbi, rewardToken)
+        const decimals = await getDecimals(tokenInstance)
+
         const rewardTokenMeta = await gaugeMethods.getRewardData(rewardToken, gaugeInstance)
         if (Date.now() / 1000 > parseInt(rewardTokenMeta.period_finish)) {
           continue
         }
-        const inflationRate = new BigNumber(rewardTokenMeta.rate).dividedBy(new BigNumber(1e18))
+        const inflationRate = new BigNumber(rewardTokenMeta.rate).dividedBy(
+          new BigNumber(10 ** decimals),
+        )
         const tokenPerWeek = inflationRate.times(7).times(86400)
         const shareForOneLpt = new BigNumber(1).dividedBy(totalSupply).plus(1)
         const rewardPerWeek = shareForOneLpt.times(tokenPerWeek)
