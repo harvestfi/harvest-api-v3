@@ -942,7 +942,7 @@ const runUpdateLoop = async () => {
     resetCallCount()
   }
 
-  await getPools()
+  // await getPools()
   await getVaults()
 
   if (ACTIVE_ENDPOINTS === ENDPOINT_TYPES.ALL || ACTIVE_ENDPOINTS === ENDPOINT_TYPES.EXTERNAL) {
