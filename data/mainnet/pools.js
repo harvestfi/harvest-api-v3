@@ -4644,10 +4644,10 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.BASE,
-    id: 'aerodrome_DOLA_USDC',
+    id: 'aerodrome_DOLA_USDbC',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.BASE.V2.aerodrome_DOLA_USDC.NewPool,
-    collateralAddress: addresses.BASE.V2.aerodrome_DOLA_USDC.NewVault,
+    contractAddress: addresses.BASE.V2.aerodrome_DOLA_USDbC.NewPool,
+    collateralAddress: addresses.BASE.V2.aerodrome_DOLA_USDbC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
@@ -4655,13 +4655,13 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DOLA_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DOLA_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_DOLA_USDbC.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
       <a href="https://aerodrome.finance/deposit?token0=0x4621b7a9c75199271f773ebd9a499dbd165c3191&token1=0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca&stable=true" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
       </p>
     </div>
