@@ -127,8 +127,8 @@ const COMPOUND_CTOKEN_API_URL = 'https://api.compound.finance/api/v2/ctoken'
 const APY_VISION_API_URL = 'https://stats.apy.vision/api/v1'
 
 const CONVEX_API_URLS = {
-  137: 'https://www.convexfinance.com/api/curve-polygon-apys',
-  42161: 'https://www.convexfinance.com/api/curve-arbitrum-apys',
+  137: 'https://curve.convexfinance.com/api/curve-polygon-apys',
+  42161: 'https://curve.convexfinance.com/api/curve-arbitrum-apys',
 }
 
 const HARVEST_SUBGRAPH_URLS = {

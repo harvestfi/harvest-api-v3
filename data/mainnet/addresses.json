@@ -544,13 +544,6 @@
       ],
       "doHardwork": false
     },
-    "notional_WBTC": {
-      "Underlying": "0x0Ace2DC3995aCD739aE5e0599E71A5524b93b886",
-      "NewVault": "0xf0edB7568fdF1F617e15f2F1a2B9696258D38547",
-      "NewStrategy": "0x2D01D09276E57a0f38B64C5f75F5ea00b59a9AEB",
-      "NewPool": "0x4C7b528E249544442F88745ecC9Df82031Ad8DDF",
-      "doHardwork": false
-    },
     "convex_pETH": {
       "Underlying": "0x9848482da3Ee3076165ce6497eDA906E66bB85C5",
       "NewVault": "0x4CF4f433e359a343648c480b2f3952FD64616a9a",

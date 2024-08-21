@@ -5846,26 +5846,6 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'notional_WBTC',
-    type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.notional_WBTC.NewPool,
-    collateralAddress: addresses.V2.notional_WBTC.NewVault,
-    rewardAPY: [],
-    rewardTokens: [addresses.iFARM],
-    rewardTokenSymbols: ['iFARM'],
-    stakeAndDepositHelpMessage: `
-    <div class="help-message">
-      <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.notional_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> nWBTC </a>in a Notional farm, earning 
-       <a href="https://etherscan.io/token/${addresses.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a>.
-       At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.notional_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> nWBTC</a>.
-      </p>
-    </div>
-   `,
-  },
-  {
-    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'convex_cvxCRV',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.convex_cvxCRV.NewPool,

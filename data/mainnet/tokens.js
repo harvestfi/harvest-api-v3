@@ -8093,29 +8093,6 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
-  notional_WBTC: {
-    inactive: true,
-    chain: CHAIN_IDS.ETH_MAINNET,
-    logoUrl: ['./icons/wbtc.svg'],
-    apyIconUrls: [],
-    apyTokenSymbols: [],
-    tokenNames: ['nWBTC'],
-    platform: ['Notional'],
-    tokenAddress: addresses.V2.notional_WBTC.Underlying,
-    decimals: '8',
-    vaultAddress: addresses.V2.notional_WBTC.NewVault,
-    priceFunction: {
-      type: GET_PRICE_TYPES.NOTIONAL,
-      params: [4, addresses.V2.notional_WBTC.Underlying, addresses.WBTC],
-    },
-    estimateApyFunctions: [
-      {
-        type: ESTIMATED_APY_TYPES.NOTIONAL,
-        params: [4, addresses.NOTE, addresses.V2.notional_WBTC.Underlying, addresses.WBTC, '0.7'],
-      },
-    ],
-    cmcRewardTokenSymbols: ['iFARM', 'NOTE'],
-  },
   convex_cvxCRV: {
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg', './icons/3crv.svg'],
@@ -8266,6 +8243,7 @@ module.exports = {
     },
   },
   SUSHI_GENE_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/gene.svg', './icons/eth.svg'],
     apyIconUrls: [],
@@ -8289,6 +8267,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['miFARM', 'pGNOME'],
   },
   SUSHI_GNOME_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/gnome.svg', './icons/eth.svg'],
     apyIconUrls: [],
