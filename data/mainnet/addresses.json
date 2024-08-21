@@ -1828,6 +1828,19 @@
     "KLIMA": "0xDCEFd8C8fCc492630B943ABcaB3429F12Ea9Fea2",
     "SPOT": "0x8f2E6758C4D6570344bd5007DEc6301cd57590A0",
     "WELS": "0x7F62ac1e974D65Fab4A81821CA6AF659A5F46298",
+    "eUSD": "0xCfA3Ef56d303AE4fAabA0592388F19d7C3399FB4",
+    "ezETH": "0x2416092f143378750bb29b79eD961ab195CcEea5",
+    "jEUR": "0x4154550f4Db74Dc38d1FE98e1F3F28ed6daD627d",
+    "agEUR": "0xA61BeB4A3d02decb01039e378237032B351125B4",
+    "msETH": "0x7Ba6F01772924a82D9626c126347A28299E98c98",
+    "msUSD": "0x526728DBc96689597F85ae4cd716d4f7fCcBAE9d",
+    "USDC_plus": "0x85483696Cc9970Ad9EdD786b2C5ef735F38D156f",
+    "USDz": "0x04D5ddf5f3a8939889F11E97f8c4BB48317F1938",
+    "agUSD": "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
+    "EURC": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
+    "GHST": "0xcD2F22236DD9Dfe2356D7C543161D4d260FD9BcB",
+    "hyUSD": "0xCc7FF230365bD730eE4B352cC2492CEdAC49383e",
+    "wrsETH": "0xEDfa23602D0EC14714057867A78d01e94176BEA0",
     "V2": {
       "baseswap_BSWAP_ETH": {
         "Underlying": "0xE80B4F755417FB4baF4dbd23C029db3F62786523",
@@ -2010,7 +2023,7 @@
         "NewPool": "0xe3F359b47dFb4431487336b6Fe595608607794D8",
         "Gauge": "0x87803Cb321624921cedaAD4555F07Daa0D1Ed325"
       },
-      "aerodrome_DOLA_USDC": {
+      "aerodrome_DOLA_USDbC": {
         "Underlying": "0x0B25c51637c43decd6CC1C1e3da4518D54ddb528",
         "NewVault": "0x202d29a1749aA6F7D06d3982082133EBd83F45c5",
         "NewStrategy": "0x64Ff0f8fadFD73c62C83e1468E3A834e61B5345E",
@@ -2257,6 +2270,111 @@
         "NewStrategy": "0xa741Fc8d10FA920b652752A676dc29790B3c71A2",
         "NewPool": "0x6D589a822938695fCE4E6F57ee9734f6D3099149",
         "mToken": "0x73902f619CEB9B31FD8EFecf435CbDf89E369Ba6"
+      },
+      "aerodrome_DOLA_USDC": {
+        "Underlying": "0xf213F2D02837012dC0236cC105061e121bB03e37",
+        "NewVault": "0x5Ff62fb3fC1dFBcC5Bd01593d811192E3b8050e3",
+        "NewStrategy": "0xB81710B590D978Ef216e436522ec2a1A8395dbb3",
+        "NewPool": "0xB722503E3762419e8aaC478A760217a2D57fa4a5",
+        "Gauge": "0xCCff5627cd544b4cBb7d048139C1A6b6Bde67885"
+      },
+      "aerodrome_eUSD_USDC": {
+        "Underlying": "0x7A034374C89C463DD65D8C9BCfe63BcBCED41f4F",
+        "NewVault": "0x3fc209BE1a9b34Fb8041c052F400308c21aaB7f0",
+        "NewStrategy": "0x5647dD722ba855dB11e492c72c0Dd8C3764720e7",
+        "NewPool": "0x53824D52e80CB8d1689436F0817e133713F7975A",
+        "Gauge": "0x793F22aB88dC91793E5Ce6ADbd7E733B0BD4733e"
+      },
+      "aerodrome_ezETH_ETH": {
+        "Underlying": "0x497139e8435E01555AC1e3740fccab7AFf149e02",
+        "NewVault": "0xfb226468841B600B017f6C7577F716f302627e50",
+        "NewStrategy": "0xD029078F3F7526461F2369005f7822f35A48d25A",
+        "NewPool": "0x87134Df2508c54Be232b15DbbFf9fa30FC7e97E7",
+        "Gauge": "0x4Fa58b3Bec8cE12014c7775a0B3da7e6AdC3c7eA"
+      },
+      "aerodrome_jEUR_EURA": {
+        "Underlying": "0xe7e01f38470136dE763d22e534e53C8BCdbA3f39",
+        "NewVault": "0x675f9bE9Bf89F50aF0b05F775b977C64Ab048366",
+        "NewStrategy": "0x521015516993dc31B69aEc1F81BdC828A5bf824c",
+        "NewPool": "0x39Df1272Be0C0Bc9d3a36a8F0bE075aEad4a2d67",
+        "Gauge": "0xb5FFE35051b62DfE687aaB959625a29bEd54575a"
+      },
+      "aerodrome_msETH_ETH": {
+        "Underlying": "0xDE4FB30cCC2f1210FcE2c8aD66410C586C8D1f9A",
+        "NewVault": "0x4600c5C9E582B6616A08DE974eb4e37e40a55CA4",
+        "NewStrategy": "0x346107EE0adC21Fc9b08518980B100a74a49176D",
+        "NewPool": "0x3D6651A8D9bB47a7829469cCC0195c021f2F74AD",
+        "Gauge": "0x62940D9643a130b80CA0f8bc7e94De5b7ec496C5"
+      },
+      "aerodrome_msUSD_USDC": {
+        "Underlying": "0xcEFC8B799a8EE5D9b312aeca73262645D664AaF7",
+        "NewVault": "0x4DA07a07F40f877A587ACfcDbb0c84c73Fdf2E92",
+        "NewStrategy": "0x01a16E749Fb98449931C2Dce863Ff853cE5119f6",
+        "NewPool": "0x63f6a5eD3e3a68D2Efa17dca592c650cDCA1ad82",
+        "Gauge": "0xDBF852464fC906C744E52Dbd68C1b07dD33A922a"
+      },
+      "aerodrome_rETH_ETH": {
+        "Underlying": "0xb8866732424AcDdd729C6fcf7146b19bFE4A2e36",
+        "NewVault": "0x5dE9f6c9D380A54DBd563087cEAC1F1fE75ec33d",
+        "NewStrategy": "0xd7e3eA1eE980424eB8308bB401a63FEEB56B8172",
+        "NewPool": "0x974848036BE964e2828F8866A90a257f18f380Ea",
+        "Gauge": "0xAa3D51d36BfE7C5C63299AF71bc19988BdBa0A06"
+      },
+      "aerodrome_USDp_USDCp": {
+        "Underlying": "0xE96c788E66a97Cf455f46C5b27786191fD3bC50B",
+        "NewVault": "0x850644533EB53564D5eC782be322e9483Ccd8330",
+        "NewStrategy": "0xaE7Ba8dA0B5212cC1f3dFaDA767a40aB376b4493",
+        "NewPool": "0x51d27366F1a607D881667eD9cAD9074c58188a4d",
+        "Gauge": "0x526b3D92fF55263dd24E3e14ccD0f5c2Dab81d3b"
+      },
+      "aerodrome_USDz_USDC": {
+        "Underlying": "0x6d0b9C9E92a3De30081563c3657B5258b3fFa38B",
+        "NewVault": "0x572298Ce8AA759BB3Fc4B59b9b95793c19879725",
+        "NewStrategy": "0xd0341B1c535Bc7E5681E4Fa00741D9C19919764c",
+        "NewPool": "0x79E3a27B5EA009893B1D3091F66D3DbB295b6906",
+        "Gauge": "0xb7E4bBee04285F4B55d0A93b34E5dA95C3a7faf9"
+      },
+      "aerodrome_EURA_USDA": {
+        "Underlying": "0x79eF3eCDa775860a2351ae2A7B80C4d80ba47F72",
+        "NewVault": "0xfA1e64C5D0179e0922C96d6Ab767a99e712955dC",
+        "NewStrategy": "0x97958928D22086282078f4657CDE2E58EbBA9257",
+        "NewPool": "0x81555B850A6cB428c951b2c4bAd4Dc80924B5668",
+        "Gauge": "0x3fd91fAC3Ccc67d818A6E17e7296A82Ba7a4aCAa"
+      },
+      "aerodrome_EURC_USDC": {
+        "Underlying": "0xFDF5139b38525627B47538536042A7c8d2686BD9",
+        "NewVault": "0x8C416c39dd02aD77706c027be41376658a74dEef",
+        "NewStrategy": "0xEd8D9cD46B59c83D91de568612ceC5F99Fa4b9c7",
+        "NewPool": "0x8b8434DCC1580643eA2a5AA7C93874Fb4C7966e6",
+        "Gauge": "0x1f077baf21b95314bD251b21aD1f0Cc8D5D86781"
+      },
+      "aerodrome_GHST_ETH": {
+        "Underlying": "0x0DFb9Cb66A18468850d6216fCc691aa20ad1e091",
+        "NewVault": "0x17EA450e2BA22810EE671F7eCd0967c66F7Ed9aa",
+        "NewStrategy": "0x932832021C89610548C933d90c15B2a0885F85eb",
+        "NewPool": "0x125dB2bf00FC94933275c98423AB10cc12d21005",
+        "Gauge": "0xe3800a58B5535935850a10e082952Ec3577D8DCc"
+      },
+      "aerodrome_hyUSD_eUSD": {
+        "Underlying": "0xb5E331615FdbA7DF49e05CdEACEb14Acdd5091c3",
+        "NewVault": "0x697FD31bB7525E4Fa11587197cFd1A23C7151FD2",
+        "NewStrategy": "0xA7D5872590f54e921CaBcB36Aaae40d9640e9e90",
+        "NewPool": "0x99eB22C998CB2d94C7b4b11c3d8B881ceE27670E",
+        "Gauge": "0x025137c819298654162de2609f407514De4bb027"
+      },
+      "aerodrome_weETH_ETH": {
+        "Underlying": "0x91F0f34916Ca4E2cCe120116774b0e4fA0cdcaA8",
+        "NewVault": "0xbC7E512A4074748e1573f98626900bD476fDDB60",
+        "NewStrategy": "0x2015e5889e34C8D6109c485Cd59636D755E15241",
+        "NewPool": "0xd497E1E77A6f4ee274Ae7993c8b7aB9bf2643178",
+        "Gauge": "0xf8d47b641eD9DF1c924C0F7A6deEEA2803b9CfeF"
+      },
+      "aerodrome_wrsETH_ETH": {
+        "Underlying": "0xA24382874A6FD59de45BbccFa160488647514c28",
+        "NewVault": "0x9e74129F7b69868022cCd202a82509eFB3F199b9",
+        "NewStrategy": "0xb107e65Bf36E3F0bf87f28403fB546058aad8cb9",
+        "NewPool": "0x0177ae95C14f1b7710e28ED5faE7C7bc6174F5F1",
+        "Gauge": "0x2da7789a6371F550caF9054694F5A5A6682903f9"
       }
     }
   },

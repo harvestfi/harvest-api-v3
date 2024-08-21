@@ -8,7 +8,7 @@ const addresses = require('../../../data/mainnet/addresses.json')
 
 const getPrice = async (
   inTokenAddress,
-  outTokenAddress = addresses.BASE.USDC,
+  outTokenAddress = addresses.BASE.USDC_bridged,
   outTokenDecimals = 6,
   useStable = false,
 ) => {

@@ -46,6 +46,542 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  eUSD_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/eusd.svg'],
+    tokenAddress: addresses.BASE.eUSD,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['electronic-usd'] },
+  },
+  ezETH_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/ezeth.svg'],
+    tokenAddress: addresses.BASE.ezETH,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['renzo-restaked-eth'] },
+  },
+  jEUR_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/jeur.svg'],
+    tokenAddress: addresses.BASE.jEUR,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['jarvis-synthetic-euro'] },
+  },
+  agEUR_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/ageur.svg'],
+    tokenAddress: addresses.BASE.agEUR,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['ageur'] },
+  },
+  msETH_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/mseth.svg'],
+    tokenAddress: addresses.BASE.msETH,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.AERODROME_PAIR,
+      params: [addresses.BASE.msETH, addresses.BASE.WETH, 6, true],
+    },
+  },
+  msUSD_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/msusd.svg'],
+    tokenAddress: addresses.BASE.msUSD,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.AERODROME_PAIR,
+      params: [addresses.BASE.msUSD, addresses.BASE.USDC_bridged, 6, true],
+    },
+  },
+  USDCplus_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/usdcplus.svg'],
+    tokenAddress: addresses.BASE.USDC_plus,
+    decimals: '6',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usdc-plus-overnight'],
+    },
+  },
+  USDz_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/usdz.svg'],
+    tokenAddress: addresses.BASE.USDz,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['anzen-usdz'],
+    },
+  },
+  agUSD_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/usda.svg'],
+    tokenAddress: addresses.BASE.agUSD,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['angle-usd'],
+    },
+  },
+  EURC_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/eurc.svg'],
+    tokenAddress: addresses.BASE.EURC,
+    decimals: '6',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['euro-coin'],
+    },
+  },
+  GHST_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/ghst.svg'],
+    tokenAddress: addresses.BASE.GHST,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['aavegotchi'],
+    },
+  },
+  hyUSD_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/hyusd.svg'],
+    tokenAddress: addresses.BASE.hyUSD,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['high-yield-usd-base'],
+    },
+  },
+  wrsETH_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/wrsETH.svg'],
+    tokenAddress: addresses.BASE.wrsETH,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['wrapped-rseth'],
+    },
+  },
+  aerodrome_DOLA_USDC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/dola.svg', './icons/usdc.svg'],
+    tokenNames: ['DOLA', 'USDC'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_DOLA_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_DOLA_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying, 'DOLA_base', 'USDC_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying,
+          addresses.BASE.V2.aerodrome_DOLA_USDC.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_eUSD_USDC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/eusd.svg', './icons/usdc.svg'],
+    tokenNames: ['eUSD', 'USDC'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.BASE.V2.aerodrome_eUSD_USDC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_eUSD_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_eUSD_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_eUSD_USDC.Underlying, 'eUSD_base', 'USDC_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_eUSD_USDC.Underlying,
+          addresses.BASE.V2.aerodrome_eUSD_USDC.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_ezETH_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/ezeth.svg', './icons/eth.svg'],
+    tokenNames: ['ezETH', 'ETH'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced', 'LSD'],
+    tokenAddress: addresses.BASE.V2.aerodrome_ezETH_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_ezETH_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_ezETH_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_ezETH_ETH.Underlying, 'ezETH_base', 'WETH_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_ezETH_ETH.Underlying,
+          addresses.BASE.V2.aerodrome_ezETH_ETH.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_jEUR_EURA: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/jeur.svg', './icons/eura.svg'],
+    tokenNames: ['jEUR', 'EURA'],
+    platform: ['Aerodrome', 'Jarvis', 'agEUR'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.BASE.V2.aerodrome_jEUR_EURA.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_jEUR_EURA.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_jEUR_EURA.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_jEUR_EURA.Underlying, 'jEUR_base', 'agEUR_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_jEUR_EURA.Underlying,
+          addresses.BASE.V2.aerodrome_jEUR_EURA.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_msETH_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/mseth.svg', './icons/eth.svg'],
+    tokenNames: ['msETH', 'ETH'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.BASE.V2.aerodrome_msETH_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_msETH_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_msETH_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_msETH_ETH.Underlying, 'msETH_base', 'WETH_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_msETH_ETH.Underlying,
+          addresses.BASE.V2.aerodrome_msETH_ETH.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_msUSD_USDC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/msusd.svg', './icons/usdc.svg'],
+    tokenNames: ['msUSD', 'USDC'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.BASE.V2.aerodrome_msUSD_USDC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_msUSD_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_msUSD_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_msUSD_USDC.Underlying, 'msUSD_base', 'USDC_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_msUSD_USDC.Underlying,
+          addresses.BASE.V2.aerodrome_msUSD_USDC.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_rETH_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/reth.svg', './icons/eth.svg'],
+    tokenNames: ['rETH', 'ETH'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced', 'LSD'],
+    tokenAddress: addresses.BASE.V2.aerodrome_rETH_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_rETH_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_rETH_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_rETH_ETH.Underlying, 'moonwell_rETH', 'WETH_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_rETH_ETH.Underlying,
+          addresses.BASE.V2.aerodrome_rETH_ETH.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_USDp_USDCp: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/usdplus.svg', './icons/usdcplus.svg'],
+    tokenNames: ['USD+', 'USDC+'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.BASE.V2.aerodrome_USDp_USDCp.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_USDp_USDCp.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_USDp_USDCp.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_USDp_USDCp.Underlying, 'USDplus_base', 'USDCplus_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_USDp_USDCp.Underlying,
+          addresses.BASE.V2.aerodrome_USDp_USDCp.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_USDz_USDC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/usdz.svg', './icons/usdc.svg'],
+    tokenNames: ['USDz', 'USDC'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.BASE.V2.aerodrome_USDz_USDC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_USDz_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_USDz_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_USDz_USDC.Underlying, 'USDz_base', 'USDC_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_USDz_USDC.Underlying,
+          addresses.BASE.V2.aerodrome_USDz_USDC.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_EURA_USDA: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/eura.svg', './icons/usda.svg'],
+    tokenNames: ['EURA', 'USDA'],
+    platform: ['Aerodrome', 'agEUR', 'agUSD'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.BASE.V2.aerodrome_EURA_USDA.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_EURA_USDA.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_EURA_USDA.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_EURA_USDA.Underlying, 'agEUR_base', 'agUSD_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_EURA_USDA.Underlying,
+          addresses.BASE.V2.aerodrome_EURA_USDA.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_EURC_USDC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/eurc.svg', './icons/usdc.svg'],
+    tokenNames: ['EURC', 'USDC'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.BASE.V2.aerodrome_EURC_USDC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_EURC_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_EURC_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_EURC_USDC.Underlying, 'EURC_base', 'USDC_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_EURC_USDC.Underlying,
+          addresses.BASE.V2.aerodrome_EURC_USDC.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_GHST_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/ghst.svg', './icons/eth.svg'],
+    tokenNames: ['GHST', 'ETH'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.BASE.V2.aerodrome_GHST_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_GHST_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_GHST_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_GHST_ETH.Underlying, 'GHST_base', 'WETH_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_GHST_ETH.Underlying,
+          addresses.BASE.V2.aerodrome_GHST_ETH.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_hyUSD_eUSD: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/hyusd.svg', './icons/eusd.svg'],
+    tokenNames: ['hyUSD', 'eUSD'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.BASE.V2.aerodrome_hyUSD_eUSD.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_hyUSD_eUSD.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_hyUSD_eUSD.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_hyUSD_eUSD.Underlying, 'hyUSD_base', 'eUSD_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_hyUSD_eUSD.Underlying,
+          addresses.BASE.V2.aerodrome_hyUSD_eUSD.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_weETH_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/weeth.svg', './icons/ETH.svg'],
+    tokenNames: ['weETH', 'ETH'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced', 'LSD'],
+    tokenAddress: addresses.BASE.V2.aerodrome_weETH_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_weETH_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_weETH_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_weETH_ETH.Underlying, 'moonwell_weETH', 'WETH_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_weETH_ETH.Underlying,
+          addresses.BASE.V2.aerodrome_weETH_ETH.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_wrsETH_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/wrseth.svg', './icons/ETH.svg'],
+    tokenNames: ['wrsETH', 'ETH'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced', 'LSD'],
+    tokenAddress: addresses.BASE.V2.aerodrome_wrsETH_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_wrsETH_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_wrsETH_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_wrsETH_ETH.Underlying, 'wrsETH_base', 'WETH_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_wrsETH_ETH.Underlying,
+          addresses.BASE.V2.aerodrome_wrsETH_ETH.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
   dlcBTC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/dlcbtc.svg'],
@@ -2090,7 +2626,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aerodrome_OVN_USDp.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_OVN_USDp.Underlying, 'OVN_base', 'USD+_base'],
+      params: [addresses.BASE.V2.aerodrome_OVN_USDp.Underlying, 'OVN_base', 'USDplus_base'],
     },
     estimateApyFunctions: [
       {
@@ -5026,7 +5562,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.baseswap_USDp_USDbC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.baseswap_USDp_USDbC.Underlying, 'USD+_base', 'USDbC_base'],
+      params: [addresses.BASE.V2.baseswap_USDp_USDbC.Underlying, 'USDplus_base', 'USDbC_base'],
     },
     estimateApyFunctions: [
       {
@@ -5209,7 +5745,7 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
-  'DAI+_base': {
+  DAIplus_base: {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/daiplus.svg'],
     tokenAddress: addresses.BASE.DAI_plus,
@@ -5220,7 +5756,7 @@ module.exports = {
       params: ['overnight-dai'],
     },
   },
-  'USD+_base': {
+  USDplus_base: {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/usdplus.svg'],
     tokenAddress: addresses.BASE.USD_plus,
@@ -5244,7 +5780,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aerodrome_DAIp_USDp.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_DAIp_USDp.Underlying, 'DAI+_base', 'USD+_base'],
+      params: [addresses.BASE.V2.aerodrome_DAIp_USDp.Underlying, 'DAIplus_base', 'USDplus_base'],
     },
     estimateApyFunctions: [
       {
@@ -5269,7 +5805,7 @@ module.exports = {
       params: ['dola-usd'],
     },
   },
-  aerodrome_DOLA_USDC: {
+  aerodrome_DOLA_USDbC: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -5277,19 +5813,19 @@ module.exports = {
     tokenNames: ['DOLA', 'USDbC'],
     platform: ['Aerodrome'],
     tags: ['Advanced', 'Stable'],
-    tokenAddress: addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying,
+    tokenAddress: addresses.BASE.V2.aerodrome_DOLA_USDbC.Underlying,
     decimals: '18',
-    vaultAddress: addresses.BASE.V2.aerodrome_DOLA_USDC.NewVault,
+    vaultAddress: addresses.BASE.V2.aerodrome_DOLA_USDbC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying, 'DOLA_base', 'USDbC_base'],
+      params: [addresses.BASE.V2.aerodrome_DOLA_USDbC.Underlying, 'DOLA_base', 'USDbC_base'],
     },
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.AERODROME,
         params: [
-          addresses.BASE.V2.aerodrome_DOLA_USDC.Underlying,
-          addresses.BASE.V2.aerodrome_DOLA_USDC.Gauge,
+          addresses.BASE.V2.aerodrome_DOLA_USDbC.Underlying,
+          addresses.BASE.V2.aerodrome_DOLA_USDbC.Gauge,
           profitSharingCut10Percent,
         ],
       },
@@ -5309,7 +5845,7 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aerodrome_USDp_USDC.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_USDp_USDC.Underlying, 'USD+_base', 'USDbC_base'],
+      params: [addresses.BASE.V2.aerodrome_USDp_USDC.Underlying, 'USDplus_base', 'USDbC_base'],
     },
     estimateApyFunctions: [
       {
