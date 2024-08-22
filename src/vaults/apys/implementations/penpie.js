@@ -12,7 +12,10 @@ const getApy = async (underlying, chainId, reduction = 1) => {
     methods: pendleMarketMethods,
   } = pendleMarket
 
-  const penpieStaking = '0x6DB96BBEB081d2a85E0954C252f2c1dC108b3f81'
+  const penpieStaking =
+    chainId == 1
+      ? '0x6E799758CEE75DAe3d84e09D40dc416eCf713652'
+      : '0x6DB96BBEB081d2a85E0954C252f2c1dC108b3f81'
   const marketInstance = new web3.eth.Contract(pendleMarketAbi, underlying)
 
   const activeBalance = new BigNumber(

@@ -5,6 +5,36 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'penpie_agETH2612',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.PENPIE,
+      params: [addresses.V2.penpie_agETH2612.Underlying, CHAIN_IDS.ETH_MAINNET],
+    },
+    contractAddress: addresses.V2.penpie_agETH2612.NewPool,
+    collateralAddress: addresses.V2.penpie_agETH2612.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.pendle.finance/trade/pools/${addresses.V2.penpie_agETH2612.Underlying}/zap/in?chain=ethereum`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.V2.penpie_agETH2612.Underlying}" target="_blank" rel="noopener noreferrer">agETH Pendle LP tokens</a> to Penpie, earning 
+       <a href="https://arbiscan.io/token/${addresses.PENDLE}" target="_blank" rel="noopener noreferrer">PENDLE</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.V2.penpie_agETH2612.Underlying}" target="_blank" rel="noopener noreferrer">agETH Pendle LP tokens</a>.
+      </p>
+      <p> Get the 
+        <a href="https://arbiscan.io/token/${addresses.V2.penpie_agETH2612.Underlying}" target="_blank" rel="noopener noreferrer">agETH Pendle LP tokens</a> by supplying liquidity on 
+        <a href="https://app.pendle.finance/trade/pools/${addresses.V2.penpie_agETH2612.Underlying}/zap/in?chain=ethereum" target="_blank" rel="noopener noreferrer">Pendle</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'aerodrome_DOLA_USDC',
     type: POOL_TYPES.INCENTIVE,

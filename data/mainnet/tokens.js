@@ -46,6 +46,33 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  penpie_agETH2612: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/pendle.svg'],
+    apyTokenSymbols: ['PENDLE'],
+    logoUrl: ['./icons/agethlp.svg'],
+    tokenNames: ['agETH-LP (26-DEC-24)'],
+    platform: ['Penpie', 'Kelp Gain'],
+    tags: ['Advanced', 'LSD'],
+    tokenAddress: addresses.V2.penpie_agETH2612.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.penpie_agETH2612.NewVault,
+    strategyAddress: addresses.V2.penpie_agETH2612.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.PENDLE_MARKET,
+      params: [addresses.V2.penpie_agETH2612.Underlying, CHAIN_IDS.ETH_MAINNET],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.PENPIE,
+        params: [
+          addresses.V2.penpie_agETH2612.Underlying,
+          CHAIN_IDS.ETH_MAINNET,
+          profitSharingCut15Percent,
+        ],
+      },
+    ],
+  },
   eUSD_base: {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/eusd.svg'],
