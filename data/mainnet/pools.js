@@ -3680,8 +3680,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.lodestar_GMX.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
