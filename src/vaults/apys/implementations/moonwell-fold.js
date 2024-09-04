@@ -79,20 +79,11 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
   const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
   const underlyingDecimals = await getDecimals(underlyingInstance)
 
-  //hotfix
-  let sfAdd
-  if (underlying == usdc) {
-    sfAdd = 1.7
-  } else {
-    sfAdd = 0
-  }
-
   const rewardAPRSupply = wellPerYearSupply
     .times(wellPrice)
     .plus(usdcPerYearSupply.times(usdcPrice))
     .div(totalSupply.div(10 ** underlyingDecimals).times(underlyingPrice))
     .times(100)
-    .plus(sfAdd)
     .times(reduction)
     .times(suppliedMul)
   const rewardAPRBorrow = wellPerYearBorrow
