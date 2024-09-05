@@ -112,7 +112,7 @@ module.exports = {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/extra.svg'],
     apyTokenSymbols: ['EXTRA'],
-    logoUrl: ['./icons/klima.svg'],
+    logoUrl: ['./icons/klima.png'],
     tokenNames: ['KLIMA'],
     platform: ['ExtraFi - Lend'],
     tags: ['Beginner'],
