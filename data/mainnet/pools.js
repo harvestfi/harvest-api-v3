@@ -5,6 +5,195 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'extrafi_AERO',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.extrafi_AERO.NewPool,
+    collateralAddress: addresses.BASE.V2.extrafi_AERO.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_AERO.Underlying}" target="_blank" rel="noopener noreferrer"> AERO </a>to ExtraFi, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.EXTRA}" target="_blank" rel="noopener noreferrer">EXTRA</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_AERO.Underlying}" target="_blank" rel="noopener noreferrer"> AERO</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'extrafi_DOLA',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.extrafi_DOLA.NewPool,
+    collateralAddress: addresses.BASE.V2.extrafi_DOLA.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_DOLA.Underlying}" target="_blank" rel="noopener noreferrer"> DOLA </a>to ExtraFi, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.EXTRA}" target="_blank" rel="noopener noreferrer">EXTRA</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_DOLA.Underlying}" target="_blank" rel="noopener noreferrer"> DOLA</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'extrafi_KLIMA',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.extrafi_KLIMA.NewPool,
+    collateralAddress: addresses.BASE.V2.extrafi_KLIMA.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_KLIMA.Underlying}" target="_blank" rel="noopener noreferrer"> KLIMA </a>to ExtraFi, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.EXTRA}" target="_blank" rel="noopener noreferrer">EXTRA</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_KLIMA.Underlying}" target="_blank" rel="noopener noreferrer"> KLIMA</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'extrafi_OVN',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.extrafi_OVN.NewPool,
+    collateralAddress: addresses.BASE.V2.extrafi_OVN.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_OVN.Underlying}" target="_blank" rel="noopener noreferrer"> OVN </a>to ExtraFi, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.EXTRA}" target="_blank" rel="noopener noreferrer">EXTRA</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_OVN.Underlying}" target="_blank" rel="noopener noreferrer"> OVN</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'extrafi_USDbC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.extrafi_USDbC.NewPool,
+    collateralAddress: addresses.BASE.V2.extrafi_USDbC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> USDbC </a>to ExtraFi, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.EXTRA}" target="_blank" rel="noopener noreferrer">EXTRA</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> USDbC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'extrafi_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.extrafi_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.extrafi_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to ExtraFi, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.EXTRA}" target="_blank" rel="noopener noreferrer">EXTRA</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'extrafi_USDplus',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.extrafi_USDplus.NewPool,
+    collateralAddress: addresses.BASE.V2.extrafi_USDplus.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_USDplus.Underlying}" target="_blank" rel="noopener noreferrer"> USD+ </a>to ExtraFi, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.EXTRA}" target="_blank" rel="noopener noreferrer">EXTRA</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_USDplus.Underlying}" target="_blank" rel="noopener noreferrer"> USD+</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'extrafi_USDz',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.extrafi_USDz.NewPool,
+    collateralAddress: addresses.BASE.V2.extrafi_USDz.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_USDz.Underlying}" target="_blank" rel="noopener noreferrer"> USDz </a>to ExtraFi, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.EXTRA}" target="_blank" rel="noopener noreferrer">EXTRA</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_USDz.Underlying}" target="_blank" rel="noopener noreferrer"> USDz</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'extrafi_WELL',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.extrafi_WELL.NewPool,
+    collateralAddress: addresses.BASE.V2.extrafi_WELL.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_WELL.Underlying}" target="_blank" rel="noopener noreferrer"> WELL </a>to ExtraFi, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.EXTRA}" target="_blank" rel="noopener noreferrer">EXTRA</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_WELL.Underlying}" target="_blank" rel="noopener noreferrer"> WELL</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ZKSYNC,
     id: 'reactor_ZK',
     type: POOL_TYPES.INCENTIVE,

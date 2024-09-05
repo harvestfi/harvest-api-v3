@@ -1841,6 +1841,7 @@
     "GHST": "0xcD2F22236DD9Dfe2356D7C543161D4d260FD9BcB",
     "hyUSD": "0xCc7FF230365bD730eE4B352cC2492CEdAC49383e",
     "wrsETH": "0xEDfa23602D0EC14714057867A78d01e94176BEA0",
+    "EXTRA": "0x2dAD3a13ef0C6366220f989157009e501e7938F8",
     "V2": {
       "baseswap_BSWAP_ETH": {
         "Underlying": "0xE80B4F755417FB4baF4dbd23C029db3F62786523",
@@ -2375,6 +2376,78 @@
         "NewStrategy": "0xb107e65Bf36E3F0bf87f28403fB546058aad8cb9",
         "NewPool": "0x0177ae95C14f1b7710e28ED5faE7C7bc6174F5F1",
         "Gauge": "0x2da7789a6371F550caF9054694F5A5A6682903f9"
+      },
+      "extrafi_AERO": {
+        "Underlying": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+        "NewVault": "0x49f0A6451d73203959fEE843986aa1EE671Af151",
+        "NewStrategy": "0x5908f011e40ca9D1987d63f8C0B820FFa4Cf8764",
+        "NewPool": "0x9Ea1f7384636c1879565983d245FF565AE5EF335",
+        "RewardPool": "0x8f480b12B321dac9D5427aAD8F3e560fca2b3216",
+        "ReserveId": 3
+      },
+      "extrafi_DOLA": {
+        "Underlying": "0x4621b7A9c75199271F773Ebd9A499dbd165c3191",
+        "NewVault": "0x3F227C9D9d6489A6258f4a8286Ee93AA98d5A2c3",
+        "NewStrategy": "0x54F52fF3A9a18aee945C5eb0c79C09f2931F9FD5",
+        "NewPool": "0xD88bB0e90fB2270065f0D9874B77c276F2d315F0",
+        "RewardPool": "0x79a5a9e97Dc8f4a1c2370E1049dB960275431793",
+        "ReserveId": 12
+      },
+      "extrafi_KLIMA": {
+        "Underlying": "0xDCEFd8C8fCc492630B943ABcaB3429F12Ea9Fea2",
+        "NewVault": "0xbe36B2367b081CDB3e657CeD2045729e5d8f89c4",
+        "NewStrategy": "0xF8D5E5Fd920FF7F56897A3EE34B70F02c7356158",
+        "NewPool": "0xd3BF398b162baB4120896C65F5C04973C31D3604",
+        "RewardPool": "0xCdc61440531107AC8218B11F311F400E4bFd8D0E",
+        "ReserveId": 60
+      },
+      "extrafi_OVN": {
+        "Underlying": "0xA3d1a8DEB97B111454B294E2324EfAD13a9d8396",
+        "NewVault": "0x6a66697BB83b1660F58b618F85f37E413053D3A1",
+        "NewStrategy": "0x0E9F7C22750b5C94506E5DC2F2053B57f91BECf8",
+        "NewPool": "0xdaC19a3647cb87352E771A82AeD04c95E393CE0a",
+        "RewardPool": "0x9138A810947422CFA4f82FF14a57890f0D2BBbb3",
+        "ReserveId": 28
+      },
+      "extrafi_USDbC": {
+        "Underlying": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
+        "NewVault": "0x0d024A57A0Ce216f93f6364901Bb8c5F9F33CC5f",
+        "NewStrategy": "0x51398c3A8970bA793bC85075dce106920dF15BEC",
+        "NewPool": "0xe09bf933e3F758cF18A92F60715C5E2F01904d21",
+        "RewardPool": "0x21C43d9B3b7c25C740B0D5dC9F62495aeC0d1ecC",
+        "ReserveId": 2
+      },
+      "extrafi_USDC": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0xcEa7de485Cf3B69CF3D5f7DFadF9e1df31303988",
+        "NewStrategy": "0xAde44F068C673e5E7ab9D3A12Ebbc8F53009c09F",
+        "NewPool": "0x7f296b45d4880FA74F5d77616C30eF775757175f",
+        "RewardPool": "0x93d4172b50E82f0fa1C8026782c0ed8Ff39513AF",
+        "ReserveId": 24
+      },
+      "extrafi_USDplus": {
+        "Underlying": "0xB79DD08EA68A908A97220C76d19A6aA9cBDE4376",
+        "NewVault": "0xb2F050FB276ECFCb77c9CA1ce92D8914750A41Fb",
+        "NewStrategy": "0x6F441d7fcd35D3FeD4a3b4851AFAe434D38e11De",
+        "NewPool": "0xA2b7ee3E800E3D8f843d6FbC316DBD19e10ba54D",
+        "RewardPool": "0x7A883e7752f20f98869E3Ea7E29E0f2478CD34a2",
+        "ReserveId": 10
+      },
+      "extrafi_USDz": {
+        "Underlying": "0x04D5ddf5f3a8939889F11E97f8c4BB48317F1938",
+        "NewVault": "0x72432B8f837f3ED4c50499F57775AC820243B838",
+        "NewStrategy": "0x715D8f89c0B3C2854775B8a584EC419a7059ffd8",
+        "NewPool": "0x9a5dD54BfA385695c53d28aE382bec64646a7e1a",
+        "RewardPool": "0x5FcB1222E1986Faa7F6b7B889Ad756f9394C12cf",
+        "ReserveId": 64
+      },
+      "extrafi_WELL": {
+        "Underlying": "0xA88594D404727625A9437C3f886C7643872296AE",
+        "NewVault": "0x97c07792833b0DE228a2C33466729ED1D588B5F2",
+        "NewStrategy": "0xC896115876e4f76B4EA4fE328DfF327Ec348Ba75",
+        "NewPool": "0x5F1D954A66B32248c2eD40CD92EBF9FdF383A9F0",
+        "RewardPool": "0xDFe1738AD66b7438C6EB8C1Df5900a6E836feF48",
+        "ReserveId": 54
       }
     }
   },

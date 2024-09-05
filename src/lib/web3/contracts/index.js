@@ -181,7 +181,21 @@ const aaveRewardsContract = require('../contracts/aave-rewards/contract.json')
 const aTokenMethods = require('../contracts/atoken/methods')
 const aTokenContract = require('../contracts/atoken/contract.json')
 
+const extraFiRewardsMethods = require('../contracts/extrafi-rewards/methods')
+const extraFiRewardsContract = require('../contracts/extrafi-rewards/contract.json')
+
+const extraFiLendingMethods = require('../contracts/extrafi-lending/methods')
+const extraFiLendingContract = require('../contracts/extrafi-lending/contract.json')
+
 module.exports = {
+  extraFiRewards: {
+    methods: extraFiRewardsMethods,
+    contract: extraFiRewardsContract,
+  },
+  extraFiLending: {
+    methods: extraFiLendingMethods,
+    contract: extraFiLendingContract,
+  },
   aaveRewards: {
     methods: aaveRewardsMethods,
     contract: aaveRewardsContract,
