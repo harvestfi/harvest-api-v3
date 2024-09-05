@@ -5,6 +5,27 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'reactor_ZK',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.reactor_ZK.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.reactor_ZK.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.reactor_ZK.Underlying}" target="_blank" rel="noopener noreferrer">ZK</a> to a Reactor Fusion, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZK}" target="_blank" rel="noopener noreferrer">ZK</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.reactor_ZK.Underlying}" target="_blank" rel="noopener noreferrer">ZK</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'penpie_agETH2612',
     type: POOL_TYPES.INCENTIVE,
@@ -1541,7 +1562,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies 
        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.reactor_ETH.Underlying}" target="_blank" rel="noopener noreferrer">ETH</a> to a Reactor Fusion, earning 
-       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.RF}" target="_blank" rel="noopener noreferrer">RF</a> and interest.
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZK}" target="_blank" rel="noopener noreferrer">ZK</a> and interest.
        At every harvest, the earned rewards are converted into more
        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.reactor_ETH.Underlying}" target="_blank" rel="noopener noreferrer">ETH</a>.
       </p>
@@ -1562,7 +1583,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies 
        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.reactor_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">USDC.e</a> to a Reactor Fusion, earning 
-       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.RF}" target="_blank" rel="noopener noreferrer">RF</a> and interest.
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZK}" target="_blank" rel="noopener noreferrer">ZK</a> and interest.
        At every harvest, the earned rewards are converted into more
        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.reactor_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">USDC.e</a>.
       </p>
@@ -1583,7 +1604,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies 
        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.reactor_USDT.Underlying}" target="_blank" rel="noopener noreferrer">USDT</a> to a Reactor Fusion, earning 
-       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.RF}" target="_blank" rel="noopener noreferrer">RF</a> and interest.
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZK}" target="_blank" rel="noopener noreferrer">ZK</a> and interest.
        At every harvest, the earned rewards are converted into more
        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.reactor_USDT.Underlying}" target="_blank" rel="noopener noreferrer">USDT</a>.
       </p>
@@ -1604,7 +1625,7 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies 
        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.reactor_WBTC.Underlying}" target="_blank" rel="noopener noreferrer">WBTC</a> to a Reactor Fusion, earning 
-       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.RF}" target="_blank" rel="noopener noreferrer">RF</a> and interest.
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZK}" target="_blank" rel="noopener noreferrer">ZK</a> and interest.
        At every harvest, the earned rewards are converted into more
        <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.reactor_WBTC.Underlying}" target="_blank" rel="noopener noreferrer">WBTC</a>.
       </p>

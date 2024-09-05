@@ -46,6 +46,34 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  reactor_ZK: {
+    chain: CHAIN_IDS.ZKSYNC,
+    apyIconUrls: ['./icons/zk.svg'],
+    apyTokenSymbols: ['ZK'],
+    logoUrl: ['./icons/zk.svg'],
+    tokenNames: ['ZK'],
+    platform: ['ReactorFusion'],
+    tags: ['Beginners'],
+    tokenAddress: addresses.ZKSYNC.V2.reactor_ZK.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ZKSYNC.V2.reactor_ZK.NewVault,
+    strategyAddress: addresses.ZKSYNC.V2.reactor_ZK.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['zksync'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.REACTORFUSION_FOLD,
+        params: [
+          addresses.ZKSYNC.V2.reactor_ZK.Underlying,
+          addresses.ZKSYNC.V2.reactor_ZK.cToken,
+          addresses.ZKSYNC.V2.reactor_ZK.NewStrategy,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
   penpie_agETH2612: {
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/pendle.svg'],
@@ -1938,8 +1966,8 @@ module.exports = {
   },
   reactor_ETH: {
     chain: CHAIN_IDS.ZKSYNC,
-    apyIconUrls: ['./icons/rf.svg'],
-    apyTokenSymbols: ['RF'],
+    apyIconUrls: ['./icons/zk.svg'],
+    apyTokenSymbols: ['ZK'],
     logoUrl: ['./icons/eth.svg'],
     tokenNames: ['ETH'],
     platform: ['ReactorFusion'],
@@ -1966,8 +1994,8 @@ module.exports = {
   },
   reactor_USDCe: {
     chain: CHAIN_IDS.ZKSYNC,
-    apyIconUrls: ['./icons/rf.svg'],
-    apyTokenSymbols: ['RF'],
+    apyIconUrls: ['./icons/zk.svg'],
+    apyTokenSymbols: ['ZK'],
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC.e'],
     platform: ['ReactorFusion'],
@@ -1994,8 +2022,8 @@ module.exports = {
   },
   reactor_USDT: {
     chain: CHAIN_IDS.ZKSYNC,
-    apyIconUrls: ['./icons/rf.svg'],
-    apyTokenSymbols: ['RF'],
+    apyIconUrls: ['./icons/zk.svg'],
+    apyTokenSymbols: ['ZK'],
     logoUrl: ['./icons/usdt.svg'],
     tokenNames: ['USDT'],
     platform: ['ReactorFusion'],
@@ -2022,8 +2050,8 @@ module.exports = {
   },
   reactor_WBTC: {
     chain: CHAIN_IDS.ZKSYNC,
-    apyIconUrls: ['./icons/rf.svg'],
-    apyTokenSymbols: ['RF'],
+    apyIconUrls: ['./icons/zk.svg'],
+    apyTokenSymbols: ['ZK'],
     logoUrl: ['./icons/wbtc.svg'],
     tokenNames: ['WBTC'],
     platform: ['ReactorFusion'],

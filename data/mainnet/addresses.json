@@ -2403,7 +2403,7 @@
     "LONG": "0x5165ec33b491d7b67260b3143f96bb4ac4736398",
     "VC": "0x99bbe51be7cce6c8b84883148fd3d12ace5787f2",
     "RF": "0x5f7cbcb391d33988dad74d6fd683aadda1123e4d",
-    "ZK": "0x5a7d6b2f92c77fad6ccabd7ee0624e64907eaf3e",
+    "ZK": "0x5A7d6b2F92C77FAD6CCaBd7EE0624E64907Eaf3E",
     "V2": {
       "zkswap_ETH_USDCe": {
         "Underlying": "0x7642e38867860d4512Fcce1116e2Fb539c5cdd21",
@@ -2474,7 +2474,14 @@
         "NewVault": "0xA168884D6f63e0f4B9d9Ff50848183cE61F9eDd0",
         "NewStrategy": "0x08221C536c871b1da15aeFFC00fa241a29037E70",
         "NewPool": "0x0E5548395ACbD5Da0CBd1aBA113605aCa06A5e96"
-      }      
+      },
+      "reactor_ZK": {
+        "Underlying": "0x5A7d6b2F92C77FAD6CCaBd7EE0624E64907Eaf3E",
+        "NewVault": "0xe784412E71108D73708EF4F966A36e3c11FE9231",
+        "NewStrategy": "0xe20c65Dd7473e971c847819660AE805A9fe7a17F",
+        "NewPool": "0x6835a688557992B22b2a587C215f1D31C96039f4",
+        "cToken": "0x0E392B6b05c112677096920aD938a0752d1451f3"
+      }
     }
   }
 }
