@@ -653,7 +653,6 @@ module.exports = {
     ],
   },
   moonwell_weETH: {
-    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -671,10 +670,11 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MOONWELL_SUPPLY,
+        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
         params: [
-          addresses.BASE.V2.moonwell_wstETH.Underlying,
-          addresses.BASE.V2.moonwell_wstETH.mToken,
+          addresses.BASE.V2.moonwell_weETH.Underlying,
+          addresses.BASE.V2.moonwell_weETH.mToken,
+          addresses.BASE.V2.moonwell_weETH.NewStrategy,
           profitSharingCut10Percent,
         ],
       },

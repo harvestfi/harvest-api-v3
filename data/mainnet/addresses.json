@@ -2260,7 +2260,7 @@
       "moonwell_weETH": {
         "Underlying": "0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A",
         "NewVault": "0x5c5Aa1eC33BB0391D056095b0D6691BAf5A40d7e",
-        "NewStrategy": "0xb36DD986C23DDE9c9f58f1c6e585dDEfC3240673",
+        "NewStrategy": "0x1362a41EBF9d49b0526E26F101017E146746488B",
         "NewPool": "0x0cA34C210b4357dBDD67e6626d60670cE1D05DbE",
         "mToken": "0xb8051464C8c92209C92F3a4CD9C73746C4c3CFb3"
       },
