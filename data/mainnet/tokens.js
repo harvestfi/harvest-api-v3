@@ -117,7 +117,7 @@ module.exports = {
     platform: ['ExtraFi - Lend'],
     tags: ['Beginner'],
     tokenAddress: addresses.BASE.V2.extrafi_KLIMA.Underlying,
-    decimals: '18',
+    decimals: '9',
     vaultAddress: addresses.BASE.V2.extrafi_KLIMA.NewVault,
     strategyAddress: addresses.BASE.V2.extrafi_KLIMA.NewStrategy,
     priceFunction: {
