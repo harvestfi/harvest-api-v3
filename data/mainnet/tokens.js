@@ -7197,8 +7197,8 @@ module.exports = {
   xGRAIL: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/xgrail.svg'],
-    apyIconUrls: ['./icons/eth.svg', './icons/usdc.svg', './icons/xgrail.svg', './icons/dmt.svg'],
-    apyTokenSymbols: ['ETH-USDC.e', 'xGRAIL', 'DMT'],
+    apyIconUrls: ['./icons/eth.svg', './icons/usdc.svg', './icons/xgrail.svg', './icons/dmt.svg', './icons/winr.svg'],
+    apyTokenSymbols: ['ETH-USDC.e', 'xGRAIL', 'DMT', 'WINR'],
     tokenNames: ['xGRAIL'],
     platform: ['Camelot'],
     tags: ['Advanced'],
