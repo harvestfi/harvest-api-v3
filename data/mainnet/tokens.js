@@ -7240,6 +7240,17 @@ module.exports = {
       params: ['dream-machine-token'],
     },
   },
+  WINR: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/winr.svg'],
+    tokenAddress: addresses.ARBITRUM_ONE.WINR,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['winr-protocol'],
+    },
+  },
   aWETH_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/am-weth.svg'],

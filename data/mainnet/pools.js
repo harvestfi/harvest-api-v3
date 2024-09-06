@@ -5708,6 +5708,7 @@ module.exports = [
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a> in to Camelot Dividends, earning 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>, 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.DMT}" target="_blank" rel="noopener noreferrer">DMT</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.WINR}" target="_blank" rel="noopener noreferrer">WINR</a> & 
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.Underlying}" target="_blank" rel="noopener noreferrer">CamelotV3 ETH-USDC LP tokens</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.xGRAIL.Underlying}" target="_blank" rel="noopener noreferrer">xGRAIL</a>.
