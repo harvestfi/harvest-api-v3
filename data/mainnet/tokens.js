@@ -46,6 +46,34 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  moonwell_cbBTC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/well.svg'],
+    apyTokenSymbols: ['WELL'],
+    logoUrl: ['./icons/cbbtc.svg'],
+    tokenNames: ['cbBTC'],
+    platform: ['Moonwell'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.BASE.V2.moonwell_cbBTC.Underlying,
+    decimals: '8',
+    vaultAddress: addresses.BASE.V2.moonwell_cbBTC.NewVault,
+    strategyAddress: addresses.BASE.V2.moonwell_cbBTC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['coinbase-wrapped-btc'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
+        params: [
+          addresses.BASE.V2.moonwell_cbBTC.Underlying,
+          addresses.BASE.V2.moonwell_cbBTC.mToken,
+          addresses.BASE.V2.moonwell_cbBTC.NewStrategy,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
   EXTRA: {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/extra.svg'],

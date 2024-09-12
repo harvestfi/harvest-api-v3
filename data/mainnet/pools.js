@@ -6,6 +6,27 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.BASE,
+    id: 'moonwell_cbBTC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.moonwell_cbBTC.NewPool,
+    collateralAddress: addresses.BASE.V2.moonwell_cbBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC </a>to Moonwell, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
     id: 'extrafi_AERO',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.BASE.V2.extrafi_AERO.NewPool,

@@ -2448,6 +2448,13 @@
         "NewPool": "0x5F1D954A66B32248c2eD40CD92EBF9FdF383A9F0",
         "RewardPool": "0xDFe1738AD66b7438C6EB8C1Df5900a6E836feF48",
         "ReserveId": 54
+      },
+      "moonwell_cbBTC": {
+        "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        "NewVault": "0xc5dc397B1dB51dA30dC9F3aC7084bBBA1EFbe249",
+        "NewStrategy": "0x6228754f46A3183C9128ad9e785C84D8AF31eC86",
+        "NewPool": "0x0950314900287c5192DD8F0d94D27261BA255927",
+        "mToken": "0xF877ACaFA28c19b96727966690b2f44d35aD5976"
       }
     }
   },
