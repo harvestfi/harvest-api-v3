@@ -249,6 +249,7 @@ const DB_CACHE_IDS = {
   TVL: 6,
   RATES: 7,
   HISTORICAL_RATES: 8,
+  SF_REWARDS: 9,
 }
 
 const PROFIT_SHARING_POOL_ID = 'profit-sharing-farm'

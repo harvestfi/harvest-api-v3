@@ -170,17 +170,8 @@ const initRouter = app => {
     )
 
     app.get(
-      '/cmc',
-      asyncWrap(async (req, res) => {
-        const cmcData = await Cache.findOne({ type: DB_CACHE_IDS.CMC })
-        res.send(get(cmcData, 'data', {}))
-      }),
-    )
-
-    app.get(
       '/tokens-info',
       asyncWrap(async (req, res) => {
-        const cmcData = await Cache.findOne({ type: DB_CACHE_IDS.CMC })
         const tokenStatsData = await Cache.findOne(
           { type: DB_CACHE_IDS.STATS },
           { ['data.tokenStats']: 1 },
@@ -190,7 +181,6 @@ const initRouter = app => {
           { ['data.monthlyRevenue']: 1 },
         )
         res.send({
-          cmc: get(cmcData, 'data', {}),
           tokenStats: get(tokenStatsData, 'data.tokenStats', {}),
           monthly: get(monthlyStatsData, 'data.monthlyRevenue', '0'),
         })
@@ -223,6 +213,20 @@ const initRouter = app => {
         }
 
         res.send(dataFinal)
+      }),
+    )
+
+    app.get(
+      '/superform-reward/:vault',
+      asyncWrap(async (req, res) => {
+        const vaultAddress = req.params.vault.toLowerCase()
+
+        const dbField = `data.${vaultAddress}`
+        const queryResponse = await Cache.findOne(
+          { type: DB_CACHE_IDS.SF_REWARDS },
+          { [dbField]: 1 },
+        )
+        res.send(get(queryResponse, dbField, '0'))
       }),
     )
   }

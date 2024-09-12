@@ -30,6 +30,7 @@ const { storeData, appendData, loadData } = require('../lib/db/models/cache')
 const { getUIData } = require('../lib/data')
 const addresses = require('../lib/data/addresses.json')
 const { getTvlDataLength, getTvlData, getFarmTvlLength } = require('../lib/third-party/tvl')
+const { superformRewardData } = require('../lib/third-party/superform')
 
 const getProfitSharingFactor = chain => {
   switch (chain) {
@@ -858,6 +859,21 @@ const getHistoricalRates = async () => {
   console.log('-- Done getting Historical Rates data --\n')
 }
 
+const getSuperformRewardData = async () => {
+  console.log('\n-- Getting SuperForm Reward data --')
+
+  let data, hasErrors
+  try {
+    data = await superformRewardData()
+    hasErrors = false
+  } catch (e) {
+    hasErrors = true
+  }
+
+  await storeData(Cache, DB_CACHE_IDS.SF_REWARDS, data, hasErrors)
+  console.log('-- Done getting SuperForm Reward data --\n')
+}
+
 const preLoadCoingeckoPrices = async () => {
   console.log('\n-- Getting token prices from CoinGecko --')
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
@@ -932,6 +948,12 @@ const runUpdateLoop = async () => {
       gmv: 0,
       revenue: 0,
       tokenStats: 0,
+      profit: 0,
+      tvl: 0,
+      nanoly: 0,
+      sfrewards: 0,
+      rates: 0,
+      historical_rates: 0,
     })
   }
 
@@ -965,10 +987,20 @@ const runUpdateLoop = async () => {
     }
 
     await getTVL()
+    if (DEBUG_MODE) {
+      updateCallCountCache('tvl')
+      resetCallCount()
+    }
 
     await getNanolyData()
     if (DEBUG_MODE) {
-      updateCallCountCache('cmc')
+      updateCallCountCache('nanoly')
+      resetCallCount()
+    }
+
+    await getSuperformRewardData()
+    if (DEBUG_MODE) {
+      updateCallCountCache('sfrewards')
       resetCallCount()
     }
   }
