@@ -942,6 +942,9 @@ const getLeaderboardData = async () => {
             userBalances[user].totalBalance = userBalances[user].totalBalance
               ? userBalances[user].totalBalance + Number(usdValue.toFixed())
               : Number(usdValue.toFixed())
+            userBalances[user].totalDailyYield = userBalances[user].totalDailyYield
+              ? userBalances[user].totalDailyYield
+              : 0
             userBalances[user].vaults = userBalances[user].vaults ? userBalances[user].vaults : {}
             userBalances[user].vaults[vaultAddress] = {}
             userBalances[user].vaults[vaultAddress].balance = Number(usdValue.toFixed())
@@ -987,8 +990,9 @@ const getLeaderboardData = async () => {
 
     sortable = Object.entries(userBalances)
       .sort(([, a], [, b]) => b.totalBalance - a.totalBalance)
-      .slice(0, 1000)
+      .slice(0, 500)
       .reduce((r, [k, v]) => ({ ...r, [k]: v }), {})
+    console.log(sortable)
     const tvl = Object.values(sortable).reduce((b, a) => b + a.totalBalance, 0)
     const users = Object.values(sortable).length
     console.log('Total TVL:  ', tvl, 'usd')
