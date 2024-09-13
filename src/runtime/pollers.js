@@ -987,7 +987,7 @@ const getLeaderboardData = async () => {
 
     sortable = Object.entries(userBalances)
       .sort(([, a], [, b]) => b.totalBalance - a.totalBalance)
-      // .slice(0, 1000)
+      .slice(0, 1000)
       .reduce((r, [k, v]) => ({ ...r, [k]: v }), {})
     const tvl = Object.values(sortable).reduce((b, a) => b + a.totalBalance, 0)
     const users = Object.values(sortable).length
@@ -1081,6 +1081,7 @@ const runUpdateLoop = async () => {
       sfrewards: 0,
       rates: 0,
       historical_rates: 0,
+      leaderboard: 0,
     })
   }
 
@@ -1093,8 +1094,6 @@ const runUpdateLoop = async () => {
 
   await getPools()
   await getVaults()
-
-  await getLeaderboardData()
 
   if (ACTIVE_ENDPOINTS === ENDPOINT_TYPES.ALL || ACTIVE_ENDPOINTS === ENDPOINT_TYPES.EXTERNAL) {
     await getTotalGmv()
@@ -1143,6 +1142,12 @@ const runUpdateLoop = async () => {
   await getHistoricalRates()
   if (DEBUG_MODE) {
     updateCallCountCache('historical_rates')
+    resetCallCount()
+  }
+
+  await getLeaderboardData()
+  if (DEBUG_MODE) {
+    updateCallCountCache('leaderboard')
     resetCallCount()
   }
 
