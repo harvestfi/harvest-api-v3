@@ -134,19 +134,19 @@ const CONVEX_API_URLS = {
 const HARVEST_SUBGRAPH_URLS = {
   1:
     process.env.MAINNET_SUBGRAPH_URL ||
-    'https://api.studio.thegraph.com/query/48757/harvest-mainnet-test/v0.0.5',
+    'https://api.studio.thegraph.com/query/48757/harvest-mainnet-test/v0.0.10',
   137:
     process.env.POLYGON_SUBGRAPH_URL ||
-    'https://api.studio.thegraph.com/query/48757/l2-polygon-test/v0.0.15',
+    'https://api.studio.thegraph.com/query/48757/l2-polygon-test/v0.0.23',
   8453:
     process.env.BASE_SUBGRAPH_URL ||
-    'https://api.studio.thegraph.com/query/48757/harvest-base/v0.0.11',
+    'https://api.studio.thegraph.com/query/48757/harvest-base/v0.0.24',
   42161:
     process.env.ARBITRUM_SUBGRAPH_URL ||
-    'https://api.studio.thegraph.com/query/48757/harvest-arbitrum/v0.0.4',
+    'https://api.studio.thegraph.com/query/48757/harvest-arbitrum/v0.0.14',
   324:
     process.env.ZKSYNC_SUBGRAPH_URL ||
-    'https://api.studio.thegraph.com/query/48757/l2-zksync-era/version/latest',
+    'https://api.studio.thegraph.com/query/48757/l2-zksync-era/v0.1.12',
 }
 
 const SUSHI_POOLS_IDS = {
@@ -250,6 +250,7 @@ const DB_CACHE_IDS = {
   RATES: 7,
   HISTORICAL_RATES: 8,
   SF_REWARDS: 9,
+  LEADERBOARD: 10,
 }
 
 const PROFIT_SHARING_POOL_ID = 'profit-sharing-farm'

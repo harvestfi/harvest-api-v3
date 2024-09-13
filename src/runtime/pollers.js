@@ -24,12 +24,18 @@ const {
   UI_DATA_FILES,
   CURRENCY_API_URL,
   HISTORICAL_CURRENCY_API_URL,
+  HARVEST_SUBGRAPH_URLS,
 } = require('../lib/constants')
 const { Cache } = require('../lib/db/models/cache')
 const { storeData, appendData, loadData } = require('../lib/db/models/cache')
 const { getUIData } = require('../lib/data')
 const addresses = require('../lib/data/addresses.json')
-const { getTvlDataLength, getTvlData, getFarmTvlLength } = require('../lib/third-party/tvl')
+const {
+  getTvlDataLength,
+  getTvlData,
+  getFarmTvlLength,
+  getBalanceData,
+} = require('../lib/third-party/harvest-subgraph')
 const { superformRewardData } = require('../lib/third-party/superform')
 
 const getProfitSharingFactor = chain => {
@@ -874,6 +880,127 @@ const getSuperformRewardData = async () => {
   console.log('-- Done getting SuperForm Reward data --\n')
 }
 
+const getLeaderboardData = async () => {
+  console.log('\n-- Getting Leaderboard data --')
+  let hasErrors = false
+
+  const USER_IGNORE_LIST = [
+    '0x917d6480ec60cbddd6cbd0c8ea317bcc709ea77b',
+    '0x7b8ff8884590f44e10ea8105730fe637ce0cb4f6',
+    '0xa3cf8d1cee996253fad1f8e3d68bdcba7b3a3db5',
+    '0x3da9d911301f8144bdf5c3c67886e5373dcdff8e',
+    '0x4f7c28ccb0f1dbd1388209c67eec234273c878bd',
+    '0x6ac4a7ab91e6fd098e13b7d347c6d4d1494994a2',
+    '0x7aeb36e22e60397098c2a5c51f0a5fb06e7b859c',
+    '0x15d3a64b2d5ab9e152f16593cdebc4bb165b5b4a',
+    '0xF1181A71CC331958AE2cA2aAD0784Acfc436CB93',
+    '0x75071f2653fbc902ebaff908d4c68712a5d1c960',
+    '0x156733b89ac5c704f3217fee2949a9d4a73764b5',
+    '0xf1181a71cc331958ae2ca2aad0784acfc436cb93',
+  ]
+  const CHAIN_NAMES = {
+    1: 'eth',
+    137: 'matic',
+    8453: 'base',
+    42161: 'arbitrum',
+    324: 'zksync',
+  }
+
+  let sortable = {}
+  try {
+    const vaults = await loadData(Cache, DB_CACHE_IDS.VAULTS)
+    const pools = await loadData(Cache, DB_CACHE_IDS.POOLS)
+
+    let userBalances = {}
+    for (let chain of Object.keys(HARVEST_SUBGRAPH_URLS)) {
+      let maxValue = '1e99'
+      let datapoints = 0
+      for (let i = 0; i < 20; i++) {
+        const data = await getBalanceData(chain, maxValue)
+
+        for (let balance of data.userBalances) {
+          const poolAddress = balance.vault.pool ? balance.vault.pool.id : 0
+          const vaultAddress = balance.vault.id
+          const user = balance.userAddress
+          if (user == poolAddress || USER_IGNORE_LIST.includes(user)) {
+            continue
+          }
+          let vault = Object.values(vaults[CHAIN_NAMES[chain]]).filter(
+            vault => vault.vaultAddress.toLowerCase() == vaultAddress.toLowerCase(),
+          )
+          if (vault.length > 0) {
+            vault = vault[0]
+          } else {
+            vault = 0
+          }
+          const usdValue = new BigNumber(balance.value)
+            .times(vault ? vault.usdPrice : balance.vault.priceUnderlying)
+            .times(vault ? vault.pricePerFullShare : balance.vault.lastSharePrice)
+            .div(vault ? 10 ** vault.decimals : 10 ** balance.vault.decimal)
+          if (usdValue.gt(0)) {
+            userBalances[user] = userBalances[user] ? userBalances[user] : {}
+            userBalances[user].totalBalance = userBalances[user].totalBalance
+              ? userBalances[user].totalBalance + Number(usdValue.toFixed())
+              : Number(usdValue.toFixed())
+            userBalances[user].vaults = userBalances[user].vaults ? userBalances[user].vaults : {}
+            userBalances[user].vaults[vaultAddress] = {}
+            userBalances[user].vaults[vaultAddress].balance = Number(usdValue.toFixed())
+            if (vault) {
+              const apy = Number(vault.estimatedApy) / 100
+              const dailyApr = (apy + 1) ** (1 / 365) - 1
+              const dailyYield = usdValue.times(dailyApr).toFixed(4)
+              userBalances[user].totalDailyYield = userBalances[user].totalDailyYield
+                ? userBalances[user].totalDailyYield + Number(dailyYield)
+                : Number(dailyYield)
+              userBalances[user].vaults[vaultAddress].dailyYield = Number(dailyYield)
+            }
+            let pool = pools[CHAIN_NAMES[chain]].filter(
+              pool => pool.collateralAddress.toLowerCase() == vaultAddress.toLowerCase(),
+            )
+            if (pool.length > 0) {
+              pool = pool[0]
+            } else {
+              pool = 0
+            }
+            const poolBalance = new BigNumber(balance.poolBalance)
+              .times(vault ? vault.usdPrice : balance.vault.priceUnderlying)
+              .times(vault ? vault.pricePerFullShare : balance.vault.lastSharePrice)
+              .div(vault ? 10 ** vault.decimals : 10 ** balance.vault.decimal)
+            if (pool && poolBalance.gt(0)) {
+              const dailyApr = pool.rewardAPR.reduce((b, a) => b + Number(a), 0) / 100 / 365
+              const dailyReward = poolBalance.times(dailyApr).toFixed(4)
+              userBalances[user].totalDailyYield = userBalances[user].totalDailyYield
+                ? userBalances[user].totalDailyYield + Number(dailyReward)
+                : Number(dailyReward)
+              userBalances[user].vaults[vaultAddress].dailyReward = Number(dailyReward)
+            }
+          }
+        }
+        maxValue = data.userBalances[data.userBalances.length - 1].value
+        datapoints += data.userBalances.length
+        if (data.userBalances.length < 1000) {
+          break
+        }
+      }
+      console.log(datapoints, 'data points processed on', CHAIN_NAMES[chain])
+    }
+
+    sortable = Object.entries(userBalances)
+      .sort(([, a], [, b]) => b.totalBalance - a.totalBalance)
+      // .slice(0, 1000)
+      .reduce((r, [k, v]) => ({ ...r, [k]: v }), {})
+    const tvl = Object.values(sortable).reduce((b, a) => b + a.totalBalance, 0)
+    const users = Object.values(sortable).length
+    console.log('Total TVL:  ', tvl, 'usd')
+    console.log('Total users:', users)
+  } catch (e) {
+    hasErrors = true
+  }
+
+  await storeData(Cache, DB_CACHE_IDS.LEADERBOARD, sortable, hasErrors)
+  console.log('-- Done getting Leaderboard data --\n')
+}
+
 const preLoadCoingeckoPrices = async () => {
   console.log('\n-- Getting token prices from CoinGecko --')
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
@@ -966,6 +1093,8 @@ const runUpdateLoop = async () => {
 
   await getPools()
   await getVaults()
+
+  await getLeaderboardData()
 
   if (ACTIVE_ENDPOINTS === ENDPOINT_TYPES.ALL || ACTIVE_ENDPOINTS === ENDPOINT_TYPES.EXTERNAL) {
     await getTotalGmv()

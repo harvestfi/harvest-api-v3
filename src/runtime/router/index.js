@@ -312,6 +312,16 @@ const initRouter = app => {
       })
     }),
   )
+
+  app.get(
+    '/leaderboard',
+    asyncWrap(async (req, res) => {
+      const data = await Cache.findOne({ type: DB_CACHE_IDS.LEADERBOARD })
+      res.send({
+        ...get(data, 'data', {}),
+      })
+    }),
+  )
 }
 
 module.exports = { initRouter }
