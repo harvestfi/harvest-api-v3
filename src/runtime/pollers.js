@@ -969,13 +969,26 @@ const getLeaderboardData = async () => {
               .times(vault ? vault.usdPrice : balance.vault.priceUnderlying)
               .times(vault ? vault.pricePerFullShare : balance.vault.lastSharePrice)
               .div(vault ? 10 ** vault.decimals : 10 ** balance.vault.decimal)
-            if (pool && poolBalance.gt(0)) {
-              const dailyApr = pool.rewardAPR.reduce((b, a) => b + Number(a), 0) / 100 / 365
-              const dailyReward = poolBalance.times(dailyApr).toFixed(4)
+            if (pool) {
+              const tradingApy = pool.tradingApy ? Number(pool.tradingApy) / 100 : 0
+              const dailyTradingApr = tradingApy / 365
+              const dailyTradingYield = usdValue.times(dailyTradingApr).toFixed(4)
               userBalances[user].totalDailyYield = userBalances[user].totalDailyYield
-                ? userBalances[user].totalDailyYield + Number(dailyReward)
-                : Number(dailyReward)
-              userBalances[user].vaults[vaultAddress].dailyReward = Number(dailyReward)
+                ? userBalances[user].totalDailyYield + Number(dailyTradingYield)
+                : Number(dailyTradingYield)
+              userBalances[user].vaults[vaultAddress].dailyYield = userBalances[user].vaults[
+                vaultAddress
+              ].dailyYield
+                ? userBalances[user].vaults[vaultAddress].dailyYield + Number(dailyTradingYield)
+                : Number(dailyTradingYield)
+              if (poolBalance.gt(0)) {
+                const dailyApr = pool.rewardAPR.reduce((b, a) => b + Number(a), 0) / 100 / 365
+                const dailyReward = poolBalance.times(dailyApr).toFixed(4)
+                userBalances[user].totalDailyYield = userBalances[user].totalDailyYield
+                  ? userBalances[user].totalDailyYield + Number(dailyReward)
+                  : Number(dailyReward)
+                userBalances[user].vaults[vaultAddress].dailyReward = Number(dailyReward)
+              }
             }
           }
         }
