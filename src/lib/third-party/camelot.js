@@ -1,11 +1,11 @@
 const { get } = require('lodash')
-const { cachedAxios } = require('../db/models/cache')
+const axios = require('axios')
 
 const getCamelotData = isV3 => {
   let uri = isV3
     ? 'https://api.camelot.exchange/v2/liquidity-v3-data/'
     : 'https://api.camelot.exchange/v2/liquidity-v2-pools-data/'
-  let res = cachedAxios
+  let res = axios
     .get(uri)
     .then(response => get(response, 'data'))
     .catch(error => {
