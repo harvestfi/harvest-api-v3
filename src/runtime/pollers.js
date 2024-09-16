@@ -1005,7 +1005,6 @@ const getLeaderboardData = async () => {
       .sort(([, a], [, b]) => b.totalBalance - a.totalBalance)
       .slice(0, 500)
       .reduce((r, [k, v]) => ({ ...r, [k]: v }), {})
-    console.log(sortable)
     const tvl = Object.values(sortable).reduce((b, a) => b + a.totalBalance, 0)
     const users = Object.values(sortable).length
     console.log('Total TVL:  ', tvl, 'usd')
