@@ -91,6 +91,11 @@ const auraAPRWithPrice = async (poolName, networkId, balPrice, auraPrice) => {
 const rewardRate = async (contract, networkId) => {
   const web3 = getWeb3(networkId)
   const poolInstance = new web3.eth.Contract(pool.contract.abi, contract)
+  const periodFinish = await pool.methods.periodFinish(poolInstance)
+  const now = Date.now() / 1000
+  if (now > Number(periodFinish)) {
+    return new BigNumber(0)
+  }
   const fetchedRewardRate = await pool.methods.rewardRate(poolInstance)
   return new BigNumber(fetchedRewardRate).dividedBy(new BigNumber(10).pow(18)).toNumber()
 }
