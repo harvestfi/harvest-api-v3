@@ -960,6 +960,17 @@ const getLeaderboardData = async () => {
             let pool = pools[CHAIN_NAMES[chain]].filter(
               pool => pool.collateralAddress.toLowerCase() == vaultAddress.toLowerCase(),
             )
+            if (vaultAddress == '0x1571ed0bed4d987fe2b498ddbae7dfa19519f651') {
+              const profitShare = pools[CHAIN_NAMES[chain]].filter(
+                pool => pool.id == 'profit-sharing-farm',
+              )
+              const dailyApr = profitShare.rewardAPR.reduce((b, a) => b + Number(a), 0) / 100 / 365
+              const dailyYield = usdValue.times(dailyApr).toFixed(4)
+              userBalances[user].totalDailyYield = userBalances[user].totalDailyYield
+                ? userBalances[user].totalDailyYield + Number(dailyYield)
+                : Number(dailyYield)
+              userBalances[user].vaults[vaultAddress].dailyYield = Number(dailyYield)
+            }
             if (pool.length > 0) {
               pool = pool[0]
             } else {
