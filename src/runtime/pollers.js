@@ -964,7 +964,8 @@ const getLeaderboardData = async () => {
               const profitShare = pools[CHAIN_NAMES[chain]].filter(
                 pool => pool.id == 'profit-sharing-farm',
               )
-              const dailyApr = profitShare[0].rewardAPR.reduce((b, a) => b + Number(a), 0) / 100 / 365
+              const dailyApr =
+                profitShare[0].rewardAPR.reduce((b, a) => b + Number(a), 0) / 100 / 365
               const dailyYield = usdValue.times(dailyApr).toFixed(4)
               userBalances[user].totalDailyYield = userBalances[user].totalDailyYield
                 ? userBalances[user].totalDailyYield + Number(dailyYield)
