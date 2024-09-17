@@ -964,7 +964,7 @@ const getLeaderboardData = async () => {
               const profitShare = pools[CHAIN_NAMES[chain]].filter(
                 pool => pool.id == 'profit-sharing-farm',
               )
-              const dailyApr = profitShare.rewardAPR.reduce((b, a) => b + Number(a), 0) / 100 / 365
+              const dailyApr = profitShare[0].rewardAPR.reduce((b, a) => b + Number(a), 0) / 100 / 365
               const dailyYield = usdValue.times(dailyApr).toFixed(4)
               userBalances[user].totalDailyYield = userBalances[user].totalDailyYield
                 ? userBalances[user].totalDailyYield + Number(dailyYield)
@@ -1021,6 +1021,7 @@ const getLeaderboardData = async () => {
     console.log('Total TVL:  ', tvl, 'usd')
     console.log('Total users:', users)
   } catch (e) {
+    console.log(e)
     hasErrors = true
   }
 
@@ -1119,58 +1120,58 @@ const runUpdateLoop = async () => {
     resetCallCount()
   }
 
-  await getPools()
-  await getVaults()
+  // await getPools()
+  // await getVaults()
 
-  if (ACTIVE_ENDPOINTS === ENDPOINT_TYPES.ALL || ACTIVE_ENDPOINTS === ENDPOINT_TYPES.EXTERNAL) {
-    await getTotalGmv()
-    if (DEBUG_MODE) {
-      updateCallCountCache('gmv')
-      resetCallCount()
-    }
+  // if (ACTIVE_ENDPOINTS === ENDPOINT_TYPES.ALL || ACTIVE_ENDPOINTS === ENDPOINT_TYPES.EXTERNAL) {
+  //   await getTotalGmv()
+  //   if (DEBUG_MODE) {
+  //     updateCallCountCache('gmv')
+  //     resetCallCount()
+  //   }
 
-    await getWeeklyBuybacks()
-    if (DEBUG_MODE) {
-      updateCallCountCache('profit')
-      resetCallCount()
-    }
+  //   await getWeeklyBuybacks()
+  //   if (DEBUG_MODE) {
+  //     updateCallCountCache('profit')
+  //     resetCallCount()
+  //   }
 
-    await getTotalRevenue()
-    if (DEBUG_MODE) {
-      updateCallCountCache('revenue')
-      resetCallCount()
-    }
+  //   await getTotalRevenue()
+  //   if (DEBUG_MODE) {
+  //     updateCallCountCache('revenue')
+  //     resetCallCount()
+  //   }
 
-    await getTVL()
-    if (DEBUG_MODE) {
-      updateCallCountCache('tvl')
-      resetCallCount()
-    }
+  //   await getTVL()
+  //   if (DEBUG_MODE) {
+  //     updateCallCountCache('tvl')
+  //     resetCallCount()
+  //   }
 
-    await getNanolyData()
-    if (DEBUG_MODE) {
-      updateCallCountCache('nanoly')
-      resetCallCount()
-    }
+  //   await getNanolyData()
+  //   if (DEBUG_MODE) {
+  //     updateCallCountCache('nanoly')
+  //     resetCallCount()
+  //   }
 
-    await getSuperformRewardData()
-    if (DEBUG_MODE) {
-      updateCallCountCache('sfrewards')
-      resetCallCount()
-    }
-  }
+  //   await getSuperformRewardData()
+  //   if (DEBUG_MODE) {
+  //     updateCallCountCache('sfrewards')
+  //     resetCallCount()
+  //   }
+  // }
 
-  await getCurrencyRates()
-  if (DEBUG_MODE) {
-    updateCallCountCache('rates')
-    resetCallCount()
-  }
+  // await getCurrencyRates()
+  // if (DEBUG_MODE) {
+  //   updateCallCountCache('rates')
+  //   resetCallCount()
+  // }
 
-  await getHistoricalRates()
-  if (DEBUG_MODE) {
-    updateCallCountCache('historical_rates')
-    resetCallCount()
-  }
+  // await getHistoricalRates()
+  // if (DEBUG_MODE) {
+  //   updateCallCountCache('historical_rates')
+  //   resetCallCount()
+  // }
 
   await getLeaderboardData()
   if (DEBUG_MODE) {
