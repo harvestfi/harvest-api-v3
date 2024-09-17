@@ -4263,8 +4263,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB', 'fxGRAIL'],
     liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/grail-weth-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
@@ -4362,8 +4362,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB', 'fxGRAIL'],
     liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/arb-usdc-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
@@ -4395,8 +4395,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB', 'fxGRAIL'],
     liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/weth-usdt-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
@@ -4428,8 +4428,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM', 'fxGRAIL'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB', 'fxGRAIL'],
     liquidityUrl: `https://app.gamma.xyz/vault/camelot/arbitrum/details/weth-usdc-narrow`,
     stakeAndDepositHelpMessage: `
     <div class="help-message">
