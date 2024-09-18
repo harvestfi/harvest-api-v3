@@ -7,7 +7,8 @@ const getApy = async (underlying, poolAddress, chainId, reduction) => {
 
   try {
     response = await axios.get(`${MERKL_ENDPOINT}?chainIds[]=${chainId}`)
-    apy = get(response, `data.${chainId}.pools.${poolAddress}.alm.${underlying}.almAPR`, 0)
+    const aprLabel = `Gamma ${underlying}`
+    apy = get(response, `data.${chainId}.pools.${poolAddress}.aprs.${aprLabel}`, 0)
     apy = parseFloat(apy) * parseFloat(reduction)
   } catch (err) {
     console.error('MERKL API error: ', err)
