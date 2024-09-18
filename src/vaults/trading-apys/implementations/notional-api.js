@@ -2,12 +2,14 @@ const BigNumber = require('bignumber.js')
 const axios = require('axios')
 const { get } = require('lodash')
 const { NOTIONAL_ENDPOINT } = require('../../../lib/constants')
+const { CHAIN_IDS } = require('../../../../data/constants')
 
-const getTradingApy = async poolAddress => {
+const getTradingApy = async (poolAddress, chainId = CHAIN_IDS.ETH_MAINNET) => {
   let response, apy
+  let chain = chainId === CHAIN_IDS.ETH_MAINNET ? 'mainnet' : 'arbitrum'
 
   try {
-    response = await axios.get(NOTIONAL_ENDPOINT)
+    response = await axios.get(`${NOTIONAL_ENDPOINT}/${chain}/views/analytics`)
     const interest = new BigNumber(
       get(
         get(response, `data.values[7][1]`, []).find(
@@ -31,7 +33,7 @@ const getTradingApy = async poolAddress => {
     )
     apy = interest.div(1e9).plus(fee.div(1e9)).times(100)
   } catch (err) {
-    console.error('Gamma API error: ', err)
+    console.error('Notional API error: ', err)
     apy = 0
   }
 

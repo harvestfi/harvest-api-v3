@@ -733,7 +733,7 @@ module.exports = [
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.NOTIONAL_API,
-      params: [addresses.V2.notional_nETH.Underlying],
+      params: [addresses.V2.notional_nETH.Underlying, CHAIN_IDS.ETH_MAINNET],
     },
     contractAddress: addresses.V2.notional_nETH.NewPool,
     collateralAddress: addresses.V2.notional_nETH.NewVault,
@@ -762,7 +762,7 @@ module.exports = [
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.NOTIONAL_API,
-      params: [addresses.V2.notional_nGHO.Underlying],
+      params: [addresses.V2.notional_nGHO.Underlying, CHAIN_IDS.ETH_MAINNET],
     },
     contractAddress: addresses.V2.notional_nGHO.NewPool,
     collateralAddress: addresses.V2.notional_nGHO.NewVault,
@@ -792,7 +792,7 @@ module.exports = [
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.NOTIONAL_API,
-      params: [addresses.V2.notional_nUSDC.Underlying],
+      params: [addresses.V2.notional_nUSDC.Underlying, CHAIN_IDS.ETH_MAINNET],
     },
     contractAddress: addresses.V2.notional_nUSDC.NewPool,
     collateralAddress: addresses.V2.notional_nUSDC.NewVault,
@@ -821,7 +821,7 @@ module.exports = [
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.NOTIONAL_API,
-      params: [addresses.V2.notional_nUSDT.Underlying],
+      params: [addresses.V2.notional_nUSDT.Underlying, CHAIN_IDS.ETH_MAINNET],
     },
     contractAddress: addresses.V2.notional_nUSDT.NewPool,
     collateralAddress: addresses.V2.notional_nUSDT.NewVault,
