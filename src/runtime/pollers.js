@@ -671,7 +671,10 @@ const getNanolyData = async () => {
             reward = reward + Number(pool.rewardAPY[i]) / 100
           })
         } else {
-          reward = Number(token_stats.tokenStats['historicalAverageProfitSharingAPY']) / 100
+          const profitShare = pools['eth'].filter(
+            pool => pool.id == 'profit-sharing-farm',
+          )
+          reward = Number(profitShare[0].rewardAPR.reduce((b, a) => b + Number(a), 0) / 100) / 100
           rewards = {
             FARM: reward,
           }
