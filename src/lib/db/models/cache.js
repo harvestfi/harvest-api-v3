@@ -15,6 +15,8 @@ const CacheSchema = new mongoose.Schema({
       DB_CACHE_IDS.TVL,
       DB_CACHE_IDS.RATES,
       DB_CACHE_IDS.HISTORICAL_RATES,
+      DB_CACHE_IDS.SF_REWARDS,
+      DB_CACHE_IDS.LEADERBOARD,
     ],
   },
   data: { type: mongoose.Schema.Types.Mixed, default: [] },
