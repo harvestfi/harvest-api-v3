@@ -2455,6 +2455,34 @@
         "NewStrategy": "0x6228754f46A3183C9128ad9e785C84D8AF31eC86",
         "NewPool": "0x0950314900287c5192DD8F0d94D27261BA255927",
         "mToken": "0xF877ACaFA28c19b96727966690b2f44d35aD5976"
+      },
+      "aerodrome_cbBTC_ETH": {
+        "Underlying": "0x2578365B3dfA7FfE60108e181EFb79FeDdec2319",
+        "NewVault": "0x58255202c78f96F892CA96F4c73380198e655AAE",
+        "NewStrategy": "0xb057B2dAab740D93d9cfC7E3F4F446A0b4832aF2",
+        "NewPool": "0xf3C2EEE0894987ef1b808C90c4e55461cb845669",
+        "Gauge": "0xAFdEBa12B6a870d6639d043030b4b49F9C7c62BB"
+      },
+      "aerodrome_cbBTC_USDC": {
+        "Underlying": "0x9c38b55f9A9Aba91BbCEDEb12bf4428f47A6a0B8",
+        "NewVault": "0xaCac351214386f4635267058eBD2636a500a6736",
+        "NewStrategy": "0x079F9aa1de475ddC4B9D9988818ffa44e3FE926A",
+        "NewPool": "0x04cf6d684dA4c7c059F912Bd6b17D2AAA48aD739",
+        "Gauge": "0xEDC76895e053A9bbAC456B5a9c5B49144eee0080"
+      },
+      "aerodrome_EURC_ETH": {
+        "Underlying": "0x9DFf4b5AE4fD673213502Ab8fbf6d36015efb3E1",
+        "NewVault": "0x9a1B42D54B91a0145C84fBD5529BFb2F12E4Ab2A",
+        "NewStrategy": "0x6726186191D09C9B9FBd95228691774BEF67c105",
+        "NewPool": "0xD4ED983D558372DB9e596F20C08EF15a5C0F518F",
+        "Gauge": "0x21D4eF9D2b66069f3307765A0349526f8E988294"
+      },
+      "moonwell_EURC": {
+        "Underlying": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
+        "NewVault": "0xc101921178b843fDcB6d512E4c30CF44e10FA51B",
+        "NewStrategy": "0xcd945EC40d57c1928bF4AeB2e753D682E4e6953B",
+        "NewPool": "0x73396eeB5c4099CAd81AF53a951A45ccE7Ba97e2",
+        "mToken": "0xb682c840B5F4FC58B20769E691A6fa1305A501a2"
       }
     }
   },
