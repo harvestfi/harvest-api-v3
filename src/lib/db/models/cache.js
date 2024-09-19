@@ -43,7 +43,7 @@ const storeData = (dbSchema, type, data, hasErrors, upsert = true) => {
     {
       type,
     },
-    [{ $unset: "data" }, { $addFields: { data, updatedAt: new Date() } }],
+    [{ $unset: 'data' }, { $addFields: { data, updatedAt: new Date() } }],
     { upsert },
   )
 }
