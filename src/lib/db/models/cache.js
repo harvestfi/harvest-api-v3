@@ -29,7 +29,7 @@ const CacheSchema = new mongoose.Schema({
   updatedAt: { type: Date, default: new Date() },
 })
 
-const storeData = (dbSchema, type, data, hasErrors, upsert = true) => {
+const storeData = (dbSchema, type, data, hasErrors, resetData = true, upsert = true) => {
   if (hasErrors) {
     console.error(
       `Something went wrong during the ${
@@ -43,7 +43,9 @@ const storeData = (dbSchema, type, data, hasErrors, upsert = true) => {
     {
       type,
     },
-    [{ $unset: 'data' }, { $addFields: { data, updatedAt: new Date() } }],
+    resetData
+      ? [{ $unset: 'data' }, { $addFields: { data, updatedAt: new Date() } }]
+      : [{ $addFields: { data, updatedAt: new Date() } }],
     { upsert },
   )
 }

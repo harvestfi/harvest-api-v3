@@ -425,6 +425,7 @@ const getTotalGmv = async () => {
       gmvList,
     },
     hasErrors,
+    false,
   )
   console.log('-- Done getting total GMV --\n')
 }
@@ -514,6 +515,7 @@ const getWeeklyBuybacks = async () => {
       weeklyBuybackPerNetwork: weeklyBuybackPerNetworkList,
     },
     hasErrors,
+    false,
   )
   console.log('-- Done getting weekly buybacks --\n')
 }
@@ -621,6 +623,7 @@ const getTotalRevenue = async () => {
       apyList,
     },
     hasErrors,
+    false,
   )
   console.log('-- Done getting total revenue --\n')
 }
@@ -730,6 +733,7 @@ const getNanolyData = async () => {
       nanolyEndPointData: results,
     },
     hasErrors,
+    false,
   )
   console.log('-- Done getting Nanoly endpoint data --\n')
 }
