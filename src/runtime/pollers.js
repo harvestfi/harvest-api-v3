@@ -1007,9 +1007,6 @@ const getLeaderboardData = async () => {
             }
           }
         }
-        if (userBalances['0x62933bf74e3c3a3adea1ce935a9ccf5919c992de']) {
-          console.log(userBalances['0x62933bf74e3c3a3adea1ce935a9ccf5919c992de'])
-        }
         maxValue = data.userBalances[data.userBalances.length - 1].value
         datapoints += data.userBalances.length
         if (data.userBalances.length < 1000) {
