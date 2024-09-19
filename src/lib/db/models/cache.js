@@ -39,11 +39,11 @@ const storeData = (dbSchema, type, data, hasErrors, upsert = true) => {
     return
   }
 
-  return dbSchema.collection.updateOne(
+  return dbSchema.collection.findOneAndReplace(
     {
       type,
     },
-    [{ $addFields: { data, updatedAt: new Date() } }],
+    { data, updatedAt: new Date() },
     { upsert },
   )
 }
