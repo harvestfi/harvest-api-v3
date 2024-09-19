@@ -630,7 +630,6 @@ const getNanolyData = async () => {
 
   const vaults = await loadData(Cache, DB_CACHE_IDS.VAULTS)
   const pools = await loadData(Cache, DB_CACHE_IDS.POOLS)
-  const token_stats = await loadData(Cache, DB_CACHE_IDS.STATS)
   if (!vaults) {
     console.log(`Error getting Nanoly endpoint data due to missing data. Vaults: ${vaults}`)
     return
