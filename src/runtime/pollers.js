@@ -233,6 +233,7 @@ const getTokenStats = async () => {
       tokenStats,
     },
     hasErrors,
+    false,
   )
   console.log('-- Done getting FARM token stats --\n')
 }
