@@ -937,6 +937,9 @@ const getLeaderboardData = async () => {
           } else {
             vault = 0
           }
+          if (vault.id == 'IFARM') {
+            vault.pricePerFullShare = new BigNumber(1e18)
+          }
           const usdValue = new BigNumber(balance.value)
             .times(vault ? vault.usdPrice : balance.vault.priceUnderlying)
             .times(vault ? vault.pricePerFullShare : balance.vault.lastSharePrice)
