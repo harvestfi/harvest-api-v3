@@ -5,6 +5,99 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'notional_nETH_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.NOTIONAL_API,
+      params: [addresses.ARBITRUM_ONE.V2.notional_nETH_arbitrum.Underlying, CHAIN_IDS.ARBITRUM_ONE],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.notional_nETH_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.notional_nETH_arbitrum.NewVault,
+    rewardAPY: [],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: 'https://notional.finance/liquidity-variable/arbitrum/ETH',
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.notional_nETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> nETH </a>in a Notional farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.notional_nETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> nETH</a>.
+      </p>
+      <p> Get
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.notional_nETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> nETH </a>by supplying liquidity on 
+      <a href="https://notional.finance/liquidity-variable/arbitrum/ETH" target="_blank" rel="noopener noreferrer">NotionalV3</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'notional_nUSDC_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.NOTIONAL_API,
+      params: [
+        addresses.ARBITRUM_ONE.V2.notional_nUSDC_arbitrum.Underlying,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.notional_nUSDC_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.notional_nUSDC_arbitrum.NewVault,
+    rewardAPY: [],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: 'https://notional.finance/liquidity-variable/arbitrum/USDC',
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.notional_nUSDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> nUSDC </a>in a Notional farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.notional_nUSDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> nUSDC</a>.
+      </p>
+      <p> Get
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.notional_nUSDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> nUSDC </a>by supplying liquidity on 
+      <a href="https://notional.finance/liquidity-variable/arbitrum/USDC" target="_blank" rel="noopener noreferrer">NotionalV3</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'notional_nUSDT_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.NOTIONAL_API,
+      params: [
+        addresses.ARBITRUM_ONE.V2.notional_nUSDT_arbitrum.Underlying,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
+    },
+    contractAddress: addresses.ARBITRUM_ONE.V2.notional_nUSDT_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.notional_nUSDT_arbitrum.NewVault,
+    rewardAPY: [],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: 'https://notional.finance/liquidity-variable/arbitrum/USDT',
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.notional_nUSDT_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> nUSDT </a>in a Notional farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.NOTE}" target="_blank" rel="noopener noreferrer">NOTE</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.notional_nUSDT_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> nUSDT</a>.
+      </p>
+      <p> Get
+      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.notional_nUSDT_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> nUSDT </a>by supplying liquidity on 
+      <a href="https://notional.finance/liquidity-variable/arbitrum/USDT" target="_blank" rel="noopener noreferrer">NotionalV3</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'aerodrome_cbBTC_ETH',
     type: POOL_TYPES.INCENTIVE,

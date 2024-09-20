@@ -7,12 +7,13 @@ const { CHAIN_IDS } = require('../../../../data/constants')
 const getTradingApy = async (poolAddress, chainId = CHAIN_IDS.ETH_MAINNET) => {
   let response, apy
   let chain = chainId === CHAIN_IDS.ETH_MAINNET ? 'mainnet' : 'arbitrum'
+  let dataValues = chainId === CHAIN_IDS.ETH_MAINNET ? `data.values[7][1]` : `data.values[14][1]`
 
   try {
     response = await axios.get(`${NOTIONAL_ENDPOINT}/${chain}/views/analytics`)
     const interest = new BigNumber(
       get(
-        get(response, `data.values[7][1]`, []).find(
+        get(response, dataValues, []).find(
           oracle =>
             oracle.quote == poolAddress.toLowerCase() &&
             oracle.oracleType == 'nTokenBlendedInterestRate',
@@ -23,7 +24,7 @@ const getTradingApy = async (poolAddress, chainId = CHAIN_IDS.ETH_MAINNET) => {
     )
     const fee = new BigNumber(
       get(
-        get(response, `data.values[7][1]`, []).find(
+        get(response, dataValues, []).find(
           oracle =>
             oracle.quote == poolAddress.toLowerCase() && oracle.oracleType == 'nTokenFeeRate',
         ),

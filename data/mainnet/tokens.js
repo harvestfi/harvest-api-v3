@@ -46,6 +46,122 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  NOTE_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: [''],
+    tokenAddress: addresses.ARBITRUM_ONE.NOTE,
+    decimals: '8',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['notional-finance'],
+    },
+  },
+  notional_nETH_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/eth.svg'],
+    tokenNames: ['nETH'],
+    apyIconUrls: ['./icons/note.svg'],
+    apyTokenSymbols: ['NOTE'],
+    platform: ['NotionalV3'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.notional_nETH_arbitrum.Underlying,
+    decimals: '8',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.notional_nETH_arbitrum.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.notional_nETH_arbitrum.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.NOTIONAL,
+      params: [
+        1,
+        addresses.ARBITRUM_ONE.V2.notional_nETH_arbitrum.Underlying,
+        addresses.ARBITRUM_ONE.WETH,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.NOTIONAL,
+        params: [
+          1,
+          addresses.ARBITRUM_ONE.NOTE,
+          addresses.ARBITRUM_ONE.V2.notional_nETH_arbitrum.Underlying,
+          addresses.ARBITRUM_ONE.WETH,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
+  notional_nUSDC_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['nUSDC'],
+    apyIconUrls: ['./icons/note.svg'],
+    apyTokenSymbols: ['NOTE'],
+    platform: ['NotionalV3'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.notional_nUSDC_arbitrum.Underlying,
+    decimals: '8',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.notional_nUSDC_arbitrum.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.notional_nUSDC_arbitrum.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.NOTIONAL,
+      params: [
+        3,
+        addresses.ARBITRUM_ONE.V2.notional_nUSDC_arbitrum.Underlying,
+        addresses.ARBITRUM_ONE.WETH,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.NOTIONAL,
+        params: [
+          3,
+          addresses.ARBITRUM_ONE.NOTE,
+          addresses.ARBITRUM_ONE.V2.notional_nUSDC_arbitrum.Underlying,
+          addresses.ARBITRUM_ONE.WETH,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
+  notional_nUSDT_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/usdt.svg'],
+    tokenNames: ['nUSDT'],
+    apyIconUrls: ['./icons/note.svg'],
+    apyTokenSymbols: ['NOTE'],
+    platform: ['NotionalV3'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.notional_nUSDT_arbitrum.Underlying,
+    decimals: '8',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.notional_nUSDT_arbitrum.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.notional_nUSDT_arbitrum.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.NOTIONAL,
+      params: [
+        8,
+        addresses.ARBITRUM_ONE.V2.notional_nUSDT_arbitrum.Underlying,
+        addresses.ARBITRUM_ONE.WETH,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.NOTIONAL,
+        params: [
+          8,
+          addresses.ARBITRUM_ONE.NOTE,
+          addresses.ARBITRUM_ONE.V2.notional_nUSDT_arbitrum.Underlying,
+          addresses.ARBITRUM_ONE.WETH,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
   aerodrome_cbBTC_ETH: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
@@ -1159,7 +1275,7 @@ module.exports = {
     strategyAddress: addresses.V2.notional_nETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.NOTIONAL,
-      params: [1, addresses.V2.notional_nETH.Underlying, addresses.WETH],
+      params: [1, addresses.V2.notional_nETH.Underlying, addresses.WETH, CHAIN_IDS.ETH_MAINNET],
     },
     estimateApyFunctions: [
       {
@@ -1170,6 +1286,7 @@ module.exports = {
           addresses.V2.notional_nETH.Underlying,
           addresses.WETH,
           profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
         ],
       },
     ],
@@ -1188,7 +1305,7 @@ module.exports = {
     strategyAddress: addresses.V2.notional_nGHO.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.NOTIONAL,
-      params: [11, addresses.V2.notional_nGHO.Underlying, addresses.GHO],
+      params: [11, addresses.V2.notional_nGHO.Underlying, addresses.GHO, CHAIN_IDS.ETH_MAINNET],
     },
     estimateApyFunctions: [
       {
@@ -1199,6 +1316,7 @@ module.exports = {
           addresses.V2.notional_nGHO.Underlying,
           addresses.GHO,
           profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
         ],
       },
     ],
@@ -1217,7 +1335,7 @@ module.exports = {
     strategyAddress: addresses.V2.notional_nUSDC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.NOTIONAL,
-      params: [3, addresses.V2.notional_nUSDC.Underlying, addresses.USDC],
+      params: [3, addresses.V2.notional_nUSDC.Underlying, addresses.USDC, CHAIN_IDS.ETH_MAINNET],
     },
     estimateApyFunctions: [
       {
@@ -1228,6 +1346,7 @@ module.exports = {
           addresses.V2.notional_nUSDC.Underlying,
           addresses.USDC,
           profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
         ],
       },
     ],
@@ -1246,7 +1365,7 @@ module.exports = {
     strategyAddress: addresses.V2.notional_nUSDT.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.NOTIONAL,
-      params: [8, addresses.V2.notional_nUSDT.Underlying, addresses.USDT],
+      params: [8, addresses.V2.notional_nUSDT.Underlying, addresses.USDT, CHAIN_IDS.ETH_MAINNET],
     },
     estimateApyFunctions: [
       {
@@ -1257,6 +1376,7 @@ module.exports = {
           addresses.V2.notional_nUSDT.Underlying,
           addresses.USDT,
           profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
         ],
       },
     ],

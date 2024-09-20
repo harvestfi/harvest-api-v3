@@ -1,5 +1,5 @@
 const BigNumber = require('bignumber.js')
-const { web3 } = require('../../../lib/web3')
+const { getWeb3 } = require('../../../lib/web3')
 const { abi: notionalAbi } = require('../../../lib/web3/contracts/notional/contract.json')
 const {
   abi: notionalRewardAbi,
@@ -15,12 +15,24 @@ const {
 } = require('../../../lib/web3/contracts/notional-reward/methods')
 const { getTokenPrice } = require('../../../prices')
 const getNTokenPrice = require('../../../prices/implementations/notional.js').getPrice
+const { CHAIN_IDS } = require('../../../../data/constants')
+const notionalProxy_mainnet = '0x6e7058c91F85E0F6db4fc9da2CA41241f5e4263f'
+const notionalProxy_arbitrum = '0x1344A36A1B56144C3Bc62E7757377D288fDE0369'
 
-const notionalProxy = '0x6e7058c91F85E0F6db4fc9da2CA41241f5e4263f'
+const getApy = async (
+  currencyId,
+  note,
+  nToken,
+  underlyingToken,
+  reduction,
+  chainId = CHAIN_IDS.ETH_MAINNET,
+) => {
+  let notionalProxy =
+    chainId == CHAIN_IDS.ETH_MAINNET ? notionalProxy_mainnet : notionalProxy_arbitrum
+  const web3 = getWeb3(chainId)
 
-const getApy = async (currencyId, note, nToken, underlyingToken, reduction) => {
   const notePrice = await getTokenPrice(note)
-  const nTokenPrice = await getNTokenPrice(currencyId, nToken, underlyingToken)
+  const nTokenPrice = await getNTokenPrice(currencyId, nToken, underlyingToken, chainId)
 
   const notionalInstance = new web3.eth.Contract(notionalAbi, notionalProxy)
   const { totalSupply, incentiveAnnualEmissionRate } = await getNTokenAccount(

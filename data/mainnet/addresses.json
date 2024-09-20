@@ -947,6 +947,7 @@
     "CBETH": "0x1DEBd73E752bEaF79865Fd6446b0c970EaE7732f",
     "dlcBTC": "0x050C24dBf1eEc17babE5fc585F06116A259CC77A",
     "WINR": "0xD77B108d4f6cefaa0Cae9506A934e825BEccA46E",
+    "NOTE": "0x019bE259BC299F3F653688c7655C87F998Bc7bC1",
     "V2": {
       "iPoison": {
         "Underlying": "0xDA016d31f2B52C73D7c1956E955ae8A507b305bB",
@@ -1770,6 +1771,24 @@
         "NewStrategy": "0x557Ac11511b3F826582Cce1FC63a86773A1AE6ca",
         "NewPool": "0x1e13861122B7fc524502E7Bf4fCDAa51c4f69c4F",
         "Gauge": "0x02b8e750E68cb648dB2c2ac4BBb47A10A5c12588"
+      },
+      "notional_nETH_arbitrum": {
+        "Underlying": "0x18b0Fc5A233acF1586Da7C199Ca9E3f486305A29",
+        "NewVault": "0x77BD2F95aAD869C9b6a4B3Ea6EC1201293f4b708",
+        "NewStrategy": "0xAA9CF6C538fA5ed5b1F32E68Dd74168A103bB8C9",
+        "NewPool": "0x82511db8EbE47a14DF68412529A8DF26AddD2179"
+      },
+      "notional_nUSDC_arbitrum": {
+        "Underlying": "0x0F13fb925eDC3E1FE947209010d9c0E072986ADc",
+        "NewVault": "0xe5CCea9A64a096365F05Dffb1CBbe04B8Fd7c710",
+        "NewStrategy": "0xE2012161227654831fB510741a717AB9b6715149",
+        "NewPool": "0x7c18F8dDE08e1e388e7B8693ce8Bb0a0a7347127"
+      },
+      "notional_nUSDT_arbitrum": {
+        "Underlying": "0x9c0Fbb8caDE7B178b135fD2F1da125a37B27f442",
+        "NewVault": "0x9eADb45AC9F467063A4DCa28d21B3142C24697ee",
+        "NewStrategy": "0xbe7F135f9bBe8355596f64452E8CA6bE03dB6434",
+        "NewPool": "0xd7Af3498B861BC070FA3bd694aD0a823558F10b8"
       }
     }
   },
