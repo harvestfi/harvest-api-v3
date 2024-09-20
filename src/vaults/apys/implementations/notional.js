@@ -20,19 +20,19 @@ const notionalProxy_mainnet = '0x6e7058c91F85E0F6db4fc9da2CA41241f5e4263f'
 const notionalProxy_arbitrum = '0x1344A36A1B56144C3Bc62E7757377D288fDE0369'
 
 const getApy = async (
-  chainId = CHAIN_IDS.ETH_MAINNET,
   currencyId,
   note,
   nToken,
   underlyingToken,
   reduction,
+  chainId = CHAIN_IDS.ETH_MAINNET,
 ) => {
   let notionalProxy =
     chainId == CHAIN_IDS.ETH_MAINNET ? notionalProxy_mainnet : notionalProxy_arbitrum
   const web3 = getWeb3(chainId)
 
   const notePrice = await getTokenPrice(note)
-  const nTokenPrice = await getNTokenPrice(chainId, currencyId, nToken, underlyingToken)
+  const nTokenPrice = await getNTokenPrice(currencyId, nToken, underlyingToken, chainId)
 
   const notionalInstance = new web3.eth.Contract(notionalAbi, notionalProxy)
   const { totalSupply, incentiveAnnualEmissionRate } = await getNTokenAccount(
