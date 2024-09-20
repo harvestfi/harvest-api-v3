@@ -187,7 +187,21 @@ const extraFiRewardsContract = require('../contracts/extrafi-rewards/contract.js
 const extraFiLendingMethods = require('../contracts/extrafi-lending/methods')
 const extraFiLendingContract = require('../contracts/extrafi-lending/contract.json')
 
+const fluidLendingResolverMethods = require('../contracts/fluid-lending-resolver/methods')
+const fluidLendingResolverContract = require('../contracts/fluid-lending-resolver/contract.json')
+
+const fluidLiquidityResolverMethods = require('../contracts/fluid-liquidity-resolver/methods')
+const fluidLiquidityResolverContract = require('../contracts/fluid-liquidity-resolver/contract.json')
+
 module.exports = {
+  fluidLendingResolver: {
+    methods: fluidLendingResolverMethods,
+    contract: fluidLendingResolverContract,
+  },
+  fluidLiquidityResolver: {
+    methods: fluidLiquidityResolverMethods,
+    contract: fluidLiquidityResolverContract,
+  },
   extraFiRewards: {
     methods: extraFiRewardsMethods,
     contract: extraFiRewardsContract,

@@ -6,6 +6,66 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.BASE,
+    id: 'fluid_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.fluid_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.fluid_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.fluid_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH </a>to Fluid, earning ETH interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.fluid_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'fluid_EURC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.fluid_EURC.NewPool,
+    collateralAddress: addresses.BASE.V2.fluid_EURC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.fluid_EURC.Underlying}" target="_blank" rel="noopener noreferrer"> EURC </a>to Fluid, earning EURC interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.fluid_EURC.Underlying}" target="_blank" rel="noopener noreferrer"> EURC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'fluid_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.fluid_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.fluid_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.fluid_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Fluid, earning USDC interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.fluid_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
     id: 'aerodrome_cbBTC_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.BASE.V2.aerodrome_cbBTC_ETH.NewPool,

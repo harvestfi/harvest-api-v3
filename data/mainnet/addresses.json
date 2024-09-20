@@ -2483,6 +2483,27 @@
         "NewStrategy": "0xcd945EC40d57c1928bF4AeB2e753D682E4e6953B",
         "NewPool": "0x73396eeB5c4099CAd81AF53a951A45ccE7Ba97e2",
         "mToken": "0xb682c840B5F4FC58B20769E691A6fa1305A501a2"
+      },
+      "fluid_ETH": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0x24736f73c5FB1960862295730CFC61517992C2e6",
+        "NewStrategy": "0xda0860a17dC85a796f8FE748BafFdBEF00a652d2",
+        "NewPool": "0x589f3bF9Ef075f7803A2dF5CF842aEa18e22593F",
+        "fToken": "0x9272D6153133175175Bc276512B2336BE3931CE9"
+      },
+      "fluid_EURC": {
+        "Underlying": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
+        "NewVault": "0x96716C274F66C8A17a8574825904D19C5804e54b",
+        "NewStrategy": "0x406a05F1C31379Ba7B9dD00722815B02425b8248",
+        "NewPool": "0x8d43D667c2E5c261f7dc0D9417842E1Bf569fc29",
+        "fToken": "0x1943FA26360f038230442525Cf1B9125b5DCB401"
+      },
+      "fluid_USDC": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0xD9e38d724CC5ee983BC0Fd0Ce35C3eB20417b673",
+        "NewStrategy": "0xDFa58f1FD17801e3219F3bcB9dcfb5B8065B50D7",
+        "NewPool": "0xE42455Ed64d801E34635C0aE21fF675b88a6025F",
+        "fToken": "0xf42f5795D9ac7e9D757dB633D693cD548Cfd9169"
       }
     }
   },
