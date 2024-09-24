@@ -47,36 +47,67 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
   const borrowAPR = borrowRate.div(1e18).times(secondsPerYear).times(100).times(borrowedMul)
 
   const comptrollerInstance = new web3.eth.Contract(comptrollerAbi, comptrollerAddress.mainnet)
-  const marketConfigWell = await comptrollerMethods.getMarketConfig(
-    mTokenAddr,
-    well,
-    comptrollerInstance,
-  )
-  const marketConfigUsdc = await comptrollerMethods.getMarketConfig(
-    mTokenAddr,
-    usdc,
-    comptrollerInstance,
-  )
-  const marketConfigEurc = await comptrollerMethods.getMarketConfig(
-    mTokenAddr,
-    eurc,
-    comptrollerInstance,
-  )
+  let marketConfigWell, marketConfigUsdc, marketConfigEurc
+  try {
+    marketConfigWell = await comptrollerMethods.getMarketConfig(
+      mTokenAddr,
+      well,
+      comptrollerInstance,
+    )
+  } catch (e) {
+    marketConfigWell = 0
+  }
+  try {
+    marketConfigUsdc = await comptrollerMethods.getMarketConfig(
+      mTokenAddr,
+      usdc,
+      comptrollerInstance,
+    )
+  } catch (e) {
+    marketConfigUsdc = 0
+  }
+  try {
+    marketConfigEurc = await comptrollerMethods.getMarketConfig(
+      mTokenAddr,
+      eurc,
+      comptrollerInstance,
+    )
+  } catch (e) {
+    marketConfigEurc = 0
+  }
 
-  const wellRateSupply = new BigNumber(marketConfigWell.supplyEmissionsPerSec)
-  const wellRateBorrow = new BigNumber(marketConfigWell.borrowEmissionsPerSec)
-  const wellPerYearSupply = wellRateSupply.times(secondsPerYear).div(1e18)
-  const wellPerYearBorrow = wellRateBorrow.times(secondsPerYear).div(1e18)
+  let wellPerYearSupply, wellPerYearBorrow
+  if (marketConfigWell) {
+    const wellRateSupply = new BigNumber(marketConfigWell.supplyEmissionsPerSec)
+    const wellRateBorrow = new BigNumber(marketConfigWell.borrowEmissionsPerSec)
+    wellPerYearSupply = wellRateSupply.times(secondsPerYear).div(1e18)
+    wellPerYearBorrow = wellRateBorrow.times(secondsPerYear).div(1e18)
+  } else {
+    wellPerYearSupply = new BigNumber(0)
+    wellPerYearBorrow = new BigNumber(0)
+  }
 
-  const usdcRateSupply = new BigNumber(marketConfigUsdc.supplyEmissionsPerSec)
-  const usdcRateBorrow = new BigNumber(marketConfigUsdc.borrowEmissionsPerSec)
-  const usdcPerYearSupply = usdcRateSupply.times(secondsPerYear).div(1e6)
-  const usdcPerYearBorrow = usdcRateBorrow.times(secondsPerYear).div(1e6)
+  let usdcPerYearSupply, usdcPerYearBorrow
+  if (marketConfigUsdc) {
+    const usdcRateSupply = new BigNumber(marketConfigUsdc.supplyEmissionsPerSec)
+    const usdcRateBorrow = new BigNumber(marketConfigUsdc.borrowEmissionsPerSec)
+    usdcPerYearSupply = usdcRateSupply.times(secondsPerYear).div(1e6)
+    usdcPerYearBorrow = usdcRateBorrow.times(secondsPerYear).div(1e6)
+  } else {
+    usdcPerYearSupply = new BigNumber(0)
+    usdcPerYearBorrow = new BigNumber(0)
+  }
 
-  const eurcRateSupply = new BigNumber(marketConfigEurc.supplyEmissionsPerSec)
-  const eurcRateBorrow = new BigNumber(marketConfigEurc.borrowEmissionsPerSec)
-  const eurcPerYearSupply = eurcRateSupply.times(secondsPerYear).div(1e6)
-  const eurcPerYearBorrow = eurcRateBorrow.times(secondsPerYear).div(1e6)
+  let eurcPerYearSupply, eurcPerYearBorrow
+  if (marketConfigEurc) {
+    const eurcRateSupply = new BigNumber(marketConfigEurc.supplyEmissionsPerSec)
+    const eurcRateBorrow = new BigNumber(marketConfigEurc.borrowEmissionsPerSec)
+    eurcPerYearSupply = eurcRateSupply.times(secondsPerYear).div(1e6)
+    eurcPerYearBorrow = eurcRateBorrow.times(secondsPerYear).div(1e6)
+  } else {
+    eurcPerYearSupply = new BigNumber(0)
+    eurcPerYearBorrow = new BigNumber(0)
+  }
 
   let totalSupply = new BigNumber(await mTokenMethods.totalSupply(mTokenInstance))
   const exchangeRate = new BigNumber(await mTokenMethods.getExchangeRate(mTokenInstance))
