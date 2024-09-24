@@ -25,6 +25,7 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
 
   const well = '0xA88594D404727625A9437C3f886C7643872296AE'
   const usdc = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913'
+  const eurc = '0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42'
   const secondsPerYear = 60 * 60 * 24 * 365.25
   const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddr)
   const invested = new BigNumber(await strategyMethods.getInvestedBalance(strategyInstance))
@@ -56,6 +57,11 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
     usdc,
     comptrollerInstance,
   )
+  const marketConfigEurc = await comptrollerMethods.getMarketConfig(
+    mTokenAddr,
+    eurc,
+    comptrollerInstance,
+  )
 
   const wellRateSupply = new BigNumber(marketConfigWell.supplyEmissionsPerSec)
   const wellRateBorrow = new BigNumber(marketConfigWell.borrowEmissionsPerSec)
@@ -67,6 +73,11 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
   const usdcPerYearSupply = usdcRateSupply.times(secondsPerYear).div(1e6)
   const usdcPerYearBorrow = usdcRateBorrow.times(secondsPerYear).div(1e6)
 
+  const eurcRateSupply = new BigNumber(marketConfigEurc.supplyEmissionsPerSec)
+  const eurcRateBorrow = new BigNumber(marketConfigEurc.borrowEmissionsPerSec)
+  const eurcPerYearSupply = eurcRateSupply.times(secondsPerYear).div(1e6)
+  const eurcPerYearBorrow = eurcRateBorrow.times(secondsPerYear).div(1e6)
+
   let totalSupply = new BigNumber(await mTokenMethods.totalSupply(mTokenInstance))
   const exchangeRate = new BigNumber(await mTokenMethods.getExchangeRate(mTokenInstance))
   totalSupply = totalSupply.times(exchangeRate).div(1e18)
@@ -75,6 +86,7 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
   const underlyingPrice = await getTokenPrice(underlying, CHAIN_IDS.BASE)
   const wellPrice = await getTokenPrice(well, CHAIN_IDS.BASE)
   const usdcPrice = await getTokenPrice(usdc, CHAIN_IDS.BASE)
+  const eurcPrice = await getTokenPrice(eurc, CHAIN_IDS.BASE)
 
   const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
   const underlyingDecimals = await getDecimals(underlyingInstance)
@@ -82,6 +94,7 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
   const rewardAPRSupply = wellPerYearSupply
     .times(wellPrice)
     .plus(usdcPerYearSupply.times(usdcPrice))
+    .plus(eurcPerYearSupply.times(eurcPrice))
     .div(totalSupply.div(10 ** underlyingDecimals).times(underlyingPrice))
     .times(100)
     .times(reduction)
@@ -89,6 +102,7 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
   const rewardAPRBorrow = wellPerYearBorrow
     .times(wellPrice)
     .plus(usdcPerYearBorrow.times(usdcPrice))
+    .plus(eurcPerYearBorrow.times(eurcPrice))
     .div(totalBorrows.div(10 ** underlyingDecimals).times(underlyingPrice))
     .times(100)
     .times(reduction)
