@@ -4077,8 +4077,8 @@ module.exports = {
   },
   lodestarHodl_MAGIC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
-    apyTokenSymbols: ['ARB', 'LODE'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     apyDescriptionOverride: [
       'Auto compounding <u>ARB</u>',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
@@ -4102,7 +4102,6 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_MAGIC.NewStrategy,
-          profitSharingCut10Percent,
         ],
       },
       {
@@ -4121,8 +4120,8 @@ module.exports = {
   },
   lodestarHodl_PENDLE: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
-    apyTokenSymbols: ['ARB', 'LODE'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     apyDescriptionOverride: [
       'Auto compounding <u>ARB</u>',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
@@ -4146,7 +4145,6 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_PENDLE.NewStrategy,
-          profitSharingCut10Percent,
         ],
       },
       {
@@ -4165,8 +4163,8 @@ module.exports = {
   },
   lodestar_MAGIC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg', './icons/arb.svg'],
-    apyTokenSymbols: ['LODE', 'ARB'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     logoUrl: ['./icons/magic.svg'],
     tokenNames: ['MAGIC'],
     platform: ['Lodestar'],
@@ -4194,8 +4192,8 @@ module.exports = {
   },
   lodestar_PENDLE: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg', './icons/arb.svg'],
-    apyTokenSymbols: ['LODE', 'ARB'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     logoUrl: ['./icons/pendle.svg'],
     tokenNames: ['PENDLE'],
     platform: ['Lodestar'],
@@ -4817,8 +4815,8 @@ module.exports = {
   },
   lodestarHodl_ARB: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
-    apyTokenSymbols: ['ARB', 'LODE'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     apyDescriptionOverride: [
       'Auto compounding <u>ARB</u>',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
@@ -4842,7 +4840,6 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestarHodl_ARB.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_ARB.NewStrategy,
-          profitSharingCut10Percent,
         ],
       },
       {
@@ -4861,8 +4858,8 @@ module.exports = {
   },
   lodestarHodl_DAI: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
-    apyTokenSymbols: ['ARB', 'LODE'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     apyDescriptionOverride: [
       'Auto compounding <u>ARB</u>',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
@@ -4886,7 +4883,6 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestarHodl_DAI.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_DAI.NewStrategy,
-          profitSharingCut10Percent,
         ],
       },
       {
@@ -4905,8 +4901,8 @@ module.exports = {
   },
   lodestarHodl_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
-    apyTokenSymbols: ['ARB', 'LODE'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     apyDescriptionOverride: [
       'Auto compounding <u>ARB</u>',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
@@ -4930,7 +4926,6 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestarHodl_ETH.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_ETH.NewStrategy,
-          profitSharingCut10Percent,
         ],
       },
       {
@@ -4949,8 +4944,8 @@ module.exports = {
   },
   lodestarHodl_FRAX: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
-    apyTokenSymbols: ['ARB', 'LODE'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     apyDescriptionOverride: [
       'Auto compounding <u>ARB</u>',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
@@ -4974,7 +4969,6 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_FRAX.NewStrategy,
-          profitSharingCut10Percent,
         ],
       },
       {
@@ -4993,8 +4987,8 @@ module.exports = {
   },
   lodestarHodl_GMX: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
-    apyTokenSymbols: ['ARB', 'LODE'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     apyDescriptionOverride: [
       'Auto compounding <u>ARB</u>',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
@@ -5018,7 +5012,6 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestarHodl_GMX.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_GMX.NewStrategy,
-          profitSharingCut10Percent,
         ],
       },
       {
@@ -5037,8 +5030,8 @@ module.exports = {
   },
   lodestarHodl_USDCe: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
-    apyTokenSymbols: ['ARB', 'LODE'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     apyDescriptionOverride: [
       'Auto compounding <u>ARB</u>',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
@@ -5062,7 +5055,6 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDCe.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDCe.NewStrategy,
-          profitSharingCut10Percent,
         ],
       },
       {
@@ -5081,8 +5073,8 @@ module.exports = {
   },
   lodestarHodl_USDT: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
-    apyTokenSymbols: ['ARB', 'LODE'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     apyDescriptionOverride: [
       'Auto compounding <u>ARB</u>',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
@@ -5106,7 +5098,6 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDT.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDT.NewStrategy,
-          profitSharingCut10Percent,
         ],
       },
       {
@@ -5125,8 +5116,8 @@ module.exports = {
   },
   lodestarHodl_WBTC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
-    apyTokenSymbols: ['ARB', 'LODE'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     apyDescriptionOverride: [
       'Auto compounding <u>ARB</u>',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
@@ -5150,7 +5141,6 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestarHodl_WBTC.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_WBTC.NewStrategy,
-          profitSharingCut10Percent,
         ],
       },
       {
@@ -5169,8 +5159,8 @@ module.exports = {
   },
   lodestarHodl_wstETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
-    apyTokenSymbols: ['ARB', 'LODE'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     apyDescriptionOverride: [
       'Auto compounding <u>ARB</u>',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
@@ -5194,7 +5184,6 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestarHodl_wstETH.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_wstETH.NewStrategy,
-          profitSharingCut10Percent,
         ],
       },
       {
@@ -5224,8 +5213,8 @@ module.exports = {
   },
   lodestarHodl_USDC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/arb.svg', './icons/lode.svg'],
-    apyTokenSymbols: ['ARB', 'LODE'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     apyDescriptionOverride: [
       'Auto compounding <u>ARB</u>',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
@@ -5249,7 +5238,6 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.cToken,
           addresses.ARBITRUM_ONE.V2.lodestarHodl_USDC.NewStrategy,
-          profitSharingCut10Percent,
         ],
       },
       {
@@ -5292,8 +5280,8 @@ module.exports = {
   },
   lodestar_ARB: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg', './icons/arb.svg'],
-    apyTokenSymbols: ['LODE', 'ARB'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     logoUrl: ['./icons/arb.svg'],
     tokenNames: ['ARB'],
     platform: ['Lodestar'],
@@ -5321,8 +5309,8 @@ module.exports = {
   },
   lodestar_FRAX: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg', './icons/arb.svg'],
-    apyTokenSymbols: ['LODE', 'ARB'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     logoUrl: ['./icons/frax.svg'],
     tokenNames: ['FRAX'],
     platform: ['Lodestar'],
@@ -5350,8 +5338,8 @@ module.exports = {
   },
   lodestar_GMX: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg', './icons/arb.svg'],
-    apyTokenSymbols: ['LODE', 'ARB'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     logoUrl: ['./icons/gmx.svg'],
     tokenNames: ['GMX'],
     platform: ['Lodestar'],
@@ -5379,8 +5367,8 @@ module.exports = {
   },
   lodestar_wstETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg', './icons/arb.svg'],
-    apyTokenSymbols: ['LODE', 'ARB'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     logoUrl: ['./icons/steth.svg'],
     tokenNames: ['wstETH'],
     platform: ['Lodestar'],
@@ -5541,8 +5529,8 @@ module.exports = {
   },
   lodestar_DAI: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg', './icons/arb.svg'],
-    apyTokenSymbols: ['LODE', 'ARB'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     logoUrl: ['./icons/dai.svg'],
     tokenNames: ['DAI'],
     platform: ['Lodestar'],
@@ -5570,8 +5558,8 @@ module.exports = {
   },
   lodestar_USDC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg', './icons/arb.svg'],
-    apyTokenSymbols: ['LODE', 'ARB'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC'],
     platform: ['Lodestar'],
@@ -5599,8 +5587,8 @@ module.exports = {
   },
   lodestar_USDCe: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg', './icons/arb.svg'],
-    apyTokenSymbols: ['LODE', 'ARB'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDCe'],
     platform: ['Lodestar'],
@@ -5628,8 +5616,8 @@ module.exports = {
   },
   lodestar_USDT: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg', './icons/arb.svg'],
-    apyTokenSymbols: ['LODE', 'ARB'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     logoUrl: ['./icons/usdt.svg'],
     tokenNames: ['USDT'],
     platform: ['Lodestar'],
@@ -5657,8 +5645,8 @@ module.exports = {
   },
   lodestar_WBTC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg', './icons/arb.svg'],
-    apyTokenSymbols: ['LODE', 'ARB'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     logoUrl: ['./icons/wbtc.svg'],
     tokenNames: ['WBTC'],
     platform: ['Lodestar'],

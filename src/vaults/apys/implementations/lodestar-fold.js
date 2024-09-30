@@ -9,52 +9,6 @@ const {
 } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
 
-const getARBRewardRate = async (comptrollerMethods, comptrollerInstance) => {
-  const web3 = web3ARBITRUM
-  const {
-    contract: { abi: cTokenAbi },
-    methods: cTokenMethods,
-  } = cToken
-  const {
-    contract: { abi: tokenAbi },
-    methods: { getDecimals },
-  } = token
-
-  const markets = await comptrollerMethods.getAllMarkets(comptrollerInstance)
-  let totalUSD = new BigNumber(0)
-  for (let i in markets) {
-    const market = markets[i]
-    const cTokenInstance = new web3.eth.Contract(cTokenAbi, market)
-    let underlying
-    if (market == '0x2193c45244AF12C280941281c8aa67dD08be0a64') {
-      underlying = '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1'
-    } else {
-      underlying = await cTokenMethods.getUnderlying(cTokenInstance)
-    }
-
-    let totalSupply = new BigNumber(await cTokenMethods.totalSupply(cTokenInstance))
-    const exchangeRate = new BigNumber(await cTokenMethods.getExchangeRate(cTokenInstance))
-    totalSupply = totalSupply.times(exchangeRate).div(1e18)
-    const totalBorrows = new BigNumber(await cTokenMethods.totalBorrows(cTokenInstance))
-
-    const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
-    const underlyingDecimals = await getDecimals(underlyingInstance)
-
-    const underlyingPrice = await getTokenPrice(underlying, CHAIN_IDS.ARBITRUM_ONE)
-
-    const usdSupply = totalSupply.div(10 ** underlyingDecimals).times(underlyingPrice)
-    const usdBorrow = totalBorrows.div(10 ** underlyingDecimals).times(underlyingPrice)
-
-    totalUSD = totalUSD.plus(usdSupply).plus(usdBorrow)
-  }
-
-  const arb = '0x912CE59144191C1204E64559FE8253a0e49E6548'
-  const arbPerWeek = new BigNumber(23020)
-  const arbPrice = await getTokenPrice(arb, CHAIN_IDS.ARBITRUM_ONE)
-  const usdPerWeek = arbPerWeek.times(arbPrice)
-  return usdPerWeek.times(52).div(totalUSD).times(100)
-}
-
 const getApy = async (underlying, cTokenAddr, strategyAddr, reduction) => {
   const web3 = web3ARBITRUM
   const {
@@ -116,20 +70,16 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, reduction) => {
   const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
   const underlyingDecimals = await getDecimals(underlyingInstance)
 
-  const arbAPR = await getARBRewardRate(comptrollerMethods, comptrollerInstance)
-
   const rewardAPRSupply = rewardPerYearSupply
     .times(rewardPrice)
     .div(totalSupply.div(10 ** underlyingDecimals).times(underlyingPrice))
     .times(100)
-    .plus(arbAPR)
     .times(reduction)
     .times(suppliedMul)
   const rewardAPRBorrow = rewardPerYearBorrow
     .times(rewardPrice)
     .div(totalBorrows.div(10 ** underlyingDecimals).times(underlyingPrice))
     .times(100)
-    .plus(arbAPR)
     .times(reduction)
     .times(borrowedMul)
 
