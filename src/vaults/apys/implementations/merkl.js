@@ -10,6 +10,9 @@ const getApy = async (underlying, poolAddress, chainId, reduction) => {
     const aprLabel = `Gamma ${underlying}`
     apy = get(response, `data.${chainId}.pools.${poolAddress}.aprs.${aprLabel}`, 0)
     apy = parseFloat(apy) * parseFloat(reduction)
+    if (isNaN(apy)) {
+      apy = 0
+    }
   } catch (err) {
     console.error('MERKL API error: ', err)
     apy = 0
