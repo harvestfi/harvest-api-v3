@@ -4077,10 +4077,10 @@ module.exports = {
   },
   lodestarHodl_MAGIC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg'],
-    apyTokenSymbols: ['LODE'],
+    apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
+    apyTokenSymbols: ['INTEREST', 'LODE'],
     apyDescriptionOverride: [
-      'Auto compounding <u>ARB</u>',
+      'Auto compounding Interest',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
     ],
     logoUrl: ['./icons/magic.svg'],
@@ -4120,10 +4120,10 @@ module.exports = {
   },
   lodestarHodl_PENDLE: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg'],
-    apyTokenSymbols: ['LODE'],
+    apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
+    apyTokenSymbols: ['INTEREST', 'LODE'],
     apyDescriptionOverride: [
-      'Auto compounding <u>ARB</u>',
+      'Auto compounding Interest',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
     ],
     logoUrl: ['./icons/pendle.svg'],
@@ -4815,10 +4815,10 @@ module.exports = {
   },
   lodestarHodl_ARB: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg'],
-    apyTokenSymbols: ['LODE'],
+    apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
+    apyTokenSymbols: ['INTEREST', 'LODE'],
     apyDescriptionOverride: [
-      'Auto compounding <u>ARB</u>',
+      'Auto compounding Interest',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
     ],
     logoUrl: ['./icons/arb.svg'],
@@ -4858,10 +4858,10 @@ module.exports = {
   },
   lodestarHodl_DAI: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg'],
-    apyTokenSymbols: ['LODE'],
+    apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
+    apyTokenSymbols: ['INTEREST', 'LODE'],
     apyDescriptionOverride: [
-      'Auto compounding <u>ARB</u>',
+      'Auto compounding Interest',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
     ],
     logoUrl: ['./icons/dai.svg'],
@@ -4901,10 +4901,10 @@ module.exports = {
   },
   lodestarHodl_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg'],
-    apyTokenSymbols: ['LODE'],
+    apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
+    apyTokenSymbols: ['INTEREST', 'LODE'],
     apyDescriptionOverride: [
-      'Auto compounding <u>ARB</u>',
+      'Auto compounding Interest',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
     ],
     logoUrl: ['./icons/eth.svg'],
@@ -4944,10 +4944,10 @@ module.exports = {
   },
   lodestarHodl_FRAX: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg'],
-    apyTokenSymbols: ['LODE'],
+    apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
+    apyTokenSymbols: ['INTEREST', 'LODE'],
     apyDescriptionOverride: [
-      'Auto compounding <u>ARB</u>',
+      'Auto compounding Interest',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
     ],
     logoUrl: ['./icons/frax.svg'],
@@ -4987,10 +4987,10 @@ module.exports = {
   },
   lodestarHodl_GMX: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg'],
-    apyTokenSymbols: ['LODE'],
+    apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
+    apyTokenSymbols: ['INTEREST', 'LODE'],
     apyDescriptionOverride: [
-      'Auto compounding <u>ARB</u>',
+      'Auto compounding Interest',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
     ],
     logoUrl: ['./icons/gmx.svg'],
@@ -5030,10 +5030,10 @@ module.exports = {
   },
   lodestarHodl_USDCe: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg'],
-    apyTokenSymbols: ['LODE'],
+    apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
+    apyTokenSymbols: ['INTEREST', 'LODE'],
     apyDescriptionOverride: [
-      'Auto compounding <u>ARB</u>',
+      'Auto compounding Interest',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
     ],
     logoUrl: ['./icons/usdc.svg'],
@@ -5073,10 +5073,10 @@ module.exports = {
   },
   lodestarHodl_USDT: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg'],
-    apyTokenSymbols: ['LODE'],
+    apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
+    apyTokenSymbols: ['INTEREST', 'LODE'],
     apyDescriptionOverride: [
-      'Auto compounding <u>ARB</u>',
+      'Auto compounding Interest',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
     ],
     logoUrl: ['./icons/usdt.svg'],
@@ -5116,10 +5116,10 @@ module.exports = {
   },
   lodestarHodl_WBTC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg'],
-    apyTokenSymbols: ['LODE'],
+    apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
+    apyTokenSymbols: ['INTEREST', 'LODE'],
     apyDescriptionOverride: [
-      'Auto compounding <u>ARB</u>',
+      'Auto compounding Interest',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
     ],
     logoUrl: ['./icons/wbtc.svg'],
@@ -5159,10 +5159,10 @@ module.exports = {
   },
   lodestarHodl_wstETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg'],
-    apyTokenSymbols: ['LODE'],
+    apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
+    apyTokenSymbols: ['INTEREST', 'LODE'],
     apyDescriptionOverride: [
-      'Auto compounding <u>ARB</u>',
+      'Auto compounding Interest',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
     ],
     logoUrl: ['./icons/steth.svg'],
@@ -5213,10 +5213,10 @@ module.exports = {
   },
   lodestarHodl_USDC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg'],
-    apyTokenSymbols: ['LODE'],
+    apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
+    apyTokenSymbols: ['INTEREST', 'LODE'],
     apyDescriptionOverride: [
-      'Auto compounding <u>ARB</u>',
+      'Auto compounding Interest',
       'Auto harvested <u>LODE</u> claimable as <u>fLODE</u>',
     ],
     logoUrl: ['./icons/usdc.svg'],
