@@ -261,6 +261,42 @@ const UI_DATA_FILES = {
   TOKENS: 'tokens',
 }
 
+const CURRENCY_RATES = [
+  'AUD',
+  'BGN',
+  'BRL',
+  'CAD',
+  'CHF',
+  'CNY',
+  'CZK',
+  'DKK',
+  'EUR',
+  'GBP',
+  'HKD',
+  'HRK',
+  'HUF',
+  'IDR',
+  'ILS',
+  'INR',
+  'ISK',
+  'JPY',
+  'KRW',
+  'MXN',
+  'MYR',
+  'NOK',
+  'NZD',
+  'PHP',
+  'PLN',
+  'RON',
+  'RUB',
+  'SEK',
+  'SGD',
+  'THB',
+  'TRY',
+  'USD',
+  'ZAR',
+]
+
 module.exports = {
   WEB3_CALL_COUNT_STATS_KEY,
   WEB3_CALL_COUNT_KEY,
@@ -324,4 +360,5 @@ module.exports = {
   CURRENCY_API_URL,
   HISTORICAL_CURRENCY_API_URL,
   ZKSYNC_RPC_URL,
+  CURRENCY_RATES,
 }

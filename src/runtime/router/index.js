@@ -5,6 +5,7 @@ const {
   DB_CACHE_IDS,
   HEALTH_ALERT_TIME_MS,
   CHAIN_IDS,
+  CURRENCY_RATES,
 } = require('../../lib/constants')
 const { validateAPIKey, asyncWrap, validateTokenSymbol } = require('./middleware')
 const { Cache } = require('../../lib/db/models/cache')
@@ -304,16 +305,11 @@ const initRouter = app => {
     '/historical-rates',
     asyncWrap(async (req, res) => {
       const rate = await Cache.findOne({ type: DB_CACHE_IDS.HISTORICAL_RATES })
-      let eur = rate.get('EUR')
-      let gbp = rate.get('GBP')
-      let chf = rate.get('CHF')
-      let jpy = rate.get('JPY')
-      res.send({
-        EUR: eur,
-        GBP: gbp,
-        CHF: chf,
-        JPY: jpy,
+      let currencyRates = {}
+      CURRENCY_RATES.forEach(currency => {
+        currencyRates[currency] = rate.get(currency)
       })
+      res.send(currencyRates)
     }),
   )
 
