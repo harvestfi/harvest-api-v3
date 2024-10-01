@@ -306,9 +306,13 @@ const initRouter = app => {
       const rate = await Cache.findOne({ type: DB_CACHE_IDS.HISTORICAL_RATES })
       let eur = rate.get('EUR')
       let gbp = rate.get('GBP')
+      let chf = rate.get('CHF')
+      let jpy = rate.get('JPY')
       res.send({
         EUR: eur,
         GBP: gbp,
+        CHF: chf,
+        JPY: jpy,
       })
     }),
   )
