@@ -613,7 +613,28 @@
       "NewVault": "0xCdCc3DA8fD73CEDFa8e6927864E463b4760b320d",
       "NewStrategy": "0x2b5f3EE52BC5297bEB3998047882eeB6fB96c65E",
       "NewPool": "0x4dF733BD897A44c12FC868c6A47b4139d2b0593C"
-    }    
+    },
+    "fluid_ETH_mainnet": {
+      "Underlying": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "NewVault": "0xf1203b6154e856557cBd97A38B6d0587232E3Fb9",
+      "NewStrategy": "0x553EeEce079E154107e7dcc2808d84897e0c18a0",
+      "NewPool": "0x33C4E647B894ED1e606D0391B75AD92893d42cFe",
+      "fToken": "0x90551c1795392094FE6D29B758EcCD233cFAa260"
+    },
+    "fluid_USDC_mainnet": {
+      "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "NewVault": "0xfc1c3E7b62181f9A66AEc94C9bE54dc525e2838F",
+      "NewStrategy": "0x7A81584ba9529ec95563305a0101a3e61ADA8819",
+      "NewPool": "0x5e951a80b8e14B859823397A9CDB2f26E84134C6",
+      "fToken": "0x9Fb7b4477576Fe5B32be4C1843aFB1e55F251B33"
+    },
+    "fluid_USDT_mainnet": {
+      "Underlying": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "NewVault": "0x555495529852821368d3D4ee677914B3Dbc3ed63",
+      "NewStrategy": "0x1D75Fe2E66d382cbbd56b180455825cafD8eCd57",
+      "NewPool": "0xa86Fb4Aa3893337F106458A70cA31358D5dF4dCe",
+      "fToken": "0x5C20B550819128074FD538Edf79791733ccEdd18"
+    }
   },
   "MATIC": {
     "miFARM": "0xab0b2ddB9C7e440fAc8E140A89c0dbCBf2d7Bbff",
@@ -1789,6 +1810,27 @@
         "NewVault": "0x9eADb45AC9F467063A4DCa28d21B3142C24697ee",
         "NewStrategy": "0xbe7F135f9bBe8355596f64452E8CA6bE03dB6434",
         "NewPool": "0xd7Af3498B861BC070FA3bd694aD0a823558F10b8"
+      },
+      "fluid_ETH_arbitrum": {
+        "Underlying": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        "NewVault": "0xE351c30c1B7Da09df89D1C8528ce7110D0702d23",
+        "NewStrategy": "0x3C61ddB99b2a0FDc194a9B40DF9C7C3507759eD6",
+        "NewPool": "0x54FE3f3534115c720A28D90f479b5025357444f8",
+        "fToken": "0x45Df0656F8aDf017590009d2f1898eeca4F0a205"
+      },
+      "fluid_USDC_arbitrum": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0x58677351d11F8941c7199c49aa7379A156404972",
+        "NewStrategy": "0x26d2E63348CB8188bA0D6E0997a03ff7F8A3401E",
+        "NewPool": "0xe63Be7B53F644eACD99A321bA21264E3D6685e54",
+        "fToken": "0x1A996cb54bb95462040408C06122D45D6Cdb6096"
+      },
+      "fluid_USDT_arbitrum": {
+        "Underlying": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+        "NewVault": "0x5189dcB7CDAB823915865817778032d2a6fC8108",
+        "NewStrategy": "0xF2bE7dD30Ff9B155c74D3094DB1378A156fad371",
+        "NewPool": "0x9A4c49ddf23CC599bb94d00b299525Bd46160bea",
+        "fToken": "0x4A03F37e7d3fC243e3f99341d36f4b829BEe5E03"
       }
     }
   },
