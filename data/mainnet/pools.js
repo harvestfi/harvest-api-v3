@@ -6,6 +6,126 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'fluid_ETH_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.fluid_ETH_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.fluid_ETH_arbitrum.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.fluid_ETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> ETH </a>to Fluid, earning ETH interest.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.fluid_ETH_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> ETH</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'fluid_USDC_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.fluid_USDC_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.fluid_USDC_arbitrum.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.fluid_USDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Fluid, earning USDC interest.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.fluid_USDC_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'fluid_USDT_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.fluid_USDT_arbitrum.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.fluid_USDT_arbitrum.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.fluid_USDT_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> USDT </a>to Fluid, earning USDT interest.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.fluid_USDT_arbitrum.Underlying}" target="_blank" rel="noopener noreferrer"> USDT</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'fluid_ETH_mainnet',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.fluid_ETH_mainnet.NewPool,
+    collateralAddress: addresses.V2.fluid_ETH_mainnet.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.fluid_ETH_mainnet.Underlying}" target="_blank" rel="noopener noreferrer"> ETH </a>to Fluid, earning ETH interest.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://etherscan.io/token/${addresses.V2.fluid_ETH_mainnet.Underlying}" target="_blank" rel="noopener noreferrer"> ETH</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'fluid_USDC_mainnet',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.fluid_USDC_mainnet.NewPool,
+    collateralAddress: addresses.V2.fluid_USDC_mainnet.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.fluid_USDC_mainnet.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Fluid, earning USDC interest.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://etherscan.io/token/${addresses.V2.fluid_USDC_mainnet.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'fluid_USDT_mainnet',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.fluid_USDT_mainnet.NewPool,
+    collateralAddress: addresses.V2.fluid_USDT_mainnet.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.fluid_USDT_mainnet.Underlying}" target="_blank" rel="noopener noreferrer"> USDT </a>to Fluid, earning USDT interest.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://etherscan.io/token/${addresses.V2.fluid_USDT_mainnet.Underlying}" target="_blank" rel="noopener noreferrer"> USDT</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'notional_nETH_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -505,13 +625,13 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
-       <a href="https://arbiscan.io/token/${addresses.V2.penpie_agETH2612.Underlying}" target="_blank" rel="noopener noreferrer">agETH Pendle LP tokens</a> to Penpie, earning 
-       <a href="https://arbiscan.io/token/${addresses.PENDLE}" target="_blank" rel="noopener noreferrer">PENDLE</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.penpie_agETH2612.Underlying}" target="_blank" rel="noopener noreferrer">agETH Pendle LP tokens</a> to Penpie, earning 
+       <a href="https://etherscan.io/token/${addresses.PENDLE}" target="_blank" rel="noopener noreferrer">PENDLE</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://arbiscan.io/token/${addresses.V2.penpie_agETH2612.Underlying}" target="_blank" rel="noopener noreferrer">agETH Pendle LP tokens</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.penpie_agETH2612.Underlying}" target="_blank" rel="noopener noreferrer">agETH Pendle LP tokens</a>.
       </p>
       <p> Get the 
-        <a href="https://arbiscan.io/token/${addresses.V2.penpie_agETH2612.Underlying}" target="_blank" rel="noopener noreferrer">agETH Pendle LP tokens</a> by supplying liquidity on 
+        <a href="https://etherscan.io/token/${addresses.V2.penpie_agETH2612.Underlying}" target="_blank" rel="noopener noreferrer">agETH Pendle LP tokens</a> by supplying liquidity on 
         <a href="https://app.pendle.finance/trade/pools/${addresses.V2.penpie_agETH2612.Underlying}/zap/in?chain=ethereum" target="_blank" rel="noopener noreferrer">Pendle</a>.
       </p>
     </div>
