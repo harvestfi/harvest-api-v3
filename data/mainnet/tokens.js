@@ -5668,8 +5668,8 @@ module.exports = {
   },
   lodestar_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    apyIconUrls: ['./icons/lode.svg', './icons/arb.svg'],
-    apyTokenSymbols: ['LODE', 'ARB'],
+    apyIconUrls: ['./icons/lode.svg'],
+    apyTokenSymbols: ['LODE'],
     logoUrl: ['./icons/eth.svg'],
     tokenNames: ['ETH'],
     platform: ['Lodestar'],
