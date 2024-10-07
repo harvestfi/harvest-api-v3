@@ -91,14 +91,14 @@ module.exports = {
     strategyAddress: addresses.ZKSYNC.V2.syncswap_ETH_USDCe_classic.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.SYNCSWAP_POOL,
-      params: [addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.Underlying],
+      params: [addresses.ZKSYNC.V2.syncswap_ETH_USDCe_classic.Underlying],
     },
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.SYNCSWAP,
         params: [
-          addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.Underlying,
-          addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.StakingPool,
+          addresses.ZKSYNC.V2.syncswap_ETH_USDCe_classic.Underlying,
+          addresses.ZKSYNC.V2.syncswap_ETH_USDCe_classic.StakingPool,
           profitSharingCut10Percent,
         ],
       },
