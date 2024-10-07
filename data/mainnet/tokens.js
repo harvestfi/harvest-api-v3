@@ -133,7 +133,7 @@ module.exports = {
   },
   syncswap_wrsETH_ETH_aqua: {
     chain: CHAIN_IDS.ZKSYNC,
-    logoUrl: ['./icons/wrsETH.svg', './icons/eth.svg'],
+    logoUrl: ['./icons/wrseth.svg', './icons/eth.svg'],
     tokenNames: ['wrsETH', 'ETH'],
     apyIconUrls: ['./icons/zk.svg'],
     apyTokenSymbols: ['ZK'],
