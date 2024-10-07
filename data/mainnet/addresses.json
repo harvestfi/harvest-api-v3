@@ -612,7 +612,8 @@
       "Underlying": "0x6010676Bc2534652aD1Ef5Fa8073DcF9AD7EBFBe",
       "NewVault": "0xCdCc3DA8fD73CEDFa8e6927864E463b4760b320d",
       "NewStrategy": "0x2b5f3EE52BC5297bEB3998047882eeB6fB96c65E",
-      "NewPool": "0x4dF733BD897A44c12FC868c6A47b4139d2b0593C"
+      "NewPool": "0x4dF733BD897A44c12FC868c6A47b4139d2b0593C",
+      "doHardwork": false
     },
     "fluid_ETH_mainnet": {
       "Underlying": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -863,28 +864,32 @@
         "NewVault": "0x6B5a1D71CE55E00b3a11a9e81a6977c6a63dfFbc",
         "NewStrategy": "0x935B15f04235C0be2B4b255A788304f7D546A111",
         "NewPool": "0xBF6Fdc3399A17cE14C95f0530ab19606C980De15",
-        "StakingRewards": "0xf45c2Cb5E8145E820365618188E54F869A92B7Cb"
+        "StakingRewards": "0xf45c2Cb5E8145E820365618188E54F869A92B7Cb",
+        "doHardwork": false
       },
       "uniGamma_USDC_USDT": {
         "Underlying": "0x8c6FE430cf06e56BE7c092AD3A249BF0BcB388B9",
         "NewVault": "0x01D67BC5B622246c1A049f44eE4Fb985A86ba932",
         "NewStrategy": "0xDc6ce0C93692472Df6da1768352Bf0EC5078708e",
         "NewPool": "0x806C444f4534a28d1dAd8A9Fb9D6E32Ba1bBee48",
-        "StakingRewards": "0xABc34b7cBE6e850694A1D8cE7C5FE88e2f1E7097"
+        "StakingRewards": "0xABc34b7cBE6e850694A1D8cE7C5FE88e2f1E7097",
+        "doHardwork": false
       },
       "uniGamma_ETH_USDC": {
         "Underlying": "0x1Fd452156b12FB5D74680C5Ff166303E6dd12A78",
         "NewVault": "0x04282484B91ce0c77cB79270E087bEAD3b94d8d7",
         "NewStrategy": "0xD939dfB9c0EFfa53d3602b032B02254A512744BB",
         "NewPool": "0xeAAc9b4a81030C4362fB29deBe2B6a8c1ee4bD1a",
-        "StakingRewards": "0x4215bc71b52ef6D0D31046d66eE0eD9A84744Eb6"
+        "StakingRewards": "0x4215bc71b52ef6D0D31046d66eE0eD9A84744Eb6",
+        "doHardwork": false
       },
       "uniGamma_MATIC_USDC": {
         "Underlying": "0xE583b04b9a8F576aa7F17ECc6eB662499B5A8793",
         "NewVault": "0x31993DECbd9C7bf87C96dA85ff8c1C3746deCcbb",
         "NewStrategy": "0x8FA0011008CDbFE9394f0BAb42bFa5767c1e9a47",
         "NewPool": "0xA9EAA8d7474669b46740267d69a913BF8274c09D",
-        "StakingRewards": "0x144Dc3396976Aa0955Ca6Ee1aC4a2f9842198BA0"
+        "StakingRewards": "0x144Dc3396976Aa0955Ca6Ee1aC4a2f9842198BA0",
+        "doHardwork": false
       }
     }
   },
@@ -1521,7 +1526,8 @@
         "NewVault": "0xcA2b2D11b497ce2cA6E21375f703b2E94787AC19",
         "NewStrategy": "0x5730A9b4aee4D886E26Ed9193d456AbdF18FF6ef",
         "NewPool": "0xeBB49B0a36F46e8f49704c27EfB6752ffB00b378",
-        "PoolId": "19"
+        "PoolId": "19",
+        "doHardwork": false
       },
       "curve_crvUSD_USDC_arbitrum": {
         "Underlying": "0xec090cf6DD891D2d014beA6edAda6e05E025D93d",
@@ -1560,7 +1566,8 @@
         "NewVault": "0xF69E400f8B01Ba54B4b55b4F16DDf966c97176f2",
         "NewStrategy": "0x96F914A51698ee737552A953B3e2eFb8c55Ea3Ed",
         "NewPool": "0x52D3C7d9d2430122C53897d00801B93d85860e6F",
-        "PoolId": "10"
+        "PoolId": "10",
+        "doHardwork": false
       },
       "curve_USDCe_USDT": {
         "Underlying": "0x7f90122BF0700F9E7e1F688fe926940E8839F353",
@@ -1574,7 +1581,8 @@
         "Underlying": "0x99Ed4F0Ab6524d26B31D0aEa087eBe20D5949e0f",
         "NewVault": "0xce02d54fe9C8ACe5AcC3B361f8B8601d5E0b087D",
         "NewStrategy": "0xf0D09581adF17FBb715C1369680777aCDAe73905",
-        "NewPool": "0xfcd35AC088285C5B47f9DAd2B698a3693908C789"
+        "NewPool": "0xfcd35AC088285C5B47f9DAd2B698a3693908C789",
+        "doHardwork": false
       },
       "penpie_aUSDC2706": {
         "Underlying": "0xBa4A858d664Ddb052158168DB04AFA3cFF5CFCC8",
@@ -1587,7 +1595,8 @@
         "Underlying": "0xf617792eA9Dceb2208F4C440258B21d2f3FdB9A3",
         "NewVault": "0xE28E8293226F5B9CB722ee9893456bEe821481c5",
         "NewStrategy": "0x80174cfae85bd9a5fdA9c24aB6F0e0876D9e5a4F",
-        "NewPool": "0xC17CdAEebC325812ffc325f624BEd2b587bC14a8"
+        "NewPool": "0xC17CdAEebC325812ffc325f624BEd2b587bC14a8",
+        "doHardwork": false
       },
       "iFARM": {
         "Underlying": "0x9dCA587dc65AC0a043828B0acd946d71eb8D46c1",
@@ -1628,21 +1637,24 @@
         "NewVault": "0xbe70cEfA4E5c74093b0B26516d35ebabB840a8B3",
         "NewStrategy": "0x19a03F18dbF810d9B5ead7D6c9A683437e017A17",
         "NewPool": "0x5D89454769480e4178b3Ff881DFbA6F1E48F26a9",
-        "RewardPool": "0xBB9D66F7a7744C11550079045A177090E0015364"
+        "RewardPool": "0xBB9D66F7a7744C11550079045A177090E0015364",
+        "doHardwork": false
       },
       "hop_ETH": {
         "Underlying": "0x59745774Ed5EfF903e615F5A2282Cae03484985a",
         "NewVault": "0x1eA1dF73525E5d6F258bd320653C446B057Ba506",
         "NewStrategy": "0xaD7A4025e67c29196083f8956Cb9e0170c4A97e1",
         "NewPool": "0x4dED00427b5b9183ad0f8385Eac59670eDB62352",
-        "RewardPool": "0x00001fcF29c5Fd7846E4332AfBFaA48701D727f5"
+        "RewardPool": "0x00001fcF29c5Fd7846E4332AfBFaA48701D727f5",
+        "doHardwork": false
       },
       "hop_USDT": {
         "Underlying": "0xCe3B19D820CB8B9ae370E423B0a329c4314335fE",
         "NewVault": "0xBF6028B0af43eeE4D26c04f74F1638B7B52A39A7",
         "NewStrategy": "0xC7B0EAc5A01218eA99a4fcB9C30Ab4afE21aF0c5",
         "NewPool": "0xA1725f81A9446ABFAD4BF6202D1d9Db7275a95ED",
-        "RewardPool": "0xB8f90e115499082747Ba5DA94732863b12cB1F25"
+        "RewardPool": "0xB8f90e115499082747Ba5DA94732863b12cB1F25",
+        "doHardwork": false
       },
       "curve_ETHp_WETH": {
         "Underlying": "0x95F425c7d730Eb7673fca272c2c305f48Ed546c3",
@@ -1657,14 +1669,16 @@
         "NewVault": "0x2F5c116ab613Ec601Ed810c5A46402A994FD7151",
         "NewStrategy": "0xdDcD43f0b6dAcF96E216F0Bf3729FEca91FE74b9",
         "NewPool": "0x00331d70698BD60fde112752730D151E3D3f8E75",
-        "Gauge": "0x71D97aEEEfe4715E05354D009B8B7a77c325CC2d"
+        "Gauge": "0x71D97aEEEfe4715E05354D009B8B7a77c325CC2d",
+        "doHardwork": false
       },
       "curve_eUSD_USDC": {
         "Underlying": "0x93a416206B4ae3204cFE539edfeE6BC05a62963e",
         "NewVault": "0x4A724dCeC640E56c318AE7862147cC234614F3ba",
         "NewStrategy": "0x24306f2caC09afcD945b2c01591030cFAd81fd5f",
         "NewPool": "0x84Db77fb5BC37D144d6d977261b5ce6Cb1160e4e",
-        "Gauge": "0xad85FB8A5eD9E2f338d2798A9eEF176D31cA6A57"
+        "Gauge": "0xad85FB8A5eD9E2f338d2798A9eEF176D31cA6A57",
+        "doHardwork": false
       },
       "curve_KNOX_eUSD": {
         "Underlying": "0x6f33daF91d2aCAe10F5CD7BbE3f31716Ed123F1D",
@@ -1707,7 +1721,8 @@
         "NewVault": "0xF04b6052c4d43BabC7b30781cf072879333baC9e",
         "NewStrategy": "0xC92A39129AD88122D6Edc843189cA01E989533BE",
         "NewPool": "0x52C6aa977938fA388f35fcf99560F66a96F1A54E",
-        "Gauge": "0xB7e23A438C9cad2575d3C048248A943a7a03f3fA"
+        "Gauge": "0xB7e23A438C9cad2575d3C048248A943a7a03f3fA",
+        "doHardwork": false
       },
       "aave_DAI": {
         "Underlying": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",

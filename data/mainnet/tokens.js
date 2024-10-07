@@ -1020,6 +1020,7 @@ module.exports = {
     ],
   },
   penpie_agETH2612: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/pendle.svg'],
     apyTokenSymbols: ['PENDLE'],
@@ -1823,6 +1824,7 @@ module.exports = {
     ],
   },
   uniGamma_USDC_DAI: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/dai.svg'],
     apyIconUrls: ['./icons/matic.svg'],
@@ -1852,6 +1854,7 @@ module.exports = {
     ],
   },
   uniGamma_USDC_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
     apyIconUrls: ['./icons/matic.svg'],
@@ -1881,6 +1884,7 @@ module.exports = {
     ],
   },
   uniGamma_ETH_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/matic.svg'],
@@ -1910,6 +1914,7 @@ module.exports = {
     ],
   },
   uniGamma_MATIC_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/matic.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/matic.svg'],
@@ -2554,6 +2559,7 @@ module.exports = {
     ],
   },
   curve_eUSD_crvUSD: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/rsr.svg', './icons/arb.svg'],
     apyTokenSymbols: ['RSR', 'ARB'],
@@ -2589,6 +2595,7 @@ module.exports = {
     ],
   },
   curve_eUSD_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/rsr.svg', './icons/arb.svg'],
     apyTokenSymbols: ['RSR', 'ARB'],
@@ -2798,6 +2805,7 @@ module.exports = {
     ],
   },
   curve_WBTC_tBTC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg'],
     apyTokenSymbols: ['ARB'],
@@ -2833,6 +2841,7 @@ module.exports = {
     ],
   },
   hop_DAI: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg'],
     apyTokenSymbols: ['ARB'],
@@ -2860,6 +2869,7 @@ module.exports = {
     ],
   },
   hop_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg'],
     apyTokenSymbols: ['ARB'],
@@ -2887,6 +2897,7 @@ module.exports = {
     ],
   },
   hop_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg'],
     apyTokenSymbols: ['ARB'],
@@ -3472,6 +3483,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'AERO'],
   },
   penpie_gDAI2609: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/pendle.svg'],
     apyTokenSymbols: ['PENDLE'],
@@ -3529,6 +3541,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'PENLDE'],
   },
   penpie_mPENDLE2609: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/pendle.svg'],
     apyTokenSymbols: ['PENDLE'],
@@ -3895,6 +3908,7 @@ module.exports = {
     },
   },
   curve_crvUSD_FRAX: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/arb.svg'],
     apyTokenSymbols: ['CRV', 'ARB'],
@@ -4074,6 +4088,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV', 'ARB'],
   },
   curve_FRAX_USDCe: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg'],
     apyTokenSymbols: ['CRV'],
@@ -7618,6 +7633,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BAL', 'AURA'],
   },
   balancer_tBTC_WETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/tbtc.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/arb.svg'],
