@@ -46,6 +46,122 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  syncswap_ETH_USDCe_aqua: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
+    tokenNames: ['ETH', 'USDC.e'],
+    apyIconUrls: ['./icons/zk.svg'],
+    apyTokenSymbols: ['ZK'],
+    platform: ['SyncSwap - Aqua'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.NewVault,
+    strategyAddress: addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [
+        addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.Underlying,
+        'USDCe_zksync',
+        'WETH_zksync',
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.SYNCSWAP,
+        params: [
+          addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.Underlying,
+          addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.StakingPool,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  syncswap_ETH_USDCe_classic: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
+    tokenNames: ['ETH', 'USDC.e'],
+    apyIconUrls: ['./icons/zk.svg'],
+    apyTokenSymbols: ['ZK'],
+    platform: ['SyncSwap - Classic'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ZKSYNC.V2.syncswap_ETH_USDCe_classic.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ZKSYNC.V2.syncswap_ETH_USDCe_classic.NewVault,
+    strategyAddress: addresses.ZKSYNC.V2.syncswap_ETH_USDCe_classic.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.SYNCSWAP_POOL,
+      params: [addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.Underlying],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.SYNCSWAP,
+        params: [
+          addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.Underlying,
+          addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.StakingPool,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  syncswap_USDCe_USDT_stable: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
+    tokenNames: ['USDC.e', 'USDT'],
+    apyIconUrls: ['./icons/zk.svg'],
+    apyTokenSymbols: ['ZK'],
+    platform: ['SyncSwap - Stable'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.ZKSYNC.V2.syncswap_USDCe_USDT_stable.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ZKSYNC.V2.syncswap_USDCe_USDT_stable.NewVault,
+    strategyAddress: addresses.ZKSYNC.V2.syncswap_USDCe_USDT_stable.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.SYNCSWAP_POOL,
+      params: [addresses.ZKSYNC.V2.syncswap_USDCe_USDT_stable.Underlying],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.SYNCSWAP,
+        params: [
+          addresses.ZKSYNC.V2.syncswap_USDCe_USDT_stable.Underlying,
+          addresses.ZKSYNC.V2.syncswap_USDCe_USDT_stable.StakingPool,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  syncswap_wrsETH_ETH_aqua: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/wrsETH.svg', './icons/eth.svg'],
+    tokenNames: ['wrsETH', 'ETH'],
+    apyIconUrls: ['./icons/zk.svg'],
+    apyTokenSymbols: ['ZK'],
+    platform: ['SyncSwap - Aqua'],
+    tags: ['Advanced', 'LSD'],
+    tokenAddress: addresses.ZKSYNC.V2.syncswap_wrsETH_ETH_aqua.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ZKSYNC.V2.syncswap_wrsETH_ETH_aqua.NewVault,
+    strategyAddress: addresses.ZKSYNC.V2.syncswap_wrsETH_ETH_aqua.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [
+        addresses.ZKSYNC.V2.syncswap_wrsETH_ETH_aqua.Underlying,
+        'wrsETH_zksync',
+        'WETH_zksync',
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.SYNCSWAP,
+        params: [
+          addresses.ZKSYNC.V2.syncswap_wrsETH_ETH_aqua.Underlying,
+          addresses.ZKSYNC.V2.syncswap_wrsETH_ETH_aqua.StakingPool,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
   dolomite_DAI: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/dai.svg'],
@@ -3240,6 +3356,14 @@ module.exports = {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['long-3'],
     },
+  },
+  wrsETH_zksync: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/wrseth.svg'],
+    tokenAddress: addresses.ZKSYNC.wrsETH,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['wrapped-rseth'] },
   },
   WETH_zksync: {
     chain: CHAIN_IDS.ZKSYNC,

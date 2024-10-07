@@ -2658,6 +2658,7 @@
     "VC": "0x99bbe51be7cce6c8b84883148fd3d12ace5787f2",
     "RF": "0x5f7cbcb391d33988dad74d6fd683aadda1123e4d",
     "ZK": "0x5A7d6b2F92C77FAD6CCaBd7EE0624E64907Eaf3E",
+    "wrsETH": "0xd4169E045bcF9a86cC00101225d9ED61D2F51af2",
     "V2": {
       "zkswap_ETH_USDCe": {
         "Underlying": "0x7642e38867860d4512Fcce1116e2Fb539c5cdd21",
@@ -2735,6 +2736,34 @@
         "NewStrategy": "0xe20c65Dd7473e971c847819660AE805A9fe7a17F",
         "NewPool": "0x6835a688557992B22b2a587C215f1D31C96039f4",
         "cToken": "0x0E392B6b05c112677096920aD938a0752d1451f3"
+      },
+      "syncswap_ETH_USDCe_aqua": {
+        "Underlying": "0xC450D92d6A8243826303EFAbF914802061a236d2",
+        "NewVault": "0x9435CD582F1f9483313838230B6510d6f9471BD6",
+        "NewStrategy": "0x6050aDd8cAFDD6F6938E62679F2eCC1F27a90BFE",
+        "NewPool": "0x2A60EAC7cd48952671946F8aeC9Bc1907E865B82",
+        "StakingPool": "0x3EFF70d348663B052631f9fFf670a693dF277ddD"
+      },
+      "syncswap_ETH_USDCe_classic": {
+        "Underlying": "0x80115c708E12eDd42E504c1cD52Aea96C547c05c",
+        "NewVault": "0xd0d159b4814B30b0E2750eF61D32307D0B3d4bA8",
+        "NewStrategy": "0x221adBaDaC01A941a767Cae03C56786bdB4fE716",
+        "NewPool": "0xCD94F4071b835782375d8BD94684f2995C58B994",
+        "StakingPool": "0xA1419939e8f8812A7B6A95d82B80fc373cf4cEA9"
+      },
+      "syncswap_USDCe_USDT_stable": {
+        "Underlying": "0x0E595bfcAfb552F83E25d24e8a383F88c1Ab48A4",
+        "NewVault": "0x68aEDefBdF93DC9c214801eCE7D6d49d0af3757c",
+        "NewStrategy": "0xA559D2822c3B2c3f82394E9F5788fb9AAB0cDa01",
+        "NewPool": "0x988013bFE9dFCe7C0e2a282097107870e5d260C7",
+        "StakingPool": "0xA8E14510eb6FC00b979e0C72fF9580ed62b6851d"
+      },
+      "syncswap_wrsETH_ETH_aqua": {
+        "Underlying": "0x58BA6dDb7aF82A106219Dc412395AD56284BC5b3",
+        "NewVault": "0x995560FD383E99aDe38e9377EAC9f375243C734b",
+        "NewStrategy": "0x55E14FF5DF514F2B9d72a8Ce6AA28fBbC662566A",
+        "NewPool": "0x1226Cf48258a00326aC44fd6A2a9c52dAbA0f31B",
+        "StakingPool": "0x16580b31d68fFd418e1ff40C73DD1421CB83a0A7"
       }
     }
   }

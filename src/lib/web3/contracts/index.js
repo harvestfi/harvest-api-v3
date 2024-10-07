@@ -196,7 +196,21 @@ const fluidLiquidityResolverContract = require('../contracts/fluid-liquidity-res
 const dolomiteMarginMethods = require('../contracts/dolomite-margin/methods')
 const dolomiteMarginContract = require('../contracts/dolomite-margin/contract.json')
 
+const syncswapStakingMethods = require('../contracts/syncswap-staking/methods')
+const syncswapStakingContract = require('../contracts/syncswap-staking/contract.json')
+
+const syncswapPoolMethods = require('../contracts/syncswap-pool/methods')
+const syncswapPoolContract = require('../contracts/syncswap-pool/contract.json')
+
 module.exports = {
+  syncswapStaking: {
+    methods: syncswapStakingMethods,
+    contract: syncswapStakingContract,
+  },
+  syncswapPool: {
+    methods: syncswapPoolMethods,
+    contract: syncswapPoolContract,
+  },
   dolomiteMargin: {
     methods: dolomiteMarginMethods,
     contract: dolomiteMarginContract,
