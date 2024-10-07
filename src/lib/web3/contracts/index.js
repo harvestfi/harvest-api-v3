@@ -193,7 +193,14 @@ const fluidLendingResolverContract = require('../contracts/fluid-lending-resolve
 const fluidLiquidityResolverMethods = require('../contracts/fluid-liquidity-resolver/methods')
 const fluidLiquidityResolverContract = require('../contracts/fluid-liquidity-resolver/contract.json')
 
+const dolomiteMarginMethods = require('../contracts/dolomite-margin/methods')
+const dolomiteMarginContract = require('../contracts/dolomite-margin/contract.json')
+
 module.exports = {
+  dolomiteMargin: {
+    methods: dolomiteMarginMethods,
+    contract: dolomiteMarginContract,
+  },
   fluidLendingResolver: {
     methods: fluidLendingResolverMethods,
     contract: fluidLendingResolverContract,

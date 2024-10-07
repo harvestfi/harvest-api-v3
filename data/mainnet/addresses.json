@@ -1831,6 +1831,55 @@
         "NewStrategy": "0xF2bE7dD30Ff9B155c74D3094DB1378A156fad371",
         "NewPool": "0x9A4c49ddf23CC599bb94d00b299525Bd46160bea",
         "fToken": "0x4A03F37e7d3fC243e3f99341d36f4b829BEe5E03"
+      },
+      "dolomite_DAI": {
+        "Underlying": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+        "NewVault": "0xD691D8e3BC5008708786114481714B9c636f766F",
+        "NewStrategy": "0xA95E010aF63196747F459176A1B85d250E8211b4",
+        "NewPool": "0x18bB0ceb98579fed20307469be959450e6b9B5e9",
+        "MarketId": 1
+      },
+      "dolomite_ETH": {
+        "Underlying": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        "NewVault": "0x11F629445C55BbCb03EbE7cB15Bcf770eB006917",
+        "NewStrategy": "0x905Fea083FbbcaCf1cF1c7Bb15f6504A458cCACb",
+        "NewPool": "0xC50770C986E68AC77cab735465138dA1E1762f85",
+        "MarketId": 0
+      },
+      "dolomite_GMX": {
+        "Underlying": "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
+        "NewVault": "0x7d384aAed68dA26aeE7d37a1bcfAE0B80545688f",
+        "NewStrategy": "0x2E53f490FB438c9d2d0d7D7Ab17153A2f4a20870",
+        "NewPool": "0x13B08803A0C5fcd85CC769b8bC9db3639104ef6f",
+        "MarketId": 19
+      },
+      "dolomite_USDC": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0xB01a958d8e9dBA566c6D71f66ef566ccf5Fac859",
+        "NewStrategy": "0xD174dd89af9F58804B47A67435317bc31f971cee",
+        "NewPool": "0x3e8edfa1473829252062A4Ccc3A023a3cc2CC42f",
+        "MarketId": 17
+      },
+      "dolomite_USDCe": {
+        "Underlying": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+        "NewVault": "0xac083D4E70B395e651A17b101181A415f3687526",
+        "NewStrategy": "0x6C7d2382Ec65582c839BC4f55B55922Be69f8764",
+        "NewPool": "0x3dfF2b6784780D44d6DbdF1DcC992517D60C5081",
+        "MarketId": 2
+      },
+      "dolomite_USDT": {
+        "Underlying": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+        "NewVault": "0x95e96DaDe6cc960F3cbE3a71CAE8413AF5a3d9F4",
+        "NewStrategy": "0x257b80afB7143D8877D16Aae58ffCa4C0b1D3F13",
+        "NewPool": "0xf19413B0C2914F27C65fb974FB38e1176006Da67",
+        "MarketId": 5
+      },
+      "dolomite_WBTC": {
+        "Underlying": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+        "NewVault": "0xf54537b19796d2c75EcB6760a299B8482eA717fB",
+        "NewStrategy": "0xFDF482245b68CfEB89b3873Af9f0Bb210d815A7C",
+        "NewPool": "0xe46a0B44BcD3370d6bd23c678A1902eD32c968a5",
+        "MarketId": 4
       }
     }
   },

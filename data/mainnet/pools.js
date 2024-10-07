@@ -6,6 +6,146 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'dolomite_DAI',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.dolomite_DAI.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.dolomite_DAI.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.dolomite_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to Dolomite, earning DAI interest.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.dolomite_DAI.Underlying}" target="_blank" rel="noopener noreferrer"> DAI</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'dolomite_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.dolomite_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.dolomite_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.dolomite_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH </a>to Dolomite, earning ETH interest.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.dolomite_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'dolomite_GMX',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.dolomite_GMX.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.dolomite_GMX.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.dolomite_GMX.Underlying}" target="_blank" rel="noopener noreferrer"> GMX </a>to Dolomite, earning GMX interest.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.dolomite_GMX.Underlying}" target="_blank" rel="noopener noreferrer"> GMX</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'dolomite_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.dolomite_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.dolomite_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.dolomite_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Dolomite, earning USDC interest.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.dolomite_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'dolomite_USDCe',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.dolomite_USDCe.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.dolomite_USDCe.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.dolomite_USDCe.Underlying}" target="_blank" rel="noopener noreferrer"> USDC.e </a>to Dolomite, earning USDC.e interest.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.dolomite_USDCe.Underlying}" target="_blank" rel="noopener noreferrer"> USDC.e</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'dolomite_USDT',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.dolomite_USDT.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.dolomite_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.dolomite_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT </a>to Dolomite, earning USDT interest.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.dolomite_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'dolomite_WBTC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.dolomite_WBTC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.dolomite_WBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.dolomite_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> WBTC </a>to Dolomite, earning WBTC interest.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.dolomite_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> WBTC</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'fluid_ETH_arbitrum',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.fluid_ETH_arbitrum.NewPool,
