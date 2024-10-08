@@ -116,8 +116,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.dolomite_DAI.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -236,8 +236,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.dolomite_WBTC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -276,8 +276,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.fluid_USDC_arbitrum.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -296,8 +296,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.fluid_USDT_arbitrum.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -1933,8 +1933,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.aave_GHO.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
