@@ -212,6 +212,9 @@ const STAKEWISE_API_URLS = {
   STAKING: 'https://api.stakewise.io/pool-stats/',
 }
 
+const ZKSWAP_URL =
+  'https://zkswap-dex-api-git-production-buzzteam.vercel.app/api/pools-data/zksyncMainnet'
+
 const DEXSCREENER_API_URL = 'https://api.dexscreener.com/latest/dex/tokens'
 
 const CURVE_API_URLS = {
@@ -361,4 +364,5 @@ module.exports = {
   HISTORICAL_CURRENCY_API_URL,
   ZKSYNC_RPC_URL,
   CURRENCY_RATES,
+  ZKSWAP_URL,
 }
