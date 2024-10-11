@@ -215,6 +215,13 @@ const STAKEWISE_API_URLS = {
 const ZKSWAP_URL =
   'https://zkswap-dex-api-git-production-buzzteam.vercel.app/api/pools-data/zksyncMainnet'
 
+const SYNCSWAP_API_URL =
+  'https://api.syncswap.xyz/api/fetchers/fetchAllPools?network=zkSyncMainnet&type=v2'
+
+const SYNCSWAP_FEE_API_URL = 'https://api.syncswap.xyz/api/fetchers/fetchFees?network=zkSyncMainnet'
+
+const SYNCSWAP_SUBGRAPH_URL = 'https://api.studio.thegraph.com/query/30365/zksync-blocks/v0.0.9'
+
 const DEXSCREENER_API_URL = 'https://api.dexscreener.com/latest/dex/tokens'
 
 const CURVE_API_URLS = {
@@ -365,4 +372,7 @@ module.exports = {
   ZKSYNC_RPC_URL,
   CURRENCY_RATES,
   ZKSWAP_URL,
+  SYNCSWAP_API_URL,
+  SYNCSWAP_FEE_API_URL,
+  SYNCSWAP_SUBGRAPH_URL,
 }

@@ -8,6 +8,10 @@ module.exports = [
     chain: CHAIN_IDS.ZKSYNC,
     id: 'syncswap_ETH_USDCe_aqua',
     type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.SYNCSWAP,
+      params: [addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.Underlying, CHAIN_IDS.ZKSYNC],
+    },
     contractAddress: addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.NewPool,
     collateralAddress: addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.NewVault,
     rewardAPY: [],
@@ -34,6 +38,10 @@ module.exports = [
     chain: CHAIN_IDS.ZKSYNC,
     id: 'syncswap_ETH_USDCe_classic',
     type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.SYNCSWAP,
+      params: [addresses.ZKSYNC.V2.syncswap_ETH_USDCe_classic.Underlying, CHAIN_IDS.ZKSYNC],
+    },
     contractAddress: addresses.ZKSYNC.V2.syncswap_ETH_USDCe_classic.NewPool,
     collateralAddress: addresses.ZKSYNC.V2.syncswap_ETH_USDCe_classic.NewVault,
     rewardAPY: [],
@@ -60,6 +68,10 @@ module.exports = [
     chain: CHAIN_IDS.ZKSYNC,
     id: 'syncswap_USDCe_USDT_stable',
     type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.SYNCSWAP,
+      params: [addresses.ZKSYNC.V2.syncswap_USDCe_USDT_stable.Underlying, CHAIN_IDS.ZKSYNC],
+    },
     contractAddress: addresses.ZKSYNC.V2.syncswap_USDCe_USDT_stable.NewPool,
     collateralAddress: addresses.ZKSYNC.V2.syncswap_USDCe_USDT_stable.NewVault,
     rewardAPY: [],
@@ -86,6 +98,10 @@ module.exports = [
     chain: CHAIN_IDS.ZKSYNC,
     id: 'syncswap_wrsETH_ETH_aqua',
     type: POOL_TYPES.INCENTIVE,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.SYNCSWAP,
+      params: [addresses.ZKSYNC.V2.syncswap_wrsETH_ETH_aqua.Underlying, CHAIN_IDS.ZKSYNC],
+    },
     contractAddress: addresses.ZKSYNC.V2.syncswap_wrsETH_ETH_aqua.NewPool,
     collateralAddress: addresses.ZKSYNC.V2.syncswap_wrsETH_ETH_aqua.NewVault,
     rewardAPY: [],
