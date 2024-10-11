@@ -47,10 +47,6 @@ const getTradingVolumeDaily = async (pair, date) => {
     tradingVolQuery,
     variables,
   )
-  console.log(
-    'tradingVolInfo?.pairDayDatas[0].dailyVolumeUSD: ',
-    tradingVolInfo?.pairDayDatas[0].dailyVolumeUSD,
-  )
   return parseFloat(tradingVolInfo?.pairDayDatas[0].dailyVolumeUSD)
 }
 
