@@ -202,7 +202,14 @@ const syncswapStakingContract = require('../contracts/syncswap-staking/contract.
 const syncswapPoolMethods = require('../contracts/syncswap-pool/methods')
 const syncswapPoolContract = require('../contracts/syncswap-pool/contract.json')
 
+const savingsPotMethods = require('../contracts/savings-pot/methods')
+const savingsPotContract = require('../contracts/savings-pot/contract.json')
+
 module.exports = {
+  savingsPot: {
+    methods: savingsPotMethods,
+    contract: savingsPotContract,
+  },
   syncswapStaking: {
     methods: syncswapStakingMethods,
     contract: syncswapStakingContract,
