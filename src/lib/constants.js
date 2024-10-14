@@ -220,7 +220,8 @@ const SYNCSWAP_API_URL =
 
 const SYNCSWAP_FEE_API_URL = 'https://api.syncswap.xyz/api/fetchers/fetchFees?network=zkSyncMainnet'
 
-const SYNCSWAP_SUBGRAPH_URL = 'https://api.studio.thegraph.com/query/30365/zksync-blocks/v0.0.9'
+const SYNCSWAP_SUBGRAPH_URL =
+  'https://api.studio.thegraph.com/query/30365/zksync-blocks/version/latest'
 
 const DEXSCREENER_API_URL = 'https://api.dexscreener.com/latest/dex/tokens'
 
