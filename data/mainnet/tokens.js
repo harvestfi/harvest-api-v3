@@ -1391,6 +1391,7 @@ module.exports = {
     ],
   },
   aerodrome_ezETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -1715,6 +1716,7 @@ module.exports = {
     ],
   },
   aerodrome_wrsETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -1750,6 +1752,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['dlc-link-dlcbtc'] },
   },
   curve_dlcBTC_WBTC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/dlcbtc.svg'],
     apyTokenSymbols: ['dlcBTC'],
@@ -1892,6 +1895,7 @@ module.exports = {
     ],
   },
   notional_nGHO: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/gho.svg'],
     tokenNames: ['nGHO'],
@@ -2928,6 +2932,7 @@ module.exports = {
     ],
   },
   curve_TriRSR: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/rsr.svg', './icons/arb.svg'],
     apyTokenSymbols: ['RSR', 'ARB'],
@@ -3959,6 +3964,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'AERO'],
   },
   gammaMerkl_QS_tBTC_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/tbtc.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg'],
@@ -4614,6 +4620,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK'],
   },
   lodestarHodl_MAGIC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
     apyTokenSymbols: ['INTEREST', 'LODE'],
@@ -4700,6 +4707,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   lodestar_MAGIC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg'],
     apyTokenSymbols: ['LODE'],
@@ -5352,6 +5360,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'esSEAM'],
   },
   lodestarHodl_ARB: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
     apyTokenSymbols: ['INTEREST', 'LODE'],
@@ -5395,6 +5404,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   lodestarHodl_DAI: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
     apyTokenSymbols: ['INTEREST', 'LODE'],
@@ -5438,6 +5448,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   lodestarHodl_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
     apyTokenSymbols: ['INTEREST', 'LODE'],
@@ -5481,6 +5492,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   lodestarHodl_FRAX: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
     apyTokenSymbols: ['INTEREST', 'LODE'],
@@ -5524,6 +5536,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   lodestarHodl_GMX: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
     apyTokenSymbols: ['INTEREST', 'LODE'],
@@ -5567,6 +5580,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   lodestarHodl_USDCe: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
     apyTokenSymbols: ['INTEREST', 'LODE'],
@@ -5610,6 +5624,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   lodestarHodl_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
     apyTokenSymbols: ['INTEREST', 'LODE'],
@@ -5653,6 +5668,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   lodestarHodl_WBTC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
     apyTokenSymbols: ['INTEREST', 'LODE'],
@@ -5696,6 +5712,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   lodestarHodl_wstETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
     apyTokenSymbols: ['INTEREST', 'LODE'],
@@ -5750,6 +5767,7 @@ module.exports = {
     },
   },
   lodestarHodl_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
     apyTokenSymbols: ['INTEREST', 'LODE'],
@@ -6481,6 +6499,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   quickGamma_wstETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/quick.svg'],
@@ -6610,6 +6629,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
   baseswap_axlUSDC_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
     apyTokenSymbols: ['BSX', 'xBSX', 'BSWAP'],
@@ -6667,6 +6687,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BSWAP'],
   },
   baseswap_ETH_DAI: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
     apyTokenSymbols: ['BSX', 'xBSX', 'BSWAP'],
@@ -6695,6 +6716,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BSWAP'],
   },
   baseswap_USDbC_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
     apyTokenSymbols: ['BSX', 'xBSX', 'BSWAP'],
@@ -6723,6 +6745,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BSWAP'],
   },
   baseswap_USDp_USDbC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
     apyTokenSymbols: ['BSX', 'xBSX', 'BSWAP'],
@@ -6751,6 +6774,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BSWAP'],
   },
   baseswap_USDC_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
     apyTokenSymbols: ['BSX', 'xBSX', 'BSWAP'],
@@ -7112,6 +7136,7 @@ module.exports = {
     },
   },
   camelot_EQB_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eqb.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/eqb.svg', './icons/arb.svg'],
@@ -7208,6 +7233,7 @@ module.exports = {
     },
   },
   camelot_THALES_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/thales.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/thales.svg', './icons/arb.svg'],
@@ -7631,6 +7657,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BSWAP'],
   },
   baseswap_CBETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
     apyTokenSymbols: ['BSX', 'xBSX', 'BSWAP'],
@@ -7659,6 +7686,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BSWAP'],
   },
   baseswap_DAI_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
     apyTokenSymbols: ['BSX', 'xBSX', 'BSWAP'],
@@ -7687,6 +7715,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'BSWAP'],
   },
   baseswap_ETH_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
     apyTokenSymbols: ['BSX', 'xBSX', 'BSWAP'],
@@ -7772,6 +7801,7 @@ module.exports = {
     },
   },
   balancer_tBTC_WBTC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/tbtc.svg', './icons/wbtc.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/arb.svg'],
@@ -7917,6 +7947,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GENE'],
   },
   camelot_GRAIL_ARB: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/grail.svg', './icons/arb.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
@@ -7990,6 +8021,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelot_ARB_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
@@ -8019,6 +8051,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   camelot_ETH_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/grail.svg', './icons/xgrail.svg'],
@@ -9338,7 +9371,7 @@ module.exports = {
     apyTokenSymbols: ['DAI'],
     logoUrl: ['./icons/dai.svg'],
     tokenNames: ['DAI'],
-    platform: ['Maker - Savings'],
+    platform: ['Sky - Savings'],
     tags: ['Beginners', 'Stable'],
     tokenAddress: addresses.DAI,
     decimals: '18',
@@ -9520,6 +9553,7 @@ module.exports = {
     },
   },
   UniV3_ORC_ETH: {
+    inactive: true,
     disableAutoSwap: true,
     isSingleAssetWithdrawalAllowed: false,
     chain: CHAIN_IDS.ETH_MAINNET,
@@ -9570,6 +9604,7 @@ module.exports = {
     },
   },
   UniV3_CNG_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     subLabel: 'Changer',
     isUniv3: true,
@@ -9632,6 +9667,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'YEL', 'ETH'],
   },
   UniV3_ETH_sETH2: {
+    inactive: true,
     zapFrontrunProtection: true,
     subLabel: 'StakeWise',
     chain: CHAIN_IDS.ETH_MAINNET,
@@ -10012,6 +10048,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'USDC', 'USDT'],
   },
   UniV3_WBTC_ETH: {
+    inactive: true,
     isSingleAssetWithdrawalAllowed: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     isUniv3: true,
@@ -10041,6 +10078,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'WBTC', 'WETH'],
   },
   UniV3_DAI_USDC: {
+    inactive: true,
     isSingleAssetWithdrawalAllowed: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/univ3.svg'],
