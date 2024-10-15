@@ -212,8 +212,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.dolomite_USDC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -252,8 +252,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.dolomite_USDT.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -292,8 +292,8 @@ module.exports = [
     collateralAddress: addresses.ARBITRUM_ONE.V2.fluid_ETH_arbitrum.NewVault,
     rewardAPY: [],
     rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM, addresses.ARBITRUM_ONE.ARB],
+    rewardTokenSymbols: ['iFARM', 'ARB'],
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
