@@ -4972,6 +4972,7 @@ module.exports = {
     },
   },
   radpie_ARB: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/rdnt.svg'],
     apyTokenSymbols: ['RDNT'],
@@ -5000,6 +5001,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'RDNT'],
   },
   radpie_DAI: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/rdnt.svg'],
     apyTokenSymbols: ['RDNT'],
@@ -5028,6 +5030,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'RDNT'],
   },
   radpie_WETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/rdnt.svg'],
     apyTokenSymbols: ['RDNT'],
@@ -5056,6 +5059,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'RDNT'],
   },
   radpie_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/rdnt.svg', './icons/arb.svg'],
     apyTokenSymbols: ['RDNT', 'ARB'],
@@ -5084,6 +5088,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'RDNT', 'ARB'],
   },
   radpie_USDCe: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/rdnt.svg', './icons/arb.svg'],
     apyTokenSymbols: ['RDNT', 'ARB'],
@@ -5112,6 +5117,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'RDNT', 'ARB'],
   },
   radpie_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/rdnt.svg', './icons/arb.svg'],
     apyTokenSymbols: ['RDNT', 'ARB'],
@@ -5137,6 +5143,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'RDNT', 'ARB'],
   },
   radpie_WBTC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/rdnt.svg', './icons/rdp.png', './icons/arb.svg'],
     apyTokenSymbols: ['RDNT', 'RDP', 'ARB'],
@@ -5165,6 +5172,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'RDNT'],
   },
   radpie_wstETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/rdnt.svg'],
     apyTokenSymbols: ['RDNT'],

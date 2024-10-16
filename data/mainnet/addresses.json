@@ -1391,7 +1391,8 @@
         "NewStrategy": "0xF251d09Bd29253F50b74053e1B8C9153Ae70865c",
         "NewPool": "0xA9380eF9E5b24787400C6483Fe97195Cb05E5B59",
         "Rewarder": "0xc256d80128113C8c23DFce0F5a877b738738AD7f",
-        "PoolId": 7
+        "PoolId": 7,
+        "doHardwork": false
       },
       "radpie_DAI": {
         "Underlying": "0x8409DE8E98F80D0E40F42849eF0923c2493BEeAd",
@@ -1399,7 +1400,8 @@
         "NewStrategy": "0x6878408Ef50Bdc1DEdAcC09638827a26F1b47f0C",
         "NewPool": "0x2c2Af6FB95B739eb087d334465852920505b26A3",
         "Rewarder": "0x8384fCdA31054efc8B4899d81F510e868f747029",
-        "PoolId": 4
+        "PoolId": 4,
+        "doHardwork": false
       },
       "radpie_WETH": {
         "Underlying": "0x5477B2E46DD6D2D8E52f8329f0DC283F6f768cFa",
@@ -1407,7 +1409,8 @@
         "NewStrategy": "0x19dD00d742D2428F71ed3773F775a7D915FDB7EC",
         "NewPool": "0x7212018672D9C6dC2Fa26a4a42Ac3489BF2871DA",
         "Rewarder": "0x9b31dC7E0E43FD3d038fb9723161F51cf6673742",
-        "PoolId": 5
+        "PoolId": 5,
+        "doHardwork": false
       },
       "radpie_USDC": {
         "Underlying": "0x2bb55dC7c125D132322d6f7056FF6a575D64Fb7C",
@@ -1415,7 +1418,8 @@
         "NewStrategy": "0x3Ad655745865f8F7a7254D38e8094E2D8f67e9c9",
         "NewPool": "0x13B756a34e54F060ea8fe2419cAe8a2a96DC8d35",
         "Rewarder": "0x271e0cf0F4259C1Df247b5f2b63f2F5C72751E24",
-        "PoolId": 9
+        "PoolId": 9,
+        "doHardwork": false
       },
       "radpie_USDCe": {
         "Underlying": "0xd86B1C1C7F921F3663921f8917d086379739cDA3",
@@ -1423,7 +1427,8 @@
         "NewStrategy": "0xD3E099f1Ca80F2A036b6294f60ADA4123BF060d2",
         "NewPool": "0xc9Cd9c73b57d1D5bd36A10A3d0f9DB0b49563393",
         "Rewarder": "0x1ef6fEA1279d54b52c828f76807fC55Fa2522270",
-        "PoolId": 3
+        "PoolId": 3,
+        "doHardwork": false
       },
       "radpie_USDT": {
         "Underlying": "0x399F292939668E591957726df3eC9A0E7dc8Ac57",
@@ -1431,7 +1436,8 @@
         "NewStrategy": "0xdB832C6B0743ba96627106B621b25Ae0ef07152B",
         "NewPool": "0x06826714864803852dD5DA78C13d7C7bC74b54C7",
         "Rewarder": "0x3e05797DAB6a53932d413999Ab0Aa31F7E94e0d9",
-        "PoolId": 2
+        "PoolId": 2,
+        "doHardwork": false
       },
       "radpie_WBTC": {
         "Underlying": "0x6c1B07ed05656DEdd90321E94B1cDB26981e65f2",
@@ -1439,7 +1445,8 @@
         "NewStrategy": "0x74321364F0DCeCCf40a8978DD5Fe25513887b2b9",
         "NewPool": "0x120eA8fb92F4Bf5C3BCf099Fbf834a5538c21806",
         "Rewarder": "0xebCF9116e0379Be0a7bf3F61f13D81D03C0DeAad",
-        "PoolId": 1
+        "PoolId": 1,
+        "doHardwork": false
       },
       "radpie_wstETH": {
         "Underlying": "0x79a2e71460c97807EC40D6d670838bEe99848F1d",
@@ -1447,7 +1454,8 @@
         "NewStrategy": "0x8c527902897ee2cb0288E6a2c7eD49f01b906B41",
         "NewPool": "0x593d275b14a65C40F02c3A60056Fc701e0bC7FCa",
         "Rewarder": "0x63614e576F8295Aa8Ac2c8D3AE8f261bE4E9484b",
-        "PoolId": 6
+        "PoolId": 6,
+        "doHardwork": false
       },
       "camelotV3_MAGIC_ETH": {
         "Underlying": "0x6F8401bd348B3f8cDabc8C81dbD0Ac255abCB4e5",
