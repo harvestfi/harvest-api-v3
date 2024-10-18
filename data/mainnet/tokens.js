@@ -46,6 +46,87 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  morpho_GauntletDAI: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/dai.svg', './icons/morpho.svg'],
+    apyTokenSymbols: ['DAI', 'MORPHO'],
+    logoUrl: ['./icons/dai.svg'],
+    tokenNames: ['DAI'],
+    platform: ['Morpho - Gauntlet Core'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.V2.morpho_GauntletDAI.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.morpho_GauntletDAI.NewVault,
+    strategyAddress: addresses.V2.morpho_GauntletDAI.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['dai'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.V2.morpho_GauntletDAI.MorphoVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+      },
+    ],
+  },
+  morpho_GauntletETH: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/eth.svg', './icons/usdc.svg', './icons/morpho.svg'],
+    apyTokenSymbols: ['ETH', 'USDC', 'MORPHO'],
+    logoUrl: ['./icons/eth.svg'],
+    tokenNames: ['ETH'],
+    platform: ['Morpho - Gauntlet Core'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.V2.morpho_GauntletETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.morpho_GauntletETH.NewVault,
+    strategyAddress: addresses.V2.morpho_GauntletETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['weth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.V2.morpho_GauntletETH.MorphoVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+      },
+    ],
+  },
+  morpho_GauntletUSDC: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/usdc.svg', './icons/eth.svg', './icons/morpho.svg'],
+    apyTokenSymbols: ['USDC', 'ETH', 'MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - Gauntlet Core'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.V2.morpho_GauntletUSDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.V2.morpho_GauntletUSDC.NewVault,
+    strategyAddress: addresses.V2.morpho_GauntletUSDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.V2.morpho_GauntletUSDC.MorphoVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+      },
+    ],
+  },
   aUSDS: {
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: [''],

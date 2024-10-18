@@ -6,6 +6,78 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'morpho_GauntletDAI',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.morpho_GauntletDAI.NewPool,
+    collateralAddress: addresses.V2.morpho_GauntletDAI.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.morpho_GauntletDAI.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to a Gauntlet Core Morpho Vault, earning DAI interest and MORPHO rewards.
+        At every harvest, the earned interest is compounded.
+      </p>
+      <p>
+        Note that MORPHO tokens are currently not transferable, which means we cannot currently distributed them. As the tokens are not currently tradeable, they are not accounted for in the APY. 
+        When the tokens become liquid in the future, the MORPHO rewards will be air-dropped to any user that has had an active deposit in the period that MORPHO tokens were earned. 
+        You will receive the air-drop retro-actively, also if you are no longer in the vault at time of distribution.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'morpho_GauntletETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.morpho_GauntletETH.NewPool,
+    collateralAddress: addresses.V2.morpho_GauntletETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.morpho_GauntletETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to a Gauntlet Core Morpho Vault, earning WETH interest and USDC and MORPHO rewards.
+        At every harvest, the earned interest is compounded. The additional claimable rewards will be air-dropped pro-rata, where timing depends on Morpo's reward distribution schedule.
+      </p>
+      <p>
+        Note that MORPHO tokens are currently not transferable, which means we cannot currently distributed them. As the tokens are not currently tradeable, they are not accounted for in the APY. 
+        When the tokens become liquid in the future, the MORPHO rewards will be air-dropped to any user that has had an active deposit in the period that MORPHO tokens were earned. 
+        You will receive the air-drop retro-actively, also if you are no longer in the vault at time of distribution.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'morpho_GauntletUSDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.morpho_GauntletUSDC.NewPool,
+    collateralAddress: addresses.V2.morpho_GauntletUSDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.morpho_GauntletUSDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Gauntlet Core Morpho Vault, earning USDC interest and WETH and MORPHO rewards.
+        At every harvest, the earned interest is compounded. The additional claimable rewards will be air-dropped pro-rata, where timing depends on Morpo's reward distribution schedule.
+      </p>
+      <p>
+        Note that MORPHO tokens are currently not transferable, which means we cannot currently distributed them. As the tokens are not currently tradeable, they are not accounted for in the APY. 
+        When the tokens become liquid in the future, the MORPHO rewards will be air-dropped to any user that has had an active deposit in the period that MORPHO tokens were earned. 
+        You will receive the air-drop retro-actively, also if you are no longer in the vault at time of distribution.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'aave_USDS',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.aave_USDS.NewPool,

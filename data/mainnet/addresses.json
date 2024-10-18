@@ -648,6 +648,27 @@
       "NewStrategy": "0x72e518ba868153A0a4D0cE275931bd4be3A7ddCd",
       "NewPool": "0x74B82060311Bcb934bd0066c3075aC0BCE9C164C",
       "AavePool": "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2"
+    },
+    "morpho_GauntletDAI": {
+      "Underlying": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "NewVault": "0x2827DdabE84691def2cdA14FD8FF817009093212",
+      "NewStrategy": "0xA5A10C0696ab98Bd07086f51503317109d5D7267",
+      "NewPool": "0x89e7227340e333Cf29f9402ddD26b5aEc5224825",
+      "MorphoVault": "0x500331c9fF24D9d11aee6B07734Aa72343EA74a5"
+    },
+    "morpho_GauntletETH": {
+      "Underlying": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "NewVault": "0x73515227DB81b4F506cb24f077d391886DA789c9",
+      "NewStrategy": "0x097279c5c77F2317f173131285ed129c46427a86",
+      "NewPool": "0x0B34c46D5C3D7f703f7fe44b8929ed14c312d17f",
+      "MorphoVault": "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658"
+    },
+    "morpho_GauntletUSDC": {
+      "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "NewVault": "0x47B8cdAe3BcEb0DA3236ACF2B288A01A81672AcC",
+      "NewStrategy": "0x00f3C3f58953C62c53712B72dbC5Af3c84822aCF",
+      "NewPool": "0x170Ac171FECc28B01Ec43C53FAC26546C21829A8",
+      "MorphoVault": "0x8eB67A509616cd6A7c1B3c8C21D48FF57df3d458"
     }
   },
   "MATIC": {
