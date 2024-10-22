@@ -16,9 +16,6 @@ const getBoostAPY = async (poolAddress, networkId) => {
   const tokenValues = poolInfo.tokenValues
   const tvl = poolInfo.totalLiquidity
 
-  const stakeDataRaw = await getDefiLlamaData()
-  const stakeData = stakeDataRaw.data
-
   let apy = new BigNumber(0)
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i]
@@ -39,10 +36,10 @@ const getBoostAPY = async (poolAddress, networkId) => {
         boost = false
       }
       partApy = await getLPApy(token, networkId, boost)
-    } else if (types[i] == 'stakedMatic') {
-      partApy = await getStakedMaticApy(token)
-    } else if (types[i] == 'stakedEth') {
-      partApy = await getStakedEthApy(token, stakeData)
+    } else if (types[i] == 'stakedToken') {
+      const stakeDataRaw = await getDefiLlamaData()
+      const stakeData = stakeDataRaw.data
+      partApy = await getStakingApy(token, stakeData)
     } else {
       console.error(`Balancer boost type: ${types[i]} not recognized`)
       continue
@@ -79,7 +76,7 @@ const getAaveApy = async tokenId => {
   return new BigNumber(aavePool[0].liquidityRate).times(100)
 }
 
-const getStakedEthApy = async (token, stakeData) => {
+const getStakingApy = async (token, stakeData) => {
   if (
     //stETH
     token == '0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0' ||
@@ -110,16 +107,22 @@ const getStakedEthApy = async (token, stakeData) => {
   ) {
     const poolDetail = stakeData.find(obj => obj.pool == '0f45d730-b279-4629-8e11-ccb5cc3038b4')
     return poolDetail.apy
-  }
-}
-
-const getStakedMaticApy = async token => {
-  if (token == '0xfa68FB4628DFF1028CFEc22b4162FCcd0d45efb6') {
-    //HOTFIX
-    return 4.28
-  } else {
-    //HOTFIX
-    return 4.74
+  } else if (token == '0xfa68FB4628DFF1028CFEc22b4162FCcd0d45efb6') {
+    //MATICX
+    const poolDetail = stakeData.find(obj => obj.pool == '5b1fe146-7cbd-448d-bf53-8df9c3501016')
+    return poolDetail.apy
+  } else if (token == '0x3A58a54C066FdC0f2D55FC9C89F0415C92eBf3C4') {
+    //stMATIC
+    const poolDetail = stakeData.find(obj => obj.pool == 'bf3a7f07-80a0-4d5b-a311-b0f06f650f83')
+    return poolDetail.apy
+  } else if (token == '0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2') {
+    //sUSDe
+    const poolDetail = stakeData.find(obj => obj.pool == '66985a81-9c51-46ca-9977-42b4fe7bc6df')
+    return poolDetail.apy
+  } else if (token == '0xe3b3FE7bcA19cA77Ad877A5Bebab186bEcfAD906') {
+    //sFRAX
+    const poolDetail = stakeData.find(obj => obj.pool == '55de30c3-bf9f-4d4e-9e0b-536a8ef5ab35')
+    return poolDetail.apy
   }
 }
 

@@ -42,7 +42,12 @@ module.exports = [
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.V2.balancer_sUSDe_GYD.Underlying, 'balancerv2_arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.balancer_sUSDe_GYD.Underlying,
+        'balancerv2_arbitrum',
+        true,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_sUSDe_GYD.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_sUSDe_GYD.NewVault,
@@ -73,7 +78,12 @@ module.exports = [
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.V2.balancer_waFRAX_sFRAX.Underlying, 'balancerv2_arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.balancer_waFRAX_sFRAX.Underlying,
+        'balancerv2_arbitrum',
+        true,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_waFRAX_sFRAX.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_waFRAX_sFRAX.NewVault,
@@ -104,7 +114,12 @@ module.exports = [
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.V2.balancer_waGHO_GYD.Underlying, 'balancerv2_arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.balancer_waGHO_GYD.Underlying,
+        'balancerv2_arbitrum',
+        true,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_waGHO_GYD.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_waGHO_GYD.NewVault,
@@ -135,7 +150,12 @@ module.exports = [
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GHO.Underlying, 'balancerv2_arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GHO.Underlying,
+        'balancerv2_arbitrum',
+        true,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GHO.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GHO.NewVault,
@@ -168,7 +188,12 @@ module.exports = [
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GYD.Underlying, 'balancerv2_arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GYD.Underlying,
+        'balancerv2_arbitrum',
+        true,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GYD.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GYD.NewVault,
@@ -199,7 +224,12 @@ module.exports = [
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.V2.balancer_waUSDT_GYD.Underlying, 'balancerv2_arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.balancer_waUSDT_GYD.Underlying,
+        'balancerv2_arbitrum',
+        true,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_waUSDT_GYD.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_waUSDT_GYD.NewVault,
@@ -230,7 +260,12 @@ module.exports = [
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
       type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.V2.balancer_wstETH_GYD.Underlying, 'balancerv2_arbitrum'],
+      params: [
+        addresses.ARBITRUM_ONE.V2.balancer_wstETH_GYD.Underlying,
+        'balancerv2_arbitrum',
+        true,
+        CHAIN_IDS.ARBITRUM_ONE,
+      ],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_GYD.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_GYD.NewVault,

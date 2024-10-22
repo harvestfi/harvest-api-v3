@@ -31,12 +31,12 @@
   },
   "0x8159462d255C1D24915CB51ec361F700174cD994": {
     "boostedUnderlyings": ["0x3A58a54C066FdC0f2D55FC9C89F0415C92eBf3C4"],
-    "boostTypes": ["stakedMatic"],
+    "boostTypes": ["stakedToken"],
     "poolId": "0x8159462d255c1d24915cb51ec361f700174cd99400000000000000000000075d"
   },
   "0xb20fC01D21A50d2C734C4a1262B4404d41fA7BF0": {
     "boostedUnderlyings": ["0xfa68FB4628DFF1028CFEc22b4162FCcd0d45efb6"],
-    "boostTypes": ["stakedMatic"],
+    "boostTypes": ["stakedToken"],
     "poolId": "0xb20fc01d21a50d2c734c4a1262b4404d41fa7bf000000000000000000000075c"
   },
   "0x216690738Aac4aa0C4770253CA26a28f0115c595": {
@@ -44,7 +44,7 @@
       "0x3A58a54C066FdC0f2D55FC9C89F0415C92eBf3C4",
       "0xE4885Ed2818Cc9E840A25f94F9b2A28169D1AEA7"
     ],
-    "boostTypes": ["stakedMatic", "Aave"],
+    "boostTypes": ["stakedToken", "Aave"],
     "aaveTags": [0, "137-0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270-0xa97684ead0e402dc232d5a977953df7ecbab3cdb"],
     "poolId": "0x216690738aac4aa0c4770253ca26a28f0115c595000000000000000000000b2c"
   },
@@ -53,7 +53,7 @@
       "0xfa68FB4628DFF1028CFEc22b4162FCcd0d45efb6",
       "0xE4885Ed2818Cc9E840A25f94F9b2A28169D1AEA7"
     ],
-    "boostTypes": ["stakedMatic", "Aave"],
+    "boostTypes": ["stakedToken", "Aave"],
     "aaveTags": [0, "137-0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270-0xa97684ead0e402dc232d5a977953df7ecbab3cdb"],
     "poolId": "0xe78b25c06db117fdf8f98583cdaaa6c92b79e917000000000000000000000b2b"
   },
@@ -62,7 +62,7 @@
       "0x03b54A6e9a984069379fae1a4fC4dBAE93B3bCCD",
       "0x43894DE14462B421372bCFe445fA51b1b4A0Ff3D"
     ],
-    "boostTypes": ["stakedEth", "Aave"],
+    "boostTypes": ["stakedToken", "Aave"],
     "aaveTags": [0, "137-0x7ceb23fd6bc0add59e62ac25578270cff1b9f619-0xa97684ead0e402dc232d5a977953df7ecbab3cdb"],
     "poolId": "0x4a77ef015ddcd972fd9ba2c7d5d658689d090f1a000000000000000000000b38"
   },
@@ -71,7 +71,7 @@
       "0xEe327F889d5947c1dc1934Bb208a1E792F953E96",
       "0x43894DE14462B421372bCFe445fA51b1b4A0Ff3D"
     ],
-    "boostTypes": ["stakedEth", "Aave"],
+    "boostTypes": ["stakedToken", "Aave"],
     "aaveTags": [0, "137-0x7ceb23fd6bc0add59e62ac25578270cff1b9f619-0xa97684ead0e402dc232d5a977953df7ecbab3cdb"],
     "poolId": "0xd00f9ca46ce0e4a63067c4657986f0167b0de1e5000000000000000000000b42"
   },
@@ -96,22 +96,22 @@
   },
   "0x1E19CF2D73a72Ef1332C882F20534B6519Be0276": {
     "boostedUnderlyings": ["0xae78736Cd615f374D3085123A210448E74Fc6393"],
-    "boostTypes": ["stakedEth"],
+    "boostTypes": ["stakedToken"],
     "poolId": "0x1e19cf2d73a72ef1332c882f20534b6519be0276000200000000000000000112"
   },
   "0x32296969Ef14EB0c6d29669C550D4a0449130230": {
     "boostedUnderlyings": ["0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0"],
-    "boostTypes": ["stakedEth"],
+    "boostTypes": ["stakedToken"],
     "poolId": "0x32296969ef14eb0c6d29669c550d4a0449130230000200000000000000000080"
   },
   "0x36bf227d6BaC96e2aB1EbB5492ECec69C691943f": {
     "boostedUnderlyings": ["0x5979D7b546E38E414F7E9822514be443A4800529"],
-    "boostTypes": ["stakedEth"],
+    "boostTypes": ["stakedToken"],
     "poolId": "0x36bf227d6bac96e2ab1ebb5492ecec69c691943f000200000000000000000316"
   },
   "0x178E029173417b1F9C8bC16DCeC6f697bC323746": {
     "boostedUnderlyings": ["0x5979D7b546E38E414F7E9822514be443A4800529"],
-    "boostTypes": ["stakedEth"],
+    "boostTypes": ["stakedToken"],
     "poolId": "0x178e029173417b1f9c8bc16dcec6f697bc323746000200000000000000000158"
   },
   "0x60683B05e9a39E3509D8fdb9C959f23170f8A0fa": {
@@ -131,7 +131,7 @@
   },
   "0x1ee442b5326009Bb18F2F472d3e0061513d1A0fF": {
     "boostedUnderlyings": ["0xae78736Cd615f374D3085123A210448E74Fc6393"],
-    "boostTypes": ["stakedEth"],
+    "boostTypes": ["stakedToken"],
     "poolId": "0x1ee442b5326009bb18f2f472d3e0061513d1a0ff000200000000000000000464"
   },
   "0x5aEe1e99fE86960377DE9f88689616916D5DcaBe": {
@@ -140,17 +140,17 @@
       "0xae78736Cd615f374D3085123A210448E74Fc6393",
       "0xac3E018457B222d93114458476f3E3416Abbe38F"
     ],
-    "boostTypes": ["stakedEth", "stakedEth", "stakedEth"],
+    "boostTypes": ["stakedToken", "stakedToken", "stakedToken"],
     "poolId": "0x5aee1e99fe86960377de9f88689616916d5dcabe000000000000000000000467"
   },
   "0x5DEe84FfA2DC27419Ba7b3419d7146E53e4F7dEd": {
     "boostedUnderlyings": ["0xEe327F889d5947c1dc1934Bb208a1E792F953E96"],
-    "boostTypes": ["stakedEth"],
+    "boostTypes": ["stakedToken"],
     "poolId": "0x5dee84ffa2dc27419ba7b3419d7146e53e4f7ded000200000000000000000a4e"
   },
   "0x65Fe9314bE50890Fb01457be076fAFD05Ff32B9A": {
     "boostedUnderlyings": ["0x03b54A6e9a984069379fae1a4fC4dBAE93B3bCCD"],
-    "boostTypes": ["stakedEth"],
+    "boostTypes": ["stakedToken"],
     "poolId": "0x65fe9314be50890fb01457be076fafd05ff32b9a000000000000000000000a96"
   },
   "0x5A7f39435fD9c381e4932fa2047C9a5136A5E3E7": {
@@ -158,7 +158,7 @@
       "0x5979D7b546E38E414F7E9822514be443A4800529",
       "0xDa1CD1711743e57Dd57102E9e61b75f3587703da"
     ],
-    "boostTypes": ["stakedEth", "Aave"],
+    "boostTypes": ["stakedToken", "Aave"],
     "aaveTags": [0, "42161-0x82af49447d8a07e3bd95bd0d56f35241523fbab1-0xa97684ead0e402dc232d5a977953df7ecbab3cdb"],
     "poolId": "0x5a7f39435fd9c381e4932fa2047c9a5136a5e3e7000000000000000000000400"
   },
@@ -167,7 +167,7 @@
       "0xEC70Dcb4A1EFa46b8F2D97C310C9c4790ba5ffA8",
       "0xDa1CD1711743e57Dd57102E9e61b75f3587703da"
     ],
-    "boostTypes": ["stakedEth", "Aave"],
+    "boostTypes": ["stakedToken", "Aave"],
     "aaveTags": [0, "42161-0x82af49447d8a07e3bd95bd0d56f35241523fbab1-0xa97684ead0e402dc232d5a977953df7ecbab3cdb"],
     "poolId": "0xcba9ff45cfb9ce238afde32b0148eb82cbe635620000000000000000000003fd"
   },
@@ -195,17 +195,67 @@
   },
   "0x2d6CeD12420a9AF5a83765a8c48Be2aFcD1A8FEb": {
     "boostedUnderlyings": ["0x1DEBd73E752bEaF79865Fd6446b0c970EaE7732f", "0x5979D7b546E38E414F7E9822514be443A4800529", "0xEC70Dcb4A1EFa46b8F2D97C310C9c4790ba5ffA8"],
-    "boostTypes": ["stakedEth", "stakedEth", "stakedEth"],
+    "boostTypes": ["stakedToken", "stakedToken", "stakedToken"],
     "poolId": "0x2d6ced12420a9af5a83765a8c48be2afcd1a8feb000000000000000000000500"
   },
   "0xd0EC47c54cA5e20aaAe4616c25C825c7f48D4069": {
     "boostedUnderlyings": ["0xEC70Dcb4A1EFa46b8F2D97C310C9c4790ba5ffA8"],
-    "boostTypes": ["stakedEth"],
+    "boostTypes": ["stakedToken"],
     "poolId": "0xd0ec47c54ca5e20aaae4616c25c825c7f48d40690000000000000000000004ef"
   },
   "0xc2598280bFeA1Fe18dFcaBD21C7165c40c6859d3": {
     "boostedUnderlyings": ["0x95aB45875cFFdba1E5f451B950bC2E42c0053f39", "0x5979D7b546E38E414F7E9822514be443A4800529"],
-    "boostTypes": ["stakedEth", "stakedEth"],
+    "boostTypes": ["stakedToken", "stakedToken"],
     "poolId": "0xc2598280bfea1fe18dfcabd21c7165c40c6859d30000000000000000000004f3"
+  },
+  "0xff38cC0cE0DE4476C5a3e78675b48420A851035B": {
+    "boostedUnderlyings": ["0xD9FBA68D89178e3538e708939332c79efC540179"],
+    "boostTypes": ["Aave"],
+    "aaveTags": [
+      "42161-0x7dff72693f6a4149b17e7c6314655f6a9f7c8b33-0xa97684ead0e402dc232d5a977953df7ecbab3cdb"
+    ],
+    "poolId": "0xff38cc0ce0de4476c5a3e78675b48420a851035b000200000000000000000593"
+  },
+  "0x46472CBA35E6800012aA9fcC7939Ff07478C473E": {
+    "boostedUnderlyings": ["0x7CFaDFD5645B50bE87d546f42699d863648251ad"],
+    "boostTypes": ["Aave"],
+    "aaveTags": [
+      "42161-0xaf88d065e77c8cc2239327c5edb3a432268e5831-0xa97684ead0e402dc232d5a977953df7ecbab3cdb"
+    ],
+    "poolId": "0x46472cba35e6800012aa9fcc7939ff07478c473e00020000000000000000056c"
+  },
+  "0x6e822c64c00393b2078f2a5BB75c575aB505B55c": {
+    "boostedUnderlyings": ["0x7CFaDFD5645B50bE87d546f42699d863648251ad"],
+    "boostTypes": ["Aave"],
+    "aaveTags": [
+      "42161-0xaf88d065e77c8cc2239327c5edb3a432268e5831-0xa97684ead0e402dc232d5a977953df7ecbab3cdb"
+    ],
+    "poolId": "0x6e822c64c00393b2078f2a5bb75c575ab505b55c000200000000000000000548"
+  },
+  "0x7272163A931DaC5BBe1CB5feFaF959BB65F7346F": {
+    "boostedUnderlyings": ["0xb165a74407fE1e519d6bCbDeC1Ed3202B35a4140"],
+    "boostTypes": ["Aave"],
+    "aaveTags": [
+      "42161-0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9-0xa97684ead0e402dc232d5a977953df7ecbab3cdb"
+    ],
+    "poolId": "0x7272163a931dac5bbe1cb5fefaf959bb65f7346f000200000000000000000549"
+  },
+  "0x6ce1D1e46548ef657f8D7Ebddfc4BEaDB04F72f3": {
+    "boostedUnderlyings": ["0x5979D7b546E38E414F7E9822514be443A4800529"],
+    "boostTypes": ["stakedToken"],
+    "poolId": "0x6ce1d1e46548ef657f8d7ebddfc4beadb04f72f30002000000000000000005a1"
+  },
+  "0xdeEaF8B0A8Cf26217261b813e085418C7dD8F1eE": {
+    "boostedUnderlyings": ["0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2"],
+    "boostTypes": ["stakedToken"],
+    "poolId": "0xdeeaf8b0a8cf26217261b813e085418c7dd8f1ee00020000000000000000058f"
+  },
+  "0x36C2f879f446c3b6533f9703745C0504f3a84885": {
+    "boostedUnderlyings": ["0x89AEc2023f89E26Dbb7eaa7a98fe3996f9d112A8", "0xe3b3FE7bcA19cA77Ad877A5Bebab186bEcfAD906"],
+    "boostTypes": ["Aave", "stakedToken"],
+    "aaveTags": [
+      "42161-0x17fc002b466eec40dae837fc4be5c67993ddbd6f-0xa97684ead0e402dc232d5a977953df7ecbab3cdb"
+    ],
+    "poolId": "0x36c2f879f446c3b6533f9703745c0504f3a84885000200000000000000000591"
   }
 }
