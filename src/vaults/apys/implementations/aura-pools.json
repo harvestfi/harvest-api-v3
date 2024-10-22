@@ -347,11 +347,96 @@
     "name": "reth_badger"
   },
   {
+    "id": 69,
+    "lptoken": "0x46472CBA35E6800012aA9fcC7939Ff07478C473E",
+    "rewardPool": "0xe48D1173EE577c1daE45C9CD2D29BD3DfaF02BD6",
+    "balancerPoolId": "0x46472cba35e6800012aa9fcc7939ff07478c473e00020000000000000000056c",
+    "name": "wausdc_gho_arbitrum",
+    "extras": [
+      {
+        "contract": "0xDfb793eE33AF74ad17E86B337b5996e75bf16cfd",
+        "token": "0x1509706a6c66CA549ff0cB464de88231DDBe213B",
+        "name": "AURA"
+      },
+      {
+        "contract": "0xB3e539e7821448Fd831FecC13d59bE6043d6e601",
+        "token": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+        "name": "ARB"
+      },
+      {
+        "contract": "0x3ABC7f66972C06eBa17Bf5fbd4C78076c3fd5E16",
+        "token": "0x7dfF72693f6A4149b17e7C6314655f6A9F7c8B33",
+        "name": "GHO"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "lptoken": "0x7272163A931DaC5BBe1CB5feFaF959BB65F7346F",
+    "rewardPool": "0x66EeE72121E64Cd5fb67B306087511ca20B1956E",
+    "balancerPoolId": "0x7272163a931dac5bbe1cb5fefaf959bb65f7346f000200000000000000000549",
+    "name": "wausdt_gyd_arbitrum"
+  },
+  {
     "id": 72,
     "lptoken": "0x60683B05e9a39E3509D8fdb9C959f23170f8A0fa",
     "rewardPool": "0x4d585a29dF0a8E18c26f662C6586ded6703062a8",
     "balancerPoolId": "0x60683b05e9a39e3509d8fdb9c959f23170f8a0fa000000000000000000000489",
     "name": "bbiUSD"
+  },
+  {
+    "id": 74,
+    "lptoken": "0x6e822c64c00393b2078f2a5BB75c575aB505B55c",
+    "rewardPool": "0x78118Bc631b0eb2FB6A350f12e0334535783e49F",
+    "balancerPoolId": "0x6e822c64c00393b2078f2a5bb75c575ab505b55c000200000000000000000548",
+    "name": "wausdc_gyd_arbitrum"
+  },
+  {
+    "id": 81,
+    "lptoken": "0x36C2f879f446c3b6533f9703745C0504f3a84885",
+    "rewardPool": "0xE6940b5FF5C0b4A09576667c7F71953a200e666A",
+    "balancerPoolId": "0x36c2f879f446c3b6533f9703745c0504f3a84885000200000000000000000591",
+    "name": "wafrax_sfrax_arbitrum"
+  },
+  {
+    "id": 82,
+    "lptoken": "0xdeEaF8B0A8Cf26217261b813e085418C7dD8F1eE",
+    "rewardPool": "0x2d7cFe43BcDf10137924a20445B763Fb40E5871c",
+    "balancerPoolId": "0xdeeaf8b0a8cf26217261b813e085418c7dd8f1ee00020000000000000000058f",
+    "name": "susde_gyd_arbitrum"
+  },
+  {
+    "id": 86,
+    "lptoken": "0xff38cC0cE0DE4476C5a3e78675b48420A851035B",
+    "rewardPool": "0x005DF7aC723E45Af4d7475A612a02f0565Eb3778",
+    "balancerPoolId": "0xff38cc0ce0de4476c5a3e78675b48420a851035b000200000000000000000593",
+    "name": "wagho_gyd_arbitrum"
+  },
+  {
+    "id": 89,
+    "lptoken": "0x6ce1D1e46548ef657f8D7Ebddfc4BEaDB04F72f3",
+    "rewardPool": "0x9af228E16Ed7C9a39A44844860c8c72A4c4a1fDa",
+    "balancerPoolId": "0x6ce1d1e46548ef657f8d7ebddfc4beadb04f72f30002000000000000000005a1",
+    "name": "wsteth_gyd_arbitrum"
+  },
+  {
+    "id": 90,
+    "lptoken": "0x4284c68f567903537E2d9Ff726fdF8591E431DDC",
+    "rewardPool": "0x159e8E79b63f345461613c97c58B21509287f647",
+    "balancerPoolId": "0x4284c68f567903537e2d9ff726fdf8591e431ddc0002000000000000000005b5",
+    "name": "more_gyd_arbitrum",
+    "extras": [
+      {
+        "contract": "0xac658E0ADb13eE33227473999D040DdbCd416428",
+        "token": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "name": "USDC"
+      },
+      {
+        "contract": "0x26EE6BFD279827a34A6203B85e45D807CCec5cAB",
+        "token": "0x1509706a6c66CA549ff0cB464de88231DDBe213B",
+        "name": "AURA"
+      }
+    ]
   },
   {
     "id": 109,
