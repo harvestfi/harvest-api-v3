@@ -46,6 +46,113 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  ION_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/ion.svg'],
+    tokenAddress: addresses.BASE.ION,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['ionic-protocol'],
+    },
+  },
+  VIRTUAL_base: {
+    chain: CHAIN_IDS.BASE,
+    logoUrl: ['./icons/virtual.svg'],
+    tokenAddress: addresses.BASE.VIRTUAL,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['virtual-protocol'],
+    },
+  },
+  aerodrome_jEUR_EURC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/jeur.svg', './icons/eurc.svg'],
+    tokenNames: ['jEUR', 'EURC'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.BASE.V2.aerodrome_jEUR_EURC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_jEUR_EURC.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_jEUR_EURC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_jEUR_EURC.Underlying, 'jEUR_base', 'EURC_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_jEUR_EURC.Underlying,
+          addresses.BASE.V2.aerodrome_jEUR_EURC.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_ION_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/ion.svg', './icons/eth.svg'],
+    tokenNames: ['ION', 'ETH'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.BASE.V2.aerodrome_ION_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_ION_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_ION_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_ION_ETH.Underlying, 'ION_base', 'WETH_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_ION_ETH.Underlying,
+          addresses.BASE.V2.aerodrome_ION_ETH.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_VIRTUAL_cbBTC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/virtual.svg', './icons/cbbtc.svg'],
+    tokenNames: ['VIRTUAL', 'cbBTC'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.BASE.V2.aerodrome_VIRTUAL_cbBTC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_VIRTUAL_cbBTC.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_VIRTUAL_cbBTC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [
+        addresses.BASE.V2.aerodrome_VIRTUAL_cbBTC.Underlying,
+        'VIRTUAL_base',
+        'moonwell_cbBTC',
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_VIRTUAL_cbBTC.Underlying,
+          addresses.BASE.V2.aerodrome_VIRTUAL_cbBTC.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
   MORE: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: [''],
