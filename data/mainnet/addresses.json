@@ -2016,6 +2016,12 @@
         "NewStrategy": "0xE509fF911C4a3258A193d921b161a98FC5d8278d",
         "NewPool": "0x8A822245015De900A3AeC1BE34A4CD126D44f5B7",
         "PoolId": "0x6ce1d1e46548ef657f8d7ebddfc4beadb04f72f30002000000000000000005a1"
+      },
+      "TESTING_gmx_gmBTC": {
+        "Underlying": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+        "NewVault": "0x3Bd8535e07396a1Df6F380ef90cB9b4dD3FEF8C9",
+        "NewStrategy": "0x7E1CB28549c7ECA1BF35C1D8b434f878e3981353",
+        "NewPool": "0xc3705f7f344A832c45b26f1BE1589551F1B4fab0"
       }
     }
   },

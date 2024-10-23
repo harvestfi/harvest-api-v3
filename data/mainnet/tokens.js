@@ -46,6 +46,30 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  TESTING_gmx_gmBTC: {
+    inactive: true,
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/wbtc.svg'],
+    apyTokenSymbols: ['WBTC'],
+    logoUrl: ['./icons/wbtc.svg'],
+    tokenNames: ['WBTC'],
+    platform: ['TESTING'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.TESTING_gmx_gmBTC.Underlying,
+    decimals: '8',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.TESTING_gmx_gmBTC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.TESTING_gmx_gmBTC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['wrapped-bitcoin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0.0'],
+      },
+    ],
+  },
   ION_base: {
     chain: CHAIN_IDS.BASE,
     logoUrl: ['./icons/ion.svg'],
