@@ -46,6 +46,17 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  APE_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/ape.svg'],
+    tokenAddress: addresses.ARBITRUM_ONE.APE,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['apecoin'],
+    },
+  },
   TESTING_gmx_gmBTC: {
     inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
@@ -8680,8 +8691,9 @@ module.exports = {
       './icons/xgrail.svg',
       './icons/dmt.svg',
       './icons/winr.svg',
+      './icons/ape.svg',
     ],
-    apyTokenSymbols: ['ETH-USDC.e', 'xGRAIL', 'DMT', 'WINR'],
+    apyTokenSymbols: ['ETH-USDC.e', 'xGRAIL', 'DMT', 'WINR', 'APE'],
     tokenNames: ['xGRAIL'],
     platform: ['Camelot'],
     tags: ['Advanced'],
