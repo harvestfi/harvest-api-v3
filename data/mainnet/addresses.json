@@ -2485,7 +2485,7 @@
         "NewPool": "0xc0d3ccD19D8b3a159c55268ac8a9c4b13f7c1146",
         "Gauge": "0x4F09bAb2f0E15e2A078A227FE1537665F55b8360"
       },
-      "aerodrome_WELL_ETH": {
+      "aerodrome_WELL_ETH_old": {
         "Underlying": "0xffA3F8737C39e36dec4300B162c2153c67c8352f",
         "NewVault": "0x8d44eEdB4074E02bd418286b4Af5bD5E47F91A6f",
         "NewStrategy": "0x0FBeA24A65b7089A9EE705f32EdD0A793A89f75b",
@@ -2789,6 +2789,20 @@
         "NewStrategy": "0x2a75221aa9eb1346c5A53CaAbbB181Fa02d44E45",
         "NewPool": "0xCcd1b1cA36cF5E35f9A83D2Cd43Cc99065337DA1",
         "Gauge": "0x8c44e7F913D0893Cd5A3CBBb2fCd59785a7801ab"
+      },
+      "aerodrome_WELL_ETH": {
+        "Underlying": "0x89D0F320ac73dd7d9513FFC5bc58D1161452a657",
+        "NewVault": "0x175d69829Dfe3Aa72a399211885c4Fe1b2ffC2E3",
+        "NewStrategy": "0xbB5c3C45268d40f4CF43433db42e129eae0B0003",
+        "NewPool": "0xCd29563819d223C2B5745BCF46131F9652AdbecA",
+        "Gauge": "0x7b6964440b615aC1d31bc95681B133E112fB2684"
+      },
+      "moonwell_wrsETH": {
+        "Underlying": "0xEDfa23602D0EC14714057867A78d01e94176BEA0",
+        "NewVault": "0x3Ed42dbbeDEED1034d0bFF04cD9544c110873238",
+        "NewStrategy": "0x2446684c335EA2243DaFB531D6B6E85C5E5Ed003",
+        "NewPool": "0x3Db2F4979622a2C5B7a0ebE5a713941D836747c4",
+        "mToken": "0xfC41B49d064Ac646015b459C522820DB9472F4B5"
       }
     }
   },

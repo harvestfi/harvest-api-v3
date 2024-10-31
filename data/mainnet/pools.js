@@ -5,6 +5,53 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'moonwell_wrsETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.moonwell_wrsETH.NewPool,
+    collateralAddress: addresses.BASE.V2.moonwell_wrsETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_wrsETH.Underlying}" target="_blank" rel="noopener noreferrer"> wrsETH </a>to Moonwell, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_wrsETH.Underlying}" target="_blank" rel="noopener noreferrer"> wrsETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'aerodrome_WELL_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.aerodrome_WELL_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.aerodrome_WELL_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://aerodrome.finance/deposit?token0=0xA88594D404727625A9437C3f886C7643872296AE&token1=0x4200000000000000000000000000000000000006&type=-1`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_WELL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_WELL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_WELL_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
+      <a href="https://aerodrome.finance/deposit?token0=0xA88594D404727625A9437C3f886C7643872296AE&token1=0x4200000000000000000000000000000000000006&type=-1" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'TESTING_gmx_gmBTC',
     type: POOL_TYPES.INCENTIVE,
@@ -3506,10 +3553,10 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.BASE,
-    id: 'aerodrome_WELL_ETH',
+    id: 'aerodrome_WELL_ETH_old',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.BASE.V2.aerodrome_WELL_ETH.NewPool,
-    collateralAddress: addresses.BASE.V2.aerodrome_WELL_ETH.NewVault,
+    contractAddress: addresses.BASE.V2.aerodrome_WELL_ETH_old.NewPool,
+    collateralAddress: addresses.BASE.V2.aerodrome_WELL_ETH_old.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
@@ -3519,13 +3566,13 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_WELL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_WELL_ETH_old.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens </a>in a Aerodrome farm, earning 
        <a href="https://basescan.org/token/${addresses.BASE.AERO}" target="_blank" rel="noopener noreferrer">AERO</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_WELL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_WELL_ETH_old.Underlying}" target="_blank" rel="noopener noreferrer"> Aerodrome LP tokens</a>.
       </p>
       <p> Get the 
-      <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_WELL_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
+      <a href="https://basescan.org/token/${addresses.BASE.V2.aerodrome_WELL_ETH_old.Underlying}" target="_blank" rel="noopener noreferrer">Aerodrome LP tokens</a> by supplying liquidity on 
       <a href="https://aerodrome.finance/deposit?token0=0x4200000000000000000000000000000000000006&token1=0xFF8adeC2221f9f4D8dfbAFa6B9a297d17603493D&stable=false" target="_blank" rel="noopener noreferrer">Aerodrome</a>.
       </p>
     </div>

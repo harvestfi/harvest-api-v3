@@ -46,6 +46,61 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  moonwell_wrsETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/well.svg'],
+    apyTokenSymbols: ['WELL'],
+    logoUrl: ['./icons/wrseth.svg'],
+    tokenNames: ['wrsETH'],
+    platform: ['Moonwell'],
+    tags: ['Beginner', 'LSD'],
+    tokenAddress: addresses.BASE.V2.moonwell_wrsETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.moonwell_wrsETH.NewVault,
+    strategyAddress: addresses.BASE.V2.moonwell_wrsETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['wrapped-rseth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
+        params: [
+          addresses.BASE.V2.moonwell_wrsETH.Underlying,
+          addresses.BASE.V2.moonwell_wrsETH.mToken,
+          addresses.BASE.V2.moonwell_wrsETH.NewStrategy,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  aerodrome_WELL_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aero.svg'],
+    apyTokenSymbols: ['AERO'],
+    logoUrl: ['./icons/well.svg', './icons/eth.svg'],
+    tokenNames: ['WELL', 'ETH'],
+    platform: ['Aerodrome'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.BASE.V2.aerodrome_WELL_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.aerodrome_WELL_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.aerodrome_WELL_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.BASE.V2.aerodrome_WELL_ETH.Underlying, 'WELL', 'WETH_base'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AERODROME,
+        params: [
+          addresses.BASE.V2.aerodrome_WELL_ETH.Underlying,
+          addresses.BASE.V2.aerodrome_WELL_ETH.Gauge,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
   TESTING_gmx_gmBTC: {
     inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
@@ -4423,27 +4478,27 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'AERO'],
   },
-  aerodrome_WELL_ETH: {
+  aerodrome_WELL_ETH_old: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
     logoUrl: ['./icons/well.svg', './icons/eth.svg'],
-    tokenNames: ['WELL', 'ETH'],
+    tokenNames: ['WELL(old)', 'ETH'],
     platform: ['Aerodrome'],
     tags: ['Advanced'],
-    tokenAddress: addresses.BASE.V2.aerodrome_WELL_ETH.Underlying,
+    tokenAddress: addresses.BASE.V2.aerodrome_WELL_ETH_old.Underlying,
     decimals: '18',
-    vaultAddress: addresses.BASE.V2.aerodrome_WELL_ETH.NewVault,
+    vaultAddress: addresses.BASE.V2.aerodrome_WELL_ETH_old.NewVault,
     priceFunction: {
       type: GET_PRICE_TYPES.LP_TOKEN,
-      params: [addresses.BASE.V2.aerodrome_WELL_ETH.Underlying, 'WELL_old', 'WETH_base'],
+      params: [addresses.BASE.V2.aerodrome_WELL_ETH_old.Underlying, 'WELL_old', 'WETH_base'],
     },
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.AERODROME,
         params: [
-          addresses.BASE.V2.aerodrome_WELL_ETH.Underlying,
-          addresses.BASE.V2.aerodrome_WELL_ETH.Gauge,
+          addresses.BASE.V2.aerodrome_WELL_ETH_old.Underlying,
+          addresses.BASE.V2.aerodrome_WELL_ETH_old.Gauge,
           profitSharingCut10Percent,
         ],
       },
@@ -7187,6 +7242,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.moonwell_USDC.Underlying,
     decimals: '6',
     vaultAddress: addresses.BASE.V2.moonwell_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.moonwell_USDC.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
@@ -7445,6 +7501,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.moonwell_CBETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.moonwell_CBETH.NewVault,
+    strategyAddress: addresses.BASE.V2.moonwell_CBETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['coinbase-wrapped-staked-eth'],
@@ -7473,6 +7530,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.moonwell_DAI.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.moonwell_DAI.NewVault,
+    strategyAddress: addresses.BASE.V2.moonwell_DAI.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['dai'],
@@ -7501,6 +7559,7 @@ module.exports = {
     tokenAddress: addresses.BASE.V2.moonwell_WETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.moonwell_WETH.NewVault,
+    strategyAddress: addresses.BASE.V2.moonwell_WETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['weth'],
