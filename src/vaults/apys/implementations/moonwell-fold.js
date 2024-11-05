@@ -76,12 +76,19 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
     marketConfigEurc = 0
   }
 
+  const now = Date.now() / 1000
+
   let wellPerYearSupply, wellPerYearBorrow
   if (marketConfigWell) {
-    const wellRateSupply = new BigNumber(marketConfigWell.supplyEmissionsPerSec)
-    const wellRateBorrow = new BigNumber(marketConfigWell.borrowEmissionsPerSec)
-    wellPerYearSupply = wellRateSupply.times(secondsPerYear).div(1e18)
-    wellPerYearBorrow = wellRateBorrow.times(secondsPerYear).div(1e18)
+    if (now > marketConfigWell.endTime) {
+      wellPerYearSupply = new BigNumber(0)
+      wellPerYearBorrow = new BigNumber(0)
+    } else {
+      const wellRateSupply = new BigNumber(marketConfigWell.supplyEmissionsPerSec)
+      const wellRateBorrow = new BigNumber(marketConfigWell.borrowEmissionsPerSec)
+      wellPerYearSupply = wellRateSupply.times(secondsPerYear).div(1e18)
+      wellPerYearBorrow = wellRateBorrow.times(secondsPerYear).div(1e18)
+    }
   } else {
     wellPerYearSupply = new BigNumber(0)
     wellPerYearBorrow = new BigNumber(0)
@@ -89,10 +96,15 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
 
   let usdcPerYearSupply, usdcPerYearBorrow
   if (marketConfigUsdc) {
-    const usdcRateSupply = new BigNumber(marketConfigUsdc.supplyEmissionsPerSec)
-    const usdcRateBorrow = new BigNumber(marketConfigUsdc.borrowEmissionsPerSec)
-    usdcPerYearSupply = usdcRateSupply.times(secondsPerYear).div(1e6)
-    usdcPerYearBorrow = usdcRateBorrow.times(secondsPerYear).div(1e6)
+    if (now > marketConfigUsdc.endTime) {
+      usdcPerYearSupply = new BigNumber(0)
+      usdcPerYearBorrow = new BigNumber(0)
+    } else {
+      const usdcRateSupply = new BigNumber(marketConfigUsdc.supplyEmissionsPerSec)
+      const usdcRateBorrow = new BigNumber(marketConfigUsdc.borrowEmissionsPerSec)
+      usdcPerYearSupply = usdcRateSupply.times(secondsPerYear).div(1e6)
+      usdcPerYearBorrow = usdcRateBorrow.times(secondsPerYear).div(1e6)
+    }
   } else {
     usdcPerYearSupply = new BigNumber(0)
     usdcPerYearBorrow = new BigNumber(0)
@@ -100,10 +112,15 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
 
   let eurcPerYearSupply, eurcPerYearBorrow
   if (marketConfigEurc) {
-    const eurcRateSupply = new BigNumber(marketConfigEurc.supplyEmissionsPerSec)
-    const eurcRateBorrow = new BigNumber(marketConfigEurc.borrowEmissionsPerSec)
-    eurcPerYearSupply = eurcRateSupply.times(secondsPerYear).div(1e6)
-    eurcPerYearBorrow = eurcRateBorrow.times(secondsPerYear).div(1e6)
+    if (now > marketConfigEurc.endTime) {
+      eurcPerYearSupply = new BigNumber(0)
+      eurcPerYearBorrow = new BigNumber(0)
+    } else {
+      const eurcRateSupply = new BigNumber(marketConfigEurc.supplyEmissionsPerSec)
+      const eurcRateBorrow = new BigNumber(marketConfigEurc.borrowEmissionsPerSec)
+      eurcPerYearSupply = eurcRateSupply.times(secondsPerYear).div(1e6)
+      eurcPerYearBorrow = eurcRateBorrow.times(secondsPerYear).div(1e6)
+    }
   } else {
     eurcPerYearSupply = new BigNumber(0)
     eurcPerYearBorrow = new BigNumber(0)
