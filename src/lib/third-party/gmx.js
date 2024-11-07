@@ -58,11 +58,11 @@ const getGmxData = async () => {
     const now = Date.now()
     let dataAdd = {}
     dataAdd[now] = {
-        ethPrice: {min: ethMinPrice, mid: ethMidPrice, max: ethMaxPrice},
-        btcPrice: {min: btcMinPrice, mid: btcMidPrice, max: btcMaxPrice},
-        wbtcPrice: {min: wbtcMinPrice, mid: wbtcMidPrice, max: wbtcMaxPrice},
-        gmEthPrice: {eth: gmEthPriceEthIn, usd: gmEthPriceUsdIn},
-        gmBtcPrice: {btc: gmBtcPriceBtcIn, usd: gmBtcPriceUsdIn}
+        ethPrice: {min: ethMinPrice.toFixed(), mid: ethMidPrice.toFixed(), max: ethMaxPrice.toFixed()},
+        btcPrice: {min: btcMinPrice.toFixed(), mid: btcMidPrice.toFixed(), max: btcMaxPrice.toFixed()},
+        wbtcPrice: {min: wbtcMinPrice.toFixed(), mid: wbtcMidPrice.toFixed(), max: wbtcMaxPrice.toFixed()},
+        gmEthPrice: {eth: gmEthPriceEthIn.toFixed(), usd: gmEthPriceUsdIn.toFixed()},
+        gmBtcPrice: {btc: gmBtcPriceBtcIn.toFixed(), usd: gmBtcPriceUsdIn.toFixed()}
     }
 
     await appendData(Cache, DB_CACHE_IDS.GMX_DATA, dataAdd, false)
