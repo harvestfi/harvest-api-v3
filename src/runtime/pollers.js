@@ -37,6 +37,7 @@ const {
   getBalanceData,
 } = require('../lib/third-party/harvest-subgraph')
 const { superformRewardData } = require('../lib/third-party/superform')
+const { getGmxData } = require('../lib/third-party/gmx')
 
 const getProfitSharingFactor = chain => {
   switch (chain) {
@@ -1119,6 +1120,7 @@ const runUpdateLoop = async () => {
       rates: 0,
       historical_rates: 0,
       leaderboard: 0,
+      gmx: 0,
     })
   }
 
@@ -1185,6 +1187,12 @@ const runUpdateLoop = async () => {
   await getLeaderboardData()
   if (DEBUG_MODE) {
     updateCallCountCache('leaderboard')
+    resetCallCount()
+  }
+
+  await getGmxData()
+  if (DEBUG_MODE) {
+    updateCallCountCache('gmx')
     resetCallCount()
   }
 

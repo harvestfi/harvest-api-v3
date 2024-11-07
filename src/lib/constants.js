@@ -263,6 +263,7 @@ const DB_CACHE_IDS = {
   HISTORICAL_RATES: 8,
   SF_REWARDS: 9,
   LEADERBOARD: 10,
+  GMX_DATA: 11,
 }
 
 const PROFIT_SHARING_POOL_ID = 'profit-sharing-farm'

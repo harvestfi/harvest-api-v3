@@ -205,7 +205,14 @@ const syncswapPoolContract = require('../contracts/syncswap-pool/contract.json')
 const savingsPotMethods = require('../contracts/savings-pot/methods')
 const savingsPotContract = require('../contracts/savings-pot/contract.json')
 
+const gmxViewerMethods = require('../contracts/gmx-viewer/methods')
+const gmxViewerContract = require('../contracts/gmx-viewer/contract.json')
+
 module.exports = {
+  gmxViewer: {
+    methods: gmxViewerMethods,
+    contract: gmxViewerContract,
+  },
   savingsPot: {
     methods: savingsPotMethods,
     contract: savingsPotContract,
