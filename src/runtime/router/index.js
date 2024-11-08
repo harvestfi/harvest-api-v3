@@ -322,6 +322,16 @@ const initRouter = app => {
       })
     }),
   )
+
+  app.get(
+    '/gmx-data',
+    asyncWrap(async (req, res) => {
+      const data = await Cache.findOne({ type: DB_CACHE_IDS.GMX_DATA })
+      res.send({
+        ...get(data, 'data', {}),
+      })
+    }),
+  )
 }
 
 module.exports = { initRouter }
