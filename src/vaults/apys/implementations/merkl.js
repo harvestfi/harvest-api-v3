@@ -1,12 +1,12 @@
-const axios = require('axios')
 const { get } = require('lodash')
 const { MERKL_ENDPOINT } = require('../../../lib/constants')
+const { cachedAxios } = require('../../../lib/db/models/cache')
 
 const getApy = async (underlying, poolAddress, chainId, reduction) => {
   let response, apy
 
   try {
-    response = await axios.get(`${MERKL_ENDPOINT}?chainIds[]=${chainId}`)
+    response = await cachedAxios.get(`${MERKL_ENDPOINT}?chainIds[]=${chainId}`)
     const aprLabel = `Gamma ${underlying}`
     apy = get(response, `data.${chainId}.pools.${poolAddress}.aprs.${aprLabel}`, 0)
     apy = parseFloat(apy) * parseFloat(reduction)

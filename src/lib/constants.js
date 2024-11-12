@@ -67,7 +67,6 @@ const ESTIMATED_APY_TYPES = {
 }
 
 const TRADING_APY_TYPES = {
-  LP: 'LP',
   BALANCER: 'BALANCER',
   UNIV3: 'UNIV3',
   UNIV3_V2: 'UNIV3_V2',
@@ -143,7 +142,7 @@ const HARVEST_SUBGRAPH_URLS = {
     'https://api.studio.thegraph.com/query/48757/harvest-base/v0.0.24',
   42161:
     process.env.ARBITRUM_SUBGRAPH_URL ||
-    'https://api.studio.thegraph.com/query/48757/harvest-arbitrum/v0.0.14',
+    'https://api.studio.thegraph.com/query/48757/harvest-arbitrum/v0.0.19',
   324:
     process.env.ZKSYNC_SUBGRAPH_URL ||
     'https://api.studio.thegraph.com/query/48757/l2-zksync-era/v0.1.12',
@@ -200,9 +199,7 @@ const APE_API_URL = 'https://ape-swap-api.herokuapp.com'
 
 const WOMBAT_ARB_SUBGRAPH_URL = `https://gateway-arbitrum.network.thegraph.com/api/${process.env.SUBGRAPH_KEY}/subgraphs/id/5YPaz7z5iYgboKtoShdvZYPohUKtrDLibcLSLzaC424M`
 
-const BALANCER_SUBGRAPH_URLS = {
-  ETH: `https://gateway-arbitrum.network.thegraph.com/api/${process.env.SUBGRAPH_KEY}/subgraphs/id/C4ayEZP2yTXRAB8vSaTrgN4m9anTe9Mdm2ViyiAuV9TV`,
-}
+const BALANCER_GRAPHQL_URL = `https://api-v3.balancer.fi/graphql`
 
 const LIDO_API_URLS = { ETH: 'https://eth-api.lido.fi/v1/protocol/steth/apr/sma' }
 const ROCKETPOOL_API_URLS = { ETH: 'https://api.rocketpool.net/api/apr' }
@@ -353,7 +350,7 @@ module.exports = {
   UI_DATA_CACHE_TTL,
   MATIC_RPC_URL,
   TRADING_APY_TYPES,
-  BALANCER_SUBGRAPH_URLS,
+  BALANCER_GRAPHQL_URL,
   LIDO_API_URLS,
   ROCKETPOOL_API_URLS,
   STAKEWISE_API_URLS,
