@@ -151,8 +151,8 @@ module.exports = [
     id: 'balancer_MORE_GYD',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.V2.balancer_MORE_GYD.Underlying, 'balancerv2_arbitrum'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_MORE_GYD.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_MORE_GYD.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_MORE_GYD.NewVault,
@@ -183,13 +183,8 @@ module.exports = [
     id: 'balancer_sUSDe_GYD',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [
-        addresses.ARBITRUM_ONE.V2.balancer_sUSDe_GYD.Underlying,
-        'balancerv2_arbitrum',
-        true,
-        CHAIN_IDS.ARBITRUM_ONE,
-      ],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_sUSDe_GYD.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_sUSDe_GYD.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_sUSDe_GYD.NewVault,
@@ -219,13 +214,8 @@ module.exports = [
     id: 'balancer_waFRAX_sFRAX',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [
-        addresses.ARBITRUM_ONE.V2.balancer_waFRAX_sFRAX.Underlying,
-        'balancerv2_arbitrum',
-        true,
-        CHAIN_IDS.ARBITRUM_ONE,
-      ],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_waFRAX_sFRAX.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_waFRAX_sFRAX.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_waFRAX_sFRAX.NewVault,
@@ -255,13 +245,8 @@ module.exports = [
     id: 'balancer_waGHO_GYD',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [
-        addresses.ARBITRUM_ONE.V2.balancer_waGHO_GYD.Underlying,
-        'balancerv2_arbitrum',
-        true,
-        CHAIN_IDS.ARBITRUM_ONE,
-      ],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_waGHO_GYD.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_waGHO_GYD.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_waGHO_GYD.NewVault,
@@ -291,13 +276,8 @@ module.exports = [
     id: 'balancer_waUSDC_GHO',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [
-        addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GHO.Underlying,
-        'balancerv2_arbitrum',
-        true,
-        CHAIN_IDS.ARBITRUM_ONE,
-      ],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GHO.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GHO.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GHO.NewVault,
@@ -329,13 +309,8 @@ module.exports = [
     id: 'balancer_waUSDC_GYD',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [
-        addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GYD.Underlying,
-        'balancerv2_arbitrum',
-        true,
-        CHAIN_IDS.ARBITRUM_ONE,
-      ],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GYD.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GYD.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_waUSDC_GYD.NewVault,
@@ -365,13 +340,8 @@ module.exports = [
     id: 'balancer_waUSDT_GYD',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [
-        addresses.ARBITRUM_ONE.V2.balancer_waUSDT_GYD.Underlying,
-        'balancerv2_arbitrum',
-        true,
-        CHAIN_IDS.ARBITRUM_ONE,
-      ],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_waUSDT_GYD.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_waUSDT_GYD.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_waUSDT_GYD.NewVault,
@@ -401,13 +371,8 @@ module.exports = [
     id: 'balancer_wstETH_GYD',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [
-        addresses.ARBITRUM_ONE.V2.balancer_wstETH_GYD.Underlying,
-        'balancerv2_arbitrum',
-        true,
-        CHAIN_IDS.ARBITRUM_ONE,
-      ],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_wstETH_GYD.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_GYD.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_GYD.NewVault,
@@ -2152,8 +2117,8 @@ module.exports = [
     id: 'balancer_APW_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.V2.balancer_APW_ETH.Underlying, 'balancerv2_eth'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.V2.balancer_APW_ETH.PoolId, CHAIN_IDS.ETH_MAINNET],
     },
     contractAddress: addresses.V2.balancer_APW_ETH.NewPool,
     collateralAddress: addresses.V2.balancer_APW_ETH.NewVault,
@@ -2287,13 +2252,8 @@ module.exports = [
     id: 'balancer_cbETH_rETH_wstETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [
-        addresses.ARBITRUM_ONE.V2.balancer_cbETH_rETH_wstETH.Underlying,
-        'balancerv2_arbitrum',
-        true,
-        CHAIN_IDS.ARBITRUM_ONE,
-      ],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_cbETH_rETH_wstETH.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_cbETH_rETH_wstETH.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_cbETH_rETH_wstETH.NewVault,
@@ -2324,13 +2284,8 @@ module.exports = [
     id: 'balancer_rETH_wETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [
-        addresses.ARBITRUM_ONE.V2.balancer_rETH_wETH.Underlying,
-        'balancerv2_arbitrum',
-        true,
-        CHAIN_IDS.ARBITRUM_ONE,
-      ],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_rETH_wETH.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_rETH_wETH.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_rETH_wETH.NewVault,
@@ -2361,8 +2316,8 @@ module.exports = [
     id: 'balancer_rsETH_wETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.V2.balancer_rsETH_wETH.Underlying, 'balancerv2_arbitrum'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_rsETH_wETH.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_rsETH_wETH.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_rsETH_wETH.NewVault,
@@ -2393,13 +2348,8 @@ module.exports = [
     id: 'balancer_wstETH_sfrxETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [
-        addresses.ARBITRUM_ONE.V2.balancer_wstETH_sfrxETH.Underlying,
-        'balancerv2_arbitrum',
-        true,
-        CHAIN_IDS.ARBITRUM_ONE,
-      ],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_wstETH_sfrxETH.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_sfrxETH.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_wstETH_sfrxETH.NewVault,
@@ -6627,8 +6577,8 @@ module.exports = [
     id: 'balancer_DOLA_USDC',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.V2.balancer_DOLA_USDC.Underlying, 'balancerv2_arbitrum'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_DOLA_USDC.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_DOLA_USDC.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_DOLA_USDC.NewVault,
@@ -6657,8 +6607,8 @@ module.exports = [
     id: 'balancer_tBTC_WBTC',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.Underlying, 'balancerv2_arbitrum'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_tBTC_WBTC.NewVault,
@@ -6686,8 +6636,8 @@ module.exports = [
     id: 'balancer_tBTC_WETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.Underlying, 'balancerv2_arbitrum'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_tBTC_WETH.NewVault,
@@ -6981,8 +6931,8 @@ module.exports = [
     id: 'balancer_2EUR_PAR_v2',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.MATIC.V2.balancer_2EUR_PAR_v2.Underlying, 'balancerv2_matic'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.MATIC.V2.balancer_2EUR_PAR_v2.PoolId, CHAIN_IDS.POLYGON_MAINNET],
     },
     contractAddress: addresses.MATIC.V2.balancer_2EUR_PAR_v2.NewPool,
     collateralAddress: addresses.MATIC.V2.balancer_2EUR_PAR_v2.NewVault,
@@ -7015,8 +6965,8 @@ module.exports = [
     id: 'balancer_RDNT_ETH',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.Underlying, 'balancerv2_arbitrum'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     contractAddress: addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.balancer_RDNT_ETH.NewVault,
@@ -7046,8 +6996,8 @@ module.exports = [
     contractAddress: addresses.ARBITRUM_ONE.V2.sushi_DPX_ETH.NewPool,
     collateralAddress: addresses.ARBITRUM_ONE.V2.sushi_DPX_ETH.NewVault,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.ARBITRUM_ONE.V2.sushi_DPX_ETH.Underlying, 'sushiswap_arbitrum'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.ARBITRUM_ONE.V2.sushi_DPX_ETH.PoolId, CHAIN_IDS.ARBITRUM_ONE],
     },
     rewardAPY: [],
     rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
@@ -7359,8 +7309,8 @@ module.exports = [
   },
   {
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.V2.uni_LOOKS_ETH.Underlying, 'uniswap_eth'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.V2.uni_LOOKS_ETH.PoolId, CHAIN_IDS.ETH_MAINNET],
     },
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'uni_LOOKS_ETH',
@@ -7383,8 +7333,8 @@ module.exports = [
   },
   {
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.MATIC.V2.SUSHI_GENE_ETH.Underlying, 'sushiswap_matic'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.MATIC.V2.SUSHI_GENE_ETH.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'SUSHI_GENE_ETH',
@@ -7408,8 +7358,8 @@ module.exports = [
   },
   {
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.MATIC.V2.SUSHI_GNOME_ETH.Underlying, 'sushiswap_matic'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.MATIC.V2.SUSHI_GNOME_ETH.Underlying, CHAIN_IDS.POLYGON_MAINNET],
     },
     chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'SUSHI_GNOME_ETH',
@@ -7474,8 +7424,8 @@ module.exports = [
   },
   {
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.MATIC.V2.quickswap_IFARM_QUICK.Underlying, 'quickswap_matic'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.MATIC.V2.quickswap_IFARM_QUICK.PoolId, CHAIN_IDS.POLYGON_MAINNET],
     },
     chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'quickswap_IFARM_QUICK',
@@ -7808,32 +7758,6 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    uniPool: true,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.UNI_LP_WETH_DPI, 'uniswap_eth'],
-    },
-    id: 'uni_WETH_DPI',
-    type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.pools.UNI_LP_WETH_DPIPool,
-    collateralAddress: addresses.VaultUNI_LP_WETH_DPI,
-    rewardAPY: [],
-    rewardTokens: [addresses.FARM],
-    rewardTokenSymbols: ['FARM'],
-    stakeAndDepositHelpMessage: `
-    <div class="help-message">
-      <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.UNI_LP_WETH_DPI}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens </a>in a Uniswap farm, earning 
-       <a href="https://etherscan.io/token/${addresses.WETH}" target="_blank" rel="noopener noreferrer">WETH</a> & 
-       <a href="https://etherscan.io/token/${addresses.DPI}" target="_blank" rel="noopener noreferrer">DPI</a>.
-       At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.UNI_LP_WETH_DPI}" target="_blank" rel="noopener noreferrer"> Uniswap LP tokens</a>.
-      </p>
-    </div>
-   `,
-  },
-  {
-    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'WETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.WETH.NewPool,
@@ -7857,10 +7781,6 @@ module.exports = [
   {
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_SUSHI_WETH',
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.V2.sushi_SUSHI_WETH.Underlying, 'sushiswap_eth'],
-    },
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.sushi_SUSHI_WETH.NewPool,
     collateralAddress: addresses.V2.sushi_SUSHI_WETH.NewVault,
@@ -7883,10 +7803,6 @@ module.exports = [
   {
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_DAI_WETH',
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.sushi_DAI_WETH, 'sushiswap_eth'],
-    },
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.sushi_DAI_WETH.NewPool,
     collateralAddress: addresses.V2.sushi_DAI_WETH.NewVault,
@@ -7909,10 +7825,6 @@ module.exports = [
   {
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_USDT_WETH',
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.sushi_USDT_WETH, 'sushiswap_eth'],
-    },
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.sushi_USDT_WETH.NewPool,
     collateralAddress: addresses.V2.sushi_USDT_WETH.NewVault,
@@ -7935,10 +7847,6 @@ module.exports = [
   {
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_WBTC_WETH',
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.sushi_WBTC_WETH, 'sushiswap_eth'],
-    },
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.sushi_WBTC_WETH.NewPool,
     collateralAddress: addresses.V2.sushi_WBTC_WETH.NewVault,
@@ -7960,10 +7868,6 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.V2.oneInch_ETH_DAI.Underlying],
-    },
     id: 'oneInch_ETH_DAI',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.oneInch_ETH_DAI.NewPool,
@@ -7986,10 +7890,6 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.V2.oneInch_ETH_USDC.Underlying],
-    },
     id: 'oneInch_ETH_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.oneInch_ETH_USDC.NewPool,
@@ -8012,10 +7912,6 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.V2.oneInch_ETH_USDT.Underlying],
-    },
     id: 'oneInch_ETH_USDT',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.oneInch_ETH_USDT.NewPool,
@@ -8111,10 +8007,6 @@ module.exports = [
    `,
   },
   {
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.sushi_DAI_WETH, 'sushiswap_eth'],
-    },
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_DAI_WETH_HODL',
     type: POOL_TYPES.INCENTIVE,
@@ -8137,10 +8029,6 @@ module.exports = [
    `,
   },
   {
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.sushi_USDC_WETH, 'sushiswap_eth'],
-    },
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_USDC_WETH_HODL',
     type: POOL_TYPES.INCENTIVE,
@@ -8163,10 +8051,6 @@ module.exports = [
    `,
   },
   {
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.sushi_USDT_WETH, 'sushiswap_eth'],
-    },
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_USDT_WETH_HODL',
     type: POOL_TYPES.INCENTIVE,
@@ -8189,10 +8073,6 @@ module.exports = [
    `,
   },
   {
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.sushi_WBTC_WETH, 'sushiswap_eth'],
-    },
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_WBTC_WETH_HODL',
     type: POOL_TYPES.INCENTIVE,
@@ -8217,10 +8097,6 @@ module.exports = [
   {
     chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.V2.nft20_Muse.Underlying, 'uniswap_eth'],
-    },
     id: 'nft20_Muse',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.nft20_Muse.NewPool,
@@ -8244,10 +8120,6 @@ module.exports = [
   {
     chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.V2.nft20_Dudes.Underlying, 'uniswap_eth'],
-    },
     id: 'nft20_Dudes',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.nft20_Dudes.NewPool,
@@ -8271,10 +8143,6 @@ module.exports = [
   {
     chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.V2.nft20_Mooncat.Underlying, 'uniswap_eth'],
-    },
     id: 'nft20_Mooncat',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.nft20_Mooncat.NewPool,
@@ -8298,10 +8166,6 @@ module.exports = [
   {
     chain: CHAIN_IDS.ETH_MAINNET,
     isDegen: true,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.V2.nft20_Meme.Underlying, 'uniswap_eth'],
-    },
     id: 'nft20_Meme',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.nft20_Meme.NewPool,
@@ -8325,10 +8189,6 @@ module.exports = [
   {
     chain: CHAIN_IDS.ETH_MAINNET,
     uniPool: true,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.V2.uni_ETH_MVI.Underlying, 'uniswap_eth'],
-    },
     id: 'uni_ETH_MVI',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.uni_ETH_MVI.NewPool,
@@ -8535,8 +8395,8 @@ module.exports = [
     contractAddress: addresses.V2.bal_BAL_WETH.NewPool,
     collateralAddress: addresses.V2.bal_BAL_WETH.NewVault,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.V2.bal_BAL_WETH.Underlying, 'balancerv2_eth'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.V2.bal_BAL_WETH.PoolId, CHAIN_IDS.ETH_MAINNET],
     },
     rewardAPY: [],
     rewardAPR: null,
@@ -8559,8 +8419,8 @@ module.exports = [
     id: 'bal_POLYBASE',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.MATIC.V2.balancer_POLYBASE.Underlying, 'balancerv2_matic'],
+      type: TRADING_APY_TYPES.BALANCER,
+      params: [addresses.MATIC.V2.balancer_POLYBASE.PoolId, CHAIN_IDS.POLYGON_MAINNET],
     },
     contractAddress: addresses.MATIC.V2.balancer_POLYBASE.NewPool,
     collateralAddress: addresses.MATIC.V2.balancer_POLYBASE.NewVault,
@@ -8581,10 +8441,6 @@ module.exports = [
    `,
   },
   {
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.LP,
-      params: [addresses.V2.sushi_YEL_ETH.Underlying, 'sushiswap_eth'],
-    },
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'sushi_YEL_ETH',
     type: POOL_TYPES.INCENTIVE,
