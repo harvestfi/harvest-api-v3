@@ -1,33 +1,27 @@
-const BigNumber = require('bignumber.js')
-const { getPoolSnapshot, getPoolInfo } = require('../../../lib/third-party/balancer')
+const { getPoolInfo } = require('../../../lib/third-party/balancer')
 const { get } = require('lodash')
 
 const getTradingApy = async (poolId, networkId) => {
-  const DAY = 60 * 60 * 24
-  const currentTimestamp = Math.ceil(Date.now() / 1000)
-  const todayTimestamp = currentTimestamp - (currentTimestamp % DAY) - DAY
-  const yesterdayTimestamp = todayTimestamp - DAY
+  try {
+    const poolInfo = await getPoolInfo(poolId, networkId)
+    const dynamicData = get(poolInfo, 'dynamicData', {})
 
-  const todaySnapshot = await getPoolSnapshot(poolId, todayTimestamp, networkId)
-  const yesterdaySnapshot = await getPoolSnapshot(poolId, yesterdayTimestamp, networkId)
+    if (!dynamicData.aprItems) {
+      console.error('Something went wrong with the Balancer API. Swap APY not available')
+      return 0
+    }
 
-  const poolInfo = await getPoolInfo(poolId, networkId)
+    const aprItem = dynamicData.aprItems.find(item => item.id === `${poolId}-swap-apr`)
+    const ibYieldItems = dynamicData.aprItems.filter(item => item.type === 'IB_YIELD')
 
-  if (
-    !get(poolInfo, 'totalLiquidity') ||
-    !get(todaySnapshot, 'swapFees') ||
-    !get(yesterdaySnapshot, 'swapFees')
-  ) {
-    console.error('Something went wrong with balancer api. Swap apy not available')
-    return '0'
+    const baseApr = aprItem ? parseFloat(aprItem.apr) * 100 : 0
+    const boostedApr = ibYieldItems.reduce((total, item) => total + parseFloat(item.apr) * 100, 0)
+
+    return (baseApr + boostedApr).toFixed(2)
+  } catch (error) {
+    console.error('Failed to retrieve Balancer trading APY:', error)
+    return 0
   }
-
-  let apy = new BigNumber(todaySnapshot.swapFees)
-    .minus(yesterdaySnapshot.swapFees)
-    .times(365)
-    .dividedBy(poolInfo.totalLiquidity)
-
-  return apy.multipliedBy(100).toFixed(2, 1)
 }
 
 module.exports = {

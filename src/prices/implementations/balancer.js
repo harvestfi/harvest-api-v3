@@ -46,11 +46,11 @@ const getPrice = async (contractAddress, poolId, networkId) => {
     }
   }
 
-  if (!get(poolInfo, 'totalLiquidity')) {
+  if (!get(poolInfo, 'dynamicData.totalLiquidity')) {
     console.error('Something went wrong with balancer api. totalLiquidity field is not avaiilable')
     return '0'
   } else {
-    return new BigNumber(poolInfo.totalLiquidity).dividedBy(totalSupply).toString()
+    return new BigNumber(poolInfo.dynamicData.totalLiquidity).dividedBy(totalSupply).toString()
   }
 }
 
