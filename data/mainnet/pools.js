@@ -2506,37 +2506,6 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
-    id: 'curve_ETHp_WETH',
-    type: POOL_TYPES.INCENTIVE,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.CURVE_API,
-      params: [addresses.ARBITRUM_ONE.V2.curve_ETHp_WETH.Underlying, CHAIN_IDS.ARBITRUM_ONE],
-    },
-    contractAddress: addresses.ARBITRUM_ONE.V2.curve_ETHp_WETH.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.V2.curve_ETHp_WETH.NewVault,
-    rewardAPY: [],
-    rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
-    liquidityUrl: `https://curve.fi/#/arbitrum/pools/factory-stable-ng-57/deposit`,
-    stakeAndDepositHelpMessage: `
-    <div class="help-message">
-      <p> The vault supplies
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_ETHp_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RSR}" target="_blank" rel="noopener noreferrer">RSR</a> & 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned rewards are converted into more
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_ETHp_WETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
-      </p>
-      <p> Get the 
-      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_ETHp_WETH.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
-      <a href="https://curve.fi/#/arbitrum/pools/factory-stable-ng-57/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
-      </p>
-    </div>
-   `,
-  },
-  {
-    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'curve_eUSD_crvUSD',
     type: POOL_TYPES.INCENTIVE,
     tradingApyFunction: {
@@ -2584,46 +2553,14 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_eUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RSR}" target="_blank" rel="noopener noreferrer">RSR</a> & 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_eUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex Farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_eUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_eUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
       <a href="https://curve.fi/#/arbitrum/pools/factory-stable-ng-62/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
-      </p>
-    </div>
-   `,
-  },
-  {
-    chain: CHAIN_IDS.ARBITRUM_ONE,
-    id: 'curve_KNOX_eUSD',
-    type: POOL_TYPES.INCENTIVE,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.CURVE_API,
-      params: [addresses.ARBITRUM_ONE.V2.curve_KNOX_eUSD.Underlying, CHAIN_IDS.ARBITRUM_ONE],
-    },
-    contractAddress: addresses.ARBITRUM_ONE.V2.curve_KNOX_eUSD.NewPool,
-    collateralAddress: addresses.ARBITRUM_ONE.V2.curve_KNOX_eUSD.NewVault,
-    rewardAPY: [],
-    rewardAPR: null,
-    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
-    liquidityUrl: `https://curve.fi/#/arbitrum/pools/factory-stable-ng-63/deposit`,
-    stakeAndDepositHelpMessage: `
-    <div class="help-message">
-      <p> The vault supplies
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_KNOX_eUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.RSR}" target="_blank" rel="noopener noreferrer">RSR</a> & 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
-       At every harvest, the earned rewards are converted into more
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_KNOX_eUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
-      </p>
-      <p> Get the 
-      <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_KNOX_eUSD.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
-      <a href="https://curve.fi/#/arbitrum/pools/factory-stable-ng-63/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
    `,
@@ -2770,8 +2707,8 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_WBTC_tBTC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve Gauge, earning 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_WBTC_tBTC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex Farm, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.curve_WBTC_tBTC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
       </p>

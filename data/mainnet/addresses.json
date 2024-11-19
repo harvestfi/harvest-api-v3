@@ -1721,14 +1721,6 @@
         "RewardPool": "0xB8f90e115499082747Ba5DA94732863b12cB1F25",
         "doHardwork": false
       },
-      "curve_ETHp_WETH": {
-        "Underlying": "0x95F425c7d730Eb7673fca272c2c305f48Ed546c3",
-        "NewVault": "0xf68b1A500B2f7C6D4718C58B973FEE59AFebaaD4",
-        "NewStrategy": "0x5322f9C4CBBA90fb018B235057bd3ae97B5Bb87D",
-        "NewPool": "0x78F4A3a572b5E133754415c94EdD0BF459A26ba7",
-        "Gauge": "0xB224cf7c17dB373EceF550CF957B8a4dD40C8109",
-        "doHardwork": false
-      },
       "curve_eUSD_crvUSD": {
         "Underlying": "0x67D11005AF05Bb1e9fDb1CFc261C23DE3E1055a1",
         "NewVault": "0x2F5c116ab613Ec601Ed810c5A46402A994FD7151",
@@ -1740,18 +1732,9 @@
       "curve_eUSD_USDC": {
         "Underlying": "0x93a416206B4ae3204cFE539edfeE6BC05a62963e",
         "NewVault": "0x4A724dCeC640E56c318AE7862147cC234614F3ba",
-        "NewStrategy": "0x24306f2caC09afcD945b2c01591030cFAd81fd5f",
+        "NewStrategy": "0xF6523D34cB208f7726c70018A106CdF62B8e8421",
         "NewPool": "0x84Db77fb5BC37D144d6d977261b5ce6Cb1160e4e",
-        "Gauge": "0xad85FB8A5eD9E2f338d2798A9eEF176D31cA6A57",
-        "doHardwork": false
-      },
-      "curve_KNOX_eUSD": {
-        "Underlying": "0x6f33daF91d2aCAe10F5CD7BbE3f31716Ed123F1D",
-        "NewVault": "0x1D52512e7a7A101cD2aF55f0B7CCd646EBd5F81E",
-        "NewStrategy": "0x279d844b20Daa6425Dd7766ec615d8bf9C2f8932",
-        "NewPool": "0x69fe2364A4a9e16f852c097Aac3b7be41b786d3C",
-        "Gauge": "0x63254954b617493bB9311C9f89B50425943B05F6",
-        "doHardwork": false
+        "PoolId": 36
       },
       "curve_OVN_stable": {
         "Underlying": "0x1446999B0b0E4f7aDA6Ee73f2Ae12a2cfdc5D9E7",
@@ -1785,10 +1768,9 @@
       "curve_WBTC_tBTC": {
         "Underlying": "0x186cF879186986A20aADFb7eAD50e3C20cb26CeC",
         "NewVault": "0xF04b6052c4d43BabC7b30781cf072879333baC9e",
-        "NewStrategy": "0xC92A39129AD88122D6Edc843189cA01E989533BE",
+        "NewStrategy": "0xbF9740f9bed697adE4023275c5370518475Ddd25",
         "NewPool": "0x52C6aa977938fA388f35fcf99560F66a96F1A54E",
-        "Gauge": "0xB7e23A438C9cad2575d3C048248A943a7a03f3fA",
-        "doHardwork": false
+        "PoolId": 33
       },
       "aave_DAI": {
         "Underlying": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",

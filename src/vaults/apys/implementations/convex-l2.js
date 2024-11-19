@@ -19,7 +19,7 @@ const getApy = async (address, poolId, profitSharingFactor, chain) => {
     const apyResult = get(response, `data.apys.` + poolName, [])
     if (chain == '42161') {
       apy = apyResult.crvApy + apyResult.cvxApy
-      if (apyResult.extraRewards.length > 0) {
+      if (apyResult.extraRewards && apyResult.extraRewards.length > 0) {
         apyResult.extraRewards.forEach(instance => {
           apy = apy + instance.apy
         })
