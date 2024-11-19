@@ -2804,6 +2804,30 @@
         "NewStrategy": "0x2446684c335EA2243DaFB531D6B6E85C5E5Ed003",
         "NewPool": "0x3Db2F4979622a2C5B7a0ebE5a713941D836747c4",
         "mToken": "0xfC41B49d064Ac646015b459C522820DB9472F4B5"
+      },
+      "extrafi_cbBTC": {
+        "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        "NewVault": "0x52539E9c0eC50EaEEE7D0c518f88C066209090CB",
+        "NewStrategy": "0x32ef0A24e90b32dCAF333427466c4f64B8273676",
+        "NewPool": "0xe8C8aA4DaA07911F7a23e02D887519eB90Ad59EC",
+        "RewardPool": "0x5e322a2521d06F0BD98271943E522245303B646F",
+        "ReserveId": 76
+      },
+      "extrafi_VIRTUAL": {
+        "Underlying": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+        "NewVault": "0x53FC8a209130c5f15098fF53b367aA0c074af486",
+        "NewStrategy": "0xEAa08cd5c688864D2e3f3bd89D2b1A54549cDCB3",
+        "NewPool": "0xD3D4b2f3daeA9485352cd4A69FEf71A6E07BC7dB",
+        "RewardPool": "0xF510c4EE0F5060F384865761B2452EF0d2E5821E",
+        "ReserveId": 44
+      },
+      "extrafi_ETH": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0x35C42077652a3d1434926ff3ce0fA3442b6C403a",
+        "NewStrategy": "0x3a6Bbe96d083b8b7321f37a87ed6Ed530D7fa6f9",
+        "NewPool": "0xe610e324bE8D5b21F4170e447c35961C64A8f58a",
+        "RewardPool": "0x5F8d42635A2fa74D03b5F91c825dE6F44c443dA5",
+        "ReserveId": 1
       }
     }
   },

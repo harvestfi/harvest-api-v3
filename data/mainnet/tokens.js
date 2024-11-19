@@ -46,6 +46,87 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  extrafi_cbBTC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/extra.svg'],
+    apyTokenSymbols: ['EXTRA'],
+    logoUrl: ['./icons/cbbtc.svg'],
+    tokenNames: ['cbBTC'],
+    platform: ['ExtraFi - Lend'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.BASE.V2.extrafi_cbBTC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.extrafi_cbBTC.NewVault,
+    strategyAddress: addresses.BASE.V2.extrafi_cbBTC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['coinbase-wrapped-btc'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.EXTRAFI_LEND,
+        params: [
+          addresses.BASE.V2.extrafi_cbBTC.RewardPool,
+          addresses.BASE.V2.extrafi_cbBTC.ReserveId,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  extrafi_VIRTUAL: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/extra.svg'],
+    apyTokenSymbols: ['EXTRA'],
+    logoUrl: ['./icons/virtual.svg'],
+    tokenNames: ['VIRTUAL'],
+    platform: ['ExtraFi - Lend'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.BASE.V2.extrafi_VIRTUAL.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.extrafi_VIRTUAL.NewVault,
+    strategyAddress: addresses.BASE.V2.extrafi_VIRTUAL.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['virtual-protocol'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.EXTRAFI_LEND,
+        params: [
+          addresses.BASE.V2.extrafi_VIRTUAL.RewardPool,
+          addresses.BASE.V2.extrafi_VIRTUAL.ReserveId,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  extrafi_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/extra.svg'],
+    apyTokenSymbols: ['EXTRA'],
+    logoUrl: ['./icons/eth.svg'],
+    tokenNames: ['ETH'],
+    platform: ['ExtraFi - Lend'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.BASE.V2.extrafi_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.extrafi_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.extrafi_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['weth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.EXTRAFI_LEND,
+        params: [
+          addresses.BASE.V2.extrafi_ETH.RewardPool,
+          addresses.BASE.V2.extrafi_ETH.ReserveId,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
   moonwell_wrsETH: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
