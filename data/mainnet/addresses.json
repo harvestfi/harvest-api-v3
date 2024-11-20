@@ -1024,6 +1024,10 @@
     "aUSDT_new": "0x6ab707Aca953eDAeFBc4fD23bA73294241490620",
     "GHO": "0x7dfF72693f6A4149b17e7C6314655f6A9F7c8B33",
     "APE": "0x7f9FBf9bDd3F4105C478b996B648FE6e828a1e98",
+    "USDe": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "USDx": "0xb2F30A7C980f052f02563fb518dcc39e6bf38175",
+    "zunETH": "0x06D65eC13465Ac5A4376dc101e1141252c4adDf8",
+    "zunUSD": "0x870908873b6f940E025A7C6879678cB82eC6C9B6",
     "V2": {
       "iPoison": {
         "Underlying": "0xDA016d31f2B52C73D7c1956E955ae8A507b305bB",
@@ -2023,6 +2027,41 @@
         "NewVault": "0x6f5deeFd5017c40d03899a8d2491C8993A2B4Ad6",
         "NewStrategy": "0x723Eb77414bF19c29631e1820883749ef4f365ed",
         "NewPool": "0x381a99928A689E27E345186032244F26f2cAEa4D"
+      },
+      "curve_USDe_USDx": {
+        "Underlying": "0x096A8865367686290639bc50bF8D85C0110d9Fea",
+        "NewVault": "0xD1Fc3305012cDC591C9C076742f140e37cc0c218",
+        "NewStrategy": "0xe6366815f3A7182c04082524A46C63bEC8B81AE8",
+        "NewPool": "0xe49b24A48d7Efb313B6267B0eD783738F4c3317A",
+        "PoolId": "34"
+      },
+      "curve_zunETH_ETH": {
+        "Underlying": "0xEBEEC2EDbbc66eB9055fe772b154f34d3dd686C8",
+        "NewVault": "0x37a4Ce820EAd3312189d6a6b153feCaf54D9decd",
+        "NewStrategy": "0xf360035ce1C58ca38e269E880C8135b52B4F02C1",
+        "NewPool": "0x3c1B98f28E638c24177E74E35AFbCf57E269B3e0",
+        "PoolId": "28"
+      },
+      "curve_zunUSD_crvUSD": {
+        "Underlying": "0x8958AE46De6b33293DDdc6cDfbe36900f4631851",
+        "NewVault": "0x750Df6A04c959D6C71a9628f15008E370a374851",
+        "NewStrategy": "0xA5BD6F2534a56Df328d4DdE9ED63a8ffF1dAaa45",
+        "NewPool": "0x168AD3181de48506Aa77ff884fc5BeF6090B9BE2",
+        "PoolId": "27"
+      },
+      "convex_ETHp_ETH": {
+        "Underlying": "0x1Fb84Fa6D252762e8367eA607A6586E09dceBe3D",
+        "NewVault": "0xa1D831946C19eE26d9c5B0797bddf1038f9824AF",
+        "NewStrategy": "0xb449f99a130cBeAdCC79fD0B1F6252e7B95ff14f",
+        "NewPool": "0x0ef24D06446436ECeF27E993c72b7FF9fc0FE3ca",
+        "PoolId": "37"
+      },
+      "convex_KNOX_eUSD": {
+        "Underlying": "0x86EA1191a219989d2dA3a85c949a12A92f8ED3Db",
+        "NewVault": "0xA794188d923feC04E273d6c0ebf4c6A5E4DD170d",
+        "NewStrategy": "0xbFf3DfbBD8Bd7E7314278CA827BcAE706Ff8f520",
+        "NewPool": "0x68973525E897e2B0319d36833e2109ef52D13D10",
+        "PoolId": "35"
       }
     }
   },
