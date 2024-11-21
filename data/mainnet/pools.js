@@ -124,7 +124,7 @@ module.exports = [
         CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
-    liquidityUrl: 'https://curve.fi/#/arbitrum/pools/factory-stable-ng-18/deposit',
+    liquidityUrl: 'https://curve.fi/#/arbitrum/pools/factory-twocrypto-18/deposit',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -135,7 +135,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_ETHp_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
-      <a href="https://curve.fi/#/arbitrum/pools/factory-stable-ng-18/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      <a href="https://curve.fi/#/arbitrum/pools/factory-twocrypto-18/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
    `,
@@ -158,7 +158,7 @@ module.exports = [
         CHAIN_IDS.ARBITRUM_ONE,
       ],
     },
-    liquidityUrl: 'https://curve.fi/#/arbitrum/pools/factory-stable-ng-19/deposit',
+    liquidityUrl: 'https://curve.fi/#/arbitrum/pools/factory-twocrypto-19/deposit',
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
@@ -169,7 +169,7 @@ module.exports = [
       </p>
       <p> Get the 
       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.convex_KNOX_eUSD.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
-      <a href="https://curve.fi/#/arbitrum/pools/factory-stable-ng-19/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      <a href="https://curve.fi/#/arbitrum/pools/factory-twocrypto-19/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
       </p>
     </div>
    `,

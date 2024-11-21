@@ -190,7 +190,7 @@ module.exports = {
     logoUrl: ['./icons/ethplus.svg', './icons/eth.svg'],
     platform: ['Convex Finance'],
     tags: ['Advanced'],
-    tokenNames: ['ETHp', 'ETH'],
+    tokenNames: ['ETH+', 'ETH'],
     tokenAddress: addresses.ARBITRUM_ONE.V2.convex_ETHp_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.ARBITRUM_ONE.V2.convex_ETHp_ETH.NewVault,
