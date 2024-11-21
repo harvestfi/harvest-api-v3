@@ -80,8 +80,6 @@ const getGmxData = async () => {
     gmBtcPrice: { btc: gmBtcPriceBtcIn.toFixed(), usd: gmBtcPriceUsdIn.toFixed() },
   }
 
-  console.log(allData)
-
   await storeData(Cache, DB_CACHE_IDS.GMX_DATA, allData, false)
 
   console.log('-- Done getting GMX data --\n')
