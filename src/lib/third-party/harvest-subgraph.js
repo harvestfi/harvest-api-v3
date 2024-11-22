@@ -3,32 +3,35 @@ const axios = require('axios')
 const { HARVEST_SUBGRAPH_URLS } = require('../constants')
 
 const executeGraphCall = async (chain, query, variables) => {
+  let retry = 0
+  let response
   try {
-    let retry = 0
-    let response = await axios.post(HARVEST_SUBGRAPH_URLS[chain], {
+    response = await axios.post(HARVEST_SUBGRAPH_URLS[chain], {
       query: query,
       variables: variables,
     })
-    if (retry < 5 && response.status == 429) {
-      console.log('Retry', retry + 1, 'Waiting 21s for rate-limit')
-      await new Promise(r => setTimeout(r, 21000))
+  } catch (error) {
+    response = error.response
+  }
+  while (retry < 5 && response.status == 429) {
+    console.log('Retry', retry + 1, 'Waiting 16s for rate-limit')
+    await new Promise(r => setTimeout(r, 16000))
+    try {
       response = await axios.post(HARVEST_SUBGRAPH_URLS[chain], {
         query: query,
         variables: variables,
       })
+    } catch (error) {
+      response = error.response
     }
-    const data = get(response, 'data.data')
-    if (data) {
-      return data
-    } else {
-      console.log(response)
-      return null
-    }
-  } catch (error) {
-    console.error(
-      `executeGraphCall(${HARVEST_SUBGRAPH_URLS[chain]}, ${query}, ${variables}) failed:`,
-      error,
-    )
+    retry += 1
+  }
+  const data = get(response, 'data.data')
+  if (data) {
+    return data
+  } else {
+    console.log(response)
+    return null
   }
 }
 

@@ -1131,27 +1131,27 @@ const runUpdateLoop = async () => {
     resetCallCount()
   }
 
-  // await getPools()
-  // await getVaults()
+  await getPools()
+  await getVaults()
 
   if (ACTIVE_ENDPOINTS === ENDPOINT_TYPES.ALL || ACTIVE_ENDPOINTS === ENDPOINT_TYPES.EXTERNAL) {
-    // await getTotalGmv()
-    // if (DEBUG_MODE) {
-    //   updateCallCountCache('gmv')
-    //   resetCallCount()
-    // }
+    await getTotalGmv()
+    if (DEBUG_MODE) {
+      updateCallCountCache('gmv')
+      resetCallCount()
+    }
 
-    // await getWeeklyBuybacks()
-    // if (DEBUG_MODE) {
-    //   updateCallCountCache('profit')
-    //   resetCallCount()
-    // }
+    await getWeeklyBuybacks()
+    if (DEBUG_MODE) {
+      updateCallCountCache('profit')
+      resetCallCount()
+    }
 
-    // await getTotalRevenue()
-    // if (DEBUG_MODE) {
-    //   updateCallCountCache('revenue')
-    //   resetCallCount()
-    // }
+    await getTotalRevenue()
+    if (DEBUG_MODE) {
+      updateCallCountCache('revenue')
+      resetCallCount()
+    }
 
     await getTVL()
     if (DEBUG_MODE) {
