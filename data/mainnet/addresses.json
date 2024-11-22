@@ -2294,17 +2294,17 @@
         "NFTPool": "0x7C04bF2bb7D27982810E432B188FA0C7729e651d",
         "BaseToken": "0xd5046B976188EB40f6DE40fB527F89c05b323385"
       },
-      "USDC": {
+      "USDbC": {
         "Underlying": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
         "NewVault": "0xcf58a2fEc96fFDF11B0dFA1ed15433b488485cf3",
-        "NewStrategy": "0x8EAbe374666441d6373D8bE0478aB2F4E04DDAa5",
+        "NewStrategy": "0x99B171C59e4ED4257DEAE1F472CfA7E02B85D93F",
         "NewPool": "0x4B0A8DFd3bBEEab835E8B5Dc453822490A93c32e",
         "Market": "0x9c4ec768c28520B50860ea7a15bd7213a9fF58bf"
       },
       "WETH": {
         "Underlying": "0x4200000000000000000000000000000000000006",
         "NewVault": "0xc7548d8D7560f6679e369d0556C44Fe1EDdea3E9",
-        "NewStrategy": "0x69A3b1F2e133715282009be67d98BEb9247d0Bd5",
+        "NewStrategy": "0x37061f938501a02f61292086D62bf4929dFe3Eb4",
         "NewPool": "0xE155314952b3190E37e89e472e62112D2661551b",
         "Market": "0x46e6b214b524310239732D51387075E0e70970bf"
       },
@@ -2954,7 +2954,50 @@
         "NewPool": "0xe610e324bE8D5b21F4170e447c35961C64A8f58a",
         "RewardPool": "0x5F8d42635A2fa74D03b5F91c825dE6F44c443dA5",
         "ReserveId": 1
+      },
+      "aave_cbBTC": {
+        "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        "NewVault": "0x9315691960ce7E5015B3c8C502CB7bc05ad6c142",
+        "NewStrategy": "0x5a4C3b3463Da7E0D0ee3B4F255C2BE62eE4451dB",
+        "NewPool": "0xC5EF1abBCa6D3B9719a95b4484044E4222DCab57",
+        "AavePool": "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5"
+      },
+      "aave_ETH": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0x25F92841689F8477057b48dd75F64db965FCE9a7",
+        "NewStrategy": "0x5D980445B27bD31993B5655513ec96cB22496B3E",
+        "NewPool": "0x012d719BeC02a7defF1841290612155bcd9967bA",
+        "AavePool": "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5"
+      },
+      "aave_USDbC": {
+        "Underlying": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
+        "NewVault": "0x81385b62d1f4d80426Ac76C539b135d80a9Bd81D",
+        "NewStrategy": "0x78739DA73eF6D823401C2535D78bc99B2e2f4B6a",
+        "NewPool": "0x075510B1332A0cd2c1B788BF6706534A79f1C04E",
+        "AavePool": "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5"
+      },
+      "aave_USDC": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x0487694D04B2473B1239cbBCF4Dd1B8c14f40E2b",
+        "NewStrategy": "0xf05e22c213478783445797d460c079027f39CF17",
+        "NewPool": "0xd595Ffc3b56E0702Ea20d07E6F6a72fb6E67df13",
+        "AavePool": "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5"
+      },
+      "compound_AERO": {
+        "Underlying": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+        "NewVault": "0xca787C305Fc13Ed5d88fAd8F6CB72A2cBCF3D3CC",
+        "NewStrategy": "0x671136668DAf0f264DD47cF859818947b3F5019c",
+        "NewPool": "0xDFA35D367319cCed82172Bf08e13cfBED3336c4C",
+        "Market": "0x784efeB622244d2348d4F2522f8860B96fbEcE89"
+      },
+      "compound_USDC": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x58F8AFd6F6499B02E68CB8964Fd1d3dA3afB9465",
+        "NewStrategy": "0xE2aD594D9aCaA196Aa60f96CBdE07BA7062a444E",
+        "NewPool": "0x7Cc792f0CD15705d22db9D3B39717294e8752ecb",
+        "Market": "0xb125E6687d4313864e53df431d5425969c15Eb2F"
       }
+      
     }
   },
   "ZKSYNC": {

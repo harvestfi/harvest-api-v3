@@ -5,6 +5,128 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'aave_cbBTC_base',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.aave_cbBTC.NewPool,
+    collateralAddress: addresses.BASE.V2.aave_cbBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aave_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC </a>to Aave, earning cbBTC interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aave_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'aave_ETH_base',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.aave_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.aave_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aave_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to Aave, earning WETH interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aave_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'aave_USDbC_base',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.aave_USDbC.NewPool,
+    collateralAddress: addresses.BASE.V2.aave_USDbC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aave_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> USDbC </a>to Aave, earning USDbC interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aave_USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> USDbC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'aave_USDC_base',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.aave_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.aave_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aave_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Aave, earning USDC interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aave_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'compound_AERO',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.compound_AERO.NewPool,
+    collateralAddress: addresses.BASE.V2.compound_AERO.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.compound_AERO.Underlying}" target="_blank" rel="noopener noreferrer"> AERO </a>to Compound V3, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.COMP}" target="_blank" rel="noopener noreferrer">COMP</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.compound_AERO.Underlying}" target="_blank" rel="noopener noreferrer"> AERO</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'USDC_base',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.compound_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.compound_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.compound_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Compound V3, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.COMP}" target="_blank" rel="noopener noreferrer">COMP</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.compound_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'aave_ETH_arbitrum',
     type: POOL_TYPES.INCENTIVE,
@@ -6780,8 +6902,8 @@ module.exports = [
     chain: CHAIN_IDS.BASE,
     id: 'USDbC_base',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.BASE.V2.USDC.NewPool,
-    collateralAddress: addresses.BASE.V2.USDC.NewVault,
+    contractAddress: addresses.BASE.V2.USDbC.NewPool,
+    collateralAddress: addresses.BASE.V2.USDbC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
@@ -6789,10 +6911,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://basescan.org/token/${addresses.BASE.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Compound V3, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> USDbC </a>to Compound V3, earning 
        <a href="https://basescan.org/token/${addresses.BASE.COMP}" target="_blank" rel="noopener noreferrer">COMP</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://basescan.org/token/${addresses.BASE.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.V2.USDbC.Underlying}" target="_blank" rel="noopener noreferrer"> USDbC</a>.
       </p>
     </div>
    `,
