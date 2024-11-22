@@ -6,6 +6,278 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'aave_ETH_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.aave_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.aave_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to Aave, earning WETH interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.aave_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'compound_ETH_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.compound_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.compound_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.compound_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to Compound V3, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.COMP}" target="_blank" rel="noopener noreferrer">COMP</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.compound_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'compound_USDC_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.compound_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.compound_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.compound_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Compound V3, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.COMP}" target="_blank" rel="noopener noreferrer">COMP</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.compound_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'compound_USDCe_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.compound_USDCe.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.compound_USDCe.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.compound_USDCe.Underlying}" target="_blank" rel="noopener noreferrer"> USDC.e </a>to Compound V3, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.COMP}" target="_blank" rel="noopener noreferrer">COMP</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.compound_USDCe.Underlying}" target="_blank" rel="noopener noreferrer"> USDC.e</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'compound_USDT_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.compound_USDT.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.compound_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.compound_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT </a>to Compound V3, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.COMP}" target="_blank" rel="noopener noreferrer">COMP</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.compound_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'WBTC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.WBTC.NewPool,
+    collateralAddress: addresses.V2.WBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.FARM],
+    rewardTokenSymbols: ['FARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> WBTC </a>to ZeroLend, earning WBTC interest and 
+        <a href="https://etherscan.io/token/${addresses.ZERO}" target="_blank" rel="noopener noreferrer">ZERO</a> rewards.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://etherscan.io/token/${addresses.V2.WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> WBTC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'zerolend_cbBTC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.zerolend_cbBTC.NewPool,
+    collateralAddress: addresses.V2.zerolend_cbBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.zerolend_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC </a>to ZeroLend, earning cbBTC interest and 
+        <a href="https://etherscan.io/token/${addresses.ZERO}" target="_blank" rel="noopener noreferrer">ZERO</a> rewards.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://etherscan.io/token/${addresses.V2.zerolend_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'zerolend_LBTC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.zerolend_LBTC.NewPool,
+    collateralAddress: addresses.V2.zerolend_LBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.zerolend_LBTC.Underlying}" target="_blank" rel="noopener noreferrer"> LBTC </a>to ZeroLend, earning LBTC interest and 
+        <a href="https://etherscan.io/token/${addresses.ZERO}" target="_blank" rel="noopener noreferrer">ZERO</a> rewards.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://etherscan.io/token/${addresses.V2.zerolend_LBTC.Underlying}" target="_blank" rel="noopener noreferrer"> LBTC</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'zerolend_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.zerolend_USDC.NewPool,
+    collateralAddress: addresses.V2.zerolend_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.zerolend_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to ZeroLend, earning USDC interest and 
+        <a href="https://etherscan.io/token/${addresses.ZERO}" target="_blank" rel="noopener noreferrer">ZERO</a> rewards.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://etherscan.io/token/${addresses.V2.zerolend_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'zerolend_USDT',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.zerolend_USDT.NewPool,
+    collateralAddress: addresses.V2.zerolend_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.zerolend_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT </a>to ZeroLend, earning USDT interest and 
+        <a href="https://etherscan.io/token/${addresses.ZERO}" target="_blank" rel="noopener noreferrer">ZERO</a> rewards.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://etherscan.io/token/${addresses.V2.zerolend_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'zerolend_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.zerolend_ETH.NewPool,
+    collateralAddress: addresses.V2.zerolend_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.zerolend_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to ZeroLend, earning WETH interest and 
+        <a href="https://etherscan.io/token/${addresses.ZERO}" target="_blank" rel="noopener noreferrer">ZERO</a> rewards.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://etherscan.io/token/${addresses.V2.zerolend_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'zerolend_pzETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.zerolend_pzETH.NewPool,
+    collateralAddress: addresses.V2.zerolend_pzETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.zerolend_pzETH.Underlying}" target="_blank" rel="noopener noreferrer"> pzETH </a>to ZeroLend, earning pzETH interest and 
+        <a href="https://etherscan.io/token/${addresses.ZERO}" target="_blank" rel="noopener noreferrer">ZERO</a> rewards.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://etherscan.io/token/${addresses.V2.zerolend_pzETH.Underlying}" target="_blank" rel="noopener noreferrer"> pzETH</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'zerolend_weETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.zerolend_weETH.NewPool,
+    collateralAddress: addresses.V2.zerolend_weETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.zerolend_weETH.Underlying}" target="_blank" rel="noopener noreferrer"> weETH </a>to ZeroLend, earning weETH interest and 
+        <a href="https://etherscan.io/token/${addresses.ZERO}" target="_blank" rel="noopener noreferrer">ZERO</a> rewards.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://etherscan.io/token/${addresses.V2.zerolend_weETH.Underlying}" target="_blank" rel="noopener noreferrer"> weETH</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'curve_USDe_USDx',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.curve_USDe_USDx.NewPool,
@@ -7880,28 +8152,6 @@ module.exports = [
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.CRVRENWBTC}" target="_blank" rel="noopener noreferrer"> RENWBTC</a>.
-      </p>
-    </div>
-   `,
-  },
-  {
-    chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'WBTC',
-    type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.WBTC.NewPool,
-    collateralAddress: addresses.V2.WBTC.NewVault,
-    rewardAPY: [],
-    rewardAPR: null,
-    rewardTokens: [addresses.FARM],
-    rewardTokenSymbols: ['FARM'],
-    stakeAndDepositHelpMessage: `
-    <div class="help-message">
-      <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.WBTC}" target="_blank" rel="noopener noreferrer"> WBTC </a>in an Idle farm, earning 
-       <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
-       <a href="https://etherscan.io/token/${addresses.IDLE}" target="_blank" rel="noopener noreferrer">IDLE</a>.
-       At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.WBTC}" target="_blank" rel="noopener noreferrer"> WBTC</a>.
       </p>
     </div>
    `,
