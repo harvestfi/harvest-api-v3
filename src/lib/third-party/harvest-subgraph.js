@@ -2,29 +2,35 @@ const { get } = require('lodash')
 const axios = require('axios')
 const { HARVEST_SUBGRAPH_URLS } = require('../constants')
 
-const executeGraphCall = (chain, query, variables) =>
-  axios
-    .post(HARVEST_SUBGRAPH_URLS[chain], {
+const executeGraphCall = async (chain, query, variables) => {
+  try {
+    let retry = 0
+    let response = await axios.post(HARVEST_SUBGRAPH_URLS[chain], {
       query: query,
       variables: variables,
     })
-    .then(response => {
-      const data = get(response, 'data.data')
-
-      if (data) {
-        return data
-      } else {
-        console.log(response)
-        return null
-      }
-    })
-    .catch(error => {
-      console.error(
-        `executeGraphCall(${HARVEST_SUBGRAPH_URLS[chain]}, ${query}, ${variables}) failed:`,
-        error,
-      )
+    if (retry < 5 && response.status == 429) {
+      console.log('Retry', retry + 1, 'Waiting 21s for rate-limit')
+      await new Promise(r => setTimeout(r, 21000))
+      response = await axios.post(HARVEST_SUBGRAPH_URLS[chain], {
+        query: query,
+        variables: variables,
+      })
+    }
+    const data = get(response, 'data.data')
+    if (data) {
+      return data
+    } else {
+      console.log(response)
       return null
-    })
+    }
+  } catch (error) {
+    console.error(
+      `executeGraphCall(${HARVEST_SUBGRAPH_URLS[chain]}, ${query}, ${variables}) failed:`,
+      error,
+    )
+  }
+}
 
 const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
   const tQuery = `
