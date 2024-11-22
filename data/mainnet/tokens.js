@@ -183,7 +183,7 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
-  convex_ETHp_ETH: {
+  curve_ETHp_ETH: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg'],
     apyTokenSymbols: ['CRV'],
@@ -191,15 +191,15 @@ module.exports = {
     platform: ['Convex Finance'],
     tags: ['Advanced'],
     tokenNames: ['ETH+', 'ETH'],
-    tokenAddress: addresses.ARBITRUM_ONE.V2.convex_ETHp_ETH.Underlying,
+    tokenAddress: addresses.ARBITRUM_ONE.V2.curve_ETHp_ETH.Underlying,
     decimals: '18',
-    vaultAddress: addresses.ARBITRUM_ONE.V2.convex_ETHp_ETH.NewVault,
-    strategyAddress: addresses.ARBITRUM_ONE.V2.convex_ETHp_ETH.NewStrategy,
+    vaultAddress: addresses.ARBITRUM_ONE.V2.curve_ETHp_ETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.curve_ETHp_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.CURVE_POOL,
       params: [
-        addresses.ARBITRUM_ONE.V2.convex_ETHp_ETH.Underlying,
-        addresses.ARBITRUM_ONE.V2.convex_ETHp_ETH.Underlying,
+        addresses.ARBITRUM_ONE.V2.curve_ETHp_ETH.Underlying,
+        addresses.ARBITRUM_ONE.V2.curve_ETHp_ETH.Underlying,
         '18',
         ['ETHplus_arbitrum', 'WETH_arbitrum'],
         CHAIN_IDS.ARBITRUM_ONE,
@@ -209,8 +209,8 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.CONVEX_L2,
         params: [
-          addresses.ARBITRUM_ONE.V2.convex_ETHp_ETH.Underlying,
-          addresses.ARBITRUM_ONE.V2.convex_ETHp_ETH.PoolId,
+          addresses.ARBITRUM_ONE.V2.curve_ETHp_ETH.Underlying,
+          addresses.ARBITRUM_ONE.V2.curve_ETHp_ETH.PoolId,
           profitSharingCut10Percent,
           CHAIN_IDS.ARBITRUM_ONE,
         ],
@@ -218,7 +218,7 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
-  convex_KNOX_eUSD: {
+  curve_KNOX_eUSD: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg'],
     apyTokenSymbols: ['CRV'],
@@ -226,15 +226,15 @@ module.exports = {
     platform: ['Convex Finance'],
     tags: ['Advanced', 'Stabe'],
     tokenNames: ['KNOX', 'eUSD'],
-    tokenAddress: addresses.ARBITRUM_ONE.V2.convex_KNOX_eUSD.Underlying,
+    tokenAddress: addresses.ARBITRUM_ONE.V2.curve_KNOX_eUSD.Underlying,
     decimals: '18',
-    vaultAddress: addresses.ARBITRUM_ONE.V2.convex_KNOX_eUSD.NewVault,
-    strategyAddress: addresses.ARBITRUM_ONE.V2.convex_KNOX_eUSD.NewStrategy,
+    vaultAddress: addresses.ARBITRUM_ONE.V2.curve_KNOX_eUSD.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.curve_KNOX_eUSD.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.CURVE_POOL,
       params: [
-        addresses.ARBITRUM_ONE.V2.convex_KNOX_eUSD.Underlying,
-        addresses.ARBITRUM_ONE.V2.convex_KNOX_eUSD.Underlying,
+        addresses.ARBITRUM_ONE.V2.curve_KNOX_eUSD.Underlying,
+        addresses.ARBITRUM_ONE.V2.curve_KNOX_eUSD.Underlying,
         '18',
         ['KNOX', 'eUSD_arbitrum'],
         CHAIN_IDS.ARBITRUM_ONE,
@@ -244,8 +244,8 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.CONVEX_L2,
         params: [
-          addresses.ARBITRUM_ONE.V2.convex_KNOX_eUSD.Underlying,
-          addresses.ARBITRUM_ONE.V2.convex_KNOX_eUSD.PoolId,
+          addresses.ARBITRUM_ONE.V2.curve_KNOX_eUSD.Underlying,
+          addresses.ARBITRUM_ONE.V2.curve_KNOX_eUSD.PoolId,
           profitSharingCut10Percent,
           CHAIN_IDS.ARBITRUM_ONE,
         ],

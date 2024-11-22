@@ -2049,14 +2049,14 @@
         "NewPool": "0x168AD3181de48506Aa77ff884fc5BeF6090B9BE2",
         "PoolId": "27"
       },
-      "convex_ETHp_ETH": {
+      "curve_ETHp_ETH": {
         "Underlying": "0x1Fb84Fa6D252762e8367eA607A6586E09dceBe3D",
         "NewVault": "0xa1D831946C19eE26d9c5B0797bddf1038f9824AF",
         "NewStrategy": "0xb449f99a130cBeAdCC79fD0B1F6252e7B95ff14f",
         "NewPool": "0x0ef24D06446436ECeF27E993c72b7FF9fc0FE3ca",
         "PoolId": "37"
       },
-      "convex_KNOX_eUSD": {
+      "curve_KNOX_eUSD": {
         "Underlying": "0x86EA1191a219989d2dA3a85c949a12A92f8ED3Db",
         "NewVault": "0xA794188d923feC04E273d6c0ebf4c6A5E4DD170d",
         "NewStrategy": "0xbFf3DfbBD8Bd7E7314278CA827BcAE706Ff8f520",
