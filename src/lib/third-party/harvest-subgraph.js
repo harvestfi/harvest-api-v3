@@ -13,7 +13,7 @@ const executeGraphCall = async (chain, query, variables) => {
   } catch (error) {
     response = error.response
   }
-  while (retry < 5 && response.status == 429) {
+  while (retry < 5 && (!response || response.status != 200)) {
     console.log('Retry', retry + 1, 'Waiting 16s for rate-limit')
     await new Promise(r => setTimeout(r, 16000))
     try {

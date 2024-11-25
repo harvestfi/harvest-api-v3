@@ -1015,7 +1015,7 @@ const getLeaderboardData = async () => {
         }
         maxValue = data.userBalances[data.userBalances.length - 1].value
         datapoints += data.userBalances.length
-        if (data.userBalances.length < 1000) {
+        if (data.userBalances.length < 1000 || maxValue < 2) {
           break
         }
       }
@@ -1024,7 +1024,7 @@ const getLeaderboardData = async () => {
 
     sortable = Object.entries(userBalances)
       .sort(([, a], [, b]) => b.totalBalance - a.totalBalance)
-      .slice(0, 500)
+      .slice(0, 1000)
       .reduce((r, [k, v]) => ({ ...r, [k]: v }), {})
     const tvl = Object.values(sortable).reduce((b, a) => b + a.totalBalance, 0)
     const users = Object.values(sortable).length
