@@ -46,6 +46,34 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  IPOR_USDC_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    isIPORVault: true,
+    apyIconUrls: ['./icons/usdc.svg'],
+    apyTokenSymbols: ['USDC'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['IPOR'],
+    tags: ['Beginners', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.IPOR_USDC_arbitrum.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.IPOR_USDC_arbitrum.NewVault,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.IPOR,
+        params: [
+          addresses.ARBITRUM_ONE.V2.IPOR_USDC_arbitrum.Underlying,
+          addresses.ARBITRUM_ONE.V2.IPOR_USDC_arbitrum.NewVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
   aave_cbBTC_base: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aave.svg'],
