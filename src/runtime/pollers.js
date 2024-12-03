@@ -5,6 +5,7 @@ const { forEach } = require('promised-loops')
 const { pickBy, chunk, isArray, size, get } = require('lodash')
 
 const { getVaultsData } = require('../vaults')
+const { getIPORVaultsData } = require('../vaults/ipor')
 const { getPoolsData } = require('../pools')
 const { getPercentOfFARMStaked, getTotalMarketCap } = require('../lib/token-stats')
 const { resetCallCount, printCallCountResults, updateCallCountCache } = require('../lib/web3')
@@ -62,6 +63,7 @@ const getVaults = async () => {
     fetchedARBITRUMVaults = [],
     fetchedBASEVaults = [],
     fetchedZKSYNCVaults = [],
+    fetchedIPORVaults = [],
     fetchedVaults,
     hasErrors = false
 
@@ -79,7 +81,18 @@ const getVaults = async () => {
 
   const arbitrumVaultsBatches = chunk(
     Object.keys(tokensWithVault).filter(
-      tokenId => tokens[tokenId].chain === CHAIN_IDS.ARBITRUM_ONE,
+      tokenId =>
+        tokens[tokenId].chain === CHAIN_IDS.ARBITRUM_ONE &&
+        !Object.prototype.hasOwnProperty.call(tokens[tokenId], 'isIPORVault'),
+    ),
+    GET_VAULT_DATA_BATCH_SIZE,
+  )
+
+  const iporVaultsBatches = chunk(
+    Object.keys(tokensWithVault).filter(
+      tokenId =>
+        tokens[tokenId].chain === CHAIN_IDS.ARBITRUM_ONE &&
+        Object.prototype.hasOwnProperty.call(tokens[tokenId], 'isIPORVault'),
     ),
     GET_VAULT_DATA_BATCH_SIZE,
   )
@@ -164,6 +177,21 @@ const getVaults = async () => {
   })
   console.log('\n-- Done getting BASE vaults data --')
 
+  console.log('\n-- Getting ARBITRUM IPOR vaults data --')
+  await forEach(iporVaultsBatches, async batch => {
+    if (batch) {
+      try {
+        console.log('Getting vault data for: ', batch)
+        const vaultsData = await getIPORVaultsData(batch)
+        fetchedIPORVaults = fetchedIPORVaults.concat(vaultsData)
+      } catch (err) {
+        hasErrors = true
+        console.error(`Failed to get vault data for: ${batch}`, err)
+      }
+    }
+  })
+  console.log('\n-- Done getting ARBITRUM IPOR vaults data --')
+
   fetchedVaults = {
     eth: fetchedETHVaults.reduce((acc, vault) => {
       acc[vault.id] = vault
@@ -182,6 +210,10 @@ const getVaults = async () => {
       return acc
     }, {}),
     zksync: fetchedZKSYNCVaults.reduce((acc, vault) => {
+      acc[vault.id] = vault
+      return acc
+    }, {}),
+    ipor: fetchedIPORVaults.reduce((acc, vault) => {
       acc[vault.id] = vault
       return acc
     }, {}),

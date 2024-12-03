@@ -208,7 +208,21 @@ const savingsPotContract = require('../contracts/savings-pot/contract.json')
 const gmxViewerMethods = require('../contracts/gmx-viewer/methods')
 const gmxViewerContract = require('../contracts/gmx-viewer/contract.json')
 
+const plasmaVaultMethods = require('../contracts/plasma-vault/methods')
+const plasmaVaultContract = require('../contracts/plasma-vault/contract.json')
+
+const plasmaFuseMethods = require('../contracts/plasma-fuse/methods')
+const plasmaFuseContract = require('../contracts/plasma-fuse/contract.json')
+
 module.exports = {
+  plasmaFuse: {
+    methods: plasmaFuseMethods,
+    contract: plasmaFuseContract,
+  },
+  plasmaVault: {
+    methods: plasmaVaultMethods,
+    contract: plasmaVaultContract,
+  },
   gmxViewer: {
     methods: gmxViewerMethods,
     contract: gmxViewerContract,
