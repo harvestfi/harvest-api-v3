@@ -53,12 +53,14 @@ const getCLData = async () => {
 
     const token1 = await wrapperMethods.getAsset(wrapper1)
     const valueIn1 = await wrapperMethods.getTotalAssets(wrapper1)
+    const liquidity = await wrapperMethods.getTotalSupply(wrapper1)
 
     data[vault] = {
       ticks: [currentTick, upperTick, lowerTick],
       tokens: [token0, token1],
       weights: [tokenWeights[0], tokenWeights[1]],
       values: [valueIn0, valueIn1],
+      liquidity: liquidity,
     }
   }
 
