@@ -38,6 +38,7 @@ const {
 } = require('../lib/third-party/harvest-subgraph')
 const { superformRewardData } = require('../lib/third-party/superform')
 const { getGmxData } = require('../lib/third-party/gmx')
+const { getCLData } = require('../lib/third-party/cl-test')
 
 const getProfitSharingFactor = chain => {
   switch (chain) {
@@ -1121,6 +1122,7 @@ const runUpdateLoop = async () => {
       historical_rates: 0,
       leaderboard: 0,
       gmx: 0,
+      clTest: 0,
     })
   }
 
@@ -1193,6 +1195,12 @@ const runUpdateLoop = async () => {
   await getGmxData()
   if (DEBUG_MODE) {
     updateCallCountCache('gmx')
+    resetCallCount()
+  }
+
+  await getCLData()
+  if (DEBUG_MODE) {
+    updateCallCountCache('clTest')
     resetCallCount()
   }
 
