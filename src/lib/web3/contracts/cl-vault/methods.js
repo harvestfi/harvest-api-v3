@@ -5,10 +5,13 @@ const getUpperTick = instance => countFunctionCall(instance.methods.tickUpper().
 const getLowerTick = instance => countFunctionCall(instance.methods.tickLower().call())
 const getTokenWeights = instance =>
   countFunctionCall(instance.methods.getCurrentTokenWeights().call())
+const getLiquidity = instance =>
+  countFunctionCall(instance.methods.underlyingBalanceWithInvestment().call())
 
 module.exports = {
   getCurrentTick,
   getUpperTick,
   getLowerTick,
   getTokenWeights,
+  getLiquidity,
 }

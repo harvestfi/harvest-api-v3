@@ -47,13 +47,13 @@ const getCLData = async () => {
     const upperTick = await vaultMethods.getUpperTick(vaultContr)
     const lowerTick = await vaultMethods.getLowerTick(vaultContr)
     const tokenWeights = await vaultMethods.getTokenWeights(vaultContr)
+    const liquidity = await vaultMethods.getLiquidity(vaultContr)
 
     const token0 = await wrapperMethods.getAsset(wrapper0)
     const valueIn0 = await wrapperMethods.getTotalAssets(wrapper0)
 
     const token1 = await wrapperMethods.getAsset(wrapper1)
     const valueIn1 = await wrapperMethods.getTotalAssets(wrapper1)
-    const liquidity = await wrapperMethods.getTotalSupply(wrapper1)
 
     data[vault] = {
       ticks: [currentTick, upperTick, lowerTick],
