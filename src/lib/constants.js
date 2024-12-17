@@ -261,6 +261,7 @@ const DB_CACHE_IDS = {
   SF_REWARDS: 9,
   LEADERBOARD: 10,
   GMX_DATA: 11,
+  CL_DATA: 12,
 }
 
 const PROFIT_SHARING_POOL_ID = 'profit-sharing-farm'

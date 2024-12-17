@@ -208,6 +208,12 @@ const savingsPotContract = require('../contracts/savings-pot/contract.json')
 const gmxViewerMethods = require('../contracts/gmx-viewer/methods')
 const gmxViewerContract = require('../contracts/gmx-viewer/contract.json')
 
+const clVaultMethods = require('../contracts/cl-vault/methods')
+const clVaultContract = require('../contracts/cl-vault/contract.json')
+
+const clWrapperMethods = require('../contracts/cl-wrapper/methods')
+const clWrapperContract = require('../contracts/cl-wrapper/contract.json')
+
 const plasmaVaultMethods = require('../contracts/plasma-vault/methods')
 const plasmaVaultContract = require('../contracts/plasma-vault/contract.json')
 
@@ -222,6 +228,14 @@ module.exports = {
   plasmaVault: {
     methods: plasmaVaultMethods,
     contract: plasmaVaultContract,
+  },
+  clVault: {
+    methods: clVaultMethods,
+    contract: clVaultContract,
+  },
+  clWrapper: {
+    methods: clWrapperMethods,
+    contract: clWrapperContract,
   },
   gmxViewer: {
     methods: gmxViewerMethods,
