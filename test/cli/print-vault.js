@@ -2,6 +2,7 @@ require('dotenv').config()
 const { UI_DATA_FILES } = require('../../src/lib/constants')
 const initDb = require('../../src/lib/db')
 const { fetchAndExpandVault } = require('../../src/vaults')
+const { fetchAndExpandIPORVault } = require('../../src/vaults/ipor')
 const { fetchAndExpandPool } = require('../../src/pools')
 const { cliPreload } = require('../../src/runtime/pollers')
 const { getUIData } = require('../../src/lib/data')
@@ -23,7 +24,9 @@ const main = async () => {
     if (!tokens[vaultId]) {
       console.log(`Vault: ${vaultId} does not exist. Is casing correct?`)
     } else {
-      vault = await fetchAndExpandVault(vaultId)
+      if (Object.prototype.hasOwnProperty.call(tokens[vaultId], 'isIPORVault'))
+        vault = await fetchAndExpandIPORVault(vaultId)
+      else vault = await fetchAndExpandVault(vaultId)
       console.log(vault)
     }
   } catch (err) {
@@ -39,11 +42,14 @@ const main = async () => {
           tokens[vaultId] &&
           (!vault || tokens[vaultId].chain === pool.chain) &&
           tokens[vaultId].vaultAddress &&
+          !Object.prototype.hasOwnProperty.call(tokens[vaultId], 'isIPORVault') &&
           pool.collateralAddress.toLowerCase() === tokens[vaultId].vaultAddress.toLowerCase()),
     )
-    const pool = await fetchAndExpandPool(poolToFetch)
-    console.log('====================')
-    console.log(pool)
+    if (poolToFetch) {
+      const pool = await fetchAndExpandPool(poolToFetch)
+      console.log('====================')
+      console.log(pool)
+    }
   } catch (err) {
     console.log(`Error getting pool ${vaultId}`, err)
   }

@@ -5,6 +5,7 @@ const { forEach } = require('promised-loops')
 const { pickBy, chunk, isArray, size, get } = require('lodash')
 
 const { getVaultsData } = require('../vaults')
+const { getIPORVaultsData } = require('../vaults/ipor')
 const { getPoolsData } = require('../pools')
 const { getPercentOfFARMStaked, getTotalMarketCap } = require('../lib/token-stats')
 const { resetCallCount, printCallCountResults, updateCallCountCache } = require('../lib/web3')
@@ -127,8 +128,20 @@ const getVaults = async () => {
     if (batch) {
       try {
         console.log('Getting vault data for: ', batch)
-        const vaultsData = await getVaultsData(batch)
-        fetchedARBITRUMVaults = fetchedARBITRUMVaults.concat(vaultsData)
+        let vaultsData,
+          iporvaultsData,
+          iporBatch = [],
+          normalBatch = []
+        batch.forEach(vaultId => {
+          if (tokensWithVault[vaultId].isIPORVault) {
+            iporBatch.push(vaultId)
+          } else {
+            normalBatch.push(vaultId)
+          }
+        })
+        vaultsData = await getVaultsData(normalBatch)
+        iporvaultsData = await getIPORVaultsData(iporBatch)
+        fetchedARBITRUMVaults = fetchedARBITRUMVaults.concat(vaultsData).concat(iporvaultsData)
       } catch (err) {
         hasErrors = true
         console.error(`Failed to get vault data for: ${batch}`, err)

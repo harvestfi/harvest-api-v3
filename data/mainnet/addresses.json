@@ -2149,6 +2149,10 @@
         "NewStrategy": "0xBf6e0a108806367B77DB4a2643175657224FDcB7",
         "NewPool": "0x9C3B483E00D00a620706A397a74875Af0455bAB6",
         "Market": "0xd98Be00b5D27fc98112BdE293e487f8D4cA57d07"
+      },
+      "IPOR_USDC_arbitrum": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0x7fBFD8cdA97C0221B39C581c34AFD24C523a3990"
       }      
     }
   },

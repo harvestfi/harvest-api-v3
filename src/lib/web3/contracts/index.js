@@ -214,7 +214,21 @@ const clVaultContract = require('../contracts/cl-vault/contract.json')
 const clWrapperMethods = require('../contracts/cl-wrapper/methods')
 const clWrapperContract = require('../contracts/cl-wrapper/contract.json')
 
+const plasmaVaultMethods = require('../contracts/plasma-vault/methods')
+const plasmaVaultContract = require('../contracts/plasma-vault/contract.json')
+
+const plasmaFuseMethods = require('../contracts/plasma-fuse/methods')
+const plasmaFuseContract = require('../contracts/plasma-fuse/contract.json')
+
 module.exports = {
+  plasmaFuse: {
+    methods: plasmaFuseMethods,
+    contract: plasmaFuseContract,
+  },
+  plasmaVault: {
+    methods: plasmaVaultMethods,
+    contract: plasmaVaultContract,
+  },
   clVault: {
     methods: clVaultMethods,
     contract: clVaultContract,
