@@ -39,7 +39,7 @@ const fetchAndExpandIPORVault = async symbol => {
     .times(new BigNumber(10).exponentiatedBy(Number(vaultData.decimals)))
     .dividedBy(totalSupply)
     .times(totalAssets)
-    .toFixed()
+    .toFixed(2, 1)
 
   const { estimatedApy, estimatedApyBreakdown } = await executeEstimateApyFunctions(
     symbol,
