@@ -53,7 +53,7 @@ module.exports = {
     apyTokenSymbols: ['USDC'],
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC'],
-    platform: ['IPOR'],
+    platform: ['Autopilot'],
     tags: ['Beginners', 'Stable'],
     tokenAddress: addresses.ARBITRUM_ONE.V2.IPOR_USDC_arbitrum.Underlying,
     decimals: '6',
