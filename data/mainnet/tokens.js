@@ -5867,6 +5867,7 @@ module.exports = {
     },
   },
   camelotV3_rsETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/rseth.svg', './icons/eth.svg'],
     tokenNames: ['rsETH', 'ETH'],
@@ -6134,6 +6135,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   camelotV3_MAGIC_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/magic.svg', './icons/eth.svg'],
     tokenNames: ['MAGIC', 'ETH'],
@@ -6165,6 +6167,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_PENDLE_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/pendle.svg', './icons/eth.svg'],
     tokenNames: ['PENDLE', 'ETH'],
@@ -6196,6 +6199,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_RDNT_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/rdnt.svg', './icons/eth.svg'],
     tokenNames: ['RDNT', 'ETH'],
@@ -6258,6 +6262,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_wstETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
     tokenNames: ['stETH', 'ETH'],
@@ -7605,6 +7610,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   camelotV3_ARB_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/eth.svg'],
     tokenNames: ['ARB', 'ETH'],
@@ -7635,6 +7641,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_DAI_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/dai.svg', './icons/usdc.svg'],
     tokenNames: ['DAI', 'USDC'],
@@ -7725,6 +7732,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_LINK_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/link.svg', './icons/eth.svg'],
     tokenNames: ['LINK', 'ETH'],
