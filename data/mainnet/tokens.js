@@ -48,6 +48,7 @@ module.exports = {
   },
   IPOR_USDC_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'IPOR_USDC_arbitrum',
     isIPORVault: true,
     apyIconUrls: ['./icons/usdc.svg'],
     apyTokenSymbols: ['USDC'],
