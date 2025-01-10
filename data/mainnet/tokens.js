@@ -48,6 +48,7 @@ module.exports = {
   },
   IPOR_USDC_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'IPOR_USDC_arbitrum',
     isIPORVault: true,
     apyIconUrls: ['./icons/usdc.svg'],
     apyTokenSymbols: ['USDC'],
@@ -5379,13 +5380,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MERKL,
-        params: [
-          addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.Underlying,
-          addresses.MATIC.V2.gammaMerkl_QS_tBTC_ETH.PoolAddress,
-          CHAIN_IDS.POLYGON_MAINNET,
-          profitSharingCut8Percent,
-        ],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'dQUICK'],
@@ -5411,7 +5407,7 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.Underlying,
+          addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.NewStrategy,
           addresses.MATIC.V2.gammaMerkl_QS_WBTC_ETH_w.PoolAddress,
           CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
@@ -5947,7 +5943,7 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.Underlying,
+          addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.NewStrategy,
           addresses.MATIC.V2.gammaMerkl_QS_ETH_USDC.PoolAddress,
           CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
@@ -5977,7 +5973,7 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.Underlying,
+          addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.NewStrategy,
           addresses.MATIC.V2.gammaMerkl_QS_ETH_USDT.PoolAddress,
           CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
@@ -6007,7 +6003,7 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.Underlying,
+          addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.NewStrategy,
           addresses.MATIC.V2.gammaMerkl_QS_MATIC_USDT.PoolAddress,
           CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
@@ -7931,7 +7927,7 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.quickGamma_wstETH_ETH.Underlying,
+          addresses.MATIC.V2.quickGamma_wstETH_ETH.NewStrategy,
           addresses.MATIC.V2.quickGamma_wstETH_ETH.PoolAddress,
           CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
@@ -7963,7 +7959,7 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.Underlying,
+          addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.NewStrategy,
           addresses.MATIC.V2.quickGamma_WBTC_USDC_narrow.PoolAddress,
           CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
@@ -7992,7 +7988,7 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.Underlying,
+          addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.NewStrategy,
           addresses.MATIC.V2.quickGamma_WBTC_ETH_narrow.PoolAddress,
           CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
@@ -10272,7 +10268,7 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.Underlying,
+          addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.NewStrategy,
           addresses.MATIC.V2.quickGamma_MATIC_ETH_narrow.PoolAddress,
           CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
@@ -10333,7 +10329,7 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.Underlying,
+          addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.NewStrategy,
           addresses.MATIC.V2.quickGamma_MATIC_USDC_narrow.PoolAddress,
           CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
@@ -10362,7 +10358,7 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.MERKL,
         params: [
-          addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.Underlying,
+          addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.NewStrategy,
           addresses.MATIC.V2.quickGamma_USDC_ETH_narrow.PoolAddress,
           CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,

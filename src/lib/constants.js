@@ -228,7 +228,7 @@ const CURVE_API_URLS = {
 }
 
 const GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/'
-const MERKL_ENDPOINT = 'https://api.angle.money/v2/merkl'
+const MERKL_ENDPOINT = 'https://api.angle.money/v3/'
 const PENDLE_ENDPOINT = 'https://api-v2.pendle.finance/core/v2/'
 const NOTIONAL_ENDPOINT = 'https://registry.notional.finance'
 const MORPHO_ENDPOINT = 'https://blue-api.morpho.org/graphql'
