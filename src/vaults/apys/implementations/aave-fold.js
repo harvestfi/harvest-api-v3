@@ -7,6 +7,7 @@ const {
   lodestarStrategy,
 } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
+const { getApy: getMerklApy } = require('./merkl')
 
 const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
   const web3 = getWeb3(chain)
@@ -123,6 +124,11 @@ const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
       .div(totalUsd)
       .times(reduction)
       .times(borrowedMul)
+  }
+
+  if (strategyAddr == "0xe22f4Ca77d3278255d3C6fe2076a672857Eab83F") {
+    let merkl = new BigNumber(await getMerklApy(strategyAddr, "0x3ce38A9e2403415c50661a3f78acf4d392320e7E", 1, 1))
+    supplyRewardAPR = supplyRewardAPR.plus(merkl.times(suppliedMul))
   }
 
   return supplyAPR.minus(borrowAPR).plus(supplyRewardAPR).plus(borrowRewardAPR).toFixed()
