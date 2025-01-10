@@ -6273,14 +6273,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.CAMELOT_LP,
+        type: ESTIMATED_APY_TYPES.CAMELOT_MERKL,
         params: [
-          addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.NewStrategy,
-          addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.NFTPool,
-          addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.NitroPool,
+          addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.Underlying,
+          addresses.ARBITRUM_ONE.V2.camelotV3_USDC_USDT.AlgebraPool,
           profitSharingCut10Percent,
         ],
-        extraDailyCompound: false,
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
@@ -7713,14 +7711,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.CAMELOT_LP,
+        type: ESTIMATED_APY_TYPES.CAMELOT_MERKL,
         params: [
-          addresses.ARBITRUM_ONE.V2.camelotV3_GMX_ETH.NewStrategy,
-          addresses.ARBITRUM_ONE.V2.camelotV3_GMX_ETH.NFTPool,
-          addresses.ARBITRUM_ONE.V2.camelotV3_GMX_ETH.NitroPool,
+          addresses.ARBITRUM_ONE.V2.camelotV3_GMX_ETH.Underlying,
+          addresses.ARBITRUM_ONE.V2.camelotV3_GMX_ETH.AlgebraPool,
           profitSharingCut10Percent,
         ],
-        extraDailyCompound: false,
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
@@ -7743,14 +7739,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.CAMELOT_LP,
+        type: ESTIMATED_APY_TYPES.CAMELOT_MERKL,
         params: [
-          addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.NewStrategy,
-          addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.NFTPool,
-          addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.NitroPool,
+          addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.Underlying,
+          addresses.ARBITRUM_ONE.V2.camelotV3_GRAIL_ETH.AlgebraPool,
           profitSharingCut10Percent,
         ],
-        extraDailyCompound: false,
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
@@ -7804,14 +7798,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.CAMELOT_LP,
+        type: ESTIMATED_APY_TYPES.CAMELOT_MERKL,
         params: [
-          addresses.ARBITRUM_ONE.V2.camelotV3_WBTC_ETH.NewStrategy,
-          addresses.ARBITRUM_ONE.V2.camelotV3_WBTC_ETH.NFTPool,
-          addresses.ARBITRUM_ONE.V2.camelotV3_WBTC_ETH.NitroPool,
+          addresses.ARBITRUM_ONE.V2.camelotV3_WBTC_ETH.Underlying,
+          addresses.ARBITRUM_ONE.V2.camelotV3_WBTC_ETH.AlgebraPool,
           profitSharingCut10Percent,
         ],
-        extraDailyCompound: false,
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
@@ -7834,14 +7826,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.CAMELOT_LP,
+        type: ESTIMATED_APY_TYPES.CAMELOT_MERKL,
         params: [
-          addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.NewStrategy,
-          addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.NFTPool,
-          addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.NitroPool,
+          addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.Underlying,
+          addresses.ARBITRUM_ONE.V2.camelotV3_ARB_USDC.AlgebraPool,
           profitSharingCut10Percent,
         ],
-        extraDailyCompound: false,
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
@@ -7864,14 +7854,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.CAMELOT_LP,
+        type: ESTIMATED_APY_TYPES.CAMELOT_MERKL,
         params: [
-          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.NewStrategy,
-          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.NFTPool,
-          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.NitroPool,
+          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.Underlying,
+          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDT.AlgebraPool,
           profitSharingCut10Percent,
         ],
-        extraDailyCompound: false,
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
@@ -7894,14 +7882,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.CAMELOT_LP,
+        type: ESTIMATED_APY_TYPES.CAMELOT_MERKL,
         params: [
-          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.NewStrategy,
-          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.NFTPool,
-          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.NitroPool,
+          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.Underlying,
+          addresses.ARBITRUM_ONE.V2.camelotV3_ETH_USDC.AlgebraPool,
           profitSharingCut10Percent,
         ],
-        extraDailyCompound: false,
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],

@@ -229,6 +229,7 @@ const CURVE_API_URLS = {
 
 const GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/'
 const MERKL_ENDPOINT = 'https://api.angle.money/v3/'
+const CAMELOT_MERKL_ENDPOINT = 'https://api.camelot.exchange/campaigns?chainId=42161'
 const PENDLE_ENDPOINT = 'https://api-v2.pendle.finance/core/v2/'
 const NOTIONAL_ENDPOINT = 'https://registry.notional.finance'
 const MORPHO_ENDPOINT = 'https://blue-api.morpho.org/graphql'
@@ -358,6 +359,7 @@ module.exports = {
   APE_API_URL,
   GAMMA_ENDPOINT,
   MERKL_ENDPOINT,
+  CAMELOT_MERKL_ENDPOINT,
   PENDLE_ENDPOINT,
   NOTIONAL_ENDPOINT,
   ARBITRUM_RPC_URL,
