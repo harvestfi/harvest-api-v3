@@ -865,7 +865,7 @@
         "NewStrategy": "0x4800A07DcbA4d5D85adcf6B95Ea8464A8F380368",
         "NewPool": "0x1B60B0bE815C317B166b003EAa755be23f4788a9",
         "PoolAddress": "0x370404A2A57eDfbEaF16Dc8ef8E2d1B0a2A9da15",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "balancer_2EUR_PAR_v2": {
         "Underlying": "0x513CdEE00251F39DE280d9E5f771A6eaFebCc88E",
@@ -937,7 +937,7 @@
         "NewStrategy": "0xe33BD9a8a501d3962C16D818459722797FEB3943",
         "NewPool": "0xC40f3684aEB25af5374D2D7d11a3BBDd3E64e041",
         "PoolAddress": "0xAf16D97DF951bb8b7D876AE93367eC835c4C11b0",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "gammaMerkl_QS_WBTC_ETH_w": {
         "Underlying": "0xadc7B4096C3059Ec578585Df36E6E1286d345367",
@@ -1119,7 +1119,7 @@
         "NewPool": "0x618475287E975257bE94Efb748FdeC1976E0362C",
         "NFTPool": "0x6BC938abA940fB828D39Daa23A94dfc522120C11",
         "NitroPool": "0",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "camelot_iFARM_ETH": {
         "Underlying": "0xD2A7084369cC93672b2CA868757a9f327e3677a4",
@@ -1136,7 +1136,7 @@
         "NewPool": "0x2112FDFc139c6aAF6ff26A8C2623D7C514EEbDC0",
         "NFTPool": "0x9FFC53cE956Bf040c4465B73B3cfC04569EDaEf1",
         "NitroPool": "0",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "camelot_GRAIL_ARB": {
         "Underlying": "0xC9da32C3b444F15412F7FeAC6104d1E258D23B1b",
@@ -1145,7 +1145,7 @@
         "NewPool": "0x3F45760d2DB68bcDf55f0622F4489FD90C81375a",
         "NFTPool": "0x2a9766A73999a7dE16A4b4E345c8a6fC4E4288Cc",
         "NitroPool": "0",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "camelot_GENE_ETH": {
         "Underlying": "0xa0c79678bCFbEA0a358D5FeA563100893C37a848",
@@ -1172,7 +1172,8 @@
         "NewPool": "0x5f0AB004Ab2a3c35461e0E5Ce89839DA22B2E598",
         "NFTPool": "0x3b6486154b9dAe942C393b1cB3d11E3395B02Df8",
         "NitroPool": "0x84EDB15BcBf6818879C6FDf26A69700D43100A74",
-        "AlgebraPool": "0xB1026b8e7276e7AC75410F1fcbbe21796e8f7526"
+        "AlgebraPool": "0xB1026b8e7276e7AC75410F1fcbbe21796e8f7526",
+        "doHardwork": "noSim"
       },
       "camelotV3_ETH_USDT": {
         "Underlying": "0x9330e26b5Fc0b7c417C6bD901528d5c65BE5cdf2",
@@ -1181,7 +1182,8 @@
         "NewPool": "0x7e4d7C473d090ff0C70ee41A50116e0b7463EB46",
         "NFTPool": "0xF42884071fFe17Bdd7d1710C31191023419e0CA7",
         "NitroPool": "0xe364CF2dd75192D2b04059D6c0aE559699b1E31A",
-        "AlgebraPool": "0x7CcCBA38E2D959fe135e79AEBB57CCb27B128358"
+        "AlgebraPool": "0x7CcCBA38E2D959fe135e79AEBB57CCb27B128358",
+        "doHardwork": "noSim"
       },
       "camelotV3_ARB_USDC": {
         "Underlying": "0x29237292F15BC3615BFCc0D958C265Aa64527FB2",
@@ -1190,7 +1192,8 @@
         "NewPool": "0x39bC1a41e9b77De48bb1D6cBDb5E36635c4c28b9",
         "NFTPool": "0x14AD01d5f496e9C40358629f6a95a7C3B5c4b767",
         "NitroPool": "0x6aCdfD8Bd4f5AC6F5E0cA54024663C251e9Cf0f4",
-        "AlgebraPool": "0xfaE2AE0a9f87FD35b5b0E24B47BAC796A7EEfEa1"
+        "AlgebraPool": "0xfaE2AE0a9f87FD35b5b0E24B47BAC796A7EEfEa1",
+        "doHardwork": "noSim"
       },
       "xGRAIL": {
         "Underlying": "0x3CAaE25Ee616f2C8E13C74dA0813402eae3F496b",
@@ -1205,7 +1208,7 @@
         "NewPool": "0x16860153C74a022c59F114968e755874dE4bF7D4",
         "Gauge": "0xb438c6cc53315FfA3fcD1bc8b27d6c3155b0B56A",
         "PoolId": "0x542f16da0efb162d20bf4358efa095b70a100f9e000000000000000000000436",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "balancer_tBTC_WETH": {
         "Underlying": "0xc9f52540976385A84BF416903e1Ca3983c539E34",
@@ -1229,7 +1232,7 @@
         "NewPool": "0x25C69d255e8FED5f71e83d4D062b06770139841A",
         "NFTPool": "0x76075F03e0Ae34bF0B63bcFb731F9DB5F826dcAe",
         "NitroPool": "0x2A7543e3e2f1998B1E54744AfC7E857715f1F645",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "camelot_RELAY_ETH": {
         "Underlying": "0xBbcF0B7F070B170909C9ff430878e92ceAd990F3",
@@ -1247,7 +1250,7 @@
         "NewPool": "0x893c361c2E6cD68fbB67485bFa761f296Faeab99",
         "NFTPool": "0xB5108062de111F61E0dD585f4225ae18d1BB21D9",
         "NitroPool": "0x0b0f2d79e2Da8a72B3c6C7EfD094B87D2469829C",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "lodestar_ETH": {
         "Underlying": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
@@ -1305,7 +1308,7 @@
         "NFTPool": "0xbFf9F4591b423ce63e9Ef803533C70ae8a03bEed",
         "NitroPool": "0xe105b532cb42bf065D152643B29feDA85625Dce9",
         "AlgebraPool": "0xe51635ae8136aBAc44906A8f230C2D235E9c195F",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "camelotV3_DAI_USDC": {
         "Underlying": "0x2766Ba1B6772d23E1F58260a1dF57bFFB4661953",
@@ -1315,7 +1318,7 @@
         "NFTPool": "0x31089a2df37AC97A405377CBA2Bb4Fc993984B1d",
         "NitroPool": "0x9320C0e76D56F9aA0dB60016A2430d38a0D42A26",
         "AlgebraPool": "0x45FaE8D0D2acE73544baab452f9020925AfCCC75",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "camelotV3_GMX_ETH": {
         "Underlying": "0x9bdb8335619bA4E20Bea1321f8E32f45fD6e6e22",
@@ -1324,7 +1327,8 @@
         "NewPool": "0x4DA925543a7F311A871aA196DEC09aA18fa4C652",
         "NFTPool": "0x4242fbeEcF6b1Db01a50B8878f85c31E5e53a5c6",
         "NitroPool": "0x2Ed02f03a7EC25Acd2BcE9C32d359A8fE02e798B",
-        "AlgebraPool": "0xC99be44383BC8d82357F5A1D9ae9976EE9d75bee"
+        "AlgebraPool": "0xC99be44383BC8d82357F5A1D9ae9976EE9d75bee",
+        "doHardwork": "noSim"
       },
       "camelotV3_GRAIL_ETH": {
         "Underlying": "0x97D81162B96D57476CcF170595a39c1DC76676c9",
@@ -1333,7 +1337,8 @@
         "NewPool": "0xD177De9f61611503377B4A16f60666a98152bCB2",
         "NFTPool": "0x06Bd22D16B6fB79380fF3DD49F0801a62eDD943b",
         "NitroPool": "0xd599c5B68D89213d2eEC9dDdfc92fFc9Ca1795ca",
-        "AlgebraPool": "0x60451B6aC55E3C5F0f3aeE31519670EcC62DC28f"
+        "AlgebraPool": "0x60451B6aC55E3C5F0f3aeE31519670EcC62DC28f",
+        "doHardwork": "noSim"
       },
       "camelotV3_LINK_ETH": {
         "Underlying": "0xF3557102C0cCBE07EE237B6eE70984f313886432",
@@ -1343,7 +1348,7 @@
         "NFTPool": "0xf49926092302B0c18385a7069f98456dF0e5C8Fe",
         "NitroPool": "0xE651C9562F471bE685c1faE9EFaa0b5932974172",
         "AlgebraPool": "0xe8795cF9c2309eCfe05Df028eB0F21D5D6e3a951",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "camelotV3_WBTC_ETH": {
         "Underlying": "0x56c87c3892d3917895bAe1A4cAcf6ea23a4DB84d",
@@ -1352,7 +1357,8 @@
         "NewPool": "0xB68Dd4331F2060e09858a727E089Da4fF5EeeC5B",
         "NFTPool": "0xA562803Aa6FC35C3f3AB2d42b4281fE462dfb620",
         "NitroPool": "0x773B2db85b0cb5f647F8708d783d04f659Be28e9",
-        "AlgebraPool": "0xd845f7D4f4DeB9Ff5bCf09D140Ef13718F6f6C71"
+        "AlgebraPool": "0xd845f7D4f4DeB9Ff5bCf09D140Ef13718F6f6C71",
+        "doHardwork": "noSim"
       },
       "magpie_ETH_frxeth": {
         "Underlying": "0xe62880CC6872c9E9Fb1DDd73f400850fdaBE798D",
@@ -1558,7 +1564,7 @@
         "NFTPool": "0xFc9708721166af67881F528A10dd8ddE5a755CF2",
         "NitroPool": "0xD610523fb01f2C5d17aF11F864F0558B07FF6EF1",
         "AlgebraPool": "0x1106dB7165A8d4a8559B441eCdEe14a5d5070DbC",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "camelotV3_PENDLE_ETH": {
         "Underlying": "0x05F3ABD2B008e8b36a410F3C42E703cB776CeCD0",
@@ -1568,7 +1574,7 @@
         "NFTPool": "0x2d1334195Ce78a4dCFe28005f8275b9703129E75",
         "NitroPool": "0x32535535d4C5442ddFD9B7d14CEf458F4B94A4ec",
         "AlgebraPool": "0xE461f84C3fE6BCDd1162Eb0Ef4284F3bB6e4CAD3",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "camelotV3_RDNT_ETH": {
         "Underlying": "0x5E2a78bAcDEE3b34aCc1242Dbc2daCEf794083Ea",
@@ -1578,7 +1584,7 @@
         "NFTPool": "0xDBD2090F24672594A95a65eFEdC319D0aB781F14",
         "NitroPool": "0x858826F811dD2a4ee037462989f84de8257CaDCe",
         "AlgebraPool": "0xD51F7383C906cfD995d7f24729F37933Ff264Fa6",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "camelotV3_USDC_USDT": {
         "Underlying": "0xf662d78C79F6a3a6Fa70160fcE1085A9218D114e",
@@ -1587,7 +1593,8 @@
         "NewPool": "0x0b7c1D6c844EdFfd6910cDbEA93bbFe5eE5Bead5",
         "NFTPool": "0x72ce5abAa4293447fa9d4B612922E50681ce8baC",
         "NitroPool": "0xD5a4D419b48aE61A3974c2F86D9B494C9Ceb7801",
-        "AlgebraPool": "0xa17aFCAb059F3C6751F5B64347b5a503C3291868"
+        "AlgebraPool": "0xa17aFCAb059F3C6751F5B64347b5a503C3291868",
+        "doHardwork": "noSim"
       },
       "camelotV3_wstETH_ETH": {
         "Underlying": "0x3D53aC3Abec01827cAaE5Bc934d46b171cEa2206",
@@ -1597,7 +1604,7 @@
         "NFTPool": "0x9B65AbBB9Ce32f44232bb2eA21d1fa7d8bc0E1c5",
         "NitroPool": "0xd505758A31cBfBDeCc1DE616086C2696e970a7cD",
         "AlgebraPool": "0xdEb89DE4bb6ecf5BFeD581EB049308b52d9b2Da7",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "lodestarHodl_MAGIC": {
         "Underlying": "0x539bdE0d7Dbd336b79148AA742883198BBF60342",
@@ -1639,7 +1646,7 @@
         "NFTPool": "0x907F788AB0d47D7fcB5c48a9a1c05A4B35aC0b82",
         "NitroPool": "0x2b0706b44E4ee2b0781dF8fCdF3C2ff3521c639E",
         "AlgebraPool": "0xb355ccE5CBAF411bd56e3b092F5AA10A894083ae",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "penpie_eETH2504": {
         "Underlying": "0xE11f9786B06438456b044B3E21712228ADcAA0D1",
@@ -1926,7 +1933,7 @@
         "NewStrategy": "0x557Ac11511b3F826582Cce1FC63a86773A1AE6ca",
         "NewPool": "0x1e13861122B7fc524502E7Bf4fCDAa51c4f69c4F",
         "Gauge": "0x02b8e750E68cb648dB2c2ac4BBb47A10A5c12588",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "notional_nETH_arbitrum": {
         "Underlying": "0x18b0Fc5A233acF1586Da7C199Ca9E3f486305A29",
@@ -2693,7 +2700,7 @@
         "NewStrategy": "0xD029078F3F7526461F2369005f7822f35A48d25A",
         "NewPool": "0x87134Df2508c54Be232b15DbbFf9fa30FC7e97E7",
         "Gauge": "0x4Fa58b3Bec8cE12014c7775a0B3da7e6AdC3c7eA",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "aerodrome_jEUR_EURA": {
         "Underlying": "0xe7e01f38470136dE763d22e534e53C8BCdbA3f39",
@@ -2778,7 +2785,7 @@
         "NewStrategy": "0xb107e65Bf36E3F0bf87f28403fB546058aad8cb9",
         "NewPool": "0x0177ae95C14f1b7710e28ED5faE7C7bc6174F5F1",
         "Gauge": "0x2da7789a6371F550caF9054694F5A5A6682903f9",
-        "DoHardwork": false
+        "doHardwork": false
       },
       "extrafi_AERO": {
         "Underlying": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
