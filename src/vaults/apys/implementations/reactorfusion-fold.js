@@ -1,13 +1,9 @@
 const BigNumber = require('bignumber.js')
 const { web3ZKSYNC } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
-const {
-  lodestarCToken: cToken,
-  reactorFusionRewards: rewards,
-  lodestarStrategy,
-  token,
-} = require('../../../lib/web3/contracts')
+const { lodestarCToken: cToken, lodestarStrategy } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
+const { getApy: getMerklApy } = require('./merkl')
 
 const getApy = async (underlying, cTokenAddr, strategyAddr, reduction) => {
   const web3 = web3ZKSYNC
@@ -15,14 +11,6 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, reduction) => {
     contract: { abi: cTokenAbi },
     methods: cTokenMethods,
   } = cToken
-  const {
-    contract: { abi: rewardsAbi, address: rewardsAddress },
-    methods: rewardsMethods,
-  } = rewards
-  const {
-    contract: { abi: tokenAbi },
-    methods: { getDecimals },
-  } = token
   const {
     contract: { abi: strategyAbi },
     methods: strategyMethods,
@@ -49,39 +37,20 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, reduction) => {
   const supplyAPR = supplyRate.div(1e18).times(blocksPerYear).times(100).times(suppliedMul)
   const borrowAPR = borrowRate.div(1e18).times(blocksPerYear).times(100).times(borrowedMul)
 
-  const rewardsInstance = new web3.eth.Contract(rewardsAbi, rewardsAddress.mainnet)
-  const rewardRates = await rewardsMethods.getRewardRates(rewardsInstance)
-
-  let ctIndex
-  for (let i = 0; i < rewardRates[0].length; i++) {
-    if (rewardRates[0][i] == cTokenAddr) {
-      ctIndex = i
-    }
-  }
-
-  const rewardRateSupply = new BigNumber(rewardRates[1][ctIndex])
-  const rewardRateBorrow = new BigNumber(rewardRates[2][ctIndex])
-
-  const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
-  const underlyingDecimals = await getDecimals(underlyingInstance)
-
-  const rewardPerYearSupply = rewardRateSupply
-    .times(blocksPerYear)
-    .div(1e18)
-    .div(10 ** (18 - underlyingDecimals))
-  const rewardPerYearBorrow = rewardRateBorrow
-    .times(blocksPerYear)
-    .div(1e18)
-    .div(10 ** (18 - underlyingDecimals))
+  const rewardPerYearSupply = new BigNumber(0)
+  const rewardPerYearBorrow = new BigNumber(0)
 
   const underlyingPrice = await getTokenPrice(underlying, CHAIN_IDS.ZKSYNC)
   const rewardPrice = await getTokenPrice(ZK, CHAIN_IDS.ZKSYNC)
+
+  const merklReward = await getMerklApy(strategyAddr, cTokenAddr, 324, reduction)
 
   const rewardAPRSupply = rewardPerYearSupply
     .times(rewardPrice)
     .div(underlyingPrice)
     .times(100)
     .times(reduction)
+    .plus(merklReward)
     .times(suppliedMul)
   const rewardAPRBorrow = rewardPerYearBorrow
     .times(rewardPrice)
