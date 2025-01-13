@@ -3178,6 +3178,12 @@
         "NewVault": "0x256bc71d47E5420d4089204a6f6257425e285E66",
         "NewStrategy": "0x02f3BCBcD41d07236e21f6A4ef07B21b4FfACa5f",
         "NewPool": "0x88e8Dc83F9f5aA40A3db90054A07d5FAAc906c04"
+      },
+      "syncswap_ZK_ETH_classic": {
+        "Underlying": "0x45856bD6Bb9f076F4C558A4D5932c6c8d832b0d0",
+        "NewVault": "0xA696db2BDC759F683E5d673F1E25D6DE2A7a1CC7",
+        "NewStrategy": "0xaBfB002A6f63F86c87B4A80aA8b09194905D315d",
+        "NewPool": "0x7cd0b8DC0CFd68C94fA2C513dEC7200C6D652bE8"
       }
     }
   }

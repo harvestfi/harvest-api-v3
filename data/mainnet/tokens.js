@@ -136,7 +136,7 @@ module.exports = {
     tokenNames: ['wstETH', 'ETH'],
     apyIconUrls: ['./icons/zk.svg'],
     apyTokenSymbols: ['ZK'],
-    platform: ['SyncSwap - Stable'],
+    platform: ['SyncSwap - Aqua'],
     tags: ['Advanced', 'LSD'],
     tokenAddress: addresses.ZKSYNC.V2.syncswap_wstETH_ETH_aqua.Underlying,
     decimals: '18',
@@ -152,6 +152,34 @@ module.exports = {
         params: [
           addresses.ZKSYNC.V2.syncswap_wstETH_ETH_aqua.Underlying,
           addresses.ZKSYNC.V2.syncswap_wstETH_ETH_aqua.NewStrategy,
+          0,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  syncswap_ZK_ETH_classic: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/zk.svg', './icons/eth.svg'],
+    tokenNames: ['ZK', 'ETH'],
+    apyIconUrls: ['./icons/zk.svg'],
+    apyTokenSymbols: ['ZK'],
+    platform: ['SyncSwap - Classic'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ZKSYNC.V2.syncswap_ZK_ETH_classic.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ZKSYNC.V2.syncswap_ZK_ETH_classic.NewVault,
+    strategyAddress: addresses.ZKSYNC.V2.syncswap_ZK_ETH_classic.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.SYNCSWAP_POOL,
+      params: [addresses.ZKSYNC.V2.syncswap_ZK_ETH_classic.Underlying],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.SYNCSWAP,
+        params: [
+          addresses.ZKSYNC.V2.syncswap_ZK_ETH_classic.Underlying,
+          addresses.ZKSYNC.V2.syncswap_ZK_ETH_classic.NewStrategy,
           0,
           profitSharingCut10Percent,
         ],
