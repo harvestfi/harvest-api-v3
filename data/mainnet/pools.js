@@ -5,6 +5,94 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'morphoMW_cbBTC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.morphoMW_cbBTC.NewPool,
+    collateralAddress: addresses.BASE.V2.morphoMW_cbBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morphoMW_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC </a>to the Morpho Moonwell Flagship Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morphoMW_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'morphoMW_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.morphoMW_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.morphoMW_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morphoMW_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH </a>to the Morpho Moonwell Flagship Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morphoMW_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'morphoMW_EURC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.morphoMW_EURC.NewPool,
+    collateralAddress: addresses.BASE.V2.morphoMW_EURC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morphoMW_EURC.Underlying}" target="_blank" rel="noopener noreferrer"> EURC </a>to the Morpho Moonwell Flagship Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morphoMW_EURC.Underlying}" target="_blank" rel="noopener noreferrer"> EURC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'morphoMW_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.morphoMW_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.morphoMW_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morphoMW_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Moonwell Flagship Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morphoMW_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ZKSYNC,
     id: 'zkswap_wrsETH_ETH',
     type: POOL_TYPES.INCENTIVE,

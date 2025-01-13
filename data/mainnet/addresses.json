@@ -2242,6 +2242,7 @@
     "EXTRA": "0x2dAD3a13ef0C6366220f989157009e501e7938F8",
     "ION": "0x3eE5e23eEE121094f1cFc0Ccc79d6C809Ebd22e5",
     "VIRTUAL": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+    "MORPHO": "0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
     "V2": {
       "baseswap_BSWAP_ETH": {
         "Underlying": "0xE80B4F755417FB4baF4dbd23C029db3F62786523",
@@ -3015,8 +3016,35 @@
         "NewStrategy": "0xE2aD594D9aCaA196Aa60f96CBdE07BA7062a444E",
         "NewPool": "0x7Cc792f0CD15705d22db9D3B39717294e8752ecb",
         "Market": "0xb125E6687d4313864e53df431d5425969c15Eb2F"
+      },
+      "morphoMW_cbBTC": {
+        "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        "NewVault": "0xcAfb01AB827b6D57eD17fc1db6091E094EF6a1D5",
+        "NewStrategy": "0x4fFd6Dd8c6F028764a48d319b40F0c39Ce254573",
+        "NewPool": "0x6217d96e62863434391295840FC31E842c5740Fa",
+        "MorphoVault": "0x543257eF2161176D7C8cD90BA65C2d4CaEF5a796"
+      },
+      "morphoMW_ETH": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0x14d3f3cf49a4948CF3c8a024430bE6a7eFBD7D1A",
+        "NewStrategy": "0x49Bc79D74D1ae4215b79Ec59245fd6A78626c564",
+        "NewPool": "0xC82757eD94aA59AaCB62e28842b71B37899Dc9D0",
+        "MorphoVault": "0xa0E430870c4604CcfC7B38Ca7845B1FF653D0ff1"
+      },
+      "morphoMW_EURC": {
+        "Underlying": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
+        "NewVault": "0x74e41f73dffD1a335f9eE904846AC87a8290f97f",
+        "NewStrategy": "0x5501f79FF347aD8c7e48a842d403Cd72E5e4d59B",
+        "NewPool": "0x2C62531E61ebd36E468e0D21f0E34Bd7A19036E1",
+        "MorphoVault": "0xf24608E0CCb972b0b0f4A6446a0BBf58c701a026"
+      },
+      "morphoMW_USDC": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x9C012E4fe655b90839e1b65a461B72813c9ac2A4",
+        "NewStrategy": "0xD22282385Bb070B555AeFe8bC9Cd47781eBa2020",
+        "NewPool": "0xd9e199f95De22Eb48a336e9F73F5Ad446e918d3f",
+        "MorphoVault": "0xc1256Ae5FF1cf2719D4937adb3bbCCab2E00A2Ca"
       }
-      
     }
   },
   "ZKSYNC": {
