@@ -46,6 +46,118 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  syncswap_MBTC_WBTC_stable: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/mbtc.svg', './icons/wbtc.svg'],
+    tokenNames: ['MBTC', 'WBTC'],
+    apyIconUrls: ['./icons/zk.svg'],
+    apyTokenSymbols: ['ZK'],
+    platform: ['SyncSwap - Stable'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.ZKSYNC.V2.syncswap_MBTC_WBTC_stable.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ZKSYNC.V2.syncswap_MBTC_WBTC_stable.NewVault,
+    strategyAddress: addresses.ZKSYNC.V2.syncswap_MBTC_WBTC_stable.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.SYNCSWAP_POOL,
+      params: [addresses.ZKSYNC.V2.syncswap_MBTC_WBTC_stable.Underlying],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.SYNCSWAP,
+        params: [
+          addresses.ZKSYNC.V2.syncswap_MBTC_WBTC_stable.Underlying,
+          addresses.ZKSYNC.V2.syncswap_MBTC_WBTC_stable.NewStrategy,
+          0,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  syncswap_USDC_USDCe_stable: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/usdc.svg', './icons/usdc.svg'],
+    tokenNames: ['USDC', 'USDC.e'],
+    apyIconUrls: ['./icons/zk.svg'],
+    apyTokenSymbols: ['ZK'],
+    platform: ['SyncSwap - Stable'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.ZKSYNC.V2.syncswap_USDC_USDCe_stable.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ZKSYNC.V2.syncswap_USDC_USDCe_stable.NewVault,
+    strategyAddress: addresses.ZKSYNC.V2.syncswap_USDC_USDCe_stable.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.SYNCSWAP_POOL,
+      params: [addresses.ZKSYNC.V2.syncswap_USDC_USDCe_stable.Underlying],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.SYNCSWAP,
+        params: [
+          addresses.ZKSYNC.V2.syncswap_USDC_USDCe_stable.Underlying,
+          addresses.ZKSYNC.V2.syncswap_USDC_USDCe_stable.NewStrategy,
+          0,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  syncswap_USDC_USDT_stable: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
+    tokenNames: ['USDC', 'USDT'],
+    apyIconUrls: ['./icons/zk.svg'],
+    apyTokenSymbols: ['ZK'],
+    platform: ['SyncSwap - Stable'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.ZKSYNC.V2.syncswap_USDC_USDT_stable.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ZKSYNC.V2.syncswap_USDC_USDT_stable.NewVault,
+    strategyAddress: addresses.ZKSYNC.V2.syncswap_USDC_USDT_stable.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.SYNCSWAP_POOL,
+      params: [addresses.ZKSYNC.V2.syncswap_USDC_USDT_stable.Underlying],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.SYNCSWAP,
+        params: [
+          addresses.ZKSYNC.V2.syncswap_USDC_USDT_stable.Underlying,
+          addresses.ZKSYNC.V2.syncswap_USDC_USDT_stable.NewStrategy,
+          0,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  syncswap_wstETH_ETH_aqua: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/wsteth.svg', './icons/eth.svg'],
+    tokenNames: ['wstETH', 'ETH'],
+    apyIconUrls: ['./icons/zk.svg'],
+    apyTokenSymbols: ['ZK'],
+    platform: ['SyncSwap - Stable'],
+    tags: ['Advanced', 'LSD'],
+    tokenAddress: addresses.ZKSYNC.V2.syncswap_wstETH_ETH_aqua.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ZKSYNC.V2.syncswap_wstETH_ETH_aqua.NewVault,
+    strategyAddress: addresses.ZKSYNC.V2.syncswap_wstETH_ETH_aqua.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.SYNCSWAP_POOL,
+      params: [addresses.ZKSYNC.V2.syncswap_wstETH_ETH_aqua.Underlying],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.SYNCSWAP,
+        params: [
+          addresses.ZKSYNC.V2.syncswap_wstETH_ETH_aqua.Underlying,
+          addresses.ZKSYNC.V2.syncswap_wstETH_ETH_aqua.NewStrategy,
+          0,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
   IPOR_USDC_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'IPOR_USDC_arbitrum',
@@ -1560,6 +1672,7 @@ module.exports = {
     ],
   },
   syncswap_ETH_USDCe_aqua: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     tokenNames: ['ETH', 'USDC.e'],
@@ -1584,6 +1697,7 @@ module.exports = {
         type: ESTIMATED_APY_TYPES.SYNCSWAP,
         params: [
           addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.Underlying,
+          addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.NewStrategy,
           addresses.ZKSYNC.V2.syncswap_ETH_USDCe_aqua.StakingPool,
           profitSharingCut10Percent,
         ],
@@ -1611,6 +1725,7 @@ module.exports = {
         type: ESTIMATED_APY_TYPES.SYNCSWAP,
         params: [
           addresses.ZKSYNC.V2.syncswap_ETH_USDCe_classic.Underlying,
+          addresses.ZKSYNC.V2.syncswap_ETH_USDCe_classic.NewStrategy,
           addresses.ZKSYNC.V2.syncswap_ETH_USDCe_classic.StakingPool,
           profitSharingCut10Percent,
         ],
@@ -1618,6 +1733,7 @@ module.exports = {
     ],
   },
   syncswap_USDCe_USDT_stable: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
     tokenNames: ['USDC.e', 'USDT'],
@@ -1638,6 +1754,7 @@ module.exports = {
         type: ESTIMATED_APY_TYPES.SYNCSWAP,
         params: [
           addresses.ZKSYNC.V2.syncswap_USDCe_USDT_stable.Underlying,
+          addresses.ZKSYNC.V2.syncswap_USDCe_USDT_stable.NewStrategy,
           addresses.ZKSYNC.V2.syncswap_USDCe_USDT_stable.StakingPool,
           profitSharingCut10Percent,
         ],
@@ -1669,6 +1786,7 @@ module.exports = {
         type: ESTIMATED_APY_TYPES.SYNCSWAP,
         params: [
           addresses.ZKSYNC.V2.syncswap_wrsETH_ETH_aqua.Underlying,
+          addresses.ZKSYNC.V2.syncswap_wrsETH_ETH_aqua.NewStrategy,
           addresses.ZKSYNC.V2.syncswap_wrsETH_ETH_aqua.StakingPool,
           profitSharingCut10Percent,
         ],
@@ -4519,7 +4637,7 @@ module.exports = {
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC.e'],
     platform: ['ReactorFusion'],
-    tags: ['Beginners'],
+    tags: ['Beginners', 'Stable'],
     tokenAddress: addresses.ZKSYNC.V2.reactor_USDCe.Underlying,
     decimals: '6',
     vaultAddress: addresses.ZKSYNC.V2.reactor_USDCe.NewVault,
@@ -4547,7 +4665,7 @@ module.exports = {
     logoUrl: ['./icons/usdt.svg'],
     tokenNames: ['USDT'],
     platform: ['ReactorFusion'],
-    tags: ['Beginners'],
+    tags: ['Beginners', 'Stable'],
     tokenAddress: addresses.ZKSYNC.V2.reactor_USDT.Underlying,
     decimals: '6',
     vaultAddress: addresses.ZKSYNC.V2.reactor_USDT.NewVault,
@@ -4821,6 +4939,17 @@ module.exports = {
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/usdc.svg'],
     tokenAddress: addresses.ZKSYNC.USDCe,
+    decimals: '6',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+  },
+  USDC_zksync: {
+    chain: CHAIN_IDS.ZKSYNC,
+    logoUrl: ['./icons/usdc.svg'],
+    tokenAddress: addresses.ZKSYNC.USDC,
     decimals: '6',
     vaultAddress: null,
     priceFunction: {
