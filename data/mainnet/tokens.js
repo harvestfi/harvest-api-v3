@@ -160,8 +160,8 @@ module.exports = {
   },
   syncswap_wstETH_ETH_aqua: {
     chain: CHAIN_IDS.ZKSYNC,
-    logoUrl: ['./icons/wsteth.svg', './icons/eth.svg'],
-    tokenNames: ['wstETH', 'ETH'],
+    logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
+    tokenNames: ['stETH', 'ETH'],
     apyIconUrls: ['./icons/zk.svg'],
     apyTokenSymbols: ['ZK'],
     platform: ['SyncSwap - Aqua'],
@@ -4841,6 +4841,7 @@ module.exports = {
     ],
   },
   zkswap_USDCe_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
     apyIconUrls: ['./icons/zf.svg'],

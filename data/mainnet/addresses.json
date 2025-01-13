@@ -3064,7 +3064,8 @@
         "Underlying": "0xf100ff84B363aF74e3FcdFF554E3dA3309159458",
         "NewVault": "0x37f3bCDE181F1Fd813b842A2Bc7a30a8F6A5EFaA",
         "NewStrategy": "0x0352ead82DF78d8CF0fd8A8affc78e4e0a3223b9",
-        "NewPool": "0x84A2AE57157F0B67612f2E08A7755f5018708a05"
+        "NewPool": "0x84A2AE57157F0B67612f2E08A7755f5018708a05",
+        "doHardwork": false
       },
       "zkswap_WBTC_ETH": {
         "Underlying": "0xe5716Ad6873f7d9919b0A72f5b33570f77c1a615",
