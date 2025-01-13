@@ -46,6 +46,34 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  zkswap_wrsETH_ETH: {
+    chain: CHAIN_IDS.ZKSYNC,
+    apyIconUrls: ['./icons/zf.svg', './icons/zk.svg'],
+    apyTokenSymbols: ['ZF', 'ZK'],
+    logoUrl: ['./icons/wrseth.svg', './icons/eth.svg'],
+    tokenNames: ['wrsETH', 'ETH'],
+    platform: ['zkSwap'],
+    tags: ['Advanced', 'LSD'],
+    tokenAddress: addresses.ZKSYNC.V2.zkswap_wrsETH_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ZKSYNC.V2.zkswap_wrsETH_ETH.NewVault,
+    strategyAddress: addresses.ZKSYNC.V2.zkswap_wrsETH_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.LP_TOKEN,
+      params: [addresses.ZKSYNC.V2.zkswap_wrsETH_ETH.Underlying, 'WETH_zksync', 'wrsETH_zksync'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.ZKSWAP,
+        params: [
+          addresses.ZKSYNC.V2.zkswap_wrsETH_ETH.Underlying,
+          addresses.ZKSYNC.V2.zkswap_wrsETH_ETH.NewStrategy,
+          28,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
   syncswap_MBTC_WBTC_stable: {
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/mbtc.svg', './icons/wbtc.svg'],
@@ -4746,8 +4774,8 @@ module.exports = {
   zkswap_ZK_ETH: {
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/zk.svg', './icons/eth.svg'],
-    apyIconUrls: ['./icons/zf.svg'],
-    apyTokenSymbols: ['ZF'],
+    apyIconUrls: ['./icons/zf.svg', './icons/zk.svg'],
+    apyTokenSymbols: ['ZF', 'ZK'],
     tokenNames: ['ZK', 'ETH'],
     platform: ['zkSwap'],
     tags: ['Advanced'],
@@ -4769,8 +4797,8 @@ module.exports = {
   zkswap_ETH_USDCe: {
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
-    apyIconUrls: ['./icons/zf.svg'],
-    apyTokenSymbols: ['ZF'],
+    apyIconUrls: ['./icons/zf.svg', './icons/zk.svg'],
+    apyTokenSymbols: ['ZF', 'ZK'],
     tokenNames: ['ETH', 'USDC.e'],
     platform: ['zkSwap'],
     tags: ['Advanced'],
@@ -4861,8 +4889,8 @@ module.exports = {
   zkswap_wstETH_ETH: {
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
-    apyIconUrls: ['./icons/zf.svg'],
-    apyTokenSymbols: ['ZF'],
+    apyIconUrls: ['./icons/zf.svg', './icons/zk.svg'],
+    apyTokenSymbols: ['ZF', 'ZK'],
     tokenNames: ['stETH', 'ETH'],
     platform: ['zkSwap'],
     tags: ['Advanced', 'LSD'],

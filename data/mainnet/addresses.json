@@ -3184,6 +3184,12 @@
         "NewVault": "0xA696db2BDC759F683E5d673F1E25D6DE2A7a1CC7",
         "NewStrategy": "0xaBfB002A6f63F86c87B4A80aA8b09194905D315d",
         "NewPool": "0x7cd0b8DC0CFd68C94fA2C513dEC7200C6D652bE8"
+      },
+      "zkswap_wrsETH_ETH": {
+        "Underlying": "0xeB9Fd198b20DC73E63668B89a735b7DC84e13EA0",
+        "NewVault": "0x94271E943F66883111dCcA3df76ABea6a6B46BF6",
+        "NewStrategy": "0xf32782991a2a0C6F3679bbdA2a82001723E9B0D8",
+        "NewPool": "0xf88D089E0fA940Aa0090fE224929E0Ce09d7239E"
       }
     }
   }

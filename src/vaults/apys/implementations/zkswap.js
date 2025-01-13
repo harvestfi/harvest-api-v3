@@ -3,8 +3,9 @@ const { web3ZKSYNC } = require('../../../lib/web3')
 const { zfFarm, token: tokenContractData } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
 const { CHAIN_IDS } = require('../../../lib/constants')
+const { getApy: getMerklApy } = require('./merkl')
 
-const getApy = async (underlying, pid, reduction) => {
+const getApy = async (underlying, strategyAddr, pid, reduction) => {
   const web3 = web3ZKSYNC
   const { methods: farmMethods, contract: farmContract } = zfFarm
   const {
@@ -39,7 +40,9 @@ const getApy = async (underlying, pid, reduction) => {
 
   let apy = rewardInUsdPerYear.div(totalSupplyInUsd).times(100).times(reduction)
 
-  return apy.toFixed(2)
+  const merklAPY = new BigNumber(await getMerklApy(strategyAddr, underlying, 324, reduction))
+
+  return apy.plus(merklAPY).toFixed(2)
 }
 
 module.exports = {
