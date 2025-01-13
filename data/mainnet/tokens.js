@@ -4790,7 +4790,12 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.ZKSWAP,
-        params: [addresses.ZKSYNC.V2.zkswap_ZK_ETH.Underlying, 30, profitSharingCut10Percent],
+        params: [
+          addresses.ZKSYNC.V2.zkswap_ZK_ETH.Underlying,
+          addresses.ZKSYNC.V2.zkswap_ZK_ETH.NewStrategy,
+          30,
+          profitSharingCut10Percent,
+        ],
       },
     ],
   },
@@ -4813,7 +4818,12 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.ZKSWAP,
-        params: [addresses.ZKSYNC.V2.zkswap_ETH_USDCe.Underlying, 2, profitSharingCut10Percent],
+        params: [
+          addresses.ZKSYNC.V2.zkswap_ETH_USDCe.Underlying,
+          addresses.ZKSYNC.V2.zkswap_ETH_USDCe.NewStrategy,
+          2,
+          profitSharingCut10Percent,
+        ],
       },
     ],
   },
@@ -4836,7 +4846,12 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.ZKSWAP,
-        params: [addresses.ZKSYNC.V2.zkswap_LONG_ETH.Underlying, 21, profitSharingCut10Percent],
+        params: [
+          addresses.ZKSYNC.V2.zkswap_LONG_ETH.Underlying,
+          addresses.ZKSYNC.V2.zkswap_LONG_ETH.NewStrategy,
+          21,
+          profitSharingCut10Percent,
+        ],
       },
     ],
   },
@@ -4860,7 +4875,12 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.ZKSWAP,
-        params: [addresses.ZKSYNC.V2.zkswap_USDCe_USDT.Underlying, 3, profitSharingCut10Percent],
+        params: [
+          addresses.ZKSYNC.V2.zkswap_USDCe_USDT.Underlying,
+          addresses.ZKSYNC.V2.zkswap_USDCe_USDT.NewStrategy,
+          3,
+          profitSharingCut10Percent,
+        ],
       },
     ],
   },
@@ -4883,7 +4903,12 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.ZKSWAP,
-        params: [addresses.ZKSYNC.V2.zkswap_WBTC_ETH.Underlying, 4, profitSharingCut10Percent],
+        params: [
+          addresses.ZKSYNC.V2.zkswap_WBTC_ETH.Underlying,
+          addresses.ZKSYNC.V2.zkswap_WBTC_ETH.NewStrategy,
+          4,
+          profitSharingCut10Percent,
+        ],
       },
     ],
   },
@@ -4906,7 +4931,12 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.ZKSWAP,
-        params: [addresses.ZKSYNC.V2.zkswap_wstETH_ETH.Underlying, 19, profitSharingCut10Percent],
+        params: [
+          addresses.ZKSYNC.V2.zkswap_wstETH_ETH.Underlying,
+          addresses.ZKSYNC.V2.zkswap_wstETH_ETH.NewStrategy,
+          19,
+          profitSharingCut10Percent,
+        ],
       },
     ],
   },
@@ -4929,7 +4959,12 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.ZKSWAP,
-        params: [addresses.ZKSYNC.V2.zkswap_ZF_ETH.Underlying, 1, profitSharingCut10Percent],
+        params: [
+          addresses.ZKSYNC.V2.zkswap_ZF_ETH.Underlying,
+          addresses.ZKSYNC.V2.zkswap_ZF_ETH.NewStrategy,
+          1,
+          profitSharingCut10Percent,
+        ],
       },
     ],
   },
