@@ -59,6 +59,7 @@ module.exports = {
     tokenAddress: addresses.ARBITRUM_ONE.V2.IPOR_USDC_arbitrum.Underlying,
     decimals: '6',
     vaultAddress: addresses.ARBITRUM_ONE.V2.IPOR_USDC_arbitrum.NewVault,
+    vaultDecimals: '8',
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['usd-coin'],
