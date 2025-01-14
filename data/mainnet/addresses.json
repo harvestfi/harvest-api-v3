@@ -3113,6 +3113,12 @@
         "NewStrategy": "0xe54Fa27aAb84494B6723322555eF26d1049432C9",
         "NewPool": "0x043Fc2A5b4079584A58a833Fa9EDA44162071449"
       },
+      "zkswap_ZK_ETH": {
+        "Underlying": "0x9EE3178701d91cc7b01D5b2d2Cae65cCB29B3De4",
+        "NewVault": "0xA168884D6f63e0f4B9d9Ff50848183cE61F9eDd0",
+        "NewStrategy": "0x08221C536c871b1da15aeFFC00fa241a29037E70",
+        "NewPool": "0x0E5548395ACbD5Da0CBd1aBA113605aCa06A5e96"
+      },
       "reactor_ETH": {
         "Underlying": "0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91",
         "NewVault": "0xD35bc2E1Ee9EdF00E0Cd7EE515aAe8cE63A64B1A",
@@ -3140,12 +3146,6 @@
         "NewStrategy": "0xf90f9c15e69558Ab15fE44e016278c54643aeC11",
         "NewPool": "0x1270D827F15976f204E21cd656C8d33790C5164d",
         "cToken": "0x0a976E1E7D3052bEb46085AcBE1e0DAccF4A19CF"
-      },
-      "zkswap_ZK_ETH": {
-        "Underlying": "0x9EE3178701d91cc7b01D5b2d2Cae65cCB29B3De4",
-        "NewVault": "0xA168884D6f63e0f4B9d9Ff50848183cE61F9eDd0",
-        "NewStrategy": "0x08221C536c871b1da15aeFFC00fa241a29037E70",
-        "NewPool": "0x0E5548395ACbD5Da0CBd1aBA113605aCa06A5e96"
       },
       "reactor_ZK": {
         "Underlying": "0x5A7d6b2F92C77FAD6CCaBd7EE0624E64907Eaf3E",
