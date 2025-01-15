@@ -5,6 +5,153 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'aave_ETH_zksync',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.aave_ETH.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.aave_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.aave_ETH.Underlying}" target="_blank" rel="noopener noreferrer">ETH</a> to Aave, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZK}" target="_blank" rel="noopener noreferrer">ZK</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.aave_ETH.Underlying}" target="_blank" rel="noopener noreferrer">ETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'aave_USDC_zksync',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.aave_USDC.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.aave_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.aave_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> to Aave, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZK}" target="_blank" rel="noopener noreferrer">ZK</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.aave_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'aave_wstETH_zksync',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.aave_wstETH.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.aave_wstETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.aave_wstETH.Underlying}" target="_blank" rel="noopener noreferrer">wstETH</a> to Aave, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZK}" target="_blank" rel="noopener noreferrer">ZK</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.aave_wstETH.Underlying}" target="_blank" rel="noopener noreferrer">wstETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'zerolend_ETH_zksync',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.zerolend_ETH.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.zerolend_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zerolend_ETH.Underlying}" target="_blank" rel="noopener noreferrer">ETH</a> to ZeroLend, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZK}" target="_blank" rel="noopener noreferrer">ZK</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zerolend_ETH.Underlying}" target="_blank" rel="noopener noreferrer">ETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'zerolend_USDC_zksync',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.zerolend_USDC.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.zerolend_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zerolend_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> to ZeroLend, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZK}" target="_blank" rel="noopener noreferrer">ZK</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zerolend_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'zerolend_USDCe_zksync',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.zerolend_USDCe.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.zerolend_USDCe.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zerolend_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">USDC.e</a> to ZeroLend, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZK}" target="_blank" rel="noopener noreferrer">ZK</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zerolend_USDCe.Underlying}" target="_blank" rel="noopener noreferrer">USDC.e</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ZKSYNC,
+    id: 'zerolend_USDT_zksync',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ZKSYNC.V2.zerolend_USDT.NewPool,
+    collateralAddress: addresses.ZKSYNC.V2.zerolend_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ZKSYNC.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zerolend_USDT.Underlying}" target="_blank" rel="noopener noreferrer">USDT</a> to ZeroLend, earning 
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.ZK}" target="_blank" rel="noopener noreferrer">ZK</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://era.zksync.network/token/${addresses.ZKSYNC.V2.zerolend_USDT.Underlying}" target="_blank" rel="noopener noreferrer">USDT</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'morphoMW_cbBTC',
     type: POOL_TYPES.INCENTIVE,

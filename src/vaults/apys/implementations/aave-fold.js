@@ -8,6 +8,7 @@ const {
 } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
 const { getApy: getMerklApy } = require('./merkl')
+const { CHAIN_IDS } = require('../../../lib/constants')
 
 const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
   const web3 = getWeb3(chain)
@@ -62,6 +63,9 @@ const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
   const now = Date.now() / 1000
   let supplyRewardUsdPerYear = new BigNumber(0)
   for (let reward in supplyRewardList) {
+    if (supplyRewardList[reward] == '0x9793eac2fECef55248efA039BEC78e82aC01CB2f') {
+      continue
+    }
     const rewardsData = await rewardsMethods.getRewardsData(
       assetData.aTokenAddress,
       supplyRewardList[reward],
@@ -84,6 +88,9 @@ const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
   const borrowRewardList = await rewardsMethods.getRewardsList(borrowRewardsInstance)
   let borrowRewardUsdPerYear = new BigNumber(0)
   for (let reward in borrowRewardList) {
+    if (borrowRewardList[reward] == '0x9793eac2fECef55248efA039BEC78e82aC01CB2f') {
+      continue
+    }
     const rewardsData = await rewardsMethods.getRewardsData(
       assetData.variableDebtTokenAddress,
       borrowRewardList[reward],
@@ -126,11 +133,25 @@ const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
       .times(borrowedMul)
   }
 
-  if (strategyAddr == '0xe22f4Ca77d3278255d3C6fe2076a672857Eab83F') {
-    let merkl = new BigNumber(
-      await getMerklApy(strategyAddr, '0x3ce38A9e2403415c50661a3f78acf4d392320e7E', 1, 1),
+  if (strategyAddr == '0xe22f4Ca77d3278255d3C6fe2076a672857Eab83F' || chain == CHAIN_IDS.ZKSYNC) {
+    let merklSupply = new BigNumber(
+      await getMerklApy(
+        strategyAddr,
+        assetData.aTokenAddress,
+        chain,
+        chain == CHAIN_IDS.ZKSYNC ? reduction : 1,
+      ),
     )
-    supplyRewardAPR = supplyRewardAPR.plus(merkl.times(suppliedMul))
+    supplyRewardAPR = supplyRewardAPR.plus(merklSupply.times(suppliedMul))
+    let merklBorrow = new BigNumber(
+      await getMerklApy(
+        strategyAddr,
+        assetData.variableDebtTokenAddress,
+        chain,
+        chain == CHAIN_IDS.ZKSYNC ? reduction : 1,
+      ),
+    )
+    borrowRewardAPR = borrowRewardAPR.plus(merklBorrow.times(borrowedMul))
   }
 
   return supplyAPR.minus(borrowAPR).plus(supplyRewardAPR).plus(borrowRewardAPR).toFixed()

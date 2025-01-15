@@ -3219,6 +3219,55 @@
         "NewVault": "0x94271E943F66883111dCcA3df76ABea6a6B46BF6",
         "NewStrategy": "0xf32782991a2a0C6F3679bbdA2a82001723E9B0D8",
         "NewPool": "0xf88D089E0fA940Aa0090fE224929E0Ce09d7239E"
+      },
+      "aave_ETH": {
+        "Underlying": "0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91",
+        "NewVault": "0x5Dc30b78bF0aFc3A458Caaa5D92F2Bd080C35031",
+        "NewStrategy": "0x0d36cbCdCb3722465E2A2dC37a5767E7CEdAF475",
+        "NewPool": "0x3d496a0f8A72a585C09e635f4e015Cbe4a54AcF0",
+        "AavePool": "0x78e30497a3c7527d953c6B1E3541b021A98Ac43c"
+      },
+      "aave_USDC": {
+        "Underlying": "0x1d17CBcF0D6D143135aE902365D2E5e2A16538D4",
+        "NewVault": "0x7Ed509Bd8da45CcFF906335605c08c70e82fd4D3",
+        "NewStrategy": "0x96F914b2bCbcF18939B5862DbE1a222B9D679288",
+        "NewPool": "0xb3E4a47DC65E34CD129249E5Eca7d2C515bfa89b",
+        "AavePool": "0x78e30497a3c7527d953c6B1E3541b021A98Ac43c"
+      },
+      "aave_wstETH": {
+        "Underlying": "0x703b52F2b28fEbcB60E1372858AF5b18849FE867",
+        "NewVault": "0x58A42F6Ff7C199De35C5EA17a961aDb6e1BB14F7",
+        "NewStrategy": "0x0472b18B5f70861BfeBc919Bdc85F9de9896a535",
+        "NewPool": "0x4f69a5Dd20046c9a261252461Ef90A53D941F695",
+        "AavePool": "0x78e30497a3c7527d953c6B1E3541b021A98Ac43c"
+      },
+      "zerolend_ETH": {
+        "Underlying": "0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91",
+        "NewVault": "0xa93C961704d8b11B09E6BEf69E1BD2F7A973897B",
+        "NewStrategy": "0xf7cB13FE4221D3430a27D6A7870b2B9393F6A86B",
+        "NewPool": "0x1E6ae57EAD8aA1B1CD6f58d499d31d84B0fC7684",
+        "AavePool": "0x4d9429246EA989C9CeE203B43F6d1C7D83e3B8F8"
+      },
+      "zerolend_USDC": {
+        "Underlying": "0x1d17CBcF0D6D143135aE902365D2E5e2A16538D4",
+        "NewVault": "0xc5d9c0e656f7953d98A3249730b53005Ed09601C",
+        "NewStrategy": "0xe5c3142f69a6960317EB78d6Dcf676E6b221c72A",
+        "NewPool": "0x630f0F711c5904e9C8D2e7D024340006cd26F837",
+        "AavePool": "0x4d9429246EA989C9CeE203B43F6d1C7D83e3B8F8"
+      },
+      "zerolend_USDCe": {
+        "Underlying": "0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4",
+        "NewVault": "0xB679ca84C7b0644e6Fe0e05851a7c71340977BAb",
+        "NewStrategy": "0x616BaF70AB86295665A09Ec7a03AFa1f3DfA9457",
+        "NewPool": "0x2896e8d39DB0dB26CC5571165984c33C64ca5Ac2",
+        "AavePool": "0x4d9429246EA989C9CeE203B43F6d1C7D83e3B8F8"
+      },
+      "zerolend_USDT": {
+        "Underlying": "0x493257fD37EDB34451f62EDf8D2a0C418852bA4C",
+        "NewVault": "0x6fA318b5E86498a8931225Ea77ff91096402174E",
+        "NewStrategy": "0xE55c259b90e7d7048d6ef4255E3Efe9714B4166e",
+        "NewPool": "0xF0379329bA29d3A1b7ca36c077ABf58C1F79b303",
+        "AavePool": "0x4d9429246EA989C9CeE203B43F6d1C7D83e3B8F8"
       }
     }
   }
