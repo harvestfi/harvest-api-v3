@@ -70,7 +70,6 @@ module.exports = {
         params: [
           addresses.ARBITRUM_ONE.V2.IPOR_USDC_arbitrum.Underlying,
           addresses.ARBITRUM_ONE.V2.IPOR_USDC_arbitrum.NewVault,
-          profitSharingCut10Percent,
           CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
