@@ -3075,6 +3075,7 @@
     "RF": "0x5f7cbcb391d33988dad74d6fd683aadda1123e4d",
     "ZK": "0x5A7d6b2F92C77FAD6CCaBd7EE0624E64907Eaf3E",
     "wrsETH": "0xd4169E045bcF9a86cC00101225d9ED61D2F51af2",
+    "XVS": "0xD78ABD81a3D57712a3af080dc4185b698Fe9ac5A",
     "V2": {
       "zkswap_ETH_USDCe": {
         "Underlying": "0x7642e38867860d4512Fcce1116e2Fb539c5cdd21",
@@ -3268,6 +3269,41 @@
         "NewStrategy": "0xE55c259b90e7d7048d6ef4255E3Efe9714B4166e",
         "NewPool": "0xF0379329bA29d3A1b7ca36c077ABf58C1F79b303",
         "AavePool": "0x4d9429246EA989C9CeE203B43F6d1C7D83e3B8F8"
+      },
+      "venus_ETH": {
+        "Underlying": "0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91",
+        "NewVault": "0x78b52Aa66d2dC895c42Fe519A2A58C777a8e30cf",
+        "NewStrategy": "0xe9134a19f8496ab49B3b707e8a7788583024b87a",
+        "NewPool": "0xe1C858E9D6EEBd4d53500582bE45584AbCFb19B1",
+        "cToken": "0x1Fa916C27c7C2c4602124A14C77Dbb40a5FF1BE8"
+      },
+      "venus_USDCe": {
+        "Underlying": "0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4",
+        "NewVault": "0x6047987B668804506133887DB55eEb0A709C73c4",
+        "NewStrategy": "0x6F1C84c89CA54f135687917De21617d422398284",
+        "NewPool": "0x3D16f45ee8D7C73E90fabAD5CbeaA4E2bbEE3FE1",
+        "cToken": "0x1aF23bD57c62A99C59aD48236553D0Dd11e49D2D"
+      },
+      "venus_USDT": {
+        "Underlying": "0x493257fD37EDB34451f62EDf8D2a0C418852bA4C",
+        "NewVault": "0x8781202732b3B0ecC7A38fbAbfa55f8149dA1782",
+        "NewStrategy": "0xE4A8c1e5Af01D833a69cf2D410241F996134e4d5",
+        "NewPool": "0x4D9A034d172b58e9BEB3ECeEcE83409D46520E13",
+        "cToken": "0x69cDA960E3b20DFD480866fFfd377Ebe40bd0A46"
+      },
+      "venus_WBTC": {
+        "Underlying": "0xBBeB516fb02a01611cBBE0453Fe3c580D7281011",
+        "NewVault": "0xA79ccaf161f263AE1f2ba595c2239377E317Bd6B",
+        "NewStrategy": "0x845ff6E7c824Ba4f792888bC3A5AD06EF95c4026",
+        "NewPool": "0x823DB70BF77541B2ED2d3d97B8Be405d49414386",
+        "cToken": "0xAF8fD83cFCbe963211FAaf1847F0F217F80B4719"
+      },
+      "venus_ZK": {
+        "Underlying": "0x5A7d6b2F92C77FAD6CCaBd7EE0624E64907Eaf3E",
+        "NewVault": "0xC0f64503dd4bF86b44b61b2Cb5fbD66D0f8832De",
+        "NewStrategy": "0x8d7829914f118eAC46072622Da88E914c699A7a3",
+        "NewPool": "0xB2d9ef2F2c45494Ee62EC899804aFef242b479A4",
+        "cToken": "0x697a70779C1A03Ba2BD28b7627a902BFf831b616"
       }
     }
   }

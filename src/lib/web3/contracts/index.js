@@ -220,7 +220,21 @@ const plasmaVaultContract = require('../contracts/plasma-vault/contract.json')
 const plasmaFuseMethods = require('../contracts/plasma-fuse/methods')
 const plasmaFuseContract = require('../contracts/plasma-fuse/contract.json')
 
+const venusComptrollerMethods = require('../contracts/venus-comptroller/methods')
+const venusComptrollerContract = require('../contracts/venus-comptroller/contract.json')
+
+const venusDistributorMethods = require('../contracts/venus-distributor/methods')
+const venusDistributorContract = require('../contracts/venus-distributor/contract.json')
+
 module.exports = {
+  venusComptroller: {
+    methods: venusComptrollerMethods,
+    contract: venusComptrollerContract,
+  },
+  venusDistributor: {
+    methods: venusDistributorMethods,
+    contract: venusDistributorContract,
+  },
   plasmaFuse: {
     methods: plasmaFuseMethods,
     contract: plasmaFuseContract,
