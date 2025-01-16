@@ -9,7 +9,7 @@ const { UI_DATA_FILES } = require('../constants')
 const { fetchAndExpandVault } = require('../../vaults')
 const { getUIData } = require('../data')
 
-const getPlasmaVaultData = async (underlying, pVault, reduction, chain) => {
+const getPlasmaVaultData = async (underlying, pVault, chain) => {
   const web3 = await getWeb3(chain)
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
 
@@ -66,12 +66,7 @@ const getPlasmaVaultData = async (underlying, pVault, reduction, chain) => {
     data.allocPoint = pastAllocPoint.div(assetsOld).times(100).toFixed()
   })
 
-  const apy = assetsNew
-    .minus(assetsOld)
-    .div(assetsOld)
-    .times(reduction)
-    .multipliedBy(100)
-    .toFixed(2, 1)
+  const apy = assetsNew.minus(assetsOld).div(assetsOld).multipliedBy(100).toFixed(2, 1)
 
   return {
     allocDatas,
