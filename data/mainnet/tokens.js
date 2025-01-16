@@ -59,7 +59,7 @@ module.exports = {
   },
   venus_ETH: {
     chain: CHAIN_IDS.ZKSYNC,
-    apyIconUrls: ['./icons/zk.svg', './icons/XVS.svg'],
+    apyIconUrls: ['./icons/zk.svg', './icons/xvs.svg'],
     apyTokenSymbols: ['ZK', 'XVS'],
     logoUrl: ['./icons/eth.svg'],
     tokenNames: ['ETH'],
@@ -87,7 +87,7 @@ module.exports = {
   },
   venus_USDCe: {
     chain: CHAIN_IDS.ZKSYNC,
-    apyIconUrls: ['./icons/zk.svg', './icons/XVS.svg'],
+    apyIconUrls: ['./icons/zk.svg', './icons/xvs.svg'],
     apyTokenSymbols: ['ZK', 'XVS'],
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC.e'],
@@ -115,7 +115,7 @@ module.exports = {
   },
   venus_USDT: {
     chain: CHAIN_IDS.ZKSYNC,
-    apyIconUrls: ['./icons/XVS.svg'],
+    apyIconUrls: ['./icons/xvs.svg'],
     apyTokenSymbols: ['XVS'],
     logoUrl: ['./icons/usdt.svg'],
     tokenNames: ['USDT'],
@@ -143,7 +143,7 @@ module.exports = {
   },
   venus_WBTC: {
     chain: CHAIN_IDS.ZKSYNC,
-    apyIconUrls: ['./icons/XVS.svg'],
+    apyIconUrls: ['./icons/xvs.svg'],
     apyTokenSymbols: ['XVS'],
     logoUrl: ['./icons/wbtc.svg'],
     tokenNames: ['WBTC'],
@@ -171,7 +171,7 @@ module.exports = {
   },
   venus_ZK: {
     chain: CHAIN_IDS.ZKSYNC,
-    apyIconUrls: ['./icons/zk.svg', './icons/XVS.svg'],
+    apyIconUrls: ['./icons/zk.svg', './icons/xvs.svg'],
     apyTokenSymbols: ['ZK', 'XVS'],
     logoUrl: ['./icons/zk.svg'],
     tokenNames: ['ZK'],
