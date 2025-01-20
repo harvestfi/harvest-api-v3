@@ -1,7 +1,6 @@
 const BigNumber = require('bignumber.js')
 const { getWeb3 } = require('../lib/web3')
 const { plasmaVault } = require('../lib/web3/contracts')
-const { executeEstimateApyFunctions } = require('./apys')
 const { getTokenPrice } = require('../prices')
 const { omit } = require('lodash')
 const { UI_DATA_FILES } = require('../lib/constants')
@@ -41,11 +40,6 @@ const fetchAndExpandIPORVault = async symbol => {
     .times(totalAssets)
     .toFixed(2, 1)
 
-  const { estimatedApy, estimatedApyBreakdown } = await executeEstimateApyFunctions(
-    symbol,
-    vaultData.estimateApyFunctions,
-  )
-
   const allocPoints = await getPlasmaVaultData(...tokens[symbol].estimateApyFunctions[0].params)
 
   usdPrice = (await getTokenPrice(symbol)).toString()
@@ -55,8 +49,8 @@ const fetchAndExpandIPORVault = async symbol => {
   return {
     ...omit(vaultData, ['priceFunction', 'estimateApyFunctions', 'inactive']),
     pricePerFullShare,
-    estimatedApy,
-    estimatedApyBreakdown,
+    estimatedApy: allocPoints.apy,
+    estimatedApyBreakdown: [allocPoints.apy],
     usdPrice,
     totalSupply,
     totalValueLocked,
