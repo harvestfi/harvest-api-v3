@@ -406,7 +406,7 @@ module.exports = {
     apyTokenSymbols: ['WELL', 'MORPHO'],
     logoUrl: ['./icons/cbbtc.svg'],
     tokenNames: ['cbBTC'],
-    platform: ['Morpho - Moonwell Flagship'],
+    platform: ['Morpho - Moonwell Frontier'],
     tags: ['Beginner'],
     tokenAddress: addresses.BASE.V2.morphoMW_cbBTC.Underlying,
     decimals: '8',
