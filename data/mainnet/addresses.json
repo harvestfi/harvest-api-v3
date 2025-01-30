@@ -3067,6 +3067,18 @@
         "NewStrategy": "0x8828b63ec6EbcfbdC4696dFf949A96A266303426",
         "NewPool": "0x27DC545a5BD85FF9f0E77a7512cd3bD0b19455a4",
         "MorphoVault": "0x616a4E1db48e22028f6bbf20444Cd3b8e3273738"
+      },
+      "IPOR_USDC_base": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0xD00E821C550Ce92EbD4A70bEcb02657dA7A5c562"
+      },
+      "IPOR_WETH_base": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0x31A36d3eAB4A8e0d365eB72EE9079603aF6C421c"
+      },
+      "IPOR_cbBTC_base": {
+        "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        "NewVault": "0x370A3D2800b1ea990634835a5709fB31082de6d9"
       }
     }
   },

@@ -40,7 +40,7 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
           fuse,
           index,
         )
-        const hVaultAddress = '0x' + pVaultData[1].slice(2).replace(/^0+/, '')
+        const hVaultAddress = '0x' + pVaultData[1].slice(-40)
 
         const hVaultId = Object.keys(tokens).find(
           tokenKey => tokens[tokenKey]?.vaultAddress?.toLowerCase() === hVaultAddress.toLowerCase(),
@@ -63,14 +63,15 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
   }
   allocDatas.forEach(data => {
     const pastAllocPoint = data.allocPoint
-    data.allocPoint = pastAllocPoint.div(assetsOld).times(100).toFixed()
+    const point = pastAllocPoint.div(assetsOld).times(100)
+    data.allocPoint = point.isNaN() ? '0' : point.toFixed()
   })
 
-  const apy = assetsNew.minus(assetsOld).div(assetsOld).multipliedBy(100).toFixed(2, 1)
+  const apy = assetsNew.minus(assetsOld).div(assetsOld).multipliedBy(100)
 
   return {
     allocDatas,
-    apy,
+    apy: apy.isNaN() ? 0 : apy.toFixed(2, 1),
   }
 }
 
