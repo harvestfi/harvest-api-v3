@@ -138,10 +138,21 @@ module.exports = {
       },
     ],
   },
-  XVS: {
+  XVS_zksync: {
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/xvs.svg'],
     tokenAddress: addresses.ZKSYNC.XVS,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['venus'],
+    },
+  },
+  XVS_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    logoUrl: ['./icons/xvs.svg'],
+    tokenAddress: addresses.ARBITRUM_ONE.XVS,
     decimals: '18',
     vaultAddress: null,
     priceFunction: {
@@ -173,6 +184,7 @@ module.exports = {
           addresses.ZKSYNC.V2.venus_ETH.cToken,
           addresses.ZKSYNC.V2.venus_ETH.NewStrategy,
           profitSharingCut10Percent,
+          CHAIN_IDS.ZKSYNC,
         ],
       },
     ],
@@ -201,6 +213,7 @@ module.exports = {
           addresses.ZKSYNC.V2.venus_USDCe.cToken,
           addresses.ZKSYNC.V2.venus_USDCe.NewStrategy,
           profitSharingCut10Percent,
+          CHAIN_IDS.ZKSYNC,
         ],
       },
     ],
@@ -229,6 +242,7 @@ module.exports = {
           addresses.ZKSYNC.V2.venus_USDT.cToken,
           addresses.ZKSYNC.V2.venus_USDT.NewStrategy,
           profitSharingCut10Percent,
+          CHAIN_IDS.ZKSYNC,
         ],
       },
     ],
@@ -257,6 +271,7 @@ module.exports = {
           addresses.ZKSYNC.V2.venus_WBTC.cToken,
           addresses.ZKSYNC.V2.venus_WBTC.NewStrategy,
           profitSharingCut10Percent,
+          CHAIN_IDS.ZKSYNC,
         ],
       },
     ],
@@ -285,6 +300,7 @@ module.exports = {
           addresses.ZKSYNC.V2.venus_ZK.cToken,
           addresses.ZKSYNC.V2.venus_ZK.NewStrategy,
           profitSharingCut10Percent,
+          CHAIN_IDS.ZKSYNC,
         ],
       },
     ],
@@ -8030,12 +8046,13 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.LODESTAR_FOLD,
+        type: ESTIMATED_APY_TYPES.VENUS_FOLD,
         params: [
           addresses.ARBITRUM_ONE.V2.lodestar_ARB.Underlying,
           addresses.ARBITRUM_ONE.V2.lodestar_ARB.cToken,
           addresses.ARBITRUM_ONE.V2.lodestar_ARB.NewStrategy,
           profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
         ],
       },
     ],

@@ -1,5 +1,5 @@
 const BigNumber = require('bignumber.js')
-const { web3ZKSYNC } = require('../../../lib/web3')
+const { getWeb3 } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
 const {
   lodestarCToken: cToken,
@@ -7,17 +7,16 @@ const {
   venusDistributor,
   token,
 } = require('../../../lib/web3/contracts')
-const { CHAIN_IDS } = require('../../../lib/constants')
 const { getApy: getMerklApy } = require('./merkl')
 
-const getApy = async (underlying, cTokenAddr, strategyAddr, reduction) => {
-  const web3 = web3ZKSYNC
+const getApy = async (underlying, cTokenAddr, strategyAddr, reduction, chain) => {
+  const web3 = getWeb3(chain)
   const {
     contract: { abi: cTokenAbi },
     methods: cTokenMethods,
   } = cToken
   const {
-    contract: { abi: comptrollerAbi, address: comptrollerAddr },
+    contract: { abi: comptrollerAbi },
     methods: comptrollerMethods,
   } = venusComptroller
   const {
@@ -50,7 +49,8 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, reduction) => {
   const supplyAPR = supplyRate.div(1e18).times(blocksPerYear).times(100).times(suppliedMul)
   const borrowAPR = borrowRate.div(1e18).times(blocksPerYear).times(100).times(borrowedMul)
 
-  const comptrollerInstance = new web3.eth.Contract(comptrollerAbi, comptrollerAddr.mainnet)
+  const comptrollerAddress = await cTokenMethods.getComptroller(cTokenInstance)
+  const comptrollerInstance = new web3.eth.Contract(comptrollerAbi, comptrollerAddress)
   const distributors = await comptrollerMethods.getRewardDistributors(comptrollerInstance)
 
   let rewardPerYearSupplyUSD = new BigNumber(0)
@@ -68,7 +68,7 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, reduction) => {
     )
       .times(blocksPerYear)
       .div(1e18)
-    const rewardPrice = await getTokenPrice(rewardToken, CHAIN_IDS.ZKSYNC)
+    const rewardPrice = await getTokenPrice(rewardToken, chain)
     rewardPerYearSupplyUSD = rewardPerYearSupplyUSD.plus(rewardPerYearSupply.times(rewardPrice))
     rewardPerYearBorrowUSD = rewardPerYearBorrowUSD.plus(rewardPerYearBorrow.times(rewardPrice))
   }
@@ -83,9 +83,9 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, reduction) => {
     10 ** underlyingDecimals,
   )
 
-  const underlyingPrice = await getTokenPrice(underlying, CHAIN_IDS.ZKSYNC)
+  const underlyingPrice = await getTokenPrice(underlying, chain)
 
-  const merklReward = await getMerklApy(strategyAddr, cTokenAddr, 324, reduction)
+  const merklReward = await getMerklApy(strategyAddr, cTokenAddr, chain, reduction)
 
   const rewardAPRSupply = rewardPerYearSupplyUSD
     .div(totalSupply)

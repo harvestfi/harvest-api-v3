@@ -1095,6 +1095,7 @@
     "USDx": "0xb2F30A7C980f052f02563fb518dcc39e6bf38175",
     "zunETH": "0x06D65eC13465Ac5A4376dc101e1141252c4adDf8",
     "zunUSD": "0x870908873b6f940E025A7C6879678cB82eC6C9B6",
+    "XVS": "0xc1Eb7689147C81aC840d4FF0D298489fc7986d52",
     "V2": {
       "iPoison": {
         "Underlying": "0xDA016d31f2B52C73D7c1956E955ae8A507b305bB",
@@ -1385,10 +1386,9 @@
       "lodestar_ARB": {
         "Underlying": "0x912CE59144191C1204E64559FE8253a0e49E6548",
         "NewVault": "0x32DB5Cbac1C278696875eB9F27eD4cD7423dd126",
-        "NewStrategy": "0xF8Dd2d4AC64c06aa18fE14A77302391dE439FF4a",
+        "NewStrategy": "0x5ef70E568459d3C8CE3bc2C7D8Efd91B49F5dcfA",
         "NewPool": "0x45E7Be22594924166c90c1E29ffF4b3FD8796598",
-        "cToken": "0x8991d64fe388fA79A4f7Aa7826E8dA09F0c3C96a",
-        "doHardwork": "noSim"
+        "cToken": "0xAeB0FEd69354f34831fe1D16475D9A83ddaCaDA6"
       },
       "lodestar_FRAX": {
         "Underlying": "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F",
