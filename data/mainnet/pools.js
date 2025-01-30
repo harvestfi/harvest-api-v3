@@ -6145,9 +6145,8 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_ARB.Underlying}" target="_blank" rel="noopener noreferrer">ARB</a> to Lodestar, earning 
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.LODE}" target="_blank" rel="noopener noreferrer">LODE</a> and
-       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_ARB.Underlying}" target="_blank" rel="noopener noreferrer">ARB</a> to Venus, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.XVS}" target="_blank" rel="noopener noreferrer">XVS</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.lodestar_ARB.Underlying}" target="_blank" rel="noopener noreferrer">ARB</a>.
       </p>
