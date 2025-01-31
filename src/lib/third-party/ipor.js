@@ -9,7 +9,7 @@ const { UI_DATA_FILES } = require('../constants')
 const { fetchAndExpandVault } = require('../../vaults')
 const { getUIData } = require('../data')
 
-const getPlasmaVaultData = async (underlying, pVault, chain) => {
+const getPlasmaVaultData = async (underlying, pVault, chain, totalAssets) => {
   const web3 = await getWeb3(chain)
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
 
@@ -25,6 +25,9 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
   const pVaultInstance = new web3.eth.Contract(contract.abi, pVault)
   const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
   const underlyingDecimal = await getDecimals(underlyingInstance)
+  const unrealizedFee = new BigNumber(await methods.getUnrealizedManagementFee(pVaultInstance)).div(
+    10 ** underlyingDecimal,
+  )
 
   const fuses = await methods.getInstantWithdrawalFuses(pVaultInstance)
   const allocDatas = []
@@ -61,9 +64,18 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
       }),
     )
   }
+
+  const notInvestedAmount = totalAssets.minus(assetsOld).plus(unrealizedFee)
+
+  const notInvestedData = {
+    hVaultId: 'Not invested',
+    allocPoint: notInvestedAmount,
+  }
+  allocDatas.push(notInvestedData)
+
   allocDatas.forEach(data => {
     const pastAllocPoint = data.allocPoint
-    const point = pastAllocPoint.div(assetsOld).times(100)
+    const point = pastAllocPoint.div(assetsOld.plus(notInvestedAmount)).times(100)
     data.allocPoint = point.isNaN() ? '0' : point.toFixed()
   })
 

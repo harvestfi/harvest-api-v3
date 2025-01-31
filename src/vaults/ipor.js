@@ -40,7 +40,10 @@ const fetchAndExpandIPORVault = async symbol => {
     .times(totalAssets)
     .toFixed(2, 1)
 
-  const allocPoints = await getPlasmaVaultData(...tokens[symbol].estimateApyFunctions[0].params)
+  const allocPoints = await getPlasmaVaultData(
+    ...tokens[symbol].estimateApyFunctions[0].params,
+    totalAssets,
+  )
 
   usdPrice = (await getTokenPrice(symbol)).toString()
 
