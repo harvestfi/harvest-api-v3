@@ -20,6 +20,9 @@ const getInstantWithdrawalFuses = instance =>
 const getInstantWithdrawalFusesParams = (instance, address, index) =>
   countFunctionCall(instance.methods.getInstantWithdrawalFusesParams(address, index).call())
 
+const getUnrealizedManagementFee = instance =>
+  countFunctionCall(instance.methods.getUnrealizedManagementFee().call())
+
 const deposit = (amount, address, instance) =>
   countFunctionCall(instance.methods.deposit(amount, address).send({ from: address }))
 
@@ -35,6 +38,7 @@ module.exports = {
   getAssetsInMarket,
   getInstantWithdrawalFuses,
   getInstantWithdrawalFusesParams,
+  getUnrealizedManagementFee,
   deposit,
   withdraw,
 }
