@@ -9,7 +9,7 @@ const { UI_DATA_FILES } = require('../constants')
 const { fetchAndExpandVault } = require('../../vaults')
 const { getUIData } = require('../data')
 
-const getPlasmaVaultData = async (underlying, pVault, chain, totalAssets) => {
+const getPlasmaVaultData = async (underlying, pVault, chain) => {
   const web3 = await getWeb3(chain)
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
 
@@ -65,6 +65,9 @@ const getPlasmaVaultData = async (underlying, pVault, chain, totalAssets) => {
     )
   }
 
+  const totalAssets = new BigNumber(await methods.getTotalAssets(pVaultInstance)).div(
+    10 ** underlyingDecimal,
+  )
   const notInvestedAmount = totalAssets.minus(assetsOld).plus(unrealizedFee)
 
   const notInvestedData = {
