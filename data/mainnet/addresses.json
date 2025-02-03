@@ -3115,6 +3115,7 @@
     "ZK": "0x5A7d6b2F92C77FAD6CCaBd7EE0624E64907Eaf3E",
     "wrsETH": "0xd4169E045bcF9a86cC00101225d9ED61D2F51af2",
     "XVS": "0xD78ABD81a3D57712a3af080dc4185b698Fe9ac5A",
+    "USDM": "0x7715c206A14Ac93Cb1A6c0316A6E5f8aD7c9Dc31",
     "V2": {
       "zkswap_ETH_USDCe": {
         "Underlying": "0x7642e38867860d4512Fcce1116e2Fb539c5cdd21",
@@ -3343,6 +3344,76 @@
         "NewStrategy": "0x8d7829914f118eAC46072622Da88E914c699A7a3",
         "NewPool": "0xB2d9ef2F2c45494Ee62EC899804aFef242b479A4",
         "cToken": "0x697a70779C1A03Ba2BD28b7627a902BFf831b616"
+      },
+      "aave_USDT": {
+        "Underlying": "0x493257fD37EDB34451f62EDf8D2a0C418852bA4C",
+        "NewVault": "0xC8E91549Bfd0c4C1B53d7dE57b92b8c259c46726",
+        "NewStrategy": "0xfb16Ea1E523b446B7C24A9c3b8247fA78DFEB71C",
+        "NewPool": "0x175C81cEE52C7852Eab82dAbe95E0a9538C1af21",
+        "AavePool": "0x78e30497a3c7527d953c6B1E3541b021A98Ac43c"
+      },
+      "aave_ZK": {
+        "Underlying": "0x5A7d6b2F92C77FAD6CCaBd7EE0624E64907Eaf3E",
+        "NewVault": "0x676a8BcF8ACBaB1a38e53dB83C74a4b1A53bf782",
+        "NewStrategy": "0xCEc8dacBA8d97b6c4aB45a15276f17AC1673B8Aa",
+        "NewPool": "0xA16946Fef413a98Ea3f9FCdc486d0D2368feeeb1",
+        "AavePool": "0x78e30497a3c7527d953c6B1E3541b021A98Ac43c"
+      },
+      "venus_USDC": {
+        "Underlying": "0x1d17CBcF0D6D143135aE902365D2E5e2A16538D4",
+        "NewVault": "0xe5c4F0644E15d0e480d8D38aC97485f8aF9D9781",
+        "NewStrategy": "0xd424F195199899c84A20e0B6c1b9aF903A7b36E2",
+        "NewPool": "0xFaBD7BE3006A2253D2cd4B70E7F3e5B98Be58498",
+        "cToken": "0x84064c058F2EFea4AB648bB6Bd7e40f83fFDe39a"
+      },
+      "venus_WUSDM": {
+        "Underlying": "0xA900cbE7739c96D2B153a273953620A701d5442b",
+        "NewVault": "0xcd00f7FbeE3D6A9C719Df8cC0240f5Ec5Ce95E50",
+        "NewStrategy": "0xf289296d03DBb32934eC8644653ccb8B973CB9da",
+        "NewPool": "0xf8e3845E9833B3a3E98bC5d65240fCDB2D4B9453",
+        "cToken": "0x183dE3C349fCf546aAe925E1c7F364EA6FB4033c"
+      },
+      "zerolend_DAI": {
+        "Underlying": "0x4B9eb6c0b6ea15176BBF62841C6B2A8a398cb656",
+        "NewVault": "0xb86a425cae71a45cDbE6DaA72C0f3398e3623833",
+        "NewStrategy": "0x38994f778C179Ca8c56f8Fa27308f70645078dc7",
+        "NewPool": "0xc288a948C27d4540d8D3784C239aF87c0eAbe1ED",
+        "AavePool": "0x4d9429246EA989C9CeE203B43F6d1C7D83e3B8F8"
+      },
+      "zerolend_LUSD": {
+        "Underlying": "0x503234F203fC7Eb888EEC8513210612a43Cf6115",
+        "NewVault": "0x3Ef33609575bEA01928750a40BdD21a7759aB4A1",
+        "NewStrategy": "0x9404b700fBDee013DA485f8083618D081E559396",
+        "NewPool": "0xa4aAA71f3c75672965C8BEeA0EeF8e503Ec4d77e",
+        "AavePool": "0x4d9429246EA989C9CeE203B43F6d1C7D83e3B8F8"
+      },
+      "zerolend_MBTC": {
+        "Underlying": "0xE757355edba7ced7B8c0271BBA4eFDa184aD75Ab",
+        "NewVault": "0xED079bD8EB39760cda7DC3CC9Dc94FA4aF821e13",
+        "NewStrategy": "0x71c354e3BC7d08557D5b0A6dd9c2EC7A2b230604",
+        "NewPool": "0x68cc26Bb16dC18aCfD76c8985AE651A7BFC7efd8",
+        "AavePool": "0x4d9429246EA989C9CeE203B43F6d1C7D83e3B8F8"
+      },
+      "zerolend_WBTC": {
+        "Underlying": "0xBBeB516fb02a01611cBBE0453Fe3c580D7281011",
+        "NewVault": "0x8b951eC568337172E77801EB20ac6b27C4cc5caC",
+        "NewStrategy": "0x102C8EF4e398bd3c64F4D719e0c325Bba7226adB",
+        "NewPool": "0x4b50F23D3c0a9B84AAAFc2925eF338e49C478a8f",
+        "AavePool": "0x4d9429246EA989C9CeE203B43F6d1C7D83e3B8F8"
+      },
+      "zerolend_ZK": {
+        "Underlying": "0x5A7d6b2F92C77FAD6CCaBd7EE0624E64907Eaf3E",
+        "NewVault": "0x2cD2c687BC5E49b963CFC7C0B329fEeaaf088D5b",
+        "NewStrategy": "0x19d727962c8a6f724e1f18e33D473Ee9f0d3eFfc",
+        "NewPool": "0x837D95BeFb3E4AD7374dB6e65119aCFE6B57EE55",
+        "AavePool": "0x4d9429246EA989C9CeE203B43F6d1C7D83e3B8F8"
+      },
+      "reactor_USDC": {
+        "Underlying": "0x1d17CBcF0D6D143135aE902365D2E5e2A16538D4",
+        "NewVault": "0x5837445312f5D8A77a5cFa4A28801D3EEF47bE8B",
+        "NewStrategy": "0xaD8705C5258dDced56Df324A01F8132867bBdaEd",
+        "NewPool": "0x29AD0807D3f399AC472e53c1592f9Eee2f035b86",
+        "cToken": "0x930DA5E58f7F0D6DC417AB07e07558C78CFF1445"
       }
     }
   }
