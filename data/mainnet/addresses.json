@@ -3144,6 +3144,41 @@
         "NewStrategy": "0x372B59EDfbf12BA961AEb290b3e662E29e7530b9",
         "NewPool": "0xA075d1E13b1F9927B85A0bFD9713E43445d27AA6",
         "Gauge": "0x96a24aB830D4ec8b1F6f04Ceac104F1A3b211a01"
+      },
+      "moonwell_LBTC": {
+        "Underlying": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
+        "NewVault": "0xDC8F87F7e597326C907ba8Bb341A3eD5b35a0e55",
+        "NewStrategy": "0xF6B81c70FC057AeA5E2D8234e632aCC9b42F20e9",
+        "NewPool": "0x0F9A350a4D21B648013A186c13930F39d4Da2B0E",
+        "mToken": "0x10fF57877b79e9bd949B3815220eC87B9fc5D2ee"
+      },
+      "moonwell_tBTC": {
+        "Underlying": "0x236aa50979D5f3De3Bd1Eeb40E81137F22ab794b",
+        "NewVault": "0x614D1bC8a37EB229232ae7338C6333064496c5E3",
+        "NewStrategy": "0x5e349A82F86235AbF44aD01e45896aCd771D21b0",
+        "NewPool": "0x7fCED703bEff06a8e1859B4FeD21DA707d4e2693",
+        "mToken": "0x9A858ebfF1bEb0D3495BB0e2897c1528eD84A218"
+      },
+      "moonwell_USDS": {
+        "Underlying": "0x820C137fa70C8691f0e44Dc420a5e53c168921Dc",
+        "NewVault": "0x2f4Ab0c54aE22bE66A1b273D11b28c001a61b871",
+        "NewStrategy": "0x9dc9A5598BA5911d9E67D82641A1e96bC81B6865",
+        "NewPool": "0x71C842aF911A7BcCC401ce3100F0eD1830629cC4",
+        "mToken": "0xb6419c6C2e60c4025D6D06eE4F913ce89425a357"
+      },
+      "moonwell_VIRTUAL": {
+        "Underlying": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+        "NewVault": "0x5843DE606277CD8d0B009E13d9D3a014c4c123bf",
+        "NewStrategy": "0xFB818264FE2440d06B3504501bCB9732b8eFb91F",
+        "NewPool": "0x581fF5852BBdf95edbFd681614F0Ef213D171eEf",
+        "mToken": "0xdE8Df9d942D78edE3Ca06e60712582F79CFfFC64"
+      },
+      "moonwell_WELL": {
+        "Underlying": "0xA88594D404727625A9437C3f886C7643872296AE",
+        "NewVault": "0xFe0739DdbA625C82C66F136b47F23e803705462c",
+        "NewStrategy": "0x5966d042A8c095e9fF32a2350E6c0eb55CfCcE1D",
+        "NewPool": "0xe2Ba3aa898f524062790397b7877b252C0065794",
+        "mToken": "0xdC7810B47eAAb250De623F0eE07764afa5F71ED1"
       }
     }
   },
