@@ -7,6 +7,8 @@ const getBorrowRate = instance =>
 const totalSupply = instance => countFunctionCall(instance.methods.totalSupply().call())
 const totalBorrows = instance => countFunctionCall(instance.methods.totalBorrows().call())
 const getExchangeRate = instance => countFunctionCall(instance.methods.exchangeRateStored().call())
+const getAccountSnapshot = (holder, instance) =>
+  countFunctionCall(instance.methods.getAccountSnapshot(holder).call())
 
 module.exports = {
   getSupplyRate,
@@ -14,4 +16,5 @@ module.exports = {
   totalSupply,
   totalBorrows,
   getExchangeRate,
+  getAccountSnapshot,
 }

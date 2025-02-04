@@ -1,7 +1,7 @@
 const BigNumber = require('bignumber.js')
 const { web3BASE } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
-const { mToken, comptroller, token, lodestarStrategy } = require('../../../lib/web3/contracts')
+const { mToken, comptroller, token } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
 
 const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
@@ -18,19 +18,18 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
     contract: { abi: tokenAbi },
     methods: { getDecimals },
   } = token
-  const {
-    contract: { abi: strategyAbi },
-    methods: strategyMethods,
-  } = lodestarStrategy
 
   const well = '0xA88594D404727625A9437C3f886C7643872296AE'
   const usdc = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913'
   const eurc = '0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42'
   const secondsPerYear = 60 * 60 * 24 * 365.25
-  const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddr)
-  const invested = new BigNumber(await strategyMethods.getInvestedBalance(strategyInstance))
-  const supplied = new BigNumber(await strategyMethods.getSupplyBalance(strategyInstance))
-  const borrowed = new BigNumber(await strategyMethods.getBorrowBalance(strategyInstance))
+
+  const mTokenInstance = new web3.eth.Contract(mTokenAbi, mTokenAddr)
+  const snapshot = await mTokenMethods.getAccountSnapshot(strategyAddr, mTokenInstance)
+
+  const supplied = new BigNumber(snapshot[1]).times(snapshot[3]).div(1e18)
+  const borrowed = new BigNumber(snapshot[2])
+  const invested = supplied.minus(borrowed)
   let suppliedMul, borrowedMul
   if (invested.gt(0)) {
     suppliedMul = supplied.div(invested)
@@ -40,7 +39,6 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
     borrowedMul = new BigNumber(0)
   }
 
-  const mTokenInstance = new web3.eth.Contract(mTokenAbi, mTokenAddr)
   const supplyRate = new BigNumber(await mTokenMethods.getSupplyRate(mTokenInstance))
   const borrowRate = new BigNumber(await mTokenMethods.getBorrowRate(mTokenInstance))
   const supplyAPR = supplyRate.div(1e18).times(secondsPerYear).times(100).times(suppliedMul)
