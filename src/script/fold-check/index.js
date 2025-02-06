@@ -134,6 +134,7 @@ const getMarketDataAave = async (vault, chain) => {
   }
   const interestData = {
     params: interestParams,
+    borrows: totalDebt,
     interestInstance: interestInstance,
     interestMethods: interestMethods,
   }
@@ -611,19 +612,14 @@ const getRateAave = async (borrowFactor, marketData, vaultData, interestData, ch
   const borrowedMul = newVaultBorrowed.div(vaultData.usdTVL)
   const newUsdSupplied = marketData.usdSupplied.minus(vaultData.usdSupplied).plus(newVaultSupplied)
   const newUsdBorrowed = marketData.usdBorrowed.minus(vaultData.usdBorrowed).plus(newVaultBorrowed)
+  const newBorrows = interestData.borrows
+    .div(marketData.usdBorrowed)
+    .times(newUsdBorrowed)
+    .integerValue()
 
-  let newBorrows
   if (platform == 'aave') {
-    newBorrows = new BigNumber(interestData.params[3])
-      .div(marketData.usdBorrowed)
-      .times(newUsdBorrowed)
-      .integerValue()
     interestData.params[3] = newBorrows.toFixed()
   } else {
-    newBorrows = new BigNumber(interestData.params[4])
-      .div(marketData.usdBorrowed)
-      .times(newUsdBorrowed)
-      .integerValue()
     interestData.params[4] = newBorrows.toFixed()
   }
 
@@ -850,14 +846,26 @@ const main = async () => {
         optimalFactor.minus(currentBorrowFactor).absoluteValue().gt(0.001)
       ) {
         console.log(
-          `Current Borrow Factor: ${currentBorrowFactor.toFixed()} Current Rate: ${currentRate.toFixed()}`,
+          '---------------------------> Leverage NOT optimal <---------------------------',
         )
         console.log(
-          `Optimal Borrow Factor: ${optimalFactor.toFixed()} Optimal Rate: ${optimalRate.toFixed()}`,
+          `Current Borrow Factor: ${currentBorrowFactor.toFixed(
+            5,
+          )} Current Rate: ${currentRate.toFixed(5)}`,
+        )
+        console.log(
+          `Optimal Borrow Factor: ${optimalFactor.toFixed(5)} Optimal Rate: ${optimalRate.toFixed(
+            5,
+          )}`,
         )
         console.log('---')
       } else {
         console.log('Leverage optimal')
+        console.log(
+          `Current Borrow Factor: ${currentBorrowFactor.toFixed(
+            5,
+          )} Current Rate: ${currentRate.toFixed(5)}`,
+        )
         console.log('---')
       }
     }

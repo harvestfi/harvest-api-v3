@@ -1,11 +1,6 @@
 const BigNumber = require('bignumber.js')
 const { getWeb3 } = require('../../../lib/web3')
-const {
-  seamlessPool,
-  aToken,
-  aaveRewards,
-  lodestarStrategy,
-} = require('../../../lib/web3/contracts')
+const { seamlessPool, aToken, aaveRewards } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
 const { getApy: getMerklApy } = require('./merkl')
 const { CHAIN_IDS } = require('../../../lib/constants')
@@ -24,15 +19,15 @@ const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
     contract: { abi: rewardsAbi },
     methods: rewardsMethods,
   } = aaveRewards
-  const {
-    contract: { abi: strategyAbi },
-    methods: strategyMethods,
-  } = lodestarStrategy
 
-  const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddr)
-  const invested = new BigNumber(await strategyMethods.getInvestedBalance(strategyInstance))
-  const supplied = new BigNumber(await strategyMethods.getSupplyBalance(strategyInstance))
-  const borrowed = new BigNumber(await strategyMethods.getBorrowBalance(strategyInstance))
+  const poolInstance = new web3.eth.Contract(poolAbi, poolAddr)
+  const assetData = await poolMethods.getReserveData(underlying, poolInstance)
+  const aTokenInstance = new web3.eth.Contract(aTokenAbi, assetData.aTokenAddress)
+  const debtTokenInstance = new web3.eth.Contract(aTokenAbi, assetData.variableDebtTokenAddress)
+
+  const supplied = new BigNumber(await aTokenMethods.balanceOf(strategyAddr, aTokenInstance))
+  const borrowed = new BigNumber(await aTokenMethods.balanceOf(strategyAddr, debtTokenInstance))
+  const invested = supplied.minus(borrowed)
   let suppliedMul, borrowedMul
   if (invested.gt(0)) {
     suppliedMul = supplied.div(invested)
@@ -42,8 +37,6 @@ const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
     borrowedMul = new BigNumber(0)
   }
 
-  const poolInstance = new web3.eth.Contract(poolAbi, poolAddr)
-  const assetData = await poolMethods.getReserveData(underlying, poolInstance)
   const supplyAPR = new BigNumber(assetData.currentLiquidityRate)
     .div(1e27)
     .times(100)
@@ -53,7 +46,6 @@ const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
     .times(100)
     .times(borrowedMul)
 
-  const aTokenInstance = new web3.eth.Contract(aTokenAbi, assetData.aTokenAddress)
   const supplyRewardsInstance = new web3.eth.Contract(
     rewardsAbi,
     await aTokenMethods.getIncentivesController(aTokenInstance),
@@ -79,7 +71,6 @@ const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
     supplyRewardUsdPerYear = supplyRewardUsdPerYear.plus(emissionPerYear.times(rewardPrice))
   }
 
-  const debtTokenInstance = new web3.eth.Contract(aTokenAbi, assetData.variableDebtTokenAddress)
   const borrowRewardsInstance = new web3.eth.Contract(
     rewardsAbi,
     await aTokenMethods.getIncentivesController(debtTokenInstance),
