@@ -1,7 +1,7 @@
 const BigNumber = require('bignumber.js')
 const { web3BASE } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
-const { mToken, comptroller, token } = require('../../../lib/web3/contracts')
+const { mToken, moonwellReward, token } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
 
 const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
@@ -11,9 +11,9 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
     methods: mTokenMethods,
   } = mToken
   const {
-    contract: { abi: comptrollerAbi, address: comptrollerAddress },
-    methods: comptrollerMethods,
-  } = comptroller
+    contract: { abi: moonwellRewardAbi, address: moonwellRewardAddress },
+    methods: moonwellRewardMethods,
+  } = moonwellReward
   const {
     contract: { abi: tokenAbi },
     methods: { getDecimals },
@@ -44,31 +44,34 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
   const supplyAPR = supplyRate.div(1e18).times(secondsPerYear).times(100).times(suppliedMul)
   const borrowAPR = borrowRate.div(1e18).times(secondsPerYear).times(100).times(borrowedMul)
 
-  const comptrollerInstance = new web3.eth.Contract(comptrollerAbi, comptrollerAddress.mainnet)
+  const moonwellRewardInstance = new web3.eth.Contract(
+    moonwellRewardAbi,
+    moonwellRewardAddress.mainnet,
+  )
   let marketConfigWell, marketConfigUsdc, marketConfigEurc
   try {
-    marketConfigWell = await comptrollerMethods.getMarketConfig(
+    marketConfigWell = await moonwellRewardMethods.getMarketConfig(
       mTokenAddr,
       well,
-      comptrollerInstance,
+      moonwellRewardInstance,
     )
   } catch (e) {
     marketConfigWell = 0
   }
   try {
-    marketConfigUsdc = await comptrollerMethods.getMarketConfig(
+    marketConfigUsdc = await moonwellRewardMethods.getMarketConfig(
       mTokenAddr,
       usdc,
-      comptrollerInstance,
+      moonwellRewardInstance,
     )
   } catch (e) {
     marketConfigUsdc = 0
   }
   try {
-    marketConfigEurc = await comptrollerMethods.getMarketConfig(
+    marketConfigEurc = await moonwellRewardMethods.getMarketConfig(
       mTokenAddr,
       eurc,
-      comptrollerInstance,
+      moonwellRewardInstance,
     )
   } catch (e) {
     marketConfigEurc = 0

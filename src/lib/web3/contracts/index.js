@@ -103,8 +103,8 @@ const basedRewardsContract = require('../contracts/based-rewards/contract.json')
 const mTokenMethods = require('../contracts/mtoken/methods')
 const mTokenContract = require('../contracts/mtoken/contract.json')
 
-const comptrollerMethods = require('../contracts/comptroller/methods')
-const comptrollerContract = require('../contracts/comptroller/contract.json')
+const moonwellRewardMethods = require('../contracts/moonwell-reward/methods')
+const moonwellRewardContract = require('../contracts/moonwell-reward/contract.json')
 
 const magpieMasterMethods = require('../contracts/mgp-master/methods')
 const magpieMasterContract = require('../contracts/mgp-master/contract.json')
@@ -226,7 +226,42 @@ const venusComptrollerContract = require('../contracts/venus-comptroller/contrac
 const venusDistributorMethods = require('../contracts/venus-distributor/methods')
 const venusDistributorContract = require('../contracts/venus-distributor/contract.json')
 
+const jumpRateModelMethods = require('../contracts/jump-rate-model/methods')
+const jumpRateModelContract = require('../contracts/jump-rate-model/contract.json')
+
+const venusJumpRateModelMethods = require('../contracts/venus-jump-rate-model/methods')
+const venusJumpRateModelContract = require('../contracts/venus-jump-rate-model/contract.json')
+
+const moonwellComptrollerMethods = require('../contracts/moonwell-comptroller/methods')
+const moonwellComptrollerContract = require('../contracts/moonwell-comptroller/contract.json')
+
+const aaveInterestModelMethods = require('../contracts/aave-interest-model/methods')
+const aaveInterestModelContract = require('../contracts/aave-interest-model/contract.json')
+
+const zeroInterestModelMethods = require('../contracts/zero-interest-model/methods')
+const zeroInterestModelContract = require('../contracts/zero-interest-model/contract.json')
+
 module.exports = {
+  aaveInterestModel: {
+    methods: aaveInterestModelMethods,
+    contract: aaveInterestModelContract,
+  },
+  zeroInterestModel: {
+    methods: zeroInterestModelMethods,
+    contract: zeroInterestModelContract,
+  },
+  moonwellComptroller: {
+    methods: moonwellComptrollerMethods,
+    contract: moonwellComptrollerContract,
+  },
+  jumpRateModel: {
+    methods: jumpRateModelMethods,
+    contract: jumpRateModelContract,
+  },
+  venusJumpRateModel: {
+    methods: venusJumpRateModelMethods,
+    contract: venusJumpRateModelContract,
+  },
   venusComptroller: {
     methods: venusComptrollerMethods,
     contract: venusComptrollerContract,
@@ -351,9 +386,9 @@ module.exports = {
     methods: lodestarComptrollerMethods,
     contract: lodestarComptrollerContract,
   },
-  comptroller: {
-    methods: comptrollerMethods,
-    contract: comptrollerContract,
+  moonwellReward: {
+    methods: moonwellRewardMethods,
+    contract: moonwellRewardContract,
   },
   mToken: {
     methods: mTokenMethods,
