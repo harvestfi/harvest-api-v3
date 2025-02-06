@@ -1,7 +1,7 @@
 const BigNumber = require('bignumber.js')
 const { web3BASE } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
-const { mToken, comptroller, token } = require('../../../lib/web3/contracts')
+const { mToken, moonwellReward, token } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
 
 const getApy = async (underlying, mTokenAddr, reduction) => {
@@ -13,7 +13,7 @@ const getApy = async (underlying, mTokenAddr, reduction) => {
   const {
     contract: { abi: comptrollerAbi, address: comptrollerAddress },
     methods: comptrollerMethods,
-  } = comptroller
+  } = moonwellReward
   const {
     contract: { abi: tokenAbi },
     methods: { getDecimals },
