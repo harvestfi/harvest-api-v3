@@ -5,6 +5,111 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'venus_ETH_core',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.venus_ETH_core.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.venus_ETH_core.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.venus_ETH_core.Underlying}" target="_blank" rel="noopener noreferrer">ETH</a> to Venus - Core, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.XVS}" target="_blank" rel="noopener noreferrer">XVS</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.venus_ETH_core.Underlying}" target="_blank" rel="noopener noreferrer">ETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'venus_ETH_lsd',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.venus_ETH_lsd.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.venus_ETH_lsd.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.venus_ETH_lsd.Underlying}" target="_blank" rel="noopener noreferrer">ETH</a> to Venus - Liquid Staked ETH, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.XVS}" target="_blank" rel="noopener noreferrer">XVS</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.venus_ETH_lsd.Underlying}" target="_blank" rel="noopener noreferrer">ETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'venus_USDC_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.venus_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.venus_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.venus_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> to Venus - Core, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.XVS}" target="_blank" rel="noopener noreferrer">XVS</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.venus_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'venus_USDT_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.venus_USDT.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.venus_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.venus_USDT.Underlying}" target="_blank" rel="noopener noreferrer">USDT</a> to Venus - Core, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.XVS}" target="_blank" rel="noopener noreferrer">XVS</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.venus_USDT.Underlying}" target="_blank" rel="noopener noreferrer">USDT</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'venus_WBTC_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.venus_WBTC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.venus_WBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.venus_WBTC.Underlying}" target="_blank" rel="noopener noreferrer">WBTC</a> to Venus - Core, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.XVS}" target="_blank" rel="noopener noreferrer">XVS</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.venus_WBTC.Underlying}" target="_blank" rel="noopener noreferrer">WBTC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'morphoSE_cbBTC',
     type: POOL_TYPES.INCENTIVE,
