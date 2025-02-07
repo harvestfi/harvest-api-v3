@@ -3179,6 +3179,20 @@
         "NewStrategy": "0x5966d042A8c095e9fF32a2350E6c0eb55CfCcE1D",
         "NewPool": "0xe2Ba3aa898f524062790397b7877b252C0065794",
         "mToken": "0xdC7810B47eAAb250De623F0eE07764afa5F71ED1"
+      },
+      "morphoSE_cbBTC": {
+        "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        "NewVault": "0x6b80cf5e76c7C408eB6797A85F3825786FE83e27",
+        "NewStrategy": "0x8e07B9650A9a029781a2059fce1D906809BeE961",
+        "NewPool": "0x21fB5bcFB5aF0D36dbd35d8BB84F6f0342218f7C",
+        "MorphoVault": "0x5a47C803488FE2BB0A0EAaf346b420e4dF22F3C7"
+      },
+      "morphoGC_cbBTC": {
+        "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        "NewVault": "0x6243A06f4BB242E43eEDE2DdA211444C82a61C8B",
+        "NewStrategy": "0x321B57399BEa9fC0EAc833EB2d9E4203f8ddA1d6",
+        "NewPool": "0x983e9922764B9694FBb1629db1623e9Eb4191255",
+        "MorphoVault": "0x6770216aC60F634483Ec073cBABC4011c94307Cb"
       }
     }
   },

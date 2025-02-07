@@ -46,6 +46,60 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  morphoSE_cbBTC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/seam.svg', './icons/morpho.svg'],
+    apyTokenSymbols: ['SEAM', 'MORPHO'],
+    logoUrl: ['./icons/cbbtc.svg'],
+    tokenNames: ['cbBTC'],
+    platform: ['Morpho - Seamless'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.BASE.V2.morphoSE_cbBTC.Underlying,
+    decimals: '8',
+    vaultAddress: addresses.BASE.V2.morphoSE_cbBTC.NewVault,
+    strategyAddress: addresses.BASE.V2.morphoSE_cbBTC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['coinbase-wrapped-btc'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.BASE.V2.morphoSE_cbBTC.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
+  morphoGC_cbBTC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/cbbtc.svg'],
+    tokenNames: ['cbBTC'],
+    platform: ['Morpho - Gauntlet Core'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.BASE.V2.morphoGC_cbBTC.Underlying,
+    decimals: '8',
+    vaultAddress: addresses.BASE.V2.morphoGC_cbBTC.NewVault,
+    strategyAddress: addresses.BASE.V2.morphoGC_cbBTC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['coinbase-wrapped-btc'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.BASE.V2.morphoGC_cbBTC.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
   moonwell_LBTC: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],

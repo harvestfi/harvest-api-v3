@@ -874,4 +874,4 @@ const main = async () => {
   console.log('-- Done running leverage checks for Folding strategies --\n')
 }
 
-main()
+main().then(() => process.exit(0))

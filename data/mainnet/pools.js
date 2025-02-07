@@ -6,6 +6,49 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.BASE,
+    id: 'morphoSE_cbBTC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.morphoSE_cbBTC.NewPool,
+    collateralAddress: addresses.BASE.V2.morphoSE_cbBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morphoSE_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC </a>to the Morpho Seamless Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.SEAM}" target="_blank" rel="noopener noreferrer">SEAM</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morphoSE_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'morphoGC_cbBTC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.morphoGC_cbBTC.NewPool,
+    collateralAddress: addresses.BASE.V2.morphoGC_cbBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morphoGC_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC </a>to the Morpho Gauntlet Core Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morphoGC_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
     id: 'moonwell_LBTC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.BASE.V2.moonwell_LBTC.NewPool,
