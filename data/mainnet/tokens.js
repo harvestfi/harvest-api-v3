@@ -1614,6 +1614,7 @@ module.exports = {
     ],
   },
   zkswap_wrsETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     apyIconUrls: ['./icons/zf.svg', './icons/zk.svg'],
     apyTokenSymbols: ['ZF', 'ZK'],
@@ -6479,6 +6480,7 @@ module.exports = {
     ],
   },
   zkswap_wstETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/zf.svg', './icons/zk.svg'],

@@ -3228,6 +3228,15 @@
         "NewStrategy": "0x321B57399BEa9fC0EAc833EB2d9E4203f8ddA1d6",
         "NewPool": "0x983e9922764B9694FBb1629db1623e9Eb4191255",
         "MorphoVault": "0x6770216aC60F634483Ec073cBABC4011c94307Cb"
+      },
+      "aeroCL_ETH_USDC_16w": {
+        "NewVault": "0xEC0c0007eE5872268997a92C07AAeC5FF5eB6A3c"
+      },
+      "aeroCL_ETH_USDC_30w": {
+        "NewVault": "0xcc00Dd51b3aE372A5450031c9261052da9521FC3"
+      },
+      "aeroCL_ETH_USDC_6w": {
+        "NewVault": "0x8FfF1A092F187f7B137CE513281143F3219D3352"
       }
     }
   },
@@ -3291,7 +3300,8 @@
         "Underlying": "0x4848204d1Ee4422d91D91b1C89F6D2F9ACe09e2c",
         "NewVault": "0x526c76022cb76fbad2A15E5b5fCC6cCF06f8B700",
         "NewStrategy": "0x885bDBc2F945D802f5Cd629A3C6da7F8401f5f7f",
-        "NewPool": "0x325f931533971e875881Df68c49a9Cd8F44038bD"
+        "NewPool": "0x325f931533971e875881Df68c49a9Cd8F44038bD",
+        "doHardwork": false
       },
       "zkswap_ZF_ETH": {
         "Underlying": "0xD33A17C883D5aA79470cd2522ABb213DC4017E01",
@@ -3404,7 +3414,8 @@
         "Underlying": "0xeB9Fd198b20DC73E63668B89a735b7DC84e13EA0",
         "NewVault": "0x94271E943F66883111dCcA3df76ABea6a6B46BF6",
         "NewStrategy": "0xf32782991a2a0C6F3679bbdA2a82001723E9B0D8",
-        "NewPool": "0xf88D089E0fA940Aa0090fE224929E0Ce09d7239E"
+        "NewPool": "0xf88D089E0fA940Aa0090fE224929E0Ce09d7239E",
+        "doHardwork": false
       },
       "aave_ETH": {
         "Underlying": "0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91",
@@ -3500,7 +3511,7 @@
       "aave_ZK": {
         "Underlying": "0x5A7d6b2F92C77FAD6CCaBd7EE0624E64907Eaf3E",
         "NewVault": "0x676a8BcF8ACBaB1a38e53dB83C74a4b1A53bf782",
-        "NewStrategy": "0xCEc8dacBA8d97b6c4aB45a15276f17AC1673B8Aa",
+        "NewStrategy": "0x9a0217fDc3F883E485Ca5AcC6b790c4f0fc96bEF",
         "NewPool": "0xA16946Fef413a98Ea3f9FCdc486d0D2368feeeb1",
         "AavePool": "0x78e30497a3c7527d953c6B1E3541b021A98Ac43c"
       },
@@ -3535,7 +3546,7 @@
       "zerolend_MBTC": {
         "Underlying": "0xE757355edba7ced7B8c0271BBA4eFDa184aD75Ab",
         "NewVault": "0xED079bD8EB39760cda7DC3CC9Dc94FA4aF821e13",
-        "NewStrategy": "0x71c354e3BC7d08557D5b0A6dd9c2EC7A2b230604",
+        "NewStrategy": "0x82aaD3B447e1009D86b3c79D3397ee5e2eA2e235",
         "NewPool": "0x68cc26Bb16dC18aCfD76c8985AE651A7BFC7efd8",
         "AavePool": "0x4d9429246EA989C9CeE203B43F6d1C7D83e3B8F8"
       },
