@@ -8,10 +8,12 @@ const getInvestedBalance = instance =>
   countFunctionCall(instance.methods.investedUnderlyingBalance().call())
 const getCollateralFactor = instance =>
   countFunctionCall(instance.methods.collateralFactorNumerator().call())
+const fold = instance => countFunctionCall(instance.methods.fold().call())
 
 module.exports = {
   getBorrowBalance,
   getSupplyBalance,
   getInvestedBalance,
   getCollateralFactor,
+  fold,
 }

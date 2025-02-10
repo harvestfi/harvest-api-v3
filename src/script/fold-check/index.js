@@ -15,6 +15,7 @@ const {
   token,
   moonwellComptroller: comptroller,
   lodestarCToken: cToken,
+  lodestarStrategy: strategy,
   venusComptroller,
   venusDistributor,
   lodestarComptroller,
@@ -709,10 +710,21 @@ const main = async () => {
     }
 
     for (const vault of filteredAddresses) {
-      // if (vault.NewVault != '0x676a8BcF8ACBaB1a38e53dB83C74a4b1A53bf782') {
-      //   continue
-      // }
       console.log(`\n-- Vault: ${vault.NewVault}, ${vault.platform} --`)
+      const {
+        contract: { abi: strategyAbi },
+        methods: strategyMethods,
+      } = strategy
+      const web3 = await getWeb3(CHAIN_IDS[chain])
+      const strategyInstance = new web3.eth.Contract(strategyAbi, vault.NewStrategy)
+      try {
+        await strategyMethods.fold(strategyInstance)
+      } catch (e) {
+        console.log('Strategy not foldable')
+        console.log('---')
+        continue
+      }
+
       let [marketData, vaultData, interestData] = await getMarketData(vault, CHAIN_IDS[chain])
       if (marketData.collateralFactor.eq(0)) {
         console.log('Collateral Factor 0, no leverage possible')
@@ -842,7 +854,7 @@ const main = async () => {
       }
 
       if (
-        optimalRate.gt(currentRate.plus(0.0001)) &&
+        optimalRate.gte(currentRate.plus(0.001)) &&
         optimalFactor.minus(currentBorrowFactor).absoluteValue().gt(0.001)
       ) {
         console.log(
@@ -850,21 +862,21 @@ const main = async () => {
         )
         console.log(
           `Current Borrow Factor: ${currentBorrowFactor.toFixed(
-            5,
-          )} Current Rate: ${currentRate.toFixed(5)}`,
+            4,
+          )} Current Rate: ${currentRate.times(100).toFixed(2)}%`,
         )
         console.log(
-          `Optimal Borrow Factor: ${optimalFactor.toFixed(5)} Optimal Rate: ${optimalRate.toFixed(
-            5,
-          )}`,
+          `Optimal Borrow Factor: ${optimalFactor.toFixed(4)} Optimal Rate: ${optimalRate
+            .times(100)
+            .toFixed(2)}%`,
         )
         console.log('---')
       } else {
         console.log('Leverage optimal')
         console.log(
           `Current Borrow Factor: ${currentBorrowFactor.toFixed(
-            5,
-          )} Current Rate: ${currentRate.toFixed(5)}`,
+            4,
+          )} Current Rate: ${currentRate.times(100).toFixed(2)}%`,
         )
         console.log('---')
       }
