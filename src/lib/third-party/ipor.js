@@ -69,7 +69,7 @@ const getPlasmaVaultData = async (underlying, pVault, chain, totalAssets) => {
 
   const notInvestedData = {
     hVaultId: 'Not invested',
-    allocPoint: notInvestedAmount,
+    allocPoint: notInvestedAmount.lt(0) ? new BigNumber(0) : notInvestedAmount,
   }
   allocDatas.push(notInvestedData)
 
