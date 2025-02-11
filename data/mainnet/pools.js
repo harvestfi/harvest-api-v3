@@ -5,6 +5,48 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'extrafi_USDC_2',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.extrafi_USDC_2.NewPool,
+    collateralAddress: addresses.BASE.V2.extrafi_USDC_2.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_USDC_2.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to ExtraFi, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.EXTRA}" target="_blank" rel="noopener noreferrer">EXTRA</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_USDC_2.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'extrafi_ETH_2',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.extrafi_ETH_2.NewPool,
+    collateralAddress: addresses.BASE.V2.extrafi_ETH_2.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_ETH_2.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to ExtraFi Pool #2, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.EXTRA}" target="_blank" rel="noopener noreferrer">EXTRA</a> and interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_ETH_2.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'venus_ETH_core',
     type: POOL_TYPES.INCENTIVE,
@@ -3139,7 +3181,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to ExtraFi, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to ExtraFi Pool #2, earning 
        <a href="https://basescan.org/token/${addresses.BASE.EXTRA}" target="_blank" rel="noopener noreferrer">EXTRA</a> and interest.
        At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.extrafi_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.

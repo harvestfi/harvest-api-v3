@@ -3237,6 +3237,22 @@
       },
       "aeroCL_ETH_USDC_6w": {
         "NewVault": "0x8FfF1A092F187f7B137CE513281143F3219D3352"
+      },
+      "extrafi_USDC_2": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x00f281832f74D3eb391C219148EE3b7c8Bb46319",
+        "NewStrategy": "0x43a9Ee2fF71B775F7702E131a761B70a4562fe46",
+        "NewPool": "0x48b866d05FfD289a992b7ba2d9596d9adB47dB17",
+        "RewardPool": "0xE61662C09c30E1F3f3CbAeb9BC1F13838Ed18957",
+        "ReserveId": 25
+      },
+      "extrafi_ETH_2": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0x3FDFb0fE59Dfba560e2918085AC92da1c25A2e68",
+        "NewStrategy": "0xbf79BB15d83919905B440f0D4AeC235811679022",
+        "NewPool": "0xab11E7C43429b651883C582F930d8dC8746fFa10",
+        "RewardPool": "0x9B767FEB01525EA8F304a65d4483251cF18835b7",
+        "ReserveId": 14
       }
     }
   },
