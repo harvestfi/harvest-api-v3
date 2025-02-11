@@ -11,7 +11,7 @@ const fetchAndExpandIPORVault = async symbol => {
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
 
   const {
-    methods: { decimals, getTotalSupply: getTotalSupplyPlasma, getTotalAssets },
+    methods: { decimals, getTotalSupply: getTotalSupplyPlasma, getTotalAssets, getSymbol },
     contract: { abi },
   } = plasmaVault
 
@@ -27,6 +27,7 @@ const fetchAndExpandIPORVault = async symbol => {
   const vaultInstance = new web3Instance.eth.Contract(abi, vaultData.vaultAddress)
 
   const vaultDecimal = await decimals(vaultInstance)
+  const vaultSymbol = await getSymbol(vaultInstance)
   const totalSupply = new BigNumber(await getTotalSupplyPlasma(vaultInstance))
     .div(new BigNumber(10).exponentiatedBy(Number(vaultDecimal)))
     .toString()
@@ -54,6 +55,7 @@ const fetchAndExpandIPORVault = async symbol => {
     usdPrice,
     totalSupply,
     totalValueLocked,
+    vaultSymbol,
     allocPointData: allocPoints.allocDatas,
     inactive: vaultData.inactive ? vaultData.inactive : false,
   }
