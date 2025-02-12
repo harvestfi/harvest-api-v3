@@ -24,6 +24,7 @@ const {
   aaveInterestModel,
   zeroInterestModel,
   aaveRewards,
+  controller,
 } = require('../../lib/web3/contracts')
 
 const platforms = ['moonwell', 'aave', 'lodestar', 'zerolend', 'reactor', 'venus']
@@ -681,13 +682,16 @@ const main = async () => {
   for (const chain of Object.keys(CHAIN_IDS)) {
     console.log(`\n-- Chain: ${chain} --`)
 
-    let chainAddresses
+    let chainAddresses, controllerAddress
     if (chain == 'ETH') {
       chainAddresses = addresses.V2
+      controllerAddress = addresses.Controller
     } else if (chain == 'POLYGON') {
       chainAddresses = addresses.MATIC.V2
+      controllerAddress = addresses.MATIC.Controller
     } else {
       chainAddresses = addresses[chain].V2
+      controllerAddress = addresses[chain].Controller
     }
     let filteredAddresses = []
     for (const vault in chainAddresses) {
@@ -697,6 +701,7 @@ const main = async () => {
           if (vault != 'lodestar_LODE') {
             include = true
             chainAddresses[vault].platform = platform
+            chainAddresses[vault].id = vault
             if (vault == 'lodestar_ARB') {
               chainAddresses[vault].platform = 'venus'
             }
@@ -710,13 +715,17 @@ const main = async () => {
     }
 
     for (const vault of filteredAddresses) {
-      console.log(`\n-- Vault: ${vault.NewVault}, ${vault.platform} --`)
+      console.log(`\n-- Vault: ${vault.id} --`)
       const {
         contract: { abi: strategyAbi },
         methods: strategyMethods,
       } = strategy
+      const {
+        contract: { abi: controllerAbi },
+      } = controller
       const web3 = await getWeb3(CHAIN_IDS[chain])
       const strategyInstance = new web3.eth.Contract(strategyAbi, vault.NewStrategy)
+      const controllerInstance = new web3.eth.Contract(controllerAbi, controllerAddress)
       try {
         await strategyMethods.fold(strategyInstance)
       } catch (e) {
@@ -857,6 +866,29 @@ const main = async () => {
         optimalRate.gte(currentRate.plus(0.001)) &&
         optimalFactor.minus(currentBorrowFactor).absoluteValue().gt(0.001)
       ) {
+        const txs = []
+        txs.push({
+          to: vault.NewStrategy,
+          data: strategyInstance.methods
+            .setBorrowTargetFactorNumerator(optimalFactor.times(1000).toFixed(0))
+            .encodeABI(),
+        })
+        if (optimalFactor.gt(0) && !(await strategyMethods.fold(strategyInstance))) {
+          txs.push({
+            to: vault.NewStrategy,
+            data: strategyInstance.methods.setFold(true).encodeABI(),
+          })
+        }
+        txs.push({
+          to: controllerAddress,
+          data: controllerInstance.methods.doHardWork(vault.NewVault).encodeABI(),
+        })
+        if (optimalFactor.eq(0) && (await strategyMethods.fold(strategyInstance))) {
+          txs.push({
+            to: vault.NewStrategy,
+            data: strategyInstance.methods.setFold(false).encodeABI(),
+          })
+        }
         console.log(
           '---------------------------> Leverage NOT optimal <---------------------------',
         )
@@ -870,6 +902,8 @@ const main = async () => {
             .times(100)
             .toFixed(2)}%`,
         )
+        console.log('Vault TVL:', vaultData.usdTVL.toFixed(2))
+        console.log('Transactions:', txs)
         console.log('---')
       } else {
         console.log('Leverage optimal')
