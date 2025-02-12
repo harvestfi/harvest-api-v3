@@ -37,9 +37,10 @@ const {
   getFarmTvlLength,
   getBalanceData,
 } = require('../lib/third-party/harvest-subgraph')
-const { superformRewardData } = require('../lib/third-party/superform')
+// const { superformRewardData } = require('../lib/third-party/superform')
 const { getGmxData } = require('../lib/third-party/gmx')
 const { getCLData } = require('../lib/third-party/cl-test')
+const { checkFoldingLeverage } = require('../script/fold-check')
 
 const getProfitSharingFactor = chain => {
   switch (chain) {
@@ -656,115 +657,115 @@ const getTotalRevenue = async () => {
   console.log('-- Done getting total revenue --\n')
 }
 
-const getNanolyData = async () => {
-  console.log('\n-- Getting Nanoly endpoint data --')
+// const getNanolyData = async () => {
+//   console.log('\n-- Getting Nanoly endpoint data --')
 
-  const vaults = await loadData(Cache, DB_CACHE_IDS.VAULTS)
-  const pools = await loadData(Cache, DB_CACHE_IDS.POOLS)
-  if (!vaults) {
-    console.log(`Error getting Nanoly endpoint data due to missing data. Vaults: ${vaults}`)
-    return
-  } else if (!pools) {
-    console.log(`Error getting Nanoly endpoint data due to missing data. Pools: ${pools}`)
-    return
-  }
-  let results = [],
-    hasErrors
-  for (let networkId in vaults) {
-    for (let symbol in vaults[networkId]) {
-      if (symbol.toLowerCase().includes('univ3')) {
-        continue
-      }
-      const vault = vaults[networkId][symbol]
-      let reward = 0
-      let rewards = {}
-      if (!vault.inactive) {
-        const pool = pools[networkId].find(
-          pool =>
-            pool.id === symbol ||
-            (pool.collateralAddress &&
-              pool.collateralAddress.toLowerCase() === vault.vaultAddress.toLowerCase()),
-        )
-        const vaultAddress = vault.vaultAddress
-        const tokenAddress = vault.tokenAddress
-        const tokens = vault.tokenNames
-        let base
-        if (pool && pool.tradingApy) {
-          base = (Number(vault.estimatedApy) + Number(pool.tradingApy)) / 100
-        } else {
-          base = Number(vault.estimatedApy) / 100
-        }
-        if (pool && vault.id != 'IFARM') {
-          pool.rewardAPY.forEach((e, i) => {
-            symbol = pool.rewardTokenSymbols[i] === 'miFARM' ? 'iFARM' : pool.rewardTokenSymbols[i]
-            rewards[symbol] = Number(pool.rewardAPY[i]) / 100
-            reward = reward + Number(pool.rewardAPY[i]) / 100
-          })
-        } else {
-          const profitShare = pools['eth'].filter(pool => pool.id == 'profit-sharing-farm')
-          reward = Number(profitShare[0].rewardAPR.reduce((b, a) => b + Number(a), 0) / 100) / 100
-          rewards = {
-            FARM: reward,
-          }
-        }
-        const tvl = Number(vault.totalValueLocked).toFixed(2)
+//   const vaults = await loadData(Cache, DB_CACHE_IDS.VAULTS)
+//   const pools = await loadData(Cache, DB_CACHE_IDS.POOLS)
+//   if (!vaults) {
+//     console.log(`Error getting Nanoly endpoint data due to missing data. Vaults: ${vaults}`)
+//     return
+//   } else if (!pools) {
+//     console.log(`Error getting Nanoly endpoint data due to missing data. Pools: ${pools}`)
+//     return
+//   }
+//   let results = [],
+//     hasErrors
+//   for (let networkId in vaults) {
+//     for (let symbol in vaults[networkId]) {
+//       if (symbol.toLowerCase().includes('univ3')) {
+//         continue
+//       }
+//       const vault = vaults[networkId][symbol]
+//       let reward = 0
+//       let rewards = {}
+//       if (!vault.inactive) {
+//         const pool = pools[networkId].find(
+//           pool =>
+//             pool.id === symbol ||
+//             (pool.collateralAddress &&
+//               pool.collateralAddress.toLowerCase() === vault.vaultAddress.toLowerCase()),
+//         )
+//         const vaultAddress = vault.vaultAddress
+//         const tokenAddress = vault.tokenAddress
+//         const tokens = vault.tokenNames
+//         let base
+//         if (pool && pool.tradingApy) {
+//           base = (Number(vault.estimatedApy) + Number(pool.tradingApy)) / 100
+//         } else {
+//           base = Number(vault.estimatedApy) / 100
+//         }
+//         if (pool && vault.id != 'IFARM') {
+//           pool.rewardAPY.forEach((e, i) => {
+//             symbol = pool.rewardTokenSymbols[i] === 'miFARM' ? 'iFARM' : pool.rewardTokenSymbols[i]
+//             rewards[symbol] = Number(pool.rewardAPY[i]) / 100
+//             reward = reward + Number(pool.rewardAPY[i]) / 100
+//           })
+//         } else {
+//           const profitShare = pools['eth'].filter(pool => pool.id == 'profit-sharing-farm')
+//           reward = Number(profitShare[0].rewardAPR.reduce((b, a) => b + Number(a), 0) / 100) / 100
+//           rewards = {
+//             FARM: reward,
+//           }
+//         }
+//         const tvl = Number(vault.totalValueLocked).toFixed(2)
 
-        const ppfs = new BigNumber(vault.pricePerFullShare).div(10 ** vault.decimals)
-        const composition = {
-          [tokenAddress]: ppfs.toFixed(),
-        }
+//         const ppfs = new BigNumber(vault.pricePerFullShare).div(10 ** vault.decimals)
+//         const composition = {
+//           [tokenAddress]: ppfs.toFixed(),
+//         }
 
-        let url, chain
-        if (networkId == 'eth') {
-          chain = 'ethereum'
-          if (vault.id == 'IFARM') {
-            url = `https://app.harvest.finance/ethereum/${vault.tokenAddress}`
-          } else {
-            url = `https://app.harvest.finance/ethereum/${vault.vaultAddress}`
-          }
-        } else if (networkId == 'matic') {
-          chain = 'polygon'
-          url = `https://app.harvest.finance/polygon/${vault.vaultAddress}`
-        } else if (networkId == 'arbitrum') {
-          chain = 'arbitrum'
-          url = `https://app.harvest.finance/arbitrum/${vault.vaultAddress}`
-        } else if (networkId == 'base') {
-          chain = 'base'
-          url = `https://app.harvest.finance/base/${vault.vaultAddress}`
-        } else if (networkId == 'zksync') {
-          chain = 'zksync'
-          url = `https://app.harvest.finance/zksync/${vault.vaultAddress}`
-        }
+//         let url, chain
+//         if (networkId == 'eth') {
+//           chain = 'ethereum'
+//           if (vault.id == 'IFARM') {
+//             url = `https://app.harvest.finance/ethereum/${vault.tokenAddress}`
+//           } else {
+//             url = `https://app.harvest.finance/ethereum/${vault.vaultAddress}`
+//           }
+//         } else if (networkId == 'matic') {
+//           chain = 'polygon'
+//           url = `https://app.harvest.finance/polygon/${vault.vaultAddress}`
+//         } else if (networkId == 'arbitrum') {
+//           chain = 'arbitrum'
+//           url = `https://app.harvest.finance/arbitrum/${vault.vaultAddress}`
+//         } else if (networkId == 'base') {
+//           chain = 'base'
+//           url = `https://app.harvest.finance/base/${vault.vaultAddress}`
+//         } else if (networkId == 'zksync') {
+//           chain = 'zksync'
+//           url = `https://app.harvest.finance/zksync/${vault.vaultAddress}`
+//         }
 
-        let result = {
-          chain,
-          tokens,
-          vaultAddress,
-          tokenAddress,
-          base,
-          reward,
-          rewards,
-          url,
-          tvl,
-          composition,
-          active: true,
-        }
-        results.push(result)
-      }
-    }
-  }
+//         let result = {
+//           chain,
+//           tokens,
+//           vaultAddress,
+//           tokenAddress,
+//           base,
+//           reward,
+//           rewards,
+//           url,
+//           tvl,
+//           composition,
+//           active: true,
+//         }
+//         results.push(result)
+//       }
+//     }
+//   }
 
-  await storeData(
-    Cache,
-    DB_CACHE_IDS.STATS,
-    {
-      nanolyEndPointData: results,
-    },
-    hasErrors,
-    false,
-  )
-  console.log('-- Done getting Nanoly endpoint data --\n')
-}
+//   await storeData(
+//     Cache,
+//     DB_CACHE_IDS.STATS,
+//     {
+//       nanolyEndPointData: results,
+//     },
+//     hasErrors,
+//     false,
+//   )
+//   console.log('-- Done getting Nanoly endpoint data --\n')
+// }
 
 const getTVL = async () => {
   console.log('\n-- Getting TVL data --')
@@ -897,20 +898,20 @@ const getHistoricalRates = async () => {
   console.log('-- Done getting Historical Rates data --\n')
 }
 
-const getSuperformRewardData = async () => {
-  console.log('\n-- Getting SuperForm Reward data --')
+// const getSuperformRewardData = async () => {
+//   console.log('\n-- Getting SuperForm Reward data --')
 
-  let data, hasErrors
-  try {
-    data = await superformRewardData()
-    hasErrors = false
-  } catch (e) {
-    hasErrors = true
-  }
+//   let data, hasErrors
+//   try {
+//     data = await superformRewardData()
+//     hasErrors = false
+//   } catch (e) {
+//     hasErrors = true
+//   }
 
-  await storeData(Cache, DB_CACHE_IDS.SF_REWARDS, data, hasErrors)
-  console.log('-- Done getting SuperForm Reward data --\n')
-}
+//   await storeData(Cache, DB_CACHE_IDS.SF_REWARDS, data, hasErrors)
+//   console.log('-- Done getting SuperForm Reward data --\n')
+// }
 
 const getLeaderboardData = async () => {
   console.log('\n-- Getting Leaderboard data --')
@@ -1186,18 +1187,20 @@ const runUpdateLoop = async () => {
       resetCallCount()
     }
 
-    await getNanolyData()
-    if (DEBUG_MODE) {
-      updateCallCountCache('nanoly')
-      resetCallCount()
-    }
+    // await getNanolyData()
+    // if (DEBUG_MODE) {
+    //   updateCallCountCache('nanoly')
+    //   resetCallCount()
+    // }
 
-    await getSuperformRewardData()
-    if (DEBUG_MODE) {
-      updateCallCountCache('sfrewards')
-      resetCallCount()
-    }
+    // await getSuperformRewardData()
+    // if (DEBUG_MODE) {
+    //   updateCallCountCache('sfrewards')
+    //   resetCallCount()
+    // }
   }
+
+  await checkFoldingLeverage()
 
   await getCurrencyRates()
   if (DEBUG_MODE) {
