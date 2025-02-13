@@ -1,11 +1,10 @@
-const initDb = require('../../lib/db')
-const { cliPreload } = require('../../runtime/pollers')
+const axios = require('axios')
 
 const BigNumber = require('bignumber.js')
 const { getWeb3 } = require('../../lib/web3')
 const { getTokenPrice } = require('../../prices')
 const { getApy: getMerklApy } = require('../../vaults/apys/implementations/merkl')
-const { CHAIN_IDS } = require('../../lib/constants')
+const { CHAIN_IDS, FOLD_CHECK_DISCORD_WEBHOOK } = require('../../lib/constants')
 const addresses = require('../../../data/mainnet/addresses.json')
 const {
   mToken,
@@ -24,6 +23,7 @@ const {
   aaveInterestModel,
   zeroInterestModel,
   aaveRewards,
+  controller,
 } = require('../../lib/web3/contracts')
 
 const platforms = ['moonwell', 'aave', 'lodestar', 'zerolend', 'reactor', 'venus']
@@ -672,22 +672,22 @@ const getRate = async (borrowFactor, marketData, vaultData, interestData, chain,
   return newRate
 }
 
-const main = async () => {
+const checkFoldingLeverage = async () => {
   console.log('\n-- Running leverage checks for Folding strategies --')
-
-  await initDb()
-  await cliPreload()
 
   for (const chain of Object.keys(CHAIN_IDS)) {
     console.log(`\n-- Chain: ${chain} --`)
 
-    let chainAddresses
+    let chainAddresses, controllerAddress
     if (chain == 'ETH') {
       chainAddresses = addresses.V2
+      controllerAddress = addresses.Controller
     } else if (chain == 'POLYGON') {
       chainAddresses = addresses.MATIC.V2
+      controllerAddress = addresses.MATIC.Controller
     } else {
       chainAddresses = addresses[chain].V2
+      controllerAddress = addresses[chain].Controller
     }
     let filteredAddresses = []
     for (const vault in chainAddresses) {
@@ -697,6 +697,7 @@ const main = async () => {
           if (vault != 'lodestar_LODE') {
             include = true
             chainAddresses[vault].platform = platform
+            chainAddresses[vault].id = vault
             if (vault == 'lodestar_ARB') {
               chainAddresses[vault].platform = 'venus'
             }
@@ -710,30 +711,27 @@ const main = async () => {
     }
 
     for (const vault of filteredAddresses) {
-      console.log(`\n-- Vault: ${vault.NewVault}, ${vault.platform} --`)
       const {
         contract: { abi: strategyAbi },
         methods: strategyMethods,
       } = strategy
+      const {
+        contract: { abi: controllerAbi },
+      } = controller
       const web3 = await getWeb3(CHAIN_IDS[chain])
       const strategyInstance = new web3.eth.Contract(strategyAbi, vault.NewStrategy)
+      const controllerInstance = new web3.eth.Contract(controllerAbi, controllerAddress)
       try {
         await strategyMethods.fold(strategyInstance)
       } catch (e) {
-        console.log('Strategy not foldable')
-        console.log('---')
         continue
       }
 
       let [marketData, vaultData, interestData] = await getMarketData(vault, CHAIN_IDS[chain])
       if (marketData.collateralFactor.eq(0)) {
-        console.log('Collateral Factor 0, no leverage possible')
-        console.log('---')
         continue
       }
       if (vaultData.usdTVL.eq(0)) {
-        console.log('TVL 0, no leverage possible')
-        console.log('---')
         continue
       }
       const maxBorrowFactor = marketData.collateralFactor.minus(0.02)
@@ -857,27 +855,66 @@ const main = async () => {
         optimalRate.gte(currentRate.plus(0.001)) &&
         optimalFactor.minus(currentBorrowFactor).absoluteValue().gt(0.001)
       ) {
+        const txs = []
+        txs.push({
+          to: vault.NewStrategy,
+          data: strategyInstance.methods
+            .setBorrowTargetFactorNumerator(optimalFactor.times(1000).toFixed(0))
+            .encodeABI(),
+        })
+        if (optimalFactor.gt(0) && !(await strategyMethods.fold(strategyInstance))) {
+          txs.push({
+            to: vault.NewStrategy,
+            data: strategyInstance.methods.setFold(true).encodeABI(),
+          })
+        }
+        txs.push({
+          to: controllerAddress,
+          data: controllerInstance.methods.doHardWork(vault.NewVault).encodeABI(),
+        })
+        if (optimalFactor.eq(0) && (await strategyMethods.fold(strategyInstance))) {
+          txs.push({
+            to: vault.NewStrategy,
+            data: strategyInstance.methods.setFold(false).encodeABI(),
+          })
+        }
+        let msg = `${chain}: ${vault.id} \nCurrent Borrow Factor: ${currentBorrowFactor.toFixed(
+          4,
+        )} Current Rate: ${currentRate
+          .times(100)
+          .toFixed(2)}% \nOptimal Borrow Factor: ${optimalFactor.toFixed(
+          4,
+        )} Optimal Rate: ${optimalRate
+          .times(100)
+          .toFixed(2)}% \nVault TVL: ${vaultData.usdTVL.toFixed(2)} \nTransactions: \n`
+        for (const tx of txs) {
+          msg += `{to: ${tx.to}, data: ${tx.data}} \n`
+        }
         console.log(
           '---------------------------> Leverage NOT optimal <---------------------------',
         )
-        console.log(
-          `Current Borrow Factor: ${currentBorrowFactor.toFixed(
-            4,
-          )} Current Rate: ${currentRate.times(100).toFixed(2)}%`,
-        )
-        console.log(
-          `Optimal Borrow Factor: ${optimalFactor.toFixed(4)} Optimal Rate: ${optimalRate
-            .times(100)
-            .toFixed(2)}%`,
-        )
-        console.log('---')
-      } else {
-        console.log('Leverage optimal')
-        console.log(
-          `Current Borrow Factor: ${currentBorrowFactor.toFixed(
-            4,
-          )} Current Rate: ${currentRate.times(100).toFixed(2)}%`,
-        )
+        if (FOLD_CHECK_DISCORD_WEBHOOK) {
+          console.log('Sending Discord message for:', vault.id)
+          const green = 5763719
+          const yellow = 16705372
+          const red = 15548997
+          let color
+          if (currentRate.lt(0)) {
+            color = red
+          } else if (optimalRate.minus(currentRate).gt(0.02) && vaultData.usdTVL.gt(10000)) {
+            color = yellow
+          } else {
+            color = green
+          }
+          await axios.post(
+            FOLD_CHECK_DISCORD_WEBHOOK,
+            { embeds: [{ description: msg, color: color }] },
+            { headers: { 'Content-Type': 'application/json' } },
+          )
+        } else {
+          console.log('No Discord webhook provided, msg:')
+          console.log(msg)
+        }
         console.log('---')
       }
     }
@@ -886,4 +923,6 @@ const main = async () => {
   console.log('-- Done running leverage checks for Folding strategies --\n')
 }
 
-main().then(() => process.exit(0))
+module.exports = {
+  checkFoldingLeverage,
+}
