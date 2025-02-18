@@ -3364,6 +3364,7 @@ module.exports = {
     },
   },
   balancer_MORE_GYD: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/usdc.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'USDC'],
@@ -4635,6 +4636,7 @@ module.exports = {
     ],
   },
   extrafi_USDbC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/extra.svg'],
     apyTokenSymbols: ['EXTRA'],
@@ -4716,6 +4718,7 @@ module.exports = {
     ],
   },
   extrafi_USDz: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/extra.svg'],
     apyTokenSymbols: ['EXTRA'],
@@ -5120,6 +5123,7 @@ module.exports = {
     ],
   },
   aerodrome_rETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -5147,6 +5151,7 @@ module.exports = {
     ],
   },
   aerodrome_USDp_USDCp: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -5255,6 +5260,7 @@ module.exports = {
     ],
   },
   aerodrome_GHST_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -5853,6 +5859,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'AERO'],
   },
   aerodrome_SPOT_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -6375,6 +6382,7 @@ module.exports = {
     ],
   },
   curve_OVN_stable: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/ovn.svg'],
     apyTokenSymbols: ['CRV', 'OVN'],
@@ -8252,6 +8260,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   lodestarHodl_PENDLE: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/lode.svg', './icons/lode.svg'],
     apyTokenSymbols: ['INTEREST', 'LODE'],
@@ -10597,6 +10606,7 @@ module.exports = {
     },
   },
   aerodrome_DOLA_USDbC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -10888,6 +10898,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'AERO'],
   },
   aerodrome_cbETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -11348,6 +11359,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.F_TOKEN, params: [addresses.iFARM, '18'] },
   },
   balancer_DOLA_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/arb.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'ARB'],
