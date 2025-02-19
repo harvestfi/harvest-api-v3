@@ -1463,7 +1463,7 @@ module.exports = {
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/morpho.svg', './icons/shift.svg'],
     apyTokenSymbols: ['MORPHO', 'SHIFT'],
-    apyDescriptionOverride: ['Auto harvested', 'Coinshift SHIFT allocation'],
+    apyDescriptionOverride: ['Auto harvested', 'Coinshift allocation'],
     logoUrl: ['./icons/usdl.svg'],
     tokenNames: ['USDL'],
     platform: ['Morpho - Coinshift'],
@@ -1488,6 +1488,7 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.MANUAL,
         params: ['1x'],
+        extraDailyCompound: false,
       },
     ],
   },
