@@ -1461,8 +1461,9 @@ module.exports = {
   },
   morphoCS_USDL: {
     chain: CHAIN_IDS.ETH_MAINNET,
-    apyIconUrls: ['./icons/morpho.svg'],
-    apyTokenSymbols: ['MORPHO'],
+    apyIconUrls: ['./icons/morpho.svg', './icons/shift.svg'],
+    apyTokenSymbols: ['MORPHO', 'SHIFT'],
+    apyDescriptionOverride: ['Auto harvested', 'Coinshift SHIFT allocation'],
     logoUrl: ['./icons/usdl.svg'],
     tokenNames: ['USDL'],
     platform: ['Morpho - Coinshift'],
@@ -1483,6 +1484,10 @@ module.exports = {
           profitSharingCut15Percent,
           CHAIN_IDS.ETH_MAINNET,
         ],
+      },
+      {
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['1x'],
       },
     ],
   },
