@@ -2183,7 +2183,7 @@
         "NewPool": "0x9C3B483E00D00a620706A397a74875Af0455bAB6",
         "Market": "0xd98Be00b5D27fc98112BdE293e487f8D4cA57d07"
       },
-      "IPOR_USDC_arbitrum": {
+      "IPOR_USDC_arbitrum_old": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
         "NewVault": "0x7fBFD8cdA97C0221B39C581c34AFD24C523a3990",
         "doHardwork": false
@@ -2222,6 +2222,21 @@
         "NewStrategy": "0x0a177FB1A1ab11c508b13485084C180c46B9D889",
         "NewPool": "0xd0d7056af94d60D5746810d15b7eaFAfa613Ada7",
         "cToken": "0xaDa57840B372D4c28623E87FC175dE8490792811"
+      },
+      "IPOR_USDC_arbitrum": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0xC015d83e24FDDe23100AD1E9baD837878fbfaB94",
+        "doHardwork": false
+      },
+      "IPOR_WETH_arbitrum": {
+        "Underlying": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        "NewVault": "0x18B9Dc9762Ec6095f34f2d77042Ab8283fA764B4",
+        "doHardwork": false
+      },
+      "IPOR_WBTC_arbitrum": {
+        "Underlying": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+        "NewVault": "0xD66964BD4049f7Fd2e279FE048eAA2c12E802658",
+        "doHardwork": false
       }
     }
   },
@@ -3119,17 +3134,17 @@
         "NewPool": "0x27DC545a5BD85FF9f0E77a7512cd3bD0b19455a4",
         "MorphoVault": "0x616a4E1db48e22028f6bbf20444Cd3b8e3273738"
       },
-      "IPOR_USDC_base": {
+      "IPOR_USDC_base_old": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         "NewVault": "0xD00E821C550Ce92EbD4A70bEcb02657dA7A5c562",
         "doHardwork": false
       },
-      "IPOR_WETH_base": {
+      "IPOR_WETH_base_old": {
         "Underlying": "0x4200000000000000000000000000000000000006",
         "NewVault": "0x31A36d3eAB4A8e0d365eB72EE9079603aF6C421c",
         "doHardwork": false
       },
-      "IPOR_cbBTC_base": {
+      "IPOR_cbBTC_base_old": {
         "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
         "NewVault": "0x370A3D2800b1ea990634835a5709fB31082de6d9",
         "doHardwork": false
@@ -3354,6 +3369,21 @@
         "NewStrategy": "0x1E60Ef07672Caf90035EB683ea33929cCf4fc4F4",
         "NewPool": "0x66981aD9EF5846622c85205E11c644017638f1cF",
         "MorphoVault": "0x7BfA7C4f149E7415b73bdeDfe609237e29CBF34A"
+      },
+      "IPOR_USDC_base": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x0d877Dc7C8Fa3aD980DfDb18B48eC9F8768359C4",
+        "doHardwork": false
+      },
+      "IPOR_WETH_base": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0x7872893e528Fe2c0829e405960db5B742112aa97",
+        "doHardwork": false
+      },
+      "IPOR_cbBTC_base": {
+        "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        "NewVault": "0x31A421271414641cb5063B71594b642D2666dB6B",
+        "doHardwork": false
       }
     }
   },
