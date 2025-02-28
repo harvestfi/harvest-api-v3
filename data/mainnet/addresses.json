@@ -2225,17 +2225,17 @@
       },
       "IPOR_USDC_arbitrum": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
-        "NewVault": "0xBa37b2b01A9443daD533a63A8791D1C25ec3674c",
+        "NewVault": "0xC015d83e24FDDe23100AD1E9baD837878fbfaB94",
         "doHardwork": false
       },
       "IPOR_WETH_arbitrum": {
         "Underlying": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
-        "NewVault": "0xF0c9DC8512ad23C00a576b0BAFb661Ccd8e35d88",
+        "NewVault": "0x18B9Dc9762Ec6095f34f2d77042Ab8283fA764B4",
         "doHardwork": false
       },
       "IPOR_WBTC_arbitrum": {
         "Underlying": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
-        "NewVault": "0x548EBB86287ac06082405bf3862c61c4E1ea996D",
+        "NewVault": "0xD66964BD4049f7Fd2e279FE048eAA2c12E802658",
         "doHardwork": false
       }
     }
@@ -3372,17 +3372,17 @@
       },
       "IPOR_USDC_base": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
-        "NewVault": "0x71f856a030B1f5e75a85779a770d8CF96Fb4a1Cb",
+        "NewVault": "0x0d877Dc7C8Fa3aD980DfDb18B48eC9F8768359C4",
         "doHardwork": false
       },
       "IPOR_WETH_base": {
         "Underlying": "0x4200000000000000000000000000000000000006",
-        "NewVault": "0x168826EA6576c93cFca473A16bA14f245a188346",
+        "NewVault": "0x7872893e528Fe2c0829e405960db5B742112aa97",
         "doHardwork": false
       },
       "IPOR_cbBTC_base": {
         "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-        "NewVault": "0xc4CCeFe822b78898C81AEF6826D2c589bC50cD61",
+        "NewVault": "0x31A421271414641cb5063B71594b642D2666dB6B",
         "doHardwork": false
       }
     }
