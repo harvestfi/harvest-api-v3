@@ -28,6 +28,8 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
   const unrealizedFee = new BigNumber(await methods.getUnrealizedManagementFee(pVaultInstance)).div(
     10 ** underlyingDecimal,
   )
+  const data = await methods.getManagementFeeData(pVaultInstance)
+  const iporFee = new BigNumber(data.feeInPercentage ?? 0).div(100)
 
   const fuses = await methods.getInstantWithdrawalFuses(pVaultInstance)
   const allocDatas = []
@@ -86,7 +88,7 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
 
   return {
     allocDatas,
-    apy: apy.isNaN() ? 0 : apy.toFixed(2, 1),
+    apy: apy.isNaN() ? 0 : apy.toFixed(2, 1) - iporFee.toFixed(),
   }
 }
 
