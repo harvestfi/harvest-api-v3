@@ -19,17 +19,12 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
     contract: { abi: fuseAbi },
   } = plasmaFuse
   const {
-    methods: { getDecimals },
+    methods: { getDecimals, getBalance },
     contract: { abi: tokenAbi },
   } = tokenContractData
   const pVaultInstance = new web3.eth.Contract(contract.abi, pVault)
   const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
   const underlyingDecimal = await getDecimals(underlyingInstance)
-  const unrealizedFee = new BigNumber(await methods.getUnrealizedManagementFee(pVaultInstance)).div(
-    10 ** underlyingDecimal,
-  )
-  const data = await methods.getManagementFeeData(pVaultInstance)
-  const iporFee = new BigNumber(data.feeInPercentage ?? 0).div(100)
 
   const fuses = await methods.getInstantWithdrawalFuses(pVaultInstance)
   const allocDatas = []
@@ -67,10 +62,7 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
     )
   }
 
-  const totalAssets = new BigNumber(await methods.getTotalAssets(pVaultInstance)).div(
-    10 ** underlyingDecimal,
-  )
-  const notInvestedAmount = totalAssets.minus(assetsOld).plus(unrealizedFee)
+  const notInvestedAmount = new BigNumber(await getBalance(pVault, underlyingInstance))
 
   const notInvestedData = {
     hVaultId: 'Not invested',
@@ -88,7 +80,7 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
 
   return {
     allocDatas,
-    apy: apy.isNaN() ? 0 : apy.toFixed(2, 1) - iporFee.toFixed(),
+    apy: apy.isNaN() ? 0 : apy.toFixed(2),
   }
 }
 
