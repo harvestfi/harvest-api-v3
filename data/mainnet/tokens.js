@@ -1334,6 +1334,7 @@ module.exports = {
     },
   },
   venus_WUSDM: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     apyIconUrls: ['./icons/zk.svg', './icons/xvs.svg'],
     apyTokenSymbols: ['ZK', 'XVS'],
