@@ -62,7 +62,9 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
     )
   }
 
-  const notInvestedAmount = new BigNumber(await getBalance(pVault, underlyingInstance))
+  const notInvestedAmount = new BigNumber(await getBalance(pVault, underlyingInstance)).div(
+    10 ** underlyingDecimal,
+  )
 
   const notInvestedData = {
     hVaultId: 'Not invested',
