@@ -13,13 +13,8 @@ const getApy = async (userAddress, poolAddress, chainId, reduction) => {
     const data = get(response, `data`, 0)
     const keys = Object.keys(data)
     for (let key of keys) {
-      const campaigns = get(data, `${key}.campaigns.active`)
-      for (let campaign of campaigns) {
-        if (campaign.campaignParameters.blacklist.includes(userAddress)) {
-          continue
-        }
-        apy += campaign.apr
-      }
+      const apr = get(data, `${key}.apr`, 0)
+      apy += parseFloat(apr)
     }
     apy = parseFloat(apy) * parseFloat(reduction)
     if (isNaN(apy)) {

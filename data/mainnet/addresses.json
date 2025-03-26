@@ -993,6 +993,27 @@
         "NewPool": "0xA9EAA8d7474669b46740267d69a913BF8274c09D",
         "StakingRewards": "0x144Dc3396976Aa0955Ca6Ee1aC4a2f9842198BA0",
         "doHardwork": false
+      },
+      "morphoCompound_ETH": {
+        "Underlying": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
+        "NewVault": "0xF977FF1e9A69BED009be1d0202ad4472fd7e6E1C",
+        "NewStrategy": "0x9D270Ff77fD161a5cfd871e9ee5c6695c38336aC",
+        "NewPool": "0x10b12068504491b11337BF12c3B59347A96003E8",
+        "MorphoVault": "0xF5C81d25ee174d83f1FD202cA94AE6070d073cCF"
+      },
+      "morphoCompound_USDC": {
+        "Underlying": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+        "NewVault": "0x8C88E410D75e4d7aeF470c95f83fE4d70643073E",
+        "NewStrategy": "0xCDd5bF953E92D42320dbfB3EFE2A239e83167a6F",
+        "NewPool": "0x80A611976328b88bc7141f2fa65a3988af2199b8",
+        "MorphoVault": "0x781FB7F6d845E3bE129289833b04d43Aa8558c42"
+      },
+      "morphoCompound_USDT": {
+        "Underlying": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+        "NewVault": "0x7e50F45971e6eAE705E915024669c3075Ed381cB",
+        "NewStrategy": "0x723BEDbd8c99Ff6B7dF575B6dF8ee173C5Cad084",
+        "NewPool": "0xEB6E2511ffcCe49184b9330fF9177Ebe33246d5e",
+        "MorphoVault": "0xfD06859A671C21497a2EB8C5E3fEA48De924D6c8"
       }
     }
   },

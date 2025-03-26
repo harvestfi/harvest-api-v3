@@ -5,6 +5,72 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'morphoCompound_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.morphoCompound_ETH.NewPool,
+    collateralAddress: addresses.MATIC.V2.morphoCompound_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.morphoCompound_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>in a Morpho Compound pool, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">wPOL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.morphoCompound_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'morphoCompound_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.morphoCompound_USDC.NewPool,
+    collateralAddress: addresses.MATIC.V2.morphoCompound_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.morphoCompound_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>in a Morpho Compound pool, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">wPOL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.morphoCompound_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.POLYGON_MAINNET,
+    id: 'morphoCompound_USDT',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.MATIC.V2.morphoCompound_USDT.NewPool,
+    collateralAddress: addresses.MATIC.V2.morphoCompound_USDT.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.MATIC.miFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.morphoCompound_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT </a>in a Morpho Compound pool, earning 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.COMP}" target="_blank" rel="noopener noreferrer">COMP</a> & 
+       <a href="https://polygonscan.com/token/${addresses.MATIC.WMATIC}" target="_blank" rel="noopener noreferrer">wPOL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://polygonscan.com/token/${addresses.MATIC.V2.morphoCompound_USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'morphoGC_ETH',
     type: POOL_TYPES.INCENTIVE,
