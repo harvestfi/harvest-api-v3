@@ -241,7 +241,14 @@ const aaveInterestModelContract = require('../contracts/aave-interest-model/cont
 const zeroInterestModelMethods = require('../contracts/zero-interest-model/methods')
 const zeroInterestModelContract = require('../contracts/zero-interest-model/contract.json')
 
+const dripMethods = require('../contracts/drip/methods')
+const dripContract = require('../contracts/drip/contract.json')
+
 module.exports = {
+  drip: {
+    methods: dripMethods,
+    contract: dripContract,
+  },
   aaveInterestModel: {
     methods: aaveInterestModelMethods,
     contract: aaveInterestModelContract,

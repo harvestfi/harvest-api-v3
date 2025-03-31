@@ -156,8 +156,18 @@ module.exports = {
           addresses.ARBITRUM_ONE.V2.IPOR_USDC_arbitrum.NewVault,
           CHAIN_IDS.ARBITRUM_ONE,
         ],
+        extraDailyCompound: false,
+      },
+      {
+        type: ESTIMATED_APY_TYPES.DRIP,
+        params: [
+          addresses.ARBITRUM_ONE.V2.IPOR_USDC_arbitrum.NewVault,
+          addresses.ARBITRUM_ONE.Drip,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
       },
     ],
+    apyDescriptionOverride: ['Auto harvested', 'Auto compounded Incentives'],
   },
   IPOR_WETH_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
@@ -185,8 +195,18 @@ module.exports = {
           addresses.ARBITRUM_ONE.V2.IPOR_WETH_arbitrum.NewVault,
           CHAIN_IDS.ARBITRUM_ONE,
         ],
+        extraDailyCompound: false,
+      },
+      {
+        type: ESTIMATED_APY_TYPES.DRIP,
+        params: [
+          addresses.ARBITRUM_ONE.V2.IPOR_WETH_arbitrum.NewVault,
+          addresses.ARBITRUM_ONE.Drip,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
       },
     ],
+    apyDescriptionOverride: ['Auto harvested', 'Auto compounded Incentives'],
   },
   IPOR_WBTC_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
@@ -214,8 +234,18 @@ module.exports = {
           addresses.ARBITRUM_ONE.V2.IPOR_WBTC_arbitrum.NewVault,
           CHAIN_IDS.ARBITRUM_ONE,
         ],
+        extraDailyCompound: false,
+      },
+      {
+        type: ESTIMATED_APY_TYPES.DRIP,
+        params: [
+          addresses.ARBITRUM_ONE.V2.IPOR_WBTC_arbitrum.NewVault,
+          addresses.ARBITRUM_ONE.Drip,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
       },
     ],
+    apyDescriptionOverride: ['Auto harvested', 'Auto compounded Incentives'],
   },
   IPOR_USDC_base: {
     chain: CHAIN_IDS.BASE,
@@ -243,8 +273,14 @@ module.exports = {
           addresses.BASE.V2.IPOR_USDC_base.NewVault,
           CHAIN_IDS.BASE,
         ],
+        extraDailyCompound: false,
+      },
+      {
+        type: ESTIMATED_APY_TYPES.DRIP,
+        params: [addresses.BASE.V2.IPOR_USDC_base.NewVault, addresses.BASE.Drip, CHAIN_IDS.BASE],
       },
     ],
+    apyDescriptionOverride: ['Auto harvested', 'Auto compounded Incentives'],
   },
   IPOR_WETH_base: {
     chain: CHAIN_IDS.BASE,
@@ -272,8 +308,14 @@ module.exports = {
           addresses.BASE.V2.IPOR_WETH_base.NewVault,
           CHAIN_IDS.BASE,
         ],
+        extraDailyCompound: false,
+      },
+      {
+        type: ESTIMATED_APY_TYPES.DRIP,
+        params: [addresses.BASE.V2.IPOR_WETH_base.NewVault, addresses.BASE.Drip, CHAIN_IDS.BASE],
       },
     ],
+    apyDescriptionOverride: ['Auto harvested', 'Auto compounded Incentives'],
   },
   IPOR_cbBTC_base: {
     chain: CHAIN_IDS.BASE,
@@ -301,8 +343,14 @@ module.exports = {
           addresses.BASE.V2.IPOR_cbBTC_base.NewVault,
           CHAIN_IDS.BASE,
         ],
+        extraDailyCompound: false,
+      },
+      {
+        type: ESTIMATED_APY_TYPES.DRIP,
+        params: [addresses.BASE.V2.IPOR_cbBTC_base.NewVault, addresses.BASE.Drip, CHAIN_IDS.BASE],
       },
     ],
+    apyDescriptionOverride: ['Auto harvested', 'Auto compounded Incentives'],
   },
   morphoGC_ETH: {
     chain: CHAIN_IDS.BASE,

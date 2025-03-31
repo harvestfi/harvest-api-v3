@@ -6,6 +6,7 @@ const { omit } = require('lodash')
 const { UI_DATA_FILES } = require('../lib/constants')
 const { getUIData } = require('../lib/data')
 const { getPlasmaVaultData } = require('../lib/third-party/ipor.js')
+const { executeEstimateApyFunctions } = require('./apys')
 
 const fetchAndExpandIPORVault = async symbol => {
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
@@ -47,11 +48,18 @@ const fetchAndExpandIPORVault = async symbol => {
 
   totalValueLocked = new BigNumber(totalAssets).multipliedBy(usdPrice).toString()
 
+  const { estimatedApy, estimatedApyBreakdown } = await executeEstimateApyFunctions(
+    symbol,
+    vaultData.estimateApyFunctions,
+  )
+
+  console.log(estimatedApy, estimatedApyBreakdown)
+
   return {
     ...omit(vaultData, ['priceFunction', 'estimateApyFunctions', 'inactive']),
     pricePerFullShare,
-    estimatedApy: allocPoints.apy,
-    estimatedApyBreakdown: [allocPoints.apy],
+    estimatedApy: estimatedApy,
+    estimatedApyBreakdown: estimatedApyBreakdown,
     usdPrice,
     totalSupply,
     totalValueLocked,

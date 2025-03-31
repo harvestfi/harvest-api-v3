@@ -26,6 +26,9 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
   const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
   const underlyingDecimal = await getDecimals(underlyingInstance)
 
+  const data = await methods.getManagementFeeData(pVaultInstance)
+  const iporFee = new BigNumber(data.feeInPercentage ?? 0).div(200)
+
   const fuses = await methods.getInstantWithdrawalFuses(pVaultInstance)
   const allocDatas = []
   let assetsOld = new BigNumber(0),
@@ -82,7 +85,7 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
 
   return {
     allocDatas,
-    apy: apy.isNaN() ? 0 : apy.toFixed(2),
+    apy: apy.isNaN() ? 0 : apy.toFixed(2) - iporFee.toFixed(),
   }
 }
 
