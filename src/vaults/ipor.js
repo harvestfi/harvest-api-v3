@@ -53,8 +53,6 @@ const fetchAndExpandIPORVault = async symbol => {
     vaultData.estimateApyFunctions,
   )
 
-  console.log(estimatedApy, estimatedApyBreakdown)
-
   return {
     ...omit(vaultData, ['priceFunction', 'estimateApyFunctions', 'inactive']),
     pricePerFullShare,
