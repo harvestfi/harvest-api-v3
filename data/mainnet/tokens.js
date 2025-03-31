@@ -167,7 +167,7 @@ module.exports = {
         ],
       },
     ],
-    apyDescriptionOverride: ['Auto harvested', 'Auto compounded Incentives'],
+    apyDescriptionOverride: ['Auto harvested', 'Incentives'],
   },
   IPOR_WETH_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
@@ -206,7 +206,7 @@ module.exports = {
         ],
       },
     ],
-    apyDescriptionOverride: ['Auto harvested', 'Auto compounded Incentives'],
+    apyDescriptionOverride: ['Auto harvested', 'Incentives'],
   },
   IPOR_WBTC_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
@@ -245,7 +245,7 @@ module.exports = {
         ],
       },
     ],
-    apyDescriptionOverride: ['Auto harvested', 'Auto compounded Incentives'],
+    apyDescriptionOverride: ['Auto harvested', 'Incentives'],
   },
   IPOR_USDC_base: {
     chain: CHAIN_IDS.BASE,
@@ -280,7 +280,7 @@ module.exports = {
         params: [addresses.BASE.V2.IPOR_USDC_base.NewVault, addresses.BASE.Drip, CHAIN_IDS.BASE],
       },
     ],
-    apyDescriptionOverride: ['Auto harvested', 'Auto compounded Incentives'],
+    apyDescriptionOverride: ['Auto harvested', 'Incentives'],
   },
   IPOR_WETH_base: {
     chain: CHAIN_IDS.BASE,
@@ -315,7 +315,7 @@ module.exports = {
         params: [addresses.BASE.V2.IPOR_WETH_base.NewVault, addresses.BASE.Drip, CHAIN_IDS.BASE],
       },
     ],
-    apyDescriptionOverride: ['Auto harvested', 'Auto compounded Incentives'],
+    apyDescriptionOverride: ['Auto harvested', 'Incentives'],
   },
   IPOR_cbBTC_base: {
     chain: CHAIN_IDS.BASE,
@@ -350,7 +350,7 @@ module.exports = {
         params: [addresses.BASE.V2.IPOR_cbBTC_base.NewVault, addresses.BASE.Drip, CHAIN_IDS.BASE],
       },
     ],
-    apyDescriptionOverride: ['Auto harvested', 'Auto compounded Incentives'],
+    apyDescriptionOverride: ['Auto harvested', 'Incentives'],
   },
   morphoGC_ETH: {
     chain: CHAIN_IDS.BASE,
