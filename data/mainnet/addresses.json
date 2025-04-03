@@ -3390,9 +3390,9 @@
       },
       "euler_USR_AR": {
         "Underlying": "0x35E5dB674D8e93a03d814FA0ADa70731efe8a4b9",
-        "NewVault": "0xc01e3525eB99C7BB6d6ecb0e6F3A26E18E27E657",
-        "NewStrategy": "0xF07df3114Ff5a6E0433bBC1Cb5A0c686926c5468",
-        "NewPool": "0xBB5289ca4aAbb9E934cbD6caDb1b0860D95A02E2"
+        "NewVault": "0x79a7f26a3EA939Cd5BE6d5Cbc85ff42553fDBa84",
+        "NewStrategy": "0xB67e91568E2E12739960cFa6755404f718872528",
+        "NewPool": "0x4B7d0Dc7afDcf8f96edcf79B99F5D4E5b12AD9Bc"
       }
     }
   },
