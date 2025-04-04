@@ -3407,6 +3407,27 @@
         "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
         "NewVault": "0x31A421271414641cb5063B71594b642D2666dB6B",
         "doHardwork": false
+      },
+      "euler_USDC_AR": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x06A26034dD4a8D84318e18a2bB9Ddc13313d7D04",
+        "NewStrategy": "0x3d6826CE0FB7A20123E25e4B9a9B7DAf7e0DE602",
+        "NewPool": "0x41EF12f0309502c29AF9056E2a3894AD1427FEC5",
+        "EulerVault": "0xC063C3b3625DF5F362F60f35B0bcd98e0fa650fb"
+      },
+      "euler_EURC_EUL": {
+        "Underlying": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
+        "NewVault": "0x2fe2f7Aa2D92465AfF55Ed2192E364484bb25157",
+        "NewStrategy": "0xbA0E9FfcAe4a2Ec0B44630a1E88012096F507679",
+        "NewPool": "0xF9B6c06Da9c1302e89e86fbF68Dc4BF6074Ee378",
+        "EulerVault": "0x9ECD9fbbdA32b81dee51AdAed28c5C5039c87117"
+      },
+      "euler_USR_AR": {
+        "Underlying": "0x35E5dB674D8e93a03d814FA0ADa70731efe8a4b9",
+        "NewVault": "0x79a7f26a3EA939Cd5BE6d5Cbc85ff42553fDBa84",
+        "NewStrategy": "0xB67e91568E2E12739960cFa6755404f718872528",
+        "NewPool": "0x4B7d0Dc7afDcf8f96edcf79B99F5D4E5b12AD9Bc",
+        "EulerVault": "0x29Dbce367F5157B924Af5093617bb128477D7A5C"
       }
     }
   },

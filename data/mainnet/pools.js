@@ -5,6 +5,69 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_USDC_AR',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_USDC_AR.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_USDC_AR.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_USDC_AR.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Euler Apostro Resolv Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_USDC_AR.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_USDC_AR.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_EURC_EUL',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_EURC_EUL.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_EURC_EUL.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EURC_EUL.Underlying}" target="_blank" rel="noopener noreferrer"> EURC </a>to the Euler Base Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EURC_EUL.Underlying}" target="_blank" rel="noopener noreferrer">EURC</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EURC_EUL.Underlying}" target="_blank" rel="noopener noreferrer"> EURC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_USR_AR',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_USR_AR.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_USR_AR.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_USR_AR.Underlying}" target="_blank" rel="noopener noreferrer"> USR </a>to the Euler Apostro Resolv Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_USR_AR.Underlying}" target="_blank" rel="noopener noreferrer">USR</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_USR_AR.Underlying}" target="_blank" rel="noopener noreferrer"> USR</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'morphoCompound_ETH',
     type: POOL_TYPES.INCENTIVE,

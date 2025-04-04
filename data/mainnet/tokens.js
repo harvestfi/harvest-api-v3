@@ -46,6 +46,87 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  euler_USDC_AR: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/usdc.svg'],
+    apyTokenSymbols: ['USDC'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Euler - Apostro Resolv'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.BASE.V2.euler_USDC_AR.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.euler_USDC_AR.NewVault,
+    strategyAddress: addresses.BASE.V2.euler_USDC_AR.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.EULER_VAULT,
+        params: [
+          addresses.BASE.V2.euler_USDC_AR.EulerVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
+  euler_EURC_EUL: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/eurc.svg'],
+    apyTokenSymbols: ['EURC'],
+    logoUrl: ['./icons/eurc.svg'],
+    tokenNames: ['EURC'],
+    platform: ['Euler - Euler Base'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.BASE.V2.euler_EURC_EUL.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.euler_EURC_EUL.NewVault,
+    strategyAddress: addresses.BASE.V2.euler_EURC_EUL.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['euro-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.EULER_VAULT,
+        params: [
+          addresses.BASE.V2.euler_EURC_EUL.EulerVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
+  euler_USR_AR: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/usr.svg'],
+    apyTokenSymbols: ['USR'],
+    logoUrl: ['./icons/usr.svg'],
+    tokenNames: ['USR'],
+    platform: ['Euler - Apostro Resolv'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.BASE.V2.euler_USR_AR.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.euler_USR_AR.NewVault,
+    strategyAddress: addresses.BASE.V2.euler_USR_AR.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['resolv-usr'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.EULER_VAULT,
+        params: [
+          addresses.BASE.V2.euler_USR_AR.EulerVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
   morphoCompound_ETH: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/eth.svg'],

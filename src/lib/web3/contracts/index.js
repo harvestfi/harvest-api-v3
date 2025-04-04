@@ -244,7 +244,14 @@ const zeroInterestModelContract = require('../contracts/zero-interest-model/cont
 const dripMethods = require('../contracts/drip/methods')
 const dripContract = require('../contracts/drip/contract.json')
 
+const eulerVaultMethods = require('../contracts/euler-vault/methods')
+const eulerVaultContract = require('../contracts/euler-vault/contract.json')
+
 module.exports = {
+  eulerVault: {
+    methods: eulerVaultMethods,
+    contract: eulerVaultContract,
+  },
   drip: {
     methods: dripMethods,
     contract: dripContract,
