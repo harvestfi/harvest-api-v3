@@ -3396,6 +3396,13 @@
         "NewStrategy": "0xB67e91568E2E12739960cFa6755404f718872528",
         "NewPool": "0x4B7d0Dc7afDcf8f96edcf79B99F5D4E5b12AD9Bc",
         "EulerVault": "0x29Dbce367F5157B924Af5093617bb128477D7A5C"
+      },
+      "aave_EURC": {
+        "Underlying": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
+        "NewVault": "0x5121d1f06716c90737cDFA7D14f36A049c7C83e1",
+        "NewStrategy": "0x8edDE35650E24Aba326f9BF12f1343b7962BD932",
+        "NewPool": "0x5CDFd93C03A80eEADcB921669842E28EB3ad3363",
+        "AavePool": "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5"
       }
     }
   },

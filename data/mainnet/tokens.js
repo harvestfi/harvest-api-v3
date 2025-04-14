@@ -46,6 +46,34 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  aave_EURC_base: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/aave.svg'],
+    apyTokenSymbols: ['AAVE'],
+    logoUrl: ['./icons/eurc.svg'],
+    tokenNames: ['EURC'],
+    platform: ['Aave'],
+    tags: ['Beginners', 'Stable'],
+    tokenAddress: addresses.BASE.V2.aave_EURC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.aave_EURC.NewVault,
+    strategyAddress: addresses.BASE.V2.aave_EURC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['euro-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.AAVE_SUPPLY,
+        params: [
+          addresses.BASE.V2.aave_EURC.Underlying,
+          addresses.BASE.V2.aave_EURC.AavePool,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
   morphoCompound_ETH: {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/eth.svg'],

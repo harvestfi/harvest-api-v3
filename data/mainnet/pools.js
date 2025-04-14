@@ -5,6 +5,26 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'aave_EURC_base',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.aave_EURC.NewPool,
+    collateralAddress: addresses.BASE.V2.aave_EURC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aave_EURC.Underlying}" target="_blank" rel="noopener noreferrer"> EURC </a>to Aave, earning EURC interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aave_EURC.Underlying}" target="_blank" rel="noopener noreferrer"> EURC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.POLYGON_MAINNET,
     id: 'morphoCompound_ETH',
     type: POOL_TYPES.INCENTIVE,
