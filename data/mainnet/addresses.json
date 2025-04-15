@@ -2131,7 +2131,7 @@
         "NewVault": "0x6f5deeFd5017c40d03899a8d2491C8993A2B4Ad6",
         "NewStrategy": "0x723Eb77414bF19c29631e1820883749ef4f365ed",
         "NewPool": "0x381a99928A689E27E345186032244F26f2cAEa4D",
-        "doHardwork": "noSim"
+        "doHardwork": false
       },
       "curve_USDe_USDx": {
         "Underlying": "0x096A8865367686290639bc50bF8D85C0110d9Fea",
