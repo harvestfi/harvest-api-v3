@@ -6,6 +6,27 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.BASE,
+    id: 'moonwell_MORPHO',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.moonwell_MORPHO.NewPool,
+    collateralAddress: addresses.BASE.V2.moonwell_MORPHO.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_MORPHO.Underlying}" target="_blank" rel="noopener noreferrer"> MORPHO </a>to Moonwell, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_MORPHO.Underlying}" target="_blank" rel="noopener noreferrer"> MORPHO</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
     id: 'aave_EURC_base',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.BASE.V2.aave_EURC.NewPool,

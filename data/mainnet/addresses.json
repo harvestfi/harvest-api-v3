@@ -3403,6 +3403,13 @@
         "NewStrategy": "0x8edDE35650E24Aba326f9BF12f1343b7962BD932",
         "NewPool": "0x5CDFd93C03A80eEADcB921669842E28EB3ad3363",
         "AavePool": "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5"
+      },
+      "moonwell_MORPHO": {
+        "Underlying": "0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
+        "NewVault": "0xff232227BE3771BcaFB0C177BaC097767b0a8102",
+        "NewStrategy": "0x63fDf876b2FC0fF8D33fd54426A99957ecf33640",
+        "NewPool": "0x32Da1138f46280933045D7bBC70C86f98f8b22C3",
+        "mToken": "0x6308204872BdB7432dF97b04B42443c714904F3E"
       }
     }
   },
