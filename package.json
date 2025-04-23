@@ -13,6 +13,7 @@
     "test": "PORT=3000 MONGODB_DB_NAME=harvest-test-local ACTIVE_ENDPOINTS=all mocha ./test/integration/*  --timeout 600000",
     "debug-web3": "DEBUG_MODE=true yarn start",
     "print-vault": "node ./test/cli/print-vault",
+    "test-fold-leverage": "node ./test/cli/test-fold-leverage",
     "test-schema": "node ./test/cli/test-schema",
     "print-diff": "node ./test/cli/test-diff",
     "lint": "eslint ./",

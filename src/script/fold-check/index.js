@@ -509,7 +509,7 @@ const getMarketData = async (vault, chain) => {
     const merklSupply = new BigNumber(
       await getMerklApy(vault.NewStrategy, vault.mToken ? vault.mToken : vault.cToken, chain, 1),
     )
-    if (merklSupply.gt(0)) {
+    if (merklSupply.gt(0) && vault.id != 'moonwell_tBTC') {
       usdRewardSupply = usdRewardSupply.plus(merklSupply.times(marketData.usdSupplied).div(100))
     }
   }

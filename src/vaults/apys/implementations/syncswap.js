@@ -21,7 +21,10 @@ const getApy = async (underlying, strategyAddr, stakingPool, reduction) => {
       const rewardToken = await stakingMethods.getRewardToken(i, rewardInstance)
       const rewardData = await stakingMethods.getRewardData(rewardToken, rewardInstance)
       const rewardPrice = await getTokenPrice(rewardToken, CHAIN_IDS.ZKSYNC)
-      const rewardPerYear = new BigNumber(rewardData.rewardRate).times(secondsPerYear).div(1e18)
+      let rewardPerYear = new BigNumber(0)
+      if (rewardData.rewardAmount > 0) {
+        rewardPerYear = new BigNumber(rewardData.rewardRate).times(secondsPerYear).div(1e18)
+      }
       rewardUsdPerYear = rewardUsdPerYear.plus(rewardPerYear.times(rewardPrice))
     }
 

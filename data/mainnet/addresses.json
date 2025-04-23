@@ -2132,7 +2132,7 @@
         "NewVault": "0x6f5deeFd5017c40d03899a8d2491C8993A2B4Ad6",
         "NewStrategy": "0x723Eb77414bF19c29631e1820883749ef4f365ed",
         "NewPool": "0x381a99928A689E27E345186032244F26f2cAEa4D",
-        "doHardwork": "noSim"
+        "doHardwork": false
       },
       "curve_USDe_USDx": {
         "Underlying": "0x096A8865367686290639bc50bF8D85C0110d9Fea",
@@ -3428,6 +3428,41 @@
         "NewStrategy": "0xB67e91568E2E12739960cFa6755404f718872528",
         "NewPool": "0x4B7d0Dc7afDcf8f96edcf79B99F5D4E5b12AD9Bc",
         "EulerVault": "0x29Dbce367F5157B924Af5093617bb128477D7A5C"
+      },
+      "euler_USDC_AR": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x06A26034dD4a8D84318e18a2bB9Ddc13313d7D04",
+        "NewStrategy": "0x3d6826CE0FB7A20123E25e4B9a9B7DAf7e0DE602",
+        "NewPool": "0x41EF12f0309502c29AF9056E2a3894AD1427FEC5",
+        "EulerVault": "0xC063C3b3625DF5F362F60f35B0bcd98e0fa650fb"
+      },
+      "euler_EURC_EUL": {
+        "Underlying": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
+        "NewVault": "0x2fe2f7Aa2D92465AfF55Ed2192E364484bb25157",
+        "NewStrategy": "0xbA0E9FfcAe4a2Ec0B44630a1E88012096F507679",
+        "NewPool": "0xF9B6c06Da9c1302e89e86fbF68Dc4BF6074Ee378",
+        "EulerVault": "0x9ECD9fbbdA32b81dee51AdAed28c5C5039c87117"
+      },
+      "euler_USR_AR": {
+        "Underlying": "0x35E5dB674D8e93a03d814FA0ADa70731efe8a4b9",
+        "NewVault": "0x79a7f26a3EA939Cd5BE6d5Cbc85ff42553fDBa84",
+        "NewStrategy": "0xB67e91568E2E12739960cFa6755404f718872528",
+        "NewPool": "0x4B7d0Dc7afDcf8f96edcf79B99F5D4E5b12AD9Bc",
+        "EulerVault": "0x29Dbce367F5157B924Af5093617bb128477D7A5C"
+      },
+      "aave_EURC": {
+        "Underlying": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
+        "NewVault": "0x5121d1f06716c90737cDFA7D14f36A049c7C83e1",
+        "NewStrategy": "0x8edDE35650E24Aba326f9BF12f1343b7962BD932",
+        "NewPool": "0x5CDFd93C03A80eEADcB921669842E28EB3ad3363",
+        "AavePool": "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5"
+      },
+      "moonwell_MORPHO": {
+        "Underlying": "0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
+        "NewVault": "0xff232227BE3771BcaFB0C177BaC097767b0a8102",
+        "NewStrategy": "0x63fDf876b2FC0fF8D33fd54426A99957ecf33640",
+        "NewPool": "0x32Da1138f46280933045D7bBC70C86f98f8b22C3",
+        "mToken": "0x6308204872BdB7432dF97b04B42443c714904F3E"
       }
     }
   },
