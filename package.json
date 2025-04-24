@@ -14,6 +14,7 @@
     "debug-web3": "DEBUG_MODE=true yarn start",
     "print-vault": "node ./test/cli/print-vault",
     "test-fold-leverage": "node ./test/cli/test-fold-leverage",
+    "test-leaderboard": "node ./test/cli/test-leaderboard",
     "test-schema": "node ./test/cli/test-schema",
     "print-diff": "node ./test/cli/test-diff",
     "lint": "eslint ./",

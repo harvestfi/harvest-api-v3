@@ -116,26 +116,68 @@ const getFarmTvlLength = async () => {
 
 const getBalanceData = async (chain, maxValue) => {
   const query = `
-      query {
-          userBalances(
-              first: 1000
-              orderBy: value
-              orderDirection: desc
-              where: { value_lt: "${maxValue}", value_gt: "0" }
-          ) {
-              userAddress
-              value
-              poolBalance
-              vault {
-                  id
-                  priceUnderlying
-                  lastSharePrice
-                  decimal
-                  pool {id}
-              }
-          }
-      }
-          `
+    query {
+        userBalances(
+            first: 1000
+            orderBy: value
+            orderDirection: desc
+            where: { value_lt: "${maxValue}", value_gt: "0" }
+        ) {
+            userAddress
+            value
+            poolBalance
+            vault {
+                id
+                priceUnderlying
+                lastSharePrice
+                decimal
+                pool {id}
+            }
+        }
+    }`
+
+  const queryResponse = await executeGraphCall(chain, query, {})
+
+  return queryResponse
+}
+
+const getPlasmaBalanceData = async (chain, maxValue) => {
+  const query = `
+    query {
+      plasmaUserBalances(
+        first: 1000
+        orderBy: value
+        orderDirection: desc
+        where: { value_lt: "${maxValue}", value_gt: "0" }
+      ) {
+        userAddress
+        value
+        plasmaVault {
+          id
+          decimals
+        }
+    }
+  }`
+
+  const queryResponse = await executeGraphCall(chain, query, {})
+
+  return queryResponse
+}
+
+const getPlasmaVaultData = async (chain, vault) => {
+  const query = `
+    query {
+      plasmaVaultHistories(
+        first: 1
+        orderBy: timestamp
+        orderDirection: desc
+        where: { plasmaVault_: {id: "${vault}"} }
+      ) {
+        priceUnderlying
+        apy
+        sharePrice
+    }
+  }`
 
   const queryResponse = await executeGraphCall(chain, query, {})
 
@@ -147,4 +189,6 @@ module.exports = {
   getFarmTvlLength,
   getTvlData,
   getBalanceData,
+  getPlasmaBalanceData,
+  getPlasmaVaultData,
 }

@@ -36,6 +36,8 @@ const {
   getTvlData,
   getFarmTvlLength,
   getBalanceData,
+  getPlasmaBalanceData,
+  getPlasmaVaultData,
 } = require('../lib/third-party/harvest-subgraph')
 // const { superformRewardData } = require('../lib/third-party/superform')
 const { getGmxData } = require('../lib/third-party/gmx')
@@ -657,116 +659,6 @@ const getTotalRevenue = async () => {
   console.log('-- Done getting total revenue --\n')
 }
 
-// const getNanolyData = async () => {
-//   console.log('\n-- Getting Nanoly endpoint data --')
-
-//   const vaults = await loadData(Cache, DB_CACHE_IDS.VAULTS)
-//   const pools = await loadData(Cache, DB_CACHE_IDS.POOLS)
-//   if (!vaults) {
-//     console.log(`Error getting Nanoly endpoint data due to missing data. Vaults: ${vaults}`)
-//     return
-//   } else if (!pools) {
-//     console.log(`Error getting Nanoly endpoint data due to missing data. Pools: ${pools}`)
-//     return
-//   }
-//   let results = [],
-//     hasErrors
-//   for (let networkId in vaults) {
-//     for (let symbol in vaults[networkId]) {
-//       if (symbol.toLowerCase().includes('univ3')) {
-//         continue
-//       }
-//       const vault = vaults[networkId][symbol]
-//       let reward = 0
-//       let rewards = {}
-//       if (!vault.inactive) {
-//         const pool = pools[networkId].find(
-//           pool =>
-//             pool.id === symbol ||
-//             (pool.collateralAddress &&
-//               pool.collateralAddress.toLowerCase() === vault.vaultAddress.toLowerCase()),
-//         )
-//         const vaultAddress = vault.vaultAddress
-//         const tokenAddress = vault.tokenAddress
-//         const tokens = vault.tokenNames
-//         let base
-//         if (pool && pool.tradingApy) {
-//           base = (Number(vault.estimatedApy) + Number(pool.tradingApy)) / 100
-//         } else {
-//           base = Number(vault.estimatedApy) / 100
-//         }
-//         if (pool && vault.id != 'IFARM') {
-//           pool.rewardAPY.forEach((e, i) => {
-//             symbol = pool.rewardTokenSymbols[i] === 'miFARM' ? 'iFARM' : pool.rewardTokenSymbols[i]
-//             rewards[symbol] = Number(pool.rewardAPY[i]) / 100
-//             reward = reward + Number(pool.rewardAPY[i]) / 100
-//           })
-//         } else {
-//           const profitShare = pools['eth'].filter(pool => pool.id == 'profit-sharing-farm')
-//           reward = Number(profitShare[0].rewardAPR.reduce((b, a) => b + Number(a), 0) / 100) / 100
-//           rewards = {
-//             FARM: reward,
-//           }
-//         }
-//         const tvl = Number(vault.totalValueLocked).toFixed(2)
-
-//         const ppfs = new BigNumber(vault.pricePerFullShare).div(10 ** vault.decimals)
-//         const composition = {
-//           [tokenAddress]: ppfs.toFixed(),
-//         }
-
-//         let url, chain
-//         if (networkId == 'eth') {
-//           chain = 'ethereum'
-//           if (vault.id == 'IFARM') {
-//             url = `https://app.harvest.finance/ethereum/${vault.tokenAddress}`
-//           } else {
-//             url = `https://app.harvest.finance/ethereum/${vault.vaultAddress}`
-//           }
-//         } else if (networkId == 'matic') {
-//           chain = 'polygon'
-//           url = `https://app.harvest.finance/polygon/${vault.vaultAddress}`
-//         } else if (networkId == 'arbitrum') {
-//           chain = 'arbitrum'
-//           url = `https://app.harvest.finance/arbitrum/${vault.vaultAddress}`
-//         } else if (networkId == 'base') {
-//           chain = 'base'
-//           url = `https://app.harvest.finance/base/${vault.vaultAddress}`
-//         } else if (networkId == 'zksync') {
-//           chain = 'zksync'
-//           url = `https://app.harvest.finance/zksync/${vault.vaultAddress}`
-//         }
-
-//         let result = {
-//           chain,
-//           tokens,
-//           vaultAddress,
-//           tokenAddress,
-//           base,
-//           reward,
-//           rewards,
-//           url,
-//           tvl,
-//           composition,
-//           active: true,
-//         }
-//         results.push(result)
-//       }
-//     }
-//   }
-
-//   await storeData(
-//     Cache,
-//     DB_CACHE_IDS.STATS,
-//     {
-//       nanolyEndPointData: results,
-//     },
-//     hasErrors,
-//     false,
-//   )
-//   console.log('-- Done getting Nanoly endpoint data --\n')
-// }
-
 const getTVL = async () => {
   console.log('\n-- Getting TVL data --')
   const type = DB_CACHE_IDS.TVL
@@ -1047,6 +939,71 @@ const getLeaderboardData = async () => {
         }
       }
       console.log(datapoints, 'data points processed on', CHAIN_NAMES[chain])
+
+      if (chain == 8453 || chain == 42161) {
+        let maxValue = '1e99'
+        let datapoints = 0
+        for (let i = 0; i < 20; i++) {
+          const data = await getPlasmaBalanceData(chain, maxValue)
+          const plasmaVaultData = {}
+
+          for (let balance of data.plasmaUserBalances) {
+            const vaultAddress = balance.plasmaVault.id
+            if (!plasmaVaultData[vaultAddress]) {
+              const data = await getPlasmaVaultData(chain, vaultAddress)
+              plasmaVaultData[vaultAddress] = data.plasmaVaultHistories[0]
+            }
+            const vaultData = plasmaVaultData[vaultAddress]
+            const user = balance.userAddress
+            if (USER_IGNORE_LIST.includes(user)) {
+              continue
+            }
+            let vault = Object.values(vaults[CHAIN_NAMES[chain]]).filter(
+              vault => vault.vaultAddress.toLowerCase() == vaultAddress.toLowerCase(),
+            )
+            if (vault.length > 0) {
+              vault = vault[0]
+            } else {
+              vault = 0
+            }
+
+            const usdValue = new BigNumber(balance.value)
+              .times(vault ? vault.usdPrice : vaultData.priceUnderlying)
+              .times(vault ? vault.pricePerFullShare : vaultData.sharePrice)
+              .div(vault ? 10 ** vault.vaultDecimals : 10 ** balance.plasmaVault.decimals)
+              .div(vault ? 10 ** vault.decimals : 10 ** (balance.plasmaVault.decimals - 2))
+
+            if (usdValue.gt(0)) {
+              userBalances[user] = userBalances[user] ? userBalances[user] : {}
+              userBalances[user].totalBalance = userBalances[user].totalBalance
+                ? userBalances[user].totalBalance + Number(usdValue.toFixed())
+                : Number(usdValue.toFixed())
+              userBalances[user].totalDailyYield = userBalances[user].totalDailyYield
+                ? userBalances[user].totalDailyYield
+                : 0
+              userBalances[user].vaults = userBalances[user].vaults ? userBalances[user].vaults : {}
+              userBalances[user].vaults[vaultAddress] = {}
+              userBalances[user].vaults[vaultAddress].balance = Number(usdValue.toFixed())
+              if (vault) {
+                const apy = Number(vault.estimatedApy) / 100
+                const dailyApr = (apy + 1) ** (1 / 365) - 1
+                const dailyYield = usdValue.times(dailyApr).toFixed(4)
+                userBalances[user].totalDailyYield = userBalances[user].totalDailyYield
+                  ? userBalances[user].totalDailyYield + Number(dailyYield)
+                  : Number(dailyYield)
+                userBalances[user].vaults[vaultAddress].dailyYield = Number(dailyYield)
+              }
+            }
+          }
+
+          maxValue = data.plasmaUserBalances[data.plasmaUserBalances.length - 1].value
+          datapoints += data.plasmaUserBalances.length
+          if (data.plasmaUserBalances.length < 1000 || maxValue < 2) {
+            break
+          }
+        }
+        console.log(datapoints, 'data points processed for IPOR vaults on', CHAIN_NAMES[chain])
+      }
     }
 
     sortable = Object.entries(userBalances)
@@ -1254,4 +1211,5 @@ const cliPreload = async () => {
 module.exports = {
   startPollers,
   cliPreload,
+  getLeaderboardData,
 }
