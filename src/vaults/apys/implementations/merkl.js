@@ -1,8 +1,11 @@
+const BigNumber = require('bignumber.js')
 const { get } = require('lodash')
 const { MERKL_ENDPOINT } = require('../../../lib/constants')
 const { cachedAxios } = require('../../../lib/db/models/cache')
+const { mToken } = require('../../../lib/web3/contracts')
+const { web3BASE } = require('../../../lib/web3')
 
-const getApy = async (userAddress, poolAddress, chainId, reduction) => {
+const getApy = async (userAddress, poolAddress, chainId, reduction, fold = false) => {
   let response,
     apy = 0
 
@@ -23,6 +26,29 @@ const getApy = async (userAddress, poolAddress, chainId, reduction) => {
   } catch (err) {
     console.error('MERKL API error: ', err)
     apy = 0
+  }
+
+  if (fold) {
+    const {
+      contract: { abi: mTokenAbi },
+      methods: mTokenMethods,
+    } = mToken
+    const web3 = web3BASE
+
+    const mTokenInstance = new web3.eth.Contract(mTokenAbi, poolAddress)
+    const snapshot = await mTokenMethods.getAccountSnapshot(userAddress, mTokenInstance)
+
+    const supplied = new BigNumber(snapshot[1]).times(snapshot[3]).div(1e18)
+    const borrowed = new BigNumber(snapshot[2])
+    const invested = supplied.minus(borrowed)
+    let suppliedMul
+    if (invested.gt(0)) {
+      suppliedMul = supplied.div(invested)
+    } else {
+      suppliedMul = new BigNumber(1)
+    }
+
+    apy = apy * suppliedMul
   }
 
   return apy

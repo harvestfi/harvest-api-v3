@@ -1155,6 +1155,7 @@ module.exports = {
           addresses.BASE.V2.moonwell_tBTC.mToken,
           CHAIN_IDS.BASE,
           '1',
+          true,
         ],
         extraDailyCompound: false,
       },
