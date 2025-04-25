@@ -1289,6 +1289,7 @@ module.exports = {
     },
   },
   aerodrome_aixCB_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -1451,6 +1452,7 @@ module.exports = {
     ],
   },
   aerodrome_wBLT_BMX: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -1661,6 +1663,7 @@ module.exports = {
     ],
   },
   zerolend_DAI_zksync: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     apyIconUrls: ['./icons/zk.svg'],
     apyTokenSymbols: ['ZK'],
@@ -1690,6 +1693,7 @@ module.exports = {
     ],
   },
   zerolend_LUSD_zksync: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     apyIconUrls: ['./icons/zk.svg'],
     apyTokenSymbols: ['ZK'],
@@ -1719,6 +1723,7 @@ module.exports = {
     ],
   },
   zerolend_MBTC_zksync: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     apyIconUrls: ['./icons/zk.svg'],
     apyTokenSymbols: ['ZK'],
@@ -1748,6 +1753,7 @@ module.exports = {
     ],
   },
   zerolend_WBTC_zksync: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     apyIconUrls: ['./icons/zk.svg'],
     apyTokenSymbols: ['ZK'],
@@ -2016,6 +2022,7 @@ module.exports = {
     },
   },
   venus_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     apyIconUrls: ['./icons/zk.svg', './icons/xvs.svg'],
     apyTokenSymbols: ['ZK', 'XVS'],
@@ -2074,6 +2081,7 @@ module.exports = {
     ],
   },
   venus_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     apyIconUrls: ['./icons/xvs.svg'],
     apyTokenSymbols: ['XVS'],
@@ -2248,6 +2256,7 @@ module.exports = {
     ],
   },
   zerolend_ETH_zksync: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     apyIconUrls: ['./icons/zk.svg'],
     apyTokenSymbols: ['ZK'],
@@ -2306,6 +2315,7 @@ module.exports = {
     ],
   },
   zerolend_USDCe_zksync: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     apyIconUrls: ['./icons/zk.svg'],
     apyTokenSymbols: ['ZK'],
@@ -2335,6 +2345,7 @@ module.exports = {
     ],
   },
   zerolend_USDT_zksync: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     apyIconUrls: ['./icons/zk.svg'],
     apyTokenSymbols: ['ZK'],
@@ -2501,6 +2512,7 @@ module.exports = {
     ],
   },
   syncswap_MBTC_WBTC_stable: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/mbtc.svg', './icons/wbtc.svg'],
     tokenNames: ['MBTC', 'WBTC'],
@@ -2529,6 +2541,7 @@ module.exports = {
     ],
   },
   syncswap_USDC_USDCe_stable: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/usdc.svg', './icons/usdc.svg'],
     tokenNames: ['USDC', 'USDC.e'],
@@ -2557,6 +2570,7 @@ module.exports = {
     ],
   },
   syncswap_USDC_USDT_stable: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
     tokenNames: ['USDC', 'USDT'],
@@ -2585,6 +2599,7 @@ module.exports = {
     ],
   },
   syncswap_wstETH_ETH_aqua: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
     tokenNames: ['stETH', 'ETH'],
@@ -2613,6 +2628,7 @@ module.exports = {
     ],
   },
   syncswap_ZK_ETH_classic: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/zk.svg', './icons/eth.svg'],
     tokenNames: ['ZK', 'ETH'],
@@ -3225,6 +3241,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['zunami-usd'] },
   },
   curve_USDe_USDx: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg'],
     apyTokenSymbols: ['CRV'],
@@ -3295,6 +3312,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   curve_zunUSD_crvUSD: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg'],
     apyTokenSymbols: ['CRV'],
@@ -3330,6 +3348,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   curve_ETHp_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg'],
     apyTokenSymbols: ['CRV'],
@@ -3365,6 +3384,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   curve_KNOX_eUSD: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg'],
     apyTokenSymbols: ['CRV'],
@@ -3873,6 +3893,7 @@ module.exports = {
     ],
   },
   balancer_waFRAX_sFRAX: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -3900,6 +3921,7 @@ module.exports = {
     ],
   },
   balancer_waGHO_GYD: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -3927,6 +3949,7 @@ module.exports = {
     ],
   },
   balancer_waUSDC_GHO: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/arb.svg', './icons/gho.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'ARB', 'GHO'],
@@ -3954,6 +3977,7 @@ module.exports = {
     ],
   },
   balancer_waUSDC_GYD: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -3981,6 +4005,7 @@ module.exports = {
     ],
   },
   balancer_waUSDT_GYD: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -4008,6 +4033,7 @@ module.exports = {
     ],
   },
   balancer_wstETH_GYD: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -4189,6 +4215,7 @@ module.exports = {
     ],
   },
   syncswap_ETH_USDCe_classic: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     tokenNames: ['ETH', 'USDC.e'],
@@ -4246,6 +4273,7 @@ module.exports = {
     ],
   },
   syncswap_wrsETH_ETH_aqua: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/wrseth.svg', './icons/eth.svg'],
     tokenNames: ['wrsETH', 'ETH'],
@@ -4732,6 +4760,7 @@ module.exports = {
     },
   },
   notional_nETH_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg'],
     tokenNames: ['nETH'],
@@ -4767,6 +4796,7 @@ module.exports = {
     ],
   },
   notional_nUSDC_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['nUSDC'],
@@ -4802,6 +4832,7 @@ module.exports = {
     ],
   },
   notional_nUSDT_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdt.svg'],
     tokenNames: ['nUSDT'],
@@ -5227,6 +5258,7 @@ module.exports = {
     ],
   },
   reactor_ZK: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     apyIconUrls: ['./icons/zk.svg'],
     apyTokenSymbols: ['ZK'],
@@ -5414,6 +5446,7 @@ module.exports = {
     },
   },
   aerodrome_DOLA_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -5441,6 +5474,7 @@ module.exports = {
     ],
   },
   aerodrome_eUSD_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -5633,6 +5667,7 @@ module.exports = {
     ],
   },
   aerodrome_USDz_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -5742,6 +5777,7 @@ module.exports = {
     ],
   },
   aerodrome_hyUSD_eUSD: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -5769,6 +5805,7 @@ module.exports = {
     ],
   },
   aerodrome_weETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -6433,6 +6470,7 @@ module.exports = {
     ],
   },
   balancer_rETH_wETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/arb.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'ARB'],
@@ -6871,6 +6909,7 @@ module.exports = {
     ],
   },
   curve_OVN: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg', './icons/ovn.svg', './icons/arb.svg'],
     apyTokenSymbols: ['CRV', 'OVN', 'ARB'],
@@ -7150,6 +7189,7 @@ module.exports = {
     ],
   },
   reactor_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     apyIconUrls: ['./icons/zk.svg'],
     apyTokenSymbols: ['ZK'],
@@ -7234,6 +7274,7 @@ module.exports = {
     ],
   },
   zkswap_ETH_USDCe: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/zf.svg', './icons/zk.svg'],
@@ -7262,6 +7303,7 @@ module.exports = {
     ],
   },
   zkswap_LONG_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/long.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/zf.svg'],
@@ -7319,6 +7361,7 @@ module.exports = {
     ],
   },
   zkswap_WBTC_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/zf.svg'],
@@ -7376,6 +7419,7 @@ module.exports = {
     ],
   },
   zkswap_ZF_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ZKSYNC,
     logoUrl: ['./icons/zf.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/zf.svg'],
@@ -7964,6 +8008,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'AERO'],
   },
   aerodrome_USDC_USDbC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -11483,6 +11528,7 @@ module.exports = {
     },
   },
   aerodrome_wUSDR_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -12719,6 +12765,7 @@ module.exports = {
     },
   },
   iPoison: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/ipoison.svg'],
     apyIconUrls: ['./icons/poison.svg'],
@@ -12751,6 +12798,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'POISON'],
   },
   poison_pGOLD_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/pgold.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/poison.svg'],
