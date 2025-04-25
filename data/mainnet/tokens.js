@@ -1123,8 +1123,8 @@ module.exports = {
   },
   moonwell_tBTC: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/well.svg'],
-    apyTokenSymbols: ['WELL'],
+    apyIconUrls: ['./icons/well.svg', './icons/t.svg'],
+    apyTokenSymbols: ['WELL', 'T'],
     logoUrl: ['./icons/tbtc.svg'],
     tokenNames: ['tBTC'],
     platform: ['Moonwell'],
@@ -1137,6 +1137,7 @@ module.exports = {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['tbtc'],
     },
+    apyDescriptionOverride: ['Auto harvested', 'Claimable through Merkl'],
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
@@ -1146,6 +1147,16 @@ module.exports = {
           addresses.BASE.V2.moonwell_tBTC.NewStrategy,
           profitSharingCut10Percent,
         ],
+      },
+      {
+        type: ESTIMATED_APY_TYPES.MERKL,
+        params: [
+          addresses.BASE.V2.moonwell_tBTC.NewStrategy,
+          addresses.BASE.V2.moonwell_tBTC.mToken,
+          CHAIN_IDS.BASE,
+          '1',
+        ],
+        extraDailyCompound: false,
       },
     ],
   },

@@ -675,9 +675,13 @@ module.exports = [
     <div class="help-message">
       <p> The vault supplies
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_tBTC.Underlying}" target="_blank" rel="noopener noreferrer"> tBTC </a>to Moonwell, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> & 
+       <a href="https://basescan.org/token/${addresses.BASE.T}" target="_blank" rel="noopener noreferrer">T</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_tBTC.Underlying}" target="_blank" rel="noopener noreferrer"> tBTC</a>.
+      </p>
+      <p> The earned <a href="https://basescan.org/token/${addresses.BASE.T}" target="_blank" rel="noopener noreferrer">T</a> tokens can be claimed through 
+        <a href="https://app.merkl.xyz/users" target="_blank" rel="noopener noreferrer">Merkl</a>.
       </p>
     </div>
    `,
