@@ -1066,5 +1066,113 @@
         "id": 356,
         "currency": "USD",
         "name": "thusd_3crv"
+    },
+    {
+        "lptoken": "0xf985005a3793DbA4cCe241B3C19ddcd3Fe069ff4",
+        "token": "0xCf9fC20189755354edDdED66C9ED9DFADAFd7a2E",
+        "crvRewards": "0xC10fD95fd3B56535668426B2c8681AD1E15Be608",
+        "swap": "0x4149d1038575CE235E03E03B39487a80FD709D31",
+        "id": 120,
+        "currency": "USD",
+        "name": "alcx_fraxbp",
+        "isV2": true,
+        "coins": [
+            "0xdBdb4d16EdA451D0503b854CF79D55697F90c8DF",
+            "0x3175Df0976dFA876431C2E9eE6Bc45b65d3473CC"
+        ],
+        "coinDecimals": [
+            18,
+            18
+        ]
+    },
+    {
+        "lptoken": "0xc522A6606BBA746d7960404F22a3DB936B6F4F50",
+        "token": "0x20F1c81B123FFcD19B5469f0EB2C4FD37983dBBc",
+        "crvRewards": "0x7Fafc1876970dBD9F6568586EFa7d0FAc0FE8EA8",
+        "swap": "0xc522A6606BBA746d7960404F22a3DB936B6F4F50",
+        "id": 440,
+        "currency": "USD",
+        "name": "reusd_scrvusd"
+    },
+    {
+        "lptoken": "0xed785Af60bEd688baa8990cD5c4166221599A441",
+        "token": "0x47FdB72CcC93Bc9568a82917dFF767FDbB4f2f5F",
+        "crvRewards": "0x18574c2047A2D4786567A2C31B4f25Ae291ed6bF",
+        "swap": "0xed785Af60bEd688baa8990cD5c4166221599A441",
+        "id": 439,
+        "currency": "USD",
+        "name": "reusd_sfrxusd"
+    },
+    {
+        "lptoken": "0x4b5E827F4C0a1042272a11857a355dA1F4Ceebae",
+        "token": "0xb5CeC9E680B8D53A4CAe0c57Ef995E0876c47484",
+        "crvRewards": "0x14d2DC2CeBC25f217bc9Aee5AC3A7967Ca7ceBae",
+        "swap": "0x4b5E827F4C0a1042272a11857a355dA1F4Ceebae",
+        "id": 436,
+        "currency": "USD",
+        "name": "susd_susde"
+    },
+    {
+        "lptoken": "0x59a06b97b2d566B9Dee2a368EaC8787Cfa57f95D",
+        "token": "0xc399E1b3Ec21ddf5a88aF3ad7EFcF0df4bf99D69",
+        "crvRewards": "0x268ee43857694fe53FF8729b8171266ee2514c69",
+        "swap": "0x59a06b97b2d566B9Dee2a368EaC8787Cfa57f95D",
+        "id": 429,
+        "currency": "USD",
+        "name": "susd_usde"
+    },
+    {
+        "lptoken": "0x592878b920101946Fb5915aB97961bC546f211CC",
+        "token": "0x50ecC157B8e601dD877E2fe5a8950c69C1853dC4",
+        "crvRewards": "0xfae6645b8FaF13FC3CE6B9d61829e1fF57Ffc038",
+        "swap": "0x592878b920101946Fb5915aB97961bC546f211CC",
+        "id": 324,
+        "currency": "USD",
+        "name": "cjpy_eth",
+        "isV2": true,
+        "coins": [
+            "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+            "0x1cfa5641c01406aB8AC350dEd7d735ec41298372"
+        ],
+        "coinDecimals": [
+            18,
+            18
+        ]
+    },
+    {
+        "lptoken": "0xEe351f12EAE8C2B8B9d1B9BFd3c5dd565234578d",
+        "token": " 0x12611382e49e51f2b74C8E14361028dc373AE0dC",
+        "crvRewards": "0xbD60aAe56ede51f20D8E416637D7c80737441460",
+        "swap": "0xEe351f12EAE8C2B8B9d1B9BFd3c5dd565234578d",
+        "id": 441,
+        "currency": "USD",
+        "name": "rsup_eth",
+        "isV2": true,
+        "coins": [
+            "0x419905009e4656fdC02418C7Df35B1E61Ed5F726",
+            "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+        ],
+        "coinDecimals": [
+            18,
+            18
+        ]
+    },
+    {
+        "lptoken": "0xCb08717451aaE9EF950a2524E33B6DCaBA60147B",
+        "token": " 0x1766EDBa8CD066e3eB1912D2b8c7E2c59A3D7Ece",
+        "crvRewards": "0x3E91E7c822AC8b4b7905d108c3faCF22A3ee5d2c",
+        "swap": "0x752eBeb79963cf0732E9c0fec72a49FD1DEfAEAC",
+        "id": 67,
+        "currency": "USD",
+        "name": "t_eth",
+        "isV2": true,
+        "coins": [
+            "0xCdF7028ceAB81fA0C6971208e83fa7872994beE5",
+            "0x0000000000000000000000000000000000000000"
+        ],
+        "coinDecimals": [
+            18,
+            18
+        ]
     }
 ]

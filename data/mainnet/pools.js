@@ -5,6 +5,254 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'curve_T_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.curve_T_ETH.NewPool,
+    collateralAddress: addresses.V2.curve_T_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://curve.fi/dex/ethereum/pools/teth/deposit`,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['crypto-7'],
+    },
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.curve_T_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.curve_T_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_T_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/dex/ethereum/pools/teth/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'curve_RSUP_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.curve_RSUP_ETH.NewPool,
+    collateralAddress: addresses.V2.curve_RSUP_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://curve.fi/dex/ethereum/pools/factory-twocrypto-119/deposit`,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['factory-twocrypto-119'],
+    },
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.curve_RSUP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.curve_RSUP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_RSUP_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/dex/ethereum/pools/factory-twocrypto-119/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'curve_CJPY_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.curve_CJPY_ETH.NewPool,
+    collateralAddress: addresses.V2.curve_CJPY_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://curve.fi/dex/ethereum/pools/factory-twocrypto-5/deposit`,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['factory-twocrypto-5'],
+    },
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.curve_CJPY_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.curve_CJPY_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_CJPY_ETH.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/dex/ethereum/pools/factory-twocrypto-5/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'curve_sUSD_USDe',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.curve_sUSD_USDe.NewPool,
+    collateralAddress: addresses.V2.curve_sUSD_USDe.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://curve.fi/dex/ethereum/pools/factory-stable-ng-346/deposit`,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['factory-stable-ng-346'],
+    },
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.curve_sUSD_USDe.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.curve_sUSD_USDe.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_sUSD_USDe.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/dex/ethereum/pools/factory-stable-ng-346/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'curve_sUSD_sUSDe',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.curve_sUSD_sUSDe.NewPool,
+    collateralAddress: addresses.V2.curve_sUSD_sUSDe.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://curve.fi/dex/ethereum/pools/factory-stable-ng-371/deposit`,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['factory-stable-ng-371'],
+    },
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.curve_sUSD_sUSDe.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.curve_sUSD_sUSDe.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_sUSD_sUSDe.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/dex/ethereum/pools/factory-stable-ng-371/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'curve_reUSD_sfrxUSD',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.curve_reUSD_sfrxUSD.NewPool,
+    collateralAddress: addresses.V2.curve_reUSD_sfrxUSD.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://curve.fi/dex/ethereum/pools/factory-stable-ng-393/deposit`,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['factory-stable-ng-393'],
+    },
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.curve_reUSD_sfrxUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.curve_reUSD_sfrxUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_reUSD_sfrxUSD.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/dex/ethereum/pools/factory-stable-ng-393/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'curve_reUSD_scrvUSD',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.curve_reUSD_scrvUSD.NewPool,
+    collateralAddress: addresses.V2.curve_reUSD_scrvUSD.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://curve.fi/dex/ethereum/pools/factory-stable-ng-392/deposit`,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['factory-stable-ng-392'],
+    },
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.curve_reUSD_scrvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.curve_reUSD_scrvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_reUSD_scrvUSD.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/dex/ethereum/pools/factory-stable-ng-392/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'curve_ALCX_FRAXBP',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.curve_ALCX_FRAXBP.NewPool,
+    collateralAddress: addresses.V2.curve_ALCX_FRAXBP.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://curve.fi/dex/ethereum/pools/factory-crypto-96/deposit`,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['factory-crypto-96'],
+    },
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.curve_ALCX_FRAXBP.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.curve_ALCX_FRAXBP.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_ALCX_FRAXBP.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.fi/dex/ethereum/pools/factory-crypto-96/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'euler_USDC_AR',
     type: POOL_TYPES.INCENTIVE,
