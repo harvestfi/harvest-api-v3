@@ -2593,7 +2593,7 @@
       "moonwell_USDC": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         "NewVault": "0x90613e167D42CA420942082157B42AF6fc6a8087",
-        "NewStrategy": "0xe860CC946338769bC60D68eC9576A3A258c7D156",
+        "NewStrategy": "0x4Eb5f78F5dE651ceFa81a038105224fE1Dc68d02",
         "NewPool": "0x3169Cbd868851570D246CCbEF8209B64d07E5268",
         "mToken": "0xEdc817A28E8B93B03976FBd4a3dDBc9f7D176c22"
       },
