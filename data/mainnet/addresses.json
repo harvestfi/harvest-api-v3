@@ -3460,6 +3460,27 @@
         "NewStrategy": "0x63fDf876b2FC0fF8D33fd54426A99957ecf33640",
         "NewPool": "0x32Da1138f46280933045D7bBC70C86f98f8b22C3",
         "mToken": "0x6308204872BdB7432dF97b04B42443c714904F3E"
+      },
+      "arcadia_ETH": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0x57080f7Fd7e97D1cd6fb6CdB36b6E7e21A827c8E",
+        "NewStrategy": "0xd40dA91406955bCA1cCa6e2A46Fea5B967ab4b19",
+        "NewPool": "0xE5f6C696eD3F72D867f5eD9aDDFC511B6723c7DC",
+        "LendingPool": "0x803ea69c7e87D1d6C86adeB40CB636cC0E6B98E2"
+      },
+      "arcadia_USDC": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0xed5A6691a3663045c6D9F12f334FBc796EE12f45",
+        "NewStrategy": "0xFd5497D9a3825eaEE92078c7364FAfCD3a62A20e",
+        "NewPool": "0xE09a9f82F9f28856338309561397Ad48F328cBAF",
+        "LendingPool": "0x3ec4a293Fb906DD2Cd440c20dECB250DeF141dF1"
+      },
+      "arcadia_cbBTC": {
+        "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        "NewVault": "0x5A04a1904A0685f331015c647ad2430c05725521",
+        "NewStrategy": "0x4509066F71A55a71DC47757ae22579326DDB399c",
+        "NewPool": "0xfB784333e985A0e0C0C41a1262Ad070D70C0939C",
+        "LendingPool": "0xa37E9b4369dc20940009030BfbC2088F09645e3B"
       }
     }
   },
