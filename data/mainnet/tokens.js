@@ -347,7 +347,7 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.CONVEX,
         params: ['t_eth', profitSharingCut15Percent],
-       },
+      },
     ],
   },
   arcadia_ETH: {
