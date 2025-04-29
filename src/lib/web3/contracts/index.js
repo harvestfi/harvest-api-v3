@@ -247,7 +247,14 @@ const dripContract = require('../contracts/drip/contract.json')
 const eulerVaultMethods = require('../contracts/euler-vault/methods')
 const eulerVaultContract = require('../contracts/euler-vault/contract.json')
 
+const arcadiaLendMethods = require('../contracts/arcadia-lend/methods')
+const arcadiaLendContract = require('../contracts/arcadia-lend/contract.json')
+
 module.exports = {
+  arcadiaLend: {
+    methods: arcadiaLendMethods,
+    contract: arcadiaLendContract,
+  },
   eulerVault: {
     methods: eulerVaultMethods,
     contract: eulerVaultContract,
