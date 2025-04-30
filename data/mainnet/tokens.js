@@ -72,7 +72,7 @@ module.exports = {
   },
   sfrxUSD: {
     chain: CHAIN_IDS.ETH_MAINNET,
-    logoUrl: ['./icons/sfrxusd.svg'],
+    logoUrl: ['./icons/sfrxusd.png'],
     tokenAddress: addresses.sfrxUSD,
     decimals: '18',
     vaultAddress: null,
@@ -186,7 +186,7 @@ module.exports = {
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
-    logoUrl: ['./icons/reusd.svg', './icons/sfrxusd.svg'],
+    logoUrl: ['./icons/reusd.svg', './icons/sfrxusd.png'],
     tokenNames: ['reUSD', 'sfrxUSD'],
     platform: ['Convex Finance'],
     tags: ['Advanced', 'Stable'],
@@ -239,6 +239,7 @@ module.exports = {
     ],
   },
   curve_sUSD_USDe: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
