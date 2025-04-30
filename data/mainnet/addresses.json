@@ -754,7 +754,8 @@
       "Underlying": "0xf985005a3793DbA4cCe241B3C19ddcd3Fe069ff4",
       "NewVault": "0xd9e44fCC177448B26C2588852b789F37C2449aA2",
       "NewStrategy": "0xB67601aBe8B15FdadB0844f8559C15e49ef2d417",
-      "NewPool": "0x2ec9407697b96dA9Fc1c6f37c282143f4D27d4e0"
+      "NewPool": "0x2ec9407697b96dA9Fc1c6f37c282143f4D27d4e0",
+      "PoolAddress": "0x4149d1038575CE235E03E03B39487a80FD709D31"
     },
     "curve_reUSD_scrvUSD": {
       "Underlying": "0xc522A6606BBA746d7960404F22a3DB936B6F4F50",

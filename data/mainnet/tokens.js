@@ -141,7 +141,7 @@ module.exports = {
     priceFunction: {
       type: GET_PRICE_TYPES.CURVE_POOL,
       params: [
-        addresses.V2.curve_ALCX_FRAXBP.Underlying,
+        addresses.V2.curve_ALCX_FRAXBP.PoolAddress,
         addresses.V2.curve_ALCX_FRAXBP.Underlying,
         '18',
         ['ALCX', 'FRAXBP'],
@@ -272,7 +272,7 @@ module.exports = {
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/cjpy.svg', './icons/weth.svg'],
-    tokenNames: ['CJPY', 'WETH'],
+    tokenNames: ['CJPY', 'ETH'],
     platform: ['Convex Finance'],
     tags: ['Advanced'],
     tokenAddress: addresses.V2.curve_CJPY_ETH.Underlying,
@@ -300,7 +300,7 @@ module.exports = {
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/rsup.svg', './icons/weth.svg'],
-    tokenNames: ['RSUP', 'WETH'],
+    tokenNames: ['RSUP', 'ETH'],
     platform: ['Convex Finance'],
     tags: ['Advanced'],
     tokenAddress: addresses.V2.curve_RSUP_ETH.Underlying,
