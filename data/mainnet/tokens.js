@@ -3411,6 +3411,7 @@ module.exports = {
     ],
   },
   zerolend_cbBTC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/cbbtc.svg'],
     tokenNames: ['cbBTC'],
@@ -3437,6 +3438,7 @@ module.exports = {
     ],
   },
   zerolend_LBTC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/lbtc.svg'],
     tokenNames: ['LBTC'],
@@ -3463,6 +3465,7 @@ module.exports = {
     ],
   },
   zerolend_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC'],
@@ -3489,6 +3492,7 @@ module.exports = {
     ],
   },
   zerolend_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/usdt.svg'],
     tokenNames: ['USDT'],
@@ -3515,6 +3519,7 @@ module.exports = {
     ],
   },
   zerolend_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/eth.svg'],
     tokenNames: ['ETH'],
