@@ -823,7 +823,7 @@ const getLeaderboardData = async () => {
     '0x156733b89ac5c704f3217fee2949a9d4a73764b5',
     '0xf1181a71cc331958ae2ca2aad0784acfc436cb93',
     '0x31a421271414641cb5063b71594b642d2666db6b',
-    '0x7872893e528Fe2c0829e405960db5B742112aa97',
+    '0x7872893e528fe2c0829e405960db5b742112aa97',
     '0x0d877dc7c8fa3ad980dfdb18b48ec9f8768359c4',
   ]
   const CHAIN_NAMES = {
