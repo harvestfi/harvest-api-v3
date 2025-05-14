@@ -2328,10 +2328,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-        <a href="https://etherscan.io/token/${addresses.V2.WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> WBTC </a>to ZeroLend, earning WBTC interest and 
-        <a href="https://etherscan.io/token/${addresses.ZERO}" target="_blank" rel="noopener noreferrer">ZERO</a> rewards.
-        At every harvest, the earned rewards are converted into more
-        <a href="https://etherscan.io/token/${addresses.V2.WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> WBTC</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> WBTC </a>to the Morpho Re7 Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> WBTC</a>.
       </p>
     </div>
    `,
@@ -10192,9 +10192,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC </a>to Fluid, earning USDC interest.
-        At every harvest, the earned rewards are converted into more
-        <a href="https://etherscan.io/token/${addresses.USDC}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Gauntlet Frontier Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
    `,
@@ -10212,9 +10213,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-        <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT </a>to Fluid, earning USDT interest.
-        At every harvest, the earned rewards are converted into more
-        <a href="https://etherscan.io/token/${addresses.USDT}" target="_blank" rel="noopener noreferrer"> USDT</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT </a>to the Morpho Steakhouse Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT</a>.
       </p>
     </div>
    `,
@@ -10252,9 +10254,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-        <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI </a>to Sky's Savings Module, earning DAI interest.
-        At every harvest, the earned rewards are converted into more
-        <a href="https://etherscan.io/token/${addresses.DAI}" target="_blank" rel="noopener noreferrer"> DAI</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.DAI.Underlying}" target="_blank" rel="noopener noreferrer"> DAI </a>to the Morpho Gauntlet Core Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.DAI.Underlying}" target="_blank" rel="noopener noreferrer"> DAI</a>.
       </p>
     </div>
   `,
@@ -10368,10 +10371,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.WETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to Compound V3, earning 
-       <a href="https://etherscan.io/token/${addresses.COMP}" target="_blank" rel="noopener noreferrer">COMP</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.WETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH </a>to the Morpho MEV Capital Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.WETH.Underlying}" target="_blank" rel="noopener noreferrer"> AERO</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.WETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH</a>.
       </p>
     </div>
   `,
