@@ -6388,6 +6388,7 @@ module.exports = {
     },
   },
   notional_nETH: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/eth.svg'],
     tokenNames: ['nETH'],
@@ -6449,6 +6450,7 @@ module.exports = {
     ],
   },
   notional_nUSDC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['nUSDC'],
@@ -6479,6 +6481,7 @@ module.exports = {
     ],
   },
   notional_nUSDT: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/usdt.svg'],
     tokenNames: ['nUSDT'],

@@ -2058,19 +2058,22 @@
         "Underlying": "0x18b0Fc5A233acF1586Da7C199Ca9E3f486305A29",
         "NewVault": "0x77BD2F95aAD869C9b6a4B3Ea6EC1201293f4b708",
         "NewStrategy": "0xAA9CF6C538fA5ed5b1F32E68Dd74168A103bB8C9",
-        "NewPool": "0x82511db8EbE47a14DF68412529A8DF26AddD2179"
+        "NewPool": "0x82511db8EbE47a14DF68412529A8DF26AddD2179",
+        "doHardwork": false
       },
       "notional_nUSDC_arbitrum": {
         "Underlying": "0x0F13fb925eDC3E1FE947209010d9c0E072986ADc",
         "NewVault": "0xe5CCea9A64a096365F05Dffb1CBbe04B8Fd7c710",
         "NewStrategy": "0xE2012161227654831fB510741a717AB9b6715149",
-        "NewPool": "0x7c18F8dDE08e1e388e7B8693ce8Bb0a0a7347127"
+        "NewPool": "0x7c18F8dDE08e1e388e7B8693ce8Bb0a0a7347127",
+        "doHardwork": false
       },
       "notional_nUSDT_arbitrum": {
         "Underlying": "0x9c0Fbb8caDE7B178b135fD2F1da125a37B27f442",
         "NewVault": "0x9eADb45AC9F467063A4DCa28d21B3142C24697ee",
         "NewStrategy": "0xbe7F135f9bBe8355596f64452E8CA6bE03dB6434",
-        "NewPool": "0xd7Af3498B861BC070FA3bd694aD0a823558F10b8"
+        "NewPool": "0xd7Af3498B861BC070FA3bd694aD0a823558F10b8",
+        "doHardwork": false
       },
       "fluid_ETH_arbitrum": {
         "Underlying": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
