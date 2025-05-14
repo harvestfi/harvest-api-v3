@@ -3548,6 +3548,13 @@
         "NewStrategy": "0x4509066F71A55a71DC47757ae22579326DDB399c",
         "NewPool": "0xfB784333e985A0e0C0C41a1262Ad070D70C0939C",
         "LendingPool": "0xa37E9b4369dc20940009030BfbC2088F09645e3B"
+      },
+      "fortyAcres_USDC": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0xC777031D50F632083Be7080e51E390709062263E",
+        "NewStrategy": "0x1d59868D7767d703929393bDaB313302840f533c",
+        "NewPool": "0x0f4e48f63b7452CE6eb1fDC724D1cc46a00F5a42",
+        "FAVault": "0xB99B6dF96d4d5448cC0a5B3e0ef7896df9507Cf5"
       }
     }
   },

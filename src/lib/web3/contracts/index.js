@@ -250,7 +250,21 @@ const eulerVaultContract = require('../contracts/euler-vault/contract.json')
 const arcadiaLendMethods = require('../contracts/arcadia-lend/methods')
 const arcadiaLendContract = require('../contracts/arcadia-lend/contract.json')
 
+const faVaultMethods = require('../contracts/fa-vault/methods')
+const faVaultContract = require('../contracts/fa-vault/contract.json')
+
+const faLoanMethods = require('../contracts/fa-loan/methods')
+const faLoanContract = require('../contracts/fa-loan/contract.json')
+
 module.exports = {
+  faVault: {
+    methods: faVaultMethods,
+    contract: faVaultContract,
+  },
+  faLoan: {
+    methods: faLoanMethods,
+    contract: faLoanContract,
+  },
   arcadiaLend: {
     methods: arcadiaLendMethods,
     contract: arcadiaLendContract,

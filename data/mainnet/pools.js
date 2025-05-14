@@ -5,6 +5,27 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'fortyAcres_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.fortyAcres_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.fortyAcres_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.fortyAcres_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the 40 Acres Lending Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.fortyAcres_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.fortyAcres_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'curve_T_ETH',
     type: POOL_TYPES.INCENTIVE,

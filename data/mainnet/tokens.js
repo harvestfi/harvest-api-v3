@@ -46,6 +46,33 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  fortyAcres_USDC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/usdc.svg'],
+    apyTokenSymbols: ['USDC'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['40 Acres'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.BASE.V2.fortyAcres_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.fortyAcres_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.fortyAcres_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.FORTY_ACRES,
+        params: [
+          addresses.BASE.V2.fortyAcres_USDC.FAVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
   ALCX: {
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/alcx.svg'],
