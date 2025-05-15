@@ -5197,7 +5197,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.FLUID_LEND,
         params: [
-          '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
           addresses.ARBITRUM_ONE.V2.fluid_ETH_arbitrum.fToken,
           profitSharingCut10Percent,
           CHAIN_IDS.ARBITRUM_ONE,
@@ -5225,7 +5224,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.FLUID_LEND,
         params: [
-          addresses.ARBITRUM_ONE.V2.fluid_USDC_arbitrum.Underlying,
           addresses.ARBITRUM_ONE.V2.fluid_USDC_arbitrum.fToken,
           profitSharingCut10Percent,
           CHAIN_IDS.ARBITRUM_ONE,
@@ -5253,7 +5251,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.FLUID_LEND,
         params: [
-          addresses.ARBITRUM_ONE.V2.fluid_USDT_arbitrum.Underlying,
           addresses.ARBITRUM_ONE.V2.fluid_USDT_arbitrum.fToken,
           profitSharingCut10Percent,
           CHAIN_IDS.ARBITRUM_ONE,
@@ -5281,7 +5278,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.FLUID_LEND,
         params: [
-          '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
           addresses.V2.fluid_ETH_mainnet.fToken,
           profitSharingCut15Percent,
           CHAIN_IDS.ETH_MAINNET,
@@ -5309,7 +5305,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.FLUID_LEND,
         params: [
-          addresses.V2.fluid_USDC_mainnet.Underlying,
           addresses.V2.fluid_USDC_mainnet.fToken,
           profitSharingCut15Percent,
           CHAIN_IDS.ETH_MAINNET,
@@ -5337,7 +5332,6 @@ module.exports = {
       {
         type: ESTIMATED_APY_TYPES.FLUID_LEND,
         params: [
-          addresses.V2.fluid_USDT_mainnet.Underlying,
           addresses.V2.fluid_USDT_mainnet.fToken,
           profitSharingCut15Percent,
           CHAIN_IDS.ETH_MAINNET,
@@ -5364,12 +5358,7 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.FLUID_LEND,
-        params: [
-          '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
-          addresses.BASE.V2.fluid_ETH.fToken,
-          profitSharingCut10Percent,
-          CHAIN_IDS.BASE,
-        ],
+        params: [addresses.BASE.V2.fluid_ETH.fToken, profitSharingCut10Percent, CHAIN_IDS.BASE],
       },
     ],
   },
@@ -5392,12 +5381,7 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.FLUID_LEND,
-        params: [
-          addresses.BASE.V2.fluid_EURC.Underlying,
-          addresses.BASE.V2.fluid_EURC.fToken,
-          profitSharingCut10Percent,
-          CHAIN_IDS.BASE,
-        ],
+        params: [addresses.BASE.V2.fluid_EURC.fToken, profitSharingCut10Percent, CHAIN_IDS.BASE],
       },
     ],
   },
@@ -5420,12 +5404,7 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.FLUID_LEND,
-        params: [
-          addresses.BASE.V2.fluid_USDC.Underlying,
-          addresses.BASE.V2.fluid_USDC.fToken,
-          profitSharingCut10Percent,
-          CHAIN_IDS.BASE,
-        ],
+        params: [addresses.BASE.V2.fluid_USDC.fToken, profitSharingCut10Percent, CHAIN_IDS.BASE],
       },
     ],
   },

@@ -234,6 +234,7 @@ const CAMELOT_MERKL_ENDPOINT = 'https://api.camelot.exchange/campaigns?chainId=4
 const PENDLE_ENDPOINT = 'https://api-v2.pendle.finance/core/v2/'
 const NOTIONAL_ENDPOINT = 'https://registry.notional.finance'
 const MORPHO_ENDPOINT = 'https://blue-api.morpho.org/graphql'
+const FLUID_ENDPOINT = 'https://api.fluid.instadapp.io/v2/lending'
 
 const CURRENCY_API_URL = `https://api.freecurrencyapi.com/v1/latest?apikey=${process.env.CURRENCY_API_KEY}`
 const HISTORICAL_CURRENCY_API_URL = `https://api.freecurrencyapi.com/v1/historical?apikey=${process.env.CURRENCY_API_KEY}`
@@ -381,4 +382,5 @@ module.exports = {
   SYNCSWAP_FEE_API_URL,
   SYNCSWAP_SUBGRAPH_URL,
   MORPHO_ENDPOINT,
+  FLUID_ENDPOINT,
 }

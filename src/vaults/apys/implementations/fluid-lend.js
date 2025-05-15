@@ -1,27 +1,32 @@
-const BigNumber = require('bignumber.js')
-const { getWeb3 } = require('../../../lib/web3')
-const { fluidLendingResolver, fluidLiquidityResolver } = require('../../../lib/web3/contracts')
+const axios = require('axios')
+const { FLUID_ENDPOINT } = require('../../../lib/constants')
 
-const getApy = async (underlying, fToken, reduction, chain) => {
-  const web3 = getWeb3(chain)
-  const {
-    contract: { abi: lendingAbi, address: lendingAddresses },
-    methods: lendingMethods,
-  } = fluidLendingResolver
-  const {
-    contract: { abi: liquidityAbi, address: liquidityAddresses },
-    methods: liquidityMethods,
-  } = fluidLiquidityResolver
+const getApy = async (fToken, reduction, chain) => {
+  let apy
 
-  const liquidityInstance = new web3.eth.Contract(liquidityAbi, liquidityAddresses[chain])
-  const tokenData = await liquidityMethods.getTokenData(underlying, liquidityInstance)
-  const supplyAPR = new BigNumber(tokenData.supplyRate).div(100)
+  try {
+    const response = await axios.get(`${FLUID_ENDPOINT}/${chain}/tokens`)
+    const tokenData = response.data.data.find(
+      token => token.address.toLowerCase() === fToken.toLowerCase(),
+    )
+    let rewardAPR = 0
+    if (tokenData.rewards) {
+      for (const reward of tokenData.rewards) {
+        rewardAPR += parseFloat(reward.rate) / 100
+      }
+    }
+    const underlyingAPR = parseFloat(tokenData.totalRate) / 100
+    apy = underlyingAPR + rewardAPR
+  } catch (err) {
+    console.error('Gamma API error: ', err)
+    apy = 0
+  }
 
-  const lendingInstance = new web3.eth.Contract(lendingAbi, lendingAddresses[chain])
-  const rewardData = await lendingMethods.getRewardData(fToken, lendingInstance)
-  const rewardAPR = new BigNumber(rewardData.rewardsRate_).div(1e12)
+  if (reduction) {
+    apy = apy * parseFloat(reduction)
+  }
 
-  return supplyAPR.plus(rewardAPR).times(reduction).toFixed()
+  return apy
 }
 
 module.exports = {
