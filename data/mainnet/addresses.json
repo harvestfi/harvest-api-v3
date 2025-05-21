@@ -883,6 +883,11 @@
       "NewStrategy": "0x4D2eCB4Cd15694cF6E14DF438E6cE4398ec20F03",
       "NewPool": "0xe4a574Adb66338136F8a51B5313dda39b39a2a00",
       "MorphoVault": "0xBEeFFF209270748ddd194831b3fa287a5386f5bC"
+    },
+    "IPOR_USDC_ethereum": {
+      "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "NewVault": "0x3151cEE0cdb517C0E7Db2B55FF5085e7D1809d90",
+      "doHardwork": false
     }
   },
   "MATIC": {

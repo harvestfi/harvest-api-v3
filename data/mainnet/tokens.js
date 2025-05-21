@@ -41,6 +41,37 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  IPOR_USDC_ethereum: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'IPOR_USDC_ethereum',
+    isIPORVault: true,
+    apyIconUrls: ['./icons/usdc.svg'],
+    apyTokenSymbols: ['USDC'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Autopilot'],
+    tags: ['Beginners', 'Stable'],
+    tokenAddress: addresses.V2.IPOR_USDC_ethereum.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.V2.IPOR_USDC_ethereum.NewVault,
+    vaultDecimals: '8',
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.IPOR,
+        params: [
+          addresses.V2.IPOR_USDC_ethereum.Underlying,
+          addresses.V2.IPOR_USDC_ethereum.NewVault,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+    // apyDescriptionOverride: ['Auto harvested', 'Incentives'],
+  },
   aave_USDC: {
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/usdc.svg'],
