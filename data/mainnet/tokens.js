@@ -41,6 +41,87 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  morpho_AR_USDC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - Apostro Resolv'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.BASE.V2.morpho_AR_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.morpho_AR_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.morpho_AR_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.BASE.V2.morpho_AR_USDC.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
+  morpho_UN_USDC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - Universal'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.BASE.V2.morpho_UN_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.morpho_UN_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.morpho_UN_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.BASE.V2.morpho_UN_USDC.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
+  morpho_YOG_USDC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - Yearn OG'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.BASE.V2.morpho_YOG_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.morpho_YOG_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.morpho_YOG_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.BASE.V2.morpho_YOG_USDC.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
   aave_USDC: {
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/usdc.svg'],
