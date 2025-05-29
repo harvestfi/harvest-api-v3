@@ -32,7 +32,7 @@ const getTokenPrice = async (selectedToken, ourChainId = CHAIN_IDS.ETH) => {
   const cachedPriceKey1 = `tokenPrice${normalizedSelectedToken}${ourChainId}${currency}`
   const cachedPrice1 = cache.get(cachedPriceKey1)
 
-  if (cachedPrice1) {
+  if (cachedPrice1 && !(selectedToken == 'IFARM')) {
     return cachedPrice1
   }
 

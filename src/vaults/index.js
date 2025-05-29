@@ -125,17 +125,10 @@ const fetchAndExpandVault = async symbol => {
     resetCallCount()
   }
 
-  if (symbol == 'IFARM') {
-    totalValueLocked = new BigNumber(underlyingBalanceWithInvestment)
-      .multipliedBy(usdPrice)
-      .dividedBy(pricePerFullShare)
-      .toString()
-  } else {
-    totalValueLocked = new BigNumber(underlyingBalanceWithInvestment)
-      .multipliedBy(usdPrice)
-      .dividedBy(new BigNumber(10).exponentiatedBy(Number(vaultData.decimals)))
-      .toString()
-  }
+  totalValueLocked = new BigNumber(underlyingBalanceWithInvestment)
+    .multipliedBy(usdPrice)
+    .dividedBy(new BigNumber(10).exponentiatedBy(Number(vaultData.decimals)))
+    .toString()
 
   if (isArray(vaultData.tokenAddress)) {
     await forEach(vaultData.tokenAddress, async tokenAddress => {
