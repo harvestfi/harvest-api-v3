@@ -2049,7 +2049,7 @@
         "NewStrategy": "0x38D1f855426c1032bD34eB60e96c6af9e9f86ADd",
         "NewPool": "0x5BfA1f346b7d2900FD9152437da538541Cb4284E",
         "AavePool": "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
-        "doHardwork": "noSim"
+        "doHardwork": false
       },
       "aave_GHO": {
         "Underlying": "0x7dfF72693f6A4149b17e7C6314655f6A9F7c8B33",

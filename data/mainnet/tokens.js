@@ -7355,6 +7355,7 @@ module.exports = {
     ],
   },
   aave_FRAX_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/aave.svg'],
     apyTokenSymbols: ['AAVE'],
