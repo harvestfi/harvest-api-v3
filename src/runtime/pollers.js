@@ -155,13 +155,27 @@ const getVaults = async () => {
 
   console.log('\n-- Getting ETH vaults data --')
   await forEach(ethVaultsBatches, async batch => {
-    try {
-      console.log('Getting vault data for: ', batch)
-      const vaultsData = await getVaultsData(batch)
-      fetchedETHVaults = fetchedETHVaults.concat(vaultsData)
-    } catch (err) {
-      hasErrors = true
-      console.error(`Failed to get vault data for: ${batch}`, err)
+    if (batch) {
+      try {
+        console.log('Getting vault data for: ', batch)
+        let vaultsData,
+          iporvaultsData,
+          iporBatch = [],
+          normalBatch = []
+        batch.forEach(vaultId => {
+          if (tokensWithVault[vaultId].isIPORVault) {
+            iporBatch.push(vaultId)
+          } else {
+            normalBatch.push(vaultId)
+          }
+        })
+        vaultsData = await getVaultsData(normalBatch)
+        iporvaultsData = await getIPORVaultsData(iporBatch)
+        fetchedETHVaults = fetchedETHVaults.concat(vaultsData).concat(iporvaultsData)
+      } catch (err) {
+        hasErrors = true
+        console.error(`Failed to get vault data for: ${batch}`, err)
+      }
     }
   })
   console.log('\n-- Done getting ETH vaults data --')
