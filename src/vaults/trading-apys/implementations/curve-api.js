@@ -9,7 +9,7 @@ const getTradingApy = async (poolAddress, chainId) => {
 
   try {
     response = await axios.get(`${url}`)
-    poolDetails = get(response, 'data.data', 0)
+    poolDetails = get(response, 'data.data.pools', 0)
   } catch (err) {
     console.error('Curve API error: ', err)
     response = null
@@ -23,7 +23,7 @@ const getTradingApy = async (poolAddress, chainId) => {
   }
 
   if (poolDetail != null) {
-    apy = parseFloat(poolDetail.base_daily_apr) * 100
+    apy = parseFloat(poolDetail.latestDailyApyPcent)
     apy = apy.toFixed(2, 1)
   } else {
     apy = 0
