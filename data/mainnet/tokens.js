@@ -10856,6 +10856,7 @@ module.exports = {
     },
   },
   magpie_ETH_frxeth: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg'],
     apyIconUrls: ['./icons/mgp.png', './icons/wom.png'],
