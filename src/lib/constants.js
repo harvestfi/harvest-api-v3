@@ -217,8 +217,8 @@ const SYNCSWAP_SUBGRAPH_URL =
 const DEXSCREENER_API_URL = 'https://api.dexscreener.com/latest/dex/tokens'
 
 const CURVE_API_URLS = {
-  8453: 'https://prices.curve.fi/v1/chains/base',
-  42161: 'https://prices.curve.fi/v1/chains/arbitrum',
+  8453: 'https://api.curve.finance/api/getVolumes/base',
+  42161: 'https://api.curve.finance/api/getVolumes/arbitrum',
 }
 
 const GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/'
