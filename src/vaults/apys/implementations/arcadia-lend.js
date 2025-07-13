@@ -14,7 +14,7 @@ const getApy = async (lendingPoolAddress, reduction) => {
   const totalLiquidity = new BigNumber(await lendMethods.getTotalLiquidity(lendInstance))
   const totalBorrows = new BigNumber(await lendMethods.getTotalAssets(lendInstance))
 
-  let rate = interestRate.times(totalBorrows).times(100).div(totalLiquidity).div(1e18)
+  let rate = interestRate.times(totalBorrows).times(85).div(totalLiquidity).div(1e18)
   if (reduction) {
     rate = rate.multipliedBy(reduction)
   }
