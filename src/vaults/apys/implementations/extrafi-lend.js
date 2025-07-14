@@ -39,7 +39,7 @@ const getApy = async (rewardPool, reserveId, reduction) => {
     const tokenPerYear = new BigNumber(rewardData.rewardRate)
       .times(secondsPerYear)
       .div(10 ** tokenDecimals)
-    const tokenPrice = await getTokenPrice(rewardToken, CHAIN_IDS.BASE) || 0
+    const tokenPrice = (await getTokenPrice(rewardToken, CHAIN_IDS.BASE)) || 0
     rewardUsdPerYear = rewardUsdPerYear.plus(tokenPerYear.times(tokenPrice))
   }
 
