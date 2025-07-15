@@ -6,6 +6,132 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.BASE,
+    id: 'moonwell_cbXRP',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.moonwell_cbXRP.NewPool,
+    collateralAddress: addresses.BASE.V2.moonwell_cbXRP.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_cbXRP.Underlying}" target="_blank" rel="noopener noreferrer"> cbXRP </a>to Moonwell, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwell_cbXRP.Underlying}" target="_blank" rel="noopener noreferrer"> cbXRP</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'morpho_COE_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.morpho_COE_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.morpho_COE_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morpho_COE_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Clearstar OpenEden Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morpho_COE_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'morpho_EF_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.morpho_EF_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.morpho_EF_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morpho_EF_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Extrafi XLend Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morpho_EF_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'morpho_GF_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.morpho_GF_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.morpho_GF_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morpho_GF_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Gauntlet Frontier Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morpho_GF_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'morpho_EF_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.morpho_EF_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.morpho_EF_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morpho_EF_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to the Morpho Extrafi XLend Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morpho_EF_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'morpho_YOG_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.morpho_YOG_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.morpho_YOG_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morpho_YOG_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to the Morpho Yearn OG Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morpho_YOG_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
     id: 'morpho_AR_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.BASE.V2.morpho_AR_USDC.NewPool,

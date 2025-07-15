@@ -41,6 +41,169 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  moonwell_cbXRP: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/well.svg'],
+    apyTokenSymbols: ['WELL'],
+    logoUrl: ['./icons/cbxrp.svg'],
+    tokenNames: ['cbXRP'],
+    platform: ['Moonwell'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.BASE.V2.moonwell_cbXRP.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.moonwell_cbXRP.NewVault,
+    strategyAddress: addresses.BASE.V2.moonwell_cbXRP.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['coinbase-wrapped-xrp'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
+        params: [
+          addresses.BASE.V2.moonwell_cbXRP.Underlying,
+          addresses.BASE.V2.moonwell_cbXRP.mToken,
+          addresses.BASE.V2.moonwell_cbXRP.NewStrategy,
+          profitSharingCut10Percent,
+        ],
+      },
+    ],
+  },
+  morpho_COE_USDC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - Clearstar OpenEden'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.BASE.V2.morpho_COE_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.morpho_COE_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.morpho_COE_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.BASE.V2.morpho_COE_USDC.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
+  morpho_EF_USDC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - Extrafi XLend'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.BASE.V2.morpho_EF_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.morpho_EF_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.morpho_EF_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.BASE.V2.morpho_EF_USDC.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
+  morpho_GF_USDC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - Gauntlet Frontier'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.BASE.V2.morpho_GF_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.morpho_GF_USDC.NewVault,
+    strategyAddress: addresses.BASE.V2.morpho_GF_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.BASE.V2.morpho_GF_USDC.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
+  morpho_EF_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/eth.svg'],
+    tokenNames: ['ETH'],
+    platform: ['Morpho - Extrafi XLend'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.BASE.V2.morpho_EF_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.morpho_EF_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.morpho_EF_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['weth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.BASE.V2.morpho_EF_ETH.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
+  morpho_YOG_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/eth.svg'],
+    tokenNames: ['ETH'],
+    platform: ['Morpho - Yearn OG'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.BASE.V2.morpho_YOG_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.morpho_YOG_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.morpho_YOG_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['weth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.BASE.V2.morpho_YOG_ETH.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
   IPOR_USDC_ethereum: {
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'IPOR_USDC_ethereum',
@@ -1198,12 +1361,12 @@ module.exports = {
         ],
         extraDailyCompound: false,
       },
-      {
-        type: ESTIMATED_APY_TYPES.DRIP,
-        params: [addresses.BASE.V2.IPOR_USDC_base.NewVault, addresses.BASE.Drip, CHAIN_IDS.BASE],
-      },
+      // {
+      //   type: ESTIMATED_APY_TYPES.DRIP,
+      //   params: [addresses.BASE.V2.IPOR_USDC_base.NewVault, addresses.BASE.Drip, CHAIN_IDS.BASE],
+      // },
     ],
-    apyDescriptionOverride: ['Auto harvested', 'Incentives'],
+    // apyDescriptionOverride: ['Auto harvested', 'Incentives'],
   },
   IPOR_WETH_base: {
     chain: CHAIN_IDS.BASE,
@@ -1233,12 +1396,12 @@ module.exports = {
         ],
         extraDailyCompound: false,
       },
-      {
-        type: ESTIMATED_APY_TYPES.DRIP,
-        params: [addresses.BASE.V2.IPOR_WETH_base.NewVault, addresses.BASE.Drip, CHAIN_IDS.BASE],
-      },
+      // {
+      //   type: ESTIMATED_APY_TYPES.DRIP,
+      //   params: [addresses.BASE.V2.IPOR_WETH_base.NewVault, addresses.BASE.Drip, CHAIN_IDS.BASE],
+      // },
     ],
-    apyDescriptionOverride: ['Auto harvested', 'Incentives'],
+    // apyDescriptionOverride: ['Auto harvested', 'Incentives'],
   },
   IPOR_cbBTC_base: {
     chain: CHAIN_IDS.BASE,
@@ -1268,12 +1431,12 @@ module.exports = {
         ],
         extraDailyCompound: false,
       },
-      {
-        type: ESTIMATED_APY_TYPES.DRIP,
-        params: [addresses.BASE.V2.IPOR_cbBTC_base.NewVault, addresses.BASE.Drip, CHAIN_IDS.BASE],
-      },
+      // {
+      //   type: ESTIMATED_APY_TYPES.DRIP,
+      //   params: [addresses.BASE.V2.IPOR_cbBTC_base.NewVault, addresses.BASE.Drip, CHAIN_IDS.BASE],
+      // },
     ],
-    apyDescriptionOverride: ['Auto harvested', 'Incentives'],
+    // apyDescriptionOverride: ['Auto harvested', 'Incentives'],
   },
   morphoGC_ETH: {
     chain: CHAIN_IDS.BASE,

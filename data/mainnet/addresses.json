@@ -3693,6 +3693,48 @@
         "NewStrategy": "0xBF9C531dD66bE36A3c951D6eF141e6baF6edA485",
         "NewPool": "0x4E6B8C9bcBced541F84860D84F7A54D2F817B2aA",
         "MorphoVault": "0xef417a2512C5a41f69AE4e021648b69a7CdE5D03"
+      },
+      "moonwell_cbXRP": {
+        "Underlying": "0xcb585250f852C6c6bf90434AB21A00f02833a4af",
+        "NewVault": "0xC9AF79bC3D5660eA18dee22415BAfDAB08fb461B",
+        "NewStrategy": "0x80269e6B4D4110Bff9FFc4417dE73501125Af676",
+        "NewPool": "0x5252bFCfB7331e81829fD3eD4f458976eCb0AEaa",
+        "mToken": "0xb4fb8fed5b3AaA8434f0B19b1b623d977e07e86d"
+      },
+      "morpho_COE_USDC": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x41B1Fce6a7378170235d068421520C02B53bc95f",
+        "NewStrategy": "0xdfaf1062937df2f83C8f3277a2008bA994D85EC2",
+        "NewPool": "0xa18e62a9BD01c7352C3Facc65Ea76dC0849d85f6",
+        "MorphoVault": "0x1D3b1Cd0a0f242d598834b3F2d126dC6bd774657"
+      },
+      "morpho_EF_ETH": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0x03Fef3Bac27e23B21886b503EDBbe4987e02Cda0",
+        "NewStrategy": "0x47BFf8Bb6B73a142016297202FA3064FaE829bE8",
+        "NewPool": "0x1762727cB1A5f8Fc785baa526930E75b886e5c91",
+        "MorphoVault": "0x5A32099837D89E3a794a44fb131CBbAD41f87a8C"
+      },
+      "morpho_EF_USDC": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x36A4096C6586D25D5B8d7bEC750076443B8b3E60",
+        "NewStrategy": "0xf37C2E746B459c9372431Fc5C6D137c6a1175880",
+        "NewPool": "0x5f648a3ACab2679061C71C20070b209dDFe2c977",
+        "MorphoVault": "0x23479229e52Ab6aaD312D0B03DF9F33B46753B5e"
+      },
+      "morpho_GF_USDC": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0xA0200EEeD8D90aa01dE741DAEfab5F86C09D5785",
+        "NewStrategy": "0xD712eA7137bC8C73f2A730E50D66FCB5298f4227",
+        "NewPool": "0x6F0F17A004e9a87555504DB9788dd147Bd36601A",
+        "MorphoVault": "0x236919F11ff9eA9550A4287696C2FC9e18E6e890"
+      },
+      "morpho_YOG_ETH": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0xaaD34AA93F987B8B032944Ad52c9b6E41c4152fE",
+        "NewStrategy": "0x5e9d6D5842Ab11894AB334e3499B65894399B8c3",
+        "NewPool": "0x67518D1686ed2414995aE4e3C9bE3114B6B1765a",
+        "MorphoVault": "0x1D795E29044A62Da42D927c4b179269139A28A6B"
       }
     }
   },
