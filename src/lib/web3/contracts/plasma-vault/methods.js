@@ -32,6 +32,9 @@ const deposit = (amount, address, instance) =>
 const withdraw = (amount, address, instance) =>
   countFunctionCall(instance.methods.withdraw(amount, address, address).send({ from: address }))
 
+const getMarketSubstrates = (instance, marketId) =>
+  countFunctionCall(instance.methods.getMarketSubstrates(marketId).call())
+
 module.exports = {
   balanceOf,
   decimals,
@@ -45,4 +48,5 @@ module.exports = {
   getManagementFeeData,
   deposit,
   withdraw,
+  getMarketSubstrates,
 }

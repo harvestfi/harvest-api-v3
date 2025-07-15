@@ -38,6 +38,10 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
       fuses.map(async (fuse, index) => {
         const fuseInstance = new web3.eth.Contract(fuseAbi, fuse)
         const marketId = await getMarketId(fuseInstance)
+        const substrates = await methods.getMarketSubstrates(pVaultInstance, marketId)
+        if (!substrates || substrates.length === 0) {
+          return
+        }
         const pVaultData = await methods.getInstantWithdrawalFusesParams(
           pVaultInstance,
           fuse,
