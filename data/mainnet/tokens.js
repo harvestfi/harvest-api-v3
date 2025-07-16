@@ -7183,6 +7183,7 @@ module.exports = {
     },
   },
   curve_thUSD_3CRV: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],

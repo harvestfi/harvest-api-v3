@@ -596,7 +596,8 @@
       "Underlying": "0x91553BAD9Fbc8bD69Ff5d5678Cbf7D514d00De0b",
       "NewVault": "0x1713875007E5F42391DcE688ed929d2E258d5775",
       "NewStrategy": "0xf4BE6768B1F2d74cA9B812e281b107D254039F0c",
-      "NewPool": "0x07483cAE73826677868e11cb601dfc3631629e7c"
+      "NewPool": "0x07483cAE73826677868e11cb601dfc3631629e7c",
+      "doHardwork": false
     },
     "balancer_APW_ETH": {
       "Underlying": "0x093254005743b7Af89e24F645730Ba2dD8441333",
