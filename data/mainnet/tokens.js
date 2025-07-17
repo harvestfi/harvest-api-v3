@@ -15840,12 +15840,12 @@ module.exports = {
     tokenNames: ['iFARM'],
     platform: ['Harvest'],
     tags: ['Beginners'],
-    tokenAddress: addresses.iFARM,
+    tokenAddress: addresses.FARM,
     decimals: '18',
     vaultAddress: addresses.iFARM,
     priceFunction: {
-      type: GET_PRICE_TYPES.F_TOKEN,
-      params: [addresses.iFARM, '18'],
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['harvest-finance'],
     },
     estimateApyFunctions: [
       {
