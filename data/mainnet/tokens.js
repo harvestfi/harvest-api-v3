@@ -924,7 +924,6 @@ module.exports = {
     ],
   },
   arcadia_ETH: {
-    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/eth.svg'],
     apyTokenSymbols: ['ETH'],
@@ -948,7 +947,6 @@ module.exports = {
     ],
   },
   arcadia_USDC: {
-    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/usdc.svg'],
     apyTokenSymbols: ['USDC'],
@@ -972,7 +970,6 @@ module.exports = {
     ],
   },
   arcadia_cbBTC: {
-    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/cbbtc.svg'],
     apyTokenSymbols: ['cbBTC'],
