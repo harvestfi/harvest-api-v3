@@ -63,6 +63,7 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
         const allocData = {
           hVaultId,
           allocPoint: underlyingAssetsInMarket,
+          apy: hVaultData?.estimatedApy,
         }
         allocDatas.push(allocData)
       }),
@@ -76,6 +77,7 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
   const notInvestedData = {
     hVaultId: 'Not invested',
     allocPoint: notInvestedAmount.lt(0) ? new BigNumber(0) : notInvestedAmount,
+    apy: 0,
   }
   allocDatas.push(notInvestedData)
 
