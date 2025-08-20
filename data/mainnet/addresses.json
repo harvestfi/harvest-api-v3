@@ -2428,6 +2428,27 @@
         "Underlying": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
         "NewVault": "0xD66964BD4049f7Fd2e279FE048eAA2c12E802658",
         "doHardwork": false
+      },
+      "silo_PENDLE_USDC": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0xAce65F5db2DED599Ef510b220939993e4783d738",
+        "NewStrategy": "0x86c916E9385fD5371ec86ec65B136bD1C3771A26",
+        "NewPool": "0x86A66f73f5a6595448aE3Ab01D2767E49AAD564A",
+        "Silo": "0x86B1C293e56cBAC04D9C15A1Af2Ef1d2050ff6Cd"
+      },
+      "silo_sUSDX_USDC": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0x2d5FDe3D24ed3e7c548a59039EeE5af8200f9291",
+        "NewStrategy": "0xE6Ebe3EBC748a26D1A1ffee5756511f6e1e8f57e",
+        "NewPool": "0x6443404c65a72aBC3780Ce0c907d29200Ea6126E",
+        "Silo": "0x2433D6AC11193b4695D9ca73530de93c538aD18a"
+      },
+      "silo_yUSD_USDC": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0x000A70c4887cC3974de7535623209CA01a215c50",
+        "NewStrategy": "0xe112A8FB9E215c5352D9BA0eE97435C199bd6857",
+        "NewPool": "0x358527242498e47267d7915c7d0eE478A041551C",
+        "Silo": "0x1cf4649a2b38747F8E3E70e00f6FA5AEB14A12ba"
       }
     }
   },

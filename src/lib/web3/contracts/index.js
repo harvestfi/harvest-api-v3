@@ -256,7 +256,14 @@ const faVaultContract = require('../contracts/fa-vault/contract.json')
 const faLoanMethods = require('../contracts/fa-loan/methods')
 const faLoanContract = require('../contracts/fa-loan/contract.json')
 
+const siloLensMethods = require('../contracts/silo-lens/methods')
+const siloLensContract = require('../contracts/silo-lens/contract.json')
+
 module.exports = {
+  siloLens: {
+    methods: siloLensMethods,
+    contract: siloLensContract,
+  },
   faVault: {
     methods: faVaultMethods,
     contract: faVaultContract,

@@ -5,6 +5,66 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'silo_PENDLE_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.silo_PENDLE_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.silo_PENDLE_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.silo_PENDLE_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> to Silo - PENDLE, earning USDC interest. 
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.silo_PENDLE_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'silo_sUSDX_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.silo_sUSDX_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.silo_sUSDX_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.silo_sUSDX_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> to Silo - sUSDX, earning USDC interest. 
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.silo_sUSDX_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'silo_yUSD_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.silo_yUSD_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.silo_yUSD_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.silo_yUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> to Silo - yUSD, earning USDC interest. 
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.silo_yUSD_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'moonwell_cbXRP',
     type: POOL_TYPES.INCENTIVE,
