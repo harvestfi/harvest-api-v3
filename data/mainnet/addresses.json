@@ -889,6 +889,41 @@
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       "NewVault": "0x3151cEE0cdb517C0E7Db2B55FF5085e7D1809d90",
       "doHardwork": false
+    },
+    "morpho_9S_USDC": {
+      "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "NewVault": "0x401a6262edaB0a4Fb2319ca29205aeC9e35E5f9B",
+      "NewStrategy": "0xC4D045f679DE672D8855222195b8e3489e7FcE7a",
+      "NewPool": "0xc79d6472a512B3F670fD425833e37f8CF2E11B67",
+      "MorphoVault": "0x1E2aAaDcF528b9cC08F43d4fd7db488cE89F5741"
+    },
+    "morpho_AR_USDC": {
+      "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "NewVault": "0xa8be729C0b2ce16C12f223BDE20B2fD715dae37F",
+      "NewStrategy": "0x9867C2383dD0747a5a92F8Fdc2f3c95649D92153",
+      "NewPool": "0xDBe157bc40fF7C54CE5bcE4f86Dc986DAf70e000",
+      "MorphoVault": "0x214B47C50057eFaa7adc1B1C2608C3751Cd77D78"
+    },
+    "morpho_CR_USDC": {
+      "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "NewVault": "0x99671dbf3D87C0b8f23E7Ea5B20CFAA6175578ca",
+      "NewStrategy": "0xB86713A05c05CCc818F5FD753D68a3D8F00A44ca",
+      "NewPool": "0x830E3CD061cF5f38F6546Ae018C537f98b399401",
+      "MorphoVault": "0x62fE596d59fB077c2Df736dF212E0AFfb522dC78"
+    },
+    "morpho_FX_USDC": {
+      "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "NewVault": "0x40C0a9789D4C38e1125C540edB664fFff69C83E7",
+      "NewStrategy": "0x4e76e177c76F74b1FD45ae0d6daC50deE4023886",
+      "NewPool": "0xfD97B5beE02DF6c06752872F0Cb08bc19aA716ff",
+      "MorphoVault": "0x4F460bb11cf958606C69A963B4A17f9DaEEea8b6"
+    },
+    "morpho_RL_USDC": {
+      "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "NewVault": "0x74935AF6714cDED7f7637dCEA30614B4341f432c",
+      "NewStrategy": "0x1B615F2E7670D473CfFc5FC09b806e1bc2515099",
+      "NewPool": "0x67D24C2858efe00d26fde5Ce7B67382F4Cbb787e",
+      "MorphoVault": "0x0F359FD18BDa75e9c49bC027E7da59a4b01BF32a"
     }
   },
   "MATIC": {
