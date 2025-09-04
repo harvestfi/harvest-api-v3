@@ -18,7 +18,7 @@ const getApy = async (fToken, reduction, chain) => {
     const underlyingAPR = parseFloat(tokenData.totalRate) / 100
     apy = underlyingAPR + rewardAPR
   } catch (err) {
-    console.error('Gamma API error: ', err)
+    console.error('Fluid API error: ', err)
     apy = 0
   }
 
