@@ -41,6 +41,61 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  euler_EE_USDC: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg', './icons/reul.svg'],
+    apyTokenSymbols: ['ARB', 'rEUL'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Euler Earn'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.euler_EE_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.euler_EE_USDC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.euler_EE_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.EULER_EARN,
+        params: [
+          addresses.ARBITRUM_ONE.V2.euler_EE_USDC.EulerVault,
+          addresses.ARBITRUM_ONE.V2.euler_EE_USDC.NewStrategy,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
+  silo_OP_USDC: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg'],
+    apyTokenSymbols: ['ARB'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Silo - Optima'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.silo_OP_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.silo_OP_USDC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.silo_OP_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.SILO_VAULT,
+        params: [
+          addresses.ARBITRUM_ONE.V2.silo_OP_USDC.SiloVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
   morpho_AC_USDC_arbitrum: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg', './icons/morpho.svg'],

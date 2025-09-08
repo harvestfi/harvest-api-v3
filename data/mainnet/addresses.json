@@ -1306,6 +1306,7 @@
     "zunETH": "0x06D65eC13465Ac5A4376dc101e1141252c4adDf8",
     "zunUSD": "0x870908873b6f940E025A7C6879678cB82eC6C9B6",
     "XVS": "0xc1Eb7689147C81aC840d4FF0D298489fc7986d52",
+    "rEUL": "0xFA31599a4928c2d57C0dd77DFCA5DA1E94E6D2D2",
     "V2": {
       "iPoison": {
         "Underlying": "0xDA016d31f2B52C73D7c1956E955ae8A507b305bB",
@@ -2540,6 +2541,20 @@
         "NewStrategy": "0x706490771EC45158f28eb8331F89F1e0A63B7Cf8",
         "NewPool": "0x49c7eE3722509B0aF94169aaFFD564eB11c255F5",
         "MorphoVault": "0x87DEAE530841A9671326C9D5B9f91bdB11F3162c"
+      },
+      "euler_EE_USDC": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0xE25EaE6261a0aD47b57d16bD10c0cAdC9D317aC2",
+        "NewStrategy": "0x96a5939E612C0039670AEB3a0A6146752576c3b9",
+        "NewPool": "0xFfdDE15fB2eBf8C93aFbd825963c98d4B2b14574",
+        "EulerVault": "0xe4783824593a50Bfe9dc873204CEc171ebC62dE0"
+      },
+      "silo_OP_USDC": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0xE25EaE6261a0aD47b57d16bD10c0cAdC9D317aC2",
+        "NewStrategy": "0x96a5939E612C0039670AEB3a0A6146752576c3b9",
+        "NewPool": "0xFfdDE15fB2eBf8C93aFbd825963c98d4B2b14574",
+        "SiloVault": "0x2514A2Ce842705EAD703d02fABFd8250BfCfb8bd"
       }
     }
   },
