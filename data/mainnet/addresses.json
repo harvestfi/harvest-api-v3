@@ -2551,9 +2551,9 @@
       },
       "silo_OP_USDC": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
-        "NewVault": "0xE25EaE6261a0aD47b57d16bD10c0cAdC9D317aC2",
-        "NewStrategy": "0x96a5939E612C0039670AEB3a0A6146752576c3b9",
-        "NewPool": "0xFfdDE15fB2eBf8C93aFbd825963c98d4B2b14574",
+        "NewVault": "0xB320a32C435657389815075118c940D3D4792AaA",
+        "NewStrategy": "0x66eeb722EDDD56B440B57AC0d5DEA0110f54E6CC",
+        "NewPool": "0x7B5cC42AcE198AED1E0f3e04dbAaD95164d571ab",
         "SiloVault": "0x2514A2Ce842705EAD703d02fABFd8250BfCfb8bd"
       }
     }
