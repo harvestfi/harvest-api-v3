@@ -2452,7 +2452,7 @@
       },
       "IPOR_USDC_arbitrum": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
-        "NewVault": "0xC015d83e24FDDe23100AD1E9baD837878fbfaB94",
+        "NewVault": "0x407D3d942d0911a2fEA7E22417f81E27c02D6c6F",
         "doHardwork": false
       },
       "IPOR_WETH_arbitrum": {
@@ -3904,6 +3904,11 @@
         "NewStrategy": "0x869e5c8E0236C0515fC4cb5bb20D76bcb1246e8d",
         "NewPool": "0xB7103AC6b015cD57Bf3F32Cf0BCd76E3Edcc2bc0",
         "MorphoVault": "0xBeeFa74640a5f7c28966cbA82466EED5609444E0"
+      },
+      "IPOR_MORPHO_USDC_base": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0xd6701905c59EE618dc36DC747506BCE0a4AC760A",
+        "doHardwork": false
       }
     }
   },
