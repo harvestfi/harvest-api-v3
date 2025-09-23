@@ -42,7 +42,6 @@ module.exports = {
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
   IPOR_MORPHO_USDC_base: {
-    inactive: true,
     chain: CHAIN_IDS.BASE,
     id: 'IPOR_MORPHO_USDC_base',
     isIPORVault: true,
