@@ -5,6 +5,69 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'morpho_OEV_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.morpho_OEV_USDC.NewPool,
+    collateralAddress: addresses.V2.morpho_OEV_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_OEV_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho OEV-boosted Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_OEV_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'morpho_PT_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.morpho_PT_USDC.NewPool,
+    collateralAddress: addresses.V2.morpho_PT_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_PT_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho MEV PTs Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_PT_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'morpho_SP_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.morpho_SP_USDC.NewPool,
+    collateralAddress: addresses.V2.morpho_SP_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_SP_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho Spectra Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_SP_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'euler_EE_USDC',
     type: POOL_TYPES.INCENTIVE,
