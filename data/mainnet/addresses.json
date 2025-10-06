@@ -2576,7 +2576,43 @@
         "NewStrategy": "0x66eeb722EDDD56B440B57AC0d5DEA0110f54E6CC",
         "NewPool": "0x7B5cC42AcE198AED1E0f3e04dbAaD95164d571ab",
         "SiloVault": "0x2514A2Ce842705EAD703d02fABFd8250BfCfb8bd"
+      },
+      "euler_TF_USDC": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0x857a6072754532Ae77AdA617a7d0900B63c1e2A1",
+        "NewStrategy": "0x539e399478f31cc330E769BcB8D54C2CE249Ca6B",
+        "NewPool": "0xBA90EC86C861d6401Ce1b8254Ed0318EA4e6FEf4",
+        "EulerVault": "0x44C10DA836d2aBe881b77bbB0b3DCE5f85C0C1Cc"
+      },
+      "morpho_CR_USDC": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0x4A8e91248E5602d0D34a5E86A9f1B60E8F2dC721",
+        "NewStrategy": "0xa80daD6619BCbD795D8186875bB70bcaD1282bce",
+        "NewPool": "0xa9205F702796300e4FD7e48B1DFAac24Ad2EcbdD",
+        "MorphoVault": "0xa53Cf822FE93002aEaE16d395CD823Ece161a6AC"
+      },
+      "morpho_HY_USDC": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0xAcb760D36236b487aB4ec48932746844b6339bB5",
+        "NewStrategy": "0x02e1C87F5b541c41704DE6B6895590F348a3662E",
+        "NewPool": "0x6FFa122baeF628bDBD35DA6ba0e40cCD13a0c4B1",
+        "MorphoVault": "0x4B6F1C9E5d470b97181786b26da0d0945A7cf027"
+      },
+      "morpho_YD_USDC": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0x7828c3413b10f20DC2F0c0AD1AF87a60FC01831D",
+        "NewStrategy": "0xEb0F8BE4aC137c481A764ba76ABBa66B08B2dE2f",
+        "NewPool": "0x56099c0DB43915dEb18B7ee959cf5e92633FD03F",
+        "MorphoVault": "0x36b69949d60d06ECcC14DE0Ae63f4E00cc2cd8B9"
+      },
+      "silo_VM_USDC": {
+        "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "NewVault": "0x5E777587D6f9261A85D7f062790d4cEE71081BA1",
+        "NewStrategy": "0x5f19640De4A50e035AB0b50957748bFdEd8F158D",
+        "NewPool": "0x75c87EcD39bcB166013e78Dc7024CeB003b8A574",
+        "SiloVault": "0x2BA39e5388aC6C702Cb29AEA78d52aa66832f1ee"
       }
+
     }
   },
   "BASE": {
