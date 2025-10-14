@@ -4,6 +4,27 @@ const addresses = require('./addresses.json')
 const strat15PercentFactor = '0.85'
 
 module.exports = [
+    {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'silo_ET_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.silo_ET_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.silo_ET_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.silo_ET_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to the Silo Ethereal Vault, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.silo_ET_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'euler_TF_USDC',

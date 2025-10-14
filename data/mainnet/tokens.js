@@ -41,6 +41,33 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  silo_ET_ETH: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg'],
+    apyTokenSymbols: ['ARB'],
+    logoUrl: ['./icons/eth.svg'],
+    tokenNames: ['ETH'],
+    platform: ['Silo - Ethereal'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.silo_ET_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.silo_ET_ETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.silo_ET_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['weth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.SILO_VAULT,
+        params: [
+          addresses.ARBITRUM_ONE.V2.silo_ET_ETH.SiloVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
   euler_TF_USDC: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg', './icons/reul.svg'],

@@ -2611,8 +2611,14 @@
         "NewStrategy": "0x5f19640De4A50e035AB0b50957748bFdEd8F158D",
         "NewPool": "0x75c87EcD39bcB166013e78Dc7024CeB003b8A574",
         "SiloVault": "0x2BA39e5388aC6C702Cb29AEA78d52aa66832f1ee"
+      },
+      "silo_ET_ETH": {
+        "Underlying": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        "NewVault": "0xcb3060753B4376e49649E9f499cEB7359c8Bd050",
+        "NewStrategy": "0xB28Bae530ACE559e170d84FD5214A13e3F954B02",
+        "NewPool": "0x19E710dce98068EBe1458013c38C8D3e7080E841",
+        "SiloVault": "0xd8c989aB5f5b2ABDc76a8D3Acec165300BF30ecD"
       }
-
     }
   },
   "BASE": {
