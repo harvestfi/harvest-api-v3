@@ -4,7 +4,7 @@ const addresses = require('./addresses.json')
 const strat15PercentFactor = '0.85'
 
 module.exports = [
-    {
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'silo_ET_ETH',
     type: POOL_TYPES.INCENTIVE,
