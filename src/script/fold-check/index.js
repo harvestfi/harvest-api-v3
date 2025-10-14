@@ -26,7 +26,7 @@ const {
   controller,
 } = require('../../lib/web3/contracts')
 
-const platforms = ['moonwell', 'aave', 'lodestar', 'zerolend', 'reactor', 'venus']
+const platforms = ['moonwell', 'aave', 'zerolend', 'reactor', 'venus']
 
 const rewardReduction = {
   1: 0.85,
