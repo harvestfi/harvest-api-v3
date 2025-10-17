@@ -3012,6 +3012,7 @@ module.exports = {
     ],
   },
   moonwell_WELL: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -5306,6 +5307,7 @@ module.exports = {
     ],
   },
   moonwell_wrsETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -7701,6 +7703,7 @@ module.exports = {
     ],
   },
   moonwell_weETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -11908,6 +11911,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'MGP', 'WOM'],
   },
   moonwell_wstETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -11937,6 +11941,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
   moonwell_rETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -12768,6 +12773,7 @@ module.exports = {
     },
   },
   moonwell_CBETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -12797,6 +12803,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
   moonwell_DAI: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -15705,7 +15712,7 @@ module.exports = {
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['matic-network'],
+      params: ['polygon-ecosystem-token'],
     },
   },
   QUICK: {

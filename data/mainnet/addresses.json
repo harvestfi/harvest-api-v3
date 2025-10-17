@@ -3639,16 +3639,14 @@
         "NewVault": "0x2f4Ab0c54aE22bE66A1b273D11b28c001a61b871",
         "NewStrategy": "0x9dc9A5598BA5911d9E67D82641A1e96bC81B6865",
         "NewPool": "0x71C842aF911A7BcCC401ce3100F0eD1830629cC4",
-        "mToken": "0xb6419c6C2e60c4025D6D06eE4F913ce89425a357",
-        "doHardwork": false
+        "mToken": "0xb6419c6C2e60c4025D6D06eE4F913ce89425a357"
       },
       "moonwell_VIRTUAL": {
         "Underlying": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
         "NewVault": "0x5843DE606277CD8d0B009E13d9D3a014c4c123bf",
         "NewStrategy": "0xFB818264FE2440d06B3504501bCB9732b8eFb91F",
         "NewPool": "0x581fF5852BBdf95edbFd681614F0Ef213D171eEf",
-        "mToken": "0xdE8Df9d942D78edE3Ca06e60712582F79CFfFC64",
-        "doHardwork": false
+        "mToken": "0xdE8Df9d942D78edE3Ca06e60712582F79CFfFC64"
       },
       "moonwell_WELL": {
         "Underlying": "0xA88594D404727625A9437C3f886C7643872296AE",
