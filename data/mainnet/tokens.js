@@ -6678,6 +6678,7 @@ module.exports = {
     ],
   },
   aerodrome_cbBTC_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -7321,6 +7322,7 @@ module.exports = {
     ],
   },
   aerodrome_jEUR_EURA: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -7375,6 +7377,7 @@ module.exports = {
     ],
   },
   aerodrome_msUSD_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -7486,6 +7489,7 @@ module.exports = {
     ],
   },
   aerodrome_EURA_USDA: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -7513,6 +7517,7 @@ module.exports = {
     ],
   },
   aerodrome_EURC_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -9832,6 +9837,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'AERO'],
   },
   aerodrome_SEAM_USDbC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -12871,6 +12877,7 @@ module.exports = {
     },
   },
   aerodrome_DAIp_USDp: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -12937,6 +12944,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'AERO'],
   },
   aerodrome_USDp_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],

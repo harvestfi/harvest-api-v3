@@ -2905,7 +2905,8 @@
         "NewVault": "0x4423A763D4804ead6FE1faa9A2D0756B25347C47",
         "NewStrategy": "0x0a72c47E310380528269D6039cFfd8a7372E1c1f",
         "NewPool": "0xE139ecB031b6877645f5198e43b3F1CF9E594957",
-        "Gauge": "0xa5972f0C07a2D1cc5A8457c28d88ec4f3C009864"
+        "Gauge": "0xa5972f0C07a2D1cc5A8457c28d88ec4f3C009864",
+        "doHardwork": false
       },
       "curve_USDC_USDbC_axlUSDC_crvUSD": {
         "Underlying": "0xf6C5F01C7F3148891ad0e19DF78743D31E390D1f",
@@ -3192,8 +3193,7 @@
         "NewVault": "0x4600c5C9E582B6616A08DE974eb4e37e40a55CA4",
         "NewStrategy": "0x346107EE0adC21Fc9b08518980B100a74a49176D",
         "NewPool": "0x3D6651A8D9bB47a7829469cCC0195c021f2F74AD",
-        "Gauge": "0x62940D9643a130b80CA0f8bc7e94De5b7ec496C5",
-        "doHardwork": false
+        "Gauge": "0x62940D9643a130b80CA0f8bc7e94De5b7ec496C5"
       },
       "aerodrome_msUSD_USDC": {
         "Underlying": "0xcEFC8B799a8EE5D9b312aeca73262645D664AaF7",
@@ -3370,7 +3370,8 @@
         "NewVault": "0xaCac351214386f4635267058eBD2636a500a6736",
         "NewStrategy": "0x079F9aa1de475ddC4B9D9988818ffa44e3FE926A",
         "NewPool": "0x04cf6d684dA4c7c059F912Bd6b17D2AAA48aD739",
-        "Gauge": "0xEDC76895e053A9bbAC456B5a9c5B49144eee0080"
+        "Gauge": "0xEDC76895e053A9bbAC456B5a9c5B49144eee0080",
+        "doHardwork": false
       },
       "aerodrome_EURC_ETH": {
         "Underlying": "0x9DFf4b5AE4fD673213502Ab8fbf6d36015efb3E1",
