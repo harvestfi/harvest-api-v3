@@ -2478,12 +2478,12 @@
       },
       "IPOR_WETH_arbitrum": {
         "Underlying": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
-        "NewVault": "0x18B9Dc9762Ec6095f34f2d77042Ab8283fA764B4",
+        "NewVault": "0xcE4D997A3B404F9Eaa796F89DEae40747D3647B7",
         "doHardwork": false
       },
       "IPOR_WBTC_arbitrum": {
         "Underlying": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
-        "NewVault": "0xD66964BD4049f7Fd2e279FE048eAA2c12E802658",
+        "NewVault": "0x49b2248f7a7a703731852db0b2217f40da75B8aB",
         "doHardwork": false
       },
       "silo_PENDLE_USDC": {

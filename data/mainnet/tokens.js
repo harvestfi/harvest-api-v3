@@ -2715,6 +2715,7 @@ module.exports = {
     ],
   },
   venus_ETH_lsd: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/xvs.svg'],
     apyTokenSymbols: ['XVS'],
