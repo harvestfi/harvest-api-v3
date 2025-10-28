@@ -90,6 +90,196 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'silo_ET_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.silo_ET_ETH.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.silo_ET_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.silo_ET_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to the Silo Ethereal Vault, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.silo_ET_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'euler_TF_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.euler_TF_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.euler_TF_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.euler_TF_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Euler Theo Frontier Vault, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a> & 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.rEUL}" target="_blank" rel="noopener noreferrer">rEUL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.euler_TF_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'silo_VM_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.silo_VM_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.silo_VM_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.silo_VM_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Silo Varlamore Vault, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.silo_VM_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'morpho_CR_USDC_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.morpho_CR_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.morpho_CR_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.morpho_CR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Clearstar Reactor Vault, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.morpho_CR_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'morpho_HY_USDC_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.morpho_HY_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.morpho_HY_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.morpho_HY_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Hyperithm Vault, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.morpho_HY_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'morpho_YD_USDC_arbitrum',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.morpho_YD_USDC.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.morpho_YD_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.morpho_YD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Yearn Degen Vault, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.morpho_YD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'morpho_OEV_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.morpho_OEV_USDC.NewPool,
+    collateralAddress: addresses.V2.morpho_OEV_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_OEV_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho OEV-boosted Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_OEV_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'morpho_PT_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.morpho_PT_USDC.NewPool,
+    collateralAddress: addresses.V2.morpho_PT_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_PT_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho MEV PTs Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_PT_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'morpho_SP_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.morpho_SP_USDC.NewPool,
+    collateralAddress: addresses.V2.morpho_SP_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_SP_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho Spectra Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_SP_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'euler_EE_USDC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.ARBITRUM_ONE.V2.euler_EE_USDC.NewPool,

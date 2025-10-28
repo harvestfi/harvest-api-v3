@@ -1,6 +1,7 @@
 const BigNumber = require('bignumber.js')
 const { web3ARBITRUM } = require('../../../lib/web3')
 const { dolomiteMargin } = require('../../../lib/web3/contracts')
+const { getApy: getMerklApy } = require('./merkl')
 
 const getApy = async (marketId, reduction) => {
   const web3 = web3ARBITRUM
@@ -21,12 +22,19 @@ const getApy = async (marketId, reduction) => {
   const supplied = new BigNumber(marketInfo[0].totalPar.supply).times(marketInfo[0].index.supply)
   const util = borrowed.div(supplied)
 
-  const supplyAPR = new BigNumber(marketInfo[3].value)
+  let supplyAPR = new BigNumber(marketInfo[3].value)
     .times(secondsPerYear)
     .div(1e18)
     .times(earningsRate)
     .times(util)
     .times(100)
+
+  if (marketId == 17) {
+    const merklAPR = new BigNumber(
+      await getMerklApy('0x', '0xaf88d065e77c8cc2239327c5edb3a432268e5832', 42161, 1),
+    )
+    supplyAPR = supplyAPR.plus(merklAPR)
+  }
 
   return supplyAPR.times(reduction).toFixed()
 }

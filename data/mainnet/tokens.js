@@ -149,8 +149,251 @@ module.exports = {
       },
     ],
   },
+  silo_ET_ETH: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg'],
+    apyTokenSymbols: ['ARB'],
+    logoUrl: ['./icons/eth.svg'],
+    tokenNames: ['ETH'],
+    platform: ['Silo - Ethereal'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.silo_ET_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.silo_ET_ETH.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.silo_ET_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['weth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.SILO_VAULT,
+        params: [
+          addresses.ARBITRUM_ONE.V2.silo_ET_ETH.SiloVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
+  euler_TF_USDC: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg', './icons/reul.svg'],
+    apyTokenSymbols: ['ARB', 'rEUL'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Euler - Theo Frontier'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.euler_TF_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.euler_TF_USDC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.euler_TF_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.EULER_VAULT,
+        params: [
+          addresses.ARBITRUM_ONE.V2.euler_TF_USDC.EulerVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+          addresses.ARBITRUM_ONE.V2.euler_TF_USDC.NewStrategy,
+        ],
+      },
+    ],
+  },
+  morpho_CR_USDC_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg', './icons/morpho.svg'],
+    apyTokenSymbols: ['ARB', 'MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - Clearstar Reactor'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.morpho_CR_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.morpho_CR_USDC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.morpho_CR_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.ARBITRUM_ONE.V2.morpho_CR_USDC.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
+  morpho_HY_USDC_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg', './icons/morpho.svg'],
+    apyTokenSymbols: ['ARB', 'MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - Hyperithm'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.morpho_HY_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.morpho_HY_USDC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.morpho_HY_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.ARBITRUM_ONE.V2.morpho_HY_USDC.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
+  morpho_YD_USDC_arbitrum: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg', './icons/morpho.svg'],
+    apyTokenSymbols: ['ARB', 'MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - Yearn Degen'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.morpho_YD_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.morpho_YD_USDC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.morpho_YD_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.ARBITRUM_ONE.V2.morpho_YD_USDC.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
+  silo_VM_USDC: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg'],
+    apyTokenSymbols: ['ARB'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Silo - Varlamore'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.silo_VM_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.silo_VM_USDC.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.silo_VM_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.SILO_VAULT,
+        params: [
+          addresses.ARBITRUM_ONE.V2.silo_VM_USDC.SiloVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
+  morpho_OEV_USDC: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - OEV-boosted'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.V2.morpho_OEV_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.V2.morpho_OEV_USDC.NewVault,
+    strategyAddress: addresses.V2.morpho_OEV_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.V2.morpho_OEV_USDC.MorphoVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+      },
+    ],
+  },
+  morpho_PT_USDC: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - MEV PTs'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.V2.morpho_PT_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.V2.morpho_PT_USDC.NewVault,
+    strategyAddress: addresses.V2.morpho_PT_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.V2.morpho_PT_USDC.MorphoVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+      },
+    ],
+  },
+  morpho_SP_USDC: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - Spectra'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.V2.morpho_SP_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.V2.morpho_SP_USDC.NewVault,
+    strategyAddress: addresses.V2.morpho_SP_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.V2.morpho_SP_USDC.MorphoVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+      },
+    ],
+  },
   IPOR_MORPHO_USDC_base: {
-    inactive: true,
     chain: CHAIN_IDS.BASE,
     id: 'IPOR_MORPHO_USDC_base',
     isIPORVault: true,
@@ -592,7 +835,7 @@ module.exports = {
     apyTokenSymbols: ['MORPHO'],
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC'],
-    platform: ['Morpho - TAC'],
+    platform: ['Morpho - Turtle'],
     tags: ['Beginner', 'Stable'],
     tokenAddress: addresses.V2.morpho_9S_USDC.Underlying,
     decimals: '6',
@@ -722,13 +965,14 @@ module.exports = {
     ],
   },
   silo_PENDLE_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/usdc.svg'],
     apyTokenSymbols: ['USDC'],
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC'],
     platform: ['Silo - PENDLE'],
-    tags: ['Beginners'],
+    tags: ['Beginners', 'Stable'],
     tokenAddress: addresses.ARBITRUM_ONE.V2.silo_PENDLE_USDC.Underlying,
     decimals: '6',
     vaultAddress: addresses.ARBITRUM_ONE.V2.silo_PENDLE_USDC.NewVault,
@@ -751,7 +995,7 @@ module.exports = {
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC'],
     platform: ['Silo - sUSDX'],
-    tags: ['Beginners'],
+    tags: ['Beginners', 'Stable'],
     tokenAddress: addresses.ARBITRUM_ONE.V2.silo_sUSDX_USDC.Underlying,
     decimals: '6',
     vaultAddress: addresses.ARBITRUM_ONE.V2.silo_sUSDX_USDC.NewVault,
@@ -768,13 +1012,14 @@ module.exports = {
     ],
   },
   silo_yUSD_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/usdc.svg'],
     apyTokenSymbols: ['USDC'],
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC'],
     platform: ['Silo - yUSD'],
-    tags: ['Beginners'],
+    tags: ['Beginners', 'Stable'],
     tokenAddress: addresses.ARBITRUM_ONE.V2.silo_yUSD_USDC.Underlying,
     decimals: '6',
     vaultAddress: addresses.ARBITRUM_ONE.V2.silo_yUSD_USDC.NewVault,
@@ -2578,6 +2823,7 @@ module.exports = {
     ],
   },
   venus_ETH_lsd: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/xvs.svg'],
     apyTokenSymbols: ['XVS'],
@@ -2607,6 +2853,7 @@ module.exports = {
     ],
   },
   venus_USDC_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/xvs.svg'],
     apyTokenSymbols: ['XVS'],
@@ -2636,6 +2883,7 @@ module.exports = {
     ],
   },
   venus_USDT_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/xvs.svg'],
     apyTokenSymbols: ['XVS'],
@@ -2665,6 +2913,7 @@ module.exports = {
     ],
   },
   venus_WBTC_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/xvs.svg'],
     apyTokenSymbols: ['XVS'],
@@ -2872,6 +3121,7 @@ module.exports = {
     ],
   },
   moonwell_WELL: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -5166,6 +5416,7 @@ module.exports = {
     ],
   },
   moonwell_wrsETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -6538,6 +6789,7 @@ module.exports = {
     ],
   },
   aerodrome_cbBTC_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -7181,6 +7433,7 @@ module.exports = {
     ],
   },
   aerodrome_jEUR_EURA: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -7235,6 +7488,7 @@ module.exports = {
     ],
   },
   aerodrome_msUSD_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -7346,6 +7600,7 @@ module.exports = {
     ],
   },
   aerodrome_EURA_USDA: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -7373,6 +7628,7 @@ module.exports = {
     ],
   },
   aerodrome_EURC_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -7556,6 +7812,7 @@ module.exports = {
     ],
   },
   moonwell_weETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -9692,6 +9949,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'AERO'],
   },
   aerodrome_SEAM_USDbC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -10614,6 +10872,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_USDC_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/usdc.svg', './icons/usdt.svg'],
     tokenNames: ['USDC', 'USDT'],
@@ -11761,6 +12020,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'MGP', 'WOM'],
   },
   moonwell_wstETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -11790,6 +12050,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
   moonwell_rETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -12055,6 +12316,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_GMX_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/gmx.svg', './icons/eth.svg'],
     tokenNames: ['GMX', 'ETH'],
@@ -12083,6 +12345,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_GRAIL_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/grail.svg', './icons/eth.svg'],
     tokenNames: ['GRAIL', 'ETH'],
@@ -12142,6 +12405,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_WBTC_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/wbtc.svg', './icons/eth.svg'],
     tokenNames: ['WBTC', 'ETH'],
@@ -12170,6 +12434,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL', 'ARB'],
   },
   camelotV3_ARB_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/arb.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/xgrail.svg'],
@@ -12198,6 +12463,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   camelotV3_ETH_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/usdt.svg'],
     apyIconUrls: ['./icons/xgrail.svg'],
@@ -12226,6 +12492,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'GRAIL', 'xGRAIL'],
   },
   camelotV3_ETH_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/eth.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/xgrail.svg'],
@@ -12615,6 +12882,7 @@ module.exports = {
     },
   },
   moonwell_CBETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -12644,6 +12912,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
   moonwell_DAI: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -12724,6 +12993,7 @@ module.exports = {
     },
   },
   aerodrome_DAIp_USDp: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -12790,6 +13060,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'AERO'],
   },
   aerodrome_USDp_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -15550,7 +15821,7 @@ module.exports = {
     vaultAddress: null,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['matic-network'],
+      params: ['polygon-ecosystem-token'],
     },
   },
   QUICK: {
