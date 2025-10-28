@@ -54,6 +54,8 @@ const getProfitSharingFactor = chain => {
       return 0.9
     case CHAIN_IDS.ZKSYNC:
       return 0.9
+    case CHAIN_IDS.HYPEREVM:
+      return 0.9
     default:
       return 0.85
   }
@@ -67,6 +69,7 @@ const getVaults = async () => {
     fetchedARBITRUMVaults = [],
     fetchedBASEVaults = [],
     fetchedZKSYNCVaults = [],
+    fetchedHYPEREVMVaults = [],
     fetchedVaults,
     hasErrors = false
 
@@ -98,6 +101,27 @@ const getVaults = async () => {
     Object.keys(tokensWithVault).filter(tokenId => tokens[tokenId].chain === CHAIN_IDS.ZKSYNC),
     GET_VAULT_DATA_BATCH_SIZE,
   )
+
+  const hyperevmVaultsBatches = chunk(
+    Object.keys(tokensWithVault).filter(tokenId => tokens[tokenId].chain === CHAIN_IDS.HYPEREVM),
+    GET_VAULT_DATA_BATCH_SIZE,
+  )
+
+  console.log('\n-- Getting HYPEREVM vaults data --')
+  await forEach(hyperevmVaultsBatches, async batch => {
+    if (batch) {
+      try {
+        console.log('Getting vault data for: ', batch)
+        const vaultsData = await getVaultsData(batch)
+        fetchedHYPEREVMVaults = fetchedHYPEREVMVaults.concat(vaultsData)
+      } catch (err) {
+        hasErrors = true
+        console.error(`Failed to get vault data for: ${batch}`, err)
+      }
+    }
+  })
+  console.log('\n-- Done getting HYPEREVM vaults data --')
+
   console.log('\n-- Getting ZKSYNC vaults data --')
   await forEach(zksyncVaultsBatches, async batch => {
     if (batch) {
@@ -228,6 +252,10 @@ const getVaults = async () => {
       acc[vault.id] = vault
       return acc
     }, {}),
+    hyperevm: fetchedHYPEREVMVaults.reduce((acc, vault) => {
+      acc[vault.id] = vault
+      return acc
+    }, {}),
   }
 
   console.log('\n-- Done getting vaults data --')
@@ -289,10 +317,29 @@ const getPools = async () => {
     fetchedARBITRUMPools = [],
     fetchedBASEPools = [],
     fetchedZKSYNCPools = [],
+    fetchedHYPEREVMPools = [],
     fetchedPools = [],
     hasErrors
 
   try {
+    console.log('\n-- Getting HYPEREVM pool data --')
+
+    const hyperevmPoolBatches = chunk(
+      pools.filter(pool => pool.chain === CHAIN_IDS.HYPEREVM),
+      GET_POOL_DATA_BATCH_SIZE,
+    )
+
+    if (size(hyperevmPoolBatches)) {
+      await forEach(hyperevmPoolBatches, async poolBatch => {
+        const poolData = await getPoolsData(poolBatch)
+        fetchedHYPEREVMPools = fetchedHYPEREVMPools.concat(poolData)
+      })
+    } else {
+      console.log('No pools available')
+    }
+
+    console.log('-- Done getting HYPEREVM pool data --\n')
+
     console.log('\n-- Getting ZKSYNC pool data --')
 
     const zksyncPoolBatches = chunk(
@@ -391,6 +438,7 @@ const getPools = async () => {
     arbitrum: fetchedARBITRUMPools,
     base: fetchedBASEPools,
     zksync: fetchedZKSYNCPools,
+    hyperevm: fetchedHYPEREVMPools,
   }
   hasErrors =
     (isArray(fetchedETHPools) &&
@@ -402,7 +450,9 @@ const getPools = async () => {
     (isArray(fetchedBASEPools) &&
       (fetchedBASEPools.includes(undefined) || fetchedBASEPools.includes(null))) ||
     (isArray(fetchedZKSYNCPools) &&
-      (fetchedZKSYNCPools.includes(undefined) || fetchedZKSYNCPools.includes(null)))
+      (fetchedZKSYNCPools.includes(undefined) || fetchedZKSYNCPools.includes(null))) ||
+    (isArray(fetchedHYPEREVMPools) &&
+      (fetchedHYPEREVMPools.includes(undefined) || fetchedHYPEREVMPools.includes(null)))
   await storeData(
     Cache,
     DB_CACHE_IDS.POOLS,
@@ -846,6 +896,7 @@ const getLeaderboardData = async () => {
     8453: 'base',
     42161: 'arbitrum',
     324: 'zksync',
+    999: 'hyperevm',
   }
 
   let sortable = {}

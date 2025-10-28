@@ -5,6 +5,132 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.HYPEREVM,
+    id: 'morpho_FLX_HYPE',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.morpho_FLX_HYPE.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.morpho_FLX_HYPE.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLX_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE </a>to the Morpho Felix Vault, earning 
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLX_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
+    id: 'morpho_FLX_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.morpho_FLX_USDC.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.morpho_FLX_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLX_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Felix Vault, earning 
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLX_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
+    id: 'morpho_GLT_UETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.morpho_GLT_UETH.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.morpho_GLT_UETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_GLT_UETH.Underlying}" target="_blank" rel="noopener noreferrer"> UETH </a>to the Morpho Gauntlet Vault, earning 
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_GLT_UETH.Underlying}" target="_blank" rel="noopener noreferrer"> UETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
+    id: 'morpho_GLT_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.morpho_GLT_USDC.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.morpho_GLT_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_GLT_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Gauntlet Vault, earning 
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_GLT_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
+    id: 'morpho_HYP_HYPE',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.morpho_HYP_HYPE.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.morpho_HYP_HYPE.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_HYP_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE </a>to the Morpho Hyperithm Vault, earning 
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_HYP_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
+    id: 'morpho_MEV_HYPE',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.morpho_MEV_HYPE.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.morpho_MEV_HYPE.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_MEV_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE </a>to the Morpho MEV Capital Vault, earning 
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_MEV_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'silo_ET_ETH',
     type: POOL_TYPES.INCENTIVE,

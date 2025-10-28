@@ -147,6 +147,9 @@ const HARVEST_SUBGRAPH_URLS = {
   324:
     process.env.ZKSYNC_SUBGRAPH_URL ||
     'https://api.studio.thegraph.com/query/48757/l2-zksync-era/v0.1.12',
+  999:
+    process.env.HYPEREVM_SUBGRAPH_URL ||
+    'https://api.studio.thegraph.com/query/48757/harvest-hyperliquid/v0.0.1',
 }
 
 const SUSHI_POOLS_IDS = {
@@ -177,6 +180,7 @@ const CHAIN_IDS = {
   BASE: '8453',
   ARBITRUM_ONE: '42161',
   ZKSYNC: '324',
+  HYPEREVM: '999',
 }
 
 const MATIC_RPC_URL =
@@ -187,6 +191,8 @@ const ARBITRUM_RPC_URL =
   process.env.ARBITRUM_RPC_URL || `https://arb-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
 const ZKSYNC_RPC_URL =
   process.env.ZKSYNC_RPC_URL || `https://zksync-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
+const HYPEREVM_RPC_URL =
+  process.env.HYPEREVM_RPC_URL || `https://hyperliquid-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
 const SWIRL_API_URL = 'https://api.swirl.cash/'
 const MSTABLE_API_URL = 'https://api.mstable.org/pools'
 const APE_API_URL = 'https://ape-swap-api.herokuapp.com'
@@ -366,6 +372,7 @@ module.exports = {
   CURRENCY_API_URL,
   HISTORICAL_CURRENCY_API_URL,
   ZKSYNC_RPC_URL,
+  HYPEREVM_RPC_URL,
   CURRENCY_RATES,
   ZKSWAP_URL,
   SYNCSWAP_API_URL,
