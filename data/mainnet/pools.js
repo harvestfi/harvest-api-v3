@@ -27,6 +27,27 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.BASE,
+    id: 'euler_YO_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_YO_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_YO_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to the Euler Frontier YO Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_ETH.Underlying}" target="_blank" rel="noopener noreferrer">WETH</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
     id: 'euler_EUL_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.BASE.V2.euler_EUL_ETH.NewPool,
