@@ -89,6 +89,48 @@ module.exports = [
    `,
   },
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_AS_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_AS_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_AS_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_AS_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to the Euler Alterscope LRT Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_AS_ETH.Underlying}" target="_blank" rel="noopener noreferrer">WETH</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_AS_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_AG_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_AG_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_AG_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_AG_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Euler AlphaGrowth Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_AG_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_AG_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'silo_ET_ETH',
     type: POOL_TYPES.INCENTIVE,

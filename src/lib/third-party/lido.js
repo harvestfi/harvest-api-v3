@@ -1,12 +1,12 @@
-const { get } = require('lodash')
-const { cachedAxios } = require('../db/models/cache')
-const { CHAIN_IDS, LIDO_API_URLS } = require('../constants')
+// const { get } = require('lodash')
+// const { cachedAxios } = require('../db/models/cache')
+// const { CHAIN_IDS, LIDO_API_URLS } = require('../constants')
 
-const get7MAAPRs = networkId => {
-  let apiURL
-  if (networkId == CHAIN_IDS.ETH) {
-    apiURL = LIDO_API_URLS.ETH
-  }
+const get7MAAPRs = () => {
+  // let apiURL
+  // if (networkId == CHAIN_IDS.ETH) {
+  //   apiURL = LIDO_API_URLS.ETH
+  // }
 
   return 6.12
 
