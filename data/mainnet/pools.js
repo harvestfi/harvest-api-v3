@@ -5,6 +5,90 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_YO_cbBTC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_YO_cbBTC.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_YO_cbBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC </a>to the Frontier YO Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer">cbBTC</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_EUL_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_EUL_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_EUL_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EUL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to the Euler Base Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EUL_ETH.Underlying}" target="_blank" rel="noopener noreferrer">WETH</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EUL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_EUL_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_EUL_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_EUL_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EUL_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Euler Base Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EUL_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EUL_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_YO_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_YO_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_YO_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Frontier YO Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'silo_ET_ETH',
     type: POOL_TYPES.INCENTIVE,
