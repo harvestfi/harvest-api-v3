@@ -2319,7 +2319,6 @@ module.exports = {
     ],
   },
   IPOR_WETH_arbitrum: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'IPOR_WETH_arbitrum',
     isIPORVault: true,
@@ -2350,7 +2349,6 @@ module.exports = {
     ],
   },
   IPOR_WBTC_arbitrum: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     id: 'IPOR_WBTC_arbitrum',
     isIPORVault: true,
