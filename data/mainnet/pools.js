@@ -17,13 +17,13 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLX_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE </a>to the Morpho Felix Vault, earning 
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
-       At every harvest, the earned rewards are converted into more
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLX_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE</a>.
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLX_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE </a>to the Morpho Felix Vault, earning 
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLX_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE</a>.
       </p>
     </div>
-   `,
+    `,
   },
   {
     chain: CHAIN_IDS.HYPEREVM,
@@ -38,13 +38,13 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLX_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Felix Vault, earning 
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
-       At every harvest, the earned rewards are converted into more
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLX_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLX_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Felix Vault, earning 
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLX_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
-   `,
+    `,
   },
   {
     chain: CHAIN_IDS.HYPEREVM,
@@ -59,13 +59,13 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_GLT_UETH.Underlying}" target="_blank" rel="noopener noreferrer"> UETH </a>to the Morpho Gauntlet Vault, earning 
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
-       At every harvest, the earned rewards are converted into more
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_GLT_UETH.Underlying}" target="_blank" rel="noopener noreferrer"> UETH</a>.
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_GLT_UETH.Underlying}" target="_blank" rel="noopener noreferrer"> UETH </a>to the Morpho Gauntlet Vault, earning 
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_GLT_UETH.Underlying}" target="_blank" rel="noopener noreferrer"> UETH</a>.
       </p>
     </div>
-   `,
+    `,
   },
   {
     chain: CHAIN_IDS.HYPEREVM,
@@ -80,13 +80,13 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_GLT_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Gauntlet Vault, earning 
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
-       At every harvest, the earned rewards are converted into more
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_GLT_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_GLT_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Gauntlet Vault, earning 
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_GLT_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
-   `,
+    `,
   },
   {
     chain: CHAIN_IDS.HYPEREVM,
@@ -101,13 +101,13 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_HYP_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE </a>to the Morpho Hyperithm Vault, earning 
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
-       At every harvest, the earned rewards are converted into more
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_HYP_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE</a>.
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_HYP_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE </a>to the Morpho Hyperithm Vault, earning 
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_HYP_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE</a>.
       </p>
     </div>
-   `,
+    `,
   },
   {
     chain: CHAIN_IDS.HYPEREVM,
@@ -122,10 +122,157 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_MEV_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE </a>to the Morpho MEV Capital Vault, earning 
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_MEV_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE </a>to the Morpho MEV Capital Vault, earning 
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_MEV_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_YO_cbBTC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_YO_cbBTC.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_YO_cbBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC </a>to the Frontier YO Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer">cbBTC</a> interest.
        At every harvest, the earned rewards are converted into more
-       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_MEV_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_cbBTC.Underlying}" target="_blank" rel="noopener noreferrer"> cbBTC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_YO_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_YO_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_YO_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to the Euler Frontier YO Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_ETH.Underlying}" target="_blank" rel="noopener noreferrer">WETH</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_EUL_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_EUL_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_EUL_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EUL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to the Euler Base Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EUL_ETH.Underlying}" target="_blank" rel="noopener noreferrer">WETH</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EUL_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_EUL_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_EUL_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_EUL_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EUL_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Euler Base Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EUL_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_EUL_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_YO_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_YO_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_YO_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Frontier YO Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_YO_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_AS_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_AS_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_AS_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_AS_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to the Euler Alterscope LRT Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_AS_ETH.Underlying}" target="_blank" rel="noopener noreferrer">WETH</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_AS_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'euler_AG_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.euler_AG_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.euler_AG_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_AG_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Euler AlphaGrowth Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_AG_USDC.Underlying}" target="_blank" rel="noopener noreferrer">USDC</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.euler_AG_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
    `,

@@ -3973,6 +3973,55 @@
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         "NewVault": "0xd6701905c59EE618dc36DC747506BCE0a4AC760A",
         "doHardwork": false
+      },
+      "euler_YO_cbBTC": {
+        "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        "NewVault": "0x03e0405D89be22F77093e4c6F0eA6F20Fa11056d",
+        "NewStrategy": "0x6f8b8e647449Afa97245E3EB2CaaCeB7a186870c",
+        "NewPool": "0x249320195f1b31e3522c54860d188a079E7D2C6f",
+        "EulerVault": "0xe72eA97aAF905c5f10040f78887cc8dE8eAec7E4"
+      },
+      "euler_YO_ETH": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0x408630F637Fa6BDCC6c4de1E1CF9A1CAdE2eF593",
+        "NewStrategy": "0x62B3726a7C5DaAcB8f75C9c6BEC4c3A59c369633",
+        "NewPool": "0xb6Fa7Ea1C02bfA1A71a9910327dc52a90cC15F21",
+        "EulerVault": "0x774C08F8e78C47046d325C0331788954C35DF10a"
+      },
+      "euler_EUL_ETH": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0xb40f6Deb58c5d3e4bcF2C8Ec5cDe18722ccA573A",
+        "NewStrategy": "0x033bC142D9365797073ACf81159A7A9EF0C0e8CA",
+        "NewPool": "0xAc780cC33403d53B3E5D42D7d635f3b34096DAe7",
+        "EulerVault": "0x859160DB5841E5cfB8D3f144C6b3381A85A4b410"
+      },
+      "euler_EUL_USDC": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x01C50255DB0db3524Fdf67A2f3c0d11d5f0572d3",
+        "NewStrategy": "0xbFaCE28ca2672EaaCD13a28e66699eD73eB65646",
+        "NewPool": "0x1eac67DE3d280015260F5C75ED3feD2443536322",
+        "EulerVault": "0x0A1a3b5f2041F33522C4efc754a7D096f880eE16"
+      },
+      "euler_YO_USDC": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x4277e4CAE34Bf06deB56998b4BCa0370E7F49e3b",
+        "NewStrategy": "0xe36ba0bf575F2BBA91247Fa505DeF7b2728c54eb",
+        "NewPool": "0xF0a1aF0c9121F8358a459298ba32bEE0082b5a27",
+        "EulerVault": "0x085178078796Da17B191f9081b5E2fCCc79A7eE7"
+      },
+      "euler_AS_ETH": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0x5F2CfC17a76f416Df752b2D1e2b3A0c07Ca977a5",
+        "NewStrategy": "0x41932c14566A2D2fd59FCC20558179b7324A1552",
+        "NewPool": "0xE33fD15Dc2080CbcF1cbf6B8489D0931cEe29AAf",
+        "EulerVault": "0xF3BB6b0a9bEAF9240D7F4a91341d5Df6bF37cAea"
+      },
+      "euler_AG_USDC": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x93cA147ACA030B90b063E4C45212AE932629faE4",
+        "NewStrategy": "0x65569368d585B04755Bc8bEa92E6536254D84117",
+        "NewPool": "0xa437966A20061132954A17373e240D56bf2dc69a",
+        "EulerVault": "0x4C1aeda9B43EfcF1da1d1755b18802aAbe90f61E"
       }
     }
   },
