@@ -5862,6 +5862,7 @@ module.exports = {
     ],
   },
   balancer_sUSDe_GYD: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -8254,6 +8255,7 @@ module.exports = {
     ],
   },
   balancer_APW_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
     apyTokenSymbols: ['BAL', 'AURA'],
@@ -8435,6 +8437,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['coinbase-wrapped-staked-eth'] },
   },
   balancer_cbETH_rETH_wstETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/arb.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'ARB'],
@@ -8490,6 +8493,7 @@ module.exports = {
     ],
   },
   balancer_rsETH_wETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/arb.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'ARB'],
@@ -8517,6 +8521,7 @@ module.exports = {
     ],
   },
   balancer_wstETH_sfrxETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/arb.svg'],
     apyTokenSymbols: ['BAL', 'AURA', 'ARB'],
@@ -14559,6 +14564,7 @@ module.exports = {
     },
   },
   balancer_2EUR_PAR_v2: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/jeur.svg', './icons/par.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg'],
@@ -14610,6 +14616,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['radiant-capital'] },
   },
   balancer_RDNT_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/rdnt.svg', './icons/eth.svg'],
     apyIconUrls: ['./icons/balancer.svg', './icons/aura.svg', './icons/arb.svg'],
