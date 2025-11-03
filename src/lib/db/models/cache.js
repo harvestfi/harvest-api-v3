@@ -26,6 +26,7 @@ const CacheSchema = new mongoose.Schema({
   42161: { type: mongoose.Schema.Types.Mixed, default: [] },
   8453: { type: mongoose.Schema.Types.Mixed, default: [] },
   324: { type: mongoose.Schema.Types.Mixed, default: [] },
+  999: { type: mongoose.Schema.Types.Mixed, default: [] },
   FARM: { type: mongoose.Schema.Types.Mixed, default: [] },
   updatedAt: { type: Date, default: new Date() },
 })
