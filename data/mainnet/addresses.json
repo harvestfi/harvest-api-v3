@@ -88,7 +88,6 @@
   "SPELL": "0x090185f2135308bad17527004364ebcc2d37e5f6",
   "ETHplus": "0xE72B141DF173b999AE7c1aDcbF60Cc9833Ce56a8",
   "thUSD": "0xCFC5bD99915aAa815401C5a41A927aB7a38d29cf",
-  "NOTE": "0xCFEAead4947f0705A14ec42aC3D44129E1Ef3eD5",
   "GHO": "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
   "PENDLE": "0x808507121B80c02388fAd14726482e061B8da827",
   "aUSDS": "0x32a6268f9Ba3642Dda7892aDd74f1D34469A4259",
@@ -604,34 +603,7 @@
       "NewVault": "0x33D7E5827eB62628c093D88aC2531ddaC6f6E396",
       "NewStrategy": "0x6Cf0C1f3b946c1bA3a054d7767eB19f61E90a3c9",
       "NewPool": "0xB465a37bE0f1E2C3F600eE6ECFd5534decbEdBA5",
-      "PoolId": "0x093254005743b7af89e24f645730ba2dd84413330002000000000000000006a4"
-    },
-    "notional_nETH": {
-      "Underlying": "0x3410463726a7A22ce0809367a4418FE82Fc31FD3",
-      "NewVault": "0xB2A4bc414c68C406cb3F71F4B64A4Fbc0Faab74e",
-      "NewStrategy": "0x3de93B187a3cC007B4aF8EC3c5382e055FA1Cff8",
-      "NewPool": "0xdE9b5BB6c59Cd6CE540FeAB7814E6dcC69dbca24",
-      "doHardwork": false
-    },
-    "notional_nGHO": {
-      "Underlying": "0x2F7350Cb5e434C2d177922110c7e314953B84Afc",
-      "NewVault": "0xA68bb2a94C5E9A081Af9A89aE988b5971183632a",
-      "NewStrategy": "0x24e434eBf6249896e1AE36Ceb1e6DabA12aA76Ad",
-      "NewPool": "0xAeb44c729e153586738Bf09a34C3d68C69F64aB1",
-      "doHardwork": false
-    },
-    "notional_nUSDC": {
-      "Underlying": "0x2920F9Fc667E780C0CB5a78a104d21413377f97E",
-      "NewVault": "0xF92BeDd0F656ccEA90BC1fFef9515DF84669A100",
-      "NewStrategy": "0x7863d2680801D5bd9C67611d3c678BFB965D2f5F",
-      "NewPool": "0x4bbf5b527802D9B95c5fE0C3fAfAE14F387c683A",
-      "doHardwork": false
-    },
-    "notional_nUSDT": {
-      "Underlying": "0x0Da210F60A179Ee3364123943930dAdbAb8B210e",
-      "NewVault": "0x81C000AA22677b24a4Ce0Fb51289bB622366bE66",
-      "NewStrategy": "0xd6B897eb960D309574427d8C527fd47061F05192",
-      "NewPool": "0xc99381Da9fAEbC64Df6cE6fAf6caefFd6E4494B6",
+      "PoolId": "0x093254005743b7af89e24f645730ba2dd84413330002000000000000000006a4",
       "doHardwork": false
     },
     "penpie_agETH2612": {
@@ -1098,7 +1070,8 @@
         "NewStrategy": "0xEe2108b00f8a6E3ab4dCf98FAAf8Ca8b1F6668e8",
         "NewPool": "0xd0272E99f2CF56ecd7bF47b256461522F6ceED39",
         "Gauge": "0x5c13C3b72b031b6405046C319B2D840d3C1403c7",
-        "PoolId": "0x513cdee00251f39de280d9e5f771a6eafebcc88e000000000000000000000a6b"
+        "PoolId": "0x513cdee00251f39de280d9e5f771a6eafebcc88e000000000000000000000a6b",
+        "doHardwork": false
       },
       "USDC": {
         "Underlying": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
@@ -1307,7 +1280,6 @@
     "CBETH": "0x1DEBd73E752bEaF79865Fd6446b0c970EaE7732f",
     "dlcBTC": "0x050C24dBf1eEc17babE5fc585F06116A259CC77A",
     "WINR": "0xD77B108d4f6cefaa0Cae9506A934e825BEccA46E",
-    "NOTE": "0x019bE259BC299F3F653688c7655C87F998Bc7bC1",
     "MORE": "0x25ea98ac87A38142561eA70143fd44c4772A16b6",
     "GYD": "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
     "sUSDe": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
@@ -1359,7 +1331,8 @@
         "NewStrategy": "0x40Cbb2A034e041dAd80a822531fB6aA91Bcf6F79",
         "NewPool": "0x58dF580f8Fb8C7FD46244E46a0FD1846c90ff30f",
         "Gauge": "0xcf9f895296F5e1D66a7D4dcf1d92e1B435E9f999",
-        "PoolId": "0x32df62dc3aed2cd6224193052ce665dc181658410002000000000000000003bd"
+        "PoolId": "0x32df62dc3aed2cd6224193052ce665dc181658410002000000000000000003bd",
+        "doHardwork": false
       },
       "camelot_ETH_USDC": {
         "Underlying": "0x84652bb2539513BAf36e225c930Fdd8eaa63CE27",
@@ -1465,7 +1438,8 @@
         "NewStrategy": "0x41230688f16dBAfa021BcA2a6C5Fbc48f9Cd1e3A",
         "NewPool": "0x5DEe80Ff2Dc50B73413D660C7ccfd7a85D603f72",
         "Gauge": "0x011417BBED6FC9cefF36C032D431b0eFcBA7f8B3",
-        "PoolId": "0xc9f52540976385a84bf416903e1ca3983c539e34000200000000000000000434"
+        "PoolId": "0xc9f52540976385a84bf416903e1ca3983c539e34000200000000000000000434",
+        "doHardwork": false
       },
       "balancer_DOLA_USDC": {
         "Underlying": "0x8bc65Eed474D1A00555825c91FeAb6A8255C2107",
@@ -2155,7 +2129,8 @@
         "NewVault": "0xa51991fF0ADbDd0665298772fdC13AA6Dff33b64",
         "NewStrategy": "0xc566ec1a1b659a0E0202D59991f130134E15069e",
         "NewPool": "0x98fC76eA8F376f3fb72d1BF85E827f7742A664E9",
-        "PoolId": "0x2d6ced12420a9af5a83765a8c48be2afcd1a8feb000000000000000000000500"
+        "PoolId": "0x2d6ced12420a9af5a83765a8c48be2afcd1a8feb000000000000000000000500",
+        "doHardwork": false
       },
       "balancer_rETH_wETH": {
         "Underlying": "0xd0EC47c54cA5e20aaAe4616c25C825c7f48D4069",
@@ -2171,14 +2146,15 @@
         "NewStrategy": "0x0348E0dDc67c02AC2f2A1d77377513A7dAF83f14",
         "NewPool": "0x34aA6CFC6488C9Cf90118e8582415430bd45Ce06",
         "PoolId": "0x90e6cb5249f5e1572afbf8a96d8a1ca6acffd73900000000000000000000055c",
-        "doHardwork": "noSim"
+        "doHardwork": false
       },
       "balancer_wstETH_sfrxETH": {
         "Underlying": "0xc2598280bFeA1Fe18dFcaBD21C7165c40c6859d3",
         "NewVault": "0x577e2ff4e18eA3BDED37665FDc4Cdf5D08581fA7",
         "NewStrategy": "0x30350413FB6d31371bd21B66349802339d84b883",
         "NewPool": "0xFb040147A640ADaC2229a9AcC58eFA020cED4899",
-        "PoolId": "0xc2598280bfea1fe18dfcabd21c7165c40c6859d30000000000000000000004f3"
+        "PoolId": "0xc2598280bfea1fe18dfcabd21c7165c40c6859d30000000000000000000004f3",
+        "doHardwork": false
       },
       "curve_dlcBTC_WBTC": {
         "Underlying": "0xe957cE03cCdd88f02ed8b05C9a3A28ABEf38514A",
@@ -2186,27 +2162,6 @@
         "NewStrategy": "0x557Ac11511b3F826582Cce1FC63a86773A1AE6ca",
         "NewPool": "0x1e13861122B7fc524502E7Bf4fCDAa51c4f69c4F",
         "Gauge": "0x02b8e750E68cb648dB2c2ac4BBb47A10A5c12588",
-        "doHardwork": false
-      },
-      "notional_nETH_arbitrum": {
-        "Underlying": "0x18b0Fc5A233acF1586Da7C199Ca9E3f486305A29",
-        "NewVault": "0x77BD2F95aAD869C9b6a4B3Ea6EC1201293f4b708",
-        "NewStrategy": "0xAA9CF6C538fA5ed5b1F32E68Dd74168A103bB8C9",
-        "NewPool": "0x82511db8EbE47a14DF68412529A8DF26AddD2179",
-        "doHardwork": false
-      },
-      "notional_nUSDC_arbitrum": {
-        "Underlying": "0x0F13fb925eDC3E1FE947209010d9c0E072986ADc",
-        "NewVault": "0xe5CCea9A64a096365F05Dffb1CBbe04B8Fd7c710",
-        "NewStrategy": "0xE2012161227654831fB510741a717AB9b6715149",
-        "NewPool": "0x7c18F8dDE08e1e388e7B8693ce8Bb0a0a7347127",
-        "doHardwork": false
-      },
-      "notional_nUSDT_arbitrum": {
-        "Underlying": "0x9c0Fbb8caDE7B178b135fD2F1da125a37B27f442",
-        "NewVault": "0x9eADb45AC9F467063A4DCa28d21B3142C24697ee",
-        "NewStrategy": "0xbe7F135f9bBe8355596f64452E8CA6bE03dB6434",
-        "NewPool": "0xd7Af3498B861BC070FA3bd694aD0a823558F10b8",
         "doHardwork": false
       },
       "fluid_ETH_arbitrum": {
