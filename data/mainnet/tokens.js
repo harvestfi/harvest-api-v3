@@ -530,6 +530,7 @@ module.exports = {
     ],
   },
   silo_VM_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg'],
     apyTokenSymbols: ['ARB'],
