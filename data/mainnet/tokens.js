@@ -368,7 +368,6 @@ module.exports = {
     ],
   },
   silo_VM_USDC: {
-    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg'],
     apyTokenSymbols: ['ARB'],
@@ -386,12 +385,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.SILO_VAULT,
-        params: [
-          addresses.ARBITRUM_ONE.V2.silo_VM_USDC.SiloVault,
-          profitSharingCut10Percent,
-          CHAIN_IDS.ARBITRUM_ONE,
-        ],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
   },
@@ -1089,8 +1084,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.SILO,
-        params: [addresses.ARBITRUM_ONE.V2.silo_sUSDX_USDC.Silo, profitSharingCut10Percent],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
   },
