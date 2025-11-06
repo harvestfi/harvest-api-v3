@@ -1441,6 +1441,7 @@ module.exports = {
     ],
   },
   compound_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/comp.svg'],
     apyTokenSymbols: ['COMP'],
