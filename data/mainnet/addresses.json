@@ -828,7 +828,8 @@
       "NewVault": "0x409043c7f16D9B1c5689679d8a972d92b91A2933",
       "NewStrategy": "0x514c002032E6eDEAa702Ec0FDb515A0ed1473E3E",
       "NewPool": "0xf2274448083E58dC2414D6b7e78359650db5f882",
-      "EulerVault": "0xce45EF0414dE3516cAF1BCf937bF7F2Cf67873De"
+      "EulerVault": "0xce45EF0414dE3516cAF1BCf937bF7F2Cf67873De",
+      "doHardwork": false
     },
     "morpho_FA_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -896,7 +897,8 @@
       "NewVault": "0x74935AF6714cDED7f7637dCEA30614B4341f432c",
       "NewStrategy": "0x1B615F2E7670D473CfFc5FC09b806e1bc2515099",
       "NewPool": "0x67D24C2858efe00d26fde5Ce7B67382F4Cbb787e",
-      "MorphoVault": "0x0F359FD18BDa75e9c49bC027E7da59a4b01BF32a"
+      "MorphoVault": "0x0F359FD18BDa75e9c49bC027E7da59a4b01BF32a",
+      "doHardwork": false
     },
     "morpho_OEV_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",

@@ -1017,6 +1017,7 @@ module.exports = {
     ],
   },
   morpho_RL_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
@@ -1526,6 +1527,7 @@ module.exports = {
     ],
   },
   euler_SM_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/usdc.svg'],
     apyTokenSymbols: ['USDC'],
