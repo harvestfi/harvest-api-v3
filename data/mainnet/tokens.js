@@ -368,6 +368,7 @@ module.exports = {
     ],
   },
   silo_VM_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg'],
     apyTokenSymbols: ['ARB'],
@@ -380,8 +381,8 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.silo_VM_USDC.NewVault,
     strategyAddress: addresses.ARBITRUM_ONE.V2.silo_VM_USDC.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['usd-coin'],
+      type: GET_PRICE_TYPES.MANUAL,
+      params: ['0'],
     },
     estimateApyFunctions: [
       {
@@ -1067,6 +1068,7 @@ module.exports = {
     ],
   },
   silo_sUSDX_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/usdc.svg'],
     apyTokenSymbols: ['USDC'],
@@ -1079,8 +1081,8 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.silo_sUSDX_USDC.NewVault,
     strategyAddress: addresses.ARBITRUM_ONE.V2.silo_sUSDX_USDC.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['usd-coin'],
+      type: GET_PRICE_TYPES.MANUAL,
+      params: ['0'],
     },
     estimateApyFunctions: [
       {
@@ -8235,6 +8237,7 @@ module.exports = {
     ],
   },
   aave_DAI_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/aave.svg'],
     apyTokenSymbols: ['AAVE'],
@@ -8404,6 +8407,7 @@ module.exports = {
     ],
   },
   aave_USDT_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/aave.svg'],
     apyTokenSymbols: ['AAVE'],
@@ -13397,6 +13401,7 @@ module.exports = {
     },
   },
   baseswap_BSX_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
     apyTokenSymbols: ['BSX', 'xBSX', 'BSWAP'],

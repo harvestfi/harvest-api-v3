@@ -2074,7 +2074,7 @@
         "NewStrategy": "0xCD968184373eF1f2a57127386f00573Ff071E5Bf",
         "NewPool": "0x960E95db807Fd44Ce34f9456Ea4e4bc470202FAb",
         "AavePool": "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
-        "doHardwork": "noSim"
+        "doHardwork": false
       },
       "aave_FRAX": {
         "Underlying": "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F",
@@ -2122,7 +2122,7 @@
         "NewStrategy": "0xF9AcFaa0206a47B97C37B7B3EDe50007F97d8A92",
         "NewPool": "0x8BFb0315A900f0c24131a7042677196608bEe2E6",
         "AavePool": "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
-        "doHardwork": "noSim"
+        "doHardwork": false
       },
       "balancer_cbETH_rETH_wstETH": {
         "Underlying": "0x2d6CeD12420a9AF5a83765a8c48Be2aFcD1A8FEb",
@@ -2454,7 +2454,8 @@
         "NewVault": "0x2d5FDe3D24ed3e7c548a59039EeE5af8200f9291",
         "NewStrategy": "0xE6Ebe3EBC748a26D1A1ffee5756511f6e1e8f57e",
         "NewPool": "0x6443404c65a72aBC3780Ce0c907d29200Ea6126E",
-        "Silo": "0x2433D6AC11193b4695D9ca73530de93c538aD18a"
+        "Silo": "0x2433D6AC11193b4695D9ca73530de93c538aD18a",
+        "doHardwork": false
       },
       "silo_yUSD_USDC": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
@@ -2567,7 +2568,8 @@
         "NewVault": "0x5E777587D6f9261A85D7f062790d4cEE71081BA1",
         "NewStrategy": "0x5f19640De4A50e035AB0b50957748bFdEd8F158D",
         "NewPool": "0x75c87EcD39bcB166013e78Dc7024CeB003b8A574",
-        "SiloVault": "0x2BA39e5388aC6C702Cb29AEA78d52aa66832f1ee"
+        "SiloVault": "0x2BA39e5388aC6C702Cb29AEA78d52aa66832f1ee",
+        "doHardwork": false
       },
       "silo_ET_ETH": {
         "Underlying": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
@@ -2726,7 +2728,8 @@
         "NewStrategy": "0x1c2045ede183BD64bf67475b33d2a544a8de1a2d",
         "NewPool": "0xe3C8B0Fc0936Fee797873011ddd0D3a70E6Fc7AC",
         "NFTPool": "0x7C04bF2bb7D27982810E432B188FA0C7729e651d",
-        "BaseToken": "0xd5046B976188EB40f6DE40fB527F89c05b323385"
+        "BaseToken": "0xd5046B976188EB40f6DE40fB527F89c05b323385",
+        "doHardwork": false
       },
       "USDbC": {
         "Underlying": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
