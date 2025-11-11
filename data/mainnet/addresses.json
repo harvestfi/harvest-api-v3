@@ -806,7 +806,8 @@
       "NewVault": "0xa8e719Ad21b3cF25D28da62c6962481270eb5463",
       "NewStrategy": "0x71eCdc03F19b4C9B11588C4a658E748BEE429B1A",
       "NewPool": "0x79D08aebDF7145766E6Eba194f4513F8032B6211",
-      "Market": "0xc3d688B66703497DAA19211EEdff47f25384cdc3"
+      "Market": "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
+      "doHardwork": false
     },
     "euler_OE_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
