@@ -2494,7 +2494,8 @@
         "NewVault": "0x53425C73267fC3E00d6E18023219c66c038146A1",
         "NewStrategy": "0xcB7500b629D75d004CE7eE8B8C724231b1f76b61",
         "NewPool": "0xB74D51Cd6e2b477a3D0F61Bf056adEF77C5d2adf",
-        "MorphoVault": "0xa60643c90A542A95026C0F1dbdB0615fF42019Cf"
+        "MorphoVault": "0xa60643c90A542A95026C0F1dbdB0615fF42019Cf",
+        "doHardwork": false
       },
       "morpho_RE7_USDC": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
