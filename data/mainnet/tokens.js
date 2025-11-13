@@ -530,6 +530,7 @@ module.exports = {
     ],
   },
   silo_VM_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg'],
     apyTokenSymbols: ['ARB'],
@@ -542,17 +543,13 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.silo_VM_USDC.NewVault,
     strategyAddress: addresses.ARBITRUM_ONE.V2.silo_VM_USDC.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['usd-coin'],
+      type: GET_PRICE_TYPES.MANUAL,
+      params: ['0'],
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.SILO_VAULT,
-        params: [
-          addresses.ARBITRUM_ONE.V2.silo_VM_USDC.SiloVault,
-          profitSharingCut10Percent,
-          CHAIN_IDS.ARBITRUM_ONE,
-        ],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
   },
@@ -1182,6 +1179,7 @@ module.exports = {
     ],
   },
   morpho_RL_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
@@ -1233,6 +1231,7 @@ module.exports = {
     ],
   },
   silo_sUSDX_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/usdc.svg'],
     apyTokenSymbols: ['USDC'],
@@ -1245,13 +1244,13 @@ module.exports = {
     vaultAddress: addresses.ARBITRUM_ONE.V2.silo_sUSDX_USDC.NewVault,
     strategyAddress: addresses.ARBITRUM_ONE.V2.silo_sUSDX_USDC.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['usd-coin'],
+      type: GET_PRICE_TYPES.MANUAL,
+      params: ['0'],
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.SILO,
-        params: [addresses.ARBITRUM_ONE.V2.silo_sUSDX_USDC.Silo, profitSharingCut10Percent],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
   },
@@ -1297,13 +1296,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
-        params: [
-          addresses.BASE.V2.moonwell_cbXRP.Underlying,
-          addresses.BASE.V2.moonwell_cbXRP.mToken,
-          addresses.BASE.V2.moonwell_cbXRP.NewStrategy,
-          profitSharingCut10Percent,
-        ],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
   },
@@ -1612,6 +1606,7 @@ module.exports = {
     ],
   },
   compound_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/comp.svg'],
     apyTokenSymbols: ['COMP'],
@@ -1694,6 +1689,7 @@ module.exports = {
     ],
   },
   euler_SM_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/usdc.svg'],
     apyTokenSymbols: ['USDC'],
@@ -1775,6 +1771,7 @@ module.exports = {
     ],
   },
   morpho_MEV_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
@@ -2328,13 +2325,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
-        params: [
-          addresses.BASE.V2.moonwell_MORPHO.Underlying,
-          addresses.BASE.V2.moonwell_MORPHO.mToken,
-          addresses.BASE.V2.moonwell_MORPHO.NewStrategy,
-          profitSharingCut10Percent,
-        ],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
   },
@@ -3256,20 +3248,15 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
-        params: [
-          addresses.BASE.V2.moonwell_LBTC.Underlying,
-          addresses.BASE.V2.moonwell_LBTC.mToken,
-          addresses.BASE.V2.moonwell_LBTC.NewStrategy,
-          profitSharingCut10Percent,
-        ],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
   },
   moonwell_tBTC: {
     chain: CHAIN_IDS.BASE,
-    apyIconUrls: ['./icons/well.svg', './icons/t.svg'],
-    apyTokenSymbols: ['WELL', 'T'],
+    apyIconUrls: ['./icons/well.svg'],
+    apyTokenSymbols: ['WELL'],
     logoUrl: ['./icons/tbtc.svg'],
     tokenNames: ['tBTC'],
     platform: ['Moonwell'],
@@ -3282,27 +3269,10 @@ module.exports = {
       type: GET_PRICE_TYPES.COINGECKO_ID,
       params: ['tbtc'],
     },
-    apyDescriptionOverride: ['Auto harvested', 'Claimable through Merkl'],
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
-        params: [
-          addresses.BASE.V2.moonwell_tBTC.Underlying,
-          addresses.BASE.V2.moonwell_tBTC.mToken,
-          addresses.BASE.V2.moonwell_tBTC.NewStrategy,
-          profitSharingCut10Percent,
-        ],
-      },
-      {
-        type: ESTIMATED_APY_TYPES.MERKL,
-        params: [
-          addresses.BASE.V2.moonwell_tBTC.NewStrategy,
-          addresses.BASE.V2.moonwell_tBTC.mToken,
-          CHAIN_IDS.BASE,
-          '1',
-          true,
-        ],
-        extraDailyCompound: false,
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
   },
@@ -3324,13 +3294,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
-        params: [
-          addresses.BASE.V2.moonwell_USDS.Underlying,
-          addresses.BASE.V2.moonwell_USDS.mToken,
-          addresses.BASE.V2.moonwell_USDS.NewStrategy,
-          profitSharingCut10Percent,
-        ],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
   },
@@ -3352,13 +3317,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
-        params: [
-          addresses.BASE.V2.moonwell_VIRTUAL.Underlying,
-          addresses.BASE.V2.moonwell_VIRTUAL.mToken,
-          addresses.BASE.V2.moonwell_VIRTUAL.NewStrategy,
-          profitSharingCut10Percent,
-        ],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
   },
@@ -6985,13 +6945,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
-        params: [
-          addresses.BASE.V2.moonwell_EURC.Underlying,
-          addresses.BASE.V2.moonwell_EURC.mToken,
-          addresses.BASE.V2.moonwell_EURC.NewStrategy,
-          profitSharingCut10Percent,
-        ],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
   },
@@ -7013,13 +6968,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
-        params: [
-          addresses.BASE.V2.moonwell_cbBTC.Underlying,
-          addresses.BASE.V2.moonwell_cbBTC.mToken,
-          addresses.BASE.V2.moonwell_cbBTC.NewStrategy,
-          profitSharingCut10Percent,
-        ],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
   },
@@ -7982,12 +7932,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MOONWELL_SUPPLY,
-        params: [
-          addresses.BASE.V2.moonwell_AERO.Underlying,
-          addresses.BASE.V2.moonwell_AERO.mToken,
-          profitSharingCut10Percent,
-        ],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
   },
@@ -8457,6 +8403,7 @@ module.exports = {
     ],
   },
   aave_DAI_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/aave.svg'],
     apyTokenSymbols: ['AAVE'],
@@ -8626,6 +8573,7 @@ module.exports = {
     ],
   },
   aave_USDT_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/aave.svg'],
     apyTokenSymbols: ['AAVE'],
@@ -12644,13 +12592,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
-        params: [
-          addresses.BASE.V2.moonwell_USDC.Underlying,
-          addresses.BASE.V2.moonwell_USDC.mToken,
-          addresses.BASE.V2.moonwell_USDC.NewStrategy,
-          profitSharingCut10Percent,
-        ],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'WELL'],
@@ -12963,13 +12906,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MOONWELL_FOLD,
-        params: [
-          addresses.BASE.V2.moonwell_WETH.Underlying,
-          addresses.BASE.V2.moonwell_WETH.mToken,
-          addresses.BASE.V2.moonwell_WETH.NewStrategy,
-          profitSharingCut10Percent,
-        ],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ['0'],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'WELL'],
@@ -13629,6 +13567,7 @@ module.exports = {
     },
   },
   baseswap_BSX_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/bsx.svg', './icons/xbsx.svg', './icons/bswap.svg'],
     apyTokenSymbols: ['BSX', 'xBSX', 'BSWAP'],

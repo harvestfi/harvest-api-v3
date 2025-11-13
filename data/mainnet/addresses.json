@@ -806,7 +806,8 @@
       "NewVault": "0xa8e719Ad21b3cF25D28da62c6962481270eb5463",
       "NewStrategy": "0x71eCdc03F19b4C9B11588C4a658E748BEE429B1A",
       "NewPool": "0x79D08aebDF7145766E6Eba194f4513F8032B6211",
-      "Market": "0xc3d688B66703497DAA19211EEdff47f25384cdc3"
+      "Market": "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
+      "doHardwork": false
     },
     "euler_OE_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -827,7 +828,8 @@
       "NewVault": "0x409043c7f16D9B1c5689679d8a972d92b91A2933",
       "NewStrategy": "0x514c002032E6eDEAa702Ec0FDb515A0ed1473E3E",
       "NewPool": "0xf2274448083E58dC2414D6b7e78359650db5f882",
-      "EulerVault": "0xce45EF0414dE3516cAF1BCf937bF7F2Cf67873De"
+      "EulerVault": "0xce45EF0414dE3516cAF1BCf937bF7F2Cf67873De",
+      "doHardwork": false
     },
     "morpho_FA_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -895,7 +897,8 @@
       "NewVault": "0x74935AF6714cDED7f7637dCEA30614B4341f432c",
       "NewStrategy": "0x1B615F2E7670D473CfFc5FC09b806e1bc2515099",
       "NewPool": "0x67D24C2858efe00d26fde5Ce7B67382F4Cbb787e",
-      "MorphoVault": "0x0F359FD18BDa75e9c49bC027E7da59a4b01BF32a"
+      "MorphoVault": "0x0F359FD18BDa75e9c49bC027E7da59a4b01BF32a",
+      "doHardwork": false
     },
     "morpho_OEV_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -2074,7 +2077,7 @@
         "NewStrategy": "0xCD968184373eF1f2a57127386f00573Ff071E5Bf",
         "NewPool": "0x960E95db807Fd44Ce34f9456Ea4e4bc470202FAb",
         "AavePool": "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
-        "doHardwork": "noSim"
+        "doHardwork": false
       },
       "aave_FRAX": {
         "Underlying": "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F",
@@ -2122,7 +2125,7 @@
         "NewStrategy": "0xF9AcFaa0206a47B97C37B7B3EDe50007F97d8A92",
         "NewPool": "0x8BFb0315A900f0c24131a7042677196608bEe2E6",
         "AavePool": "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
-        "doHardwork": "noSim"
+        "doHardwork": false
       },
       "balancer_cbETH_rETH_wstETH": {
         "Underlying": "0x2d6CeD12420a9AF5a83765a8c48Be2aFcD1A8FEb",
@@ -2454,7 +2457,8 @@
         "NewVault": "0x2d5FDe3D24ed3e7c548a59039EeE5af8200f9291",
         "NewStrategy": "0xE6Ebe3EBC748a26D1A1ffee5756511f6e1e8f57e",
         "NewPool": "0x6443404c65a72aBC3780Ce0c907d29200Ea6126E",
-        "Silo": "0x2433D6AC11193b4695D9ca73530de93c538aD18a"
+        "Silo": "0x2433D6AC11193b4695D9ca73530de93c538aD18a",
+        "doHardwork": false
       },
       "silo_yUSD_USDC": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
@@ -2490,7 +2494,8 @@
         "NewVault": "0x53425C73267fC3E00d6E18023219c66c038146A1",
         "NewStrategy": "0xcB7500b629D75d004CE7eE8B8C724231b1f76b61",
         "NewPool": "0xB74D51Cd6e2b477a3D0F61Bf056adEF77C5d2adf",
-        "MorphoVault": "0xa60643c90A542A95026C0F1dbdB0615fF42019Cf"
+        "MorphoVault": "0xa60643c90A542A95026C0F1dbdB0615fF42019Cf",
+        "doHardwork": false
       },
       "morpho_RE7_USDC": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
@@ -2567,7 +2572,8 @@
         "NewVault": "0x5E777587D6f9261A85D7f062790d4cEE71081BA1",
         "NewStrategy": "0x5f19640De4A50e035AB0b50957748bFdEd8F158D",
         "NewPool": "0x75c87EcD39bcB166013e78Dc7024CeB003b8A574",
-        "SiloVault": "0x2BA39e5388aC6C702Cb29AEA78d52aa66832f1ee"
+        "SiloVault": "0x2BA39e5388aC6C702Cb29AEA78d52aa66832f1ee",
+        "doHardwork": false
       },
       "silo_ET_ETH": {
         "Underlying": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
@@ -2726,7 +2732,8 @@
         "NewStrategy": "0x1c2045ede183BD64bf67475b33d2a544a8de1a2d",
         "NewPool": "0xe3C8B0Fc0936Fee797873011ddd0D3a70E6Fc7AC",
         "NFTPool": "0x7C04bF2bb7D27982810E432B188FA0C7729e651d",
-        "BaseToken": "0xd5046B976188EB40f6DE40fB527F89c05b323385"
+        "BaseToken": "0xd5046B976188EB40f6DE40fB527F89c05b323385",
+        "doHardwork": false
       },
       "USDbC": {
         "Underlying": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
