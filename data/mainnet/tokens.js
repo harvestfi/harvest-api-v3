@@ -1117,6 +1117,7 @@ module.exports = {
     ],
   },
   moonwell_cbXRP: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -2146,6 +2147,7 @@ module.exports = {
     ],
   },
   moonwell_MORPHO: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -3138,6 +3140,7 @@ module.exports = {
     ],
   },
   moonwell_VIRTUAL: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -7753,6 +7756,7 @@ module.exports = {
     ],
   },
   moonwell_AERO: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
