@@ -3116,7 +3116,8 @@
         "NewVault": "0xc38380A706bfcD29874Bf7Bc436382017c90c255",
         "NewStrategy": "0xa741Fc8d10FA920b652752A676dc29790B3c71A2",
         "NewPool": "0x6D589a822938695fCE4E6F57ee9734f6D3099149",
-        "mToken": "0x73902f619CEB9B31FD8EFecf435CbDf89E369Ba6"
+        "mToken": "0x73902f619CEB9B31FD8EFecf435CbDf89E369Ba6",
+        "doHardwork": false
       },
       "aerodrome_DOLA_USDC": {
         "Underlying": "0xf213F2D02837012dC0236cC105061e121bB03e37",
@@ -3608,7 +3609,8 @@
         "NewVault": "0x5843DE606277CD8d0B009E13d9D3a014c4c123bf",
         "NewStrategy": "0xFB818264FE2440d06B3504501bCB9732b8eFb91F",
         "NewPool": "0x581fF5852BBdf95edbFd681614F0Ef213D171eEf",
-        "mToken": "0xdE8Df9d942D78edE3Ca06e60712582F79CFfFC64"
+        "mToken": "0xdE8Df9d942D78edE3Ca06e60712582F79CFfFC64",
+        "doHardwork": false
       },
       "moonwell_WELL": {
         "Underlying": "0xA88594D404727625A9437C3f886C7643872296AE",
@@ -3803,7 +3805,8 @@
         "NewVault": "0xff232227BE3771BcaFB0C177BaC097767b0a8102",
         "NewStrategy": "0x63fDf876b2FC0fF8D33fd54426A99957ecf33640",
         "NewPool": "0x32Da1138f46280933045D7bBC70C86f98f8b22C3",
-        "mToken": "0x6308204872BdB7432dF97b04B42443c714904F3E"
+        "mToken": "0x6308204872BdB7432dF97b04B42443c714904F3E",
+        "doHardwork": false
       },
       "arcadia_ETH": {
         "Underlying": "0x4200000000000000000000000000000000000006",
@@ -3859,7 +3862,8 @@
         "NewVault": "0xC9AF79bC3D5660eA18dee22415BAfDAB08fb461B",
         "NewStrategy": "0x80269e6B4D4110Bff9FFc4417dE73501125Af676",
         "NewPool": "0x5252bFCfB7331e81829fD3eD4f458976eCb0AEaa",
-        "mToken": "0xb4fb8fed5b3AaA8434f0B19b1b623d977e07e86d"
+        "mToken": "0xb4fb8fed5b3AaA8434f0B19b1b623d977e07e86d",
+        "doHardwork": false
       },
       "morpho_COE_USDC": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
