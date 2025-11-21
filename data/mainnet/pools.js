@@ -6,6 +6,111 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.HYPEREVM,
+    id: 'morpho_FLFR_USDT0',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.morpho_FLFR_USDT0.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.morpho_FLFR_USDT0.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLFR_USDT0.Underlying}" target="_blank" rel="noopener noreferrer"> USDT0 </a>to the Morpho Felix(Frontier) Vault, earning 
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLFR_USDT0.Underlying}" target="_blank" rel="noopener noreferrer"> USDT0</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
+    id: 'morpho_FLX_USDT0',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.morpho_FLX_USDT0.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.morpho_FLX_USDT0.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLX_USDT0.Underlying}" target="_blank" rel="noopener noreferrer"> USDT0 </a>to the Morpho Felix Vault, earning 
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_FLX_USDT0.Underlying}" target="_blank" rel="noopener noreferrer"> USDT0</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
+    id: 'morpho_GLT_USDT0',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.morpho_GLT_USDT0.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.morpho_GLT_USDT0.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_GLT_USDT0.Underlying}" target="_blank" rel="noopener noreferrer"> USDT0 </a>to the Morpho Gauntlet Vault, earning 
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_GLT_USDT0.Underlying}" target="_blank" rel="noopener noreferrer"> USDT0</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
+    id: 'morpho_HYP_USDT0',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.morpho_HYP_USDT0.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.morpho_HYP_USDT0.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_HYP_USDT0.Underlying}" target="_blank" rel="noopener noreferrer"> USDT0 </a>to the Morpho Hyperithm Vault, earning 
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_HYP_USDT0.Underlying}" target="_blank" rel="noopener noreferrer"> USDT0</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
+    id: 'morpho_MEV_USDT0',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.morpho_MEV_USDT0.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.morpho_MEV_USDT0.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_MEV_USDT0.Underlying}" target="_blank" rel="noopener noreferrer"> USDT0 </a>to the Morpho MEV Capital Vault, earning 
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.morpho_MEV_USDT0.Underlying}" target="_blank" rel="noopener noreferrer"> USDT0</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
     id: 'morpho_FLX_HYPE',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.HYPEREVM.V2.morpho_FLX_HYPE.NewPool,

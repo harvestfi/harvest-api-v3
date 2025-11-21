@@ -4410,6 +4410,41 @@
         "NewStrategy": "0xc4266B715Cd7eD688F67A16A30046E95b8ED14E3",
         "NewPool": "0x88E81FB45b9e7c114E24EDBF45d9568db005563B",
         "MorphoVault": "0xd19e3d00f8547f7d108abFD4bbb015486437B487"
+      },
+      "morpho_FLFR_USDT0": {
+        "Underlying": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+        "NewVault": "0x4A630faEc2EB8F9EC2E7077Da6eF86588e5C9998",
+        "NewStrategy": "0x8Bf40790B0083Ed6f885708CCb7d43e0159387c3",
+        "NewPool": "0x7597F1f73a01fd74187A2a80eb962d0d4363B0D8",
+        "MorphoVault": "0x9896a8605763106e57A51aa0a97Fe8099E806bb3"
+      },
+      "morpho_FLX_USDT0": {
+        "Underlying": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+        "NewVault": "0xe5641F9894BF8D6025233eEA6C804a311bA26371",
+        "NewStrategy": "0xF604fa7c7E2ADF37283756b7B47aBE2758be3aF2",
+        "NewPool": "0xf7879Ea1E213362CA35103dC9CDfC5fc1f61bf93",
+        "MorphoVault": "0xFc5126377F0efc0041C0969Ef9BA903Ce67d151e"
+      },
+      "morpho_GLT_USDT0": {
+        "Underlying": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+        "NewVault": "0x8478B5a20939948Ce064c0F44962004ED08B7DdB",
+        "NewStrategy": "0x4B0f2F6BbA4C1B6B8365A0672b85F5Db5abc240d",
+        "NewPool": "0x7B2a0483DaBC1923257A0f7250216878245D9589",
+        "MorphoVault": "0x53A333e51E96FE288bC9aDd7cdC4B1EAD2CD2FfA"
+      },
+      "morpho_HYP_USDT0": {
+        "Underlying": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+        "NewVault": "0xA3Eb7cf5BB0896E7Ede83ffa192598FD32BAc850",
+        "NewStrategy": "0x94d26Be29d099D9343A68891878ac5ddD01750BC",
+        "NewPool": "0x58886d609cf0865B6414B835f234C1508eB9c127",
+        "MorphoVault": "0xe5ADd96840F0B908ddeB3Bd144C0283Ac5ca7cA0"
+      },
+      "morpho_MEV_USDT0": {
+        "Underlying": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+        "NewVault": "0xa6bD29f80FF6fc4a55130979155b357ABDD35A92",
+        "NewStrategy": "0x7683b3794e500744b0B2BCd8D073395Dc6aD7370",
+        "NewPool": "0x6680dB35Ec7fC2a50052a4D5f22B26FD9D4D3e90",
+        "MorphoVault": "0x3Bcc0a5a66bB5BdCEEf5dd8a659a4eC75F3834d8"
       }
     }
   }
