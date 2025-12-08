@@ -4445,6 +4445,41 @@
         "NewStrategy": "0x7683b3794e500744b0B2BCd8D073395Dc6aD7370",
         "NewPool": "0x6680dB35Ec7fC2a50052a4D5f22B26FD9D4D3e90",
         "MorphoVault": "0x3Bcc0a5a66bB5BdCEEf5dd8a659a4eC75F3834d8"
+      },
+      "hypurr_HYPE": {
+        "Underlying": "0x5555555555555555555555555555555555555555",
+        "NewVault": "0x1622fa0A791bd0674d41695438A4c68F8aE86369",
+        "NewStrategy": "0x924640778963aBaF5Fbac228142b6d5538576d1e",
+        "NewPool": "0x4DFaeAf8C9BD0f0096D4C4d7C2cdC81AAa4D09aA",
+        "HypurrPool": "0xceCcE0EB9DD2Ef7996e01e25DD70e461F918A14b"
+      },
+      "hypurr_UBTC": {
+        "Underlying": "0x9FDBdA0A5e284c32744D2f17Ee5c74B284993463",
+        "NewVault": "0x5E41F8b8a7Cd17456f9c4Ea02603D89dE25d7BFf",
+        "NewStrategy": "0x5941baB85144ef4d6b3FC2c0Ce7893Ab715655B0",
+        "NewPool": "0x81a0bac6F79B8aA5044B36AEB026670941604A3e",
+        "HypurrPool": "0xceCcE0EB9DD2Ef7996e01e25DD70e461F918A14b"
+      },
+      "hypurr_UETH": {
+        "Underlying": "0xBe6727B535545C67d5cAa73dEa54865B92CF7907",
+        "NewVault": "0x5dA3A5C1bf52A1DB67B3Be9a272Ceb821D4F2aA1",
+        "NewStrategy": "0xfF1b16e4b8C1ebC10a10248A1E8D28bC9587241F",
+        "NewPool": "0x7f3A4Cb06EE8E5774B785d22AF2831c3a0DF9187",
+        "HypurrPool": "0xceCcE0EB9DD2Ef7996e01e25DD70e461F918A14b"
+      },
+      "hypurr_USDC": {
+        "Underlying": "0xb88339CB7199b77E23DB6E890353E22632Ba630f",
+        "NewVault": "0xb79Fd5D6772F06Ed0DF784e6f247f6eC0457CDde",
+        "NewStrategy": "0x7F93Ea9896928464BB21E00894386e0377A5f090",
+        "NewPool": "0x0307568c1Ef937D76d23668E259637a6497bA36f",
+        "HypurrPool": "0xceCcE0EB9DD2Ef7996e01e25DD70e461F918A14b"
+      },
+      "hypurr_USDT0": {
+        "Underlying": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+        "NewVault": "0xC37a8629C1032319D4EFF0Ff781a1cfFf3E96271",
+        "NewStrategy": "0xd7f5D8673E7585B2AA80B0Bb5397778c4E92FaAB",
+        "NewPool": "0x406A0E901D78477FADcdD447509228fBb0a3f115",
+        "HypurrPool": "0xceCcE0EB9DD2Ef7996e01e25DD70e461F918A14b"
       }
     }
   }

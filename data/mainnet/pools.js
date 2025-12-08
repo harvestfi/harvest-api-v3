@@ -6,6 +6,106 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.HYPEREVM,
+    id: 'hypurr_HYPE',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.hypurr_HYPE.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.hypurr_HYPE.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.hypurr_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE </a>to Hypurr, earning HYPE interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.hypurr_HYPE.Underlying}" target="_blank" rel="noopener noreferrer"> HYPE</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
+    id: 'hypurr_UBTC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.hypurr_UBTC.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.hypurr_UBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.hypurr_UBTC.Underlying}" target="_blank" rel="noopener noreferrer"> UBTC </a>to Hypurr, earning UBTC interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.hypurr_UBTC.Underlying}" target="_blank" rel="noopener noreferrer"> UBTC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
+    id: 'hypurr_UETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.hypurr_UETH.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.hypurr_UETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.hypurr_UETH.Underlying}" target="_blank" rel="noopener noreferrer"> UETH </a>to Hypurr, earning UETH interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.hypurr_UETH.Underlying}" target="_blank" rel="noopener noreferrer"> UETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
+    id: 'hypurr_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.hypurr_USDC.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.hypurr_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.hypurr_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to Hypurr, earning USDC interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.hypurr_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
+    id: 'hypurr_USDT0',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.HYPEREVM.V2.hypurr_USDT0.NewPool,
+    collateralAddress: addresses.HYPEREVM.V2.hypurr_USDT0.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [],
+    rewardTokenSymbols: [],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.hypurr_USDT0.Underlying}" target="_blank" rel="noopener noreferrer"> USDT0 </a>to Hypurr, earning USDT0 interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://hyperevmscan.io/token/${addresses.HYPEREVM.V2.hypurr_USDT0.Underlying}" target="_blank" rel="noopener noreferrer"> USDT0</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.HYPEREVM,
     id: 'morpho_FLFR_USDT0',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.HYPEREVM.V2.morpho_FLFR_USDT0.NewPool,
