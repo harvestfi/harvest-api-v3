@@ -187,7 +187,7 @@ module.exports = {
     apyTokenSymbols: ['MORPHO'],
     logoUrl: ['./icons/usdt0.svg'],
     tokenNames: ['USDT0'],
-    platform: ['Morpho - Felix, Frontier'],
+    platform: ['Morpho - Felix Frontier'],
     tags: ['Beginner', 'Stable'],
     tokenAddress: addresses.HYPEREVM.V2.morpho_FLFR_USDT0.Underlying,
     decimals: '6',
@@ -263,6 +263,7 @@ module.exports = {
     ],
   },
   morpho_HYP_USDT0: {
+    inactive: true,
     chain: CHAIN_IDS.HYPEREVM,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
@@ -290,6 +291,7 @@ module.exports = {
     ],
   },
   morpho_MEV_USDT0: {
+    inactive: true,
     chain: CHAIN_IDS.HYPEREVM,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
@@ -425,6 +427,7 @@ module.exports = {
     ],
   },
   morpho_HYP_HYPE: {
+    inactive: true,
     chain: CHAIN_IDS.HYPEREVM,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
@@ -452,6 +455,7 @@ module.exports = {
     ],
   },
   morpho_MEV_HYPE: {
+    inactive: true,
     chain: CHAIN_IDS.HYPEREVM,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
