@@ -71,14 +71,14 @@ module.exports = {
   },
   hypurr_UBTC: {
     chain: CHAIN_IDS.HYPEREVM,
-    apyIconUrls: ['./icons/wbtc.svg'],
+    apyIconUrls: ['./icons/ubtc.svg'],
     apyTokenSymbols: ['UBTC'],
-    logoUrl: ['./icons/wbtc.svg'],
+    logoUrl: ['./icons/ubtc.svg'],
     tokenNames: ['UBTC'],
     platform: ['Hypurr'],
     tags: ['Beginner'],
     tokenAddress: addresses.HYPEREVM.V2.hypurr_UBTC.Underlying,
-    decimals: '18',
+    decimals: '8',
     vaultAddress: addresses.HYPEREVM.V2.hypurr_UBTC.NewVault,
     strategyAddress: addresses.HYPEREVM.V2.hypurr_UBTC.NewStrategy,
     priceFunction: {
