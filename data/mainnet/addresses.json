@@ -3988,6 +3988,30 @@
         "NewStrategy": "0x65569368d585B04755Bc8bEa92E6536254D84117",
         "NewPool": "0xa437966A20061132954A17373e240D56bf2dc69a",
         "EulerVault": "0x4C1aeda9B43EfcF1da1d1755b18802aAbe90f61E"
+      },
+      "morpho_USDC_cbBTC": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x7DbcF082CD501733F2a84E31e61Ac83953d59cB1",
+        "NewStrategy": "0xbCF7d1f1207d03640e4E532Ed6398c6eD59d6e86",
+        "NewPool": "0x26776291140Df78f607c3d7b726D2AC352e92d27"
+      },
+      "morpho_USDC_cbETH": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0xaD38c006FaBb307C92c5d88Bf644febc13D02c19",
+        "NewStrategy": "0xFB5DD4D59aa0A6352D1F8AeBBcFF4C733dD9b952",
+        "NewPool": "0x9Ba9118522d0B08e4bcF9E7F89AdAd4EcbD8720C"
+      },
+      "morpho_USDC_WETH": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x90B0B5356A984A98F087e63F375Cc0EB222b465d",
+        "NewStrategy": "0x9406714f277a2Ae61420187423704C1872a1e92A",
+        "NewPool": "0x10090525dB55F064873BE0F5274Ea3e7B0600420"
+      },
+      "morpho_USDC_wstETH": {
+        "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "NewVault": "0x5250bd2C5F05E128883e8BBDB4E6f9f79EA64Cab",
+        "NewStrategy": "0x2437DfC2201a2467372A961f55e7Fa113913080D",
+        "NewPool": "0x11d1bd40c892329e1711FBb126E0165fB073df3E"
       }
     }
   },
