@@ -41,7 +41,7 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
-moonwellLoop_wstETH_ETH: {
+  moonwellLoop_wstETH_ETH: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
