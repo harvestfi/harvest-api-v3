@@ -4,7 +4,7 @@ const addresses = require('./addresses.json')
 const strat15PercentFactor = '0.85'
 
 module.exports = [
-    {
+  {
     chain: CHAIN_IDS.BASE,
     id: 'moonwellLoop_wstETH_ETH',
     type: POOL_TYPES.INCENTIVE,
@@ -17,8 +17,9 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH </a>to Moonwell, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH </a>to Moonwell, and uses it as collateral to borrow 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a> earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and leveraged wstETH staking rewards.
        At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH</a>.
       </p>
@@ -38,8 +39,9 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_cbETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> cbETH </a>to Moonwell, earning 
-       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_cbETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> cbETH </a>to Moonwell, and uses it as collateral to borrow 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a> earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and leveraged cbETH staking rewards.
        At every harvest, the earned rewards are converted into more
        <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_cbETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> cbETH</a>.
       </p>
