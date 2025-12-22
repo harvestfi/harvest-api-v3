@@ -41,6 +41,25 @@ const getVaultData = async (vaultAddr, chain) => {
   return queryResponse
 }
 
+const getMarketData = async (marketUniqueKey, chain) => {
+  const query = `
+    query {
+      marketByUniqueKey(
+        uniqueKey: "${marketUniqueKey}"
+        chainId: ${chain}
+      ) {
+        state {
+          avgNetSupplyApy
+        }
+      }
+  }`
+
+  const queryResponse = await executeApiCall(query, {})
+
+  return queryResponse
+}
+
 module.exports = {
   getVaultData,
+  getMarketData,
 }

@@ -3993,25 +3993,29 @@
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         "NewVault": "0x7DbcF082CD501733F2a84E31e61Ac83953d59cB1",
         "NewStrategy": "0xbCF7d1f1207d03640e4E532Ed6398c6eD59d6e86",
-        "NewPool": "0x26776291140Df78f607c3d7b726D2AC352e92d27"
+        "NewPool": "0x26776291140Df78f607c3d7b726D2AC352e92d27",
+        "MarketUniqueKey": "0x9103c3b4e834476c9a62ea009ba2c884ee42e94e6e314a26f04d312434191836"
       },
       "morpho_USDC_cbETH": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         "NewVault": "0xaD38c006FaBb307C92c5d88Bf644febc13D02c19",
         "NewStrategy": "0xFB5DD4D59aa0A6352D1F8AeBBcFF4C733dD9b952",
-        "NewPool": "0x9Ba9118522d0B08e4bcF9E7F89AdAd4EcbD8720C"
+        "NewPool": "0x9Ba9118522d0B08e4bcF9E7F89AdAd4EcbD8720C",
+        "MarketUniqueKey": "0x1c21c59df9db44bf6f645d854ee710a8ca17b479451447e9f56758aee10a2fad"
       },
       "morpho_USDC_WETH": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         "NewVault": "0x90B0B5356A984A98F087e63F375Cc0EB222b465d",
         "NewStrategy": "0x9406714f277a2Ae61420187423704C1872a1e92A",
-        "NewPool": "0x10090525dB55F064873BE0F5274Ea3e7B0600420"
+        "NewPool": "0x10090525dB55F064873BE0F5274Ea3e7B0600420",
+        "MarketUniqueKey": "0x8793cf302b8ffd655ab97bd1c695dbd967807e8367a65cb2f4edaf1380ba1bda"
       },
       "morpho_USDC_wstETH": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         "NewVault": "0x5250bd2C5F05E128883e8BBDB4E6f9f79EA64Cab",
         "NewStrategy": "0x2437DfC2201a2467372A961f55e7Fa113913080D",
-        "NewPool": "0x11d1bd40c892329e1711FBb126E0165fB073df3E"
+        "NewPool": "0x11d1bd40c892329e1711FBb126E0165fB073df3E",
+        "MarketUniqueKey": "0x13c42741a359ac4a8aa8287d2be109dcf28344484f91185f9a79bd5a805a55ae"
       },
       "moonwellLoop_wstETH_ETH": {
         "Underlying": "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
