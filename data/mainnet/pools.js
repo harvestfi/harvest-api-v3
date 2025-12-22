@@ -4,6 +4,48 @@ const addresses = require('./addresses.json')
 const strat15PercentFactor = '0.85'
 
 module.exports = [
+    {
+    chain: CHAIN_IDS.BASE,
+    id: 'moonwellLoop_wstETH_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.moonwellLoop_wstETH_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.moonwellLoop_wstETH_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH </a>to Moonwell, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'moonwellLoop_cbETH_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.moonwellLoop_cbETH_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.moonwellLoop_cbETH_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_cbETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> cbETH </a>to Moonwell, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_cbETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> cbETH</a>.
+      </p>
+    </div>
+   `,
+  },
   {
     chain: CHAIN_IDS.HYPEREVM,
     id: 'hypurr_HYPE',
