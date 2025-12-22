@@ -4016,6 +4016,22 @@
         "NewStrategy": "0x2437DfC2201a2467372A961f55e7Fa113913080D",
         "NewPool": "0x11d1bd40c892329e1711FBb126E0165fB073df3E",
         "MarketUniqueKey": "0x13c42741a359ac4a8aa8287d2be109dcf28344484f91185f9a79bd5a805a55ae"
+      },
+      "moonwellLoop_wstETH_ETH": {
+        "Underlying": "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
+        "NewVault": "0xFF0dE75a60f6557dF434c6D0347D6Ed221f8727b",
+        "NewStrategy": "0xaF14edDE276e14F9619d49AF06F240F43909bA9E",
+        "NewPool": "0xdd138d715AD604672e681a52E0F255618257fb37",
+        "supplymToken": "0x627Fe393Bc6EdDA28e99AE648fD6fF362514304b",
+        "borrowmToken": "0x628ff693426583D9a7FB391E54366292F509D457"
+      },
+      "moonwellLoop_cbETH_ETH": {
+        "Underlying": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
+        "NewVault": "0x49c7F3f320c7473D8389Ad0C7adbB4c233e41b68",
+        "NewStrategy": "0xA9d2894234eA13f4435EC519Bb72dD27B46E2433",
+        "NewPool": "0xf2A57805098535b2D6b78d7eD40263dBA8d59471",
+        "supplymToken": "0x3bf93770f2d4a794c3d9EBEfBAeBAE2a8f09A5E5",
+        "borrowmToken": "0x628ff693426583D9a7FB391E54366292F509D457"
       }
     }
   },

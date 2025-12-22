@@ -259,7 +259,14 @@ const faLoanContract = require('../contracts/fa-loan/contract.json')
 const siloLensMethods = require('../contracts/silo-lens/methods')
 const siloLensContract = require('../contracts/silo-lens/contract.json')
 
+const loopStrategyMethods = require('../contracts/loop-strategy/methods')
+const loopStrategyContract = require('../contracts/loop-strategy/contract.json')
+
 module.exports = {
+  loopStrategy: {
+    methods: loopStrategyMethods,
+    contract: loopStrategyContract,
+  },
   siloLens: {
     methods: siloLensMethods,
     contract: siloLensContract,

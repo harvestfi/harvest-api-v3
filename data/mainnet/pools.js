@@ -6,6 +6,50 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.BASE,
+    id: 'moonwellLoop_wstETH_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.moonwellLoop_wstETH_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.moonwellLoop_wstETH_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH </a>to Moonwell, and uses it as collateral to borrow 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a> earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and leveraged wstETH staking rewards.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'moonwellLoop_cbETH_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.moonwellLoop_cbETH_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.moonwellLoop_cbETH_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_cbETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> cbETH </a>to Moonwell, and uses it as collateral to borrow 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a> earning 
+       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and leveraged cbETH staking rewards.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_cbETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> cbETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
     id: 'morpho_USDC_cbBTC',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.BASE.V2.morpho_USDC_cbBTC.NewPool,
