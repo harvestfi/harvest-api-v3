@@ -727,7 +727,8 @@
       "OldStrategy": "0x234C96D1823BfdC0575F332CfD6084c760c9B982",
       "NewStrategy": "0x453D26Fb5492F0D82e318c778f06C4F3b1E1ce4c",
       "NewPool": "0xC506B26F9d971594D4cC89f8416af087d061a40F",
-      "MorphoVault": "0xbEeFc011e94f43b8B7b455eBaB290C7Ab4E216f1"
+      "MorphoVault": "0xbEeFc011e94f43b8B7b455eBaB290C7Ab4E216f1",
+      "doHardwork": false
     },
     "morphoCS_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",

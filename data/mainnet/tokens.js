@@ -4451,6 +4451,7 @@ module.exports = {
     },
   },
   morphoCS_USDL: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/morpho.svg', './icons/shift.svg'],
     apyTokenSymbols: ['MORPHO', 'SHIFT'],
