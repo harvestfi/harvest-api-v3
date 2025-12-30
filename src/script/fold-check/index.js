@@ -694,7 +694,12 @@ const checkFoldingLeverage = async () => {
       let include = false
       for (let platform of platforms) {
         if (vault.toLowerCase().includes(platform) && !vault.toLowerCase().includes('hodl')) {
-          if (vault != 'lodestar_LODE') {
+          if (
+            vault != 'lodestar_LODE' &&
+            !vault.toLowerCase().includes('moonwellloop') &&
+            chainAddresses[vault].doHardwork != false
+          ) {
+            console.log(`Including vault: ${vault} on platform: ${platform}`)
             include = true
             chainAddresses[vault].platform = platform
             chainAddresses[vault].id = vault
