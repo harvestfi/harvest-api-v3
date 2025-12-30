@@ -558,12 +558,12 @@ module.exports = {
         mnemonic: secret.mnemonic,
       },
       forking: {
-        url: 'https://eth-mainnet.alchemyapi.io/v2/' + secret.alchemyKey,
+        url: 'https://eth-mainnet.g.alchemy.com/v2/' + secret.alchemyKey,
         // blockNumber: 13984900,
       },
     },
     mainnet: {
-      url: 'https://eth-mainnet.alchemyapi.io/v2/' + secret.alchemyKey,
+      url: 'https://eth-mainnet.g.alchemy.com/v2/' + secret.alchemyKey,
       accounts: {
         mnemonic: secret.mnemonic,
       },
