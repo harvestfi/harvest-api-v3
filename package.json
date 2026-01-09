@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/harvestfi/harvest-api#readme",
   "dependencies": {
+    "@supabase/supabase-js": "^2.90.1",
     "@uniswap/sdk-core": "3.0.0",
     "@uniswap/v3-sdk": "3.0.0",
     "axios": "0.21.1",

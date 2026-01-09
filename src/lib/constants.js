@@ -240,6 +240,9 @@ const SILO_ENDPOINT = 'https://app.silo.finance/api/detailed-vault'
 const CURRENCY_API_URL = `https://api.freecurrencyapi.com/v1/latest?apikey=${process.env.CURRENCY_API_KEY}`
 const HISTORICAL_CURRENCY_API_URL = `https://api.freecurrencyapi.com/v1/historical?apikey=${process.env.CURRENCY_API_KEY}`
 
+const DEBANK_API_URL = 'https://pro-openapi.debank.com'
+const SUPABASE_URL = 'https://fhsrpkorvuwvwacapbig.supabase.co' // Set your Supabase project URL here
+
 const DEBUG_MODE = process.env.DEBUG_MODE
 
 const WEB3_CALL_COUNT_STATS_KEY = 'web3CallCountStats'
@@ -381,4 +384,6 @@ module.exports = {
   FLUID_ENDPOINT,
   EULER_ENDPOINT,
   SILO_ENDPOINT,
+  DEBANK_API_URL,
+  SUPABASE_URL,
 }
