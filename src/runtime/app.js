@@ -11,7 +11,15 @@ module.exports = function () {
   const initDb = require('../lib/db')
 
   // app.use(cors(CORS_SETTINGS))
-  app.use(cors())
+  app.use(
+    cors({
+      origin: true, // Allow all origins
+      credentials: true,
+      methods: ['GET', 'POST'],
+      allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    }),
+  )
+  app.use(express.json())
 
   initRouter(app)
   const port = process.env.PORT || 3000

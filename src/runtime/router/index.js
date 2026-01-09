@@ -9,6 +9,8 @@ const {
 } = require('../../lib/constants')
 const { validateAPIKey, asyncWrap, validateTokenSymbol } = require('./middleware')
 const { Cache } = require('../../lib/db/models/cache')
+const { getTotalBalance } = require('../../lib/third-party/debank')
+const { saveWalletConnection } = require('../../lib/db/supabase')
 const { get } = require('lodash')
 const { default: BigNumber } = require('bignumber.js')
 const { formatTimeago } = require('../../lib/utils.js')
@@ -340,6 +342,58 @@ const initRouter = app => {
       res.send({
         ...get(data, 'data', {}),
       })
+    }),
+  )
+
+  // Wallet connect endpoint - stores wallet addresses from frontend to Supabase
+  app.post(
+    '/wallet-connect',
+    asyncWrap(async (req, res) => {
+      const { walletAddress } = req.body
+
+      if (!walletAddress) {
+        return res.status(400).json({ error: 'walletAddress is required' })
+      }
+
+      // Validate wallet address format (basic check - should be hex string)
+      const addressRegex = /^0x[a-fA-F0-9]{40}$/
+      if (!addressRegex.test(walletAddress)) {
+        return res.status(400).json({ error: 'Invalid wallet address format' })
+      }
+
+      try {
+        const connectedAt = new Date()
+        const normalizedAddress = walletAddress.toLowerCase()
+
+        // Fetch balance from DeBank API
+        const balance = await getTotalBalance(normalizedAddress)
+
+        // Save or update in Supabase
+        const result = await saveWalletConnection({
+          walletAddress: normalizedAddress,
+          connectedAt,
+          balance,
+        })
+
+        res.json({
+          success: true,
+          message: result.updated ? 'Wallet connection updated' : 'Wallet connection recorded',
+          walletAddress: normalizedAddress,
+          connectedAt,
+          balance,
+        })
+      } catch (error) {
+        console.error('Error saving wallet connection:', error)
+        
+        // If Supabase is not configured, provide helpful error message
+        if (error.message && error.message.includes('Supabase client not initialized')) {
+          return res.status(500).json({ 
+            error: 'Database not configured. Please configure Supabase credentials.' 
+          })
+        }
+        
+        res.status(500).json({ error: 'Internal server error' })
+      }
     }),
   )
 }
