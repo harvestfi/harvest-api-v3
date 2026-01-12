@@ -4,17 +4,19 @@ const { SUPABASE_URL } = require('../constants')
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
 
 if (!SUPABASE_URL || !SUPABASE_KEY) {
-  console.warn('Supabase credentials not configured. Set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY (or SUPABASE_ANON_KEY) environment variables.')
+  console.warn(
+    'Supabase credentials not configured. Set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY (or SUPABASE_ANON_KEY) environment variables.',
+  )
 }
 
 // Create Supabase client
-const supabase = SUPABASE_URL && SUPABASE_KEY 
-  ? createClient(SUPABASE_URL, SUPABASE_KEY)
-  : null
+const supabase = SUPABASE_URL && SUPABASE_KEY ? createClient(SUPABASE_URL, SUPABASE_KEY) : null
 
 const saveWalletConnection = async ({ walletAddress, connectedAt, balance }) => {
   if (!supabase) {
-    throw new Error('Supabase client not initialized. Please configure SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY environment variables.')
+    throw new Error(
+      'Supabase client not initialized. Please configure SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY environment variables.',
+    )
   }
 
   try {

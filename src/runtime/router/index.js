@@ -384,14 +384,14 @@ const initRouter = app => {
         })
       } catch (error) {
         console.error('Error saving wallet connection:', error)
-        
+
         // If Supabase is not configured, provide helpful error message
         if (error.message && error.message.includes('Supabase client not initialized')) {
-          return res.status(500).json({ 
-            error: 'Database not configured. Please configure Supabase credentials.' 
+          return res.status(500).json({
+            error: 'Database not configured. Please configure Supabase credentials.',
           })
         }
-        
+
         res.status(500).json({ error: 'Internal server error' })
       }
     }),
