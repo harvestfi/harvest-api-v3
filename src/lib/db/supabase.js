@@ -48,14 +48,6 @@ const saveWalletConnection = async ({ walletAddress, connectedAt, balance }) => 
   }
 
   try {
-    // Check if wallet was already logged today
-    const alreadyLogged = await isWalletLoggedToday(walletAddress, connectedAt)
-
-    if (alreadyLogged) {
-      // Wallet already logged today - skip (don't call DeBank API, don't insert)
-      return { data: null, alreadyLogged: true }
-    }
-
     // Wallet not logged today - create new entry
     const { data, error } = await supabase
       .from('wallet_connections')
