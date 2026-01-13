@@ -7,11 +7,17 @@ const {
   CHAIN_IDS,
   CURRENCY_RATES,
 } = require('../../lib/constants')
-const { validateAPIKey, asyncWrap, validateTokenSymbol } = require('./middleware')
+const {
+  validateAPIKey,
+  asyncWrap,
+  validateTokenSymbol,
+  walletConnectRateLimit,
+} = require('./middleware')
 const { Cache } = require('../../lib/db/models/cache')
 const { getTotalBalance } = require('../../lib/third-party/debank')
-const { saveWalletConnection } = require('../../lib/db/supabase')
+const { saveWalletConnection, isWalletLoggedToday } = require('../../lib/db/supabase')
 const { get } = require('lodash')
+const cors = require('cors')
 const { default: BigNumber } = require('bignumber.js')
 const { formatTimeago } = require('../../lib/utils.js')
 
@@ -345,9 +351,22 @@ const initRouter = app => {
     }),
   )
 
+  // Apply specific CORS settings for this endpoint (explicit origins, credentials: false)
+  const walletConnectCors = cors({
+    origin: process.env.WALLET_CONNECT_CORS_ORIGINS
+      ? process.env.WALLET_CONNECT_CORS_ORIGINS.split(';').filter(Boolean)
+      : ['http://localhost:3001'], // Default for development
+    credentials: false,
+    methods: ['POST'],
+    allowedHeaders: ['Content-Type'],
+  })
+
   // Wallet connect endpoint - stores wallet addresses from frontend to Supabase
+  app.options('/wallet-connect', walletConnectCors)
   app.post(
     '/wallet-connect',
+    walletConnectCors, // Apply specific CORS settings
+    walletConnectRateLimit, // Apply rate limiting
     asyncWrap(async (req, res) => {
       const { walletAddress } = req.body
 
@@ -365,11 +384,20 @@ const initRouter = app => {
         const connectedAt = new Date()
         const normalizedAddress = walletAddress.toLowerCase()
 
-        // Fetch balance from DeBank API
+        const alreadyLogged = await isWalletLoggedToday(normalizedAddress, connectedAt)
+
+        if (alreadyLogged) {
+          return res.json({
+            success: true,
+            message: 'Wallet already logged today',
+            walletAddress: normalizedAddress,
+            alreadyLogged: true,
+          })
+        }
+
         const balance = await getTotalBalance(normalizedAddress)
 
-        // Save or update in Supabase
-        const result = await saveWalletConnection({
+        await saveWalletConnection({
           walletAddress: normalizedAddress,
           connectedAt,
           balance,
@@ -377,21 +405,19 @@ const initRouter = app => {
 
         res.json({
           success: true,
-          message: result.updated ? 'Wallet connection updated' : 'Wallet connection recorded',
+          message: 'Wallet connection recorded',
           walletAddress: normalizedAddress,
           connectedAt,
           balance,
         })
       } catch (error) {
         console.error('Error saving wallet connection:', error)
-
         // If Supabase is not configured, provide helpful error message
         if (error.message && error.message.includes('Supabase client not initialized')) {
           return res.status(500).json({
             error: 'Database not configured. Please configure Supabase credentials.',
           })
         }
-
         res.status(500).json({ error: 'Internal server error' })
       }
     }),

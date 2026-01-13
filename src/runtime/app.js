@@ -10,16 +10,19 @@ module.exports = function () {
   const { startPollers } = require('./pollers')
   const initDb = require('../lib/db')
 
+  // Trust proxy for accurate IP addresses behind Cloudflare
+  app.set('trust proxy', 1)
+
   // app.use(cors(CORS_SETTINGS))
   app.use(
     cors({
       origin: true, // Allow all origins
       credentials: true,
-      methods: ['GET', 'POST'],
+      methods: ['GET'],
       allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
     }),
   )
-  app.use(express.json())
+  app.use(express.json({ limit: '10kb' })) // Limit request body size to 10KB
 
   initRouter(app)
   const port = process.env.PORT || 3000
