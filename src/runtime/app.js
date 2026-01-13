@@ -17,8 +17,8 @@ module.exports = function () {
   app.use(
     cors({
       origin: true, // Allow all origins
-      credentials: false,
-      methods: ['GET', 'POST'],
+      credentials: true,
+      methods: ['GET'],
       allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
     }),
   )

@@ -362,6 +362,7 @@ const initRouter = app => {
   })
 
   // Wallet connect endpoint - stores wallet addresses from frontend to Supabase
+  app.options('/wallet-connect', walletConnectCors)
   app.post(
     '/wallet-connect',
     walletConnectCors, // Apply specific CORS settings

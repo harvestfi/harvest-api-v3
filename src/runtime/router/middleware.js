@@ -12,17 +12,15 @@ const validateAPIKey = concatenatedKeys => (req, res, next) => {
 }
 
 const walletConnectRateLimit = rateLimit({
-  windowMs: 10 * 60 * 1000,
-  max: 20,
+  windowMs: 60 * 1000,
+  max: 10,
   message: {
     error: 'Too many wallet-connect requests, please try again later.',
   },
   standardHeaders: true,
   legacyHeaders: false,
   keyGenerator: req => {
-    const apiKey = req.query.key || 'no-key'
-    const ip = req.ip || req.connection.remoteAddress || 'unknown'
-    return `${ip}-${apiKey}`
+    return req.ip || req.connection.remoteAddress || 'unknown'
   },
 })
 
