@@ -18,8 +18,8 @@ const getTotalBalance = async walletAddress => {
   try {
     const url = `${DEBANK_API_URL}/v1/user/total_balance`
     const headers = {
-      'accept': 'application/json',
-      'AccessKey': DEBANK_API_KEY,
+      accept: 'application/json',
+      AccessKey: DEBANK_API_KEY,
     }
     const params = {
       id: walletAddress.toLowerCase(),
@@ -44,4 +44,3 @@ const getTotalBalance = async walletAddress => {
 module.exports = {
   getTotalBalance,
 }
-
