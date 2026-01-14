@@ -5,6 +5,26 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'dolomite_USD1',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.dolomite_USD1.NewPool,
+    collateralAddress: addresses.V2.dolomite_USD1.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+        <a href="https://etherscan.io/token/${addresses.V2.dolomite_USD1.Underlying}" target="_blank" rel="noopener noreferrer"> USD1 </a>to Dolomite, earning USD1 interest and WLFI.
+        At every harvest, the earned rewards are converted into more
+        <a href="https://etherscan.io/token/${addresses.V2.dolomite_USD1.Underlying}" target="_blank" rel="noopener noreferrer"> USD1</a>.
+      </p>
+    </div>
+    `,
+  },
+  {
     chain: CHAIN_IDS.BASE,
     id: 'morpho_USDC_cbBTC',
     type: POOL_TYPES.INCENTIVE,

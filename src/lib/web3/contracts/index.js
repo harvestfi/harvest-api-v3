@@ -259,7 +259,14 @@ const faLoanContract = require('../contracts/fa-loan/contract.json')
 const siloLensMethods = require('../contracts/silo-lens/methods')
 const siloLensContract = require('../contracts/silo-lens/contract.json')
 
+const dolomiteMarginMainnetMethods = require('../contracts/dolomite-margin-mainnet/methods')
+const dolomiteMarginMainnetContract = require('../contracts/dolomite-margin-mainnet/contract.json')
+
 module.exports = {
+  dolomiteMarginMainnet: {
+    methods: dolomiteMarginMainnetMethods,
+    contract: dolomiteMarginMainnetContract,
+  },
   siloLens: {
     methods: siloLensMethods,
     contract: siloLensContract,
