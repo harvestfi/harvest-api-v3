@@ -13,7 +13,7 @@ if (!SUPABASE_URL || !SUPABASE_KEY) {
 const supabase = SUPABASE_URL && SUPABASE_KEY ? createClient(SUPABASE_URL, SUPABASE_KEY) : null
 
 const isWalletLoggedToday = async (walletAddress, date = new Date()) => {
-  if (!supabase) {
+  if (!supabase || !process.env.SUPABASE_WALLET_CONNECTIONS_TABLE) {
     throw new Error(
       'Supabase client not initialized. Please configure SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY environment variables.',
     )
@@ -25,7 +25,7 @@ const isWalletLoggedToday = async (walletAddress, date = new Date()) => {
   endOfDay.setUTCHours(23, 59, 59, 999)
 
   const { data, error } = await supabase
-    .from('wallet_connections')
+    .from(process.env.SUPABASE_WALLET_CONNECTIONS_TABLE)
     .select('wallet_address')
     .eq('wallet_address', walletAddress.toLowerCase())
     .gte('connected_at', startOfDay.toISOString())
