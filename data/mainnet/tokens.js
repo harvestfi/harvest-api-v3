@@ -41,6 +41,33 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  dolomite_USD1: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/wlfi.svg'],
+    apyTokenSymbols: ['WLFI'],
+    logoUrl: ['./icons/usd1.svg'],
+    tokenNames: ['USD1'],
+    platform: ['Dolomite'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.V2.dolomite_USD1.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.dolomite_USD1.NewVault,
+    strategyAddress: addresses.V2.dolomite_USD1.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd1-wlfi'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.DOLOMITE_LEND,
+        params: [
+          addresses.V2.dolomite_USD1.MarketId,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+      },
+    ],
+  },
   moonwellLoop_wstETH_ETH: {
     inactive: true,
     chain: CHAIN_IDS.BASE,

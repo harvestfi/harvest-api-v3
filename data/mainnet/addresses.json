@@ -921,6 +921,13 @@
       "NewStrategy": "0x9dccA92C9016f4771A035d0FDC3412D3184F3d0D",
       "NewPool": "0x91f3448B98BA99BfC3Ac43B8212974C0880dBA4f",
       "MorphoVault": "0x40DD8f13395a1dD5C8aB5B6a7ecDb4F782838E45"
+    },
+    "dolomite_USD1": {
+      "Underlying": "0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d",
+      "NewVault": "0x46df07084Fedf83B80D434fa58C7d4dCBF99150B",
+      "NewStrategy": "0xd75Ea59BEDe05164a140CAa4B29804914EbB9AA3",
+      "NewPool": "0xf586E3f91497bc5AC46489A6285fed4E8067D599",
+      "MarketId": 1
     }
   },
   "MATIC": {

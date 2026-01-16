@@ -1,14 +1,14 @@
 const BigNumber = require('bignumber.js')
-const { web3ARBITRUM } = require('../../../lib/web3')
-const { dolomiteMargin } = require('../../../lib/web3/contracts')
+const { getWeb3 } = require('../../../lib/web3')
+const { dolomiteMargin, dolomiteMarginMainnet } = require('../../../lib/web3/contracts')
 const { getApy: getMerklApy } = require('./merkl')
 
-const getApy = async (marketId, reduction) => {
-  const web3 = web3ARBITRUM
+const getApy = async (marketId, reduction, chain) => {
+  const web3 = getWeb3(chain)
   const {
     contract: { abi: dolomiteAbi, address: dolomiteAddresses },
     methods: dolomiteMethods,
-  } = dolomiteMargin
+  } = chain == 1 ? dolomiteMarginMainnet : dolomiteMargin
 
   const secondsPerYear = 3600 * 24 * 365
 
@@ -32,6 +32,11 @@ const getApy = async (marketId, reduction) => {
   if (marketId == 17) {
     const merklAPR = new BigNumber(
       await getMerklApy('0x', '0xaf88d065e77c8cc2239327c5edb3a432268e5832', 42161, 1),
+    )
+    supplyAPR = supplyAPR.plus(merklAPR)
+  } else if (marketId == 1 && chain == 1) {
+    const merklAPR = new BigNumber(
+      await getMerklApy('0x', '0x8d0d000ee44948fc98c9b98a4fa4921476f08b0e', 1, 1),
     )
     supplyAPR = supplyAPR.plus(merklAPR)
   }
