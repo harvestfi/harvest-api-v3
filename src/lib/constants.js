@@ -122,6 +122,8 @@ const MAIN_CACHE_KEYS = {
 
 const HARVEST_LAUNCH_DATE = new Date(1598986800000) // Tuesday, September 1, 2020 7:00:00 PM UTC
 
+const USER_TRANSACTIONS_START_DATE = new Date(1767225600000) // 2026-01-01 00:00:00 UTC
+
 const COMPOUND_CTOKEN_API_URL = 'https://api.compound.finance/api/v2/ctoken'
 
 const APY_VISION_API_URL = 'https://stats.apy.vision/api/v1'
@@ -386,4 +388,5 @@ module.exports = {
   SILO_ENDPOINT,
   DEBANK_API_URL,
   SUPABASE_URL,
+  USER_TRANSACTIONS_START_DATE,
 }

@@ -26,7 +26,7 @@ const {
   CURRENCY_API_URL,
   HISTORICAL_CURRENCY_API_URL,
   HARVEST_SUBGRAPH_URLS,
-  HARVEST_LAUNCH_DATE,
+  USER_TRANSACTIONS_START_DATE,
 } = require('../lib/constants')
 const { Cache } = require('../lib/db/models/cache')
 const { storeData, appendData, loadData } = require('../lib/db/models/cache')
@@ -1100,7 +1100,7 @@ const getUserTransactionsForChain = async (chainId, chainName) => {
   try {
     let lastTimestamp = await getLastUserTransactionTimestamp(chainId)
 
-    const chainStartTimestamp = Math.floor(HARVEST_LAUNCH_DATE.getTime() / 1000)
+    const chainStartTimestamp = Math.floor(USER_TRANSACTIONS_START_DATE.getTime() / 1000)
 
     if (!lastTimestamp) {
       lastTimestamp = chainStartTimestamp
