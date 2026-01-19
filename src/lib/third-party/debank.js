@@ -41,6 +41,46 @@ const getTotalBalance = async walletAddress => {
   }
 }
 
+const getHarvestBalance = async walletAddress => {
+  if (!walletAddress) {
+    console.error('getHarvestBalance: walletAddress is required')
+    return 0
+  }
+
+  if (!DEBANK_API_KEY) {
+    console.warn('DEBANK_API_KEY not set. Balance fetching will be skipped.')
+    return 0
+  }
+
+  try {
+    const url = `${DEBANK_API_URL}/v1/user/all_simple_protocol_list`
+    const headers = {
+      accept: 'application/json',
+      AccessKey: DEBANK_API_KEY,
+    }
+    const params = {
+      id: walletAddress.toLowerCase(),
+    }
+
+    const response = await axios.get(url, {
+      headers,
+      params,
+      timeout: 10000, // 10 second timeout
+    })
+
+    const totalHarvestUsd = response.data
+      .filter(item => item.id.toLowerCase().includes('harvest'))
+      .reduce((sum, item) => sum + (parseFloat(item.net_usd_value) || 0), 0)
+
+    return totalHarvestUsd
+  } catch (error) {
+    console.error(`Error fetching DeBank protocol list for ${walletAddress}:`, error.message)
+    // Return 0 on error instead of throwing
+    return 0
+  }
+}
+
 module.exports = {
   getTotalBalance,
+  getHarvestBalance,
 }

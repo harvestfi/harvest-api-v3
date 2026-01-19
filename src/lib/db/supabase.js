@@ -42,7 +42,7 @@ const isWalletLoggedToday = async (walletAddress, date = new Date()) => {
   return data && data.length > 0
 }
 
-const saveWalletConnection = async ({ walletAddress, connectedAt, balance }) => {
+const saveWalletConnection = async ({ walletAddress, connectedAt, balance, harvestBalance }) => {
   if (!supabase || !process.env.SUPABASE_WALLET_CONNECTIONS_TABLE) {
     throw new Error(
       'Supabase client not initialized. Please configure SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY environment variables.',
@@ -57,6 +57,7 @@ const saveWalletConnection = async ({ walletAddress, connectedAt, balance }) => 
         wallet_address: walletAddress.toLowerCase(),
         connected_at: connectedAt.toISOString(),
         balance: balance || 0,
+        harvest_balance: harvestBalance || 0,
       })
       .select()
 

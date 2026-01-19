@@ -14,7 +14,7 @@ const {
   walletConnectRateLimit,
 } = require('./middleware')
 const { Cache } = require('../../lib/db/models/cache')
-const { getTotalBalance } = require('../../lib/third-party/debank')
+const { getTotalBalance, getHarvestBalance } = require('../../lib/third-party/debank')
 const { saveWalletConnection, isWalletLoggedToday } = require('../../lib/db/supabase')
 const { get } = require('lodash')
 const cors = require('cors')
@@ -396,11 +396,13 @@ const initRouter = app => {
         }
 
         const balance = await getTotalBalance(normalizedAddress)
+        const harvestBalance = await getHarvestBalance(normalizedAddress)
 
         await saveWalletConnection({
           walletAddress: normalizedAddress,
           connectedAt,
           balance,
+          harvestBalance,
         })
 
         res.json({
@@ -409,6 +411,7 @@ const initRouter = app => {
           walletAddress: normalizedAddress,
           connectedAt,
           balance,
+          harvestBalance,
         })
       } catch (error) {
         console.error('Error saving wallet connection:', error)
