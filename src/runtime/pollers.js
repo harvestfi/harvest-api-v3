@@ -26,6 +26,7 @@ const {
   CURRENCY_API_URL,
   HISTORICAL_CURRENCY_API_URL,
   HARVEST_SUBGRAPH_URLS,
+  HARVEST_LAUNCH_DATE,
 } = require('../lib/constants')
 const { Cache } = require('../lib/db/models/cache')
 const { storeData, appendData, loadData } = require('../lib/db/models/cache')
@@ -38,7 +39,9 @@ const {
   getBalanceData,
   getPlasmaBalanceData,
   getPlasmaVaultData,
+  getUserTransactions,
 } = require('../lib/third-party/harvest-subgraph')
+const { getLastUserTransactionTimestamp, saveUserTransactions } = require('../lib/db/supabase')
 // const { superformRewardData } = require('../lib/third-party/superform')
 const { getGmxData } = require('../lib/third-party/gmx')
 const { getCLData } = require('../lib/third-party/cl-test')
@@ -1091,6 +1094,123 @@ const getLeaderboardData = async () => {
   console.log('-- Done getting Leaderboard data --\n')
 }
 
+const getUserTransactionsForChain = async (chainId, chainName) => {
+  console.log(`\n-- Getting ${chainName} User Transactions --`)
+
+  try {
+    let lastTimestamp = await getLastUserTransactionTimestamp(chainId)
+
+    const chainStartTimestamp = Math.floor(HARVEST_LAUNCH_DATE.getTime() / 1000)
+
+    if (!lastTimestamp) {
+      lastTimestamp = chainStartTimestamp
+      console.log(`First run: querying from ${chainName} launch timestamp: ${lastTimestamp}`)
+    } else {
+      console.log(`Querying ${chainName} transactions since timestamp: ${lastTimestamp}`)
+    }
+    let allTransactions = []
+    const pageSize = 1000
+    let currentTimestamp = lastTimestamp
+    const createUniqueKey = tx => {
+      const vaultId = tx.vault?.id || tx.plasmaVault?.id || ''
+      return `${tx.tx}_${tx.userAddress}_${tx.transactionType}_${vaultId}_${tx.value}_${tx.timestamp}`
+    }
+    let seenTransactionKeys = new Set()
+    let hasMore = true
+
+    while (hasMore) {
+      const transactions = await getUserTransactions(chainId, currentTimestamp, pageSize, 0)
+
+      if (!transactions || transactions.length === 0) {
+        hasMore = false
+        break
+      }
+
+      const newTransactions = []
+
+      for (const tx of transactions) {
+        const key = createUniqueKey(tx)
+
+        if (seenTransactionKeys.has(key)) {
+          continue
+        }
+
+        seenTransactionKeys.add(key)
+        newTransactions.push(tx)
+      }
+
+      allTransactions = allTransactions.concat(newTransactions)
+
+      if (transactions.length < pageSize) {
+        hasMore = false
+      } else {
+        const latestTimestamp = transactions.reduce((max, tx) => {
+          const timestamp = parseInt(tx.timestamp, 10)
+          return timestamp > max ? timestamp : max
+        }, 0)
+
+        const transactionsAtLatestTimestamp = transactions.filter(
+          tx => parseInt(tx.timestamp, 10) === latestTimestamp,
+        )
+
+        if (transactionsAtLatestTimestamp.length === transactions.length) {
+          console.log(
+            `All ${transactions.length} transactions share timestamp ${latestTimestamp}, checking for more...`,
+          )
+        } else if (transactionsAtLatestTimestamp.length > 0) {
+          currentTimestamp = latestTimestamp
+        } else {
+          currentTimestamp = latestTimestamp + 1
+          console.log(`Moving to next timestamp: ${currentTimestamp}`)
+        }
+      }
+
+      await new Promise(resolve => setTimeout(resolve, 100))
+    }
+
+    if (allTransactions.length > 0) {
+      const result = await saveUserTransactions(allTransactions, chainId)
+      console.log(`Saved ${result.count} ${chainName} user transactions to Supabase`)
+
+      const latestTimestamp = allTransactions.reduce((max, tx) => {
+        const timestamp = parseInt(tx.timestamp, 10)
+        return timestamp > max ? timestamp : max
+      }, 0)
+      console.log(`Latest ${chainName} transaction timestamp: ${latestTimestamp}`)
+    } else {
+      console.log(`No new ${chainName} transactions found`)
+    }
+  } catch (error) {
+    console.error(`Error getting ${chainName} user transactions:`, error)
+  }
+
+  console.log(`-- Done getting ${chainName} User Transactions --\n`)
+}
+
+const getMainnetUserTransactions = async () => {
+  await getUserTransactionsForChain(parseInt(CHAIN_IDS.ETH, 10), 'Mainnet')
+}
+
+const getPolygonUserTransactions = async () => {
+  await getUserTransactionsForChain(parseInt(CHAIN_IDS.POLYGON, 10), 'Polygon')
+}
+
+const getArbitrumUserTransactions = async () => {
+  await getUserTransactionsForChain(parseInt(CHAIN_IDS.ARBITRUM_ONE, 10), 'Arbitrum')
+}
+
+const getBaseUserTransactions = async () => {
+  await getUserTransactionsForChain(parseInt(CHAIN_IDS.BASE, 10), 'Base')
+}
+
+const getZkSyncUserTransactions = async () => {
+  await getUserTransactionsForChain(parseInt(CHAIN_IDS.ZKSYNC, 10), 'zkSync')
+}
+
+const getHyperEVMUserTransactions = async () => {
+  await getUserTransactionsForChain(parseInt(CHAIN_IDS.HYPEREVM, 10), 'HyperEVM')
+}
+
 const preLoadCoingeckoPrices = async () => {
   console.log('\n-- Getting token prices from CoinGecko --')
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
@@ -1186,6 +1306,13 @@ const runUpdateLoop = async () => {
 
   await getPools()
   await getVaults()
+
+  await getMainnetUserTransactions()
+  await getPolygonUserTransactions()
+  await getArbitrumUserTransactions()
+  await getBaseUserTransactions()
+  await getZkSyncUserTransactions()
+  await getHyperEVMUserTransactions()
 
   if (ACTIVE_ENDPOINTS === ENDPOINT_TYPES.ALL || ACTIVE_ENDPOINTS === ENDPOINT_TYPES.EXTERNAL) {
     await getTotalGmv()

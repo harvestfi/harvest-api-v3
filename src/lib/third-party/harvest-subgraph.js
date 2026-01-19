@@ -184,6 +184,50 @@ const getPlasmaVaultData = async (chain, vault) => {
   return queryResponse
 }
 
+const getUserTransactions = async (chain, timestampFrom, first = 1000, skip = 0) => {
+  const query = `
+    query getUserTransactions($timestampFrom: BigInt!, $first: Int!, $skip: Int!) {
+      userTransactions(
+        first: $first
+        skip: $skip
+        orderBy: timestamp
+        orderDirection: asc
+        where: {
+          timestamp_gte: $timestampFrom
+          userAddress_not: "0x0000000000000000000000000000000000000000"
+        }
+      ) {
+        userAddress
+        price
+        tx
+        value
+        timestamp
+        transactionType
+        sharePrice
+        vault {
+          id
+          name
+          decimal
+        }
+        plasmaVault {
+          id
+          name
+          decimals
+        }
+      }
+    }
+  `
+
+  const variables = {
+    timestampFrom: timestampFrom.toString(),
+    first,
+    skip,
+  }
+
+  const queryResponse = await executeGraphCall(chain, query, variables)
+  return queryResponse?.userTransactions || []
+}
+
 module.exports = {
   getTvlDataLength,
   getFarmTvlLength,
@@ -191,4 +235,5 @@ module.exports = {
   getBalanceData,
   getPlasmaBalanceData,
   getPlasmaVaultData,
+  getUserTransactions,
 }
