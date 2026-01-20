@@ -50,24 +50,55 @@ const saveWalletConnection = async ({ walletAddress, connectedAt, balance, harve
   }
 
   try {
-    // Wallet not logged today - create new entry
+    // Use upsert to handle race conditions - if a duplicate exists, it will be ignored
+    // This prevents duplicate entries when multiple requests arrive simultaneously
     const { data, error } = await supabase
       .from(process.env.SUPABASE_WALLET_CONNECTIONS_TABLE)
-      .insert({
-        wallet_address: walletAddress.toLowerCase(),
-        connected_at: connectedAt.toISOString(),
-        balance: balance || 0,
-        harvest_balance: harvestBalance || 0,
-      })
+      .upsert(
+        {
+          wallet_address: walletAddress.toLowerCase(),
+          connected_at: connectedAt.toISOString(),
+          balance: balance || 0,
+          harvest_balance: harvestBalance || 0,
+        },
+        {
+          onConflict: 'wallet_address,connected_at',
+          ignoreDuplicates: true,
+        },
+      )
       .select()
 
     if (error) {
+      if (
+        error.code === '23505' ||
+        error.message?.includes('unique') ||
+        error.message?.includes('duplicate')
+      ) {
+        console.log(
+          `Duplicate wallet connection detected for ${walletAddress} at ${connectedAt.toISOString()}, skipping insert`,
+        )
+        return { data: null, alreadyLogged: true }
+      }
       console.error('Error saving wallet connection to Supabase:', error)
       throw error
     }
 
+    if (!data || data.length === 0) {
+      return { data: null, alreadyLogged: true }
+    }
+
     return { data, alreadyLogged: false }
   } catch (error) {
+    if (
+      error.code === '23505' ||
+      error.message?.includes('unique') ||
+      error.message?.includes('duplicate')
+    ) {
+      console.log(
+        `Duplicate wallet connection detected for ${walletAddress} at ${connectedAt.toISOString()}, skipping insert`,
+      )
+      return { data: null, alreadyLogged: true }
+    }
     console.error('Error in saveWalletConnection:', error)
     throw error
   }
