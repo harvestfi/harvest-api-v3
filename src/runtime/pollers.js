@@ -1095,30 +1095,69 @@ const getLeaderboardData = async () => {
 }
 
 const getUserTransactionsForChain = async (chainId, chainName) => {
-  console.log(`\n-- Getting ${chainName} User Transactions --`)
+  console.log(`\n-- Getting ${chainName} User Transactions (memory-bounded) --`)
 
   try {
     let lastTimestamp = await getLastUserTransactionTimestamp(chainId)
 
     const chainStartTimestamp = Math.floor(USER_TRANSACTIONS_START_DATE.getTime() / 1000)
-
     if (!lastTimestamp) {
       lastTimestamp = chainStartTimestamp
-      console.log(`First run: querying from ${chainName} launch timestamp: ${lastTimestamp}`)
+      console.log(`[${chainName}] First run: querying from launch timestamp: ${lastTimestamp}`)
     } else {
-      console.log(`Querying ${chainName} transactions since timestamp: ${lastTimestamp}`)
+      console.log(`[${chainName}] Querying transactions since timestamp: ${lastTimestamp}`)
     }
-    let allTransactions = []
+
     const pageSize = 1000
     let currentTimestamp = lastTimestamp
-    const createUniqueKey = tx => {
-      const vaultId = tx.vault?.id || tx.plasmaVault?.id || ''
-      return `${tx.tx}_${tx.userAddress}_${tx.transactionType}_${vaultId}_${tx.value}_${tx.timestamp}`
-    }
-    let seenTransactionKeys = new Set()
-    let hasMore = true
 
+    // Only dedupe across repeated "same timestamp" fetches.
+    // Keep it bounded by tracking only the boundary timestamp.
+    let boundaryTimestamp = null
+    let boundaryKeys = new Set()
+
+    // Tune this for your DB insert performance
+    const SAVE_BATCH_SIZE = 1000
+    let saveBuffer = []
+
+    let totalSaved = 0
+    let maxSeenTimestamp = lastTimestamp
+
+    // Safety brakes (avoid infinite loops / pathological upstream behavior)
+    const MAX_PAGES_PER_RUN = 2000
+    let pagesFetched = 0
+    let sameCursorNoProgressCount = 0
+    const MAX_NO_PROGRESS = 10
+
+    // Use the smallest stable key you can.
+    // If tx.tx is a tx hash and unique per event, that's ideal.
+    // If you have logIndex or similar, prefer `${tx.tx}_${tx.logIndex}`.
+    const makeKey = tx => {
+      const vaultId = tx.vault?.id || tx.plasmaVault?.id || ''
+      // If you can: return `${tx.tx}_${tx.logIndex ?? ''}`
+      return `${tx.tx}_${tx.userAddress}_${tx.transactionType}_${vaultId}_${tx.timestamp}`
+    }
+
+    const flush = async () => {
+      if (saveBuffer.length === 0) return
+      // Save in chunks to avoid huge payloads and extra buffering
+      const chunk = saveBuffer
+      saveBuffer = []
+      const result = await saveUserTransactions(chunk, chainId)
+      totalSaved += result?.count ?? chunk.length
+    }
+
+    let hasMore = true
     while (hasMore) {
+      pagesFetched++
+      if (pagesFetched > MAX_PAGES_PER_RUN) {
+        console.warn(
+          `[${chainName}] Hit MAX_PAGES_PER_RUN=${MAX_PAGES_PER_RUN}. Stopping to avoid runaway.`,
+        )
+        hasMore = false
+        break
+      }
+
       const transactions = await getUserTransactions(chainId, currentTimestamp, pageSize, 0)
 
       if (!transactions || transactions.length === 0) {
@@ -1126,59 +1165,104 @@ const getUserTransactionsForChain = async (chainId, chainName) => {
         break
       }
 
-      const newTransactions = []
+      // Compute latest timestamp in this page
+      let pageMaxTs = 0
+      for (const tx of transactions) {
+        const ts = parseInt(tx.timestamp, 10)
+        if (ts > pageMaxTs) pageMaxTs = ts
+      }
+
+      // Track global max seen
+      if (pageMaxTs > maxSeenTimestamp) maxSeenTimestamp = pageMaxTs
+
+      // Identify how many share the max timestamp
+      let maxTsCount = 0
+      for (const tx of transactions) {
+        if (parseInt(tx.timestamp, 10) === pageMaxTs) maxTsCount++
+      }
+
+      // Decide where we go next
+      // - If *all* tx are at the same timestamp and we have a full page,
+      //   we must keep querying at the same timestamp. That's where we dedupe using boundaryKeys.
+      // - Otherwise, move forward to avoid re-fetching the same page forever.
+      const fullPage = transactions.length === pageSize
+      const allSameTs = maxTsCount === transactions.length
+
+      // Update boundary dedupe state
+      if (boundaryTimestamp !== pageMaxTs) {
+        boundaryTimestamp = pageMaxTs
+        boundaryKeys = new Set()
+      }
+
+      let newCountThisPage = 0
 
       for (const tx of transactions) {
-        const key = createUniqueKey(tx)
+        const ts = parseInt(tx.timestamp, 10)
 
-        if (seenTransactionKeys.has(key)) {
-          continue
+        // Only apply dedupe when we're in the boundary timestamp zone.
+        // For older timestamps, if your upstream can return overlaps, you may need more logic.
+        if (ts === boundaryTimestamp) {
+          const key = makeKey(tx)
+          if (boundaryKeys.has(key)) continue
+          boundaryKeys.add(key)
         }
 
-        seenTransactionKeys.add(key)
-        newTransactions.push(tx)
+        // Buffer for saving (bounded)
+        saveBuffer.push(tx)
+        newCountThisPage++
+
+        if (saveBuffer.length >= SAVE_BATCH_SIZE) {
+          await flush()
+        }
       }
 
-      allTransactions = allTransactions.concat(newTransactions)
-
-      if (transactions.length < pageSize) {
-        hasMore = false
-      } else {
-        const latestTimestamp = transactions.reduce((max, tx) => {
-          const timestamp = parseInt(tx.timestamp, 10)
-          return timestamp > max ? timestamp : max
-        }, 0)
-
-        const transactionsAtLatestTimestamp = transactions.filter(
-          tx => parseInt(tx.timestamp, 10) === latestTimestamp,
-        )
-
-        if (transactionsAtLatestTimestamp.length === transactions.length) {
-          console.log(
-            `All ${transactions.length} transactions share timestamp ${latestTimestamp}, checking for more...`,
+      // If nothing new was found, and we aren't making cursor progress, stop to avoid infinite loops.
+      // (This can happen if upstream always returns the same page and our boundaryKeys filters everything.)
+      if (newCountThisPage === 0) {
+        sameCursorNoProgressCount++
+        if (sameCursorNoProgressCount >= MAX_NO_PROGRESS) {
+          console.warn(
+            `[${chainName}] No progress for ${MAX_NO_PROGRESS} iterations at ts=${currentTimestamp}. Stopping to avoid infinite loop.`,
           )
-        } else if (transactionsAtLatestTimestamp.length > 0) {
-          currentTimestamp = latestTimestamp
-        } else {
-          currentTimestamp = latestTimestamp + 1
-          console.log(`Moving to next timestamp: ${currentTimestamp}`)
+          hasMore = false
+          break
         }
+      } else {
+        sameCursorNoProgressCount = 0
       }
 
+      if (!fullPage) {
+        // We fetched the last page for this range
+        hasMore = false
+        break
+      }
+
+      // Move cursor
+      if (allSameTs) {
+        // Stay on the same timestamp; rely on boundaryKeys to avoid duplicates.
+        // NOTE: If upstream doesn't provide stable ordering/cursor, this case is inherently inefficient.
+        console.log(
+          `[${chainName}] Page full and all ${transactions.length} share timestamp ${pageMaxTs}; querying same timestamp again...`,
+        )
+        // currentTimestamp unchanged
+      } else {
+        // If there are older timestamps in the page, jumping to pageMaxTs can still overlap.
+        // But boundaryKeys handles duplicates at pageMaxTs (the overlap hotspot).
+        currentTimestamp = pageMaxTs
+      }
+
+      // Small backoff
       await new Promise(resolve => setTimeout(resolve, 100))
     }
 
-    if (allTransactions.length > 0) {
-      const result = await saveUserTransactions(allTransactions, chainId)
-      console.log(`Saved ${result.count} ${chainName} user transactions to Supabase`)
+    // Final flush
+    await flush()
 
-      const latestTimestamp = allTransactions.reduce((max, tx) => {
-        const timestamp = parseInt(tx.timestamp, 10)
-        return timestamp > max ? timestamp : max
-      }, 0)
-      console.log(`Latest ${chainName} transaction timestamp: ${latestTimestamp}`)
+    if (totalSaved > 0) {
+      console.log(`[${chainName}] Saved ~${totalSaved} user transactions to Supabase`)
+      console.log(`[${chainName}] Latest transaction timestamp seen: ${maxSeenTimestamp}`)
     } else {
-      console.log(`No new ${chainName} transactions found`)
+      console.log(`[${chainName}] No new user transactions found`)
     }
   } catch (error) {
     console.error(`Error getting ${chainName} user transactions:`, error)
