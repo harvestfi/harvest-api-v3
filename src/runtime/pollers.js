@@ -1097,6 +1097,9 @@ const getLeaderboardData = async () => {
 const getUserTransactionsForChain = async (chainId, chainName) => {
   console.log(`\n-- Getting ${chainName} User Transactions (memory-bounded) --`)
 
+  let boundaryKeys = null
+  let saveBuffer = null
+
   try {
     let lastTimestamp = await getLastUserTransactionTimestamp(chainId)
 
@@ -1114,11 +1117,11 @@ const getUserTransactionsForChain = async (chainId, chainName) => {
     // Only dedupe across repeated "same timestamp" fetches.
     // Keep it bounded by tracking only the boundary timestamp.
     let boundaryTimestamp = null
-    let boundaryKeys = new Set()
-
-    // Tune this for your DB insert performance
+    boundaryKeys = new Set()
+    const MAX_BOUNDARY_KEYS = 50000
+    const BOUNDARY_KEYS_CLEAR_THRESHOLD = 40000
     const SAVE_BATCH_SIZE = 1000
-    let saveBuffer = []
+    saveBuffer = []
 
     let totalSaved = 0
     let maxSeenTimestamp = lastTimestamp
@@ -1145,6 +1148,8 @@ const getUserTransactionsForChain = async (chainId, chainName) => {
       saveBuffer = []
       const result = await saveUserTransactions(chunk, chainId)
       totalSaved += result?.count ?? chunk.length
+      // Clear chunk reference to help GC
+      chunk.length = 0
     }
 
     let hasMore = true
@@ -1191,6 +1196,15 @@ const getUserTransactionsForChain = async (chainId, chainName) => {
       // Update boundary dedupe state
       if (boundaryTimestamp !== pageMaxTs) {
         boundaryTimestamp = pageMaxTs
+        boundaryKeys.clear()
+        boundaryKeys = new Set()
+      }
+
+      if (boundaryKeys.size > BOUNDARY_KEYS_CLEAR_THRESHOLD) {
+        console.warn(
+          `[${chainName}] boundaryKeys size (${boundaryKeys.size}) approaching limit, clearing to prevent memory leak`,
+        )
+        boundaryKeys.clear()
         boundaryKeys = new Set()
       }
 
@@ -1202,6 +1216,13 @@ const getUserTransactionsForChain = async (chainId, chainName) => {
         // Only apply dedupe when we're in the boundary timestamp zone.
         // For older timestamps, if your upstream can return overlaps, you may need more logic.
         if (ts === boundaryTimestamp) {
+          if (boundaryKeys.size >= MAX_BOUNDARY_KEYS) {
+            console.warn(
+              `[${chainName}] boundaryKeys reached max size (${MAX_BOUNDARY_KEYS}), clearing to prevent memory leak`,
+            )
+            boundaryKeys.clear()
+            boundaryKeys = new Set()
+          }
           const key = makeKey(tx)
           if (boundaryKeys.has(key)) continue
           boundaryKeys.add(key)
@@ -1258,6 +1279,10 @@ const getUserTransactionsForChain = async (chainId, chainName) => {
     // Final flush
     await flush()
 
+    boundaryKeys.clear()
+    boundaryKeys = null
+    saveBuffer = null
+
     if (totalSaved > 0) {
       console.log(`[${chainName}] Saved ~${totalSaved} user transactions to Supabase`)
       console.log(`[${chainName}] Latest transaction timestamp seen: ${maxSeenTimestamp}`)
@@ -1266,6 +1291,11 @@ const getUserTransactionsForChain = async (chainId, chainName) => {
     }
   } catch (error) {
     console.error(`Error getting ${chainName} user transactions:`, error)
+    if (boundaryKeys) {
+      boundaryKeys.clear()
+      boundaryKeys = null
+    }
+    saveBuffer = null
   }
 
   console.log(`-- Done getting ${chainName} User Transactions --\n`)

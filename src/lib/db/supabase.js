@@ -50,55 +50,24 @@ const saveWalletConnection = async ({ walletAddress, connectedAt, balance, harve
   }
 
   try {
-    // Use upsert to handle race conditions - if a duplicate exists, it will be ignored
-    // This prevents duplicate entries when multiple requests arrive simultaneously
+    // Wallet not logged today - create new entry
     const { data, error } = await supabase
       .from(process.env.SUPABASE_WALLET_CONNECTIONS_TABLE)
-      .upsert(
-        {
-          wallet_address: walletAddress.toLowerCase(),
-          connected_at: connectedAt.toISOString(),
-          balance: balance || 0,
-          harvest_balance: harvestBalance || 0,
-        },
-        {
-          onConflict: 'wallet_address,connected_at',
-          ignoreDuplicates: true,
-        },
-      )
+      .insert({
+        wallet_address: walletAddress.toLowerCase(),
+        connected_at: connectedAt.toISOString(),
+        balance: balance || 0,
+        harvest_balance: harvestBalance || 0,
+      })
       .select()
 
     if (error) {
-      if (
-        error.code === '23505' ||
-        error.message?.includes('unique') ||
-        error.message?.includes('duplicate')
-      ) {
-        console.log(
-          `Duplicate wallet connection detected for ${walletAddress} at ${connectedAt.toISOString()}, skipping insert`,
-        )
-        return { data: null, alreadyLogged: true }
-      }
       console.error('Error saving wallet connection to Supabase:', error)
       throw error
     }
 
-    if (!data || data.length === 0) {
-      return { data: null, alreadyLogged: true }
-    }
-
     return { data, alreadyLogged: false }
   } catch (error) {
-    if (
-      error.code === '23505' ||
-      error.message?.includes('unique') ||
-      error.message?.includes('duplicate')
-    ) {
-      console.log(
-        `Duplicate wallet connection detected for ${walletAddress} at ${connectedAt.toISOString()}, skipping insert`,
-      )
-      return { data: null, alreadyLogged: true }
-    }
     console.error('Error in saveWalletConnection:', error)
     throw error
   }
@@ -149,7 +118,7 @@ const saveUserTransactions = async (transactions, chainId = null) => {
   }
 
   try {
-    const transformedTransactions = transactions.map(tx => {
+    let transformedTransactions = transactions.map(tx => {
       let usdValue = '0'
 
       if (tx.vault) {
@@ -211,9 +180,9 @@ const saveUserTransactions = async (transactions, chainId = null) => {
       }
     })
 
-    const uniqKeys = [...new Set(transformedTransactions.map(tx => tx.uniq_key))]
+    let uniqKeys = [...new Set(transformedTransactions.map(tx => tx.uniq_key))]
 
-    const existingUniqKeys = new Set()
+    let existingUniqKeys = new Set()
     const keyChunkSize = 100
 
     for (let i = 0; i < uniqKeys.length; i += keyChunkSize) {
@@ -234,7 +203,7 @@ const saveUserTransactions = async (transactions, chainId = null) => {
       }
     }
 
-    const newTransactions = transformedTransactions.filter(tx => {
+    let newTransactions = transformedTransactions.filter(tx => {
       const normalizedKey = String(tx.uniq_key || '')
         .toLowerCase()
         .trim()
@@ -243,7 +212,13 @@ const saveUserTransactions = async (transactions, chainId = null) => {
 
     if (newTransactions.length === 0) {
       console.log('All transactions already exist in database, skipping insert')
-      return { data: transformedTransactions, count: 0 }
+      // Cleanup before returning
+      transformedTransactions = null
+      newTransactions = null
+      uniqKeys = null
+      existingUniqKeys.clear()
+      existingUniqKeys = null
+      return { count: 0 }
     }
 
     const duplicateCount = transformedTransactions.length - newTransactions.length
@@ -308,7 +283,14 @@ const saveUserTransactions = async (transactions, chainId = null) => {
       )
     }
 
-    return { data: transformedTransactions, count: insertedCount }
+    // Don't return large arrays to avoid memory leaks - only return count
+    transformedTransactions = null
+    newTransactions = null
+    uniqKeys = null
+    existingUniqKeys.clear()
+    existingUniqKeys = null
+
+    return { count: insertedCount }
   } catch (error) {
     console.error('Error in saveUserTransactions:', error)
     throw error

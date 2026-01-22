@@ -398,22 +398,12 @@ const initRouter = app => {
         const balance = await getTotalBalance(normalizedAddress)
         const harvestBalance = await getHarvestBalance(normalizedAddress)
 
-        // Save connection - this will handle race conditions via upsert/unique constraint
-        const result = await saveWalletConnection({
+        await saveWalletConnection({
           walletAddress: normalizedAddress,
           connectedAt,
           balance,
           harvestBalance,
         })
-
-        if (result.alreadyLogged) {
-          return res.json({
-            success: true,
-            message: 'Wallet already logged today',
-            walletAddress: normalizedAddress,
-            alreadyLogged: true,
-          })
-        }
 
         res.json({
           success: true,
