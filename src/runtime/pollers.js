@@ -1421,12 +1421,12 @@ const runUpdateLoop = async () => {
   await getPools()
   await getVaults()
 
-  await getMainnetUserTransactions()
-  await getPolygonUserTransactions()
-  await getArbitrumUserTransactions()
-  await getBaseUserTransactions()
-  await getZkSyncUserTransactions()
-  await getHyperEVMUserTransactions()
+  // await getMainnetUserTransactions()
+  // await getPolygonUserTransactions()
+  // await getArbitrumUserTransactions()
+  // await getBaseUserTransactions()
+  // await getZkSyncUserTransactions()
+  // await getHyperEVMUserTransactions()
 
   if (ACTIVE_ENDPOINTS === ENDPOINT_TYPES.ALL || ACTIVE_ENDPOINTS === ENDPOINT_TYPES.EXTERNAL) {
     await getTotalGmv()
