@@ -1,11 +1,11 @@
-const axios = require('axios')
+const { client } = require('../../../lib/http')
 const { FLUID_ENDPOINT } = require('../../../lib/constants')
 
 const getApy = async (fToken, reduction, chain) => {
   let apy
 
   try {
-    const response = await axios.get(`${FLUID_ENDPOINT}/${chain}/tokens`)
+    const response = await client.get(`${FLUID_ENDPOINT}/${chain}/tokens`)
     const tokenData = response.data.data.find(
       token => token.address.toLowerCase() === fToken.toLowerCase(),
     )

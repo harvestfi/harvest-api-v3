@@ -1,4 +1,4 @@
-const axios = require('axios')
+const { client } = require('../../../lib/http')
 const { get } = require('lodash')
 const { DEXSCREENER_API_URL } = require('../../../lib/constants')
 
@@ -6,7 +6,7 @@ const { DEXSCREENER_API_URL } = require('../../../lib/constants')
 const getTradingApy = async (lpToken, baseToken) => {
   let response, pairs, pair, apy
   try {
-    response = await axios.get(`${DEXSCREENER_API_URL}/${baseToken}`)
+    response = await client.get(`${DEXSCREENER_API_URL}/${baseToken}`)
     pairs = get(response, 'data.pairs', 0)
   } catch (err) {
     console.error('DexScreener API error: ', err)

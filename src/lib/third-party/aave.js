@@ -1,9 +1,9 @@
 const { get } = require('lodash')
-const { cachedAxios } = require('../db/models/cache')
+const { client } = require('../http')
 const logger = require('../logger')
 
 const getAaveV2Market = () =>
-  cachedAxios
+  client
     .get('https://aave-api-v2.aave.com/data/markets-data/')
     .then(response => get(response, 'data'))
     .catch(error => {

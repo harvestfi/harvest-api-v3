@@ -1,10 +1,10 @@
 const BigNumber = require('bignumber.js')
 const { gmxViewer } = require('../web3/contracts')
 const { web3ARBITRUM } = require('../web3')
-const axios = require('axios')
 const { Cache, storeData } = require('../db/models/cache')
 const { DB_CACHE_IDS } = require('../constants')
 const { get } = require('lodash')
+const { client } = require('../http')  
 
 const getGmxData = async () => {
   console.log('\n-- Getting GMX data --')
@@ -21,7 +21,7 @@ const getGmxData = async () => {
   const btcAddress = '0x47904963fc8b2340414262125aF798B9655E58Cd'
   const wbtcAddress = '0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f'
 
-  const response = await axios.get(`https://arbitrum-api.gmxinfra.io/signed_prices/latest`)
+  const response = await client.get(`https://arbitrum-api.gmxinfra.io/signed_prices/latest`)
 
   const data = response.data.signedPrices
   const ethData = data.filter(e => e.tokenAddress == ethAddress)[0]

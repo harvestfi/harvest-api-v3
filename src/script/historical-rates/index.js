@@ -1,6 +1,6 @@
 const { Cache, appendData } = require('../../lib/db/models/cache')
 const { DB_CACHE_IDS } = require('../../lib/constants')
-const axios = require('axios')
+const { client } = require('../../lib/http')
 const { get } = require('lodash')
 require('dotenv').config()
 const initDb = require('../../lib/db')
@@ -43,7 +43,7 @@ const main = async () => {
     let response = {}
 
     try {
-      response = await axios.get(
+      response = await client.get(
         `https://api.freecurrencyapi.com/v1/historical?apikey=${process.env.CURRENCY_API_KEY}&date=${dateString}`,
       )
 

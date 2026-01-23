@@ -1,4 +1,4 @@
-const axios = require('axios')
+const { client } = require('../../../lib/http')
 const { get } = require('lodash')
 const { PENDLE_ENDPOINT } = require('../../../lib/constants')
 const BigNumber = require('bignumber.js')
@@ -6,7 +6,7 @@ const BigNumber = require('bignumber.js')
 const getTradingApy = async (marketAddress, chain) => {
   let response, apyData
   try {
-    response = await axios.get(`${PENDLE_ENDPOINT}${chain}/markets/${marketAddress}/data`)
+    response = await client.get(`${PENDLE_ENDPOINT}${chain}/markets/${marketAddress}/data`)
     apyData = get(response, `data`, 0)
   } catch (e) {
     console.error('Pendle API error: ', e)

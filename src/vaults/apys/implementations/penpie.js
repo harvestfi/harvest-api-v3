@@ -3,7 +3,7 @@ const { pendleMarket } = require('../../../lib/web3/contracts')
 const { PENDLE_ENDPOINT } = require('../../../lib/constants')
 const BigNumber = require('bignumber.js')
 const { get } = require('lodash')
-const { cachedAxios } = require('../../../lib/db/models/cache')
+const { client } = require('../../../lib/http')
 
 const getApy = async (underlying, chainId, reduction = 1) => {
   const web3 = getWeb3(chainId)
@@ -29,7 +29,7 @@ const getApy = async (underlying, chainId, reduction = 1) => {
 
   let response, apyData
   try {
-    response = await cachedAxios.get(`${PENDLE_ENDPOINT}${chainId}/markets/${underlying}/data`)
+    response = await client.get(`${PENDLE_ENDPOINT}${chainId}/markets/${underlying}/data`)
     apyData = get(response, `data`, 0)
   } catch (err) {
     console.error('Pendle API error: ', err)

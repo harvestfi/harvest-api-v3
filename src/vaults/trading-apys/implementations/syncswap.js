@@ -1,6 +1,6 @@
 const BigNumber = require('bignumber.js')
 const { get } = require('lodash')
-const { cachedAxios } = require('../../../lib/db/models/cache')
+const { client } = require('../../../lib/http')
 const { SYNCSWAP_API_URL, SYNCSWAP_FEE_API_URL } = require('../../../lib/constants')
 const { getTokenPrice } = require('../../../prices')
 const { getTradingVolumeDaily } = require('../../../lib/third-party/syncswap')
@@ -9,7 +9,7 @@ const getTradingApy = async (pair, chain) => {
   let apy
 
   try {
-    const poolResponse = await cachedAxios.get(SYNCSWAP_API_URL)
+    const poolResponse = await client.get(SYNCSWAP_API_URL)
     const poolData = get(poolResponse, `data.pools`, []).find(pool => pool.p === pair)
     const token0Price = new BigNumber(await getTokenPrice(poolData.t0[0], chain))
     const token0Decimal = poolData.t0[3]
@@ -27,7 +27,7 @@ const getTradingApy = async (pair, chain) => {
 
     if (poolData.t == 3) {
       //aqua pool
-      const feeResponse = await cachedAxios.get(SYNCSWAP_FEE_API_URL)
+      const feeResponse = await client.get(SYNCSWAP_FEE_API_URL)
       const feeData = get(feeResponse, `data.data`, []).find(
         data => data.pair.toLowerCase() === pair.toLowerCase(),
       )

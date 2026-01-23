@@ -1,6 +1,6 @@
 const { get } = require('lodash')
 const { CAMELOT_MERKL_ENDPOINT } = require('../../../lib/constants')
-const { cachedAxios } = require('../../../lib/db/models/cache')
+const { client } = require('../../../lib/http')
 
 const getApy = async (gammaAddress, poolAddress, reduction) => {
   let response,
@@ -8,7 +8,7 @@ const getApy = async (gammaAddress, poolAddress, reduction) => {
   const now = Math.floor(Date.now() / 1000)
 
   try {
-    response = await cachedAxios.get(`${CAMELOT_MERKL_ENDPOINT}`)
+    response = await client.get(`${CAMELOT_MERKL_ENDPOINT}`)
     let data = get(response, `data.data.campaigns`, 0)
     data = data.filter(function (a) {
       return a.pool == poolAddress

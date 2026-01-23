@@ -1,10 +1,10 @@
 const { get } = require('lodash')
-const { cachedAxios } = require('../db/models/cache')
+const { client } = require('../http')
 const { WOMBAT_ARB_SUBGRAPH_URL } = require('../constants')
 const logger = require('../logger')
 
 const executeWombatCall = (url, type, query) => {
-  return cachedAxios
+  return client
     .post(url, JSON.stringify({ query }))
     .then(response => {
       let data

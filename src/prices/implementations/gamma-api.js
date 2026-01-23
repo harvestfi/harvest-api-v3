@@ -1,4 +1,4 @@
-const axios = require('axios')
+const { client } = require('../http')  
 const { get } = require('lodash')
 const { GAMMA_ENDPOINT } = require('../../lib/constants')
 const BigNumber = require('bignumber.js')
@@ -8,7 +8,7 @@ const getPrice = async (poolAddress, chain) => {
   let price = 0,
     response
   try {
-    response = await axios.get(`${GAMMA_ENDPOINT}${chain}/hypervisors/allData`)
+    response = await client.get(`${GAMMA_ENDPOINT}${chain}/hypervisors/allData`)
     const tvlUSD = get(response, `data.${poolAddress.toLowerCase()}.tvlUSD`, 0)
     let totalSupply = get(response, `data.${poolAddress.toLowerCase()}.totalSupply`, 0)
     totalSupply = new BigNumber(totalSupply).dividedBy(new BigNumber(10).pow(18))

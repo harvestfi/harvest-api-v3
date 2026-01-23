@@ -1,7 +1,7 @@
 const axios = require('axios')
 const { get } = require('lodash')
 const rateLimit = require('axios-rate-limit')
-const { setupCache, buildStorage } = require('axios-cache-interceptor')
+const { setupCache } = require('axios-cache-interceptor')
 
 const { cache } = require('../lib/cache')
 const {
@@ -12,22 +12,6 @@ const {
   CHAIN_IDS,
 } = require('../lib/constants')
 
-const cacheMap = new Map()
-
-const storage = buildStorage({
-  find(key) {
-    return cacheMap.get(key)
-  },
-  set(key, value) {
-    cacheMap.set(key, value)
-  },
-  remove(key) {
-    cacheMap.delete(key)
-  },
-  clear() {
-    cacheMap.clear()
-  },
-})
 // Base axios instance
 const base = rateLimit(
   axios.create({
@@ -39,30 +23,9 @@ const base = rateLimit(
 // Attach cache interceptor
 const cgCall = setupCache(base, {
   ttl: CG_CACHE_TTL, // ms
-  storage,
   // cacheTakeover: false, // optional
   // interpretHeader: false, // optional
 })
-
-setInterval(() => {
-  // crude byte estimate (optional; can be expensive if values are huge)
-  let approxBytes = 0
-  for (const v of cacheMap.values()) {
-    try {
-      approxBytes += Buffer.byteLength(JSON.stringify(v))
-    } catch (_) {}
-  }
-
-  console.log('[cg cache]', {
-    entries: cacheMap.size,
-    approxMB: Math.round((approxBytes / 1024 / 1024) * 10) / 10,
-  })
-  const keys = [...cacheMap.keys()]
-  console.log('[cg cache keys]', {
-    total: keys.length,
-    sample: keys.slice(0, 20),
-  })
-}, 10_000)
 
 const getPlatformId = chain => {
   switch (chain) {
@@ -91,6 +54,7 @@ const priceByAddresses = (contractAddresses, ourChainId = CHAIN_IDS.ETH, currenc
       },
     })
     .then(res => {
+      console.log('priceByAddresses: res.data', res.data)
       if (!res?.data || !Object.keys(res.data).length) {
         throw new Error(`No price for ${contractAddresses}`)
       }
@@ -119,6 +83,7 @@ const priceByIds = (ids, currency) =>
       },
     })
     .then(res => {
+      console.log('priceByIds: res.data', res.data)
       if (!res?.data || !Object.keys(res.data).length) {
         throw new Error(`No price for ${ids}`)
       }

@@ -2,13 +2,13 @@ const BigNumber = require('bignumber.js')
 const { get } = require('lodash')
 
 const { APE_API_URL } = require('../../../lib/constants')
-const { cachedAxios } = require('../../../lib/db/models/cache')
+const { client } = require('../../../lib/http')
 
 const getTradingApy = async (poolId, networkId) => {
   let apy
 
   try {
-    const response = await cachedAxios.get(
+    const response = await client.get(
       `${APE_API_URL}/stats/network/lpAprs/${parseInt(networkId)}`,
     )
 

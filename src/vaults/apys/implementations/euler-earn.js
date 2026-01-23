@@ -1,6 +1,6 @@
 const BigNumber = require('bignumber.js')
 const { EULER_ENDPOINT } = require('../../../lib/constants')
-const { cachedAxios } = require('../../../lib/db/models/cache.js')
+const { client } = require('../../../lib/http')
 const { get } = require('lodash')
 const { getApy: getMerklApy } = require('./merkl')
 
@@ -8,7 +8,7 @@ const getApy = async (eulerVault, strategyAddr, factor, chain) => {
   let apy
 
   try {
-    const response = await cachedAxios.get(
+    const response = await client.get(
       `${EULER_ENDPOINT}?chainId=${chain}&vaultAddress=${eulerVault}`,
     )
     const apyResult = get(response, `data.vault.apyCurrent`, '0')

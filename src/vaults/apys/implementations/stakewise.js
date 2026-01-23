@@ -2,7 +2,7 @@ const BigNumber = require('bignumber.js')
 const { web3 } = require('../../../lib/web3')
 const { get } = require('lodash')
 const { orderBy } = require('lodash')
-const { cachedAxios } = require('../../../lib/db/models/cache')
+const { client } = require('../../../lib/http')
 
 const { STAKEWISE_API_URLS } = require('../../../lib/constants')
 
@@ -44,7 +44,7 @@ const getApy = async (vaultAddress, lpAddress, factor) => {
 const getLiquidityPercent = async (posLiquidity, lpAddress) => {
   let totalLiquidity
   try {
-    const response = await cachedAxios.get(STAKEWISE_API_URLS.LIQUIDITY)
+    const response = await client.get(STAKEWISE_API_URLS.LIQUIDITY)
 
     totalLiquidity = get(
       get(response, 'data', []).find(pool => pool.contract_address === lpAddress),
@@ -141,7 +141,7 @@ const getStakingApr = async (posId, token0, token1) => {
 
   let activatedValidators, validatorApr
   try {
-    const response = await cachedAxios.get(STAKEWISE_API_URLS.STAKING)
+    const response = await client.get(STAKEWISE_API_URLS.STAKING)
 
     activatedValidators = get(response, 'data.activated_validators', 0)
     validatorApr = get(response, 'data.validators_apr', 0)

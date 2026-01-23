@@ -1,12 +1,12 @@
 const BigNumber = require('bignumber.js')
 const { get } = require('lodash')
-const { cachedAxios } = require('../../../lib/db/models/cache.js')
+const { client } = require('../../../lib/http')
 
 const getTradingApy = async poolId => {
   let apy
 
   try {
-    const response = await cachedAxios.get('https://www.convexfinance.com/api/curve-apys')
+    const response = await client.get('https://www.convexfinance.com/api/curve-apys')
 
     apy = new BigNumber(get(response, `data.apys[${poolId}].baseApy`, 0))
   } catch (err) {

@@ -1,12 +1,12 @@
 const BigNumber = require('bignumber.js')
 const { get } = require('lodash')
-const { cachedAxios } = require('../../../lib/db/models/cache.js')
+const { client } = require('../../../lib/http')
 
 const getApy = async (gaugeAddress, profitSharingFactor) => {
   let apy
 
   try {
-    const response = await cachedAxios.get(
+    const response = await client.get(
       'https://api.curve.fi/api/getFactoGaugesCrvRewards/arbitrum',
     )
     const apyResults = get(response, `data.data.sideChainGaugesApys`, [])

@@ -1,5 +1,5 @@
 const { cache } = require('../cache')
-const { cachedAxios } = require('../db/models/cache')
+const { client } = require('../http')
 const logger = require('../logger')
 // Idle.finance
 const getIdleLendRate = tokenSymbol => {
@@ -9,7 +9,7 @@ const getIdleLendRate = tokenSymbol => {
     return storedLendApy
   }
 
-  return cachedAxios
+  return client
     .get(`https://api.idle.finance/aprs`)
     .then(async res => {
       const desiredItem = res.data.lendRates

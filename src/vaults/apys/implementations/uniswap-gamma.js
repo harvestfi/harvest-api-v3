@@ -1,4 +1,4 @@
-const axios = require('axios')
+const { client } = require('../../../lib/http')
 const { get } = require('lodash')
 const BigNumber = require('bignumber.js')
 const { getWeb3 } = require('../../../lib/web3')
@@ -11,7 +11,7 @@ const { gammaStakingRewards: RewardsContractInfo } = require('../../../lib/web3/
 const getApy = async (underlying, stakingRewards, chain, factor) => {
   let tvlUSD = 0
   try {
-    let response = await axios.get(`${GAMMA_ENDPOINT}polygon/hypervisors/allData`)
+    let response = await client.get(`${GAMMA_ENDPOINT}polygon/hypervisors/allData`)
     tvlUSD = get(response, `data.${underlying.toLowerCase()}.tvlUSD`, 0)
     tvlUSD = parseFloat(tvlUSD)
   } catch (err) {

@@ -1,4 +1,4 @@
-const axios = require('axios')
+const { client } = require('../../../lib/http')
 const { find, get } = require('lodash')
 const { web3 } = require('../../../lib/web3')
 const { getPosId } = require('../../../prices/implementations/uniswap-v3')
@@ -15,7 +15,7 @@ const getTradingApy = async (vaultAddress, providerKey, reduction) => {
   const posId = await getPosId(vaultAddress, web3)
 
   try {
-    response = await axios.get(
+    response = await client.get(
       `${APY_VISION_API_URL}/uniswapv3/${providerKey}/positions/${posId}?access_token=${APY_VISION_TOKEN}`,
     )
     data = get(response, 'data', 0)

@@ -1,13 +1,13 @@
 const BigNumber = require('bignumber.js')
 const { get } = require('lodash')
-const { cachedAxios } = require('../../../lib/db/models/cache')
+const { client } = require('../../../lib/http')
 const { MSTABLE_API_URL } = require('../../../lib/constants')
 
 const getApy = async (pair, chain, profitSharingFactor) => {
   let apy
 
   try {
-    const response = await cachedAxios.get(MSTABLE_API_URL)
+    const response = await client.get(MSTABLE_API_URL)
 
     const _apy = get(
       get(response, `data.pools`, []).find(pool => pool.chain === chain && pool.pair === pair),

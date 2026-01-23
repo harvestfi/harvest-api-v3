@@ -1,12 +1,12 @@
 const { get } = require('lodash')
-const { cachedAxios } = require('../../../lib/db/models/cache')
+const { client } = require('../../../lib/http')
 const { ZKSWAP_URL } = require('../../../lib/constants')
 
 const getTradingApy = async pair => {
   let apy
 
   try {
-    const response = await cachedAxios.get(ZKSWAP_URL)
+    const response = await client.get(ZKSWAP_URL)
     apy = get(
       get(response, `data`, []).find(pool => pool.address === pair),
       'feeApr',

@@ -1,4 +1,4 @@
-const axios = require('axios')
+const { client } = require('../../../lib/http')
 const { get } = require('lodash')
 const { getBoostAPY } = require('./balancer-boost.js')
 
@@ -8,7 +8,7 @@ const getTradingApy = async (address, providerKey, balancerBoost = false, networ
   let response, apy
 
   try {
-    response = await axios.get(
+    response = await client.get(
       `${APY_VISION_API_URL}/pools/${address}?pool_provider_key=${providerKey}&access_token=${APY_VISION_TOKEN}`,
     )
     apy = get(response, 'data[0].fee_apys_1d', 0) // 1 day moving average APY from trading fees

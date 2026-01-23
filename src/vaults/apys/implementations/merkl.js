@@ -4,7 +4,7 @@ const { MERKL_ENDPOINT, DB_CACHE_IDS } = require('../../../lib/constants')
 const { storeData, Cache } = require('../../../lib/db/models/cache')
 const { mToken } = require('../../../lib/web3/contracts')
 const { web3BASE } = require('../../../lib/web3')
-const axios = require('axios')
+const { client } = require('../../../lib/http')
 const stringHash = require('string-hash')
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
@@ -24,7 +24,7 @@ const getApy = async (userAddress, poolAddress, chainId, reduction, fold = false
       attempts++
 
       try {
-        response = await axios.get(url)
+        response = await client.get(url)
 
         success = true
         try {

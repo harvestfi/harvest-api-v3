@@ -1,4 +1,4 @@
-const axios = require('axios')
+const { client } = require('../../../lib/http')
 const { get } = require('lodash')
 const { GAMMA_ENDPOINT } = require('../../../lib/constants')
 
@@ -6,7 +6,7 @@ const getApy = async (masterchef, poolAddress, reduction) => {
   let response, apy
 
   try {
-    response = await axios.get(`${GAMMA_ENDPOINT}quickswap/polygon/allRewards2`)
+    response = await client.get(`${GAMMA_ENDPOINT}quickswap/polygon/allRewards2`)
     apy = get(
       response,
       `data.${masterchef.toLowerCase()}.pools.${poolAddress.toLowerCase()}.apr`,

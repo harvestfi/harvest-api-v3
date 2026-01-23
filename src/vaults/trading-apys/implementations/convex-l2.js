@@ -1,5 +1,5 @@
 const { get } = require('lodash')
-const { cachedAxios } = require('../../../lib/db/models/cache.js')
+const { client } = require('../../../lib/http')
 const { CONVEX_API_URLS } = require('../../../lib/constants')
 
 const getTradingApy = async (address, poolId, chain) => {
@@ -15,7 +15,7 @@ const getTradingApy = async (address, poolId, chain) => {
 
   try {
     let poolName = prefix + address.toLowerCase() + '-' + poolId
-    const response = await cachedAxios.get(url)
+    const response = await client.get(url)
     const apyResult = get(response, `data.apys.` + poolName, [])
     apy = apyResult.baseApy
   } catch (err) {

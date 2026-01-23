@@ -1,6 +1,6 @@
 const BigNumber = require('bignumber.js')
 const { SILO_ENDPOINT } = require('../../../lib/constants.js')
-const { cachedAxios } = require('../../../lib/db/models/cache.js')
+const { client } = require('../../../lib/http')
 const { get } = require('lodash')
 
 const getApy = async (siloVault, factor, chain) => {
@@ -12,7 +12,7 @@ const getApy = async (siloVault, factor, chain) => {
   }
 
   try {
-    const response = await cachedAxios.get(`${SILO_ENDPOINT}/${chainNames[chain]}-${siloVault}`)
+    const response = await client.get(`${SILO_ENDPOINT}/${chainNames[chain]}-${siloVault}`)
     const apyResult = get(response, `data.supplyApr`, '0')
     apy = new BigNumber(apyResult).div(1e16)
   } catch (err) {

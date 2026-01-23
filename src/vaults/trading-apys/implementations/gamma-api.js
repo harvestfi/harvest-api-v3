@@ -1,4 +1,4 @@
-const axios = require('axios')
+const { client } = require('../../../lib/http')
 const { get } = require('lodash')
 const { GAMMA_ENDPOINT } = require('../../../lib/constants')
 
@@ -6,7 +6,7 @@ const getTradingApy = async poolAddress => {
   let response, apy
 
   try {
-    response = await axios.get(`${GAMMA_ENDPOINT}quickswap/polygon/hypervisors/allData`)
+    response = await client.get(`${GAMMA_ENDPOINT}quickswap/polygon/hypervisors/allData`)
     apy = get(response, `data.${poolAddress.toLowerCase()}.returns.daily.feeApr`, 0)
     apy = parseFloat(apy) * 100
   } catch (err) {

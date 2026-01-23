@@ -1,5 +1,5 @@
 const { get } = require('lodash')
-const { cachedAxios } = require('../db/models/cache')
+const { client } = require('../http')
 const { CHAIN_IDS, ROCKETPOOL_API_URLS } = require('../constants')
 const logger = require('../logger')
 
@@ -9,7 +9,7 @@ const getYearlyAPR = networkId => {
     apiURL = ROCKETPOOL_API_URLS.ETH
   }
 
-  return cachedAxios
+  return client
     .get(apiURL)
     .then(response => {
       const data = get(response, `data.yearlyAPR`)

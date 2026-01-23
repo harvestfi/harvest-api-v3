@@ -142,6 +142,7 @@ const cachedAxios = {
     }
   },
 }
+
 module.exports = {
   Cache: mongoose.model('cache', CacheSchema),
   storeData,

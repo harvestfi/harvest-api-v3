@@ -1,7 +1,7 @@
-const axios = require('axios')
 const { get } = require('lodash')
 const { DEBANK_API_URL } = require('../constants')
 const logger = require('../logger')
+const { client } = require('../http')
 
 const DEBANK_API_KEY = process.env.DEBANK_API_KEY || ''
 
@@ -26,7 +26,7 @@ const getTotalBalance = async walletAddress => {
       id: walletAddress.toLowerCase(),
     }
 
-    const response = await axios.get(url, {
+    const response = await client.get(url, {
       headers,
       params,
       timeout: 10000, // 10 second timeout
@@ -63,7 +63,7 @@ const getHarvestBalance = async walletAddress => {
       id: walletAddress.toLowerCase(),
     }
 
-    const response = await axios.get(url, {
+    const response = await client.get(url, {
       headers,
       params,
       timeout: 10000, // 10 second timeout
