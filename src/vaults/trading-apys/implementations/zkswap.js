@@ -13,7 +13,11 @@ const getTradingApy = async pair => {
       0,
     )
   } catch (err) {
-    console.error('zkswap API error: ', err)
+    console.error('zkswap API error', {
+      message: err.message,
+      status: err.response?.status,
+      url: err.config?.url,
+    })    
     apy = 0
   }
 

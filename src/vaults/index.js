@@ -33,7 +33,7 @@ const { Cache } = require('../lib/db/models/cache')
 const { getUIData } = require('../lib/data')
 const { forEach } = require('promised-loops')
 
-const fetchAndExpandVault = async symbol => {
+const fetchAndExpandVault = async (symbol, caches, statsDoc) => {
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
   const pools = await getUIData(UI_DATA_FILES.POOLS)
 
@@ -79,11 +79,7 @@ const fetchAndExpandVault = async symbol => {
     vaultData.estimateApyFunctions,
   )
 
-  const dbData = await Cache.find({
-    type: { $in: [DB_CACHE_IDS.STATS, DB_CACHE_IDS.POOLS] },
-  })
-
-  const fetchedStats = dbData.find(result => result.type === DB_CACHE_IDS.STATS)
+  const fetchedStats = statsDoc?.data ?? {}
 
   profitShareAPY = get(fetchedStats, 'data.tokenStats.historicalAverageProfitSharingAPY', 0)
 
@@ -94,7 +90,7 @@ const fetchAndExpandVault = async symbol => {
     vaultPool.rewardTokens.includes(addresses.iFARM)
 
   if (!profitShareAPY) {
-    const fetchedPools = dbData.find(result => result.type === DB_CACHE_IDS.POOLS)
+    const fetchedPools = caches?.data ?? {}
 
     profitShareAPY = get(
       find(get(fetchedPools, 'data.eth', []), pool => pool && pool.id === 'profit-sharing-farm'),
@@ -243,7 +239,12 @@ const fetchAndExpandVault = async symbol => {
   }
 }
 
-const getVaultsData = async vaultsToFetch => Promise.all(vaultsToFetch.map(fetchAndExpandVault))
+const getVaultsData = async vaultsToFetch => {
+  const caches = await Cache.collection.find({ type: DB_CACHE_IDS.POOLS }).toArray()
+  const statsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.STATS })
+  
+  return Promise.all(vaultsToFetch.map(vault => fetchAndExpandVault(vault, caches, statsDoc)))
+}
 
 module.exports = {
   getVaultsData,

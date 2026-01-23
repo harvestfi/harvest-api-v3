@@ -333,9 +333,10 @@ const getPools = async () => {
     )
 
     if (size(hyperevmPoolBatches)) {
-      await forEach(hyperevmPoolBatches, async poolBatch => {
+      await forEach(hyperevmPoolBatches, async (poolBatch, idx) => {
         const poolData = await getPoolsData(poolBatch)
         fetchedHYPEREVMPools = fetchedHYPEREVMPools.concat(poolData)
+        logMem(`after HYPEREVM pools batch ${idx+1}/${hyperevmPoolBatches.length}`)
       })
     } else {
       console.log('No pools available')
@@ -351,9 +352,10 @@ const getPools = async () => {
     )
 
     if (size(zksyncPoolBatches)) {
-      await forEach(zksyncPoolBatches, async poolBatch => {
+      await forEach(zksyncPoolBatches, async (poolBatch, idx) => {
         const poolData = await getPoolsData(poolBatch)
         fetchedZKSYNCPools = fetchedZKSYNCPools.concat(poolData)
+        logMem(`after ZKSYNC pools batch ${idx+1}/${zksyncPoolBatches.length}`)
       })
     } else {
       console.log('No pools available')
@@ -369,9 +371,10 @@ const getPools = async () => {
     )
 
     if (size(maticPoolBatches)) {
-      await forEach(maticPoolBatches, async poolBatch => {
+      await forEach(maticPoolBatches, async (poolBatch, idx) => {
         const poolData = await getPoolsData(poolBatch)
         fetchedMATICPools = fetchedMATICPools.concat(poolData)
+        logMem(`after MATIC pools batch ${idx+1}/${maticPoolBatches.length}`)
       })
     } else {
       console.log('No pools available')
@@ -387,9 +390,10 @@ const getPools = async () => {
     )
 
     if (size(arbitrumPoolBatches)) {
-      await forEach(arbitrumPoolBatches, async poolBatch => {
+      await forEach(arbitrumPoolBatches, async (poolBatch, idx) => {
         const poolData = await getPoolsData(poolBatch)
         fetchedARBITRUMPools = fetchedARBITRUMPools.concat(poolData)
+        logMem(`after ARBITRUM pools batch ${idx+1}/${arbitrumPoolBatches.length}`)
       })
     } else {
       console.log('No pools available')
@@ -405,9 +409,10 @@ const getPools = async () => {
     )
 
     if (size(basePoolBatches)) {
-      await forEach(basePoolBatches, async poolBatch => {
+      await forEach(basePoolBatches, async (poolBatch, idx) => {
         const poolData = await getPoolsData(poolBatch)
         fetchedBASEPools = fetchedBASEPools.concat(poolData)
+        logMem(`after BASE pools batch ${idx+1}/${basePoolBatches.length}`)
       })
     } else {
       console.log('No pools available')
@@ -422,9 +427,10 @@ const getPools = async () => {
       GET_POOL_DATA_BATCH_SIZE,
     )
     if (size(ethPoolBatches)) {
-      await forEach(ethPoolBatches, async poolBatch => {
+      await forEach(ethPoolBatches, async (poolBatch, idx) => {
         const poolData = await getPoolsData(poolBatch)
         fetchedETHPools = fetchedETHPools.concat(poolData)
+        logMem(`after ETH pools batch ${idx+1}/${ethPoolBatches.length}`)
       })
     } else {
       console.log('No pools available')
@@ -1196,7 +1202,6 @@ const getUserTransactionsForChain = async (chainId, chainName) => {
       // Update boundary dedupe state
       if (boundaryTimestamp !== pageMaxTs) {
         boundaryTimestamp = pageMaxTs
-        boundaryKeys.clear()
         boundaryKeys = new Set()
       }
 
@@ -1204,7 +1209,6 @@ const getUserTransactionsForChain = async (chainId, chainName) => {
         console.warn(
           `[${chainName}] boundaryKeys size (${boundaryKeys.size}) approaching limit, clearing to prevent memory leak`,
         )
-        boundaryKeys.clear()
         boundaryKeys = new Set()
       }
 
@@ -1220,7 +1224,6 @@ const getUserTransactionsForChain = async (chainId, chainName) => {
             console.warn(
               `[${chainName}] boundaryKeys reached max size (${MAX_BOUNDARY_KEYS}), clearing to prevent memory leak`,
             )
-            boundaryKeys.clear()
             boundaryKeys = new Set()
           }
           const key = makeKey(tx)
@@ -1279,7 +1282,6 @@ const getUserTransactionsForChain = async (chainId, chainName) => {
     // Final flush
     await flush()
 
-    boundaryKeys.clear()
     boundaryKeys = null
     saveBuffer = null
 
@@ -1292,7 +1294,6 @@ const getUserTransactionsForChain = async (chainId, chainName) => {
   } catch (error) {
     console.error(`Error getting ${chainName} user transactions:`, error)
     if (boundaryKeys) {
-      boundaryKeys.clear()
       boundaryKeys = null
     }
     saveBuffer = null
@@ -1386,8 +1387,19 @@ const preLoadCoingeckoPrices = async () => {
   )
 }
 
+const logMem = (label) => {
+  const m = process.memoryUsage();
+  console.log(label, {
+    rss: Math.round(m.rss / 1024 / 1024) + 'MB',
+    heapUsed: Math.round(m.heapUsed / 1024 / 1024) + 'MB',
+    heapTotal: Math.round(m.heapTotal / 1024 / 1024) + 'MB',
+    external: Math.round(m.external / 1024 / 1024) + 'MB',
+  });
+};
+
 const runUpdateLoop = async () => {
   console.log('\n-- Starting data fetching --')
+  logMem('Memory usage at start of update loop:');
 
   if (DEBUG_MODE) {
     console.log('\n##################       DEBUG MODE       ###################')
@@ -1418,8 +1430,26 @@ const runUpdateLoop = async () => {
     resetCallCount()
   }
 
+  logMem('Memory usage after getTokenStats:');
+  let handles = process._getActiveHandles()
+  console.log(
+    handles.map(h => h.constructor.name)
+  )
   await getPools()
+
+  logMem('Memory usage after getPools:');
+  handles = process._getActiveHandles()
+  console.log(
+    handles.map(h => h.constructor.name)
+  )
+
   await getVaults()
+
+  logMem('Memory usage after getVaults:');
+  handles = process._getActiveHandles()
+  console.log(
+    handles.map(h => h.constructor.name)
+  )
 
   await getMainnetUserTransactions()
   await getPolygonUserTransactions()
@@ -1427,6 +1457,8 @@ const runUpdateLoop = async () => {
   await getBaseUserTransactions()
   await getZkSyncUserTransactions()
   await getHyperEVMUserTransactions()
+
+  logMem('Memory usage after getUserTransactions:');
 
   if (ACTIVE_ENDPOINTS === ENDPOINT_TYPES.ALL || ACTIVE_ENDPOINTS === ENDPOINT_TYPES.EXTERNAL) {
     await getTotalGmv()
@@ -1466,6 +1498,8 @@ const runUpdateLoop = async () => {
     // }
   }
 
+  logMem('Memory usage after external endpoint data fetches:');
+
   await checkFoldingLeverage()
 
   await getCurrencyRates()
@@ -1479,12 +1513,16 @@ const runUpdateLoop = async () => {
     updateCallCountCache('historical_rates')
     resetCallCount()
   }
-
+  
+  logMem('Memory usage after getHistoricalRates:');
+  
   await getLeaderboardData()
   if (DEBUG_MODE) {
     updateCallCountCache('leaderboard')
     resetCallCount()
   }
+
+  logMem('Memory usage after getLeaderboardData:');
 
   await getGmxData()
   if (DEBUG_MODE) {
@@ -1492,16 +1530,21 @@ const runUpdateLoop = async () => {
     resetCallCount()
   }
 
+  logMem('Memory usage after getGmxData:');
+
   await getCLData()
   if (DEBUG_MODE) {
     updateCallCountCache('clTest')
     resetCallCount()
   }
 
+  logMem('Memory usage after getCLData:');
+
   if (DEBUG_MODE) {
     printCallCountResults()
   }
   console.log('-- Done with data fetching --')
+  logMem('Memory usage at end of update loop:');
 }
 
 const startPollers = async () => {

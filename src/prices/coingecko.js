@@ -1,6 +1,7 @@
-const axios = require('axios')
+const axios = require('axios').default || require('axios')
 const { get } = require('lodash')
-const { setupCache } = require('axios-cache-adapter')
+const rateLimit = require('axios-rate-limit')
+const { setupCache } = require('axios-cache-interceptor')
 
 const { cache } = require('../lib/cache')
 const {
@@ -10,21 +11,21 @@ const {
   CG_CACHE_TTL,
   CHAIN_IDS,
 } = require('../lib/constants')
-const rateLimit = require('axios-rate-limit')
 
-const cgCache = setupCache({
-  maxAge: CG_CACHE_TTL,
-  exclude: {
-    query: false,
-  },
-})
-
-const cgCall = rateLimit(
+// Base axios instance
+const base = rateLimit(
   axios.create({
-    adapter: cgCache.adapter,
+    timeout: 15_000, // important: avoid hanging sockets
   }),
-  { maxRequests: 95, perMilliseconds: 60000, maxRPS: 1 },
+  { maxRequests: 95, perMilliseconds: 60_000, maxRPS: 1 },
 )
+
+// Attach cache interceptor
+const cgCall = setupCache(base, {
+  ttl: CG_CACHE_TTL, // ms
+  // cacheTakeover: false, // optional
+  // interpretHeader: false, // optional
+})
 
 const getPlatformId = chain => {
   switch (chain) {
@@ -53,9 +54,8 @@ const priceByAddresses = (contractAddresses, ourChainId = CHAIN_IDS.ETH, currenc
       },
     })
     .then(res => {
-      console.log('priceByAddresses: res.data', res.data)
-      if (!Object.keys(res.data).length) {
-        return Promise.reject(new Error('No price for', contractAddresses))
+      if (!res?.data || !Object.keys(res.data).length) {
+        throw new Error(`No price for ${contractAddresses}`)
       }
       return Object.keys(res.data).map(address => {
         const fetchedAddress = address.toLowerCase()
@@ -65,23 +65,25 @@ const priceByAddresses = (contractAddresses, ourChainId = CHAIN_IDS.ETH, currenc
       })
     })
     .catch(err => {
-      console.error(`Error getting price from CoinGecko for token at: ${contractAddresses}`, err)
-      return err
+      console.error(`Error getting price from CoinGecko for token at: ${contractAddresses}`, {
+        message: err.message,
+        status: err.response?.status,
+      })
+      throw err
     })
 
 const priceByIds = (ids, currency) =>
   cgCall
     .get(COINGECKO_PRICE_API_ENDPOINT_ID, {
       params: {
-        ids: ids,
+        ids,
         vs_currencies: currency,
         x_cg_pro_api_key: COINGECKO_API_KEY,
       },
     })
     .then(res => {
-      console.log('priceByIds: res.data', res.data)
-      if (!Object.keys(res.data).length) {
-        return Promise.reject(new Error('No price for', ids))
+      if (!res?.data || !Object.keys(res.data).length) {
+        throw new Error(`No price for ${ids}`)
       }
       return Object.keys(res.data).map(id => {
         const fetchedPrice = get(res, `data[${id}][${currency}]`, 0)
@@ -90,8 +92,11 @@ const priceByIds = (ids, currency) =>
       })
     })
     .catch(err => {
-      console.error(`Error getting price from CoinGecko for token at: ${ids}`, err)
-      return err
+      console.error(`Error getting price from CoinGecko for token at: ${ids}`, {
+        message: err.message,
+        status: err.response?.status,
+      })
+      throw err
     })
 
 const getTokenPriceByAddress = async (
@@ -99,24 +104,16 @@ const getTokenPriceByAddress = async (
   ourChainId = CHAIN_IDS.ETH,
   currency = 'usd',
 ) => {
-  const formattedContractAddress = contractAddress.toLowerCase()
-  const tokenPrice = cache.get(`tokenPrice${formattedContractAddress}${ourChainId}${currency}`)
-
-  if (tokenPrice) {
-    return tokenPrice
-  }
-
-  const result = await priceByAddresses(formattedContractAddress, ourChainId, currency)
+  const formatted = contractAddress.toLowerCase()
+  const cached = cache.get(`tokenPrice${formatted}${ourChainId}${currency}`)
+  if (cached) return cached
+  const result = await priceByAddresses(formatted, ourChainId, currency)
   return result[0]
 }
 
 const getTokenPriceById = async (id, currency = 'usd', ourChainId = CHAIN_IDS.ETH) => {
-  const tokenPrice = cache.get(`tokenPrice${id}${ourChainId}${currency}`)
-
-  if (tokenPrice) {
-    return tokenPrice
-  }
-
+  const cached = cache.get(`tokenPrice${id}${ourChainId}${currency}`)
+  if (cached) return cached
   const result = await priceByIds(id, currency)
   return result[0]
 }

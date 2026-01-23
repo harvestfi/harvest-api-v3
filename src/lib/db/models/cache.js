@@ -88,59 +88,59 @@ const clearAllDataTestOnly = async dbSchema => {
   await dbSchema.collection.deleteMany({})
 }
 
+const CacheModel = mongoose.model('cache', CacheSchema)
+
+const setExternalCache = async (cacheKey, payload) => {
+  await CacheModel.collection.updateOne(
+    { type: DB_CACHE_IDS.EXTERNAL_API },
+    {
+      $set: {
+        [`data.${cacheKey}`]: payload,
+        updatedAt: new Date(),
+      },
+    },
+    { upsert: true },
+  )
+}
+
+const getExternalCache = async (cacheKey) => {
+  const doc = await CacheModel.collection.findOne(
+    { type: DB_CACHE_IDS.EXTERNAL_API },
+    { projection: { [`data.${cacheKey}`]: 1 } },
+  )
+  return doc?.data?.[cacheKey] ?? null
+}
+
 const cachedAxios = {
-  post: async (...params) => {
-    const cacheKey = `${params[0].replace(/\W/g, '')}-${stringHash(JSON.stringify(params))}`
-
-    try {
-      const response = await axios.post(...params)
-
-      await storeData(mongoose.model('cache', CacheSchema), DB_CACHE_IDS.EXTERNAL_API, {
-        [cacheKey]: {
-          data: JSON.stringify(response.data),
-          updatedAt: new Date(),
-        },
-      })
-
-      return response
-    } catch (err) {
-      console.error(`axios post error with params: ${params}, loading cached data`, err)
-
-      const cachedData = await loadData(
-        mongoose.model('cache', CacheSchema),
-        DB_CACHE_IDS.EXTERNAL_API,
-      )
-
-      return Promise.resolve({ data: JSON.parse(cachedData[cacheKey].data) })
-    }
-  },
   get: async (...params) => {
     const cacheKey = `${params[0].replace(/\W/g, '')}-${stringHash(JSON.stringify(params))}`
-
     try {
       const response = await axios.get(...params)
-
-      await storeData(mongoose.model('cache', CacheSchema), DB_CACHE_IDS.EXTERNAL_API, {
-        [cacheKey]: {
-          data: JSON.stringify(response.data),
-          updatedAt: new Date(),
-        },
-      })
-
+      await setExternalCache(cacheKey, { data: response.data, updatedAt: new Date() })
       return response
     } catch (err) {
-      console.error(`axios get error with params: ${params}, loading cached data`, err)
+      // IMPORTANT: do not log the full axios error object (it’s enormous)
+      console.error(`axios get failed: ${params[0]} (${err?.message ?? err})`)
+      const cached = await getExternalCache(cacheKey)
+      if (!cached) return Promise.resolve({ data: null })
+      return Promise.resolve({ data: cached.data })
+    }
+  },
 
-      const cachedData = await loadData(
-        mongoose.model('cache', CacheSchema),
-        DB_CACHE_IDS.EXTERNAL_API,
-      )
-
-      return Promise.resolve({ data: JSON.parse(cachedData[cacheKey].data) })
+  post: async (...params) => {
+    const cacheKey = `${params[0].replace(/\W/g, '')}-${stringHash(JSON.stringify(params))}`
+    try {
+      const response = await axios.post(...params)
+      await setExternalCache(cacheKey, { data: response.data, updatedAt: new Date() })
+      return response
+    } catch (err) {
+      console.error(`axios post failed: ${params[0]} (${err?.message ?? err})`)
+      const cached = await getExternalCache(cacheKey)
+      if (!cached) return Promise.resolve({ data: null })
+      return Promise.resolve({ data: cached.data })
     }
   },
 }
-
 module.exports = {
   Cache: mongoose.model('cache', CacheSchema),
   storeData,

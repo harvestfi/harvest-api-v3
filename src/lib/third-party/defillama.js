@@ -1,8 +1,8 @@
 const { get } = require('lodash')
-const axios = require('axios')
+const { cachedAxios } = require('../db/models/cache')
 
 const getDefiLlamaData = () =>
-  axios
+  cachedAxios
     .get('https://yields.llama.fi/pools')
     .then(response => get(response, 'data'))
     .catch(error => {

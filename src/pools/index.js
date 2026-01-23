@@ -22,7 +22,7 @@ const { getPoolStatsPerType, getIncentivePoolStats, isPotPool } = require('./uti
 const { getTokenPrice } = require('../prices')
 const { getUIData } = require('../lib/data')
 
-const fetchAndExpandPool = async pool => {
+const fetchAndExpandPool = async (pool, caches, statsDoc) => {
   if (DEBUG_MODE) {
     resetCallCount()
   }
@@ -49,17 +49,17 @@ const fetchAndExpandPool = async pool => {
       type: { $in: [DB_CACHE_IDS.STATS, DB_CACHE_IDS.POOLS] },
     })
 
-    const fetchedStats = dbData.find(result => result.type === DB_CACHE_IDS.STATS)
-    const fetchedPools = dbData.find(result => result.type === DB_CACHE_IDS.POOLS)
+    const fetchedStats = statsDoc?.data ?? {}
+    const fetchedPools = caches?.data ?? {}
 
     let poolStats,
       amountToStakeForBoost,
       boostedRewardAPY,
-      profitShareAPY = get(fetchedStats, 'data.tokenStats.historicalAverageProfitSharingAPY', 0)
+      profitShareAPY = get(fetchedStats, 'tokenStats.historicalAverageProfitSharingAPY', 0)
 
     if (!profitShareAPY) {
       profitShareAPY = get(
-        find(get(fetchedPools, 'data.eth', []), pool => pool && pool.id === 'profit-sharing-farm'),
+        find(get(fetchedPools, 'eth', []), pool => pool && pool.id === 'profit-sharing-farm'),
         'rewardAPY',
         get(cache.get(`poolRewardApy${PROFIT_SHARING_POOL_ID}`), 'apy', 0),
       )
@@ -175,7 +175,13 @@ const fetchLpToken = async (lpAddress, chainId) => {
   return result
 }
 
-const getPoolsData = async poolToFetch => Promise.all(poolToFetch.map(fetchAndExpandPool))
+const getPoolsData = async poolToFetch => {
+  const caches = await Cache.collection.find({ type: DB_CACHE_IDS.POOLS }).toArray()
+  const statsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.STATS })  
+  return Promise.all(
+    poolToFetch.map(pool => fetchAndExpandPool(pool, caches, statsDoc))
+  )
+}
 
 module.exports = {
   getPoolsData,
