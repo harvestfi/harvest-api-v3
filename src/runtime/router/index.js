@@ -352,79 +352,79 @@ const initRouter = app => {
   )
 
   // Apply specific CORS settings for this endpoint (explicit origins, credentials: false)
-  const walletConnectCors = cors({
-    origin: process.env.WALLET_CONNECT_CORS_ORIGINS
-      ? process.env.WALLET_CONNECT_CORS_ORIGINS.split(';').filter(Boolean)
-      : ['http://localhost:3001'], // Default for development
-    credentials: false,
-    methods: ['POST'],
-    allowedHeaders: ['Content-Type'],
-  })
+  // const walletConnectCors = cors({
+  //   origin: process.env.WALLET_CONNECT_CORS_ORIGINS
+  //     ? process.env.WALLET_CONNECT_CORS_ORIGINS.split(';').filter(Boolean)
+  //     : ['http://localhost:3001'], // Default for development
+  //   credentials: false,
+  //   methods: ['POST'],
+  //   allowedHeaders: ['Content-Type'],
+  // })
 
-  // Wallet connect endpoint - stores wallet addresses from frontend to Supabase
-  app.options('/wallet-connect', walletConnectCors)
-  app.post(
-    '/wallet-connect',
-    walletConnectCors, // Apply specific CORS settings
-    walletConnectRateLimit, // Apply rate limiting
-    asyncWrap(async (req, res) => {
-      const { walletAddress } = req.body
+  // // Wallet connect endpoint - stores wallet addresses from frontend to Supabase
+  // app.options('/wallet-connect', walletConnectCors)
+  // app.post(
+  //   '/wallet-connect',
+  //   walletConnectCors, // Apply specific CORS settings
+  //   walletConnectRateLimit, // Apply rate limiting
+  //   asyncWrap(async (req, res) => {
+  //     const { walletAddress } = req.body
 
-      if (!walletAddress) {
-        return res.status(400).json({ error: 'walletAddress is required' })
-      }
+  //     if (!walletAddress) {
+  //       return res.status(400).json({ error: 'walletAddress is required' })
+  //     }
 
-      // Validate wallet address format (basic check - should be hex string)
-      const addressRegex = /^0x[a-fA-F0-9]{40}$/
-      if (!addressRegex.test(walletAddress)) {
-        return res.status(400).json({ error: 'Invalid wallet address format' })
-      }
+  //     // Validate wallet address format (basic check - should be hex string)
+  //     const addressRegex = /^0x[a-fA-F0-9]{40}$/
+  //     if (!addressRegex.test(walletAddress)) {
+  //       return res.status(400).json({ error: 'Invalid wallet address format' })
+  //     }
 
-      try {
-        const connectedAt = new Date()
-        const normalizedAddress = walletAddress.toLowerCase()
+  //     try {
+  //       const connectedAt = new Date()
+  //       const normalizedAddress = walletAddress.toLowerCase()
 
-        const alreadyLogged = await isWalletLoggedToday(normalizedAddress, connectedAt)
+  //       const alreadyLogged = await isWalletLoggedToday(normalizedAddress, connectedAt)
 
-        if (alreadyLogged) {
-          return res.json({
-            success: true,
-            message: 'Wallet already logged today',
-            walletAddress: normalizedAddress,
-            alreadyLogged: true,
-          })
-        }
+  //       if (alreadyLogged) {
+  //         return res.json({
+  //           success: true,
+  //           message: 'Wallet already logged today',
+  //           walletAddress: normalizedAddress,
+  //           alreadyLogged: true,
+  //         })
+  //       }
 
-        const balance = await getTotalBalance(normalizedAddress)
-        const harvestBalance = await getHarvestBalance(normalizedAddress)
+  //       const balance = await getTotalBalance(normalizedAddress)
+  //       const harvestBalance = await getHarvestBalance(normalizedAddress)
 
-        await saveWalletConnection({
-          walletAddress: normalizedAddress,
-          connectedAt,
-          balance,
-          harvestBalance,
-        })
+  //       await saveWalletConnection({
+  //         walletAddress: normalizedAddress,
+  //         connectedAt,
+  //         balance,
+  //         harvestBalance,
+  //       })
 
-        res.json({
-          success: true,
-          message: 'Wallet connection recorded',
-          walletAddress: normalizedAddress,
-          connectedAt,
-          balance,
-          harvestBalance,
-        })
-      } catch (error) {
-        console.error('Error saving wallet connection:', error)
-        // If Supabase is not configured, provide helpful error message
-        if (error.message && error.message.includes('Supabase client not initialized')) {
-          return res.status(500).json({
-            error: 'Database not configured. Please configure Supabase credentials.',
-          })
-        }
-        res.status(500).json({ error: 'Internal server error' })
-      }
-    }),
-  )
+  //       res.json({
+  //         success: true,
+  //         message: 'Wallet connection recorded',
+  //         walletAddress: normalizedAddress,
+  //         connectedAt,
+  //         balance,
+  //         harvestBalance,
+  //       })
+  //     } catch (error) {
+  //       console.error('Error saving wallet connection:', error)
+  //       // If Supabase is not configured, provide helpful error message
+  //       if (error.message && error.message.includes('Supabase client not initialized')) {
+  //         return res.status(500).json({
+  //           error: 'Database not configured. Please configure Supabase credentials.',
+  //         })
+  //       }
+  //       res.status(500).json({ error: 'Internal server error' })
+  //     }
+  //   }),
+  // )
 }
 
 module.exports = { initRouter }
