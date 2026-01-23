@@ -1,14 +1,12 @@
 const axios = require('axios')
 const { get } = require('lodash')
 const rateLimit = require('axios-rate-limit')
-const { setupCache } = require('axios-cache-interceptor')
 
 const { cache } = require('../lib/cache')
 const {
   COINGECKO_PRICE_API_ENDPOINT_CONTRACT,
   COINGECKO_PRICE_API_ENDPOINT_ID,
   COINGECKO_API_KEY,
-  CG_CACHE_TTL,
   CHAIN_IDS,
 } = require('../lib/constants')
 
@@ -20,12 +18,7 @@ const base = rateLimit(
   { maxRequests: 95, perMilliseconds: 60_000, maxRPS: 1 },
 )
 
-// Attach cache interceptor
-const cgCall = setupCache(base, {
-  ttl: CG_CACHE_TTL, // ms
-  // cacheTakeover: false, // optional
-  // interpretHeader: false, // optional
-})
+const cgCall = base
 
 const getPlatformId = chain => {
   switch (chain) {

@@ -1,5 +1,5 @@
 const BigNumber = require('bignumber.js')
-const axios = require('axios')
+const { client } = require('../lib/http')  
 
 const { forEach } = require('promised-loops')
 const { pickBy, chunk, isArray, size, get } = require('lodash')
@@ -797,7 +797,7 @@ const getCurrencyRates = async () => {
     hasErrors
   const type = DB_CACHE_IDS.RATES
   try {
-    const res = (await axios.get(CURRENCY_API_URL)).data
+    const res = (await client.get(CURRENCY_API_URL)).data
     ratesData = res.data
     hasErrors = false
   } catch (e) {
@@ -841,7 +841,7 @@ const getHistoricalRates = async () => {
     let response = {}
 
     try {
-      response = await axios.get(`${HISTORICAL_CURRENCY_API_URL}&date=${dateString}`)
+      response = await client.get(`${HISTORICAL_CURRENCY_API_URL}&date=${dateString}`)
 
       let rates = get(response, `data.data.${dateString}`)
       let appendDetail = {}
@@ -1408,7 +1408,6 @@ const logCache = label => {
 const runUpdateLoop = async () => {
   console.log('\n-- Starting data fetching --')
   logMem('Memory usage at start of update loop:')
-  logCache('Cache status at start of update loop:')
 
   if (DEBUG_MODE) {
     console.log('\n##################       DEBUG MODE       ###################')
@@ -1440,54 +1439,14 @@ const runUpdateLoop = async () => {
   }
 
   logMem('Memory usage after getTokenStats:')
-  logCache('Cache status after getTokenStats:')
-  let handles = process._getActiveHandles()
-  console.log(handles.map(h => h.constructor.name))
+
   await getPools()
 
   logMem('Memory usage after getPools:')
-  logCache('Cache status after getPools:')
-  handles = process._getActiveHandles()
-  console.log(handles.map(h => h.constructor.name))
-  for (const h of handles) {
-    if (h?.constructor?.name === 'Socket' || h?.constructor?.name === 'TLSSocket') {
-      const s = h
-      console.log({
-        type: h.constructor.name,
-        local: s.localAddress ? `${s.localAddress}:${s.localPort}` : undefined,
-        remote: s.remoteAddress ? `${s.remoteAddress}:${s.remotePort}` : undefined,
-        servername: s.servername, // TLS only
-        alpn: s.alpnProtocol, // TLS only
-        bytesRead: s.bytesRead,
-        bytesWritten: s.bytesWritten,
-        destroyed: s.destroyed,
-        connecting: s.connecting,
-      })
-    }
-  }
 
   await getVaults()
 
   logMem('Memory usage after getVaults:')
-  logCache('Cache status after getVaults:')
-  handles = process._getActiveHandles()
-  console.log(handles.map(h => h.constructor.name))
-  for (const h of handles) {
-    if (h?.constructor?.name === 'Socket' || h?.constructor?.name === 'TLSSocket') {
-      const s = h
-      console.log({
-        type: h.constructor.name,
-        local: s.localAddress ? `${s.localAddress}:${s.localPort}` : undefined,
-        remote: s.remoteAddress ? `${s.remoteAddress}:${s.remotePort}` : undefined,
-        servername: s.servername, // TLS only
-        alpn: s.alpnProtocol, // TLS only
-        bytesRead: s.bytesRead,
-        bytesWritten: s.bytesWritten,
-        destroyed: s.destroyed,
-        connecting: s.connecting,
-      })
-    }
-  }
 
   await getMainnetUserTransactions()
   await getPolygonUserTransactions()
@@ -1497,7 +1456,7 @@ const runUpdateLoop = async () => {
   await getHyperEVMUserTransactions()
 
   logMem('Memory usage after getUserTransactions:')
-  logCache('Cache status after getUserTransactions:')
+
   if (ACTIVE_ENDPOINTS === ENDPOINT_TYPES.ALL || ACTIVE_ENDPOINTS === ENDPOINT_TYPES.EXTERNAL) {
     await getTotalGmv()
     if (DEBUG_MODE) {
@@ -1537,7 +1496,6 @@ const runUpdateLoop = async () => {
   }
 
   logMem('Memory usage after external endpoint data fetches:')
-  logCache('Cache status after external endpoint data fetches:')
   await checkFoldingLeverage()
 
   await getCurrencyRates()
@@ -1553,7 +1511,6 @@ const runUpdateLoop = async () => {
   }
 
   logMem('Memory usage after getHistoricalRates:')
-  logCache('Cache status after getHistoricalRates:')
   await getLeaderboardData()
   if (DEBUG_MODE) {
     updateCallCountCache('leaderboard')
@@ -1561,7 +1518,6 @@ const runUpdateLoop = async () => {
   }
 
   logMem('Memory usage after getLeaderboardData:')
-  logCache('Cache status after getLeaderboardData:')
 
   await getGmxData()
   if (DEBUG_MODE) {
@@ -1570,7 +1526,6 @@ const runUpdateLoop = async () => {
   }
 
   logMem('Memory usage after getGmxData:')
-  logCache('Cache status after getGmxData:')
 
   await getCLData()
   if (DEBUG_MODE) {
@@ -1579,14 +1534,12 @@ const runUpdateLoop = async () => {
   }
 
   logMem('Memory usage after getCLData:')
-  logCache('Cache status after getCLData:')
 
   if (DEBUG_MODE) {
     printCallCountResults()
   }
   console.log('-- Done with data fetching --')
   logMem('Memory usage at end of update loop:')
-  logCache('Cache status at end of update loop:')
 }
 
 const startPollers = async () => {
