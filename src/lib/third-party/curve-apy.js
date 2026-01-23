@@ -1,13 +1,14 @@
 const { get } = require('lodash')
 const { cache } = require('../cache')
 const { cachedAxios } = require('../db/models/cache')
+const logger = require('../logger')
 
 const getApyFromCurveApi = poolId =>
   cachedAxios
     .get('https://stats.curve.fi/raw-stats/apys.json')
     .then(res => get(res, `data.apy.day[${poolId}]`, 0))
     .catch(err => {
-      console.error(`getApyFromCurveApi(${poolId}) failed:`, err)
+      logger.error(`getApyFromCurveApi(${poolId}) failed:`, err)
       return 0
     })
 
@@ -22,7 +23,7 @@ const getApyFromCurvePushService = (poolId, params) =>
       return desiredItem ? desiredItem.apy : 0
     })
     .catch(err => {
-      console.error(`getApyFromCurvePushService(${poolId}) failed:`, err)
+      logger.error(`getApyFromCurvePushService(${poolId}) failed:`, err)
       return 0
     })
 

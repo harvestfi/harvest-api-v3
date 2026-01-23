@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const logger = require('../logger')
 
 const initDb = async () => {
   try {
@@ -15,7 +16,7 @@ const initDb = async () => {
     )
     console.log('Connected to Mongo!')
   } catch (err) {
-    console.error(`Error while connecting to Mongo: `, err)
+    logger.error(`Error while connecting to Mongo: `, err)
   }
 }
 

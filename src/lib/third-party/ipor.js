@@ -5,13 +5,17 @@ const {
   plasmaVault: plasmaVaultData,
   plasmaFuse,
 } = require('../web3/contracts')
-const { UI_DATA_FILES } = require('../constants')
+const { UI_DATA_FILES, DB_CACHE_IDS } = require('../constants')
 const { fetchAndExpandVault } = require('../../vaults')
 const { getUIData } = require('../data')
+const { Cache } = require('../db/models/cache')
 
 const getPlasmaVaultData = async (underlying, pVault, chain) => {
   const web3 = await getWeb3(chain)
+  const poolsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.POOLS })
+  const statsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.STATS })
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
+  const pools = await getUIData(UI_DATA_FILES.POOLS)
 
   const { methods, contract } = plasmaVaultData
   const {
@@ -52,7 +56,7 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
         const hVaultId = Object.keys(tokens).find(
           tokenKey => tokens[tokenKey]?.vaultAddress?.toLowerCase() === hVaultAddress.toLowerCase(),
         )
-        const hVaultData = await fetchAndExpandVault(hVaultId)
+        const hVaultData = await fetchAndExpandVault(hVaultId, poolsDoc, statsDoc, tokens, pools)
         const underlyingAssetsInMarket = new BigNumber(
           await methods.getAssetsInMarket(pVaultInstance, marketId),
         ).div(10 ** underlyingDecimal)

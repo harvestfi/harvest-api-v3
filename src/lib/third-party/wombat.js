@@ -1,6 +1,7 @@
 const { get } = require('lodash')
 const { cachedAxios } = require('../db/models/cache')
 const { WOMBAT_ARB_SUBGRAPH_URL } = require('../constants')
+const logger = require('../logger')
 
 const executeWombatCall = (url, type, query) => {
   return cachedAxios
@@ -15,12 +16,12 @@ const executeWombatCall = (url, type, query) => {
       if (data) {
         return data
       } else {
-        console.error(get(response, 'data.errors', response))
+        logger.error(get(response, 'data.errors', response))
         return null
       }
     })
     .catch(error => {
-      console.error(`Wombat subgraph (${query}) failed:`, error)
+      logger.error(`Wombat subgraph (${query}) failed:`, error)
       return null
     })
 }

@@ -46,6 +46,7 @@ const { getLastUserTransactionTimestamp, saveUserTransactions } = require('../li
 const { getGmxData } = require('../lib/third-party/gmx')
 const { getCLData } = require('../lib/third-party/cl-test')
 const { checkFoldingLeverage } = require('../script/fold-check')
+const logger = require('../lib/logger')
 
 const getProfitSharingFactor = chain => {
   switch (chain) {
@@ -119,7 +120,7 @@ const getVaults = async () => {
         fetchedHYPEREVMVaults = fetchedHYPEREVMVaults.concat(vaultsData)
       } catch (err) {
         hasErrors = true
-        console.error(`Failed to get vault data for: ${batch}`, err)
+        logger.error(`Failed to get vault data for: ${batch}`, err)
       }
     }
   })
@@ -134,7 +135,7 @@ const getVaults = async () => {
         fetchedZKSYNCVaults = fetchedZKSYNCVaults.concat(vaultsData)
       } catch (err) {
         hasErrors = true
-        console.error(`Failed to get vault data for: ${batch}`, err)
+        logger.error(`Failed to get vault data for: ${batch}`, err)
       }
     }
   })
@@ -148,7 +149,7 @@ const getVaults = async () => {
       fetchedMATICVaults = fetchedMATICVaults.concat(vaultsData)
     } catch (err) {
       hasErrors = true
-      console.error(`Failed to get vault data for: ${batch}`, err)
+      logger.error(`Failed to get vault data for: ${batch}`, err)
     }
   })
   console.log('\n-- Done getting MATIC vaults data --')
@@ -174,7 +175,7 @@ const getVaults = async () => {
         fetchedARBITRUMVaults = fetchedARBITRUMVaults.concat(vaultsData).concat(iporvaultsData)
       } catch (err) {
         hasErrors = true
-        console.error(`Failed to get vault data for: ${batch}`, err)
+        logger.error(`Failed to get vault data for: ${batch}`, err)
       }
     }
   })
@@ -201,7 +202,7 @@ const getVaults = async () => {
         fetchedETHVaults = fetchedETHVaults.concat(vaultsData).concat(iporvaultsData)
       } catch (err) {
         hasErrors = true
-        console.error(`Failed to get vault data for: ${batch}`, err)
+        logger.error(`Failed to get vault data for: ${batch}`, err)
       }
     }
   })
@@ -228,7 +229,7 @@ const getVaults = async () => {
         fetchedBASEVaults = fetchedBASEVaults.concat(vaultsData).concat(iporvaultsData)
       } catch (err) {
         hasErrors = true
-        console.error(`Failed to get vault data for: ${batch}`, err)
+        logger.error(`Failed to get vault data for: ${batch}`, err)
       }
     }
   })
@@ -281,21 +282,21 @@ const getTokenStats = async () => {
     console.log('Getting percent of FARM staked')
     tokenStats.percentStaked = await getPercentOfFARMStaked()
   } catch (err) {
-    console.error('Failed to get percent of farm staked: ', err)
+    logger.error('Failed to get percent of farm staked: ', err)
   }
 
   try {
     console.log('Getting total gas saved by protocol')
     tokenStats.totalGasSaved = '214465278'
   } catch (err) {
-    console.error('Failed to get total gas saved by protocol: ', err)
+    logger.error('Failed to get total gas saved by protocol: ', err)
   }
 
   try {
     console.log('Getting total FARM market cap')
     tokenStats.totalMarketCap = await getTotalMarketCap()
   } catch (err) {
-    console.error('Failed to get total FARM market cap: ', err)
+    logger.error('Failed to get total FARM market cap: ', err)
   }
 
   const hasErrors =
@@ -431,7 +432,7 @@ const getPools = async () => {
     }
     console.log('-- Done getting ETH pool data --\n')
   } catch (err) {
-    console.error('error getting pools', err)
+    logger.error('error getting pools', err)
     hasErrors = true
   }
 
@@ -850,7 +851,7 @@ const getHistoricalRates = async () => {
       await appendData(Cache, DB_CACHE_IDS.HISTORICAL_RATES, appendDetail, hasErrors)
       lastTimeStamp = lastTimeStamp + defaultTimeSpac
     } catch (err) {
-      console.error('Error getting historical rates: ', err, lastTimeStamp)
+      logger.error('Error getting historical rates: ', err, lastTimeStamp)
     }
     x += 1
   }
@@ -1286,7 +1287,7 @@ const getUserTransactionsForChain = async (chainId, chainName) => {
       console.log(`[${chainName}] No new user transactions found`)
     }
   } catch (error) {
-    console.error(`Error getting ${chainName} user transactions:`, error)
+    logger.error(`Error getting ${chainName} user transactions:`, error)
     if (boundaryKeys) {
       boundaryKeys = null
     }

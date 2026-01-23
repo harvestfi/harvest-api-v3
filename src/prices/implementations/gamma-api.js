@@ -2,6 +2,7 @@ const axios = require('axios')
 const { get } = require('lodash')
 const { GAMMA_ENDPOINT } = require('../../lib/constants')
 const BigNumber = require('bignumber.js')
+const logger = require('../../lib/logger')
 
 const getPrice = async (poolAddress, chain) => {
   let price = 0,
@@ -15,7 +16,7 @@ const getPrice = async (poolAddress, chain) => {
       price = parseFloat(tvlUSD) / totalSupply.toFixed()
     }
   } catch (e) {
-    console.error('Gamma API error: ', e)
+    logger.error('Gamma API error: ', e)
     price = 0
   }
 

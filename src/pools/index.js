@@ -21,6 +21,7 @@ const { Cache } = require('../lib/db/models/cache')
 const { getPoolStatsPerType, getIncentivePoolStats, isPotPool } = require('./utils')
 const { getTokenPrice } = require('../prices')
 const { getUIData } = require('../lib/data')
+const logger = require('../lib/logger')
 
 const fetchAndExpandPool = async (pool, poolsDoc, statsDoc, tokens) => {
   if (DEBUG_MODE) {
@@ -140,7 +141,7 @@ const fetchAndExpandPool = async (pool, poolsDoc, statsDoc, tokens) => {
       tradingApy,
     }
   } catch (err) {
-    console.error(`Failed to get pool data for: ${pool.id}`, err)
+    logger.error(`Failed to get pool data for: ${pool.id}`, err)
   }
 }
 

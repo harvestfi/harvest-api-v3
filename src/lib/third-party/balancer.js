@@ -1,6 +1,7 @@
 const { get } = require('lodash')
 const { CHAIN_IDS, BALANCER_GRAPHQL_URL } = require('../constants')
 const axios = require('axios')
+const logger = require('../logger')
 
 const getChainName = networkId => {
   if (networkId == CHAIN_IDS.ETH) {
@@ -27,12 +28,12 @@ const executeBalancerCall = (type, query, variables) => {
       if (data) {
         return data
       } else {
-        console.error(get(response, 'data.errors', response))
+        logger.error(get(response, 'data.errors', response))
         return null
       }
     })
     .catch(error => {
-      console.error(`Balancer subgraph (${query}) failed:`, error)
+      logger.error(`Balancer subgraph (${query}) failed:`, error)
       return null
     })
 }

@@ -1,12 +1,13 @@
 const axios = require('axios')
 const { get } = require('lodash')
 const { DEBANK_API_URL } = require('../constants')
+const logger = require('../logger')
 
 const DEBANK_API_KEY = process.env.DEBANK_API_KEY || ''
 
 const getTotalBalance = async walletAddress => {
   if (!walletAddress) {
-    console.error('getTotalBalance: walletAddress is required')
+    logger.error('getTotalBalance: walletAddress is required')
     return 0
   }
 
@@ -35,7 +36,7 @@ const getTotalBalance = async walletAddress => {
     const totalUsdValue = get(response, 'data.total_usd_value', 0)
     return parseFloat(totalUsdValue) || 0
   } catch (error) {
-    console.error(`Error fetching DeBank balance for ${walletAddress}:`, error.message)
+    logger.error(`Error fetching DeBank balance for ${walletAddress}:`, error.message)
     // Return 0 on error instead of throwing
     return 0
   }
@@ -43,7 +44,7 @@ const getTotalBalance = async walletAddress => {
 
 const getHarvestBalance = async walletAddress => {
   if (!walletAddress) {
-    console.error('getHarvestBalance: walletAddress is required')
+    logger.error('getHarvestBalance: walletAddress is required')
     return 0
   }
 
@@ -74,7 +75,7 @@ const getHarvestBalance = async walletAddress => {
 
     return totalHarvestUsd
   } catch (error) {
-    console.error(`Error fetching DeBank protocol list for ${walletAddress}:`, error.message)
+    logger.error(`Error fetching DeBank protocol list for ${walletAddress}:`, error.message)
     // Return 0 on error instead of throwing
     return 0
   }

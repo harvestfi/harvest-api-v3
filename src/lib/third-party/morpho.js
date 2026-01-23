@@ -1,6 +1,7 @@
 const { get } = require('lodash')
 const axios = require('axios')
 const { MORPHO_ENDPOINT } = require('../constants')
+const logger = require('../logger')
 
 const executeApiCall = (query, variables) =>
   axios
@@ -19,7 +20,7 @@ const executeApiCall = (query, variables) =>
       }
     })
     .catch(error => {
-      console.error(`executeApiCall(${MORPHO_ENDPOINT}, ${query}, ${variables}) failed:`, error)
+      logger.error(`executeApiCall(${MORPHO_ENDPOINT}, ${query}, ${variables}) failed:`, error)
       return null
     })
 

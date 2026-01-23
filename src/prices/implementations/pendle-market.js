@@ -2,6 +2,7 @@ const BigNumber = require('bignumber.js')
 const axios = require('axios')
 const { get } = require('lodash')
 const { PENDLE_ENDPOINT } = require('../../lib/constants')
+const logger = require('../../lib/logger')
 
 const getPrice = async (marketAddress, chain) => {
   let price = 0,
@@ -14,7 +15,7 @@ const getPrice = async (marketAddress, chain) => {
       price = tvlUSD.div(totalSupply).toFixed()
     }
   } catch (e) {
-    console.error('Pendle API error: ', e)
+    logger.error('Pendle API error: ', e)
     price = 0
   }
 

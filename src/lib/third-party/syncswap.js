@@ -1,6 +1,7 @@
 const { get } = require('lodash')
 const axios = require('axios')
 const { SYNCSWAP_SUBGRAPH_URL } = require('../constants')
+const logger = require('../logger')
 
 const executeSyncswapCall = (url, type, query, variables) => {
   return axios
@@ -19,12 +20,12 @@ const executeSyncswapCall = (url, type, query, variables) => {
       if (data) {
         return data
       } else {
-        console.error(get(response, 'data.errors', response))
+        logger.error(get(response, 'data.errors', response))
         return null
       }
     })
     .catch(error => {
-      console.error(`Syncswap subgraph (${query}) failed:`, error)
+      logger.error(`Syncswap subgraph (${query}) failed:`, error)
       return null
     })
 }

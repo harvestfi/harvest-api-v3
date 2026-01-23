@@ -1,6 +1,7 @@
 const { get } = require('lodash')
 const axios = require('axios')
 const { HARVEST_SUBGRAPH_URLS } = require('../constants')
+const logger = require('../logger')
 
 const executeGraphCall = async (chain, query, variables) => {
   let retry = 0
@@ -76,7 +77,7 @@ const getTvlData = async (chain, first, skip, sequence_gt, vault = null) => {
     const { [resultKey]: callResult } = await executeGraphCall(chain, query, variables)
     result = callResult
   } catch (err) {
-    console.error('Subgraph TVL error:', err)
+    logger.error('Subgraph TVL error:', err)
     result = []
   }
 

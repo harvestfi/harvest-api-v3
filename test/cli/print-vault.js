@@ -1,11 +1,12 @@
 require('dotenv').config()
-const { UI_DATA_FILES } = require('../../src/lib/constants')
+const { UI_DATA_FILES, DB_CACHE_IDS } = require('../../src/lib/constants')
 const initDb = require('../../src/lib/db')
 const { fetchAndExpandVault } = require('../../src/vaults')
 const { fetchAndExpandIPORVault } = require('../../src/vaults/ipor')
 const { fetchAndExpandPool } = require('../../src/pools')
 const { cliPreload } = require('../../src/runtime/pollers')
 const { getUIData } = require('../../src/lib/data')
+const { Cache } = require('../../src/lib/db/models/cache')
 
 const main = async () => {
   const vaultId = process.argv[2]
@@ -16,6 +17,8 @@ const main = async () => {
   await cliPreload()
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
   const pools = await getUIData(UI_DATA_FILES.POOLS)
+  const poolsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.POOLS })
+  const statsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.STATS })
   let vault = null
 
   try {
@@ -25,8 +28,8 @@ const main = async () => {
       console.log(`Vault: ${vaultId} does not exist. Is casing correct?`)
     } else {
       if (Object.prototype.hasOwnProperty.call(tokens[vaultId], 'isIPORVault'))
-        vault = await fetchAndExpandIPORVault(vaultId)
-      else vault = await fetchAndExpandVault(vaultId)
+        vault = await fetchAndExpandIPORVault(vaultId, tokens)
+      else vault = await fetchAndExpandVault(vaultId, poolsDoc, statsDoc, tokens, pools)
       console.log(vault)
     }
   } catch (err) {
@@ -46,7 +49,7 @@ const main = async () => {
           pool.collateralAddress.toLowerCase() === tokens[vaultId].vaultAddress.toLowerCase()),
     )
     if (poolToFetch) {
-      const pool = await fetchAndExpandPool(poolToFetch)
+      const pool = await fetchAndExpandPool(poolToFetch, poolsDoc, statsDoc, tokens)
       console.log('====================')
       console.log(pool)
     }

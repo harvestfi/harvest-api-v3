@@ -2,6 +2,7 @@ const { get } = require('lodash')
 const { startOfMinute, subDays } = require('date-fns')
 const { SUSHI_GRAPHQL_ENDPOINTS, SUSHI_GRAPHQL_ENDPOINTS_TYPES } = require('../constants')
 const { cachedAxios } = require('../db/models/cache')
+const logger = require('../logger')
 
 const executeSushiCall = (type, query, variables) =>
   cachedAxios
@@ -17,7 +18,7 @@ const executeSushiCall = (type, query, variables) =>
       }
     })
     .catch(error => {
-      console.error(
+      logger.error(
         `executeSushiCall(${SUSHI_GRAPHQL_ENDPOINTS[type]}, ${query}, ${variables}) failed:`,
         error,
       )

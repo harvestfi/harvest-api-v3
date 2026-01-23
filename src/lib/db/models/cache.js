@@ -3,6 +3,7 @@ const axios = require('axios')
 const { DB_CACHE_IDS } = require('../../constants')
 const { get } = require('lodash')
 const stringHash = require('string-hash')
+const logger = require('../../logger')
 
 const CacheSchema = new mongoose.Schema({
   type: {
@@ -33,7 +34,7 @@ const CacheSchema = new mongoose.Schema({
 
 const storeData = (dbSchema, type, data, hasErrors, resetData = true, upsert = true) => {
   if (hasErrors) {
-    console.error(
+    logger.error(
       `Something went wrong during the ${
         Object.keys(DB_CACHE_IDS)[type]
       } loops. Skipping the storing in the database.`,
@@ -54,7 +55,7 @@ const storeData = (dbSchema, type, data, hasErrors, resetData = true, upsert = t
 
 const appendData = (dbSchema, type, data, hasErrors, upsert = true) => {
   if (hasErrors) {
-    console.error(
+    logger.error(
       `Something went wrong during the ${
         Object.keys(DB_CACHE_IDS)[type]
       } loops. Skipping the storing in the database.`,
@@ -76,7 +77,7 @@ const loadData = async (dbSchema, type) => {
   const result = get(dbResponse, 'data', null)
 
   if (!result) {
-    console.error(`Could not fetch ${type}. Check for errors.`)
+    logger.error(`Could not fetch ${type}. Check for errors.`)
     return null
   }
 
@@ -120,7 +121,7 @@ const cachedAxios = {
       return response
     } catch (err) {
       // IMPORTANT: do not log the full axios error object (it’s enormous)
-      console.error(`axios get failed: ${params[0]} (${err?.message ?? err})`)
+      logger.error(`axios get failed: ${params[0]} (${err?.message ?? err})`)
       const cached = await getExternalCache(cacheKey)
       if (!cached) return Promise.resolve({ data: null })
       return Promise.resolve({ data: cached.data })
@@ -134,7 +135,7 @@ const cachedAxios = {
       await setExternalCache(cacheKey, { data: response.data, updatedAt: new Date() })
       return response
     } catch (err) {
-      console.error(`axios post failed: ${params[0]} (${err?.message ?? err})`)
+      logger.error(`axios post failed: ${params[0]} (${err?.message ?? err})`)
       const cached = await getExternalCache(cacheKey)
       if (!cached) return Promise.resolve({ data: null })
       return Promise.resolve({ data: cached.data })

@@ -1,5 +1,6 @@
 const { get } = require('lodash')
 const axios = require('axios')
+const logger = require('../logger')
 
 const getCamelotData = isV3 => {
   let uri = isV3
@@ -9,7 +10,7 @@ const getCamelotData = isV3 => {
     .get(uri)
     .then(response => get(response, 'data'))
     .catch(error => {
-      console.error('getCamelotData() failed:', error)
+      logger.error('getCamelotData() failed:', error)
       return null
     })
 

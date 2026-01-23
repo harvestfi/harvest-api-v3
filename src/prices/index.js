@@ -8,6 +8,7 @@ const {
   priceByAddresses,
   priceByIds,
 } = require('./coingecko')
+const logger = require('../lib/logger')
 
 const executePriceFunction = async (type, params) => {
   let implementation
@@ -15,7 +16,7 @@ const executePriceFunction = async (type, params) => {
   try {
     implementation = require(`./implementations/${transformedType}.js`)
   } catch (e) {
-    console.error(
+    logger.error(
       `executePriceFunction(...) implementation for '${transformedType}' [${type}] is not available`,
       e,
     )

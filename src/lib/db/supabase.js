@@ -2,6 +2,7 @@ const { createClient } = require('@supabase/supabase-js')
 const { SUPABASE_URL } = require('../constants')
 const { default: BigNumber } = require('bignumber.js')
 const crypto = require('crypto')
+const logger = require('../logger')
 
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
 
@@ -35,7 +36,7 @@ const isWalletLoggedToday = async (walletAddress, date = new Date()) => {
     .limit(1)
 
   if (error) {
-    console.error('Error checking if wallet logged today:', error)
+    logger.error('Error checking if wallet logged today:', error)
     throw error
   }
 
@@ -62,13 +63,13 @@ const saveWalletConnection = async ({ walletAddress, connectedAt, balance, harve
       .select()
 
     if (error) {
-      console.error('Error saving wallet connection to Supabase:', error)
+      logger.error('Error saving wallet connection to Supabase:', error)
       throw error
     }
 
     return { data, alreadyLogged: false }
   } catch (error) {
-    console.error('Error in saveWalletConnection:', error)
+    logger.error('Error in saveWalletConnection:', error)
     throw error
   }
 }
@@ -92,7 +93,7 @@ const getLastUserTransactionTimestamp = async (chainId = null) => {
     const { data, error } = await query.limit(1).single()
 
     if (error && error.code !== 'PGRST116') {
-      console.error('Error getting last user transaction timestamp:', error)
+      logger.error('Error getting last user transaction timestamp:', error)
       throw error
     }
 
@@ -101,7 +102,7 @@ const getLastUserTransactionTimestamp = async (chainId = null) => {
     }
     return null
   } catch (error) {
-    console.error('Error in getLastUserTransactionTimestamp:', error)
+    logger.error('Error in getLastUserTransactionTimestamp:', error)
     throw error
   }
 }
@@ -262,14 +263,14 @@ const saveUserTransactions = async (transactions, chainId = null) => {
               ) {
                 skippedDuplicates++
               } else {
-                console.error(`Error inserting transaction ${tx.tx_hash}:`, singleError)
+                logger.error(`Error inserting transaction ${tx.tx_hash}:`, singleError)
               }
             } else if (singleData) {
               insertedCount += singleData.length
             }
           }
         } else {
-          console.error(`Error saving user transactions batch ${i / batchSize + 1}:`, error)
+          logger.error(`Error saving user transactions batch ${i / batchSize + 1}:`, error)
           throw error
         }
       } else {
@@ -292,7 +293,7 @@ const saveUserTransactions = async (transactions, chainId = null) => {
 
     return { count: insertedCount }
   } catch (error) {
-    console.error('Error in saveUserTransactions:', error)
+    logger.error('Error in saveUserTransactions:', error)
     throw error
   }
 }

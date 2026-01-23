@@ -1,5 +1,6 @@
 const { cache } = require('../cache')
 const { cachedAxios } = require('../db/models/cache')
+const logger = require('../logger')
 // Idle.finance
 const getIdleLendRate = tokenSymbol => {
   const storedLendApy = cache.get(`idle.lendRate.${tokenSymbol}`)
@@ -21,7 +22,7 @@ const getIdleLendRate = tokenSymbol => {
       return lendApy
     })
     .catch(err => {
-      console.error('getIdleLendRate() failed:', err)
+      logger.error('getIdleLendRate() failed:', err)
       return 0
     })
 }
