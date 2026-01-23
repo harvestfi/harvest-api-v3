@@ -103,7 +103,7 @@ const setExternalCache = async (cacheKey, payload) => {
   )
 }
 
-const getExternalCache = async (cacheKey) => {
+const getExternalCache = async cacheKey => {
   const doc = await CacheModel.collection.findOne(
     { type: DB_CACHE_IDS.EXTERNAL_API },
     { projection: { [`data.${cacheKey}`]: 1 } },

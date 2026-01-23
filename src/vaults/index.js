@@ -33,10 +33,7 @@ const { Cache } = require('../lib/db/models/cache')
 const { getUIData } = require('../lib/data')
 const { forEach } = require('promised-loops')
 
-const fetchAndExpandVault = async (symbol, caches, statsDoc) => {
-  const tokens = await getUIData(UI_DATA_FILES.TOKENS)
-  const pools = await getUIData(UI_DATA_FILES.POOLS)
-
+const fetchAndExpandVault = async (symbol, poolsDoc, statsDoc, tokens, pools) => {
   if (DEBUG_MODE) {
     resetCallCount()
   }
@@ -90,7 +87,7 @@ const fetchAndExpandVault = async (symbol, caches, statsDoc) => {
     vaultPool.rewardTokens.includes(addresses.iFARM)
 
   if (!profitShareAPY) {
-    const fetchedPools = caches?.data ?? {}
+    const fetchedPools = poolsDoc?.data ?? {}
 
     profitShareAPY = get(
       find(get(fetchedPools, 'data.eth', []), pool => pool && pool.id === 'profit-sharing-farm'),
@@ -240,10 +237,14 @@ const fetchAndExpandVault = async (symbol, caches, statsDoc) => {
 }
 
 const getVaultsData = async vaultsToFetch => {
-  const caches = await Cache.collection.find({ type: DB_CACHE_IDS.POOLS }).toArray()
+  const poolsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.POOLS })
   const statsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.STATS })
-  
-  return Promise.all(vaultsToFetch.map(vault => fetchAndExpandVault(vault, caches, statsDoc)))
+  const tokens = await getUIData(UI_DATA_FILES.TOKENS)
+  const pools = await getUIData(UI_DATA_FILES.POOLS)
+
+  return Promise.all(
+    vaultsToFetch.map(vault => fetchAndExpandVault(vault, poolsDoc, statsDoc, tokens, pools)),
+  )
 }
 
 module.exports = {

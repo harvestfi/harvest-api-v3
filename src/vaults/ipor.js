@@ -8,9 +8,7 @@ const { getUIData } = require('../lib/data')
 const { getPlasmaVaultData } = require('../lib/third-party/ipor.js')
 const { executeEstimateApyFunctions } = require('./apys')
 
-const fetchAndExpandIPORVault = async symbol => {
-  const tokens = await getUIData(UI_DATA_FILES.TOKENS)
-
+const fetchAndExpandIPORVault = async (symbol, tokens) => {
   const {
     methods: { decimals, getTotalSupply: getTotalSupplyPlasma, getTotalAssets, getSymbol },
     contract: { abi },
@@ -67,8 +65,10 @@ const fetchAndExpandIPORVault = async symbol => {
   }
 }
 
-const getIPORVaultsData = async vaultsToFetch =>
-  Promise.all(vaultsToFetch.map(fetchAndExpandIPORVault))
+const getIPORVaultsData = async vaultsToFetch => {
+  const tokens = await getUIData(UI_DATA_FILES.TOKENS)
+  return Promise.all(vaultsToFetch.map(vault => fetchAndExpandIPORVault(vault, tokens)))
+}
 
 module.exports = {
   getIPORVaultsData,

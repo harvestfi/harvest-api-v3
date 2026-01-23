@@ -17,7 +17,7 @@ const getTradingApy = async pair => {
       message: err.message,
       status: err.response?.status,
       url: err.config?.url,
-    })    
+    })
     apy = 0
   }
 

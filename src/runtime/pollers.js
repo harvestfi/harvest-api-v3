@@ -333,10 +333,9 @@ const getPools = async () => {
     )
 
     if (size(hyperevmPoolBatches)) {
-      await forEach(hyperevmPoolBatches, async (poolBatch, idx) => {
+      await forEach(hyperevmPoolBatches, async poolBatch => {
         const poolData = await getPoolsData(poolBatch)
         fetchedHYPEREVMPools = fetchedHYPEREVMPools.concat(poolData)
-        logMem(`after HYPEREVM pools batch ${idx+1}/${hyperevmPoolBatches.length}`)
       })
     } else {
       console.log('No pools available')
@@ -352,10 +351,9 @@ const getPools = async () => {
     )
 
     if (size(zksyncPoolBatches)) {
-      await forEach(zksyncPoolBatches, async (poolBatch, idx) => {
+      await forEach(zksyncPoolBatches, async poolBatch => {
         const poolData = await getPoolsData(poolBatch)
         fetchedZKSYNCPools = fetchedZKSYNCPools.concat(poolData)
-        logMem(`after ZKSYNC pools batch ${idx+1}/${zksyncPoolBatches.length}`)
       })
     } else {
       console.log('No pools available')
@@ -371,10 +369,9 @@ const getPools = async () => {
     )
 
     if (size(maticPoolBatches)) {
-      await forEach(maticPoolBatches, async (poolBatch, idx) => {
+      await forEach(maticPoolBatches, async poolBatch => {
         const poolData = await getPoolsData(poolBatch)
         fetchedMATICPools = fetchedMATICPools.concat(poolData)
-        logMem(`after MATIC pools batch ${idx+1}/${maticPoolBatches.length}`)
       })
     } else {
       console.log('No pools available')
@@ -390,10 +387,9 @@ const getPools = async () => {
     )
 
     if (size(arbitrumPoolBatches)) {
-      await forEach(arbitrumPoolBatches, async (poolBatch, idx) => {
+      await forEach(arbitrumPoolBatches, async poolBatch => {
         const poolData = await getPoolsData(poolBatch)
         fetchedARBITRUMPools = fetchedARBITRUMPools.concat(poolData)
-        logMem(`after ARBITRUM pools batch ${idx+1}/${arbitrumPoolBatches.length}`)
       })
     } else {
       console.log('No pools available')
@@ -409,10 +405,9 @@ const getPools = async () => {
     )
 
     if (size(basePoolBatches)) {
-      await forEach(basePoolBatches, async (poolBatch, idx) => {
+      await forEach(basePoolBatches, async poolBatch => {
         const poolData = await getPoolsData(poolBatch)
         fetchedBASEPools = fetchedBASEPools.concat(poolData)
-        logMem(`after BASE pools batch ${idx+1}/${basePoolBatches.length}`)
       })
     } else {
       console.log('No pools available')
@@ -427,10 +422,9 @@ const getPools = async () => {
       GET_POOL_DATA_BATCH_SIZE,
     )
     if (size(ethPoolBatches)) {
-      await forEach(ethPoolBatches, async (poolBatch, idx) => {
+      await forEach(ethPoolBatches, async poolBatch => {
         const poolData = await getPoolsData(poolBatch)
         fetchedETHPools = fetchedETHPools.concat(poolData)
-        logMem(`after ETH pools batch ${idx+1}/${ethPoolBatches.length}`)
       })
     } else {
       console.log('No pools available')
@@ -1360,46 +1354,60 @@ const preLoadCoingeckoPrices = async () => {
   }
 
   console.log('Caching token prices...')
+  const addressesSorted = Object.keys(addresses).sort()
+  const idsSorted = Object.keys(ids).sort()
+
   await prefetchPriceByAddresses(
-    Object.keys(addresses).join(),
+    addressesSorted.join(),
     undefined,
     'usd',
     () => {
-      console.log(`Prices fetched successfully for ${addresses}`)
+      console.log(`Prices fetched successfully for ${addressesSorted}`)
     },
     err => {
       console.log(
-        `Something went wrong during the preloading of prices through addresses! ${addresses}`,
+        `Something went wrong during the preloading of prices through addresses! ${addressesSorted}`,
         err,
       )
     },
   )
 
   await prefetchPriceByIds(
-    Object.keys(ids).join(),
+    idsSorted.join(),
     'usd',
     () => {
-      console.log(`Prices fetched successfully for ids: ${ids}`)
+      console.log(`Prices fetched successfully for ids: ${idsSorted}`)
     },
     err => {
-      console.log(`Something went wrong during the preloading of prices through ids! ${ids}`, err)
+      console.log(
+        `Something went wrong during the preloading of prices through ids! ${idsSorted}`,
+        err,
+      )
     },
   )
 }
 
-const logMem = (label) => {
-  const m = process.memoryUsage();
+const logMem = label => {
+  const m = process.memoryUsage()
   console.log(label, {
     rss: Math.round(m.rss / 1024 / 1024) + 'MB',
     heapUsed: Math.round(m.heapUsed / 1024 / 1024) + 'MB',
     heapTotal: Math.round(m.heapTotal / 1024 / 1024) + 'MB',
     external: Math.round(m.external / 1024 / 1024) + 'MB',
-  });
-};
+  })
+}
+
+const logCache = label => {
+  console.log(label, {
+    keys: cache.keys().length,
+    stats: cache.getStats(),
+  })
+}
 
 const runUpdateLoop = async () => {
   console.log('\n-- Starting data fetching --')
-  logMem('Memory usage at start of update loop:');
+  logMem('Memory usage at start of update loop:')
+  logCache('Cache status at start of update loop:')
 
   if (DEBUG_MODE) {
     console.log('\n##################       DEBUG MODE       ###################')
@@ -1430,26 +1438,55 @@ const runUpdateLoop = async () => {
     resetCallCount()
   }
 
-  logMem('Memory usage after getTokenStats:');
+  logMem('Memory usage after getTokenStats:')
+  logCache('Cache status after getTokenStats:')
   let handles = process._getActiveHandles()
-  console.log(
-    handles.map(h => h.constructor.name)
-  )
+  console.log(handles.map(h => h.constructor.name))
   await getPools()
 
-  logMem('Memory usage after getPools:');
+  logMem('Memory usage after getPools:')
+  logCache('Cache status after getPools:')
   handles = process._getActiveHandles()
-  console.log(
-    handles.map(h => h.constructor.name)
-  )
+  console.log(handles.map(h => h.constructor.name))
+  for (const h of handles) {
+    if (h?.constructor?.name === 'Socket' || h?.constructor?.name === 'TLSSocket') {
+      const s = h
+      console.log({
+        type: h.constructor.name,
+        local: s.localAddress ? `${s.localAddress}:${s.localPort}` : undefined,
+        remote: s.remoteAddress ? `${s.remoteAddress}:${s.remotePort}` : undefined,
+        servername: s.servername, // TLS only
+        alpn: s.alpnProtocol, // TLS only
+        bytesRead: s.bytesRead,
+        bytesWritten: s.bytesWritten,
+        destroyed: s.destroyed,
+        connecting: s.connecting,
+      })
+    }
+  }
 
   await getVaults()
 
-  logMem('Memory usage after getVaults:');
+  logMem('Memory usage after getVaults:')
+  logCache('Cache status after getVaults:')
   handles = process._getActiveHandles()
-  console.log(
-    handles.map(h => h.constructor.name)
-  )
+  console.log(handles.map(h => h.constructor.name))
+  for (const h of handles) {
+    if (h?.constructor?.name === 'Socket' || h?.constructor?.name === 'TLSSocket') {
+      const s = h
+      console.log({
+        type: h.constructor.name,
+        local: s.localAddress ? `${s.localAddress}:${s.localPort}` : undefined,
+        remote: s.remoteAddress ? `${s.remoteAddress}:${s.remotePort}` : undefined,
+        servername: s.servername, // TLS only
+        alpn: s.alpnProtocol, // TLS only
+        bytesRead: s.bytesRead,
+        bytesWritten: s.bytesWritten,
+        destroyed: s.destroyed,
+        connecting: s.connecting,
+      })
+    }
+  }
 
   await getMainnetUserTransactions()
   await getPolygonUserTransactions()
@@ -1458,8 +1495,8 @@ const runUpdateLoop = async () => {
   await getZkSyncUserTransactions()
   await getHyperEVMUserTransactions()
 
-  logMem('Memory usage after getUserTransactions:');
-
+  logMem('Memory usage after getUserTransactions:')
+  logCache('Cache status after getUserTransactions:')
   if (ACTIVE_ENDPOINTS === ENDPOINT_TYPES.ALL || ACTIVE_ENDPOINTS === ENDPOINT_TYPES.EXTERNAL) {
     await getTotalGmv()
     if (DEBUG_MODE) {
@@ -1498,8 +1535,8 @@ const runUpdateLoop = async () => {
     // }
   }
 
-  logMem('Memory usage after external endpoint data fetches:');
-
+  logMem('Memory usage after external endpoint data fetches:')
+  logCache('Cache status after external endpoint data fetches:')
   await checkFoldingLeverage()
 
   await getCurrencyRates()
@@ -1513,16 +1550,17 @@ const runUpdateLoop = async () => {
     updateCallCountCache('historical_rates')
     resetCallCount()
   }
-  
-  logMem('Memory usage after getHistoricalRates:');
-  
+
+  logMem('Memory usage after getHistoricalRates:')
+  logCache('Cache status after getHistoricalRates:')
   await getLeaderboardData()
   if (DEBUG_MODE) {
     updateCallCountCache('leaderboard')
     resetCallCount()
   }
 
-  logMem('Memory usage after getLeaderboardData:');
+  logMem('Memory usage after getLeaderboardData:')
+  logCache('Cache status after getLeaderboardData:')
 
   await getGmxData()
   if (DEBUG_MODE) {
@@ -1530,7 +1568,8 @@ const runUpdateLoop = async () => {
     resetCallCount()
   }
 
-  logMem('Memory usage after getGmxData:');
+  logMem('Memory usage after getGmxData:')
+  logCache('Cache status after getGmxData:')
 
   await getCLData()
   if (DEBUG_MODE) {
@@ -1538,13 +1577,15 @@ const runUpdateLoop = async () => {
     resetCallCount()
   }
 
-  logMem('Memory usage after getCLData:');
+  logMem('Memory usage after getCLData:')
+  logCache('Cache status after getCLData:')
 
   if (DEBUG_MODE) {
     printCallCountResults()
   }
   console.log('-- Done with data fetching --')
-  logMem('Memory usage at end of update loop:');
+  logMem('Memory usage at end of update loop:')
+  logCache('Cache status at end of update loop:')
 }
 
 const startPollers = async () => {

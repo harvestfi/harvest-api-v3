@@ -22,12 +22,11 @@ const { getPoolStatsPerType, getIncentivePoolStats, isPotPool } = require('./uti
 const { getTokenPrice } = require('../prices')
 const { getUIData } = require('../lib/data')
 
-const fetchAndExpandPool = async (pool, caches, statsDoc) => {
+const fetchAndExpandPool = async (pool, poolsDoc, statsDoc, tokens) => {
   if (DEBUG_MODE) {
     resetCallCount()
   }
 
-  const tokens = await getUIData(UI_DATA_FILES.TOKENS)
   const poolVault = find(tokens, token => token.vaultAddress === pool.collateralAddress, {})
   const inactive = poolVault ? (poolVault.inactive ? poolVault.inactive : false) : false
 
@@ -45,12 +44,8 @@ const fetchAndExpandPool = async (pool, caches, statsDoc) => {
     const lpAddress = await poolContract.methods.lpToken(poolInstance)
     const lpTokenData = await fetchLpToken(lpAddress, pool.chain)
 
-    const dbData = await Cache.find({
-      type: { $in: [DB_CACHE_IDS.STATS, DB_CACHE_IDS.POOLS] },
-    })
-
     const fetchedStats = statsDoc?.data ?? {}
-    const fetchedPools = caches?.data ?? {}
+    const fetchedPools = poolsDoc?.data ?? {}
 
     let poolStats,
       amountToStakeForBoost,
@@ -176,11 +171,10 @@ const fetchLpToken = async (lpAddress, chainId) => {
 }
 
 const getPoolsData = async poolToFetch => {
-  const caches = await Cache.collection.find({ type: DB_CACHE_IDS.POOLS }).toArray()
-  const statsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.STATS })  
-  return Promise.all(
-    poolToFetch.map(pool => fetchAndExpandPool(pool, caches, statsDoc))
-  )
+  const poolsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.POOLS })
+  const statsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.STATS })
+  const tokens = await getUIData(UI_DATA_FILES.TOKENS)
+  return Promise.all(poolToFetch.map(pool => fetchAndExpandPool(pool, poolsDoc, statsDoc, tokens)))
 }
 
 module.exports = {
