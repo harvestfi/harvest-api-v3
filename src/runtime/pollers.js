@@ -115,7 +115,7 @@ const getVaults = async () => {
   await forEach(hyperevmVaultsBatches, async batch => {
     if (batch) {
       try {
-        console.log('Getting vault data for: ', batch)
+        // console.log('Getting vault data for: ', batch)
         const vaultsData = await getVaultsData(batch)
         fetchedHYPEREVMVaults = fetchedHYPEREVMVaults.concat(vaultsData)
       } catch (err) {
@@ -130,7 +130,7 @@ const getVaults = async () => {
   await forEach(zksyncVaultsBatches, async batch => {
     if (batch) {
       try {
-        console.log('Getting vault data for: ', batch)
+        // console.log('Getting vault data for: ', batch)
         const vaultsData = await getVaultsData(batch)
         fetchedZKSYNCVaults = fetchedZKSYNCVaults.concat(vaultsData)
       } catch (err) {
@@ -144,7 +144,7 @@ const getVaults = async () => {
   console.log('\n-- Getting MATIC vaults data --')
   await forEach(maticVaultsBatches, async batch => {
     try {
-      console.log('Getting vault data for: ', batch)
+      // console.log('Getting vault data for: ', batch)
       const vaultsData = await getVaultsData(batch)
       fetchedMATICVaults = fetchedMATICVaults.concat(vaultsData)
     } catch (err) {
@@ -158,7 +158,7 @@ const getVaults = async () => {
   await forEach(arbitrumVaultsBatches, async batch => {
     if (batch) {
       try {
-        console.log('Getting vault data for: ', batch)
+        // console.log('Getting vault data for: ', batch)
         let vaultsData,
           iporvaultsData,
           iporBatch = [],
@@ -185,7 +185,7 @@ const getVaults = async () => {
   await forEach(ethVaultsBatches, async batch => {
     if (batch) {
       try {
-        console.log('Getting vault data for: ', batch)
+        // console.log('Getting vault data for: ', batch)
         let vaultsData,
           iporvaultsData,
           iporBatch = [],
@@ -212,7 +212,7 @@ const getVaults = async () => {
   await forEach(baseVaultsBatches, async batch => {
     if (batch) {
       try {
-        console.log('Getting vault data for: ', batch)
+        // console.log('Getting vault data for: ', batch)
         let vaultsData,
           iporvaultsData,
           iporBatch = [],
@@ -1388,14 +1388,27 @@ const preLoadCoingeckoPrices = async () => {
   )
 }
 
+const v8 = require('v8')
 const logMem = label => {
-  const m = process.memoryUsage()
-  console.log(label, {
-    rss: Math.round(m.rss / 1024 / 1024) + 'MB',
-    heapUsed: Math.round(m.heapUsed / 1024 / 1024) + 'MB',
-    heapTotal: Math.round(m.heapTotal / 1024 / 1024) + 'MB',
-    external: Math.round(m.external / 1024 / 1024) + 'MB',
+const m = process.memoryUsage()
+  const heap = v8.getHeapSpaceStatistics()
+
+  console.log(`\n=== ${label} ===`)
+  console.log('Memory:', {
+    rss: `${(m.rss / 1024 / 1024).toFixed(1)} MB`,
+    heapUsed: `${(m.heapUsed / 1024 / 1024).toFixed(1)} MB`,
+    heapTotal: `${(m.heapTotal / 1024 / 1024).toFixed(1)} MB`,
+    external: `${(m.external / 1024 / 1024).toFixed(1)} MB`,
   })
+
+  console.table(
+    heap.map(h => ({
+      space: h.space_name,
+      usedMB: (h.space_used_size / 1024 / 1024).toFixed(1),
+      availableMB: (h.space_available_size / 1024 / 1024).toFixed(1),
+      totalMB: (h.space_size / 1024 / 1024).toFixed(1),
+    })),
+  )
 }
 
 const logCache = label => {
@@ -1540,6 +1553,11 @@ const runUpdateLoop = async () => {
   }
   console.log('-- Done with data fetching --')
   logMem('Memory usage at end of update loop:')
+
+  if (global.gc) {
+    global.gc()
+    logMem('after forced GC')
+  }
 }
 
 const startPollers = async () => {

@@ -1,6 +1,6 @@
 #!/bin/bash
 
 while true ; do
-  node ./src/index.js
+  node --expose-gc ./src/index.js
   echo "======================Restarting..."
 done

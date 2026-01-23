@@ -34,7 +34,7 @@ const fetchAndExpandPool = async (pool, poolsDoc, statsDoc, tokens) => {
   const web3Instance = getWeb3(pool.chain)
 
   try {
-    console.log('Getting pool data for: ', pool.id)
+    // console.log('Getting pool data for: ', pool.id)
 
     const poolContract = isPotPool(pool) ? potPoolContract : regularPoolContract
     const poolInstance = new web3Instance.eth.Contract(
