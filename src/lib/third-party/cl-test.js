@@ -5,6 +5,22 @@ const { DB_CACHE_IDS } = require('../constants')
 const { get } = require('lodash')
 const { getCachedContract } = require('../web3/contractCache')
 
+const toMongoSafe = v => {
+  if (typeof v === 'bigint') return v.toString()
+  if (Array.isArray(v)) return v.map(toMongoSafe)
+  if (v && typeof v === 'object') {
+    // BigNumber.js
+    if (typeof v.toFixed === 'function') return v.toFixed()
+    // web3 utils BN-like sometimes
+    if (typeof v.toString === 'function' && v.constructor?.name?.includes('BN')) return v.toString()
+    // generic object
+    const out = {}
+    for (const [k, val] of Object.entries(v)) out[k] = toMongoSafe(val)
+    return out
+  }
+  return v
+}
+
 const getCLData = async () => {
   console.log('\n-- Getting CL test data --')
 
@@ -66,13 +82,13 @@ const getCLData = async () => {
     const token1 = await wrapperMethods.getAsset(wrapper1)
     const valueIn1 = await wrapperMethods.getTotalAssets(wrapper1)
 
-    data[vault] = {
+    data[vault] = toMongoSafe({
       ticks: [currentTick, upperTick, lowerTick],
       tokens: [token0, token1],
       weights: [tokenWeights[0], tokenWeights[1]],
       values: [valueIn0, valueIn1],
       liquidity: liquidity,
-    }
+    })
   }
 
   const now = Date.now()
