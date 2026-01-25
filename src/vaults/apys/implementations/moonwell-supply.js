@@ -3,6 +3,7 @@ const { web3BASE } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
 const { mToken, moonwellReward, token } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, mTokenAddr, reduction) => {
   const web3 = web3BASE
@@ -23,11 +24,19 @@ const getApy = async (underlying, mTokenAddr, reduction) => {
   const usdc = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913'
   const secondsPerYear = 60 * 60 * 24 * 365.25
 
-  const mTokenInstance = new web3.eth.Contract(mTokenAbi, mTokenAddr)
+  const mTokenInstance = getCachedContract({
+    web3,
+    abi: mTokenAbi,
+    address: mTokenAddr,
+  })
   const supplyRate = new BigNumber(await mTokenMethods.getSupplyRate(mTokenInstance))
   const supplyAPR = supplyRate.div(1e18).times(secondsPerYear).times(100).times(reduction)
 
-  const comptrollerInstance = new web3.eth.Contract(comptrollerAbi, comptrollerAddress.mainnet)
+  const comptrollerInstance = getCachedContract({
+    web3,
+    abi: comptrollerAbi,
+    address: comptrollerAddress.mainnet,
+  })
   const marketConfigWell = await comptrollerMethods.getMarketConfig(
     mTokenAddr,
     well,
@@ -53,13 +62,17 @@ const getApy = async (underlying, mTokenAddr, reduction) => {
   const wellPrice = await getTokenPrice(well, CHAIN_IDS.BASE)
   const usdcPrice = await getTokenPrice(usdc, CHAIN_IDS.BASE)
 
-  const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
+  const underlyingInstance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: underlying,
+  })
   const underlyingDecimals = await getDecimals(underlyingInstance)
 
   const rewardAPRSupply = wellPerYearSupply
     .times(wellPrice)
     .plus(usdcPerYearSupply.times(usdcPrice))
-    .div(totalSupply.div(10 ** underlyingDecimals).times(underlyingPrice))
+    .div(totalSupply.div(new BigNumber(10).pow(Number(underlyingDecimals))).times(underlyingPrice))
     .times(100)
     .times(reduction)
 

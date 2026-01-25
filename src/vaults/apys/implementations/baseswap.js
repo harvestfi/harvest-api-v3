@@ -7,9 +7,9 @@ const {
   getTotalAllocPoint,
   getBswapPerSec,
 } = require('../../../lib/web3/contracts/baseswap-masterchef/methods')
-
 const { token: tokenContractData } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getPoolWeight = async (poolInfo, masterChefInstance) => {
   const totalAllocPoint = await getTotalAllocPoint(masterChefInstance)
@@ -30,10 +30,11 @@ const getApy = async (underlying, poolId, reduction) => {
 
   const rewardPriceInUsd = await getTokenPrice(tokenAddresses.BASE.BSWAP)
 
-  const masterChefInstance = new web3.eth.Contract(
-    masterChefContract.abi,
-    masterChefContract.address.mainnet,
-  )
+  const masterChefInstance = getCachedContract({
+    web3,
+    abi: masterChefContract.abi,
+    address: masterChefContract.address.mainnet,
+  })
 
   rewardPerSec = new BigNumber(await getBswapPerSec(masterChefInstance)).dividedBy(
     new BigNumber(10).exponentiatedBy(18),
@@ -41,7 +42,11 @@ const getApy = async (underlying, poolId, reduction) => {
   secsPerYear = new BigNumber(365.25 * 24 * 3600)
   poolInfo = await getPoolInfo(poolId, masterChefInstance)
 
-  const tokenInstance = new web3.eth.Contract(abi, poolInfo.lpToken)
+  const tokenInstance = getCachedContract({
+    web3,
+    abi,
+    address: poolInfo.lpToken,
+  })
   const totalSupply = new BigNumber(
     await getBalance(masterChefContract.address.mainnet, tokenInstance),
   ).dividedBy(new BigNumber(10).exponentiatedBy(18))

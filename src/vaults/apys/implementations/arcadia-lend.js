@@ -1,6 +1,7 @@
 const BigNumber = require('bignumber.js')
 const { web3BASE } = require('../../../lib/web3')
 const { arcadiaLend } = require('../../../lib/web3/contracts')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (lendingPoolAddress, reduction) => {
   const web3 = web3BASE
@@ -9,7 +10,11 @@ const getApy = async (lendingPoolAddress, reduction) => {
     methods: lendMethods,
   } = arcadiaLend
 
-  const lendInstance = new web3.eth.Contract(lendAbi, lendingPoolAddress)
+  const lendInstance = getCachedContract({
+    web3,
+    abi: lendAbi,
+    address: lendingPoolAddress,
+  })
   const interestRate = new BigNumber(await lendMethods.getInterestRate(lendInstance))
   const totalLiquidity = new BigNumber(await lendMethods.getTotalLiquidity(lendInstance))
   const totalBorrows = new BigNumber(await lendMethods.getTotalAssets(lendInstance))

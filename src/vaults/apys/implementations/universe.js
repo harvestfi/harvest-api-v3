@@ -8,14 +8,16 @@ const {
 } = require('../../../lib/web3/contracts/universe-staking/methods')
 const { getTokenPrice } = require('../../../prices')
 const getLPTokenPrice = require('../../../prices/implementations/lp-token.js').getPrice
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (tokenAddress, weeklyXYZ, reduction, firstToken, secondToken) => {
   const { abi: universeStakingAbi, address: universeStakingAddress } = universeStakingContract
 
-  const universeStakingInstance = new web3.eth.Contract(
-    universeStakingAbi,
-    universeStakingAddress.mainnet,
-  )
+  const universeStakingInstance = getCachedContract({
+    web3,
+    abi: universeStakingAbi,
+    address: universeStakingAddress.mainnet,
+  })
   const currentEpoch = await getCurrentEpoch(universeStakingInstance)
   const currentPoolSize = new BigNumber(
     await getEpochPoolSize(tokenAddress, currentEpoch, universeStakingInstance),

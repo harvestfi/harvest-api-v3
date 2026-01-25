@@ -8,6 +8,7 @@ const {
   getRewardToken,
   getEndBlock,
 } = require('../../../lib/web3/contracts/jarvis-rewards-v2/methods')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const { token: tokenContractData } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
@@ -18,13 +19,21 @@ const getApy = async (poolId, rewardPool, underlying, reduction) => {
     contract: { abi },
   } = tokenContractData
 
-  const jarvisInstance = new web3MATIC.eth.Contract(jarvisRewardContract.abi, rewardPool)
+  const jarvisInstance = getCachedContract({
+    web3: web3MATIC,
+    abi: jarvisRewardContract.abi,
+    address: rewardPool,
+  })
 
   const poolInfo = await getPoolInfo(poolId, jarvisInstance)
 
   const blocksPerYear = new BigNumber(13720402.6087)
 
-  const tokenInstance = new web3MATIC.eth.Contract(abi, poolInfo.lpToken)
+  const tokenInstance = getCachedContract({
+    web3: web3MATIC,
+    abi,
+    address: poolInfo.lpToken,
+  })
   const totalSupply = new BigNumber(await getBalance(rewardPool, tokenInstance)).dividedBy(
     new BigNumber(10).exponentiatedBy(18),
   )

@@ -3,6 +3,7 @@ const { web3ARBITRUM } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
 const { xgrailStrategy, camelotDividends } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (strategyAddress, factor) => {
   const web3 = web3ARBITRUM
@@ -15,9 +16,17 @@ const getApy = async (strategyAddress, factor) => {
     methods: dividendsMethods,
   } = camelotDividends
 
-  const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddress)
+  const strategyInstance = getCachedContract({
+    web3,
+    abi: strategyAbi,
+    address: strategyAddress,
+  })
   const dividendsAddress = await strategyMethods.getDividendsAddress(strategyInstance)
-  const dividendsInstance = new web3.eth.Contract(dividendsAbi, dividendsAddress)
+  const dividendsInstance = getCachedContract({
+    web3,
+    abi: dividendsAbi,
+    address: dividendsAddress,
+  })
 
   const rewardLength = await dividendsMethods.getRewardsLength(dividendsInstance)
   const rewardDuration = new BigNumber(await dividendsMethods.getCycleDuration(dividendsInstance))

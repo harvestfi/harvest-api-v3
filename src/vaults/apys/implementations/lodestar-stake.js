@@ -7,13 +7,18 @@ const {
   getRewardToken,
   getTotalSupply,
 } = require('../../../lib/web3/contracts/lodestar-staking/methods')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const { getTokenPrice } = require('../../../prices')
 const { CHAIN_IDS } = require('../../../lib/constants')
 
 const getApy = async reduction => {
   const web3 = web3ARBITRUM
-  const rewardPoolInstance = new web3.eth.Contract(stakingPool.abi, stakingPool.address.mainnet)
+  const rewardPoolInstance = getCachedContract({
+    web3,
+    abi: stakingPool.abi,
+    address: stakingPool.address.mainnet,
+  })
 
   const rewardPerSecond = new BigNumber(await getRewardPerSecond(rewardPoolInstance)).dividedBy(
     1e18,

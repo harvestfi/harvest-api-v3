@@ -7,6 +7,7 @@ const { UI_DATA_FILES } = require('../lib/constants')
 const { getUIData } = require('../lib/data')
 const { getPlasmaVaultData } = require('../lib/third-party/ipor.js')
 const { executeEstimateApyFunctions } = require('./apys')
+const { getCachedContract } = require('../lib/web3/contractCache')
 
 const fetchAndExpandIPORVault = async (symbol, tokens) => {
   const {
@@ -23,7 +24,11 @@ const fetchAndExpandIPORVault = async (symbol, tokens) => {
   const vaultData = tokens[symbol]
   vaultData.id = symbol
 
-  const vaultInstance = new web3Instance.eth.Contract(abi, vaultData.vaultAddress)
+  const vaultInstance = getCachedContract({
+    web3: web3Instance,
+    abi,
+    address: vaultData.vaultAddress,
+  })
 
   const vaultDecimal = await decimals(vaultInstance)
   const vaultSymbol = await getSymbol(vaultInstance)

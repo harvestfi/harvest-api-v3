@@ -1,5 +1,5 @@
 const { sumBy, orderBy, isArray } = require('lodash')
-const Web3 = require('web3')
+const { Web3 } = require('web3')
 const {
   INFURA_URL,
   MATIC_RPC_URL,
@@ -10,18 +10,26 @@ const {
   CHAIN_IDS,
   WEB3_CALL_COUNT_STATS_KEY,
   WEB3_CALL_COUNT_KEY,
-  INFURA_WS_URL,
 } = require('../constants')
 const { cache } = require('../cache')
 
 const web3 = new Web3(INFURA_URL)
-const web3MATIC = new Web3(MATIC_RPC_URL)
-const web3ARBITRUM = new Web3(ARBITRUM_RPC_URL)
-const web3BASE = new Web3(BASE_RPC_URL)
-const web3ZKSYNC = new Web3(ZKSYNC_RPC_URL)
-const web3HYPEREVM = new Web3(HYPEREVM_RPC_URL)
+web3._chainId = CHAIN_IDS.ETH
 
-const web3Socket = new Web3(new Web3.providers.WebsocketProvider(INFURA_WS_URL))
+const web3MATIC = new Web3(MATIC_RPC_URL)
+web3MATIC._chainId = CHAIN_IDS.POLYGON
+
+const web3ARBITRUM = new Web3(ARBITRUM_RPC_URL)
+web3ARBITRUM._chainId = CHAIN_IDS.ARBITRUM_ONE
+
+const web3BASE = new Web3(BASE_RPC_URL)
+web3BASE._chainId = CHAIN_IDS.BASE
+
+const web3ZKSYNC = new Web3(ZKSYNC_RPC_URL)
+web3ZKSYNC._chainId = CHAIN_IDS.ZKSYNC
+
+const web3HYPEREVM = new Web3(HYPEREVM_RPC_URL)
+web3HYPEREVM._chainId = CHAIN_IDS.HYPEREVM
 
 const getWeb3 = chainId => {
   switch (chainId) {
@@ -40,11 +48,12 @@ const getWeb3 = chainId => {
   }
 }
 
-const countFunctionCall = fn => {
+const countFunctionCall = async p => {
   const count = cache.get(WEB3_CALL_COUNT_KEY) || 0
   cache.set(WEB3_CALL_COUNT_KEY, count + 1)
 
-  return fn
+  const v = await p
+  return typeof v === 'bigint' ? v.toString(10) : v
 }
 
 const resetCallCount = () => {
@@ -88,7 +97,6 @@ const hasAddress = (tokenAddress, selectedAddress) =>
 
 module.exports = {
   web3,
-  web3Socket,
   web3MATIC,
   web3ARBITRUM,
   web3BASE,

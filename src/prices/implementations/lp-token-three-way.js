@@ -4,6 +4,7 @@ const { get } = require('lodash')
 const BigNumber = require('bignumber.js')
 
 const { token: tokenContractData } = require('../../lib/web3/contracts')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 const { UI_DATA_FILES } = require('../../lib/constants')
 const { getUIData } = require('../../lib/data')
 const { getTokenPrice } = require('..')
@@ -29,22 +30,38 @@ const getPrice = async (
   const chainId = get(tokens, `[${firstToken}].chain`)
   const web3Instance = getWeb3(chainId)
 
-  const firstInstance = new web3Instance.eth.Contract(abi, tokens[firstToken].tokenAddress)
+  const firstInstance = getCachedContract({
+    web3: web3Instance,
+    abi,
+    address: tokens[firstToken].tokenAddress,
+  })
   const allFirstAssetInWei = new BigNumber(
     await getBalance(sanctuaryContractAddress, firstInstance),
   )
 
-  const secondInstance = new web3Instance.eth.Contract(abi, tokens[secondToken].tokenAddress)
+  const secondInstance = getCachedContract({
+    web3: web3Instance,
+    abi,
+    address: tokens[secondToken].tokenAddress,
+  })
   const allSecondAssetInWei = new BigNumber(
     await getBalance(sanctuaryContractAddress, secondInstance),
   )
 
-  const thirdInstance = new web3Instance.eth.Contract(abi, tokens[thirdToken].tokenAddress)
+  const thirdInstance = getCachedContract({
+    web3: web3Instance,
+    abi,
+    address: tokens[thirdToken].tokenAddress,
+  })
   const allThirdAssetInWei = new BigNumber(
     await getBalance(sanctuaryContractAddress, thirdInstance),
   )
 
-  const tokenInstance = new web3Instance.eth.Contract(abi, tokenContractAddress)
+  const tokenInstance = getCachedContract({
+    web3: web3Instance,
+    abi,
+    address: tokenContractAddress,
+  })
   const totalSupplyInWei = new BigNumber(await getTotalSupply(tokenInstance))
 
   const pricePerFirstAsset = new BigNumber(await getTokenPrice(firstToken))

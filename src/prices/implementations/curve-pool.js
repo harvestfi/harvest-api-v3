@@ -7,6 +7,8 @@ const { getUIData } = require('../../lib/data')
 const { token: tokenContractData } = require('../../lib/web3/contracts')
 
 const { UI_DATA_FILES } = require('../../lib/constants')
+const { getCachedContract } = require('../../lib/web3/contractCache')
+
 const { getTokenPrice } = require('..')
 
 const getPrice = async (minerAddress, crvTokenAddress, crvTokenDecimals, assets, network = '1') => {
@@ -30,7 +32,11 @@ const getPrice = async (minerAddress, crvTokenAddress, crvTokenDecimals, assets,
         assetPriceUSD = await getTokenPrice('WMATIC')
       }
     } else {
-      const assetInstance = new web3.eth.Contract(tokenContract.abi, tokens[asset].tokenAddress)
+      const assetInstance = getCachedContract({
+        web3,
+        abi: tokenContract.abi,
+        address: tokens[asset].tokenAddress,
+      })
       assetPoolBalance = new BigNumber(
         await tokenMethods.getBalance(minerAddress, assetInstance),
       ).dividedBy(new BigNumber(10).pow(tokens[asset].decimals))
@@ -40,7 +46,11 @@ const getPrice = async (minerAddress, crvTokenAddress, crvTokenDecimals, assets,
     poolValueUSD = poolValueUSD.plus(assetPoolBalance.times(assetPriceUSD))
   })
 
-  const crvTokenInstance = new web3.eth.Contract(tokenContract.abi, crvTokenAddress)
+  const crvTokenInstance = getCachedContract({
+    web3,
+    abi: tokenContract.abi,
+    address: crvTokenAddress,
+  })
 
   const poolTokenSupply = new BigNumber(
     await tokenMethods.getTotalSupply(crvTokenInstance),

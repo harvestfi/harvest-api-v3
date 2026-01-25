@@ -2,6 +2,7 @@ const BigNumber = require('bignumber.js')
 const { wombatAsset, wombatFeePool } = require('../../../lib/web3/contracts')
 const { web3ARBITRUM } = require('../../../lib/web3')
 const { getTradingVolumeDaily } = require('../../../lib/third-party/wombat')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getTradingApy = async lpAddress => {
   let apy = 0
@@ -20,10 +21,18 @@ const getTradingApy = async lpAddress => {
   const blockNum = blockNow - 86400 * 4
   const womTradeData = await getTradingVolumeDaily(lpAddress.toLowerCase(), blockNum)
 
-  const wombatAssetInstance = new web3.eth.Contract(wombatAssetAbi, lpAddress.toLowerCase())
+  const wombatAssetInstance = getCachedContract({
+    web3,
+    abi: wombatAssetAbi,
+    address: lpAddress.toLowerCase(),
+  })
   const feePoolAddr = await wombatAssetgMethods.getPool(wombatAssetInstance)
 
-  const wombatFeePoolInstance = new web3.eth.Contract(wombatFeePoolAbi, feePoolAddr)
+  const wombatFeePoolInstance = getCachedContract({
+    web3,
+    abi: wombatFeePoolAbi,
+    address: feePoolAddr,
+  })
   const haircut = new BigNumber(
     await wombatFeePoolMethods.getHaircutRate(wombatFeePoolInstance),
   ).div(1e18)

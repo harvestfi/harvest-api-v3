@@ -1,4 +1,4 @@
-const { client } = require('../http')  
+const { client } = require('../http')
 const { get } = require('lodash')
 const { GAMMA_ENDPOINT } = require('../../lib/constants')
 const BigNumber = require('bignumber.js')

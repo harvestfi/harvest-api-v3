@@ -5,6 +5,7 @@ const BigNumber = require('bignumber.js')
 const { getWeb3 } = require('../../../lib/web3')
 const { token, pool } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices/index')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 //const getBalancerTokenPrice = require('../../../prices/implementations/balancer.js').getPrice
 
 //** Constants */
@@ -90,7 +91,11 @@ const auraAPRWithPrice = async (poolName, networkId, balPrice, auraPrice) => {
  */
 const rewardRate = async (contract, networkId) => {
   const web3 = getWeb3(networkId)
-  const poolInstance = new web3.eth.Contract(pool.contract.abi, contract)
+  const poolInstance = getCachedContract({
+    web3,
+    abi: pool.contract.abi,
+    address: contract,
+  })
   const periodFinish = await pool.methods.periodFinish(poolInstance)
   const now = Date.now() / 1000
   if (now > Number(periodFinish)) {
@@ -108,7 +113,11 @@ const rewardRate = async (contract, networkId) => {
  */
 const supplyOf = async (contract, networkId = '1') => {
   const web3 = getWeb3(networkId)
-  const tokenInstance = new web3.eth.Contract(token.contract.abi, contract)
+  const tokenInstance = getCachedContract({
+    web3,
+    abi: token.contract.abi,
+    address: contract,
+  })
 
   const fetchedTotalSupply = await token.methods.getTotalSupply(tokenInstance)
   const totalSupply = new BigNumber(fetchedTotalSupply)

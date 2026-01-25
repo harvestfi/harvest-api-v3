@@ -2,14 +2,16 @@ const BigNumber = require('bignumber.js')
 const { getDailyCompound } = require('../../../lib/utils')
 const { web3 } = require('../../../lib/web3')
 const { farmsteadUSDC } = require('../../../lib/web3/contracts')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getTradingApy = async () => {
   const blocksPerDay = 4 * 60 * 24
 
-  const farmsteadUSDCInstance = new web3.eth.Contract(
-    farmsteadUSDC.contract.abi,
-    farmsteadUSDC.contract.address.mainnet,
-  )
+  const farmsteadUSDCInstance = getCachedContract({
+    web3,
+    abi: farmsteadUSDC.contract.abi,
+    address: farmsteadUSDC.contract.address.mainnet,
+  })
 
   const supplyRatePerBlock = await farmsteadUSDC.methods.getSupplyRatePerBlock(
     farmsteadUSDCInstance,

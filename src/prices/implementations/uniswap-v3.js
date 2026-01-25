@@ -16,6 +16,7 @@ const univ3ContractData = require('../../lib/web3/contracts/uniswap-v3/contract.
 const uniVaultStorageContractData = require('../../lib/web3/contracts/univault-storage/contract.json')
 const { getStorage } = require('../../lib/web3/contracts/uniswap-v3/methods')
 const { getPosId: getUniV3PosId } = require('../../lib/web3/contracts/univault-storage/methods')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const { getTokenPrice } = require('..')
 
@@ -24,10 +25,11 @@ const getPrice = async (firstToken, secondToken, fee = 500, chainId = 1) => {
   const firstTokenData = tokens[firstToken]
   const secondTokenData = tokens[secondToken]
 
-  const factoryInstance = new web3.eth.Contract(
-    univ3FactoryContractData.abi,
-    univ3FactoryContractData.address.mainnet,
-  )
+  const factoryInstance = getCachedContract({
+    web3,
+    abi: univ3FactoryContractData.abi,
+    address: univ3FactoryContractData.address.mainnet,
+  })
   const univ3PoolAddress = await getPool(
     firstTokenData.tokenAddress,
     secondTokenData.tokenAddress,
@@ -35,7 +37,11 @@ const getPrice = async (firstToken, secondToken, fee = 500, chainId = 1) => {
     factoryInstance,
   )
 
-  const univ3PoolInstance = new web3.eth.Contract(univ3PoolContractData.abi, univ3PoolAddress)
+  const univ3PoolInstance = getCachedContract({
+    web3,
+    abi: univ3PoolContractData.abi,
+    address: univ3PoolAddress,
+  })
   const univ3PoolSlotData = await getSlot(univ3PoolInstance)
 
   const baseTokenInstance = new Token(
@@ -68,12 +74,17 @@ const getPrice = async (firstToken, secondToken, fee = 500, chainId = 1) => {
 }
 
 const getPosId = async (contractAddress, web3Instance) => {
-  const univ3Instance = new web3Instance.eth.Contract(univ3ContractData.abi, contractAddress)
+  const univ3Instance = getCachedContract({
+    web3: web3Instance,
+    abi: univ3ContractData.abi,
+    address: contractAddress,
+  })
   const dataContractAddress = await getStorage(univ3Instance)
-  const dataContractInstance = new web3Instance.eth.Contract(
-    uniVaultStorageContractData.abi,
-    dataContractAddress,
-  )
+  const dataContractInstance = getCachedContract({
+    web3: web3Instance,
+    abi: uniVaultStorageContractData.abi,
+    address: dataContractAddress,
+  })
   return await getUniV3PosId(dataContractInstance)
 }
 

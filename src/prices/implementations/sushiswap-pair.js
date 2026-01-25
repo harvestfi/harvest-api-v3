@@ -3,6 +3,7 @@ const { getWeb3 } = require('../../lib/web3')
 
 const sushiSwapRouterContract = require('../../lib/web3/contracts/sushiswap-router/contract.json')
 const sushiSwapRouterMethods = require('../../lib/web3/contracts/sushiswap-router/methods')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const addresses = require('../../lib/data/addresses.json')
 const { getTokenPrice } = require('..')
@@ -25,7 +26,11 @@ const getPrice = async (
     routerAddress = sushiSwapRouterContract.address.mainnet
   }
 
-  const sushiSwapRouterInstance = new web3.eth.Contract(sushiSwapRouterContract.abi, routerAddress)
+  const sushiSwapRouterInstance = getCachedContract({
+    web3,
+    abi: sushiSwapRouterContract.abi,
+    address: routerAddress,
+  })
 
   const result = await sushiSwapRouterMethods.getAmountsOut(
     new BigNumber(10).pow(18).toString(),

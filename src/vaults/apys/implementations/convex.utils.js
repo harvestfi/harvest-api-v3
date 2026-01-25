@@ -4,6 +4,7 @@ const { getTokenPriceByAddress } = require('../../../prices/coingecko.js')
 const { web3 } = require('../../../lib/web3')
 const addresses = require('../../../lib/data/addresses.json')
 const pools = require('./convex-pools.json')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 let crvAddress = '0xD533a949740bb3306d119CC777fa900bA034cd52',
   cvxAddress = '0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B',
@@ -100,7 +101,11 @@ const getCVXMintAmount = async crvEarned => {
 }
 
 const balanceOf = async (address, contract, decimals) => {
-  const tokenInstance = new web3.eth.Contract(token.contract.abi, contract)
+  const tokenInstance = getCachedContract({
+    web3,
+    abi: token.contract.abi,
+    address: contract,
+  })
 
   const fetchedBalance = await token.methods.getBalance(address, tokenInstance)
   const balance = new BigNumber(fetchedBalance)
@@ -111,7 +116,11 @@ const balanceOf = async (address, contract, decimals) => {
 }
 
 const supplyOf = async contract => {
-  const tokenInstance = new web3.eth.Contract(token.contract.abi, contract)
+  const tokenInstance = getCachedContract({
+    web3,
+    abi: token.contract.abi,
+    address: contract,
+  })
 
   const fetchedTotalSupply = await token.methods.getTotalSupply(tokenInstance)
   const totalSupply = new BigNumber(fetchedTotalSupply)
@@ -122,7 +131,11 @@ const supplyOf = async contract => {
 }
 
 const curveLpValue = async (amount, swapAddress) => {
-  const crvYPoolInstance = new web3.eth.Contract(crvYPool.contract.abi, swapAddress)
+  const crvYPoolInstance = getCachedContract({
+    web3,
+    abi: crvYPool.contract.abi,
+    address: swapAddress,
+  })
 
   const virtualPrice = await crvYPool.methods.getVirtualPrice(crvYPoolInstance)
   const pricePerShare = new BigNumber(virtualPrice).dividedBy(new BigNumber(10).pow(18))
@@ -154,7 +167,11 @@ const curveV2LpValue = async (pool, currencyType) => {
 }
 
 const rewardRate = async contract => {
-  const poolInstance = new web3.eth.Contract(pool.contract.abi, contract)
+  const poolInstance = getCachedContract({
+    web3,
+    abi: pool.contract.abi,
+    address: contract,
+  })
 
   const fetchedRewardRate = await pool.methods.rewardRate(poolInstance)
 

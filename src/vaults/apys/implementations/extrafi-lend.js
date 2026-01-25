@@ -3,6 +3,7 @@ const { web3BASE } = require('../../../lib/web3')
 const { extraFiLending, extraFiRewards, token } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
 const { CHAIN_IDS } = require('../../../lib/constants')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (rewardPool, reserveId, reduction) => {
   const web3 = web3BASE
@@ -19,8 +20,16 @@ const getApy = async (rewardPool, reserveId, reduction) => {
     methods: { getDecimals },
   } = token
 
-  const rewardInstance = new web3.eth.Contract(rewardAbi, rewardPool)
-  const lendingInstance = new web3.eth.Contract(lendingAbi, lendingAddress.mainnet)
+  const rewardInstance = getCachedContract({
+    web3,
+    abi: rewardAbi,
+    address: rewardPool,
+  })
+  const lendingInstance = getCachedContract({
+    web3,
+    abi: lendingAbi,
+    address: lendingAddress.mainnet,
+  })
 
   const rewardLength = await rewardMethods.getRewardsLength(rewardInstance)
   const totalStaked = new BigNumber(await rewardMethods.getTotalStaked(rewardInstance))
@@ -34,11 +43,15 @@ const getApy = async (rewardPool, reserveId, reduction) => {
     if (rewardData.endTime < now) {
       continue
     }
-    const tokenInstance = new web3.eth.Contract(tokenAbi, rewardToken)
+    const tokenInstance = getCachedContract({
+      web3,
+      abi: tokenAbi,
+      address: rewardToken,
+    })
     const tokenDecimals = await getDecimals(tokenInstance)
     const tokenPerYear = new BigNumber(rewardData.rewardRate)
       .times(secondsPerYear)
-      .div(10 ** tokenDecimals)
+      .div(new BigNumber(10).pow(Number(tokenDecimals)))
     const tokenPrice = (await getTokenPrice(rewardToken, CHAIN_IDS.BASE)) || 0
     rewardUsdPerYear = rewardUsdPerYear.plus(tokenPerYear.times(tokenPrice))
   }
@@ -50,14 +63,18 @@ const getApy = async (rewardPool, reserveId, reduction) => {
   const utilization = new BigNumber(await lendingMethods.getUtilization(reserveId, lendingInstance))
 
   const underlyingPrice = await getTokenPrice(reserveData.underlyingTokenAddress, CHAIN_IDS.BASE)
-  const underlyingInstance = new web3.eth.Contract(tokenAbi, reserveData.underlyingTokenAddress)
+  const underlyingInstance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: reserveData.underlyingTokenAddress,
+  })
   const underlyingDecimals = await getDecimals(underlyingInstance)
 
   const totalStakedUsd = totalStaked
     .times(exchangeRate)
     .div(1e18)
     .times(underlyingPrice)
-    .div(10 ** underlyingDecimals)
+    .div(new BigNumber(10).pow(Number(underlyingDecimals)))
   const rewardAPR = rewardUsdPerYear.div(totalStakedUsd).times(100)
 
   const supplyAPR = new BigNumber(reserveData.currentBorrowingRate)

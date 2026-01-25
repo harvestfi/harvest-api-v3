@@ -4,6 +4,7 @@ const { seamlessPool, aToken, aaveRewards } = require('../../../lib/web3/contrac
 const { getTokenPrice } = require('../../../prices')
 const { getApy: getMerklApy } = require('./merkl')
 const { CHAIN_IDS } = require('../../../lib/constants')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
   const web3 = getWeb3(chain)
@@ -20,10 +21,22 @@ const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
     methods: rewardsMethods,
   } = aaveRewards
 
-  const poolInstance = new web3.eth.Contract(poolAbi, poolAddr)
+  const poolInstance = getCachedContract({
+    web3,
+    abi: poolAbi,
+    address: poolAddr,
+  })
   const assetData = await poolMethods.getReserveData(underlying, poolInstance)
-  const aTokenInstance = new web3.eth.Contract(aTokenAbi, assetData.aTokenAddress)
-  const debtTokenInstance = new web3.eth.Contract(aTokenAbi, assetData.variableDebtTokenAddress)
+  const aTokenInstance = getCachedContract({
+    web3,
+    abi: aTokenAbi,
+    address: assetData.aTokenAddress,
+  })
+  const debtTokenInstance = getCachedContract({
+    web3,
+    abi: aTokenAbi,
+    address: assetData.variableDebtTokenAddress,
+  })
 
   const supplied = new BigNumber(await aTokenMethods.balanceOf(strategyAddr, aTokenInstance))
   const borrowed = new BigNumber(await aTokenMethods.balanceOf(strategyAddr, debtTokenInstance))
@@ -46,10 +59,11 @@ const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
     .times(100)
     .times(borrowedMul)
 
-  const supplyRewardsInstance = new web3.eth.Contract(
-    rewardsAbi,
-    await aTokenMethods.getIncentivesController(aTokenInstance),
-  )
+  const supplyRewardsInstance = getCachedContract({
+    web3,
+    abi: rewardsAbi,
+    address: await aTokenMethods.getIncentivesController(aTokenInstance),
+  })
 
   const supplyRewardList = await rewardsMethods.getRewardsList(supplyRewardsInstance)
   const now = Date.now() / 1000
@@ -71,10 +85,11 @@ const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
     supplyRewardUsdPerYear = supplyRewardUsdPerYear.plus(emissionPerYear.times(rewardPrice))
   }
 
-  const borrowRewardsInstance = new web3.eth.Contract(
-    rewardsAbi,
-    await aTokenMethods.getIncentivesController(debtTokenInstance),
-  )
+  const borrowRewardsInstance = getCachedContract({
+    web3,
+    abi: rewardsAbi,
+    address: await aTokenMethods.getIncentivesController(debtTokenInstance),
+  })
 
   const borrowRewardList = await rewardsMethods.getRewardsList(borrowRewardsInstance)
   let borrowRewardUsdPerYear = new BigNumber(0)
@@ -102,7 +117,7 @@ const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
     const totalSupply = new BigNumber(await aTokenMethods.getTotalSupply(aTokenInstance))
     const decimals = new BigNumber(await aTokenMethods.getDecimals(aTokenInstance))
 
-    const totalUsd = totalSupply.times(underlyingPrice).div(10 ** decimals)
+    const totalUsd = totalSupply.times(underlyingPrice).div(new BigNumber(10).pow(Number(decimals)))
 
     supplyRewardAPR = supplyRewardUsdPerYear
       .times(100)
@@ -115,7 +130,7 @@ const getApy = async (underlying, poolAddr, strategyAddr, reduction, chain) => {
     const totalSupply = new BigNumber(await aTokenMethods.getTotalSupply(debtTokenInstance))
     const decimals = new BigNumber(await aTokenMethods.getDecimals(debtTokenInstance))
 
-    const totalUsd = totalSupply.times(underlyingPrice).div(10 ** decimals)
+    const totalUsd = totalSupply.times(underlyingPrice).div(new BigNumber(10).pow(Number(decimals)))
 
     borrowRewardAPR = borrowRewardUsdPerYear
       .times(100)

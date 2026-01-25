@@ -7,6 +7,7 @@ const {
   getTotalAllocPoint: getTotalAllocPointYel,
   getYelPerSecond,
 } = require('../../../lib/web3/contracts/yel-masterchef/methods')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const { getTokenPrice } = require('../../../prices')
 
@@ -21,7 +22,11 @@ const yelMaticMasterchefAddress = '0x954b15065e4FA1243Cd45a020766511b68Ea9b6E'
 const getApy = async (poolId, reduction) => {
   const masterChefContract = yelMasterContract
 
-  const yelInstance = new web3MATIC.eth.Contract(masterChefContract.abi, yelMaticMasterchefAddress)
+  const yelInstance = getCachedContract({
+    web3: web3MATIC,
+    abi: masterChefContract.abi,
+    address: yelMaticMasterchefAddress,
+  })
 
   let yelPerSecond = new BigNumber(await getYelPerSecond(yelInstance)).dividedBy(
     new BigNumber(10).exponentiatedBy(18),

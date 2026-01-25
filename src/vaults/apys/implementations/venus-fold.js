@@ -8,6 +8,7 @@ const {
   token,
 } = require('../../../lib/web3/contracts')
 const { getApy: getMerklApy } = require('./merkl')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, cTokenAddr, strategyAddr, reduction, chain) => {
   const web3 = getWeb3(chain)
@@ -29,7 +30,11 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, reduction, chain) =>
   } = token
 
   const blocksPerYear = 3600 * 24 * 365
-  const cTokenInstance = new web3.eth.Contract(cTokenAbi, cTokenAddr)
+  const cTokenInstance = getCachedContract({
+    web3,
+    abi: cTokenAbi,
+    address: cTokenAddr,
+  })
   const snapshot = await cTokenMethods.getAccountSnapshot(strategyAddr, cTokenInstance)
 
   const supplied = new BigNumber(snapshot[1]).times(snapshot[3]).div(1e18)
@@ -50,13 +55,21 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, reduction, chain) =>
   const borrowAPR = borrowRate.div(1e18).times(blocksPerYear).times(100).times(borrowedMul)
 
   const comptrollerAddress = await cTokenMethods.getComptroller(cTokenInstance)
-  const comptrollerInstance = new web3.eth.Contract(comptrollerAbi, comptrollerAddress)
+  const comptrollerInstance = getCachedContract({
+    web3,
+    abi: comptrollerAbi,
+    address: comptrollerAddress,
+  })
   const distributors = await comptrollerMethods.getRewardDistributors(comptrollerInstance)
 
   let rewardPerYearSupplyUSD = new BigNumber(0)
   let rewardPerYearBorrowUSD = new BigNumber(0)
   for (const distributor of distributors) {
-    const distributorInstance = new web3.eth.Contract(distributorAbi, distributor)
+    const distributorInstance = getCachedContract({
+      web3,
+      abi: distributorAbi,
+      address: distributor,
+    })
     const rewardToken = await distributorMethods.getRewardToken(distributorInstance)
     const rewardPerYearSupply = new BigNumber(
       await distributorMethods.getSupplyRate(cTokenAddr, distributorInstance),
@@ -73,14 +86,18 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, reduction, chain) =>
     rewardPerYearBorrowUSD = rewardPerYearBorrowUSD.plus(rewardPerYearBorrow.times(rewardPrice))
   }
 
-  const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
+  const underlyingInstance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: underlying,
+  })
   const underlyingDecimals = await getDecimals(underlyingInstance)
   const totalSupply = new BigNumber(await cTokenMethods.totalSupply(cTokenInstance))
     .times(snapshot[3])
     .div(1e18)
-    .div(10 ** underlyingDecimals)
+    .div(new BigNumber(10).pow(Number(underlyingDecimals)))
   const totalBorrowed = new BigNumber(await cTokenMethods.totalBorrows(cTokenInstance)).div(
-    10 ** underlyingDecimals,
+    new BigNumber(10).pow(Number(underlyingDecimals)),
   )
 
   const underlyingPrice = await getTokenPrice(underlying, chain)

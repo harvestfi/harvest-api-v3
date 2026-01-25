@@ -4,6 +4,7 @@ const { getTokenPrice } = require('../../../prices')
 const { lodestarCToken: cToken } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
 const { getApy: getMerklApy } = require('./merkl')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, cTokenAddr, strategyAddr, reduction) => {
   const web3 = web3ZKSYNC
@@ -15,7 +16,11 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, reduction) => {
   const ZK = '0x5A7d6b2F92C77FAD6CCaBd7EE0624E64907Eaf3E'
   const blocksPerYear = 3600 * 24 * 365
 
-  const cTokenInstance = new web3.eth.Contract(cTokenAbi, cTokenAddr)
+  const cTokenInstance = getCachedContract({
+    web3,
+    abi: cTokenAbi,
+    address: cTokenAddr,
+  })
   const snapshot = await cTokenMethods.getAccountSnapshot(strategyAddr, cTokenInstance)
 
   const supplied = new BigNumber(snapshot[1]).times(snapshot[3]).div(1e18)

@@ -8,6 +8,7 @@ const {
   token,
 } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, strategyAddr, reduction) => {
   const web3 = web3BASE
@@ -28,7 +29,11 @@ const getApy = async (underlying, strategyAddr, reduction) => {
     methods: strategyMethods,
   } = seamlessStrategy
 
-  const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddr)
+  const strategyInstance = getCachedContract({
+    web3,
+    abi: strategyAbi,
+    address: strategyAddr,
+  })
   const invested = new BigNumber(await strategyMethods.getInvestedBalance(strategyInstance))
   const supplied = new BigNumber(await strategyMethods.getSupplyBalance(strategyInstance))
   const borrowed = new BigNumber(await strategyMethods.getBorrowBalance(strategyInstance))
@@ -41,7 +46,11 @@ const getApy = async (underlying, strategyAddr, reduction) => {
     borrowedMul = new BigNumber(0)
   }
 
-  const poolInstance = new web3.eth.Contract(poolAbi, poolAddress.mainnet)
+  const poolInstance = getCachedContract({
+    web3,
+    abi: poolAbi,
+    address: poolAddress.mainnet,
+  })
   const assetData = await poolMethods.getReserveData(underlying, poolInstance)
   const supplyAPR = new BigNumber(assetData.currentLiquidityRate)
     .div(1e27)
@@ -52,7 +61,11 @@ const getApy = async (underlying, strategyAddr, reduction) => {
     .times(100)
     .times(borrowedMul)
 
-  const incentivesInstance = new web3.eth.Contract(incentivesAbi, incentivesAddress.mainnet)
+  const incentivesInstance = getCachedContract({
+    web3,
+    abi: incentivesAbi,
+    address: incentivesAddress.mainnet,
+  })
   const rewardsList = await incentivesMethods.getRewardsList(incentivesInstance)
   let usdPerYearSupply = new BigNumber(0)
   let usdPerYearBorrow = new BigNumber(0)
@@ -86,23 +99,43 @@ const getApy = async (underlying, strategyAddr, reduction) => {
     usdPerYearBorrow = usdPerYearBorrow.plus(rewardPerYearBorrow.times(rewardPrice))
   }
 
-  const supplyToken = new web3.eth.Contract(tokenAbi, assetData.aTokenAddress)
-  const borrowToken = new web3.eth.Contract(tokenAbi, assetData.variableDebtTokenAddress)
+  const supplyToken = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: assetData.aTokenAddress,
+  })
+  const borrowToken = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: assetData.variableDebtTokenAddress,
+  })
   const totalSupplySupply = new BigNumber(await getTotalSupply(supplyToken))
   const totalSupplyBorrow = new BigNumber(await getTotalSupply(borrowToken))
 
   const underlyingPrice = await getTokenPrice(underlying, CHAIN_IDS.BASE)
 
-  const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
+  const underlyingInstance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: underlying,
+  })
   const underlyingDecimals = await getDecimals(underlyingInstance)
 
   const rewardAPRSupply = usdPerYearSupply
-    .div(totalSupplySupply.div(10 ** underlyingDecimals).times(underlyingPrice))
+    .div(
+      totalSupplySupply
+        .div(new BigNumber(10).pow(Number(underlyingDecimals)))
+        .times(underlyingPrice),
+    )
     .times(100)
     .times(reduction)
     .times(suppliedMul)
   const rewardAPRBorrow = usdPerYearBorrow
-    .div(totalSupplyBorrow.div(10 ** underlyingDecimals).times(underlyingPrice))
+    .div(
+      totalSupplyBorrow
+        .div(new BigNumber(10).pow(Number(underlyingDecimals)))
+        .times(underlyingPrice),
+    )
     .times(100)
     .times(reduction)
     .times(borrowedMul)

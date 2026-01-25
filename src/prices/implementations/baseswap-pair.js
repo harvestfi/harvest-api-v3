@@ -3,6 +3,7 @@ const { web3BASE } = require('../../lib/web3')
 
 const uniswapContract = require('../../lib/web3/contracts/uniswap/contract.json')
 const uniswapMethods = require('../../lib/web3/contracts/uniswap/methods')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const addresses = require('../../../data/mainnet/addresses.json')
 
@@ -17,10 +18,11 @@ const getPrice = async (
     selectedAddresses.push(addresses.BASE.USDC)
   }
 
-  const uniswapInstance = new web3BASE.eth.Contract(
-    uniswapContract.abi,
-    '0x327Df1E6de05895d2ab08513aaDD9313Fe505d86',
-  )
+  const uniswapInstance = getCachedContract({
+    web3: web3BASE,
+    abi: uniswapContract.abi,
+    address: '0x327Df1E6de05895d2ab08513aaDD9313Fe505d86',
+  })
 
   const result = await uniswapMethods.getAmountsOut(
     new BigNumber(10).pow(18).toString(),

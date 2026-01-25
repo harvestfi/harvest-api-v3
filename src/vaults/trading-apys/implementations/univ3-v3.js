@@ -15,6 +15,7 @@ const {
   methods: { getUnderlyingBalanceWithInvestment },
   contract: { abi },
 } = vaultContractData
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const oldVaultImplementations = ['0x3833b631B454AE659a2Ca11104854823009969D4']
 
@@ -28,7 +29,11 @@ const getTradingApy = async (
 ) => {
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
   const vaultData = tokens[symbol]
-  const vaultInstance = new web3.eth.Contract(abi, vaultData.vaultAddress)
+  const vaultInstance = getCachedContract({
+    web3,
+    abi,
+    address: vaultData.vaultAddress,
+  })
 
   const vaultImplementation = await vaultInstance.methods.implementation().call()
   if (oldVaultImplementations.includes(vaultImplementation)) {
@@ -42,7 +47,11 @@ const getTradingApy = async (
     .dividedBy(new BigNumber(10).exponentiatedBy(Number(vaultData.decimals)))
     .decimalPlaces(6)
 
-  const instance = new web3.eth.Contract(univ3EventsContract.abi, vaultAddress)
+  const instance = getCachedContract({
+    web3,
+    abi: univ3EventsContract.abi,
+    address: vaultAddress,
+  })
   const vaultEvents = (
     await instance.getPastEvents('SharePriceChangeTrading', {
       fromBlock,
@@ -54,10 +63,11 @@ const getTradingApy = async (
     returnValues: event.returnValues,
   }))
 
-  const nonfungibleContractInstance = new web3.eth.Contract(
-    uniNonFungibleContractData.abi,
-    uniNonFungibleContractData.address.mainnet,
-  )
+  const nonfungibleContractInstance = getCachedContract({
+    web3,
+    abi: uniNonFungibleContractData.abi,
+    address: uniNonFungibleContractData.address.mainnet,
+  })
   const lastHarvest = vaultEvents[vaultEvents.length - 1]
 
   const posId = await getPosId(vaultAddress, web3)
@@ -108,10 +118,10 @@ const getTradingApy = async (
     const token1Decimals = +(await getDecimals(token1))
 
     const rewardsToken0 = BigNumber(tokensOwed0)
-      .dividedBy(10 ** token0Decimals)
+      .dividedBy(new BigNumber(10).pow(Number(token0Decimals)))
       .multipliedBy(token0Price)
     const rewardsToken1 = BigNumber(tokensOwed1)
-      .dividedBy(10 ** token1Decimals)
+      .dividedBy(new BigNumber(10).pow(Number(token1Decimals)))
       .multipliedBy(token1Price)
     const totalRewards = +BigNumber(rewardsToken0).plus(rewardsToken1).decimalPlaces(6)
     const getTvlChangeFromLCE = liquidityChangeEvent => {
@@ -121,10 +131,10 @@ const getTradingApy = async (
       } = liquidityChangeEvent
       const sign = getSign(event)
       const valueToken0 = BigNumber(amount0)
-        .dividedBy(10 ** token0Decimals)
+        .dividedBy(new BigNumber(10).pow(Number(token0Decimals)))
         .multipliedBy(token0Price)
       const valueToken1 = BigNumber(amount1)
-        .dividedBy(10 ** token1Decimals)
+        .dividedBy(new BigNumber(10).pow(Number(token1Decimals)))
         .multipliedBy(token1Price)
       const totalRewards = +BigNumber(valueToken0)
         .plus(valueToken1)
@@ -217,7 +227,11 @@ const getAprForLastHarvest = (lastHarvest, stratPercentFactor) => {
 }
 
 const getDecimals = async tokenAddress => {
-  const instance = new web3.eth.Contract(tokenContract.contract.abi, tokenAddress)
+  const instance = getCachedContract({
+    web3,
+    abi: tokenContract.contract.abi,
+    address: tokenAddress,
+  })
   const decimals = await tokenContract.methods.getDecimals(instance)
   return decimals
 }

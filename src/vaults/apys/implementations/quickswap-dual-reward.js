@@ -6,6 +6,7 @@ const { UI_DATA_FILES } = require('../../../lib/constants')
 const { getTokenPrice } = require('../../../prices')
 
 const { quickswapDualReward: poolContractInfo } = require('../../../lib/web3/contracts')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (
   poolAddress,
@@ -23,7 +24,11 @@ const getApy = async (
     methods: { periodFinish, rewardRateA, rewardRateB, totalSupply },
   } = poolContractInfo
 
-  const poolInstance = new web3Instance.eth.Contract(poolContractInfo.contract.abi, poolAddress)
+  const poolInstance = getCachedContract({
+    web3: web3Instance,
+    abi: poolContractInfo.contract.abi,
+    address: poolAddress,
+  })
 
   const now = Date.now() / 1000
   const poolPeriodFinish = await periodFinish(poolInstance)
@@ -34,16 +39,18 @@ const getApy = async (
   const poolRewardRateA = await rewardRateA(poolInstance)
   const poolRewardRateB = await rewardRateB(poolInstance)
   const weeklyRewardA = new BigNumber(poolRewardRateA)
-    .dividedBy(10 ** rewardAData.decimals)
+    .dividedBy(new BigNumber(10).pow(Number(rewardAData.decimals)))
     .times(604800)
   const weeklyRewardB = new BigNumber(poolRewardRateB)
-    .dividedBy(10 ** rewardBData.decimals)
+    .dividedBy(new BigNumber(10).pow(Number(rewardBData.decimals)))
     .times(604800)
   const priceA = await getTokenPrice(rewardTokenASymbol)
   const priceB = await getTokenPrice(rewardTokenBSymbol)
 
   let poolTotalSupply = await totalSupply(poolInstance)
-  poolTotalSupply = new BigNumber(poolTotalSupply).dividedBy(10 ** lpTokenData.decimals)
+  poolTotalSupply = new BigNumber(poolTotalSupply).dividedBy(
+    new BigNumber(10).pow(Number(lpTokenData.decimals)),
+  )
   const priceLP = await getTokenPrice(lpTokenSymbol)
 
   const apr = new BigNumber(priceA)

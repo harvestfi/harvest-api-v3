@@ -3,6 +3,7 @@ const { web3BASE } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
 const { mToken, moonwellReward, token } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
   const web3 = web3BASE
@@ -24,7 +25,11 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
   const eurc = '0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42'
   const secondsPerYear = 60 * 60 * 24 * 365.25
 
-  const mTokenInstance = new web3.eth.Contract(mTokenAbi, mTokenAddr)
+  const mTokenInstance = getCachedContract({
+    web3,
+    abi: mTokenAbi,
+    address: mTokenAddr,
+  })
   const snapshot = await mTokenMethods.getAccountSnapshot(strategyAddr, mTokenInstance)
 
   const supplied = new BigNumber(snapshot[1]).times(snapshot[3]).div(1e18)
@@ -44,10 +49,11 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
   const supplyAPR = supplyRate.div(1e18).times(secondsPerYear).times(100).times(suppliedMul)
   const borrowAPR = borrowRate.div(1e18).times(secondsPerYear).times(100).times(borrowedMul)
 
-  const moonwellRewardInstance = new web3.eth.Contract(
-    moonwellRewardAbi,
-    moonwellRewardAddress.mainnet,
-  )
+  const moonwellRewardInstance = getCachedContract({
+    web3,
+    abi: moonwellRewardAbi,
+    address: moonwellRewardAddress.mainnet,
+  })
   let marketConfigWell, marketConfigUsdc, marketConfigEurc
   try {
     marketConfigWell = await moonwellRewardMethods.getMarketConfig(
@@ -137,14 +143,18 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
   const usdcPrice = await getTokenPrice(usdc, CHAIN_IDS.BASE)
   const eurcPrice = await getTokenPrice(eurc, CHAIN_IDS.BASE)
 
-  const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
+  const underlyingInstance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: underlying,
+  })
   const underlyingDecimals = await getDecimals(underlyingInstance)
 
   const rewardAPRSupply = wellPerYearSupply
     .times(wellPrice)
     .plus(usdcPerYearSupply.times(usdcPrice))
     .plus(eurcPerYearSupply.times(eurcPrice))
-    .div(totalSupply.div(10 ** underlyingDecimals).times(underlyingPrice))
+    .div(totalSupply.div(new BigNumber(10).pow(Number(underlyingDecimals))).times(underlyingPrice))
     .times(100)
     .times(reduction)
     .times(suppliedMul)
@@ -152,7 +162,7 @@ const getApy = async (underlying, mTokenAddr, strategyAddr, reduction) => {
     .times(wellPrice)
     .plus(usdcPerYearBorrow.times(usdcPrice))
     .plus(eurcPerYearBorrow.times(eurcPrice))
-    .div(totalBorrows.div(10 ** underlyingDecimals).times(underlyingPrice))
+    .div(totalBorrows.div(new BigNumber(10).pow(Number(underlyingDecimals))).times(underlyingPrice))
     .times(100)
     .times(reduction)
     .times(borrowedMul)

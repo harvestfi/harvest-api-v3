@@ -13,11 +13,20 @@ const {
 } = require('../../../lib/web3/contracts/looks-distributor/methods')
 const { getTokenPrice } = require('../../../prices')
 const { getDailyCompound } = require('../../../lib/utils.js')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getTradingApy = async rewardPool => {
-  const rewardPoolInstance = new web3.eth.Contract(looksFeeShare.abi, rewardPool)
+  const rewardPoolInstance = getCachedContract({
+    web3,
+    abi: looksFeeShare.abi,
+    address: rewardPool,
+  })
   const distributorAddress = await getTokenDistributor(rewardPoolInstance)
-  const distributionInstance = new web3.eth.Contract(looksDistributor.abi, distributorAddress)
+  const distributionInstance = getCachedContract({
+    web3,
+    abi: looksDistributor.abi,
+    address: distributorAddress,
+  })
 
   let rewardPerBlock = new BigNumber(
     await getRewardPerBlockForStaking(distributionInstance),

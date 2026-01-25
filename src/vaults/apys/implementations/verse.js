@@ -6,11 +6,16 @@ const {
   getTotalSupply,
   getRewardPerSecond,
 } = require('../../../lib/web3/contracts/verse-farm/methods')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const { getTokenPrice } = require('../../../prices')
 
 const getApy = async (lpAddress, rewardPool, reduction) => {
-  const farmInstance = new web3.eth.Contract(verseFarmContract.abi, rewardPool)
+  const farmInstance = getCachedContract({
+    web3,
+    abi: verseFarmContract.abi,
+    address: rewardPool,
+  })
 
   let versePerSecond = new BigNumber(await getRewardPerSecond(farmInstance)).dividedBy(
     new BigNumber(10).exponentiatedBy(18),

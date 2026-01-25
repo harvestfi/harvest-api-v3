@@ -11,6 +11,7 @@ const { CHAIN_IDS } = require('../../../lib/constants')
 const { UI_DATA_FILES } = require('../../../lib/constants')
 const { getUIData } = require('../../../lib/data')
 const { executeEstimateApyFunctions } = require('..')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, cTokenAddr, strategyAddr, hodlVaultId, reduction) => {
   const web3 = web3ARBITRUM
@@ -33,7 +34,11 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, hodlVaultId, reducti
 
   const lode = '0xF19547f9ED24aA66b03c3a552D181Ae334FBb8DB'
   const blocksPerYear = 2628000
-  const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddr)
+  const strategyInstance = getCachedContract({
+    web3,
+    abi: strategyAbi,
+    address: strategyAddr,
+  })
   const invested = new BigNumber(await strategyMethods.getInvestedBalance(strategyInstance))
   const supplied = new BigNumber(await strategyMethods.getSupplyBalance(strategyInstance))
   const borrowed = new BigNumber(await strategyMethods.getBorrowBalance(strategyInstance))
@@ -46,9 +51,17 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, hodlVaultId, reducti
     borrowedMul = new BigNumber(0)
   }
 
-  const cTokenInstance = new web3.eth.Contract(cTokenAbi, cTokenAddr)
+  const cTokenInstance = getCachedContract({
+    web3,
+    abi: cTokenAbi,
+    address: cTokenAddr,
+  })
 
-  const comptrollerInstance = new web3.eth.Contract(comptrollerAbi, comptrollerAddress.mainnet)
+  const comptrollerInstance = getCachedContract({
+    web3,
+    abi: comptrollerAbi,
+    address: comptrollerAddress.mainnet,
+  })
 
   const rewardRateSupply = new BigNumber(
     await comptrollerMethods.getSupplyRewardRate(cTokenAddr, comptrollerInstance),
@@ -66,18 +79,22 @@ const getApy = async (underlying, cTokenAddr, strategyAddr, hodlVaultId, reducti
   const underlyingPrice = await getTokenPrice(underlying, CHAIN_IDS.ARBITRUM_ONE)
   const rewardPrice = await getTokenPrice(lode, CHAIN_IDS.ARBITRUM_ONE)
 
-  const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
+  const underlyingInstance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: underlying,
+  })
   const underlyingDecimals = await getDecimals(underlyingInstance)
 
   const rewardAPRSupply = rewardPerYearSupply
     .times(rewardPrice)
-    .div(totalSupply.div(10 ** underlyingDecimals).times(underlyingPrice))
+    .div(totalSupply.div(new BigNumber(10).pow(Number(underlyingDecimals))).times(underlyingPrice))
     .times(100)
     .times(reduction)
     .times(suppliedMul)
   const rewardAPRBorrow = rewardPerYearBorrow
     .times(rewardPrice)
-    .div(totalBorrows.div(10 ** underlyingDecimals).times(underlyingPrice))
+    .div(totalBorrows.div(new BigNumber(10).pow(Number(underlyingDecimals))).times(underlyingPrice))
     .times(100)
     .times(reduction)
     .times(borrowedMul)

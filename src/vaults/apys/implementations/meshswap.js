@@ -3,6 +3,7 @@ const { web3MATIC } = require('../../../lib/web3')
 const tokenAddresses = require('../../../../data/mainnet/addresses.json')
 const meshswapViewContract = require('../../../lib/web3/contracts/meshswap-view/contract.json')
 const { getPoolData } = require('../../../lib/web3/contracts/meshswap-view/methods')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const { token: tokenContractData } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
@@ -24,10 +25,11 @@ const getApy = async (lpAddress, reduction) => {
   let apy,
     poolData = {}
 
-  const viewInstance = new web3MATIC.eth.Contract(
-    meshswapViewContract.abi,
-    meshswapViewContract.address.mainnet,
-  )
+  const viewInstance = getCachedContract({
+    web3: web3MATIC,
+    abi: meshswapViewContract.abi,
+    address: meshswapViewContract.address.mainnet,
+  })
 
   poolData = await getPoolData(lpAddress, viewInstance)
 
@@ -51,14 +53,22 @@ const getApy = async (lpAddress, reduction) => {
         currentBlock > Number(poolData.airdropSettings[i * 3 + 1])
       ) {
         activeAirdrops.tokens.push(poolData.airdropTokens[i])
-        activeAirdrops.blockAmounts.push(new BigNumber(poolData.airdropSettings[i * 3]).div(1e18))
+        activeAirdrops.blockAmounts.push(
+          new BigNumber(poolData.airdropSettings[i * 3]).div(new BigNumber(10).pow(18)),
+        )
       }
     }
   }
 
-  const tokenInstance = new web3MATIC.eth.Contract(abi, lpAddress)
+  const tokenInstance = getCachedContract({
+    web3: web3MATIC,
+    abi,
+    address: lpAddress,
+  })
   const decimals = await getDecimals(tokenInstance)
-  const totalSupply = new BigNumber(await getTotalSupply(tokenInstance)).dividedBy(10 ** decimals)
+  const totalSupply = new BigNumber(await getTotalSupply(tokenInstance)).dividedBy(
+    new BigNumber(10).pow(Number(decimals)),
+  )
 
   const meshPrice = await getTokenPrice(tokenAddresses.MATIC.MESH)
 

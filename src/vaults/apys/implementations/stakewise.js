@@ -9,6 +9,7 @@ const { STAKEWISE_API_URLS } = require('../../../lib/constants')
 const { getTokenPrice } = require('../../../prices')
 const { getPrice: getLpPrice } = require('../../../prices/implementations/lp-token.js')
 const { getPosId } = require('../../../prices/implementations/uniswap-v3')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const {
   uniNonFungibleManager: uniNonFungibleContractData,
@@ -24,7 +25,11 @@ const getApy = async (vaultAddress, lpAddress, factor) => {
     contract,
   } = uniNonFungibleContractData
 
-  const nonfungibleContractInstance = new web3.eth.Contract(contract.abi, contract.address.mainnet)
+  const nonfungibleContractInstance = getCachedContract({
+    web3,
+    abi: contract.abi,
+    address: contract.address.mainnet,
+  })
 
   const posId = await getPosId(vaultAddress, web3)
   const positionData = await getPositions(posId, nonfungibleContractInstance)
@@ -65,10 +70,11 @@ const getLiquidityPercent = async (posLiquidity, lpAddress) => {
 }
 
 const getRewardApr = async (liquidityPercent, tvl, lpAddress) => {
-  const swiseDistributionInstance = new web3.eth.Contract(
-    swiseDistributionContract.abi,
-    swiseDistributionContract.address.mainnet,
-  )
+  const swiseDistributionInstance = getCachedContract({
+    web3,
+    abi: swiseDistributionContract.abi,
+    address: swiseDistributionContract.address.mainnet,
+  })
 
   const currentBlock = await web3.eth.getBlockNumber()
   const fromBlock = currentBlock - 430000 //~60 days
@@ -119,10 +125,11 @@ const getRewardApr = async (liquidityPercent, tvl, lpAddress) => {
 
 const getStakingApr = async (posId, token0, token1) => {
   const seth2Address = '0xFe2e637202056d30016725477c5da089Ab0A043A'
-  const viewerContractInstance = new web3.eth.Contract(
-    uniStatusViewerContractData.abi,
-    uniStatusViewerContractData.address.mainnet,
-  )
+  const viewerContractInstance = getCachedContract({
+    web3,
+    abi: uniStatusViewerContractData.abi,
+    address: uniStatusViewerContractData.address.mainnet,
+  })
   const amountsForPosition = await getAmountsForPosition(posId, viewerContractInstance)
 
   const token0Amount = new BigNumber(amountsForPosition[0])
@@ -158,7 +165,11 @@ const getStakingApr = async (posId, token0, token1) => {
     contract,
   } = tokenContract
 
-  const seth2Instance = new web3.eth.Contract(contract.abi, seth2Address)
+  const seth2Instance = getCachedContract({
+    web3,
+    abi: contract.abi,
+    address: seth2Address,
+  })
 
   const seth2TotalSupply = await getTotalSupply(seth2Instance)
   const utilisation = totalStaked.times(1e18).div(seth2TotalSupply)

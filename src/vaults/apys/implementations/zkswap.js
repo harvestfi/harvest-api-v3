@@ -4,6 +4,7 @@ const { zfFarm, token: tokenContractData } = require('../../../lib/web3/contract
 const { getTokenPrice } = require('../../../prices')
 const { CHAIN_IDS } = require('../../../lib/constants')
 const { getApy: getMerklApy } = require('./merkl')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, strategyAddr, pid, reduction) => {
   const web3 = web3ZKSYNC
@@ -14,12 +15,20 @@ const getApy = async (underlying, strategyAddr, pid, reduction) => {
   } = tokenContractData
 
   const secondsPerYear = 60 * 60 * 24 * 365.25
-  const rewardInstance = new web3.eth.Contract(farmContract.abi, farmContract.address.mainnet)
+  const rewardInstance = getCachedContract({
+    web3,
+    abi: farmContract.abi,
+    address: farmContract.address.mainnet,
+  })
 
   const rewardPerSecond = new BigNumber(await farmMethods.getRewardPerSec(rewardInstance))
 
   const rewardToken = await farmMethods.getRewardToken(rewardInstance)
-  const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
+  const underlyingInstance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: underlying,
+  })
 
   const poolInfo = await farmMethods.getPoolInfo(pid, rewardInstance)
   const allocPoint = poolInfo.allocPoint

@@ -6,9 +6,7 @@ const getApy = async (gaugeAddress, profitSharingFactor) => {
   let apy
 
   try {
-    const response = await client.get(
-      'https://api.curve.fi/api/getFactoGaugesCrvRewards/arbitrum',
-    )
+    const response = await client.get('https://api.curve.fi/api/getFactoGaugesCrvRewards/arbitrum')
     const apyResults = get(response, `data.data.sideChainGaugesApys`, [])
     const result = apyResults.find(
       value => value.address.toLowerCase() === gaugeAddress.toLowerCase(),

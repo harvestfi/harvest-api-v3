@@ -1,5 +1,5 @@
 const BigNumber = require('bignumber.js')
-const { client } = require('../lib/http')  
+const { client } = require('../lib/http')
 
 const { forEach } = require('promised-loops')
 const { pickBy, chunk, isArray, size, get } = require('lodash')
@@ -48,6 +48,8 @@ const { getCLData } = require('../lib/third-party/cl-test')
 const { checkFoldingLeverage } = require('../script/fold-check')
 const logger = require('../lib/logger')
 
+const { contractCacheStats } = require('../lib/web3/contractCache')
+
 const getProfitSharingFactor = chain => {
   switch (chain) {
     case CHAIN_IDS.POLYGON:
@@ -67,7 +69,10 @@ const getProfitSharingFactor = chain => {
 
 const getVaults = async () => {
   console.log('\n-- Getting vaults data --')
+  const poolsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.POOLS })
+  const statsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.STATS })
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
+  const pools = await getUIData(UI_DATA_FILES.POOLS)
   let fetchedETHVaults = [],
     fetchedMATICVaults = [],
     fetchedARBITRUMVaults = [],
@@ -115,8 +120,8 @@ const getVaults = async () => {
   await forEach(hyperevmVaultsBatches, async batch => {
     if (batch) {
       try {
-        // console.log('Getting vault data for: ', batch)
-        const vaultsData = await getVaultsData(batch)
+        console.log('Getting vault data for: ', batch)
+        const vaultsData = await getVaultsData(batch, poolsDoc, statsDoc, tokens, pools)
         fetchedHYPEREVMVaults = fetchedHYPEREVMVaults.concat(vaultsData)
       } catch (err) {
         hasErrors = true
@@ -130,8 +135,8 @@ const getVaults = async () => {
   await forEach(zksyncVaultsBatches, async batch => {
     if (batch) {
       try {
-        // console.log('Getting vault data for: ', batch)
-        const vaultsData = await getVaultsData(batch)
+        console.log('Getting vault data for: ', batch)
+        const vaultsData = await getVaultsData(batch, poolsDoc, statsDoc, tokens, pools)
         fetchedZKSYNCVaults = fetchedZKSYNCVaults.concat(vaultsData)
       } catch (err) {
         hasErrors = true
@@ -144,8 +149,8 @@ const getVaults = async () => {
   console.log('\n-- Getting MATIC vaults data --')
   await forEach(maticVaultsBatches, async batch => {
     try {
-      // console.log('Getting vault data for: ', batch)
-      const vaultsData = await getVaultsData(batch)
+      console.log('Getting vault data for: ', batch)
+      const vaultsData = await getVaultsData(batch, poolsDoc, statsDoc, tokens, pools)
       fetchedMATICVaults = fetchedMATICVaults.concat(vaultsData)
     } catch (err) {
       hasErrors = true
@@ -158,7 +163,7 @@ const getVaults = async () => {
   await forEach(arbitrumVaultsBatches, async batch => {
     if (batch) {
       try {
-        // console.log('Getting vault data for: ', batch)
+        console.log('Getting vault data for: ', batch)
         let vaultsData,
           iporvaultsData,
           iporBatch = [],
@@ -170,7 +175,7 @@ const getVaults = async () => {
             normalBatch.push(vaultId)
           }
         })
-        vaultsData = await getVaultsData(normalBatch)
+        vaultsData = await getVaultsData(normalBatch, poolsDoc, statsDoc, tokens, pools)
         iporvaultsData = await getIPORVaultsData(iporBatch)
         fetchedARBITRUMVaults = fetchedARBITRUMVaults.concat(vaultsData).concat(iporvaultsData)
       } catch (err) {
@@ -185,7 +190,7 @@ const getVaults = async () => {
   await forEach(ethVaultsBatches, async batch => {
     if (batch) {
       try {
-        // console.log('Getting vault data for: ', batch)
+        console.log('Getting vault data for: ', batch)
         let vaultsData,
           iporvaultsData,
           iporBatch = [],
@@ -197,7 +202,7 @@ const getVaults = async () => {
             normalBatch.push(vaultId)
           }
         })
-        vaultsData = await getVaultsData(normalBatch)
+        vaultsData = await getVaultsData(normalBatch, poolsDoc, statsDoc, tokens, pools)
         iporvaultsData = await getIPORVaultsData(iporBatch)
         fetchedETHVaults = fetchedETHVaults.concat(vaultsData).concat(iporvaultsData)
       } catch (err) {
@@ -212,7 +217,7 @@ const getVaults = async () => {
   await forEach(baseVaultsBatches, async batch => {
     if (batch) {
       try {
-        // console.log('Getting vault data for: ', batch)
+        console.log('Getting vault data for: ', batch)
         let vaultsData,
           iporvaultsData,
           iporBatch = [],
@@ -224,7 +229,7 @@ const getVaults = async () => {
             normalBatch.push(vaultId)
           }
         })
-        vaultsData = await getVaultsData(normalBatch)
+        vaultsData = await getVaultsData(normalBatch, poolsDoc, statsDoc, tokens, pools)
         iporvaultsData = await getIPORVaultsData(iporBatch)
         fetchedBASEVaults = fetchedBASEVaults.concat(vaultsData).concat(iporvaultsData)
       } catch (err) {
@@ -315,6 +320,9 @@ const getTokenStats = async () => {
 }
 
 const getPools = async () => {
+  const poolsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.POOLS })
+  const statsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.STATS })
+  const tokens = await getUIData(UI_DATA_FILES.TOKENS)
   const pools = await getUIData(UI_DATA_FILES.POOLS)
   let fetchedETHPools = [],
     fetchedMATICPools = [],
@@ -335,7 +343,7 @@ const getPools = async () => {
 
     if (size(hyperevmPoolBatches)) {
       await forEach(hyperevmPoolBatches, async poolBatch => {
-        const poolData = await getPoolsData(poolBatch)
+        const poolData = await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)
         fetchedHYPEREVMPools = fetchedHYPEREVMPools.concat(poolData)
       })
     } else {
@@ -353,7 +361,7 @@ const getPools = async () => {
 
     if (size(zksyncPoolBatches)) {
       await forEach(zksyncPoolBatches, async poolBatch => {
-        const poolData = await getPoolsData(poolBatch)
+        const poolData = await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)
         fetchedZKSYNCPools = fetchedZKSYNCPools.concat(poolData)
       })
     } else {
@@ -371,7 +379,7 @@ const getPools = async () => {
 
     if (size(maticPoolBatches)) {
       await forEach(maticPoolBatches, async poolBatch => {
-        const poolData = await getPoolsData(poolBatch)
+        const poolData = await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)
         fetchedMATICPools = fetchedMATICPools.concat(poolData)
       })
     } else {
@@ -389,7 +397,7 @@ const getPools = async () => {
 
     if (size(arbitrumPoolBatches)) {
       await forEach(arbitrumPoolBatches, async poolBatch => {
-        const poolData = await getPoolsData(poolBatch)
+        const poolData = await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)
         fetchedARBITRUMPools = fetchedARBITRUMPools.concat(poolData)
       })
     } else {
@@ -407,7 +415,7 @@ const getPools = async () => {
 
     if (size(basePoolBatches)) {
       await forEach(basePoolBatches, async poolBatch => {
-        const poolData = await getPoolsData(poolBatch)
+        const poolData = await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)
         fetchedBASEPools = fetchedBASEPools.concat(poolData)
       })
     } else {
@@ -424,7 +432,7 @@ const getPools = async () => {
     )
     if (size(ethPoolBatches)) {
       await forEach(ethPoolBatches, async poolBatch => {
-        const poolData = await getPoolsData(poolBatch)
+        const poolData = await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)
         fetchedETHPools = fetchedETHPools.concat(poolData)
       })
     } else {
@@ -936,7 +944,11 @@ const getLeaderboardData = async () => {
           const usdValue = new BigNumber(balance.value)
             .times(vault ? vault.usdPrice : balance.vault.priceUnderlying)
             .times(vault ? vault.pricePerFullShare : balance.vault.lastSharePrice)
-            .div(vault ? 10 ** vault.decimals : 10 ** balance.vault.decimal)
+            .div(
+              vault
+                ? new BigNumber(10).pow(Number(vault.decimals))
+                : new BigNumber(10).pow(Number(balance.vault.decimal)),
+            )
           if (usdValue.gt(0)) {
             userBalances[user] = userBalances[user] ? userBalances[user] : {}
             userBalances[user].totalBalance = userBalances[user].totalBalance
@@ -980,7 +992,11 @@ const getLeaderboardData = async () => {
             const poolBalance = new BigNumber(balance.poolBalance)
               .times(vault ? vault.usdPrice : balance.vault.priceUnderlying)
               .times(vault ? vault.pricePerFullShare : balance.vault.lastSharePrice)
-              .div(vault ? 10 ** vault.decimals : 10 ** balance.vault.decimal)
+              .div(
+                vault
+                  ? new BigNumber(10).pow(Number(vault.decimals))
+                  : new BigNumber(10).pow(Number(balance.vault.decimal)),
+              )
             if (pool) {
               const tradingApy = pool.tradingApy ? Number(pool.tradingApy) / 100 : 0
               const dailyTradingApr = tradingApy / 365
@@ -1042,9 +1058,16 @@ const getLeaderboardData = async () => {
             const usdValue = new BigNumber(balance.value)
               .times(vault ? vault.usdPrice : vaultData.priceUnderlying)
               .times(vault ? vault.pricePerFullShare : vaultData.sharePrice)
-              .div(vault ? 10 ** vault.vaultDecimals : 10 ** balance.plasmaVault.decimals)
-              .div(vault ? 10 ** vault.decimals : 10 ** (balance.plasmaVault.decimals - 2))
-
+              .div(
+                vault
+                  ? new BigNumber(10).pow(Number(vault.vaultDecimals))
+                  : new BigNumber(10).pow(Number(balance.plasmaVault.decimals)),
+              )
+              .div(
+                vault
+                  ? new BigNumber(10).pow(Number(vault.decimals))
+                  : new BigNumber(10).pow(Number(balance.plasmaVault.decimals - 2)),
+              )
             if (usdValue.gt(0)) {
               userBalances[user] = userBalances[user] ? userBalances[user] : {}
               userBalances[user].totalBalance = userBalances[user].totalBalance
@@ -1389,38 +1412,47 @@ const preLoadCoingeckoPrices = async () => {
 }
 
 const v8 = require('v8')
+const fs = require('fs')
+const path = require('path')
 const logMem = label => {
-const m = process.memoryUsage()
-  const heap = v8.getHeapSpaceStatistics()
-
-  console.log(`\n=== ${label} ===`)
-  console.log('Memory:', {
-    rss: `${(m.rss / 1024 / 1024).toFixed(1)} MB`,
-    heapUsed: `${(m.heapUsed / 1024 / 1024).toFixed(1)} MB`,
-    heapTotal: `${(m.heapTotal / 1024 / 1024).toFixed(1)} MB`,
-    external: `${(m.external / 1024 / 1024).toFixed(1)} MB`,
+  const m = process.memoryUsage()
+  console.log(label, {
+    rssMB: (m.rss / 1024 / 1024).toFixed(1),
+    heapUsedMB: (m.heapUsed / 1024 / 1024).toFixed(1),
+    heapTotalMB: (m.heapTotal / 1024 / 1024).toFixed(1),
+    externalMB: (m.external / 1024 / 1024).toFixed(1),
+    arrayBuffersMB: (m.arrayBuffers / 1024 / 1024).toFixed(1),
   })
 
+  const heap = v8.getHeapStatistics()
+  console.log('heapStats', {
+    totalAvailMB: (heap.total_available_size / 1024 / 1024).toFixed(1),
+    mallocedMB: (heap.malloced_memory / 1024 / 1024).toFixed(1),
+    externalMemMB: (heap.external_memory / 1024 / 1024).toFixed(1),
+  })
+  const heaps = v8.getHeapSpaceStatistics()
   console.table(
-    heap.map(h => ({
-      space: h.space_name,
-      usedMB: (h.space_used_size / 1024 / 1024).toFixed(1),
-      availableMB: (h.space_available_size / 1024 / 1024).toFixed(1),
-      totalMB: (h.space_size / 1024 / 1024).toFixed(1),
+    heaps.map(hs => ({
+      space: hs.space_name,
+      usedMB: (hs.space_used_size / 1024 / 1024).toFixed(1),
+      availableMB: (hs.space_available_size / 1024 / 1024).toFixed(1),
+      totalMB: (hs.space_size / 1024 / 1024).toFixed(1),
     })),
   )
 }
 
-const logCache = label => {
-  console.log(label, {
-    keys: cache.keys().length,
-    stats: cache.getStats(),
-  })
-}
+// function snap(label) {
+//   fs.mkdirSync('heap-snaps', { recursive: true })
+//   const file = path.join('heap-snaps', `heap-${Date.now()}-${label}.heapsnapshot`)
+//   v8.writeHeapSnapshot(file)
+//   console.log('wrote', file, 'size', fs.statSync(file).size)
+// }
 
 const runUpdateLoop = async () => {
   console.log('\n-- Starting data fetching --')
-  logMem('Memory usage at start of update loop:')
+  // logMem('Memory usage at start of update loop:')
+  // snap('start-update-loop')
+  console.log('[contract-cache]', contractCacheStats())
 
   if (DEBUG_MODE) {
     console.log('\n##################       DEBUG MODE       ###################')
@@ -1451,15 +1483,17 @@ const runUpdateLoop = async () => {
     resetCallCount()
   }
 
-  logMem('Memory usage after getTokenStats:')
-
   await getPools()
 
-  logMem('Memory usage after getPools:')
+  // logMem('Memory usage after getPools:')
+  // snap('after-get-pools')
+  console.log('[contract-cache]', contractCacheStats())
 
   await getVaults()
 
-  logMem('Memory usage after getVaults:')
+  // logMem('Memory usage after getVaults:')
+  // snap('after-get-vaults')
+  console.log('[contract-cache]', contractCacheStats())
 
   await getMainnetUserTransactions()
   await getPolygonUserTransactions()
@@ -1467,8 +1501,6 @@ const runUpdateLoop = async () => {
   await getBaseUserTransactions()
   await getZkSyncUserTransactions()
   await getHyperEVMUserTransactions()
-
-  logMem('Memory usage after getUserTransactions:')
 
   if (ACTIVE_ENDPOINTS === ENDPOINT_TYPES.ALL || ACTIVE_ENDPOINTS === ENDPOINT_TYPES.EXTERNAL) {
     await getTotalGmv()
@@ -1508,7 +1540,6 @@ const runUpdateLoop = async () => {
     // }
   }
 
-  logMem('Memory usage after external endpoint data fetches:')
   await checkFoldingLeverage()
 
   await getCurrencyRates()
@@ -1523,14 +1554,11 @@ const runUpdateLoop = async () => {
     resetCallCount()
   }
 
-  logMem('Memory usage after getHistoricalRates:')
   await getLeaderboardData()
   if (DEBUG_MODE) {
     updateCallCountCache('leaderboard')
     resetCallCount()
   }
-
-  logMem('Memory usage after getLeaderboardData:')
 
   await getGmxData()
   if (DEBUG_MODE) {
@@ -1538,26 +1566,17 @@ const runUpdateLoop = async () => {
     resetCallCount()
   }
 
-  logMem('Memory usage after getGmxData:')
-
   await getCLData()
   if (DEBUG_MODE) {
     updateCallCountCache('clTest')
     resetCallCount()
   }
 
-  logMem('Memory usage after getCLData:')
-
   if (DEBUG_MODE) {
     printCallCountResults()
   }
   console.log('-- Done with data fetching --')
   logMem('Memory usage at end of update loop:')
-
-  if (global.gc) {
-    global.gc()
-    logMem('after forced GC')
-  }
 }
 
 const startPollers = async () => {

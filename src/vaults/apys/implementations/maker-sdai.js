@@ -1,6 +1,7 @@
 const BigNumber = require('bignumber.js')
 const { web3 } = require('../../../lib/web3')
 const { savingsPot } = require('../../../lib/web3/contracts')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (potAddress, reduction) => {
   const {
@@ -8,7 +9,11 @@ const getApy = async (potAddress, reduction) => {
     methods: potMethods,
   } = savingsPot
 
-  const potInstance = new web3.eth.Contract(potAbi, potAddress)
+  const potInstance = getCachedContract({
+    web3,
+    abi: potAbi,
+    address: potAddress,
+  })
   const dsr = new BigNumber(await potMethods.getSavingsRate(potInstance))
 
   const rate = new BigNumber(dsr.div(1e27).pow(3600).toFixed(12)).pow(24 * 365)

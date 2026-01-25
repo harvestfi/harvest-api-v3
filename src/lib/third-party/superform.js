@@ -3,6 +3,7 @@ const { getTokenPrice } = require('../../prices')
 const { token: tokenContract } = require('../web3/contracts')
 const { CHAIN_IDS } = require('../constants')
 const BigNumber = require('bignumber.js')
+const { getCachedContract } = require('../web3/contractCache')
 
 const vaultFormPairs = {
   '0x24174022D382CD155C33A847404cDA5Bc7978802': '0x98D39dFA5F47D8d8cB26978C676f2366B8ae3745',
@@ -28,7 +29,11 @@ const superformRewardData = async () => {
     const formAddress = vaultFormPairs[vaultAddress]
     let rewardUsdPerWeek = new BigNumber(0)
     for (let rewardToken of rewardTokens) {
-      const rewardTokenInstance = new web3.eth.Contract(tokenContract.contract.abi, rewardToken)
+      const rewardTokenInstance = getCachedContract({
+        web3,
+        abi: tokenContract.contract.abi,
+        address: rewardToken,
+      })
       const tokenTransfers = (
         await rewardTokenInstance.getPastEvents('Transfer', {
           fromBlock: 245193055,
@@ -47,11 +52,15 @@ const superformRewardData = async () => {
       rewardUsdPerWeek = rewardUsdPerWeek.plus(rewardPrice.times(lastTransfer.amount).div(1e18))
     }
 
-    const vaultTokenInstance = new web3.eth.Contract(tokenContract.contract.abi, vaultAddress)
+    const vaultTokenInstance = getCachedContract({
+      web3,
+      abi: tokenContract.contract.abi,
+      address: vaultAddress,
+    })
     const vaultDecimals = await tokenContract.methods.getDecimals(vaultTokenInstance)
     const formBalance = new BigNumber(
       await tokenContract.methods.getBalance(formAddress, vaultTokenInstance),
-    ).div(10 ** vaultDecimals)
+    ).div(new BigNumber(10).pow(Number(vaultDecimals)))
     const vaultPrice = new BigNumber(await getTokenPrice(vaultAddress, CHAIN_IDS.ARBITRUM_ONE))
 
     const formTvlUsd = formBalance.times(vaultPrice)

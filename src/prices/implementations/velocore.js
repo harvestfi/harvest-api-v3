@@ -1,6 +1,7 @@
 const BigNumber = require('bignumber.js')
 const { web3ZKSYNC } = require('../../lib/web3')
 const { velocoreLens, token: tokenContractData } = require('../../lib/web3/contracts')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 const { getTokenPrice } = require('..')
 
 const getPrice = async poolAddress => {
@@ -11,7 +12,11 @@ const getPrice = async poolAddress => {
   } = tokenContractData
 
   const web3 = web3ZKSYNC
-  const lensInstance = new web3.eth.Contract(lensContract.abi, lensContract.address.mainnet)
+  const lensInstance = getCachedContract({
+    web3,
+    abi: lensContract.abi,
+    address: lensContract.address.mainnet,
+  })
 
   const poolInfo = await lensMethods.queryPool(poolAddress, lensInstance)
   let token0 =
@@ -35,17 +40,35 @@ const getPrice = async poolAddress => {
   const token0Price = new BigNumber(await getTokenPrice(token0))
   const token1Price = new BigNumber(await getTokenPrice(token1))
 
-  const token0Instance = new web3.eth.Contract(tokenAbi, token0)
+  const token0Instance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: token0,
+  })
   const token0Decimals = await getDecimals(token0Instance)
-  const token1Instance = new web3.eth.Contract(tokenAbi, token1)
+  const token1Instance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: token1,
+  })
   const token1Decimals = await getDecimals(token1Instance)
-  const lpTokenInstance = new web3.eth.Contract(tokenAbi, poolAddress)
+  const lpTokenInstance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: poolAddress,
+  })
   const lpTokenDecimals = await getDecimals(lpTokenInstance)
 
-  const token0Amount = new BigNumber(poolInfo.reserves[0]).div(10 ** token0Decimals)
-  const token1Amount = new BigNumber(poolInfo.reserves[1]).div(10 ** token1Decimals)
+  const token0Amount = new BigNumber(poolInfo.reserves[0]).div(
+    new BigNumber(10).pow(Number(token0Decimals)),
+  )
+  const token1Amount = new BigNumber(poolInfo.reserves[1]).div(
+    new BigNumber(10).pow(Number(token1Decimals)),
+  )
 
-  const totalSupply = new BigNumber(poolInfo.mintedLPTokens[0]).div(10 ** lpTokenDecimals)
+  const totalSupply = new BigNumber(poolInfo.mintedLPTokens[0]).div(
+    new BigNumber(10).pow(Number(lpTokenDecimals)),
+  )
   const totalValue = token0Amount.times(token0Price).plus(token1Amount.times(token1Price))
   return totalValue.div(totalSupply).toFixed()
 }

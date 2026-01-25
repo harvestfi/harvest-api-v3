@@ -4,6 +4,7 @@ const { PENDLE_ENDPOINT } = require('../../../lib/constants')
 const BigNumber = require('bignumber.js')
 const { get } = require('lodash')
 const { client } = require('../../../lib/http')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, chainId, reduction = 1) => {
   const web3 = getWeb3(chainId)
@@ -16,7 +17,11 @@ const getApy = async (underlying, chainId, reduction = 1) => {
     chainId == 1
       ? '0x6E799758CEE75DAe3d84e09D40dc416eCf713652'
       : '0x6DB96BBEB081d2a85E0954C252f2c1dC108b3f81'
-  const marketInstance = new web3.eth.Contract(pendleMarketAbi, underlying)
+  const marketInstance = getCachedContract({
+    web3,
+    abi: pendleMarketAbi,
+    address: underlying,
+  })
 
   const activeBalance = new BigNumber(
     await pendleMarketMethods.getActiveBalance(penpieStaking, marketInstance),

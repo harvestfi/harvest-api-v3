@@ -70,6 +70,11 @@
                         {
                             "components": [
                                 {
+                                    "internalType": "address",
+                                    "name": "feeFactory",
+                                    "type": "address"
+                                },
+                                {
                                     "internalType": "uint256",
                                     "name": "iporDaoManagementFee",
                                     "type": "uint256"
@@ -80,29 +85,43 @@
                                     "type": "uint256"
                                 },
                                 {
-                                    "internalType": "uint256",
-                                    "name": "atomistManagementFee",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "internalType": "uint256",
-                                    "name": "atomistPerformanceFee",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "internalType": "address",
-                                    "name": "feeFactory",
-                                    "type": "address"
-                                },
-                                {
-                                    "internalType": "address",
-                                    "name": "feeRecipientAddress",
-                                    "type": "address"
-                                },
-                                {
                                     "internalType": "address",
                                     "name": "iporDaoFeeRecipientAddress",
                                     "type": "address"
+                                },
+                                {
+                                    "components": [
+                                        {
+                                            "internalType": "address",
+                                            "name": "recipient",
+                                            "type": "address"
+                                        },
+                                        {
+                                            "internalType": "uint256",
+                                            "name": "feeValue",
+                                            "type": "uint256"
+                                        }
+                                    ],
+                                    "internalType": "struct RecipientFee[]",
+                                    "name": "recipientManagementFees",
+                                    "type": "tuple[]"
+                                },
+                                {
+                                    "components": [
+                                        {
+                                            "internalType": "address",
+                                            "name": "recipient",
+                                            "type": "address"
+                                        },
+                                        {
+                                            "internalType": "uint256",
+                                            "name": "feeValue",
+                                            "type": "uint256"
+                                        }
+                                    ],
+                                    "internalType": "struct RecipientFee[]",
+                                    "name": "recipientPerformanceFees",
+                                    "type": "tuple[]"
                                 }
                             ],
                             "internalType": "struct FeeConfig",
@@ -443,6 +462,11 @@
         },
         {
             "inputs": [],
+            "name": "NoSharesToDeposit",
+            "type": "error"
+        },
+        {
+            "inputs": [],
             "name": "NoSharesToMint",
             "type": "error"
         },
@@ -454,6 +478,11 @@
         {
             "inputs": [],
             "name": "NotInitializing",
+            "type": "error"
+        },
+        {
+            "inputs": [],
+            "name": "PermitFailed",
             "type": "error"
         },
         {
@@ -512,6 +541,11 @@
         },
         {
             "inputs": [],
+            "name": "UnauthorizedCaller",
+            "type": "error"
+        },
+        {
+            "inputs": [],
             "name": "UnsupportedFuse",
             "type": "error"
         },
@@ -528,17 +562,17 @@
         {
             "inputs": [
                 {
-                    "internalType": "address",
-                    "name": "caller",
-                    "type": "address"
-                },
-                {
                     "internalType": "uint256",
-                    "name": "requested",
+                    "name": "sharesToRelease",
                     "type": "uint256"
                 }
             ],
-            "name": "WithdrawIsNotAllowed",
+            "name": "WithdrawManagerInvalidSharesToRelease",
+            "type": "error"
+        },
+        {
+            "inputs": [],
+            "name": "WithdrawManagerNotSet",
             "type": "error"
         },
         {
@@ -555,6 +589,11 @@
                 }
             ],
             "name": "WrongCaller",
+            "type": "error"
+        },
+        {
+            "inputs": [],
+            "name": "ZeroAddress",
             "type": "error"
         },
         {
@@ -1054,11 +1093,6 @@
                 },
                 {
                     "internalType": "address",
-                    "name": "owner_",
-                    "type": "address"
-                },
-                {
-                    "internalType": "address",
                     "name": "receiver_",
                     "type": "address"
                 },
@@ -1325,7 +1359,7 @@
             "inputs": [
                 {
                     "internalType": "uint256",
-                    "name": "shares",
+                    "name": "shares_",
                     "type": "uint256"
                 }
             ],
@@ -1344,7 +1378,7 @@
             "inputs": [
                 {
                     "internalType": "uint256",
-                    "name": "assets",
+                    "name": "assets_",
                     "type": "uint256"
                 }
             ],
@@ -1357,6 +1391,68 @@
                 }
             ],
             "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "target",
+                    "type": "address"
+                },
+                {
+                    "internalType": "bytes",
+                    "name": "data",
+                    "type": "bytes"
+                }
+            ],
+            "name": "read",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "bytes",
+                            "name": "data",
+                            "type": "bytes"
+                        }
+                    ],
+                    "internalType": "struct ReadResult",
+                    "name": "result",
+                    "type": "tuple"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "target",
+                    "type": "address"
+                },
+                {
+                    "internalType": "bytes",
+                    "name": "data",
+                    "type": "bytes"
+                }
+            ],
+            "name": "readInternal",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "bytes",
+                            "name": "data",
+                            "type": "bytes"
+                        }
+                    ],
+                    "internalType": "struct ReadResult",
+                    "name": "result",
+                    "type": "tuple"
+                }
+            ],
+            "stateMutability": "nonpayable",
             "type": "function"
         },
         {
@@ -1378,6 +1474,35 @@
                 }
             ],
             "name": "redeem",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "shares_",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "address",
+                    "name": "receiver_",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "owner_",
+                    "type": "address"
+                }
+            ],
+            "name": "redeemFromRequest",
             "outputs": [
                 {
                     "internalType": "uint256",
@@ -1576,61 +1701,12 @@
             "outputs": [
                 {
                     "internalType": "uint256",
-                    "name": "",
+                    "name": "assetsToWithdraw",
                     "type": "uint256"
                 }
             ],
             "stateMutability": "nonpayable",
             "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "authority",
-                    "type": "address"
-                }
-            ],
-            "name": "AccessManagedInvalidAuthority",
-            "type": "error"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "caller",
-                    "type": "address"
-                },
-                {
-                    "internalType": "uint32",
-                    "name": "delay",
-                    "type": "uint32"
-                }
-            ],
-            "name": "AccessManagedRequiredDelay",
-            "type": "error"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "caller",
-                    "type": "address"
-                }
-            ],
-            "name": "AccessManagedUnauthorized",
-            "type": "error"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "target",
-                    "type": "address"
-                }
-            ],
-            "name": "AddressEmptyCode",
-            "type": "error"
         },
         {
             "inputs": [
@@ -1675,6 +1751,22 @@
                     "internalType": "address",
                     "name": "fuse",
                     "type": "address"
+                }
+            ],
+            "name": "BalanceFuseMarketIdMismatch",
+            "type": "error"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "marketId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "address",
+                    "name": "fuse",
+                    "type": "address"
                 },
                 {
                     "internalType": "uint256",
@@ -1688,6 +1780,16 @@
         {
             "inputs": [],
             "name": "CheckpointUnorderedInsertion",
+            "type": "error"
+        },
+        {
+            "inputs": [],
+            "name": "ContextAlreadySet",
+            "type": "error"
+        },
+        {
+            "inputs": [],
+            "name": "ContextNotSet",
             "type": "error"
         },
         {
@@ -1736,98 +1838,12 @@
         {
             "inputs": [
                 {
-                    "internalType": "address",
-                    "name": "spender",
-                    "type": "address"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "allowance",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "needed",
-                    "type": "uint256"
-                }
-            ],
-            "name": "ERC20InsufficientAllowance",
-            "type": "error"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "sender",
-                    "type": "address"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "balance",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "needed",
-                    "type": "uint256"
-                }
-            ],
-            "name": "ERC20InsufficientBalance",
-            "type": "error"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "approver",
-                    "type": "address"
-                }
-            ],
-            "name": "ERC20InvalidApprover",
-            "type": "error"
-        },
-        {
-            "inputs": [
-                {
                     "internalType": "uint256",
                     "name": "cap",
                     "type": "uint256"
                 }
             ],
             "name": "ERC20InvalidCap",
-            "type": "error"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "receiver",
-                    "type": "address"
-                }
-            ],
-            "name": "ERC20InvalidReceiver",
-            "type": "error"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "sender",
-                    "type": "address"
-                }
-            ],
-            "name": "ERC20InvalidSender",
-            "type": "error"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "spender",
-                    "type": "address"
-                }
-            ],
-            "name": "ERC20InvalidSpender",
             "type": "error"
         },
         {
@@ -1880,17 +1896,23 @@
         },
         {
             "inputs": [],
-            "name": "FailedInnerCall",
-            "type": "error"
-        },
-        {
-            "inputs": [],
             "name": "FuseAlreadyExists",
             "type": "error"
         },
         {
             "inputs": [],
             "name": "FuseDoesNotExist",
+            "type": "error"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "fuse",
+                    "type": "address"
+                }
+            ],
+            "name": "FuseUnsupported",
             "type": "error"
         },
         {
@@ -1910,33 +1932,6 @@
             "type": "error"
         },
         {
-            "inputs": [],
-            "name": "InvalidInitialization",
-            "type": "error"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "feeInPercentage",
-                    "type": "uint256"
-                }
-            ],
-            "name": "InvalidManagementFee",
-            "type": "error"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "feeInPercentage",
-                    "type": "uint256"
-                }
-            ],
-            "name": "InvalidPerformanceFee",
-            "type": "error"
-        },
-        {
             "inputs": [
                 {
                     "internalType": "uint256",
@@ -1949,23 +1944,17 @@
         },
         {
             "inputs": [],
-            "name": "NotInitializing",
+            "name": "PreHooksLibInvalidArrayLength",
             "type": "error"
         },
         {
-            "inputs": [
-                {
-                    "internalType": "uint8",
-                    "name": "bits",
-                    "type": "uint8"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "value",
-                    "type": "uint256"
-                }
-            ],
-            "name": "SafeCastOverflowedUintDowncast",
+            "inputs": [],
+            "name": "PreHooksLibInvalidSelector",
+            "type": "error"
+        },
+        {
+            "inputs": [],
+            "name": "UnauthorizedSender",
             "type": "error"
         },
         {
@@ -1982,11 +1971,6 @@
                 }
             ],
             "name": "VotesExpiredSignature",
-            "type": "error"
-        },
-        {
-            "inputs": [],
-            "name": "WrongAddress",
             "type": "error"
         },
         {
@@ -2009,44 +1993,6 @@
             "inputs": [],
             "name": "WrongValue",
             "type": "error"
-        },
-        {
-            "anonymous": false,
-            "inputs": [
-                {
-                    "indexed": true,
-                    "internalType": "address",
-                    "name": "owner",
-                    "type": "address"
-                },
-                {
-                    "indexed": true,
-                    "internalType": "address",
-                    "name": "spender",
-                    "type": "address"
-                },
-                {
-                    "indexed": false,
-                    "internalType": "uint256",
-                    "name": "value",
-                    "type": "uint256"
-                }
-            ],
-            "name": "Approval",
-            "type": "event"
-        },
-        {
-            "anonymous": false,
-            "inputs": [
-                {
-                    "indexed": false,
-                    "internalType": "address",
-                    "name": "authority",
-                    "type": "address"
-                }
-            ],
-            "name": "AuthorityUpdated",
-            "type": "event"
         },
         {
             "anonymous": false,
@@ -2117,6 +2063,32 @@
                 {
                     "indexed": true,
                     "internalType": "address",
+                    "name": "sender_",
+                    "type": "address"
+                }
+            ],
+            "name": "ContextCleared",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "sender_",
+                    "type": "address"
+                }
+            ],
+            "name": "ContextSet",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
                     "name": "delegator",
                     "type": "address"
                 },
@@ -2163,6 +2135,25 @@
         },
         {
             "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "marketId",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256[]",
+                    "name": "newDependenceGraph",
+                    "type": "uint256[]"
+                }
+            ],
+            "name": "DependencyBalanceGraphChanged",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
             "inputs": [],
             "name": "EIP712DomainChanged",
             "type": "event"
@@ -2197,19 +2188,6 @@
             "anonymous": false,
             "inputs": [
                 {
-                    "indexed": false,
-                    "internalType": "uint64",
-                    "name": "version",
-                    "type": "uint64"
-                }
-            ],
-            "name": "Initialized",
-            "type": "event"
-        },
-        {
-            "anonymous": false,
-            "inputs": [
-                {
                     "components": [
                         {
                             "internalType": "address",
@@ -2236,25 +2214,6 @@
             "inputs": [
                 {
                     "indexed": false,
-                    "internalType": "address",
-                    "name": "feeManager",
-                    "type": "address"
-                },
-                {
-                    "indexed": false,
-                    "internalType": "uint256",
-                    "name": "feeInPercentage",
-                    "type": "uint256"
-                }
-            ],
-            "name": "ManagementFeeDataConfigured",
-            "type": "event"
-        },
-        {
-            "anonymous": false,
-            "inputs": [
-                {
-                    "indexed": false,
                     "internalType": "uint256",
                     "name": "marketId",
                     "type": "uint256"
@@ -2267,25 +2226,6 @@
                 }
             ],
             "name": "MarketLimitUpdated",
-            "type": "event"
-        },
-        {
-            "anonymous": false,
-            "inputs": [
-                {
-                    "indexed": false,
-                    "internalType": "uint256",
-                    "name": "marketId",
-                    "type": "uint256"
-                },
-                {
-                    "indexed": false,
-                    "internalType": "bytes32[]",
-                    "name": "substrates",
-                    "type": "bytes32[]"
-                }
-            ],
-            "name": "MarketSubstratesGranted",
             "type": "event"
         },
         {
@@ -2304,32 +2244,25 @@
             "anonymous": false,
             "inputs": [
                 {
+                    "indexed": true,
+                    "internalType": "bytes4",
+                    "name": "selector",
+                    "type": "bytes4"
+                },
+                {
                     "indexed": false,
                     "internalType": "address",
-                    "name": "feeManager",
+                    "name": "newImplementation",
                     "type": "address"
                 },
                 {
                     "indexed": false,
-                    "internalType": "uint256",
-                    "name": "feeInPercentage",
-                    "type": "uint256"
+                    "internalType": "bytes32[]",
+                    "name": "substrates",
+                    "type": "bytes32[]"
                 }
             ],
-            "name": "PerformanceFeeDataConfigured",
-            "type": "event"
-        },
-        {
-            "anonymous": false,
-            "inputs": [
-                {
-                    "indexed": false,
-                    "internalType": "address",
-                    "name": "newPriceOracleMiddleware",
-                    "type": "address"
-                }
-            ],
-            "name": "PriceOracleMiddlewareChanged",
+            "name": "PreHookImplementationChanged",
             "type": "event"
         },
         {
@@ -2349,25 +2282,13 @@
             "anonymous": false,
             "inputs": [
                 {
-                    "indexed": true,
-                    "internalType": "address",
-                    "name": "from",
-                    "type": "address"
-                },
-                {
-                    "indexed": true,
-                    "internalType": "address",
-                    "name": "to",
-                    "type": "address"
-                },
-                {
                     "indexed": false,
                     "internalType": "uint256",
-                    "name": "value",
+                    "name": "newTotalSupplyCap",
                     "type": "uint256"
                 }
             ],
-            "name": "Transfer",
+            "name": "TotalSupplyCapChanged",
             "type": "event"
         },
         {
@@ -2435,86 +2356,6 @@
             "type": "function"
         },
         {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "owner",
-                    "type": "address"
-                },
-                {
-                    "internalType": "address",
-                    "name": "spender",
-                    "type": "address"
-                }
-            ],
-            "name": "allowance",
-            "outputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "spender",
-                    "type": "address"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "value",
-                    "type": "uint256"
-                }
-            ],
-            "name": "approve",
-            "outputs": [
-                {
-                    "internalType": "bool",
-                    "name": "",
-                    "type": "bool"
-                }
-            ],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "authority",
-            "outputs": [
-                {
-                    "internalType": "address",
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "account",
-                    "type": "address"
-                }
-            ],
-            "name": "balanceOf",
-            "outputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
             "inputs": [],
             "name": "cap",
             "outputs": [
@@ -2565,6 +2406,13 @@
         },
         {
             "inputs": [],
+            "name": "clearContext",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
             "name": "clock",
             "outputs": [
                 {
@@ -2605,7 +2453,7 @@
             "inputs": [
                 {
                     "internalType": "address",
-                    "name": "feeManager_",
+                    "name": "feeAccount_",
                     "type": "address"
                 },
                 {
@@ -2623,7 +2471,7 @@
             "inputs": [
                 {
                     "internalType": "address",
-                    "name": "feeManager_",
+                    "name": "feeAccount_",
                     "type": "address"
                 },
                 {
@@ -2639,22 +2487,16 @@
         },
         {
             "inputs": [],
-            "name": "deactivateMarketsLimits",
+            "name": "convertToPublicVault",
             "outputs": [],
             "stateMutability": "nonpayable",
             "type": "function"
         },
         {
             "inputs": [],
-            "name": "decimals",
-            "outputs": [
-                {
-                    "internalType": "uint8",
-                    "name": "",
-                    "type": "uint8"
-                }
-            ],
-            "stateMutability": "view",
+            "name": "deactivateMarketsLimits",
+            "outputs": [],
+            "stateMutability": "nonpayable",
             "type": "function"
         },
         {
@@ -2772,12 +2614,32 @@
         },
         {
             "inputs": [],
+            "name": "enableTransferShares",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
             "name": "getAccessManagerAddress",
             "outputs": [
                 {
                     "internalType": "address",
                     "name": "",
                     "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getActiveMarketsInBalanceFuses",
+            "outputs": [
+                {
+                    "internalType": "uint256[]",
+                    "name": "",
+                    "type": "uint256[]"
                 }
             ],
             "stateMutability": "view",
@@ -2860,7 +2722,7 @@
                     "components": [
                         {
                             "internalType": "address",
-                            "name": "feeManager",
+                            "name": "feeAccount",
                             "type": "address"
                         },
                         {
@@ -2971,7 +2833,7 @@
                     "components": [
                         {
                             "internalType": "address",
-                            "name": "feeManager",
+                            "name": "feeAccount",
                             "type": "address"
                         },
                         {
@@ -2983,6 +2845,38 @@
                     "internalType": "struct PlasmaVaultStorageLib.PerformanceFeeData",
                     "name": "feeData",
                     "type": "tuple"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes4",
+                    "name": "selector_",
+                    "type": "bytes4"
+                }
+            ],
+            "name": "getPreHookImplementation",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getPreHookSelectors",
+            "outputs": [
+                {
+                    "internalType": "bytes4[]",
+                    "name": "",
+                    "type": "bytes4[]"
                 }
             ],
             "stateMutability": "view",
@@ -3112,19 +3006,6 @@
             "type": "function"
         },
         {
-            "inputs": [],
-            "name": "isConsumingScheduledOp",
-            "outputs": [
-                {
-                    "internalType": "bytes4",
-                    "name": "",
-                    "type": "bytes4"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
             "inputs": [
                 {
                     "internalType": "address",
@@ -3175,19 +3056,6 @@
                     "internalType": "bool",
                     "name": "",
                     "type": "bool"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "name",
-            "outputs": [
-                {
-                    "internalType": "string",
-                    "name": "",
-                    "type": "string"
                 }
             ],
             "stateMutability": "view",
@@ -3308,12 +3176,40 @@
         {
             "inputs": [
                 {
-                    "internalType": "address",
-                    "name": "newAuthority",
-                    "type": "address"
+                    "internalType": "uint64[]",
+                    "name": "rolesIds_",
+                    "type": "uint64[]"
+                },
+                {
+                    "internalType": "uint256[]",
+                    "name": "delays_",
+                    "type": "uint256[]"
                 }
             ],
-            "name": "setAuthority",
+            "name": "setMinimalExecutionDelaysForRoles",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes4[]",
+                    "name": "selectors_",
+                    "type": "bytes4[]"
+                },
+                {
+                    "internalType": "address[]",
+                    "name": "implementations_",
+                    "type": "address[]"
+                },
+                {
+                    "internalType": "bytes32[][]",
+                    "name": "substrates_",
+                    "type": "bytes32[][]"
+                }
+            ],
+            "name": "setPreHookImplementations",
             "outputs": [],
             "stateMutability": "nonpayable",
             "type": "function"
@@ -3360,6 +3256,19 @@
         {
             "inputs": [
                 {
+                    "internalType": "address",
+                    "name": "sender_",
+                    "type": "address"
+                }
+            ],
+            "name": "setupContext",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
                     "components": [
                         {
                             "internalType": "uint256",
@@ -3380,32 +3289,6 @@
             "name": "setupMarketsLimits",
             "outputs": [],
             "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "symbol",
-            "outputs": [
-                {
-                    "internalType": "string",
-                    "name": "",
-                    "type": "string"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "totalSupply",
-            "outputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "stateMutability": "view",
             "type": "function"
         },
         {
@@ -3458,6 +3341,29 @@
                     "type": "bool"
                 }
             ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "from_",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "to_",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "amount_",
+                    "type": "uint256"
+                }
+            ],
+            "name": "transferRequestSharesFee",
+            "outputs": [],
             "stateMutability": "nonpayable",
             "type": "function"
         },

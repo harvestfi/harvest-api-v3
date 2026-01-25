@@ -3,6 +3,7 @@ const { web3BASE } = require('../../../lib/web3')
 const { aeroGauge } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
 const { CHAIN_IDS } = require('../../../lib/constants')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, gauge, reduction) => {
   const web3 = web3BASE
@@ -12,7 +13,11 @@ const getApy = async (underlying, gauge, reduction) => {
   } = aeroGauge
 
   const secondsPerYear = 60 * 60 * 24 * 365.25
-  const gaugeInstance = new web3.eth.Contract(gaugeAbi, gauge)
+  const gaugeInstance = getCachedContract({
+    web3,
+    abi: gaugeAbi,
+    address: gauge,
+  })
 
   const now = Date.now() / 1000
   const periodFinish = await gaugeMethods.getPeriodFinish(gaugeInstance)

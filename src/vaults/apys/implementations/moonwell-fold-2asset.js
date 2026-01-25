@@ -4,6 +4,7 @@ const { getTokenPrice } = require('../../../prices')
 const { mToken, moonwellReward, token, loopStrategy } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
 const { getDefiLlamaData } = require('../../../lib/third-party/defillama')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, supplymTokenAddr, borrowmTokenAddr, strategyAddr, reduction) => {
   const web3 = web3BASE
@@ -27,13 +28,25 @@ const getApy = async (underlying, supplymTokenAddr, borrowmTokenAddr, strategyAd
   const well = '0xA88594D404727625A9437C3f886C7643872296AE'
   const secondsPerYear = 60 * 60 * 24 * 365.25
 
-  const supplymTokenInstance = new web3.eth.Contract(mTokenAbi, supplymTokenAddr)
+  const supplymTokenInstance = getCachedContract({
+    web3,
+    abi: mTokenAbi,
+    address: supplymTokenAddr,
+  })
   const supplySnapshot = await mTokenMethods.getAccountSnapshot(strategyAddr, supplymTokenInstance)
 
-  const borrowmTokenInstance = new web3.eth.Contract(mTokenAbi, borrowmTokenAddr)
+  const borrowmTokenInstance = getCachedContract({
+    web3,
+    abi: mTokenAbi,
+    address: borrowmTokenAddr,
+  })
   const borrowSnapshot = await mTokenMethods.getAccountSnapshot(strategyAddr, borrowmTokenInstance)
 
-  const strategyInstance = new web3.eth.Contract(loopStrategyAbi, strategyAddr)
+  const strategyInstance = getCachedContract({
+    web3,
+    abi: loopStrategyAbi,
+    address: strategyAddr,
+  })
   const borrowPrice = new BigNumber(
     await loopStrategyMethods.getBorrowPriceInSupply(strategyInstance),
   )
@@ -80,10 +93,11 @@ const getApy = async (underlying, supplymTokenAddr, borrowmTokenAddr, strategyAd
     .times(suppliedMul)
   const borrowAPR = borrowRate.div(1e18).times(secondsPerYear).times(100).times(borrowedMul)
 
-  const moonwellRewardInstance = new web3.eth.Contract(
-    moonwellRewardAbi,
-    moonwellRewardAddress.mainnet,
-  )
+  const moonwellRewardInstance = getCachedContract({
+    web3,
+    abi: moonwellRewardAbi,
+    address: moonwellRewardAddress.mainnet,
+  })
   let supplyMarketConfigWell, borrowMarketConfigWell
   try {
     supplyMarketConfigWell = await moonwellRewardMethods.getMarketConfig(
@@ -133,18 +147,22 @@ const getApy = async (underlying, supplymTokenAddr, borrowmTokenAddr, strategyAd
   const underlyingPrice = await getTokenPrice(underlying, CHAIN_IDS.BASE)
   const wellPrice = await getTokenPrice(well, CHAIN_IDS.BASE)
 
-  const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
+  const underlyingInstance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: underlying,
+  })
   const underlyingDecimals = await getDecimals(underlyingInstance)
 
   const rewardAPRSupply = wellPerYearSupply
     .times(wellPrice)
-    .div(totalSupply.div(10 ** underlyingDecimals).times(underlyingPrice))
+    .div(totalSupply.div(new BigNumber(10).pow(Number(underlyingDecimals))).times(underlyingPrice))
     .times(100)
     .times(reduction)
     .times(suppliedMul)
   const rewardAPRBorrow = wellPerYearBorrow
     .times(wellPrice)
-    .div(totalBorrows.div(10 ** underlyingDecimals).times(underlyingPrice))
+    .div(totalBorrows.div(new BigNumber(10).pow(Number(underlyingDecimals))).times(underlyingPrice))
     .times(100)
     .times(reduction)
     .times(borrowedMul)

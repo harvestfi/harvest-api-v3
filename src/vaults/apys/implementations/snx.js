@@ -6,6 +6,7 @@ const { getIncentivePoolStats } = require('../../../pools')
 const { UI_DATA_FILES } = require('../../../lib/constants')
 
 const { pool: poolContractInfo } = require('../../../lib/web3/contracts')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (snxPoolAddress, rewardTokenSymbol, lpTokenSymbol, factor) => {
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
@@ -16,10 +17,11 @@ const getApy = async (snxPoolAddress, rewardTokenSymbol, lpTokenSymbol, factor) 
 
   const web3Instance = getWeb3(tokens[lpTokenSymbol].chain)
 
-  const poolInstance = new web3Instance.eth.Contract(
-    poolContractInfo.contract.abi,
-    pool.contractAddress,
-  )
+  const poolInstance = getCachedContract({
+    web3: web3Instance,
+    abi: poolContractInfo.contract.abi,
+    address: pool.contractAddress,
+  })
 
   const poolContractData = {
     ...poolContractInfo,

@@ -4,6 +4,7 @@ const { web3 } = require('../../../lib/web3')
 const { getUIData } = require('../../../lib/data')
 const { getTokenPrice } = require('../../../prices')
 const { token: tokenContractData } = require('../../../lib/web3/contracts')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const { UI_DATA_FILES, PROFIT_SHARING_POOL_ID, DB_CACHE_IDS } = require('../../../lib/constants')
 const tokenAddresses = require('../../../lib/data/addresses.json')
@@ -22,10 +23,18 @@ const getApy = async (poolId, lpToken, buybackFraction) => {
     contract: { abi: tokenAbi },
   } = tokenContractData
 
-  const museInstance = new web3.eth.Contract(museMasterAbi, museMasterAddress.mainnet)
+  const museInstance = getCachedContract({
+    web3,
+    abi: museMasterAbi,
+    address: museMasterAddress.mainnet,
+  })
   const poolInfo = await getPoolInfoMuse(poolId, museInstance)
 
-  const tokenInstance = new web3.eth.Contract(tokenAbi, poolInfo.lpToken)
+  const tokenInstance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: poolInfo.lpToken,
+  })
   const totalStaked = new BigNumber(
     await getBalance(museMasterAddress.mainnet, tokenInstance),
   ).dividedBy(new BigNumber(10).exponentiatedBy(18))

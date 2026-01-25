@@ -21,17 +21,16 @@ const {
 } = require('../lib/web3/contracts/uniswap-v3-vault/methods')
 const contractData = require('../lib/web3/contracts/token/contract.json')
 const { getSymbol, getDecimals } = require('../lib/web3/contracts/token/methods.js')
+const { getCachedContract } = require('../lib/web3/contractCache')
+
 const {
-  DB_CACHE_IDS,
   DEBUG_MODE,
   WEB3_CALL_COUNT_STATS_KEY,
   PROFIT_SHARING_POOL_ID,
-  UI_DATA_FILES,
   POOL_TYPES,
 } = require('../lib/constants')
-const { Cache } = require('../lib/db/models/cache')
-const { getUIData } = require('../lib/data')
 const { forEach } = require('promised-loops')
+const pMap = require('p-map')
 
 const fetchAndExpandVault = async (symbol, poolsDoc, statsDoc, tokens, pools) => {
   if (DEBUG_MODE) {
@@ -57,7 +56,11 @@ const fetchAndExpandVault = async (symbol, poolsDoc, statsDoc, tokens, pools) =>
   const vaultData = tokens[symbol]
   vaultData.id = symbol
 
-  const vaultInstance = new web3Instance.eth.Contract(abi, vaultData.vaultAddress)
+  const vaultInstance = getCachedContract({
+    web3: web3Instance,
+    abi,
+    address: vaultData.vaultAddress,
+  })
 
   totalSupply = await getTotalSupply(vaultInstance)
 
@@ -144,10 +147,11 @@ const fetchAndExpandVault = async (symbol, poolsDoc, statsDoc, tokens, pools) =>
       ranges = [],
       currentRange = {}
 
-    const managedVaultInstance = new web3Instance.eth.Contract(
-      managedVaultData.abi,
-      vaultData.vaultAddress,
-    )
+    const managedVaultInstance = getCachedContract({
+      web3: web3Instance,
+      abi: managedVaultData.abi,
+      address: vaultData.vaultAddress,
+    })
 
     cap = await getCap(managedVaultInstance)
     capLimit = cap[0]
@@ -156,15 +160,24 @@ const fetchAndExpandVault = async (symbol, poolsDoc, statsDoc, tokens, pools) =>
     positionIds = await getPositionIds(managedVaultInstance)
     currentRangePositionId = await getCurrentRangePositionId(managedVaultInstance)
 
-    const nonfungibleContractInstance = new web3Instance.eth.Contract(
-      uniNonFungibleContractData.abi,
-      uniNonFungibleContractData.address.mainnet,
-    )
+    const nonfungibleContractInstance = getCachedContract({
+      web3: web3Instance,
+      abi: uniNonFungibleContractData.abi,
+      address: uniNonFungibleContractData.address.mainnet,
+    })
 
     for (let i = 0; i < positionIds.length; i++) {
       let positions = await getPositions(positionIds[i], nonfungibleContractInstance)
-      let token0 = new web3Instance.eth.Contract(contractData.abi, positions.token0)
-      let token1 = new web3Instance.eth.Contract(contractData.abi, positions.token1)
+      let token0 = getCachedContract({
+        web3: web3Instance,
+        abi: contractData.abi,
+        address: positions.token0,
+      })
+      let token1 = getCachedContract({
+        web3: web3Instance,
+        abi: contractData.abi,
+        address: positions.token1,
+      })
       let token0Decimal = await getDecimals(token0)
       let token1Decimal = await getDecimals(token1)
 
@@ -199,7 +212,11 @@ const fetchAndExpandVault = async (symbol, poolsDoc, statsDoc, tokens, pools) =>
     withdrawalTimestamp = await getWithdrawalTimestamp(managedVaultInstance)
 
     if (capToken !== '0x0000000000000000000000000000000000000000' && capToken !== null) {
-      const contractInstance = new web3Instance.eth.Contract(contractData.abi, capToken)
+      const contractInstance = getCachedContract({
+        web3: web3Instance,
+        abi: contractData.abi,
+        address: capToken,
+      })
       capTokenSymbol = await getSymbol(contractInstance)
       capTokenDecimal = await getDecimals(contractInstance)
       currentCap = await getCurrentCap(managedVaultInstance)
@@ -236,14 +253,11 @@ const fetchAndExpandVault = async (symbol, poolsDoc, statsDoc, tokens, pools) =>
   }
 }
 
-const getVaultsData = async vaultsToFetch => {
-  const poolsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.POOLS })
-  const statsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.STATS })
-  const tokens = await getUIData(UI_DATA_FILES.TOKENS)
-  const pools = await getUIData(UI_DATA_FILES.POOLS)
-
-  return Promise.all(
-    vaultsToFetch.map(vault => fetchAndExpandVault(vault, poolsDoc, statsDoc, tokens, pools)),
+const getVaultsData = async (vaultsToFetch, poolsDoc, statsDoc, tokens, pools) => {
+  return pMap(
+    vaultsToFetch,
+    vault => fetchAndExpandVault(vault, poolsDoc, statsDoc, tokens, pools),
+    { concurrency: Number(process.env.FETCH_CONCURRENCY ?? 5) },
   )
 }
 

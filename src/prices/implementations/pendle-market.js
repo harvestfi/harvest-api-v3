@@ -1,5 +1,5 @@
 const BigNumber = require('bignumber.js')
-const { client } = require('../../lib/http')  
+const { client } = require('../../lib/http')
 const { get } = require('lodash')
 const { PENDLE_ENDPOINT } = require('../../lib/constants')
 const logger = require('../../lib/logger')

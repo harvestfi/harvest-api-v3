@@ -4,6 +4,7 @@ const { syncswapStaking } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
 const { CHAIN_IDS } = require('../../../lib/constants')
 const { getApy: getMerklApy } = require('./merkl')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, strategyAddr, stakingPool, reduction) => {
   const web3 = web3ZKSYNC
@@ -12,7 +13,11 @@ const getApy = async (underlying, strategyAddr, stakingPool, reduction) => {
   let stakingAPY = 0
   if (stakingPool) {
     const secondsPerYear = 60 * 60 * 24 * 365
-    const rewardInstance = new web3.eth.Contract(stakingContract.abi, stakingPool)
+    const rewardInstance = getCachedContract({
+      web3,
+      abi: stakingContract.abi,
+      address: stakingPool,
+    })
 
     const rewardLength = await stakingMethods.getRewardLength(rewardInstance)
 

@@ -2,6 +2,7 @@ const BigNumber = require('bignumber.js')
 const { getWeb3 } = require('../../../lib/web3')
 const { dolomiteMargin, dolomiteMarginMainnet } = require('../../../lib/web3/contracts')
 const { getApy: getMerklApy } = require('./merkl')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (marketId, reduction, chain) => {
   const web3 = getWeb3(chain)
@@ -12,7 +13,11 @@ const getApy = async (marketId, reduction, chain) => {
 
   const secondsPerYear = 3600 * 24 * 365
 
-  const dolomiteInstance = new web3.eth.Contract(dolomiteAbi, dolomiteAddresses.mainnet)
+  const dolomiteInstance = getCachedContract({
+    web3,
+    abi: dolomiteAbi,
+    address: dolomiteAddresses.mainnet,
+  })
   const marketInfo = await dolomiteMethods.getMarketInfo(marketId, dolomiteInstance)
   const earningsRate = new BigNumber(await dolomiteMethods.getEarningsRate(dolomiteInstance)).div(
     1e18,

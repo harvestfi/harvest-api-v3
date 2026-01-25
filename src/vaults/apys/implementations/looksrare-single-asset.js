@@ -9,9 +9,14 @@ const {
   getSharePrice,
 } = require('../../../lib/web3/contracts/looks-feesharing/methods')
 const { getTokenPrice } = require('../../../prices')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (rewardPool, reduction) => {
-  const rewardPoolInstance = new web3.eth.Contract(looksFeeShare.abi, rewardPool)
+  const rewardPoolInstance = getCachedContract({
+    web3,
+    abi: looksFeeShare.abi,
+    address: rewardPool,
+  })
 
   let rewardPerBlock = new BigNumber(await getRewardPerBlock(rewardPoolInstance)).dividedBy(
     new BigNumber(10).exponentiatedBy(18),

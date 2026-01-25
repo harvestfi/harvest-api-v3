@@ -6,6 +6,7 @@ const { mToken } = require('../../../lib/web3/contracts')
 const { web3BASE } = require('../../../lib/web3')
 const { client } = require('../../../lib/http')
 const stringHash = require('string-hash')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -81,7 +82,11 @@ const getApy = async (userAddress, poolAddress, chainId, reduction, fold = false
       } = mToken
       const web3 = web3BASE
 
-      const mTokenInstance = new web3.eth.Contract(mTokenAbi, poolAddress)
+      const mTokenInstance = getCachedContract({
+        web3,
+        abi: mTokenAbi,
+        address: poolAddress,
+      })
       const snapshot = await mTokenMethods.getAccountSnapshot(userAddress, mTokenInstance)
 
       const supplied = new BigNumber(snapshot[1]).times(snapshot[3]).div(1e18)

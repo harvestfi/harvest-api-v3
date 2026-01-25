@@ -3,6 +3,7 @@ const { web3BASE } = require('../../lib/web3')
 
 const routerContract = require('../../lib/web3/contracts/aerodrome-router/contract.json')
 const routerMethods = require('../../lib/web3/contracts/aerodrome-router/methods')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const addresses = require('../../../data/mainnet/addresses.json')
 
@@ -34,10 +35,11 @@ const getPrice = async (
     routes.push(route)
   }
 
-  const routerInstance = new web3BASE.eth.Contract(
-    routerContract.abi,
-    routerContract.address.mainnet,
-  )
+  const routerInstance = getCachedContract({
+    web3: web3BASE,
+    abi: routerContract.abi,
+    address: routerContract.address.mainnet,
+  })
 
   const result = await routerMethods.getAmountsOut(
     new BigNumber(10).pow(17).toString(),

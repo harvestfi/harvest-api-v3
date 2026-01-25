@@ -11,6 +11,7 @@ const { CHAIN_IDS } = require('../../../lib/constants')
 const { UI_DATA_FILES } = require('../../../lib/constants')
 const { getUIData } = require('../../../lib/data')
 const { executeEstimateApyFunctions } = require('..')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (strategyAddress, ntfPoolAddress, factor) => {
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
@@ -28,10 +29,22 @@ const getApy = async (strategyAddress, ntfPoolAddress, factor) => {
     methods: { getPosId },
   } = camelotStrategy
 
-  const nftPoolInstance = new web3.eth.Contract(nftPoolAbi, ntfPoolAddress)
+  const nftPoolInstance = getCachedContract({
+    web3,
+    abi: nftPoolAbi,
+    address: ntfPoolAddress,
+  })
   const masterAddress = await nftPoolMethods.getMaster(nftPoolInstance)
-  const masterInstance = new web3.eth.Contract(masterAbi, masterAddress)
-  const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddress)
+  const masterInstance = getCachedContract({
+    web3,
+    abi: masterAbi,
+    address: masterAddress,
+  })
+  const strategyInstance = getCachedContract({
+    web3,
+    abi: strategyAbi,
+    address: strategyAddress,
+  })
 
   const poolInfo = await nftPoolMethods.getPoolInfo(nftPoolInstance)
   const lpToken = poolInfo.lpToken

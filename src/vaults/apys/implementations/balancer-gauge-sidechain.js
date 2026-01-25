@@ -3,6 +3,7 @@ const { getWeb3 } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
 const { balGauge } = require('../../../lib/web3/contracts')
 const { token: tokenContractData } = require('../../../lib/web3/contracts')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (tokenSymbol, gaugeAddress, factor, chainId) => {
   const web3 = getWeb3(chainId)
@@ -17,7 +18,11 @@ const getApy = async (tokenSymbol, gaugeAddress, factor, chainId) => {
     contract: { abi: tokenAbi },
   } = tokenContractData
 
-  const balGaugeInstance = new web3.eth.Contract(balGaugeAbi, gaugeAddress)
+  const balGaugeInstance = getCachedContract({
+    web3,
+    abi: balGaugeAbi,
+    address: gaugeAddress,
+  })
 
   let rewardTokens = []
 
@@ -49,11 +54,15 @@ const getApy = async (tokenSymbol, gaugeAddress, factor, chainId) => {
         continue
       }
 
-      const tokenInstance = new web3.eth.Contract(tokenAbi, rewardToken)
+      const tokenInstance = getCachedContract({
+        web3,
+        abi: tokenAbi,
+        address: rewardToken,
+      })
       const decimals = await getDecimals(tokenInstance)
 
       const inflationRate = new BigNumber(rewardTokenMeta.rate).dividedBy(
-        new BigNumber(10 ** decimals),
+        new BigNumber(new BigNumber(10).pow(Number(decimals))),
       )
       const tokenPerWeek = inflationRate.times(7).times(86400)
 

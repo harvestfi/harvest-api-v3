@@ -3,6 +3,7 @@ const { web3BASE } = require('../../../lib/web3')
 const { aeroGauge, basedRewards, token: tokenContractData } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
 const { CHAIN_IDS } = require('../../../lib/constants')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, rewardPool, pid, reduction) => {
   const web3 = web3BASE
@@ -16,7 +17,11 @@ const getApy = async (underlying, rewardPool, pid, reduction) => {
   } = tokenContractData
 
   const secondsPerYear = 60 * 60 * 24 * 365.25
-  const rewardInstance = new web3.eth.Contract(rewardAbi, rewardPool)
+  const rewardInstance = getCachedContract({
+    web3,
+    abi: rewardAbi,
+    address: rewardPool,
+  })
 
   const now = Date.now() / 1000
   const startTime = await rewardMethods.getStartTime(rewardInstance)
@@ -29,7 +34,11 @@ const getApy = async (underlying, rewardPool, pid, reduction) => {
   }
 
   const rewardToken = await rewardMethods.getRewardToken(rewardInstance)
-  const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
+  const underlyingInstance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: underlying,
+  })
 
   const poolInfo = await rewardMethods.getPoolInfo(pid, rewardInstance)
   const allocPoint = poolInfo.allocPoint
@@ -40,7 +49,11 @@ const getApy = async (underlying, rewardPool, pid, reduction) => {
       methods: gaugeMethods,
       contract: { abi: gaugeAbi },
     } = aeroGauge
-    const gaugeInstance = new web3.eth.Contract(gaugeAbi, poolInfo.gaugeInfo.gauge)
+    const gaugeInstance = getCachedContract({
+      web3,
+      abi: gaugeAbi,
+      address: poolInfo.gaugeInfo.gauge,
+    })
     const gaugeBalance = new BigNumber(await gaugeMethods.getBalance(rewardPool, gaugeInstance))
     totalSupply = gaugeBalance.plus(await getBalance(rewardPool, underlyingInstance))
   } else {

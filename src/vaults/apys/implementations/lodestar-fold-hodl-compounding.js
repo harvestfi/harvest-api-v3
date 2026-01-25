@@ -1,6 +1,7 @@
 const BigNumber = require('bignumber.js')
 const { web3ARBITRUM } = require('../../../lib/web3')
 const { lodestarCToken: cToken, lodestarStrategy } = require('../../../lib/web3/contracts')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (cTokenAddr, strategyAddr) => {
   const web3 = web3ARBITRUM
@@ -14,7 +15,11 @@ const getApy = async (cTokenAddr, strategyAddr) => {
   } = lodestarStrategy
 
   const blocksPerYear = 2628000
-  const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddr)
+  const strategyInstance = getCachedContract({
+    web3,
+    abi: strategyAbi,
+    address: strategyAddr,
+  })
   const invested = new BigNumber(await strategyMethods.getInvestedBalance(strategyInstance))
   const supplied = new BigNumber(await strategyMethods.getSupplyBalance(strategyInstance))
   const borrowed = new BigNumber(await strategyMethods.getBorrowBalance(strategyInstance))
@@ -27,7 +32,11 @@ const getApy = async (cTokenAddr, strategyAddr) => {
     borrowedMul = new BigNumber(0)
   }
 
-  const cTokenInstance = new web3.eth.Contract(cTokenAbi, cTokenAddr)
+  const cTokenInstance = getCachedContract({
+    web3,
+    abi: cTokenAbi,
+    address: cTokenAddr,
+  })
   const supplyRate = new BigNumber(await cTokenMethods.getSupplyRate(cTokenInstance))
   const borrowRate = new BigNumber(await cTokenMethods.getBorrowRate(cTokenInstance))
   const supplyAPR = supplyRate.div(1e18).times(blocksPerYear).times(100).times(suppliedMul)

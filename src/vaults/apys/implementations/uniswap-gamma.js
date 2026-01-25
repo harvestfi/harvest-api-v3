@@ -7,6 +7,7 @@ const { GAMMA_ENDPOINT } = require('../../../lib/constants')
 const { getTokenPrice } = require('../../../prices')
 
 const { gammaStakingRewards: RewardsContractInfo } = require('../../../lib/web3/contracts')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, stakingRewards, chain, factor) => {
   let tvlUSD = 0
@@ -24,10 +25,11 @@ const getApy = async (underlying, stakingRewards, chain, factor) => {
     methods: { getPeriodFinish, getRewardRate, getRewardToken },
   } = RewardsContractInfo
 
-  const stakingInstance = new web3Instance.eth.Contract(
-    RewardsContractInfo.contract.abi,
-    stakingRewards,
-  )
+  const stakingInstance = getCachedContract({
+    web3: web3Instance,
+    abi: RewardsContractInfo.contract.abi,
+    address: stakingRewards,
+  })
 
   const now = Date.now() / 1000
   const poolPeriodFinish = await getPeriodFinish(stakingInstance)

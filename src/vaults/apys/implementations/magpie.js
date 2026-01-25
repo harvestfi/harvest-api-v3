@@ -3,6 +3,7 @@ const { web3ARBITRUM } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
 const { magpieMaster, wombatStaking, wombatMaster } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlyingAddress, reduction) => {
   const web3 = web3ARBITRUM
@@ -21,18 +22,26 @@ const getApy = async (underlyingAddress, reduction) => {
     methods: mgpMasterMethods,
   } = magpieMaster
 
-  const wombatStakingInstance = new web3.eth.Contract(
-    wombatStakingAbi,
-    wombatStakingAddress.mainnet,
-  )
-  const wombatMasterInstance = new web3.eth.Contract(wombatMasterAbi, wombatMasterAddress.mainnet)
-
+  const wombatStakingInstance = getCachedContract({
+    web3,
+    abi: wombatStakingAbi,
+    address: wombatStakingAddress.mainnet,
+  })
+  const wombatMasterInstance = getCachedContract({
+    web3,
+    abi: wombatMasterAbi,
+    address: wombatMasterAddress.mainnet,
+  })
   const wsPoolInfo = await wombatStakingMethods.getPools(underlyingAddress, wombatStakingInstance)
   const stakingToken = wsPoolInfo.receiptToken
   const poolId = wsPoolInfo.pid
 
   const magpieMasterAddress = await wombatStakingMethods.getMasterMagpie(wombatStakingInstance)
-  const magpieMasterInstance = new web3.eth.Contract(magpieMasterAbi, magpieMasterAddress)
+  const magpieMasterInstance = getCachedContract({
+    web3,
+    abi: magpieMasterAbi,
+    address: magpieMasterAddress,
+  })
   const magpiePoolInfo = await mgpMasterMethods.getPoolData(stakingToken, magpieMasterInstance)
 
   const mgpRate = new BigNumber(magpiePoolInfo.emission)

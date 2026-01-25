@@ -3,6 +3,7 @@ const { radpieReader, radpieRewarder, radpieMaster } = require('../../../lib/web
 const { getTokenPrice } = require('../../../prices')
 const { CHAIN_IDS } = require('../../../lib/constants')
 const BigNumber = require('bignumber.js')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (poolId, rewarder, reduction = 1) => {
   const web3 = web3ARBITRUM
@@ -23,11 +24,23 @@ const getApy = async (poolId, rewarder, reduction = 1) => {
 
   let rdpAPY = 0
 
-  const radpieReaderInstance = new web3.eth.Contract(radpieReaderAbi, radpieReaderAddress.mainnet)
+  const radpieReaderInstance = getCachedContract({
+    web3,
+    abi: radpieReaderAbi,
+    address: radpieReaderAddress.mainnet,
+  })
 
-  const radpieRewarderInstance = new web3.eth.Contract(radpieRewarderAbi, rewarder)
+  const radpieRewarderInstance = getCachedContract({
+    web3,
+    abi: radpieRewarderAbi,
+    address: rewarder,
+  })
 
-  const radpieMasterInstance = new web3.eth.Contract(radpieMasterAbi, radpieMasterAddress.mainnet)
+  const radpieMasterInstance = getCachedContract({
+    web3,
+    abi: radpieMasterAbi,
+    address: radpieMasterAddress.mainnet,
+  })
 
   const account = '0x0000000000000000000000000000000000000000'
 

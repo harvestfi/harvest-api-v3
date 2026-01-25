@@ -8,6 +8,7 @@ const uniNonFungibleContractData = require('../../lib/web3/contracts/uni-non-fun
 const { getAmountsForPosition } = require('../../lib/web3/contracts/unistatus-viewer/methods')
 const { getPositions } = require('../../lib/web3/contracts/uni-non-fungible-manager/methods')
 const { token: tokenContractData } = require('../../lib/web3/contracts')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 const { UI_DATA_FILES } = require('../../lib/constants')
 const { getUIData } = require('../../lib/data')
 
@@ -30,19 +31,21 @@ const getPrice = async (contractAddress, firstToken, secondToken) => {
   if (isVault && isArray(isVault.tokenAddress)) {
     const posId = await getPosId(contractAddress, web3Instance)
 
-    const viewerContractInstance = new web3Instance.eth.Contract(
-      uniStatusViewerContractData.abi,
-      uniStatusViewerContractData.address.mainnet,
-    )
+    const viewerContractInstance = getCachedContract({
+      web3: web3Instance,
+      abi: uniStatusViewerContractData.abi,
+      address: uniStatusViewerContractData.address.mainnet,
+    })
     const amountsForPosition = await getAmountsForPosition(posId, viewerContractInstance)
 
     allFirstAssetInWei = new BigNumber(amountsForPosition[0])
     allSecondAssetInWei = new BigNumber(amountsForPosition[1])
 
-    const nonfungibleContractInstance = new web3Instance.eth.Contract(
-      uniNonFungibleContractData.abi,
-      uniNonFungibleContractData.address.mainnet,
-    )
+    const nonfungibleContractInstance = getCachedContract({
+      web3: web3Instance,
+      abi: uniNonFungibleContractData.abi,
+      address: uniNonFungibleContractData.address.mainnet,
+    })
     const positions = await getPositions(posId, nonfungibleContractInstance)
 
     totalSupplyInWei = new BigNumber(positions.liquidity)
@@ -52,14 +55,26 @@ const getPrice = async (contractAddress, firstToken, secondToken) => {
       allFirstAssetInWei = new BigNumber(await web3Instance.eth.getBalance(contractAddress))
       firstToken = 'WETH'
     } else {
-      const firstInstance = new web3Instance.eth.Contract(abi, tokens[firstToken].tokenAddress)
+      const firstInstance = getCachedContract({
+        web3: web3Instance,
+        abi,
+        address: tokens[firstToken].tokenAddress,
+      })
       allFirstAssetInWei = new BigNumber(await getBalance(contractAddress, firstInstance))
     }
 
-    const secondInstance = new web3Instance.eth.Contract(abi, tokens[secondToken].tokenAddress)
+    const secondInstance = getCachedContract({
+      web3: web3Instance,
+      abi,
+      address: tokens[secondToken].tokenAddress,
+    })
     allSecondAssetInWei = new BigNumber(await getBalance(contractAddress, secondInstance))
 
-    const tokenInstance = new web3Instance.eth.Contract(abi, contractAddress)
+    const tokenInstance = getCachedContract({
+      web3: web3Instance,
+      abi,
+      address: contractAddress,
+    })
     totalSupplyInWei = new BigNumber(await getTotalSupply(tokenInstance))
     pairDecimals = await getDecimals(tokenInstance)
   }

@@ -3,6 +3,7 @@ const { web3 } = require('../../lib/web3')
 
 const verseContract = require('../../lib/web3/contracts/verse/contract.json')
 const verseMethods = require('../../lib/web3/contracts/verse/methods')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const addresses = require('../../lib/data/addresses.json')
 
@@ -14,7 +15,11 @@ const getPrice = async (inTokenAddress, outTokenAddress = addresses.USDC, outTok
     selectedAddresses.push(addresses.USDC)
   }
 
-  const verseInstance = new web3.eth.Contract(verseContract.abi, verseContract.address.mainnet)
+  const verseInstance = getCachedContract({
+    web3,
+    abi: verseContract.abi,
+    address: verseContract.address.mainnet,
+  })
 
   const result = await verseMethods.getAmountsOut(
     new BigNumber(10).pow(18).toString(),

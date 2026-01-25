@@ -3,6 +3,7 @@ const { web3BASE } = require('../web3')
 const { Cache, storeData } = require('../db/models/cache')
 const { DB_CACHE_IDS } = require('../constants')
 const { get } = require('lodash')
+const { getCachedContract } = require('../web3/contractCache')
 
 const getCLData = async () => {
   console.log('\n-- Getting CL test data --')
@@ -49,9 +50,9 @@ const getCLData = async () => {
 
   let data = {}
   for (let vault of vaults) {
-    const vaultContr = new web3.eth.Contract(vaultAbi, vault)
-    const wrapper0 = new web3.eth.Contract(wrapperAbi, wrappers[vault][0])
-    const wrapper1 = new web3.eth.Contract(wrapperAbi, wrappers[vault][1])
+    const vaultContr = getCachedContract({ web3, abi: vaultAbi, address: vault })
+    const wrapper0 = getCachedContract({ web3, abi: wrapperAbi, address: wrappers[vault][0] })
+    const wrapper1 = getCachedContract({ web3, abi: wrapperAbi, address: wrappers[vault][1] })
 
     const currentTick = await vaultMethods.getCurrentTick(vaultContr)
     const upperTick = await vaultMethods.getUpperTick(vaultContr)

@@ -25,6 +25,7 @@ const {
   aaveRewards,
   controller,
 } = require('../../lib/web3/contracts')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const platforms = ['moonwell', 'aave', 'zerolend', 'reactor', 'venus']
 
@@ -59,19 +60,37 @@ const getMarketDataAave = async (vault, chain) => {
     methods: { getDecimals },
   } = token
 
-  const poolInstance = new web3.eth.Contract(poolAbi, vault.AavePool)
+  const poolInstance = getCachedContract({
+    web3,
+    abi: poolAbi,
+    address: vault.AavePool,
+  })
   const assetData = await poolMethods.getReserveData(vault.Underlying, poolInstance)
-  const aTokenInstance = new web3.eth.Contract(aTokenAbi, assetData.aTokenAddress)
-  const debtTokenInstance = new web3.eth.Contract(aTokenAbi, assetData.variableDebtTokenAddress)
+  const aTokenInstance = getCachedContract({
+    web3,
+    abi: aTokenAbi,
+    address: assetData.aTokenAddress,
+  })
+  const debtTokenInstance = getCachedContract({
+    web3,
+    abi: aTokenAbi,
+    address: assetData.variableDebtTokenAddress,
+  })
   const underlyingPrice = await getTokenPrice(vault.Underlying, chain)
-  const underlyingInstance = new web3.eth.Contract(tokenAbi, vault.Underlying)
+  const underlyingInstance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: vault.Underlying,
+  })
   const underlyingDecimals = await getDecimals(underlyingInstance)
 
   const usdSupplied = new BigNumber(await aTokenMethods.getTotalSupply(aTokenInstance))
     .times(underlyingPrice)
-    .div(10 ** underlyingDecimals)
+    .div(new BigNumber(10).pow(Number(underlyingDecimals)))
   const totalDebt = new BigNumber(await aTokenMethods.getTotalSupply(debtTokenInstance))
-  const usdBorrowed = totalDebt.times(underlyingPrice).div(10 ** underlyingDecimals)
+  const usdBorrowed = totalDebt
+    .times(underlyingPrice)
+    .div(new BigNumber(10).pow(Number(underlyingDecimals)))
 
   const MASK_16 = (1n << 16n) - 1n // 0xFFFFn
   const config = BigInt(assetData.configuration[0])
@@ -96,7 +115,11 @@ const getMarketDataAave = async (vault, chain) => {
       true,
       virtualBalance.toFixed(),
     ]
-    interestInstance = new web3.eth.Contract(aaveInterestAbi, assetData.interestRateStrategyAddress)
+    interestInstance = getCachedContract({
+      web3,
+      abi: aaveInterestAbi,
+      address: assetData.interestRateStrategyAddress,
+    })
     interestMethods = aaveInterestMethods
   } else if (vault.platform == 'zerolend') {
     interestParams = [
@@ -110,7 +133,11 @@ const getMarketDataAave = async (vault, chain) => {
       vault.Underlying,
       assetData.aTokenAddress,
     ]
-    interestInstance = new web3.eth.Contract(zeroInterestAbi, assetData.interestRateStrategyAddress)
+    interestInstance = getCachedContract({
+      web3,
+      abi: zeroInterestAbi,
+      address: assetData.interestRateStrategyAddress,
+    })
     interestMethods = zeroInterestMethods
   }
 
@@ -119,9 +146,15 @@ const getMarketDataAave = async (vault, chain) => {
     await aTokenMethods.balanceOf(vault.NewStrategy, debtTokenInstance),
   )
   const invested = supplied.minus(borrowed)
-  const usdTVLVault = invested.times(underlyingPrice).div(10 ** underlyingDecimals)
-  const usdSuppliedVault = supplied.times(underlyingPrice).div(10 ** underlyingDecimals)
-  const usdBorrowedVault = borrowed.times(underlyingPrice).div(10 ** underlyingDecimals)
+  const usdTVLVault = invested
+    .times(underlyingPrice)
+    .div(new BigNumber(10).pow(Number(underlyingDecimals)))
+  const usdSuppliedVault = supplied
+    .times(underlyingPrice)
+    .div(new BigNumber(10).pow(Number(underlyingDecimals)))
+  const usdBorrowedVault = borrowed
+    .times(underlyingPrice)
+    .div(new BigNumber(10).pow(Number(underlyingDecimals)))
 
   const marketData = {
     usdSupplied: usdSupplied,
@@ -164,11 +197,21 @@ const getMarketDataCompound = async (vault, chain) => {
     mTokenAddress = vault.cToken
   }
 
-  const mTokenInstance = new web3.eth.Contract(mTokenAbi, mTokenAddress)
+  const mTokenInstance = getCachedContract({
+    web3,
+    abi: mTokenAbi,
+    address: mTokenAddress,
+  })
   const comptrollerAddr = await mTokenMethods.getComptroller(mTokenInstance)
-  const comptrollerInstance = new web3.eth.Contract(comptrollerAbi, comptrollerAddr)
+  const comptrollerInstance = getCachedContract({
+    web3,
+    abi: comptrollerAbi,
+    address: comptrollerAddr,
+  })
   const mkt = await comptrollerMethods.getCollateralFactor(mTokenAddress, comptrollerInstance)
-  const collateralFactor = new BigNumber(mkt.collateralFactorMantissa).div(1e18)
+  const collateralFactor = new BigNumber(mkt.collateralFactorMantissa).div(
+    new BigNumber(10).pow(18),
+  )
   const interestRateModel = await mTokenMethods.getInterestRateModel(mTokenInstance)
 
   let jumprateMethods, interestInstance
@@ -178,14 +221,22 @@ const getMarketDataCompound = async (vault, chain) => {
       methods: interestMethods,
     } = venusJumpRateModel
     jumprateMethods = interestMethods
-    interestInstance = new web3.eth.Contract(jumpRateAbi, interestRateModel)
+    interestInstance = getCachedContract({
+      web3,
+      abi: jumpRateAbi,
+      address: interestRateModel,
+    })
   } else {
     let {
       contract: { abi: jumpRateAbi },
       methods: interestMethods,
     } = jumpRateModel
     jumprateMethods = interestMethods
-    interestInstance = new web3.eth.Contract(jumpRateAbi, interestRateModel)
+    interestInstance = getCachedContract({
+      web3,
+      abi: jumpRateAbi,
+      address: interestRateModel,
+    })
   }
 
   const cash = new BigNumber(await mTokenMethods.getCash(mTokenInstance))
@@ -194,24 +245,35 @@ const getMarketDataCompound = async (vault, chain) => {
   const reserveFactor = new BigNumber(await mTokenMethods.getReserveFactor(mTokenInstance))
 
   const underlyingPrice = await getTokenPrice(vault.Underlying, chain)
-  const underlyingInstance = new web3.eth.Contract(tokenAbi, vault.Underlying)
+  const underlyingInstance = getCachedContract({
+    web3,
+    abi: tokenAbi,
+    address: vault.Underlying,
+  })
   const underlyingDecimals = await getDecimals(underlyingInstance)
 
   const usdSupplied = cash
     .plus(borrows)
     .plus(reserves)
     .times(underlyingPrice)
-    .div(10 ** underlyingDecimals)
-  const usdBorrowed = borrows.times(underlyingPrice).div(10 ** underlyingDecimals)
+    .div(new BigNumber(10).pow(Number(underlyingDecimals)))
+  const usdBorrowed = borrows
+    .times(underlyingPrice)
+    .div(new BigNumber(10).pow(Number(underlyingDecimals)))
 
   const snapshot = await mTokenMethods.getAccountSnapshot(vault.NewStrategy, mTokenInstance)
-  const supplied = new BigNumber(snapshot[1]).times(snapshot[3]).div(1e18)
+  const supplied = new BigNumber(snapshot[1]).times(snapshot[3]).div(new BigNumber(10).pow(18))
   const borrowed = new BigNumber(snapshot[2])
   const invested = supplied.minus(borrowed)
-  const usdTVLVault = invested.times(underlyingPrice).div(10 ** underlyingDecimals)
-  const usdSuppliedVault = supplied.times(underlyingPrice).div(10 ** underlyingDecimals)
-  const usdBorrowedVault = borrowed.times(underlyingPrice).div(10 ** underlyingDecimals)
-
+  const usdTVLVault = invested
+    .times(underlyingPrice)
+    .div(new BigNumber(10).pow(Number(underlyingDecimals)))
+  const usdSuppliedVault = supplied
+    .times(underlyingPrice)
+    .div(new BigNumber(10).pow(Number(underlyingDecimals)))
+  const usdBorrowedVault = borrowed
+    .times(underlyingPrice)
+    .div(new BigNumber(10).pow(Number(underlyingDecimals)))
   const marketData = {
     usdSupplied: usdSupplied,
     usdBorrowed: usdBorrowed,
@@ -250,7 +312,11 @@ const getRewardDataMoonwell = async (vault, chain) => {
 
   const now = Date.now() / 1000
   const timePerYear = new BigNumber(31536000)
-  const rewardInstance = new web3.eth.Contract(moonwellRewardAbi, moonwellRewardAddress.mainnet)
+  const rewardInstance = getCachedContract({
+    web3,
+    abi: moonwellRewardAbi,
+    address: moonwellRewardAddress.mainnet,
+  })
   const rewardConfigs = await moonwellRewardMethods.getAllMarketConfigs(
     vault.mToken,
     rewardInstance,
@@ -263,14 +329,18 @@ const getRewardDataMoonwell = async (vault, chain) => {
       const rateBorrow = new BigNumber(config.borrowEmissionsPerSec)
       const rewardToken = config.emissionToken
       const rewardPrice = await getTokenPrice(rewardToken, chain)
-      const rewardTokenInstance = new web3.eth.Contract(tokenAbi, rewardToken)
+      const rewardTokenInstance = getCachedContract({
+        web3,
+        abi: tokenAbi,
+        address: rewardToken,
+      })
       const rewardDecimals = await getDecimals(rewardTokenInstance)
       if (rateSupply.gt(0)) {
         usdRewardSupply = usdRewardSupply.plus(
           rateSupply
             .times(timePerYear)
             .times(rewardPrice)
-            .div(10 ** rewardDecimals),
+            .div(new BigNumber(10).pow(Number(rewardDecimals))),
         )
       }
       if (rateBorrow.gt(1)) {
@@ -278,7 +348,7 @@ const getRewardDataMoonwell = async (vault, chain) => {
           rateBorrow
             .times(timePerYear)
             .times(rewardPrice)
-            .div(10 ** rewardDecimals),
+            .div(new BigNumber(10).pow(Number(rewardDecimals))),
         )
       }
     }
@@ -310,27 +380,43 @@ const getRewardDataVenus = async (vault, chain) => {
   let usdRewardSupply = new BigNumber(0)
   let usdRewardBorrow = new BigNumber(0)
 
-  const cTokenInstance = new web3.eth.Contract(cTokenAbi, vault.cToken)
+  const cTokenInstance = getCachedContract({
+    web3,
+    abi: cTokenAbi,
+    address: vault.cToken,
+  })
   const comptrollerAddress = await cTokenMethods.getComptroller(cTokenInstance)
-  const comptrollerInstance = new web3.eth.Contract(comptrollerAbi, comptrollerAddress)
+  const comptrollerInstance = getCachedContract({
+    web3,
+    abi: comptrollerAbi,
+    address: comptrollerAddress,
+  })
   const distributors = await comptrollerMethods.getRewardDistributors(comptrollerInstance)
 
   for (const distributor of distributors) {
-    const distributorInstance = new web3.eth.Contract(distributorAbi, distributor)
+    const distributorInstance = getCachedContract({
+      web3,
+      abi: distributorAbi,
+      address: distributor,
+    })
     const rewardToken = await distributorMethods.getRewardToken(distributorInstance)
     const rewardPrice = await getTokenPrice(rewardToken, chain)
-    const rewardTokenInstance = new web3.eth.Contract(tokenAbi, rewardToken)
+    const rewardTokenInstance = getCachedContract({
+      web3,
+      abi: tokenAbi,
+      address: rewardToken,
+    })
     const rewardDecimals = await getDecimals(rewardTokenInstance)
     const rewardPerYearSupply = new BigNumber(
       await distributorMethods.getSupplyRate(vault.cToken, distributorInstance),
     )
       .times(timePerYear)
-      .div(10 ** rewardDecimals)
+      .div(new BigNumber(10).pow(Number(rewardDecimals)))
     const rewardPerYearBorrow = new BigNumber(
       await distributorMethods.getBorrowRate(vault.cToken, distributorInstance),
     )
       .times(timePerYear)
-      .div(10 ** rewardDecimals)
+      .div(new BigNumber(10).pow(Number(rewardDecimals)))
     usdRewardSupply = usdRewardSupply.plus(rewardPerYearSupply.times(rewardPrice))
     usdRewardBorrow = usdRewardBorrow.plus(rewardPerYearBorrow.times(rewardPrice))
   }
@@ -351,9 +437,17 @@ const getRewardDataLodestar = async (vault, chain) => {
 
   const timePerYear = new BigNumber(2628000)
 
-  const cTokenInstance = new web3.eth.Contract(cTokenAbi, vault.cToken)
+  const cTokenInstance = getCachedContract({
+    web3,
+    abi: cTokenAbi,
+    address: vault.cToken,
+  })
   const comptrollerAddress = await cTokenMethods.getComptroller(cTokenInstance)
-  const comptrollerInstance = new web3.eth.Contract(comptrollerAbi, comptrollerAddress)
+  const comptrollerInstance = getCachedContract({
+    web3,
+    abi: comptrollerAbi,
+    address: comptrollerAddress,
+  })
 
   const rewardToken = '0xF19547f9ED24aA66b03c3a552D181Ae334FBb8DB'
   const rewardPrice = await getTokenPrice(rewardToken, chain)
@@ -362,13 +456,13 @@ const getRewardDataLodestar = async (vault, chain) => {
   )
     .times(timePerYear)
     .times(rewardPrice)
-    .div(1e18)
+    .div(new BigNumber(10).pow(18))
   const usdRewardBorrow = new BigNumber(
     await comptrollerMethods.getBorrowRewardRate(vault.cToken, comptrollerInstance),
   )
     .times(timePerYear)
     .times(rewardPrice)
-    .div(1e18)
+    .div(new BigNumber(10).pow(18))
 
   return [usdRewardSupply, usdRewardBorrow]
 }
@@ -395,13 +489,22 @@ const getRewardDataAave = async (vault, chain) => {
   const timePerYear = new BigNumber(31536000)
   const now = Date.now() / 1000
 
-  const poolInstance = new web3.eth.Contract(poolAbi, vault.AavePool)
+  const poolInstance = getCachedContract({
+    web3,
+    abi: poolAbi,
+    address: vault.AavePool,
+  })
   const assetData = await poolMethods.getReserveData(vault.Underlying, poolInstance)
-  const aTokenInstance = new web3.eth.Contract(aTokenAbi, assetData.aTokenAddress)
-  const supplyRewardsInstance = new web3.eth.Contract(
-    rewardsAbi,
-    await aTokenMethods.getIncentivesController(aTokenInstance),
-  )
+  const aTokenInstance = getCachedContract({
+    web3,
+    abi: aTokenAbi,
+    address: assetData.aTokenAddress,
+  })
+  const supplyRewardsInstance = getCachedContract({
+    web3,
+    abi: rewardsAbi,
+    address: await aTokenMethods.getIncentivesController(aTokenInstance),
+  })
 
   const supplyRewardList = await rewardsMethods.getRewardsList(supplyRewardsInstance)
   let usdRewardSupply = new BigNumber(0)
@@ -418,19 +521,28 @@ const getRewardDataAave = async (vault, chain) => {
       continue
     }
     const rewardPrice = await getTokenPrice(supplyRewardList[reward], chain)
-    const rewardTokenInstance = new web3.eth.Contract(tokenAbi, supplyRewardList[reward])
+    const rewardTokenInstance = getCachedContract({
+      web3,
+      abi: tokenAbi,
+      address: supplyRewardList[reward],
+    })
     const rewardDecimals = await getDecimals(rewardTokenInstance)
     const emissionPerYear = new BigNumber(rewardsData[1])
       .times(timePerYear)
-      .div(10 ** rewardDecimals)
+      .div(new BigNumber(10).pow(Number(rewardDecimals)))
     usdRewardSupply = usdRewardSupply.plus(emissionPerYear.times(rewardPrice))
   }
 
-  const debtTokenInstance = new web3.eth.Contract(aTokenAbi, assetData.variableDebtTokenAddress)
-  const borrowRewardsInstance = new web3.eth.Contract(
-    rewardsAbi,
-    await aTokenMethods.getIncentivesController(debtTokenInstance),
-  )
+  const debtTokenInstance = getCachedContract({
+    web3,
+    abi: aTokenAbi,
+    address: assetData.variableDebtTokenAddress,
+  })
+  const borrowRewardsInstance = getCachedContract({
+    web3,
+    abi: rewardsAbi,
+    address: await aTokenMethods.getIncentivesController(debtTokenInstance),
+  })
 
   const borrowRewardList = await rewardsMethods.getRewardsList(borrowRewardsInstance)
   let usdRewardBorrow = new BigNumber(0)
@@ -447,11 +559,15 @@ const getRewardDataAave = async (vault, chain) => {
       continue
     }
     const rewardPrice = await getTokenPrice(borrowRewardList[reward], chain)
-    const rewardTokenInstance = new web3.eth.Contract(tokenAbi, borrowRewardList[reward])
+    const rewardTokenInstance = getCachedContract({
+      web3,
+      abi: tokenAbi,
+      address: borrowRewardList[reward],
+    })
     const rewardDecimals = await getDecimals(rewardTokenInstance)
     const emissionPerYear = new BigNumber(rewardsData[1])
       .times(timePerYear)
-      .div(10 ** rewardDecimals)
+      .div(new BigNumber(10).pow(Number(rewardDecimals)))
     usdRewardBorrow = usdRewardBorrow.plus(emissionPerYear.times(rewardPrice))
   }
 
@@ -491,7 +607,11 @@ const getMarketData = async (vault, chain) => {
       contract: { abi: poolAbi },
       methods: poolMethods,
     } = seamlessPool
-    const poolInstance = new web3.eth.Contract(poolAbi, vault.AavePool)
+    const poolInstance = getCachedContract({
+      web3,
+      abi: poolAbi,
+      address: vault.AavePool,
+    })
     const assetData = await poolMethods.getReserveData(vault.Underlying, poolInstance)
     const merklSupply = new BigNumber(
       await getMerklApy(vault.NewStrategy, assetData.aTokenAddress, chain, 1),
@@ -724,8 +844,16 @@ const checkFoldingLeverage = async () => {
         contract: { abi: controllerAbi },
       } = controller
       const web3 = await getWeb3(CHAIN_IDS[chain])
-      const strategyInstance = new web3.eth.Contract(strategyAbi, vault.NewStrategy)
-      const controllerInstance = new web3.eth.Contract(controllerAbi, controllerAddress)
+      const strategyInstance = getCachedContract({
+        web3,
+        abi: strategyAbi,
+        address: vault.NewStrategy,
+      })
+      const controllerInstance = getCachedContract({
+        web3,
+        abi: controllerAbi,
+        address: controllerAddress,
+      })
       try {
         await strategyMethods.fold(strategyInstance)
       } catch (e) {

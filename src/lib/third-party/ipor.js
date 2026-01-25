@@ -9,6 +9,7 @@ const { UI_DATA_FILES, DB_CACHE_IDS } = require('../constants')
 const { fetchAndExpandVault } = require('../../vaults')
 const { getUIData } = require('../data')
 const { Cache } = require('../db/models/cache')
+const { getCachedContract } = require('../web3/contractCache')
 
 const getPlasmaVaultData = async (underlying, pVault, chain) => {
   const web3 = await getWeb3(chain)
@@ -26,8 +27,8 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
     methods: { getDecimals, getBalance },
     contract: { abi: tokenAbi },
   } = tokenContractData
-  const pVaultInstance = new web3.eth.Contract(contract.abi, pVault)
-  const underlyingInstance = new web3.eth.Contract(tokenAbi, underlying)
+  const pVaultInstance = getCachedContract({ web3, abi: contract.abi, address: pVault })
+  const underlyingInstance = getCachedContract({ web3, abi: tokenAbi, address: underlying })
   const underlyingDecimal = await getDecimals(underlyingInstance)
 
   const data = await methods.getManagementFeeData(pVaultInstance)
@@ -40,7 +41,7 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
   if (fuses && fuses.length > 0) {
     await Promise.all(
       fuses.map(async (fuse, index) => {
-        const fuseInstance = new web3.eth.Contract(fuseAbi, fuse)
+        const fuseInstance = getCachedContract({ web3, abi: fuseAbi, address: fuse })
         const marketId = await getMarketId(fuseInstance)
         const substrates = await methods.getMarketSubstrates(pVaultInstance, marketId)
         if (!substrates || substrates.length === 0) {
@@ -59,7 +60,7 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
         const hVaultData = await fetchAndExpandVault(hVaultId, poolsDoc, statsDoc, tokens, pools)
         const underlyingAssetsInMarket = new BigNumber(
           await methods.getAssetsInMarket(pVaultInstance, marketId),
-        ).div(10 ** underlyingDecimal)
+        ).div(new BigNumber(10).pow(Number(underlyingDecimal)))
         assetsOld = assetsOld.plus(underlyingAssetsInMarket)
         assetsNew = assetsNew.plus(
           underlyingAssetsInMarket.times(100 + Number(hVaultData?.estimatedApy)).div(100),
@@ -75,7 +76,7 @@ const getPlasmaVaultData = async (underlying, pVault, chain) => {
   }
 
   const notInvestedAmount = new BigNumber(await getBalance(pVault, underlyingInstance)).div(
-    10 ** underlyingDecimal,
+    new BigNumber(10).pow(Number(underlyingDecimal)),
   )
 
   const notInvestedData = {

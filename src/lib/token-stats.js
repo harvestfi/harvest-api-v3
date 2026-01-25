@@ -6,6 +6,7 @@ const addresses = require('./data/addresses.json')
 const { UI_DATA_FILES } = require('./constants')
 const { getUIData } = require('./data')
 const { getTokenPrice } = require('../prices')
+const { getCachedContract } = require('./web3/contractCache')
 
 const getTotalFARMSupply = () => {
   return 690420
@@ -28,7 +29,11 @@ const getPercentOfFARMStaked = async () => {
 
   const totalSupply = getTotalFARMSupply()
 
-  const farmPoolInstance = new web3.eth.Contract(poolContract.abi, farmPool.contractAddress)
+  const farmPoolInstance = getCachedContract({
+    web3,
+    abi: poolContract.abi,
+    address: farmPool.contractAddress,
+  })
 
   const farmPoolTotalSupply = await poolMethods.totalSupply(farmPoolInstance)
 

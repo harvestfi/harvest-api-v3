@@ -1,6 +1,7 @@
 const BigNumber = require('bignumber.js')
 const { web3ARBITRUM } = require('../../../lib/web3')
 const { siloLens } = require('../../../lib/web3/contracts')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (siloAddress, reduction) => {
   const {
@@ -8,7 +9,11 @@ const getApy = async (siloAddress, reduction) => {
     methods: lensMethods,
   } = siloLens
 
-  const lensInstance = new web3ARBITRUM.eth.Contract(lensAbi, lensAddress.mainnet)
+  const lensInstance = getCachedContract({
+    web3: web3ARBITRUM,
+    abi: lensAbi,
+    address: lensAddress.mainnet,
+  })
   const rateRaw = new BigNumber(await lensMethods.getDepositAPR(siloAddress, lensInstance))
 
   let apy = rateRaw.div(1e16)

@@ -4,6 +4,7 @@ const { getTokenPrice } = require('../../../prices')
 const { CHAIN_IDS } = require('../../../lib/constants')
 const { crv, crvGauge, crvController } = require('../../../lib/web3/contracts')
 const tokenAddresses = require('../../../lib/data/addresses.json')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (
   tokenSymbol,
@@ -37,17 +38,33 @@ const getApy = async (
     methods: crvGaugeMethods,
   } = crvGauge
 
-  const rewardTokenInstance = new web3Eth.eth.Contract(crvAbi, tokenAddresses.CRV)
-  const crvControllerInstance = new web3Eth.eth.Contract(crvControllerAbi, crvControllerAddress)
+  const rewardTokenInstance = getCachedContract({
+    web3: web3Eth,
+    abi: crvAbi,
+    address: tokenAddresses.CRV,
+  })
+  const crvControllerInstance = getCachedContract({
+    web3: web3Eth,
+    abi: crvControllerAbi,
+    address: crvControllerAddress,
+  })
 
   let gaugeInstance, weight
   if (chain == CHAIN_IDS.ETH) {
-    gaugeInstance = new web3Eth.eth.Contract(crvGaugeAbi, gaugeAddress)
+    gaugeInstance = getCachedContract({
+      web3: web3Eth,
+      abi: crvGaugeAbi,
+      address: gaugeAddress,
+    })
     weight = new BigNumber(
       await crvControllerMethods.getGaugeRelativeWeight(gaugeAddress, crvControllerInstance),
     ).dividedBy(new BigNumber(10).exponentiatedBy(18))
   } else {
-    gaugeInstance = new web3Polygon.eth.Contract(crvGaugeAbi, gaugeAddress)
+    gaugeInstance = getCachedContract({
+      web3: web3Polygon,
+      abi: crvGaugeAbi,
+      address: gaugeAddress,
+    })
     weight = new BigNumber(
       await crvControllerMethods.getGaugeRelativeWeight(
         rootChainGaugeAddress,

@@ -6,6 +6,7 @@ const { getWeb3 } = require('../../lib/web3')
 const { getUIData } = require('../../lib/data')
 
 const { vault: vaultContractData } = require('../../lib/web3/contracts')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const { UI_DATA_FILES, CHAIN_IDS } = require('../../lib/constants')
 
@@ -18,7 +19,11 @@ const getPrice = async (tokenAddress, tokenDecimals, chain = CHAIN_IDS.ETH) => {
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
 
   const web3Instance = getWeb3(chain)
-  const fTokenVaultInstance = new web3Instance.eth.Contract(vaultAbi, tokenAddress)
+  const fTokenVaultInstance = getCachedContract({
+    web3: web3Instance,
+    abi: vaultAbi,
+    address: tokenAddress,
+  })
 
   let tokenSymbol = Object.keys(tokens).find(
     token => tokens[token].vaultAddress === tokenAddress && tokens[token].chain === chain,

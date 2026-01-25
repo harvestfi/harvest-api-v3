@@ -14,6 +14,7 @@ const { UI_DATA_FILES } = require('../../../lib/constants')
 const { getUIData } = require('../../../lib/data')
 const addresses = require('../../../lib/data/addresses.json')
 const { executeEstimateApyFunctions } = require('..')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor) => {
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
@@ -39,14 +40,30 @@ const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor)
     methods: { getDecimals },
   } = tokenContract
 
-  const nftPoolInstance = new web3.eth.Contract(nftPoolAbi, ntfPoolAddress)
+  const nftPoolInstance = getCachedContract({
+    web3,
+    abi: nftPoolAbi,
+    address: ntfPoolAddress,
+  })
   const masterAddress = await nftPoolMethods.getMaster(nftPoolInstance)
-  const masterInstance = new web3.eth.Contract(masterAbi, masterAddress)
-  const strategyInstance = new web3.eth.Contract(strategyAbi, strategyAddress)
+  const masterInstance = getCachedContract({
+    web3,
+    abi: masterAbi,
+    address: masterAddress,
+  })
+  const strategyInstance = getCachedContract({
+    web3,
+    abi: strategyAbi,
+    address: strategyAddress,
+  })
 
   let nitroInstance
   if (nitroPoolAddress != '0') {
-    nitroInstance = new web3.eth.Contract(nitroPoolAbi, nitroPoolAddress)
+    nitroInstance = getCachedContract({
+      web3,
+      abi: nitroPoolAbi,
+      address: nitroPoolAddress,
+    })
   }
 
   const poolInfo = await nftPoolMethods.getPoolInfo(nftPoolInstance)
@@ -110,9 +127,15 @@ const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor)
     )
     if (reward1PerSecond > 0 && reward1Info.token != addresses.iFARM_arbitrum) {
       const reward1Price = await getTokenPrice(reward1Info.token, CHAIN_IDS.ARBITRUM_ONE)
-      const token1Instance = new web3.eth.Contract(tokenAbi, reward1Info.token)
+      const token1Instance = getCachedContract({
+        web3,
+        abi: tokenAbi,
+        address: reward1Info.token,
+      })
       const token1Decimals = await getDecimals(token1Instance)
-      const reward1UsdPerSecond = reward1PerSecond.times(reward1Price).div(10 ** token1Decimals)
+      const reward1UsdPerSecond = reward1PerSecond
+        .times(reward1Price)
+        .div(new BigNumber(10).pow(Number(token1Decimals)))
       const reward1Apr = reward1UsdPerSecond
         .times(86400)
         .times(365.25)
@@ -126,9 +149,15 @@ const getApy = async (strategyAddress, ntfPoolAddress, nitroPoolAddress, factor)
     }
     if (reward2PerSecond > 0 && reward2Info.token != addresses.iFARM_arbitrum) {
       const reward2Price = await getTokenPrice(reward2Info.token, CHAIN_IDS.ARBITRUM_ONE)
-      const token2Instance = new web3.eth.Contract(tokenAbi, reward2Info.token)
+      const token2Instance = getCachedContract({
+        web3,
+        abi: tokenAbi,
+        address: reward2Info.token,
+      })
       const token2Decimals = await getDecimals(token2Instance)
-      const reward2UsdPerSecond = reward2PerSecond.times(reward2Price).div(10 ** token2Decimals)
+      const reward2UsdPerSecond = reward2PerSecond
+        .times(reward2Price)
+        .div(new BigNumber(10).pow(Number(token2Decimals)))
       const reward2Apr = reward2UsdPerSecond
         .times(86400)
         .times(365.25)

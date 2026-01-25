@@ -4,7 +4,8 @@ const { web3ARBITRUM } = require('../web3')
 const { Cache, storeData } = require('../db/models/cache')
 const { DB_CACHE_IDS } = require('../constants')
 const { get } = require('lodash')
-const { client } = require('../http')  
+const { client } = require('../http')
+const { getCachedContract } = require('../web3/contractCache')
 
 const getGmxData = async () => {
   console.log('\n-- Getting GMX data --')
@@ -43,7 +44,7 @@ const getGmxData = async () => {
   const ethAmount = new BigNumber(1e21).div(ethMidPrice).toFixed(0)
   const wbtcAmount = new BigNumber(1e11).div(wbtcMidPrice).toFixed(0)
 
-  const viewer = new web3.eth.Contract(viewerAbi, viewerAddress.mainnet)
+  const viewer = getCachedContract({ web3, abi: viewerAbi, address: viewerAddress.mainnet })
 
   const gmEthOut = new BigNumber(
     await viewerMethods.getDepositAmountOut(ethMarket, ethAmount, true, viewer),

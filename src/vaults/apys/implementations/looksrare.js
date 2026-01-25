@@ -7,11 +7,16 @@ const {
   getStakedToken,
 } = require('../../../lib/web3/contracts/looks-rewardpool/methods')
 const { token: tokenContractData } = require('../../../lib/web3/contracts')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const { getTokenPrice } = require('../../../prices')
 
 const getApy = async (rewardPool, reduction) => {
-  const rewardPoolInstance = new web3.eth.Contract(looksRewardPool.abi, rewardPool)
+  const rewardPoolInstance = getCachedContract({
+    web3,
+    abi: looksRewardPool.abi,
+    address: rewardPool,
+  })
   const {
     methods: { getBalance },
     contract: { abi },
@@ -23,7 +28,11 @@ const getApy = async (rewardPool, reduction) => {
   let blocksPerYear = new BigNumber(2336000)
   let stakedToken = await getStakedToken(rewardPoolInstance)
 
-  const tokenInstance = new web3.eth.Contract(abi, stakedToken)
+  const tokenInstance = getCachedContract({
+    web3,
+    abi,
+    address: stakedToken,
+  })
   const totalSupply = new BigNumber(await getBalance(rewardPool, tokenInstance)).dividedBy(
     new BigNumber(10).exponentiatedBy(18),
   )

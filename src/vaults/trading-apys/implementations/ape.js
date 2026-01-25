@@ -8,9 +8,7 @@ const getTradingApy = async (poolId, networkId) => {
   let apy
 
   try {
-    const response = await client.get(
-      `${APE_API_URL}/stats/network/lpAprs/${parseInt(networkId)}`,
-    )
+    const response = await client.get(`${APE_API_URL}/stats/network/lpAprs/${parseInt(networkId)}`)
 
     let apeAPR = get(response, `data.lpAprs[${parseInt(poolId)}].lpApr`, 0)
 

@@ -2,6 +2,7 @@ const BigNumber = require('bignumber.js')
 const { getWeb3 } = require('../../../lib/web3')
 const { eulerVault } = require('../../../lib/web3/contracts')
 const { getApy: getMerklApy } = require('./merkl')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (eulerVaultAddress, reduction, chain, strategyAddr = null) => {
   const web3 = getWeb3(chain)
@@ -10,7 +11,11 @@ const getApy = async (eulerVaultAddress, reduction, chain, strategyAddr = null) 
     methods: vaultMethods,
   } = eulerVault
 
-  const vaultInstance = new web3.eth.Contract(vaultAbi, eulerVaultAddress)
+  const vaultInstance = getCachedContract({
+    web3,
+    abi: vaultAbi,
+    address: eulerVaultAddress,
+  })
   const interestRate = new BigNumber(await vaultMethods.getInterestRate(vaultInstance))
   const totalAssets = new BigNumber(await vaultMethods.getTotalAssets(vaultInstance))
   const totalBorrows = new BigNumber(await vaultMethods.getTotalBorrows(vaultInstance))

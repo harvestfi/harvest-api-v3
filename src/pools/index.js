@@ -7,21 +7,18 @@ const {
 const { getWeb3, getCallCount, resetCallCount } = require('../lib/web3')
 const { get, find, omit } = require('lodash')
 const {
-  DB_CACHE_IDS,
   WEB3_CALL_COUNT_STATS_KEY,
   DEBUG_MODE,
   PROFIT_SHARING_POOL_ID,
-  UI_DATA_FILES,
 } = require('../lib/constants')
 const { cache } = require('../lib/cache')
 const addresses = require('../lib/data/addresses.json')
 const { getTradingApy } = require('../vaults/trading-apys')
-
-const { Cache } = require('../lib/db/models/cache')
 const { getPoolStatsPerType, getIncentivePoolStats, isPotPool } = require('./utils')
 const { getTokenPrice } = require('../prices')
-const { getUIData } = require('../lib/data')
 const logger = require('../lib/logger')
+const pMap = require('p-map')
+const { getCachedContract } = require('../lib/web3/contractCache')
 
 const fetchAndExpandPool = async (pool, poolsDoc, statsDoc, tokens) => {
   if (DEBUG_MODE) {
@@ -34,13 +31,14 @@ const fetchAndExpandPool = async (pool, poolsDoc, statsDoc, tokens) => {
   const web3Instance = getWeb3(pool.chain)
 
   try {
-    // console.log('Getting pool data for: ', pool.id)
+    console.log('Getting pool data for: ', pool.id)
 
     const poolContract = isPotPool(pool) ? potPoolContract : regularPoolContract
-    const poolInstance = new web3Instance.eth.Contract(
-      poolContract.contract.abi,
-      pool.contractAddress,
-    )
+    const poolInstance = getCachedContract({
+      web3: web3Instance,
+      abi: poolContract.contract.abi,
+      address: pool.contractAddress,
+    })
 
     const lpAddress = await poolContract.methods.lpToken(poolInstance)
     const lpTokenData = await fetchLpToken(lpAddress, pool.chain)
@@ -104,10 +102,11 @@ const fetchAndExpandPool = async (pool, poolsDoc, statsDoc, tokens) => {
 
     if (pool.oldPoolContractAddress) {
       // to account for tvl while migrating
-      const oldPoolInstance = new web3Instance.eth.Contract(
-        poolContract.contract.abi,
-        pool.oldPoolContractAddress,
-      )
+      const oldPoolInstance = getCachedContract({
+        web3: web3Instance,
+        abi: poolContract.contract.abi,
+        address: pool.oldPoolContractAddress,
+      })
 
       const oldPoolTotalSupply = await poolContract.methods.totalSupply(oldPoolInstance)
       const oldPoolTvl = new BigNumber(oldPoolTotalSupply)
@@ -148,7 +147,11 @@ const fetchAndExpandPool = async (pool, poolsDoc, statsDoc, tokens) => {
 const fetchLpToken = async (lpAddress, chainId) => {
   const web3Instance = getWeb3(chainId)
 
-  const lpTokenInstance = new web3Instance.eth.Contract(tokenContract.contract.abi, lpAddress)
+  const lpTokenInstance = getCachedContract({
+    web3: web3Instance,
+    abi: tokenContract.contract.abi,
+    address: lpAddress,
+  })
   const lpDecimals = await tokenContract.methods.getDecimals(lpTokenInstance)
   const lpSymbol = await tokenContract.methods.getSymbol(lpTokenInstance)
   const lpTokenPrice = await getTokenPrice(lpAddress, chainId)
@@ -171,11 +174,10 @@ const fetchLpToken = async (lpAddress, chainId) => {
   return result
 }
 
-const getPoolsData = async poolToFetch => {
-  const poolsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.POOLS })
-  const statsDoc = await Cache.collection.findOne({ type: DB_CACHE_IDS.STATS })
-  const tokens = await getUIData(UI_DATA_FILES.TOKENS)
-  return Promise.all(poolToFetch.map(pool => fetchAndExpandPool(pool, poolsDoc, statsDoc, tokens)))
+const getPoolsData = async (poolToFetch, poolsDoc, statsDoc, tokens) => {
+  return pMap(poolToFetch, pool => fetchAndExpandPool(pool, poolsDoc, statsDoc, tokens), {
+    concurrency: Number(process.env.FETCH_CONCURRENCY ?? 5),
+  })
 }
 
 module.exports = {

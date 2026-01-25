@@ -3,6 +3,7 @@ const { web3MATIC } = require('../../../lib/web3')
 const { getTokenPrice } = require('../../../prices')
 const { caviarChef, caviarRebaseChef } = require('../../../lib/web3/contracts')
 const { CHAIN_IDS } = require('../../../lib/constants')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, chef, reduction) => {
   const web3 = web3MATIC
@@ -16,9 +17,17 @@ const getApy = async (underlying, chef, reduction) => {
   } = caviarRebaseChef
 
   const secondsPerYear = 60 * 60 * 24 * 365.25
-  const chefInstance = new web3.eth.Contract(chefAbi, chef)
+  const chefInstance = getCachedContract({
+    web3,
+    abi: chefAbi,
+    address: chef,
+  })
   const rebaseChef = await chefMethods.getRebaseChef(chefInstance)
-  const rebaseChefInstance = new web3.eth.Contract(rebaseChefAbi, rebaseChef)
+  const rebaseChefInstance = getCachedContract({
+    web3,
+    abi: rebaseChefAbi,
+    address: rebaseChef,
+  })
 
   const chefRewardRate = new BigNumber(await chefMethods.getRewardPerSecond(chefInstance))
   const chefRewardToken = await chefMethods.getRewardToken(chefInstance)

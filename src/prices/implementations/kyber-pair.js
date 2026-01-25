@@ -4,18 +4,31 @@ const { web3MATIC } = require('../../lib/web3')
 const kyberPairContract = require('../../lib/web3/contracts/kyber-pair/contract.json')
 const kyberPairMethods = require('../../lib/web3/contracts/kyber-pair/methods')
 const { token: tokenContractData } = require('../../lib/web3/contracts')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const { getTokenPrice } = require('..')
 
 const getPrice = async (inTokenAddress, outTokenAddress, pairAddress) => {
   const { methods: tokenMethods, contract: tokenContract } = tokenContractData
-  const kyberPairInstance = new web3MATIC.eth.Contract(kyberPairContract.abi, pairAddress)
+  const kyberPairInstance = getCachedContract({
+    web3: web3MATIC,
+    abi: kyberPairContract.abi,
+    address: pairAddress,
+  })
 
   const result = await kyberPairMethods.getTradeInfo(kyberPairInstance)
   const token0 = await kyberPairMethods.getToken0(kyberPairInstance)
   const token1 = await kyberPairMethods.getToken1(kyberPairInstance)
-  const token0Instance = new web3MATIC.eth.Contract(tokenContract.abi, token0)
-  const token1Instance = new web3MATIC.eth.Contract(tokenContract.abi, token1)
+  const token0Instance = getCachedContract({
+    web3: web3MATIC,
+    abi: tokenContract.abi,
+    address: token0,
+  })
+  const token1Instance = getCachedContract({
+    web3: web3MATIC,
+    abi: tokenContract.abi,
+    address: token1,
+  })
   const token0Decimals = await tokenMethods.getDecimals(token0Instance)
   const token1Decimals = await tokenMethods.getDecimals(token1Instance)
 

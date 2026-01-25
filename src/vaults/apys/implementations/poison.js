@@ -7,6 +7,7 @@ const {
   getTotalAllocPoint,
   getPoisonPerBlock,
 } = require('../../../lib/web3/contracts/poison-mastercastle/methods')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const { token: tokenContractData } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
@@ -30,10 +31,11 @@ const getApy = async (underlying, poolId, reduction) => {
 
   const poisonPriceInUsd = await getTokenPrice(tokenAddresses.ARBITRUM_ONE.POISON)
 
-  const masterCastleInstance = new web3.eth.Contract(
-    masterCastleContract.abi,
-    masterCastleContract.address.mainnet,
-  )
+  const masterCastleInstance = getCachedContract({
+    web3,
+    abi: masterCastleContract.abi,
+    address: masterCastleContract.address.mainnet,
+  })
 
   poisonPerBlock = new BigNumber(await getPoisonPerBlock(masterCastleInstance)).dividedBy(
     new BigNumber(10).exponentiatedBy(18),
@@ -41,7 +43,11 @@ const getApy = async (underlying, poolId, reduction) => {
   blocksPerYear = new BigNumber(2628000)
   poolInfo = await getPoolInfo(poolId, masterCastleInstance)
 
-  const tokenInstance = new web3.eth.Contract(abi, poolInfo.lpToken)
+  const tokenInstance = getCachedContract({
+    web3,
+    abi,
+    address: poolInfo.lpToken,
+  })
   const totalSupply = new BigNumber(
     await getBalance(masterCastleContract.address.mainnet, tokenInstance),
   ).dividedBy(new BigNumber(10).exponentiatedBy(18))

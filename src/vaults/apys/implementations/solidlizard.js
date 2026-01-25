@@ -4,12 +4,17 @@ const { getWeb3 } = require('../../../lib/web3')
 const tokenAddresses = require('../../../../data/mainnet/addresses.json')
 const lizardGaugeContract = require('../../../lib/web3/contracts/solidlizard/contract.json')
 const { rewardRate, derivedSupply } = require('../../../lib/web3/contracts/solidlizard/methods')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const { getTokenPrice } = require('../../../prices')
 
 const getApy = async (underlying, gauge, reduction) => {
   const web3Instance = getWeb3(CHAIN_IDS.ARBITRUM_ONE)
-  const gaugeInstance = new web3Instance.eth.Contract(lizardGaugeContract, gauge)
+  const gaugeInstance = getCachedContract({
+    web3: web3Instance,
+    abi: lizardGaugeContract,
+    address: gauge,
+  })
 
   const slizRewardRate = await rewardRate(tokenAddresses.ARBITRUM_ONE.SLIZ, gaugeInstance)
   const gaugeDerivedSupply = await derivedSupply(gaugeInstance)

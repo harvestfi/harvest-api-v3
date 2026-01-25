@@ -6,6 +6,7 @@ const {
   getTotalAllocPoint,
   getRewardPerSecond,
 } = require('../../../lib/web3/contracts/jones-masterchef/methods.js')
+const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const { token: tokenContractData } = require('../../../lib/web3/contracts/index.js')
 const { getTokenPrice } = require('../../../prices/index.js')
@@ -27,7 +28,11 @@ const getApy = async (poolId, lpToken, reduction) => {
   const rewardPriceUSD = await getTokenPrice('ARB')
   const lpPriceUSD = await getTokenPrice(lpToken, 42161)
 
-  const masterInstance = new web3.eth.Contract(masterContract.abi, masterContract.address.mainnet)
+  const masterInstance = getCachedContract({
+    web3,
+    abi: masterContract.abi,
+    address: masterContract.address.mainnet,
+  })
 
   const secondsPerYear = 31536000
   const rewardPerSecond = new BigNumber(await getRewardPerSecond(masterInstance)).dividedBy(
@@ -35,7 +40,11 @@ const getApy = async (poolId, lpToken, reduction) => {
   )
   const poolInfo = await getPoolInfo(poolId, masterInstance)
 
-  const tokenInstance = new web3.eth.Contract(abi, lpToken)
+  const tokenInstance = getCachedContract({
+    web3,
+    abi,
+    address: lpToken,
+  })
   const totalSupply = new BigNumber(
     await getBalance(masterContract.address.mainnet, tokenInstance),
   ).dividedBy(new BigNumber(10).exponentiatedBy(18))

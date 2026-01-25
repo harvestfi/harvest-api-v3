@@ -2,6 +2,7 @@ const BigNumber = require('bignumber.js')
 
 const stargateContract = require('../../lib/web3/contracts/stargate/contract.json')
 const stargateMethods = require('../../lib/web3/contracts/stargate/methods')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const { getTokenPrice } = require('..')
 const { getUIData } = require('../../lib/data')
@@ -17,10 +18,11 @@ const getPrice = async (token, underlyingToken) => {
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
 
   const web3Instance = getWeb3(tokens[token].chain)
-  const stargateInstance = new web3Instance.eth.Contract(
-    stargateContract.abi,
-    tokens[token].tokenAddress,
-  )
+  const stargateInstance = getCachedContract({
+    web3: web3Instance,
+    abi: stargateContract.abi,
+    address: tokens[token].tokenAddress,
+  })
 
   const liquidity = await stargateMethods.totalLiquidity(stargateInstance).catch(e => {
     console.error('Could not get totalLiquidity for token ', token)
