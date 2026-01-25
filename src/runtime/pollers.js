@@ -1450,7 +1450,7 @@ const logMem = label => {
 
 const runUpdateLoop = async () => {
   console.log('\n-- Starting data fetching --')
-  // logMem('Memory usage at start of update loop:')
+  logMem('Memory usage at start of update loop:')
   // snap('start-update-loop')
   console.log('[contract-cache]', contractCacheStats())
 
@@ -1485,13 +1485,13 @@ const runUpdateLoop = async () => {
 
   await getPools()
 
-  // logMem('Memory usage after getPools:')
+  logMem('Memory usage after getPools:')
   // snap('after-get-pools')
   console.log('[contract-cache]', contractCacheStats())
 
   await getVaults()
 
-  // logMem('Memory usage after getVaults:')
+  logMem('Memory usage after getVaults:')
   // snap('after-get-vaults')
   console.log('[contract-cache]', contractCacheStats())
 
