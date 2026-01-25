@@ -1412,8 +1412,6 @@ const preLoadCoingeckoPrices = async () => {
 }
 
 const v8 = require('v8')
-const fs = require('fs')
-const path = require('path')
 const logMem = label => {
   const m = process.memoryUsage()
   console.log(label, {
@@ -1441,6 +1439,8 @@ const logMem = label => {
   )
 }
 
+// const fs = require('fs')
+// const path = require('path')
 // function snap(label) {
 //   fs.mkdirSync('heap-snaps', { recursive: true })
 //   const file = path.join('heap-snaps', `heap-${Date.now()}-${label}.heapsnapshot`)

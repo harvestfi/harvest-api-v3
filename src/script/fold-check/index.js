@@ -669,10 +669,10 @@ const getRateCompound = async (
   if (platform == 'venus') {
     newBorrowRate = new BigNumber(
       await interestData.interestMethods.getBorrowRate(
-        interestData.cash,
-        newBorrows,
-        interestData.reserves,
-        marketData.badDebt,
+        interestData.cash.toFixed(),
+        newBorrows.toFixed(),
+        interestData.reserves.toFixed(),
+        marketData.badDebt.toFixed(),
         interestData.interestInstance,
       ),
     )
@@ -680,11 +680,11 @@ const getRateCompound = async (
       .div(1e18)
     newSupplyRate = new BigNumber(
       await interestData.interestMethods.getSupplyRate(
-        interestData.cash,
-        newBorrows,
-        interestData.reserves,
-        interestData.reserveFactor,
-        marketData.badDebt,
+        interestData.cash.toFixed(),
+        newBorrows.toFixed(),
+        interestData.reserves.toFixed(),
+        interestData.reserveFactor.toFixed(),
+        marketData.badDebt.toFixed(),
         interestData.interestInstance,
       ),
     )
@@ -693,9 +693,9 @@ const getRateCompound = async (
   } else {
     newBorrowRate = new BigNumber(
       await interestData.interestMethods.getBorrowRate(
-        interestData.cash,
-        newBorrows,
-        interestData.reserves,
+        interestData.cash.toFixed(),
+        newBorrows.toFixed(),
+        interestData.reserves.toFixed(),
         interestData.interestInstance,
       ),
     )
@@ -703,10 +703,10 @@ const getRateCompound = async (
       .div(1e18)
     newSupplyRate = new BigNumber(
       await interestData.interestMethods.getSupplyRate(
-        interestData.cash,
-        newBorrows,
-        interestData.reserves,
-        interestData.reserveFactor,
+        interestData.cash.toFixed(),
+        newBorrows.toFixed(),
+        interestData.reserves.toFixed(),
+        interestData.reserveFactor.toFixed(),
         interestData.interestInstance,
       ),
     )
