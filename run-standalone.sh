@@ -20,7 +20,7 @@ dotenv_get () {
 
 MEM_LIMIT="$(dotenv_get MEM_LIMIT)"
 
-MEM_LIMIT="${MEM_LIMIT:-256}"
+MEM_LIMIT="${MEM_LIMIT:-512}"
 
 while true ; do
   node --max-old-space-size=${MEM_LIMIT} ./src/index.js
