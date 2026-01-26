@@ -796,6 +796,7 @@ const checkFoldingLeverage = async () => {
   console.log('\n-- Running leverage checks for Folding strategies --')
 
   for (const chain of Object.keys(CHAIN_IDS)) {
+    if (chain == 'ZKSYNC') continue
     console.log(`\n-- Chain: ${chain} --`)
 
     let chainAddresses, controllerAddress

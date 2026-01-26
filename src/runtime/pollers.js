@@ -1439,19 +1439,9 @@ const logMem = label => {
   )
 }
 
-// const fs = require('fs')
-// const path = require('path')
-// function snap(label) {
-//   fs.mkdirSync('heap-snaps', { recursive: true })
-//   const file = path.join('heap-snaps', `heap-${Date.now()}-${label}.heapsnapshot`)
-//   v8.writeHeapSnapshot(file)
-//   console.log('wrote', file, 'size', fs.statSync(file).size)
-// }
-
 const runUpdateLoop = async () => {
   console.log('\n-- Starting data fetching --')
   logMem('Memory usage at start of update loop:')
-  // snap('start-update-loop')
   console.log('[contract-cache]', contractCacheStats())
 
   if (DEBUG_MODE) {
@@ -1486,13 +1476,11 @@ const runUpdateLoop = async () => {
   await getPools()
 
   logMem('Memory usage after getPools:')
-  // snap('after-get-pools')
   console.log('[contract-cache]', contractCacheStats())
 
   await getVaults()
 
   logMem('Memory usage after getVaults:')
-  // snap('after-get-vaults')
   console.log('[contract-cache]', contractCacheStats())
 
   await getMainnetUserTransactions()
@@ -1577,6 +1565,7 @@ const runUpdateLoop = async () => {
   }
   console.log('-- Done with data fetching --')
   logMem('Memory usage at end of update loop:')
+  console.log('[contract-cache]', contractCacheStats())
 }
 
 const startPollers = async () => {

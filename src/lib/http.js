@@ -4,26 +4,28 @@ const https = require('https')
 
 const httpAgent = new http.Agent({
   keepAlive: true,
-  maxSockets: 50,
-  maxFreeSockets: 20,
-  timeout: 30_000,
+  maxSockets: 20,
+  maxFreeSockets: 5,
+  timeout: 10_000,
+  freeSocketTimeout: 10_000, // close idle sockets sooner (Node supports this)})
 })
 
 const httpsAgent = new https.Agent({
   keepAlive: true,
-  maxSockets: 50,
-  maxFreeSockets: 20,
-  timeout: 30_000,
+  maxSockets: 20,
+  maxFreeSockets: 5,
+  timeout: 10_000,
+  freeSocketTimeout: 10_000, // close idle sockets sooner (Node supports this)})
 })
 
 const client = axios.create({
-  timeout: 15_000, // prevents hanging sockets
+  timeout: 10_000,
   httpAgent,
   httpsAgent,
-  maxContentLength: 5 * 1024 * 1024, // optional: 5MB cap
+  maxContentLength: 5 * 1024 * 1024,
   maxBodyLength: 5 * 1024 * 1024,
   decompress: true,
-  validateStatus: status => status >= 200 && status < 300, // fail fast on 404/500 etc
+  validateStatus: status => status >= 200 && status < 300,
 })
 
 module.exports = { client }

@@ -10,7 +10,7 @@ const crypto = require('crypto')
  */
 
 const cache = new LRUCache({
-  max: 5000, // hard cap (tune: 1–3k is fine)
+  max: 3000,
   ttl: 10 * 60 * 1000, // 10 minutes
   updateAgeOnGet: true,
 })
