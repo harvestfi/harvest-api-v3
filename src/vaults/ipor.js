@@ -3,11 +3,10 @@ const { getWeb3 } = require('../lib/web3')
 const { plasmaVault } = require('../lib/web3/contracts')
 const { getTokenPrice } = require('../prices')
 const { omit } = require('lodash')
-const { UI_DATA_FILES } = require('../lib/constants')
-const { getUIData } = require('../lib/data')
 const { getPlasmaVaultData } = require('../lib/third-party/ipor.js')
 const { executeEstimateApyFunctions } = require('./apys')
 const { getCachedContract } = require('../lib/web3/contractCache')
+const pMap = require('p-map')
 
 const fetchAndExpandIPORVault = async (symbol, tokens) => {
   const {
@@ -70,9 +69,10 @@ const fetchAndExpandIPORVault = async (symbol, tokens) => {
   }
 }
 
-const getIPORVaultsData = async vaultsToFetch => {
-  const tokens = await getUIData(UI_DATA_FILES.TOKENS)
-  return Promise.all(vaultsToFetch.map(vault => fetchAndExpandIPORVault(vault, tokens)))
+const getIPORVaultsData = async (vaultsToFetch, tokens) => {
+  return pMap(vaultsToFetch, vault => fetchAndExpandIPORVault(vault, tokens), {
+    concurrency: Number(process.env.FETCH_CONCURRENCY ?? 5),
+  })
 }
 
 module.exports = {

@@ -115,127 +115,159 @@ const getVaults = async () => {
   )
 
   console.log('\n-- Getting HYPEREVM vaults data --')
-  await forEach(hyperevmVaultsBatches, async batch => {
-    if (batch) {
-      try {
-        console.log('Getting vault data for: ', batch)
-        const vaultsData = await getVaultsData(batch, poolsDoc, statsDoc, tokens, pools)
-        fetchedHYPEREVMVaults = fetchedHYPEREVMVaults.concat(vaultsData)
-      } catch (err) {
-        hasErrors = true
-        logger.error(`Failed to get vault data for: ${batch}`, err)
-      }
-    }
-  })
-  console.log('\n-- Done getting HYPEREVM vaults data --')
-
-  console.log('\n-- Getting ZKSYNC vaults data --')
-  await forEach(zksyncVaultsBatches, async batch => {
-    if (batch) {
-      try {
-        console.log('Getting vault data for: ', batch)
-        const vaultsData = await getVaultsData(batch, poolsDoc, statsDoc, tokens, pools)
-        fetchedZKSYNCVaults = fetchedZKSYNCVaults.concat(vaultsData)
-      } catch (err) {
-        hasErrors = true
-        logger.error(`Failed to get vault data for: ${batch}`, err)
-      }
-    }
-  })
-  console.log('\n-- Done getting ZKSYNC vaults data --')
-
-  console.log('\n-- Getting MATIC vaults data --')
-  await forEach(maticVaultsBatches, async batch => {
+  for (const batch of hyperevmVaultsBatches) {
+    if (!batch?.length) continue
     try {
       console.log('Getting vault data for: ', batch)
-      const vaultsData = await getVaultsData(batch, poolsDoc, statsDoc, tokens, pools)
-      fetchedMATICVaults = fetchedMATICVaults.concat(vaultsData)
+      const vaultsData = (await getVaultsData(batch, poolsDoc, statsDoc, tokens, pools)).filter(
+        Boolean,
+      )
+      fetchedHYPEREVMVaults.push(...vaultsData)
     } catch (err) {
       hasErrors = true
       logger.error(`Failed to get vault data for: ${batch}`, err)
     }
-  })
+  }
+  console.log('\n-- Done getting HYPEREVM vaults data --')
+
+  console.log('\n-- Getting ZKSYNC vaults data --')
+  for (const batch of zksyncVaultsBatches) {
+    if (!batch?.length) continue
+    try {
+      console.log('Getting vault data for: ', batch)
+      const vaultsData = (await getVaultsData(batch, poolsDoc, statsDoc, tokens, pools)).filter(
+        Boolean,
+      )
+      fetchedZKSYNCVaults.push(...vaultsData)
+    } catch (err) {
+      hasErrors = true
+      logger.error(`Failed to get vault data for: ${batch}`, err)
+    }
+  }
+  console.log('\n-- Done getting ZKSYNC vaults data --')
+
+  console.log('\n-- Getting MATIC vaults data --')
+  for (const batch of maticVaultsBatches) {
+    if (!batch?.length) continue
+    try {
+      console.log('Getting vault data for: ', batch)
+      const vaultsData = (await getVaultsData(batch, poolsDoc, statsDoc, tokens, pools)).filter(
+        Boolean,
+      )
+      fetchedMATICVaults.push(...vaultsData)
+    } catch (err) {
+      hasErrors = true
+      logger.error(`Failed to get vault data for: ${batch}`, err)
+    }
+  }
   console.log('\n-- Done getting MATIC vaults data --')
 
   console.log('\n-- Getting ARBITRUM vaults data --')
-  await forEach(arbitrumVaultsBatches, async batch => {
-    if (batch) {
-      try {
-        console.log('Getting vault data for: ', batch)
-        let vaultsData,
-          iporvaultsData,
-          iporBatch = [],
-          normalBatch = []
-        batch.forEach(vaultId => {
-          if (tokensWithVault[vaultId].isIPORVault) {
-            iporBatch.push(vaultId)
-          } else {
-            normalBatch.push(vaultId)
-          }
-        })
-        vaultsData = await getVaultsData(normalBatch, poolsDoc, statsDoc, tokens, pools)
-        iporvaultsData = await getIPORVaultsData(iporBatch)
-        fetchedARBITRUMVaults = fetchedARBITRUMVaults.concat(vaultsData).concat(iporvaultsData)
-      } catch (err) {
-        hasErrors = true
-        logger.error(`Failed to get vault data for: ${batch}`, err)
+  for (const batch of arbitrumVaultsBatches) {
+    if (!batch?.length) continue
+    try {
+      console.log('Getting vault data for: ', batch)
+
+      const iporBatch = []
+      const normalBatch = []
+
+      for (const vaultId of batch) {
+        if (tokensWithVault?.[vaultId]?.isIPORVault) {
+          iporBatch.push(vaultId)
+        } else {
+          normalBatch.push(vaultId)
+        }
       }
+
+      const vaultsData = normalBatch.length
+        ? await getVaultsData(normalBatch, poolsDoc, statsDoc, tokens, pools)
+        : []
+
+      const iporVaultsData = iporBatch.length ? await getIPORVaultsData(iporBatch, tokens) : []
+
+      if (Array.isArray(vaultsData) && vaultsData.length) {
+        fetchedARBITRUMVaults.push(...vaultsData.filter(Boolean))
+      }
+      if (Array.isArray(iporVaultsData) && iporVaultsData.length) {
+        fetchedARBITRUMVaults.push(...iporVaultsData.filter(Boolean))
+      }
+    } catch (err) {
+      hasErrors = true
+      logger.error(`Failed to get vault data for: ${batch}`, err)
     }
-  })
+  }
   console.log('\n-- Done getting ARBITRUM vaults data --')
 
   console.log('\n-- Getting ETH vaults data --')
-  await forEach(ethVaultsBatches, async batch => {
-    if (batch) {
-      try {
-        console.log('Getting vault data for: ', batch)
-        let vaultsData,
-          iporvaultsData,
-          iporBatch = [],
-          normalBatch = []
-        batch.forEach(vaultId => {
-          if (tokensWithVault[vaultId].isIPORVault) {
-            iporBatch.push(vaultId)
-          } else {
-            normalBatch.push(vaultId)
-          }
-        })
-        vaultsData = await getVaultsData(normalBatch, poolsDoc, statsDoc, tokens, pools)
-        iporvaultsData = await getIPORVaultsData(iporBatch)
-        fetchedETHVaults = fetchedETHVaults.concat(vaultsData).concat(iporvaultsData)
-      } catch (err) {
-        hasErrors = true
-        logger.error(`Failed to get vault data for: ${batch}`, err)
+  for (const batch of ethVaultsBatches) {
+    if (!batch?.length) continue
+    try {
+      console.log('Getting vault data for: ', batch)
+
+      const iporBatch = []
+      const normalBatch = []
+
+      for (const vaultId of batch) {
+        if (tokensWithVault?.[vaultId]?.isIPORVault) {
+          iporBatch.push(vaultId)
+        } else {
+          normalBatch.push(vaultId)
+        }
       }
+
+      const vaultsData = normalBatch.length
+        ? await getVaultsData(normalBatch, poolsDoc, statsDoc, tokens, pools)
+        : []
+
+      const iporVaultsData = iporBatch.length ? await getIPORVaultsData(iporBatch, tokens) : []
+
+      if (Array.isArray(vaultsData) && vaultsData.length) {
+        fetchedETHVaults.push(...vaultsData.filter(Boolean))
+      }
+      if (Array.isArray(iporVaultsData) && iporVaultsData.length) {
+        fetchedETHVaults.push(...iporVaultsData.filter(Boolean))
+      }
+    } catch (err) {
+      hasErrors = true
+      logger.error(`Failed to get vault data for: ${batch}`, err)
     }
-  })
+  }
   console.log('\n-- Done getting ETH vaults data --')
 
   console.log('\n-- Getting BASE vaults data --')
-  await forEach(baseVaultsBatches, async batch => {
-    if (batch) {
-      try {
-        console.log('Getting vault data for: ', batch)
-        let vaultsData,
-          iporvaultsData,
-          iporBatch = [],
-          normalBatch = []
-        batch.forEach(vaultId => {
-          if (tokensWithVault[vaultId].isIPORVault) {
-            iporBatch.push(vaultId)
-          } else {
-            normalBatch.push(vaultId)
-          }
-        })
-        vaultsData = await getVaultsData(normalBatch, poolsDoc, statsDoc, tokens, pools)
-        iporvaultsData = await getIPORVaultsData(iporBatch)
-        fetchedBASEVaults = fetchedBASEVaults.concat(vaultsData).concat(iporvaultsData)
-      } catch (err) {
-        hasErrors = true
-        logger.error(`Failed to get vault data for: ${batch}`, err)
+  for (const batch of baseVaultsBatches) {
+    if (!batch?.length) continue
+    try {
+      console.log('Getting vault data for: ', batch)
+
+      const iporBatch = []
+      const normalBatch = []
+
+      for (const vaultId of batch) {
+        if (tokensWithVault?.[vaultId]?.isIPORVault) {
+          iporBatch.push(vaultId)
+        } else {
+          normalBatch.push(vaultId)
+        }
       }
+
+      const vaultsData = normalBatch.length
+        ? await getVaultsData(normalBatch, poolsDoc, statsDoc, tokens, pools)
+        : []
+
+      const iporVaultsData = iporBatch.length ? await getIPORVaultsData(iporBatch, tokens) : []
+
+      if (Array.isArray(vaultsData) && vaultsData.length) {
+        fetchedBASEVaults.push(...vaultsData.filter(Boolean))
+      }
+      if (Array.isArray(iporVaultsData) && iporVaultsData.length) {
+        fetchedBASEVaults.push(...iporVaultsData.filter(Boolean))
+      }
+    } catch (err) {
+      hasErrors = true
+      logger.error(`Failed to get vault data for: ${batch}`, err)
     }
-  })
+  }
   console.log('\n-- Done getting BASE vaults data --')
 
   fetchedVaults = {
@@ -340,10 +372,10 @@ const getPools = async () => {
     )
 
     if (size(hyperevmPoolBatches)) {
-      await forEach(hyperevmPoolBatches, async poolBatch => {
-        const poolData = await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)
-        fetchedHYPEREVMPools = fetchedHYPEREVMPools.concat(poolData)
-      })
+      for (const poolBatch of hyperevmPoolBatches) {
+        const poolData = (await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)).filter(Boolean)
+        fetchedHYPEREVMPools.push(...poolData) // avoids repeated concat copies
+      }
     } else {
       console.log('No pools available')
     }
@@ -358,10 +390,10 @@ const getPools = async () => {
     )
 
     if (size(zksyncPoolBatches)) {
-      await forEach(zksyncPoolBatches, async poolBatch => {
-        const poolData = await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)
-        fetchedZKSYNCPools = fetchedZKSYNCPools.concat(poolData)
-      })
+      for (const poolBatch of zksyncPoolBatches) {
+        const poolData = (await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)).filter(Boolean)
+        fetchedZKSYNCPools.push(...poolData) // avoids repeated concat copies
+      }
     } else {
       console.log('No pools available')
     }
@@ -376,10 +408,10 @@ const getPools = async () => {
     )
 
     if (size(maticPoolBatches)) {
-      await forEach(maticPoolBatches, async poolBatch => {
-        const poolData = await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)
-        fetchedMATICPools = fetchedMATICPools.concat(poolData)
-      })
+      for (const poolBatch of maticPoolBatches) {
+        const poolData = (await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)).filter(Boolean)
+        fetchedMATICPools.push(...poolData) // avoids repeated concat copies
+      }
     } else {
       console.log('No pools available')
     }
@@ -394,10 +426,10 @@ const getPools = async () => {
     )
 
     if (size(arbitrumPoolBatches)) {
-      await forEach(arbitrumPoolBatches, async poolBatch => {
-        const poolData = await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)
-        fetchedARBITRUMPools = fetchedARBITRUMPools.concat(poolData)
-      })
+      for (const poolBatch of arbitrumPoolBatches) {
+        const poolData = (await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)).filter(Boolean)
+        fetchedARBITRUMPools.push(...poolData) // avoids repeated concat copies
+      }
     } else {
       console.log('No pools available')
     }
@@ -412,10 +444,10 @@ const getPools = async () => {
     )
 
     if (size(basePoolBatches)) {
-      await forEach(basePoolBatches, async poolBatch => {
-        const poolData = await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)
-        fetchedBASEPools = fetchedBASEPools.concat(poolData)
-      })
+      for (const poolBatch of basePoolBatches) {
+        const poolData = (await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)).filter(Boolean)
+        fetchedBASEPools.push(...poolData) // avoids repeated concat copies
+      }
     } else {
       console.log('No pools available')
     }
@@ -429,10 +461,10 @@ const getPools = async () => {
       GET_POOL_DATA_BATCH_SIZE,
     )
     if (size(ethPoolBatches)) {
-      await forEach(ethPoolBatches, async poolBatch => {
-        const poolData = await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)
-        fetchedETHPools = fetchedETHPools.concat(poolData)
-      })
+      for (const poolBatch of ethPoolBatches) {
+        const poolData = (await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)).filter(Boolean)
+        fetchedETHPools.push(...poolData) // avoids repeated concat copies
+      }
     } else {
       console.log('No pools available')
     }

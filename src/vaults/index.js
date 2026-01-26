@@ -29,7 +29,6 @@ const {
   PROFIT_SHARING_POOL_ID,
   POOL_TYPES,
 } = require('../lib/constants')
-const { forEach } = require('promised-loops')
 const pMap = require('p-map')
 
 const fetchAndExpandVault = async (symbol, poolsDoc, statsDoc, tokens, pools) => {
@@ -127,10 +126,10 @@ const fetchAndExpandVault = async (symbol, poolsDoc, statsDoc, tokens, pools) =>
     .toString()
 
   if (isArray(vaultData.tokenAddress)) {
-    await forEach(vaultData.tokenAddress, async tokenAddress => {
+    for (const tokenAddress of vaultData.tokenAddress) {
       const tokenPrice = await getTokenPrice(tokenAddress)
       uniswapV3UnderlyingTokenPrices.push(toString(tokenPrice))
-    })
+    }
   }
 
   if (vaultData.isManaged) {
