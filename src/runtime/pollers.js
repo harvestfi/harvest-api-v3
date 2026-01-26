@@ -48,8 +48,6 @@ const { getCLData } = require('../lib/third-party/cl-test')
 const { checkFoldingLeverage } = require('../script/fold-check')
 const logger = require('../lib/logger')
 
-const { contractCacheStats } = require('../lib/web3/contractCache')
-
 const getProfitSharingFactor = chain => {
   switch (chain) {
     case CHAIN_IDS.POLYGON:
@@ -1442,7 +1440,6 @@ const logMem = label => {
 const runUpdateLoop = async () => {
   console.log('\n-- Starting data fetching --')
   logMem('Memory usage at start of update loop:')
-  console.log('[contract-cache]', contractCacheStats())
 
   if (DEBUG_MODE) {
     console.log('\n##################       DEBUG MODE       ###################')
@@ -1476,12 +1473,10 @@ const runUpdateLoop = async () => {
   await getPools()
 
   logMem('Memory usage after getPools:')
-  console.log('[contract-cache]', contractCacheStats())
 
   await getVaults()
 
   logMem('Memory usage after getVaults:')
-  console.log('[contract-cache]', contractCacheStats())
 
   await getMainnetUserTransactions()
   await getPolygonUserTransactions()
@@ -1565,7 +1560,6 @@ const runUpdateLoop = async () => {
   }
   console.log('-- Done with data fetching --')
   logMem('Memory usage at end of update loop:')
-  console.log('[contract-cache]', contractCacheStats())
 }
 
 const startPollers = async () => {
