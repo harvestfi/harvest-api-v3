@@ -1470,13 +1470,13 @@ const logMem = label => {
   )
 }
 
-const fs = require('fs')
-const path = require('path')
-function snap(label) {
-  const file = path.join('heap-snaps', `heap-${Date.now()}-${label}.heapsnapshot`)
-  v8.writeHeapSnapshot(file)
-  console.log('wrote', file, 'size', fs.statSync(file).size)
-}
+// const fs = require('fs')
+// const path = require('path')
+// function snap(label) {
+//   const file = path.join('heap-snaps', `heap-${Date.now()}-${label}.heapsnapshot`)
+//   v8.writeHeapSnapshot(file)
+//   console.log('wrote', file, 'size', fs.statSync(file).size)
+// }
 
 const runUpdateLoop = async () => {
   console.log('\n-- Starting data fetching --')
@@ -1514,12 +1514,12 @@ const runUpdateLoop = async () => {
   await getPools()
 
   logMem('Memory usage after getPools:')
-  snap('after-pools')
+  // snap('after-pools')
 
   await getVaults()
 
   logMem('Memory usage after getVaults:')
-  snap('after-vaults')
+  // snap('after-vaults')
 
   await getMainnetUserTransactions()
   await getPolygonUserTransactions()
@@ -1603,7 +1603,7 @@ const runUpdateLoop = async () => {
   }
   console.log('-- Done with data fetching --')
   logMem('Memory usage at end of update loop:')
-  snap('end-of-loop')
+  // snap('end-of-loop')
   logContractCache()
 }
 
