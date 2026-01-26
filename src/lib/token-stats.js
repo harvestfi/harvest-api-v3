@@ -43,8 +43,54 @@ const getPercentOfFARMStaked = async () => {
   return result
 }
 
+const getStakingMetrics = async () => {
+  const pools = await getUIData(UI_DATA_FILES.POOLS);
+  const farmPool = find(pools, pool => pool.id === 'profit-sharing-farm');
+  const currentFARMPrice = await getTokenPrice(addresses.FARM);
+  
+  const { methods: poolMethods, contract: poolContract } = poolContractData;
+  const farmPoolInstance = new web3.eth.Contract(poolContract.abi, farmPool.contractAddress);
+  
+  // Get multiple metrics in one call
+  const [
+    farmPoolTotalSupply,
+    poolRewardRate,
+    totalStakers
+  ] = await Promise.all([
+    poolMethods.totalSupply(farmPoolInstance),
+    poolMethods.rewardRate ? poolMethods.rewardRate(farmPoolInstance) : 0,
+    poolMethods.totalStakers ? poolMethods.totalStakers(farmPoolInstance) : 0
+  ]);
+  
+  const profitSharingPoolStakedFarm = new BigNumber(farmPoolTotalSupply);
+  const totalSupply = getTotalFARMSupply();
+  
+  const stakedFarm = profitSharingPoolStakedFarm.dividedBy(new BigNumber(10).pow(18));
+  const stakedValueUSD = stakedFarm.times(currentFARMPrice);
+  
+  const percentStaked = stakedFarm.dividedBy(totalSupply).times(100);
+  
+  // Calculate APR/APY if reward rate is available
+  let estimatedAPR = null;
+  if (poolRewardRate && poolRewardRate > 0) {
+    const yearlyRewards = new BigNumber(poolRewardRate).times(365 * 24 * 60 * 60);
+    const rewardsValueUSD = yearlyRewards.dividedBy(1e18).times(currentFARMPrice);
+    estimatedAPR = rewardsValueUSD.dividedBy(stakedValueUSD).times(100);
+  }
+  
+  return {
+    stakedFarm: stakedFarm.toString(),
+    stakedValueUSD: stakedValueUSD.toString(),
+    percentStaked: percentStaked.toString(),
+    totalStakers: totalStakers || 0,
+    estimatedAPR: estimatedAPR ? estimatedAPR.toString() : null,
+    lastUpdated: Date.now()
+  };
+};
+
 module.exports = {
   getPercentOfFARMStaked,
   getTotalFARMSupply,
   getTotalMarketCap,
+  getStakingMetrics,
 }
