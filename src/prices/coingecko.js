@@ -9,6 +9,8 @@ const {
   COINGECKO_API_KEY,
   CHAIN_IDS,
 } = require('../lib/constants')
+const logger = require('../lib/logger')
+
 
 // Base axios instance
 const base = rateLimit(
@@ -59,7 +61,7 @@ const priceByAddresses = (contractAddresses, ourChainId = CHAIN_IDS.ETH, currenc
       })
     })
     .catch(err => {
-      console.error(`Error getting price from CoinGecko for token at: ${contractAddresses}`, {
+      logger.error(`Error getting price from CoinGecko for token at: ${contractAddresses}`, {
         message: err.message,
         status: err.response?.status,
       })
@@ -87,7 +89,7 @@ const priceByIds = (ids, currency) =>
       })
     })
     .catch(err => {
-      console.error(`Error getting price from CoinGecko for token at: ${ids}`, {
+      logger.error(`Error getting price from CoinGecko for token at: ${ids}`, {
         message: err.message,
         status: err.response?.status,
       })

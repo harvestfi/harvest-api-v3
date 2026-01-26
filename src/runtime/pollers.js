@@ -1389,7 +1389,7 @@ const preLoadCoingeckoPrices = async () => {
       console.log(`Prices fetched successfully for ${addressesSorted}`)
     },
     err => {
-      console.log(
+      logger.error(
         `Something went wrong during the preloading of prices through addresses! ${addressesSorted}`,
         err,
       )
@@ -1403,7 +1403,7 @@ const preLoadCoingeckoPrices = async () => {
       console.log(`Prices fetched successfully for ids: ${idsSorted}`)
     },
     err => {
-      console.log(
+      logger.error(
         `Something went wrong during the preloading of prices through ids! ${idsSorted}`,
         err,
       )
