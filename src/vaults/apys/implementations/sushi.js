@@ -18,6 +18,7 @@ const {
   getSushiPerSecond,
   getSushiLpToken,
 } = require('../../../lib/web3/contracts/sushi-masterchef-matic/methods')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const { CHAIN_IDS } = require('../../../lib/constants')
 const { token: tokenContractData } = require('../../../lib/web3/contracts')
@@ -56,10 +57,11 @@ const getApy = async (poolId, firstToken, secondToken, reduction, chain) => {
 
   const sushiPriceInUsd = await getTokenPrice(tokenAddresses.SUSHI)
 
-  const sushiInstance = new selectedWeb3.eth.Contract(
-    masterChefContract.abi,
-    masterChefContract.address.mainnet,
-  )
+  const sushiInstance = getCachedContract({
+    web3: selectedWeb3,
+    abi: masterChefContract.abi,
+    address: masterChefContract.address.mainnet,
+  })
 
   if (selectedChain === CHAIN_IDS.POLYGON) {
     sushiPerSecond = new BigNumber(await getSushiPerSecond(sushiInstance)).dividedBy(
@@ -76,7 +78,11 @@ const getApy = async (poolId, firstToken, secondToken, reduction, chain) => {
 
     const rewarder = await getRewarder(poolId, sushiInstance)
     if (rewarder !== '0x0000000000000000000000000000000000000000') {
-      const rewarderInstance = new selectedWeb3.eth.Contract(rewarderContractArbitrum.abi, rewarder)
+      const rewarderInstance = getCachedContract({
+        web3: selectedWeb3,
+        abi: rewarderContractArbitrum.abi,
+        address: rewarder,
+      })
       const rewardToken = await getRewardToken(rewarderInstance)
       const rewardTokenPerSecond = new BigNumber(
         await getRewardPerSecond(rewarderInstance),
@@ -93,7 +99,11 @@ const getApy = async (poolId, firstToken, secondToken, reduction, chain) => {
     poolInfo = await getPoolInfoSushi(poolId, sushiInstance)
   }
 
-  const tokenInstance = new selectedWeb3.eth.Contract(abi, poolInfo.lpToken)
+  const tokenInstance = getCachedContract({
+    web3: selectedWeb3,
+    abi,
+    address: poolInfo.lpToken,
+  })
   const totalSupply = new BigNumber(
     await getBalance(masterChefContract.address.mainnet, tokenInstance),
   ).dividedBy(new BigNumber(10).exponentiatedBy(18))

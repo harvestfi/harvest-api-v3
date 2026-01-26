@@ -8,6 +8,7 @@ const { cache } = require('../../../lib/cache')
 
 const { idleLendingToken, idleController } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const getApy = async (tokenSymbol, idleLendingTokenAddress, factor, network = '1') => {
   const cachedApy = cache.get(`idleApy${tokenSymbol}`)
@@ -25,10 +26,11 @@ const getApy = async (tokenSymbol, idleLendingTokenAddress, factor, network = '1
     contract: { abi: idleLendingTokenAbi },
   } = idleLendingToken
 
-  const idleLendingTokenInstance = new selectedWeb3.eth.Contract(
-    idleLendingTokenAbi,
-    idleLendingTokenAddress,
-  )
+  const idleLendingTokenInstance = getCachedContract({
+    web3: selectedWeb3,
+    abi: idleLendingTokenAbi,
+    address: idleLendingTokenAddress,
+  })
 
   let currentRate, rewardTokenInUsd
 
@@ -41,10 +43,11 @@ const getApy = async (tokenSymbol, idleLendingTokenAddress, factor, network = '1
       methods: idleControllerMethods,
     } = idleController
 
-    const idleControllerInstance = new selectedWeb3.eth.Contract(
-      idleControllerAbi,
-      idleControllerAddress,
-    )
+    const idleControllerInstance = getCachedContract({
+      web3: selectedWeb3,
+      abi: idleControllerAbi,
+      address: idleControllerAddress,
+    })
 
     currentRate = new BigNumber(
       await idleControllerMethods.idleSpeeds(idleLendingTokenAddress, idleControllerInstance),

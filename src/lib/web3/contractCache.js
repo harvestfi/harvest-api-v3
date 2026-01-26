@@ -1,5 +1,6 @@
 const { LRUCache } = require('lru-cache')
 const crypto = require('crypto')
+let hits = 0, misses = 0
 
 /**
  * IMPORTANT:
@@ -11,7 +12,7 @@ const crypto = require('crypto')
 
 const cache = new LRUCache({
   max: 3000,
-  ttl: 10 * 60 * 1000, // 10 minutes
+  ttl: 75 * 60 * 1000, // 75 minutes
   updateAgeOnGet: true,
 })
 
@@ -46,6 +47,9 @@ function getCachedContract({ web3, abi, address }) {
   if (!contract) {
     contract = new web3.eth.Contract(abi, address)
     cache.set(key, contract)
+    misses += 1
+  } else {
+    hits += 1
   }
 
   return contract
@@ -55,8 +59,15 @@ function stats() {
   return { size: cache.size, max: cache.max }
 }
 
+function logContractCache() {
+  console.log(`[contract-cache] size=${cache.size}/${cache.max} hits=${hits} misses=${misses}`)
+  hits = 0
+  misses = 0
+}
+
 module.exports = {
   getCachedContract,
   contractCacheStats: stats,
   _contractCache: cache, // optional (debug)
+  logContractCache,
 }

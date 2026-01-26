@@ -12,6 +12,7 @@ const {
 
 const { token: tokenContractData } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const getBananaPoolWeight = async (poolInfo, bananaInstance) => {
   const totalAllocPoint = await getTotalAllocPoint(bananaInstance)
@@ -32,10 +33,11 @@ const getApy = async (poolId, firstToken, secondToken, reduction, chain) => {
     secondsPerYear,
     poolInfo = {}
 
-  const bananaInstance = new selectedWeb3.eth.Contract(
-    masterChefContract.abi,
-    masterChefContract.address.mainnet,
-  )
+  const bananaInstance = getCachedContract({
+    web3: selectedWeb3,
+    abi: masterChefContract.abi,
+    address: masterChefContract.address.mainnet,
+  })
 
   bananaPerSecond = new BigNumber(await getBananaPerSecond(bananaInstance)).dividedBy(
     new BigNumber(10).exponentiatedBy(18),
@@ -43,7 +45,11 @@ const getApy = async (poolId, firstToken, secondToken, reduction, chain) => {
   secondsPerYear = 31536000
   poolInfo = await getPoolInfo(poolId, bananaInstance)
   poolInfo.lpToken = await getBananaLpToken(poolId, bananaInstance)
-  const tokenInstance = new selectedWeb3.eth.Contract(abi, poolInfo.lpToken)
+  const tokenInstance = getCachedContract({
+    web3: selectedWeb3,
+    abi,
+    address: poolInfo.lpToken,
+  })
   const totalSupply = new BigNumber(
     await getBalance(masterChefContract.address.mainnet, tokenInstance),
   ).dividedBy(new BigNumber(10).exponentiatedBy(18))

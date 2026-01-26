@@ -5,6 +5,7 @@ const { token: tokenContractData } = require('../../../lib/web3/contracts')
 const getBalancerTokenPrice = require('../../../prices/implementations/balancer.js').getPrice
 const { getTokenPrice } = require('../../../prices')
 const { CHAIN_IDS } = require('../../../lib/constants')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const getApy = async (
   tokenAddress,
@@ -27,7 +28,11 @@ const getApy = async (
     provider = web3MATIC
   }
 
-  const tokenInstance = new provider.eth.Contract(abi, tokenAddress)
+  const tokenInstance = getCachedContract({
+    web3: provider,
+    abi,
+    address: tokenAddress,
+  })
   const totalSupply = new BigNumber(await getTotalSupply(tokenInstance)).dividedBy(
     new BigNumber(10).pow(18),
   )

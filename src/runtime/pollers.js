@@ -47,6 +47,7 @@ const { getGmxData } = require('../lib/third-party/gmx')
 const { getCLData } = require('../lib/third-party/cl-test')
 const { checkFoldingLeverage } = require('../script/fold-check')
 const logger = require('../lib/logger')
+const { logContractCache } = require('../lib/web3/contractCache')
 
 const getProfitSharingFactor = chain => {
   switch (chain) {
@@ -1469,6 +1470,14 @@ const logMem = label => {
   )
 }
 
+const fs = require('fs')
+const path = require('path')
+function snap(label) {
+  const file = path.join('heap-snaps', `heap-${Date.now()}-${label}.heapsnapshot`)
+  v8.writeHeapSnapshot(file)
+  console.log('wrote', file, 'size', fs.statSync(file).size)
+}
+
 const runUpdateLoop = async () => {
   console.log('\n-- Starting data fetching --')
   logMem('Memory usage at start of update loop:')
@@ -1505,10 +1514,12 @@ const runUpdateLoop = async () => {
   await getPools()
 
   logMem('Memory usage after getPools:')
+  snap('after-pools')
 
   await getVaults()
 
   logMem('Memory usage after getVaults:')
+  snap('after-vaults')
 
   await getMainnetUserTransactions()
   await getPolygonUserTransactions()
@@ -1592,6 +1603,8 @@ const runUpdateLoop = async () => {
   }
   console.log('-- Done with data fetching --')
   logMem('Memory usage at end of update loop:')
+  snap('end-of-loop')
+  logContractCache()
 }
 
 const startPollers = async () => {

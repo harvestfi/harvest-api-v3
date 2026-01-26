@@ -12,6 +12,7 @@ const { getTokenPrice } = require('../../../prices')
 const { getUIData } = require('../../../lib/data')
 const { UI_DATA_FILES } = require('../../../lib/constants')
 const { getDailyCompound } = require('../../../lib/utils')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const getStargatePoolWeight = async (poolInfo, rewardPoolInstance) => {
   const totalAllocPoint = await getTotalAllocPointStargate(rewardPoolInstance)
@@ -37,10 +38,11 @@ const getApy = async (
 
   let apr, stargatePerBlock, blocksPerYear, poolInfo
 
-  const masterChefInstance = new selectedWeb3.eth.Contract(
-    masterChefContract.abi,
-    rewardPoolAddress,
-  )
+  const masterChefInstance = getCachedContract({
+    web3: selectedWeb3,
+    abi: masterChefContract.abi,
+    address: rewardPoolAddress,
+  })
 
   stargatePerBlock = new BigNumber(await getStargatePerBlock(masterChefInstance)).dividedBy(
     new BigNumber(10).exponentiatedBy(18),
@@ -52,7 +54,11 @@ const getApy = async (
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
   const lpToken = tokens[lpTokenSymbol]
 
-  const tokenInstance = new selectedWeb3.eth.Contract(abi, poolInfo.lpToken)
+  const tokenInstance = getCachedContract({
+    web3: selectedWeb3,
+    abi,
+    address: poolInfo.lpToken,
+  })
   const totalSupply = new BigNumber(await getBalance(rewardPoolAddress, tokenInstance)).dividedBy(
     new BigNumber(10).exponentiatedBy(lpToken.decimals),
   )

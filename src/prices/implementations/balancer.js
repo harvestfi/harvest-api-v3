@@ -7,6 +7,7 @@ const {
   balBoostLpToken,
   token: tokenContractData,
 } = require('../../lib/web3/contracts')
+const { getCachedContract } = require('../../lib/web3/contractCache')
 
 const getPrice = async (contractAddress, poolId, networkId) => {
   const {
@@ -28,18 +29,30 @@ const getPrice = async (contractAddress, poolId, networkId) => {
 
   let lpTokenInstance, totalSupply
   try {
-    lpTokenInstance = new provider.eth.Contract(lpTokenAbi, contractAddress)
+    lpTokenInstance = getCachedContract({
+      web3: provider,
+      abi: lpTokenAbi,
+      address: contractAddress,
+    })
     totalSupply = new BigNumber(await getActualSupply(lpTokenInstance)).dividedBy(
       new BigNumber(1e18),
     )
   } catch (error) {
     try {
-      lpTokenInstance = new provider.eth.Contract(lpBoostTokenAbi, contractAddress)
+      lpTokenInstance = getCachedContract({
+        web3: provider,
+        abi: lpBoostTokenAbi,
+        address: contractAddress,
+      })
       totalSupply = new BigNumber(await getVirtualSupply(lpTokenInstance)).dividedBy(
         new BigNumber(1e18),
       )
     } catch (error) {
-      lpTokenInstance = new provider.eth.Contract(tokenAbi, contractAddress)
+      lpTokenInstance = getCachedContract({
+        web3: provider,
+        abi: tokenAbi,
+        address: contractAddress,
+      })
       totalSupply = new BigNumber(await getTotalSupply(lpTokenInstance)).dividedBy(
         new BigNumber(1e18),
       )
