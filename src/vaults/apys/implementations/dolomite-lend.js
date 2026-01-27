@@ -19,9 +19,9 @@ const getApy = async (marketId, reduction, chain) => {
     address: dolomiteAddresses.mainnet,
   })
   const marketInfo = await dolomiteMethods.getMarketInfo(marketId, dolomiteInstance)
-  const earningsRate = new BigNumber(await dolomiteMethods.getEarningsRate(dolomiteInstance)).div(
-    1e18,
-  )
+  const earningsRate = new BigNumber(
+    (await dolomiteMethods.getEarningsRate(dolomiteInstance))[0],
+  ).div(1e18)
 
   const borrowed = new BigNumber(marketInfo[0].totalPar.borrow).times(marketInfo[0].index.borrow)
   const supplied = new BigNumber(marketInfo[0].totalPar.supply).times(marketInfo[0].index.supply)

@@ -48,12 +48,28 @@ const getWeb3 = chainId => {
   }
 }
 
+function bigintToStringDeep(v) {
+  if (typeof v === 'bigint') {
+    return v.toString(10)
+  }
+
+  if (Array.isArray(v)) {
+    return v.map(bigintToStringDeep)
+  }
+
+  if (v && typeof v === 'object') {
+    return Object.fromEntries(Object.entries(v).map(([k, val]) => [k, bigintToStringDeep(val)]))
+  }
+
+  return v
+}
+
 const countFunctionCall = async p => {
   const count = cache.get(WEB3_CALL_COUNT_KEY) || 0
   cache.set(WEB3_CALL_COUNT_KEY, count + 1)
 
   const v = await p
-  return typeof v === 'bigint' ? v.toString(10) : v
+  return bigintToStringDeep(v)
 }
 
 const resetCallCount = () => {

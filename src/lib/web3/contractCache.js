@@ -1,6 +1,7 @@
 const { LRUCache } = require('lru-cache')
 const crypto = require('crypto')
-let hits = 0, misses = 0
+let hits = 0,
+  misses = 0
 
 /**
  * IMPORTANT:

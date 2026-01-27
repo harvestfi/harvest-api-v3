@@ -750,6 +750,9 @@ const getTotalRevenue = async () => {
     }
   }
 
+  console.log('Total Revenue Monthly: ', totalRevenueMonthly.toFixed())
+  console.log('Total Revenue: ', totalRevenue.toFixed())
+
   await storeData(
     Cache,
     DB_CACHE_IDS.STATS,
