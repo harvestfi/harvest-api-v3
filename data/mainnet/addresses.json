@@ -3643,13 +3643,16 @@
         "MorphoVault": "0x6770216aC60F634483Ec073cBABC4011c94307Cb"
       },
       "aeroCL_ETH_USDC_16w": {
-        "NewVault": "0xEC0c0007eE5872268997a92C07AAeC5FF5eB6A3c"
+        "NewVault": "0xEC0c0007eE5872268997a92C07AAeC5FF5eB6A3c",
+        "doHardwork": false
       },
       "aeroCL_ETH_USDC_30w": {
-        "NewVault": "0xcc00Dd51b3aE372A5450031c9261052da9521FC3"
+        "NewVault": "0xcc00Dd51b3aE372A5450031c9261052da9521FC3",
+        "doHardwork": false
       },
       "aeroCL_ETH_USDC_6w": {
-        "NewVault": "0x8FfF1A092F187f7B137CE513281143F3219D3352"
+        "NewVault": "0x8FfF1A092F187f7B137CE513281143F3219D3352",
+        "doHardwork": false
       },
       "aeroCL_tBTC_cbBTC": {
         "NewVault": "0x86b8E5fc263e3760A44886fD50E9279e31eDdF4F"
