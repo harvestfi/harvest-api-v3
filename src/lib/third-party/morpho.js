@@ -15,7 +15,6 @@ const executeApiCall = (query, variables) =>
       if (data) {
         return data
       } else {
-        console.log(response)
         return null
       }
     })
@@ -31,9 +30,25 @@ const getVaultData = async (vaultAddr, chain) => {
         address: "${vaultAddr}"
         chainId: ${chain}
       ) {
-        dailyApys {
-          netApy
+        state {
+          dailyNetApy
         }
+      }
+  }`
+
+  const queryResponse = await executeApiCall(query, {})
+
+  return queryResponse
+}
+
+const getV2VaultData = async (vaultAddr, chain) => {
+  const query = `
+    query {
+      vaultV2ByAddress(
+        address: "${vaultAddr}"
+        chainId: ${chain}
+      ) {
+        avgNetApy(lookback: ONE_DAY)
       }
   }`
 
@@ -62,5 +77,6 @@ const getMarketData = async (marketUniqueKey, chain) => {
 
 module.exports = {
   getVaultData,
+  getV2VaultData,
   getMarketData,
 }
