@@ -22,8 +22,8 @@ const client = axios.create({
   timeout: 10_000,
   httpAgent,
   httpsAgent,
-  maxContentLength: 5 * 1024 * 1024,
-  maxBodyLength: 5 * 1024 * 1024,
+  maxContentLength: 10 * 1024 * 1024,
+  maxBodyLength: 10 * 1024 * 1024,
   decompress: true,
   validateStatus: status => status >= 200 && status < 300,
 })

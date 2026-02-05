@@ -12,7 +12,7 @@ const getApy = async (eulerVault, strategyAddr, factor, chain) => {
     const response = await client.get(
       `${EULER_ENDPOINT}?chainId=${chain}&vaultAddress=${eulerVault}`,
     )
-    const apyResult = get(response, `data.vault.apyCurrent`, '0')
+    const apyResult = get(response, `data.apyCurrent`, '0')
     apy = new BigNumber(apyResult)
   } catch (err) {
     logger.error('Euler API error: ', err)

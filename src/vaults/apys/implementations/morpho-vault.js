@@ -22,7 +22,7 @@ const getApy = async (morphoVault, factor, chain) => {
         result = response.vaultV2ByAddress.netApy
       }
     } catch (e) {
-      logger.error("Error getting Morpho APY:", e)
+      logger.error('Error getting Morpho APY:', e)
     }
   }
 
