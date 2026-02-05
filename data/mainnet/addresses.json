@@ -189,9 +189,9 @@
       "MigrationStrategy": "0x0Df24F8FD05279b34C432B165A470E9146199d92",
       "NewVault": "0xFE09e53A81Fe2808bc493ea64319109B5bAa573e",
       "OldStrategy": "0x41c66337214247cB2B6eDeF4772C694D03403F57",
-      "NewStrategy": "0x85B2d3A479049d3455C64166ee3F3C32af7141F7",
+      "NewStrategy": "0xa6Bfe0a69dcB7D7f18818034d4DE170AE85DcEB9",
       "NewPool": "0x3DA9D911301f8144bdF5c3c67886e5373DCdff8e",
-      "MorphoVault": "0x9a8bC3B04b7f3D87cfC09ba407dCED575f2d61D8"
+      "MorphoVault": "0x5181cD56C2C71d20094d23d43F4D6362834643AE"
     },
     "DAI": {
       "OldVault": "0xe85C8581e60D7Cd32Bbfd86303d2A4FA6a951Dac",
@@ -207,9 +207,9 @@
       "MigrationStrategy": "0xd5dF7E9F74B31eC8d5011600093156c9f904671D",
       "NewVault": "0xf0358e8c3CD5Fa238a29301d0bEa3D63A17bEdBE",
       "OldStrategy": "0xB28Fe4E9D3815428296bB6233Ff41DBBAdd186F6",
-      "NewStrategy": "0x7525B9E74f586CCd08B872D0503E0925D6836779",
+      "NewStrategy": "0xaa63601d64c341Ff2F0Db6252962aD8a374F46f6",
       "NewPool": "0x4F7c28cCb0F1Dbd1388209C67eEc234273C878Bd",
-      "MorphoVault": "0xc582F04d8a82795aa2Ff9c8bb4c1c889fe7b754e"
+      "MorphoVault": "0x9a1D6bd5b8642C41F25e0958129B85f8E1176F3e"
     },
     "USDT": {
       "OldVault": "0xc7EE21406BB581e741FBb8B21f213188433D9f2F",
@@ -653,7 +653,7 @@
       "Underlying": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       "NewVault": "0x73515227DB81b4F506cb24f077d391886DA789c9",
       "OldStrategy": "0x1Ec83EB417E5BdC6A61cf021de461c1D88cb6fac",
-      "NewStrategy": "0x18D748f7BC573e67C802d1D4cEF599FB8380af42",
+      "NewStrategy": "0x3BCF6E319C3494e13DFA179430AD167700Fb3e5d",
       "NewPool": "0x0B34c46D5C3D7f703f7fe44b8929ed14c312d17f",
       "MorphoVault": "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658"
     },
@@ -835,16 +835,16 @@
     "morpho_FA_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       "NewVault": "0x6D84799f874918A7762625805d68Cf3181d8d5f2",
-      "NewStrategy": "0xc7FCBD6D6B09A4E3D78C511852Dd7AC7C253A22D",
+      "NewStrategy": "0x90A31Ff8Cd798c0969e78336a6C546Bd39EF5E66",
       "NewPool": "0xEf17d5Bd0aCd936Ed11299cDf3a0AAb140B0Ae9E",
-      "MorphoVault": "0xb0f05E4De970A1aaf77f8C2F823953a367504BA9"
+      "MorphoVault": "0xf1CA44EEa3A4eFFcB195A970a2f1d8553f76F9A1"
     },
     "morpho_HY_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       "NewVault": "0xD02daFa6E9145ce1FAA786F80A50202E8a4255f8",
-      "NewStrategy": "0xdF30AE001f3491e7ef2d5Cc00DcF91B05C0a7D69",
+      "NewStrategy": "0x236949C435EC3558E117db8a8f140d5708d63925",
       "NewPool": "0x9e40fEE3Cd38e7e05f1B0283CD8D4d2C21cED589",
-      "MorphoVault": "0x777791C4d6DC2CE140D00D2828a7C93503c67777"
+      "MorphoVault": "0x093272C07700d3cA5301C3Bf9B3A392624179E2F"
     },
     "morpho_MEV_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -882,16 +882,16 @@
     "morpho_CR_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       "NewVault": "0x99671dbf3D87C0b8f23E7Ea5B20CFAA6175578ca",
-      "NewStrategy": "0xB86713A05c05CCc818F5FD753D68a3D8F00A44ca",
+      "NewStrategy": "0x76386CC8226965bEb64011a05327764a561365BA",
       "NewPool": "0x830E3CD061cF5f38F6546Ae018C537f98b399401",
-      "MorphoVault": "0x62fE596d59fB077c2Df736dF212E0AFfb522dC78"
+      "MorphoVault": "0x69A238Ae7ebeb3c53ff3B544E48B96a2142fc284"
     },
     "morpho_FX_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       "NewVault": "0x40C0a9789D4C38e1125C540edB664fFff69C83E7",
-      "NewStrategy": "0x4e76e177c76F74b1FD45ae0d6daC50deE4023886",
+      "NewStrategy": "0x1b0cc2cCcD6444B822aBB4EAD7e1e5f0f9dA39aA",
       "NewPool": "0xfD97B5beE02DF6c06752872F0Cb08bc19aA716ff",
-      "MorphoVault": "0x4F460bb11cf958606C69A963B4A17f9DaEEea8b6"
+      "MorphoVault": "0x787FC686879EaCE7Ad94A63fcEcd520fdeAf7AF9"
     },
     "morpho_RL_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -2486,16 +2486,16 @@
       "morpho_GC_USDC": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
         "NewVault": "0x34E2110F8C9a635477EFf75FDBe73251Fe02ae4a",
-        "NewStrategy": "0x779be0D2Ec4f2731540331E530e362225e56Df07",
+        "NewStrategy": "0x74BB57F88deC230e5586CB9ca1e7A55ac1122a9c",
         "NewPool": "0x39311AD4c463835aCa1Fd87153462A55De1d3a5F",
-        "MorphoVault": "0x7e97fa6893871A2751B5fE961978DCCb2c201E65"
+        "MorphoVault": "0x55a2B207b0074E13AdCb858950a81B7a04775E0F"
       },
       "morpho_GP_USDC": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
         "NewVault": "0xE6e61bF3Ec29b4ab1846EA2851FA021C0BE886BA",
-        "NewStrategy": "0xa0f050B6BDcEa6354ca7bb848f9B9569E5932df4",
+        "NewStrategy": "0x80875EA382f56503710A702f32F4d6350cbA36bF",
         "NewPool": "0xFCDCe3B6ce03a7dAD1cC48d1eE578381B0711Bcb",
-        "MorphoVault": "0x7c574174DA4b2be3f705c6244B4BfA0815a8B3Ed"
+        "MorphoVault": "0x610D151aE40662AE148cdBaaE1Ea5904b6AFAE78"
       },
       "morpho_MEV_USDC": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
@@ -2515,9 +2515,9 @@
       "morpho_SHHY_USDC": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
         "NewVault": "0xedE9330Aa169f0fEca59E2e62fF443682862a0a4",
-        "NewStrategy": "0xa2FFF1166db6b80C81d55BE0D74C77123151CF04",
+        "NewStrategy": "0xb7c6d55f829A41C8F54b319eE2b8fB2425f6bB2C",
         "NewPool": "0x03763587768F81b14adBd80AC293e8fC1e44F48f",
-        "MorphoVault": "0x5c0C306Aaa9F877de636f4d5822cA9F2E81563BA"
+        "MorphoVault": "0xbeeff1D5dE8F79ff37a151681100B039661da518"
       },
       "morpho_SHP_USDC": {
         "Underlying": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",

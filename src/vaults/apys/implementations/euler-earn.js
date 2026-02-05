@@ -3,6 +3,7 @@ const { EULER_ENDPOINT } = require('../../../lib/constants')
 const { client } = require('../../../lib/http')
 const { get } = require('lodash')
 const { getApy: getMerklApy } = require('./merkl')
+const { logger } = require('../../../lib/logger')
 
 const getApy = async (eulerVault, strategyAddr, factor, chain) => {
   let apy
@@ -14,7 +15,7 @@ const getApy = async (eulerVault, strategyAddr, factor, chain) => {
     const apyResult = get(response, `data.vault.apyCurrent`, '0')
     apy = new BigNumber(apyResult)
   } catch (err) {
-    console.error('Euler API error: ', err)
+    logger.error('Euler API error: ', err)
     apy = new BigNumber(0)
   }
 
