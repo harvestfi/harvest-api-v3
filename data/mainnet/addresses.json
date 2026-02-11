@@ -105,6 +105,7 @@
   "CJPY": "0x1cfa5641c01406aB8AC350dEd7d735ec41298372",
   "RSUP": "0x419905009e4656fdC02418C7Df35B1E61Ed5F726",
   "T": "0xCdF7028ceAB81fA0C6971208e83fa7872994beE5",
+  "sUSDS": "0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD",
   "pools": {
     "DAIPool": "0xF9E5f9024c2f3f2908A1d0e7272861a767C9484b",
     "USDCPool": "0xE1f9A3EE001a2EcC906E8de637DBf20BB2d44633",
@@ -928,6 +929,41 @@
       "NewStrategy": "0xd75Ea59BEDe05164a140CAa4B29804914EbB9AA3",
       "NewPool": "0xf586E3f91497bc5AC46489A6285fed4E8067D599",
       "MarketId": 1
+    },
+    "ConvexLend_crvUSD_CRV": {
+      "Underlying": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
+      "NewVault": "0xA5B4A713141b617f906321409c02c94Aa2Ba3ba1",
+      "NewStrategy": "0xCCde5122a00009761AdF4D9Cce74201DD64C736d",
+      "NewPool": "0xd033E4312f5Bb8cD53b23F93ecc15Ca745A9C1DD",
+      "PoolId": "ethereum-0xcea18a8752bb7e7817f9ae7565328fe415c0f2ca-325"
+    },
+    "ConvexLend_crvUSD_sfrxUSD": {
+      "Underlying": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
+      "NewVault": "0x2067525419e05E8FCA88992F326a42FCBFa8ddbc",
+      "NewStrategy": "0xd770e833429E50B7Df42DE74B76501eE3e5EfCF5",
+      "NewPool": "0x0f37B206f957665a44666B6F4b80062fE995F567",
+      "PoolId": "ethereum-0x8e3009b59200668e1efda0a2f2ac42b24baa2982-438"
+    },
+    "ConvexLend_crvUSD_sUSDS": {
+      "Underlying": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
+      "NewVault": "0x247d459c33770Bb285Be22104991c18dAaD06f25",
+      "NewStrategy": "0x019086Ceb439D635aDd1f0df8D2F8cfBb8523094",
+      "NewPool": "0x31B9eBd61F0E781f457bCA87483aC2D820B344e4",
+      "PoolId": "ethereum-0xc33aa628b10655b36eaa7ee880d6bc4789dd2289-453"
+    },
+    "ConvexLend_crvUSD_tBTC": {
+      "Underlying": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
+      "NewVault": "0xa20470a948D038e107C03A9BD967ec6f5C8255ae",
+      "NewStrategy": "0xE46B5e3c6880B7a2550D4221200a6dF53cae5cC0",
+      "NewPool": "0xe6A3D8F77cD1Ef99A78AA36279e2b1f0039e327d",
+      "PoolId": "ethereum-0xb2b23c87a4b6d1b03ba603f7c3eb9a81fdc0aac9-328"
+    },
+    "ConvexLend_crvUSD_WBTC": {
+      "Underlying": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
+      "NewVault": "0xb8dc0C4EB3C02837AB82E6109Aca430C0B8fd99a",
+      "NewStrategy": "0x6b0e3A9416F7Fb68CEB02d50cec61dF2ad9b5025",
+      "NewPool": "0xC2bfd5495f6bc46b3CE3DB28EA53a2317eB47B4B",
+      "PoolId": "ethereum-0xccd37eb6374ae5b1f0b85ac97eff14770e0d0063-344"
     }
   },
   "MATIC": {
