@@ -17,7 +17,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_CRV.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>in a Convex Lending Market, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_CRV.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend CRV market and stakes on Convex, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are converted into more
@@ -39,7 +39,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_sfrxUSD.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>in a Convex Lending Market, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_sfrxUSD.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend sfrxUSD market and stakes on Convex, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are converted into more
@@ -61,7 +61,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_sUSDS.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>in a Convex Lending Market, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_sUSDS.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend sUSDS market and stakes on Convex, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are converted into more
@@ -83,7 +83,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_tBTC.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>in a Convex Lending Market, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_tBTC.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend tBTC market and stakes on Convex, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are converted into more
@@ -105,7 +105,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>in a Convex Lending Market, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend WBTC market and stakes on Convex, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are converted into more
