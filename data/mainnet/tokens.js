@@ -41,6 +41,56 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  frxUSD: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    logoUrl: ['./icons/frxusd.svg'],
+    tokenAddress: addresses.frxUSD,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['frax-usd'],
+    },
+  },
+  OUSD: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    logoUrl: ['./icons/ousd.svg'],
+    tokenAddress: addresses.OUSD,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['origin-dollar'],
+    },
+  },
+  curve_frxUSD_OUSD: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
+    apyTokenSymbols: ['CRV', 'CVX'],
+    logoUrl: ['./icons/frxusd.svg', './icons/ousd.svg'],
+    tokenNames: ['frxUSD', 'OUSD'],
+    platform: ['Convex Finance'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.V2.curve_frxUSD_OUSD.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.curve_frxUSD_OUSD.NewVault,
+    strategyAddress: addresses.V2.curve_frxUSD_OUSD.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.CURVE_POOL,
+      params: [
+        addresses.V2.curve_frxUSD_OUSD.Underlying,
+        addresses.V2.curve_frxUSD_OUSD.Underlying,
+        '18',
+        ['frxUSD', 'OUSD'],
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.CONVEX,
+        params: ['frxusd_ousd', profitSharingCut15Percent],
+      },
+    ],
+  },
   sUSDS: {
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/susds.svg'],
