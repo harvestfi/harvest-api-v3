@@ -6,6 +6,37 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'curve_frxUSD_OUSD',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.curve_frxUSD_OUSD.NewPool,
+    collateralAddress: addresses.V2.curve_frxUSD_OUSD.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://curve.finance/dex/ethereum/pools/factory-stable-ng-584/deposit`,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.CONVEX,
+      params: ['factory-stable-ng-584'],
+    },
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.curve_frxUSD_OUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Convex farm, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
+       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.curve_frxUSD_OUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
+      </p>
+      <p> Get the 
+      <a href="https://etherscan.io/token/${addresses.V2.curve_frxUSD_OUSD.Underlying}" target="_blank" rel="noopener noreferrer">Curve LP tokens</a> by supplying liquidity on 
+      <a href="https://curve.finance/dex/ethereum/pools/factory-stable-ng-584/deposit" target="_blank" rel="noopener noreferrer">Curve</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'ConvexLend_crvUSD_CRV',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.ConvexLend_crvUSD_CRV.NewPool,
