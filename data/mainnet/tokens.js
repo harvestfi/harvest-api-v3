@@ -3879,6 +3879,7 @@ module.exports = {
     ],
   },
   moonwell_LBTC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -3907,6 +3908,7 @@ module.exports = {
     ],
   },
   moonwell_tBTC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -3935,6 +3937,7 @@ module.exports = {
     ],
   },
   moonwell_USDS: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -7598,6 +7601,7 @@ module.exports = {
     ],
   },
   moonwell_EURC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -7626,6 +7630,7 @@ module.exports = {
     ],
   },
   moonwell_cbBTC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -13261,6 +13266,7 @@ module.exports = {
     },
   },
   moonwell_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -13580,6 +13586,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'WELL'],
   },
   moonwell_WETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],

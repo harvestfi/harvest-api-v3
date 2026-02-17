@@ -2968,14 +2968,16 @@
         "NewVault": "0x90613e167D42CA420942082157B42AF6fc6a8087",
         "NewStrategy": "0x4Eb5f78F5dE651ceFa81a038105224fE1Dc68d02",
         "NewPool": "0x3169Cbd868851570D246CCbEF8209B64d07E5268",
-        "mToken": "0xEdc817A28E8B93B03976FBd4a3dDBc9f7D176c22"
+        "mToken": "0xEdc817A28E8B93B03976FBd4a3dDBc9f7D176c22",
+        "doHardwork": false
       },
       "moonwell_WETH": {
         "Underlying": "0x4200000000000000000000000000000000000006",
         "NewVault": "0x0B0193fAD49DE45F5E2B0A9f5D6Bc3BB7D281688",
         "NewStrategy": "0x2696E8017A422af7ee764Fa598C7AC3B75007FdB",
         "NewPool": "0x2E602943C0a1B1027B2AC998facB698fD4F689A7",
-        "mToken": "0x628ff693426583D9a7FB391E54366292F509D457"
+        "mToken": "0x628ff693426583D9a7FB391E54366292F509D457",
+        "doHardwork": false
       },
       "baseswap_axlUSDC_ETH": {
         "Underlying": "0x9A0b05F3cF748A114A4f8351802b3BFfE07100D4",
@@ -3371,7 +3373,8 @@
         "NewVault": "0xc5dc397B1dB51dA30dC9F3aC7084bBBA1EFbe249",
         "NewStrategy": "0x6228754f46A3183C9128ad9e785C84D8AF31eC86",
         "NewPool": "0x0950314900287c5192DD8F0d94D27261BA255927",
-        "mToken": "0xF877ACaFA28c19b96727966690b2f44d35aD5976"
+        "mToken": "0xF877ACaFA28c19b96727966690b2f44d35aD5976",
+        "doHardwork": false
       },
       "aerodrome_cbBTC_ETH": {
         "Underlying": "0x2578365B3dfA7FfE60108e181EFb79FeDdec2319",
@@ -3401,7 +3404,8 @@
         "NewVault": "0xc101921178b843fDcB6d512E4c30CF44e10FA51B",
         "NewStrategy": "0xcd945EC40d57c1928bF4AeB2e753D682E4e6953B",
         "NewPool": "0x73396eeB5c4099CAd81AF53a951A45ccE7Ba97e2",
-        "mToken": "0xb682c840B5F4FC58B20769E691A6fa1305A501a2"
+        "mToken": "0xb682c840B5F4FC58B20769E691A6fa1305A501a2",
+        "doHardwork": false
       },
       "fluid_ETH": {
         "Underlying": "0x4200000000000000000000000000000000000006",
@@ -3640,21 +3644,24 @@
         "NewVault": "0xDC8F87F7e597326C907ba8Bb341A3eD5b35a0e55",
         "NewStrategy": "0xF6B81c70FC057AeA5E2D8234e632aCC9b42F20e9",
         "NewPool": "0x0F9A350a4D21B648013A186c13930F39d4Da2B0E",
-        "mToken": "0x10fF57877b79e9bd949B3815220eC87B9fc5D2ee"
+        "mToken": "0x10fF57877b79e9bd949B3815220eC87B9fc5D2ee",
+        "doHardwork": false
       },
       "moonwell_tBTC": {
         "Underlying": "0x236aa50979D5f3De3Bd1Eeb40E81137F22ab794b",
         "NewVault": "0x614D1bC8a37EB229232ae7338C6333064496c5E3",
         "NewStrategy": "0x5e349A82F86235AbF44aD01e45896aCd771D21b0",
         "NewPool": "0x7fCED703bEff06a8e1859B4FeD21DA707d4e2693",
-        "mToken": "0x9A858ebfF1bEb0D3495BB0e2897c1528eD84A218"
+        "mToken": "0x9A858ebfF1bEb0D3495BB0e2897c1528eD84A218",
+        "doHardwork": false
       },
       "moonwell_USDS": {
         "Underlying": "0x820C137fa70C8691f0e44Dc420a5e53c168921Dc",
         "NewVault": "0x2f4Ab0c54aE22bE66A1b273D11b28c001a61b871",
         "NewStrategy": "0x9dc9A5598BA5911d9E67D82641A1e96bC81B6865",
         "NewPool": "0x71C842aF911A7BcCC401ce3100F0eD1830629cC4",
-        "mToken": "0xb6419c6C2e60c4025D6D06eE4F913ce89425a357"
+        "mToken": "0xb6419c6C2e60c4025D6D06eE4F913ce89425a357",
+        "doHardwork": false
       },
       "moonwell_VIRTUAL": {
         "Underlying": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
