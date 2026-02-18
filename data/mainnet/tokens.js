@@ -3024,12 +3024,11 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MERKL,
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
         params: [
-          addresses.MATIC.V2.morphoCompound_ETH.NewStrategy,
           addresses.MATIC.V2.morphoCompound_ETH.MorphoVault,
-          CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
@@ -3052,12 +3051,11 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MERKL,
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
         params: [
-          addresses.MATIC.V2.morphoCompound_USDC.NewStrategy,
           addresses.MATIC.V2.morphoCompound_USDC.MorphoVault,
-          CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
@@ -3080,12 +3078,11 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MERKL,
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
         params: [
-          addresses.MATIC.V2.morphoCompound_USDT.NewStrategy,
           addresses.MATIC.V2.morphoCompound_USDT.MorphoVault,
-          CHAIN_IDS.POLYGON_MAINNET,
           profitSharingCut8Percent,
+          CHAIN_IDS.POLYGON_MAINNET,
         ],
       },
     ],
