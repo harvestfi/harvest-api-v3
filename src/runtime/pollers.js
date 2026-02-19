@@ -1414,35 +1414,38 @@ const preLoadCoingeckoPrices = async () => {
   console.log('Caching token prices...')
   const addressesSorted = Object.keys(addresses).sort()
   const idsSorted = Object.keys(ids).sort()
+  const ADDRESS_PREFETCH_BATCH_SIZE = 50
+  const ID_PREFETCH_BATCH_SIZE = 100
 
-  await prefetchPriceByAddresses(
-    addressesSorted.join(),
-    undefined,
-    'usd',
-    () => {
-      console.log(`Prices fetched successfully for ${addressesSorted}`)
-    },
-    err => {
+  for (const addressesBatch of chunk(addressesSorted, ADDRESS_PREFETCH_BATCH_SIZE)) {
+    if (!addressesBatch.length) continue
+    try {
+      await prefetchPriceByAddresses(addressesBatch.join(), undefined, 'usd')
+    } catch (err) {
       logger.error(
-        `Something went wrong during the preloading of prices through addresses! ${addressesSorted}`,
-        err,
+        `Something went wrong during preloading CoinGecko address batch (${addressesBatch.length} tokens). Continuing...`,
+        {
+          message: err.message,
+          status: err.response?.status,
+        },
       )
-    },
-  )
+    }
+  }
 
-  await prefetchPriceByIds(
-    idsSorted.join(),
-    'usd',
-    () => {
-      console.log(`Prices fetched successfully for ids: ${idsSorted}`)
-    },
-    err => {
+  for (const idsBatch of chunk(idsSorted, ID_PREFETCH_BATCH_SIZE)) {
+    if (!idsBatch.length) continue
+    try {
+      await prefetchPriceByIds(idsBatch.join(), 'usd')
+    } catch (err) {
       logger.error(
-        `Something went wrong during the preloading of prices through ids! ${idsSorted}`,
-        err,
+        `Something went wrong during preloading CoinGecko id batch (${idsBatch.length} ids). Continuing...`,
+        {
+          message: err.message,
+          status: err.response?.status,
+        },
       )
-    },
-  )
+    }
+  }
 }
 
 const v8 = require('v8')
