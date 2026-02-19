@@ -11,6 +11,8 @@ const { sleep, assertValidPositiveNumber, assertIsDate } = require('./utils')
 const harvestKey = 'harvest-key'
 const testPort = 3000
 const { tokens: tokensJson, pools: poolsJson } = require('../../data/index.js')
+const CHAIN_KEYS = ['eth', 'matic', 'arbitrum', 'base', 'zksync', 'hyperevm']
+const TVL_CHAIN_IDS = ['1', '137', '42161', '8453', '324', '999']
 
 describe('Happy Paths', function () {
   let appServer, allVaultsJsonArray
@@ -25,45 +27,59 @@ describe('Happy Paths', function () {
     appServer = app()
 
     const getVaultCount = data =>
-      ['eth', 'matic', 'arbitrum', 'base', 'zksync', 'hyperevm'].reduce(
-        (count, chain) => count + Object.keys(data?.[chain] || {}).length,
-        0,
-      )
-
+      CHAIN_KEYS.reduce((count, chain) => count + Object.keys(data?.[chain] || {}).length, 0)
     const getPoolCount = data =>
-      ['eth', 'matic', 'arbitrum', 'base', 'zksync', 'hyperevm'].reduce(
-        (count, chain) => count + (data?.[chain]?.length || 0),
-        0,
-      )
+      CHAIN_KEYS.reduce((count, chain) => count + (data?.[chain]?.length || 0), 0)
+    const hasTvlData = data =>
+      TVL_CHAIN_IDS.some(chainId => Array.isArray(data?.[chainId]) && data[chainId].length > 0)
+    const isPositiveNumber = value => Number.isFinite(Number(value)) && Number(value) > 0
 
     let attempts = 0
-    const maxAttempts = 90
+    const maxAttempts = 72 // 6 minutes max wait
     while (attempts < maxAttempts) {
       try {
         const [
           vaultsResponse,
           poolsResponse,
+          tokenStatsResponse,
           revenueResponse,
           buybacksResponse,
+          gmvResponse,
+          tvlResponse,
         ] = await Promise.all([
           axios.get(`http://localhost:${testPort}/vaults?key=${harvestKey}`),
           axios.get(`http://localhost:${testPort}/pools?key=${harvestKey}`),
+          axios.get(`http://localhost:${testPort}/token-stats?key=${harvestKey}`),
           axios.get(`http://localhost:${testPort}/revenue/total?key=${harvestKey}`),
           axios.get(`http://localhost:${testPort}/buybacks/total?key=${harvestKey}`),
+          axios.get(`http://localhost:${testPort}/gmv/total?key=${harvestKey}`),
+          axios.get(`http://localhost:${testPort}/tvl?key=${harvestKey}`),
         ])
 
         const allVaultsLoaded = getVaultCount(vaultsResponse.data) === allVaultsJsonArray.length
         const allPoolsLoaded = getPoolCount(poolsResponse.data) === poolsJson.length
-        const revenueReady =
-          Number.isFinite(Number(revenueResponse.data)) && Number(revenueResponse.data) > 0
-        const buybacksReady =
-          Number.isFinite(Number(buybacksResponse.data)) && Number(buybacksResponse.data) > 0
+        const tokenStatsReady =
+          isPositiveNumber(tokenStatsResponse.data?.percentStaked) &&
+          isPositiveNumber(tokenStatsResponse.data?.totalGasSaved) &&
+          isPositiveNumber(tokenStatsResponse.data?.totalMarketCap)
+        const revenueReady = isPositiveNumber(revenueResponse.data)
+        const buybacksReady = isPositiveNumber(buybacksResponse.data)
+        const gmvReady = isPositiveNumber(gmvResponse.data)
+        const tvlReady = hasTvlData(tvlResponse.data)
 
-        if (allVaultsLoaded && allPoolsLoaded && revenueReady && buybacksReady) {
+        if (
+          allVaultsLoaded &&
+          allPoolsLoaded &&
+          tokenStatsReady &&
+          revenueReady &&
+          buybacksReady &&
+          gmvReady &&
+          tvlReady
+        ) {
           break
         }
       } catch (error) {
-        // API is still warming up, keep polling
+        // API is still warming up and loading cache data.
       }
 
       attempts += 1
@@ -72,7 +88,7 @@ describe('Happy Paths', function () {
     }
 
     if (attempts === maxAttempts) {
-      throw new Error('Timed out waiting for API data to finish loading')
+      throw new Error('Timed out waiting for API data to be ready')
     }
 
     console.log('Loaded. Running tests...')
