@@ -53,7 +53,10 @@ module.exports = {
     decimals: '6',
     vaultAddress: addresses.BASE.V2.morpho_CR_EURC.NewVault,
     strategyAddress: addresses.BASE.V2.morpho_CR_EURC.NewStrategy,
-    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.EURC] },
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['euro-coin'],
+    },
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
