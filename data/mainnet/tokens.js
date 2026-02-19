@@ -41,6 +41,30 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  morpho_CR_EURC: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/eurc.svg'],
+    tokenNames: ['EURC'],
+    platform: ['Morpho - Clearstar Reactor V2'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.BASE.V2.morpho_CR_EURC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.morpho_CR_EURC.NewVault,
+    strategyAddress: addresses.BASE.V2.morpho_CR_EURC.NewStrategy,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_CONTRACT, params: [addresses.EURC] },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.BASE.V2.morpho_CR_EURC.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
   frxUSD: {
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/frxusd.svg'],
