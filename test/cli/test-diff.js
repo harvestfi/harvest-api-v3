@@ -3,7 +3,6 @@ const initDb = require('../../src/lib/db')
 const { clearAllDataTestOnly, Cache } = require('../../src/lib/db/models/cache')
 const app = require('../../src/runtime/app')
 const axios = require('axios')
-const { sleep } = require('../integration/utils')
 const Diff = require('text-diff')
 const fs = require('fs')
 
@@ -26,10 +25,6 @@ const main = async () => {
   await clearAllDataTestOnly(Cache)
 
   appServer = app()
-
-  let response = {
-    data: {},
-  }
 
   console.log('Comparing the outputs....')
 

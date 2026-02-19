@@ -1,6 +1,5 @@
 const request = require('supertest')
 const assert = require('chai').assert
-const axios = require('axios')
 const { isArray } = require('lodash')
 
 const addresses = require('../../src/lib/data/addresses.json')
@@ -9,7 +8,7 @@ const { Cache, clearAllDataTestOnly } = require('../../src/lib/db/models/cache')
 const { getStartTimestamp } = require('../../src/lib/utils')
 
 const app = require('../../src/runtime/app')
-const { sleep, assertValidPositiveNumber, assertArraySize, assertIsDate } = require('./utils')
+const { assertValidPositiveNumber, assertIsDate } = require('./utils')
 const harvestKey = 'harvest-key'
 const testPort = 3000
 const { tokens: tokensJson, pools: poolsJson } = require('../../data/index.js')
@@ -34,10 +33,6 @@ describe('Happy Paths', function () {
     )
 
     appServer = app()
-
-    let response = {
-      data: {},
-    }
 
     console.log('Loaded. Running tests...')
   })
