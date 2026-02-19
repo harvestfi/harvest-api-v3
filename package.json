@@ -10,7 +10,7 @@
     "start": "./run-standalone.sh",
     "dev": "nodemon src/index.js",
     "his-rates": "node ./src/script/historical-rates/index.js",
-    "test": "PORT=3000 MONGODB_DB_NAME=harvest-test-local ACTIVE_ENDPOINTS=all mocha ./test/integration/*  --timeout 600000",
+    "test": "PORT=3000 MONGODB_DB_NAME=harvest-test-local ACTIVE_ENDPOINTS=all API_KEY=harvest-key mocha ./test/integration/*  --timeout 600000",
     "debug-web3": "DEBUG_MODE=true yarn start",
     "print-vault": "node --no-deprecation ./test/cli/print-vault",
     "test-fold-leverage": "node ./test/cli/test-fold-leverage",

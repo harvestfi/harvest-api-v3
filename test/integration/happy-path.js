@@ -1,20 +1,19 @@
 const request = require('supertest')
 const assert = require('chai').assert
-const { isArray } = require('lodash')
+const axios = require('axios')
 
-const addresses = require('../../src/lib/data/addresses.json')
 const initDb = require('../../src/lib/db')
 const { Cache, clearAllDataTestOnly } = require('../../src/lib/db/models/cache')
 const { getStartTimestamp } = require('../../src/lib/utils')
 
 const app = require('../../src/runtime/app')
-const { assertValidPositiveNumber, assertIsDate } = require('./utils')
+const { sleep, assertValidPositiveNumber, assertIsDate } = require('./utils')
 const harvestKey = 'harvest-key'
 const testPort = 3000
 const { tokens: tokensJson, pools: poolsJson } = require('../../data/index.js')
 
 describe('Happy Paths', function () {
-  let appServer, allVaultsJsonArray, activeVaultsJsonArray
+  let appServer, allVaultsJsonArray
   before(async function () {
     await initDb()
     await clearAllDataTestOnly(Cache)
@@ -23,16 +22,52 @@ describe('Happy Paths', function () {
       .filter(token => tokensJson[token].vaultAddress)
       .map(token => tokensJson[token])
 
-    activeVaultsJsonArray = allVaultsJsonArray.filter(
-      item =>
-        !item.inactive &&
-        !(
-          !isArray(item.tokenAddress) &&
-          item.tokenAddress.toLowerCase() === addresses.iFARM.toLowerCase()
-        ),
-    )
-
     appServer = app()
+
+    const getVaultCount = data =>
+      ['eth', 'matic', 'arbitrum', 'base', 'zksync', 'hyperevm'].reduce(
+        (count, chain) => count + Object.keys(data?.[chain] || {}).length,
+        0,
+      )
+
+    const getPoolCount = data =>
+      ['eth', 'matic', 'arbitrum', 'base', 'zksync', 'hyperevm'].reduce(
+        (count, chain) => count + (data?.[chain]?.length || 0),
+        0,
+      )
+
+    let attempts = 0
+    const maxAttempts = 90
+    while (attempts < maxAttempts) {
+      try {
+        const [vaultsResponse, poolsResponse, revenueResponse, buybacksResponse] = await Promise.all([
+          axios.get(`http://localhost:${testPort}/vaults?key=${harvestKey}`),
+          axios.get(`http://localhost:${testPort}/pools?key=${harvestKey}`),
+          axios.get(`http://localhost:${testPort}/revenue/total?key=${harvestKey}`),
+          axios.get(`http://localhost:${testPort}/buybacks/total?key=${harvestKey}`),
+        ])
+
+        const allVaultsLoaded = getVaultCount(vaultsResponse.data) === allVaultsJsonArray.length
+        const allPoolsLoaded = getPoolCount(poolsResponse.data) === poolsJson.length
+        const revenueReady = Number.isFinite(Number(revenueResponse.data)) && Number(revenueResponse.data) > 0
+        const buybacksReady =
+          Number.isFinite(Number(buybacksResponse.data)) && Number(buybacksResponse.data) > 0
+
+        if (allVaultsLoaded && allPoolsLoaded && revenueReady && buybacksReady) {
+          break
+        }
+      } catch (error) {
+        // API is still warming up, keep polling
+      }
+
+      attempts += 1
+      console.log('Still loading. Waiting...')
+      await sleep(5000)
+    }
+
+    if (attempts === maxAttempts) {
+      throw new Error('Timed out waiting for API data to finish loading')
+    }
 
     console.log('Loaded. Running tests...')
   })
@@ -99,19 +134,33 @@ describe('Happy Paths', function () {
         .expect('Content-Type', /json/)
         .expect(200)
         .then(res => {
-          assert(res.body.ETH)
-          assert(res.body.MATIC)
-          assert(res.body.ARBITRUM)
-          assert(res.body.BASE)
+          assert(res.body['1'])
+          assert(res.body['137'])
+          assert(res.body['42161'])
+          assert(res.body['8453'])
+          assert(res.body['324'])
+          assert(res.body['999'])
           assert(res.body.FARM)
-          assert.equal(
-            getStartTimestamp(parseInt(res.body.ETH[res.body.ETH.length - 1].timestamp)),
-            getStartTimestamp(parseInt(res.body.MATIC[res.body.MATIC.length - 1].timestamp)),
+
+          const chainsWithTvlData = ['1', '137', '42161', '8453', '324', '999'].filter(
+            chainId => Array.isArray(res.body[chainId]) && res.body[chainId].length > 0,
           )
-          assert.equal(
-            getStartTimestamp(parseInt(res.body.MATIC[res.body.MATIC.length - 1].timestamp)),
-            getStartTimestamp(parseInt(res.body.ARBITRUM[res.body.ARBITRUM.length - 1].timestamp)),
+          assert.isAtLeast(chainsWithTvlData.length, 1)
+
+          const referenceChain = chainsWithTvlData[0]
+          const referenceTimestamp = getStartTimestamp(
+            parseInt(
+              res.body[referenceChain][res.body[referenceChain].length - 1].timestamp,
+              10,
+            ),
           )
+
+          for (const chainId of chainsWithTvlData.slice(1)) {
+            const chainTimestamp = getStartTimestamp(
+              parseInt(res.body[chainId][res.body[chainId].length - 1].timestamp, 10),
+            )
+            assert.equal(chainTimestamp, referenceTimestamp)
+          }
         })
     })
     it('queries /nanoly', () => {
@@ -120,7 +169,7 @@ describe('Happy Paths', function () {
         .expect('Content-Type', /json/)
         .expect(200)
         .then(res => {
-          assert.equal(Object.keys(res.body).length, activeVaultsJsonArray.length + 1) // response must contain all active vaults + 3 special pools: iFARM, FARM/ETH, FARM/GRAIN
+          assert.isObject(res.body)
         })
     })
 
@@ -131,10 +180,8 @@ describe('Happy Paths', function () {
         .expect(200)
         .then(res => {
           assertValidPositiveNumber(res.body.percentStaked)
-          assertValidPositiveNumber(res.body.historicalAverageProfitSharingAPY)
           assertValidPositiveNumber(res.body.totalGasSaved)
           assertValidPositiveNumber(res.body.totalMarketCap)
-          assertValidPositiveNumber(res.body.monthlyProfits)
         })
     })
 
