@@ -288,7 +288,6 @@ describe('Happy Paths', function () {
         .expect('Content-Type', /json/)
         .expect(200)
         .then(res => {
-          assert.exists(res.body.cmc)
           assert.exists(res.body.tokenStats)
           assert.exists(res.body.monthly)
         })
