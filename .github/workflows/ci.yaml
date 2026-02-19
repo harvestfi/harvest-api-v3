@@ -18,6 +18,8 @@ jobs:
     - name: Run ESLint
       run: yarn lint
     - name: Start MongoDB
+      env:
+        DOCKER_API_VERSION: "1.44"
       uses: supercharge/mongodb-github-action@1.6.0
       with:
         mongodb-version: ${{ matrix.mongodb-version }}
