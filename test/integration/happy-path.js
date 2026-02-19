@@ -40,7 +40,12 @@ describe('Happy Paths', function () {
     const maxAttempts = 90
     while (attempts < maxAttempts) {
       try {
-        const [vaultsResponse, poolsResponse, revenueResponse, buybacksResponse] = await Promise.all([
+        const [
+          vaultsResponse,
+          poolsResponse,
+          revenueResponse,
+          buybacksResponse,
+        ] = await Promise.all([
           axios.get(`http://localhost:${testPort}/vaults?key=${harvestKey}`),
           axios.get(`http://localhost:${testPort}/pools?key=${harvestKey}`),
           axios.get(`http://localhost:${testPort}/revenue/total?key=${harvestKey}`),
@@ -49,7 +54,8 @@ describe('Happy Paths', function () {
 
         const allVaultsLoaded = getVaultCount(vaultsResponse.data) === allVaultsJsonArray.length
         const allPoolsLoaded = getPoolCount(poolsResponse.data) === poolsJson.length
-        const revenueReady = Number.isFinite(Number(revenueResponse.data)) && Number(revenueResponse.data) > 0
+        const revenueReady =
+          Number.isFinite(Number(revenueResponse.data)) && Number(revenueResponse.data) > 0
         const buybacksReady =
           Number.isFinite(Number(buybacksResponse.data)) && Number(buybacksResponse.data) > 0
 
@@ -149,10 +155,7 @@ describe('Happy Paths', function () {
 
           const referenceChain = chainsWithTvlData[0]
           const referenceTimestamp = getStartTimestamp(
-            parseInt(
-              res.body[referenceChain][res.body[referenceChain].length - 1].timestamp,
-              10,
-            ),
+            parseInt(res.body[referenceChain][res.body[referenceChain].length - 1].timestamp, 10),
           )
 
           for (const chainId of chainsWithTvlData.slice(1)) {
