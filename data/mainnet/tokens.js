@@ -103,6 +103,7 @@ module.exports = {
     },
   },
   ConvexLend_crvUSD_CRV: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
