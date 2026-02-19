@@ -30,11 +30,6 @@ const main = async () => {
   let response = {
     data: {},
   }
-  while (Object.keys(response.data).length < 3) {
-    response = await axios.get(`http://localhost:${PORT}/cmc?key=${harvestKey}`)
-    console.log('Still loading. Waiting...')
-    await sleep(10000)
-  }
 
   console.log('Comparing the outputs....')
 

@@ -32,12 +32,6 @@ Use `export ACTIVE_ENDPOINTS=internal`
 
 Use `export ACTIVE_ENDPOINTS=external`
 
-**CoinMarketCap data**
-
-- Path: `/cmc`
-- Returns: Get all vaults with their APYs in the format expected by CoinMarketCap
-- Live: https://api.harvest.finance/cmc?key=fc8ad696-7905-4daa-a552-129ede248e33
-
 **Total Revenue**
 
 - Path: `/revenue/total`

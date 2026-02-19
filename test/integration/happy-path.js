@@ -38,11 +38,6 @@ describe('Happy Paths', function () {
     let response = {
       data: {},
     }
-    while (Object.keys(response.data).length < 3) {
-      response = await axios.get(`http://localhost:${testPort}/cmc?key=${harvestKey}`)
-      console.log('Still loading. Waiting...')
-      await sleep(10000)
-    }
 
     console.log('Loaded. Running tests...')
   })
@@ -226,17 +221,6 @@ describe('Happy Paths', function () {
         .expect(200)
         .then(res => {
           assertValidPositiveNumber(res.text)
-        })
-    })
-
-    it('queries /cmc', () => {
-      return request(`http://localhost:${testPort}`)
-        .get(`/cmc?key=${harvestKey}`)
-        .expect('Content-Type', /json/)
-        .expect(200)
-        .then(res => {
-          assertArraySize(res.body.links, 6) // links/socials
-          assertArraySize(res.body.pools, activeVaultsJsonArray.length + 3) // pools must contain all active vaults + 3 special pools
         })
     })
 
