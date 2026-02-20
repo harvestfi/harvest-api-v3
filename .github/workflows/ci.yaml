@@ -18,6 +18,8 @@ jobs:
     - name: Run ESLint
       run: yarn lint
     - name: Start MongoDB
+      env:
+        DOCKER_API_VERSION: "1.44"
       uses: supercharge/mongodb-github-action@1.6.0
       with:
         mongodb-version: ${{ matrix.mongodb-version }}
@@ -28,6 +30,7 @@ jobs:
         MAINNET_WS_URL: wss://eth.llamarpc.com
         ARBITRUM_RPC_URL: https://rpc.ankr.com/arbitrum
         BASE_RPC_URL: https://developer-access-mainnet.base.org
+        ZKSYNC_RPC_URL: https://rpc.ankr.com/zksync_era
         HYPEREVM_RPC_URL: https://hyperliquid.drpc.org
         GET_POOL_DATA_BATCH_SIZE: 2
         GET_VAULT_DATA_BATCH_SIZE: 2
