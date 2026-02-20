@@ -21,14 +21,39 @@ jobs:
       uses: supercharge/mongodb-github-action@1.6.0
       with:
         mongodb-version: ${{ matrix.mongodb-version }}
+    - name: Mask secrets
+      env:
+        ALCHEMY_KEY: ${{ secrets.ALCHEMY_KEY }}
+        API_KEY: ${{ secrets.API_KEY }}
+        COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+        ARBITRUM_SUBGRAPH_URL: ${{ secrets.ARBITRUM_SUBGRAPH_URL }}
+        MAINNET_SUBGRAPH_URL: ${{ secrets.MAINNET_SUBGRAPH_URL }}
+        POLYGON_SUBGRAPH_URL: ${{ secrets.POLYGON_SUBGRAPH_URL }}
+        ZKSYNC_SUBGRAPH_URL: ${{ secrets.ZKSYNC_SUBGRAPH_URL }}
+        BASE_SUBGRAPH_URL: ${{ secrets.BASE_SUBGRAPH_URL }}
+        HYPEREVM_SUBGRAPH_URL: ${{ secrets.HYPEREVM_SUBGRAPH_URL }}
+      run: |
+        echo "::add-mask::$ALCHEMY_KEY"
+        echo "::add-mask::$API_KEY"
+        echo "::add-mask::$COINGECKO_API_KEY"
+        echo "::add-mask::$ARBITRUM_SUBGRAPH_URL"
+        echo "::add-mask::$MAINNET_SUBGRAPH_URL"
+        echo "::add-mask::$POLYGON_SUBGRAPH_URL"
+        echo "::add-mask::$ZKSYNC_SUBGRAPH_URL"
+        echo "::add-mask::$BASE_SUBGRAPH_URL"
+        echo "::add-mask::$HYPEREVM_SUBGRAPH_URL"
     - name: Run Tests
       env:
-        MATIC_RPC_URL: https://rpc.ankr.com/polygon
-        MAINNET_RPC_URL: https://rpc.ankr.com/eth
-        MAINNET_WS_URL: wss://eth.llamarpc.com
-        ARBITRUM_RPC_URL: https://rpc.ankr.com/arbitrum
-        BASE_RPC_URL: https://developer-access-mainnet.base.org
-        HYPEREVM_RPC_URL: https://hyperliquid.drpc.org
         GET_POOL_DATA_BATCH_SIZE: 2
         GET_VAULT_DATA_BATCH_SIZE: 2
+        FETCH_CONCURRENCY: 2
+        ALCHEMY_KEY: ${{ secrets.ALCHEMY_KEY }}
+        API_KEY: ${{ secrets.API_KEY }}
+        COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+        ARBITRUM_SUBGRAPH_URL: ${{ secrets.ARBITRUM_SUBGRAPH_URL }}
+        MAINNET_SUBGRAPH_URL: ${{ secrets.MAINNET_SUBGRAPH_URL }}
+        POLYGON_SUBGRAPH_URL: ${{ secrets.POLYGON_SUBGRAPH_URL }}
+        ZKSYNC_SUBGRAPH_URL: ${{ secrets.ZKSYNC_SUBGRAPH_URL }}
+        BASE_SUBGRAPH_URL: ${{ secrets.BASE_SUBGRAPH_URL }}
+        HYPEREVM_SUBGRAPH_URL: ${{ secrets.HYPEREVM_SUBGRAPH_URL }}
       run: yarn test
