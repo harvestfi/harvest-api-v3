@@ -136,19 +136,19 @@ const CONVEX_API_URLS = {
 const HARVEST_SUBGRAPH_URLS = {
   1:
     process.env.MAINNET_SUBGRAPH_URL ||
-    'https://api.studio.thegraph.com/query/48757/harvest-mainnet-test/v0.0.10',
+    'https://api.studio.thegraph.com/query/48757/harvest-mainnet-test/v0.0.59',
   137:
     process.env.POLYGON_SUBGRAPH_URL ||
-    'https://api.studio.thegraph.com/query/48757/l2-polygon-test/v0.0.23',
+    'https://api.studio.thegraph.com/query/48757/l2-polygon-test/v0.0.33',
   8453:
     process.env.BASE_SUBGRAPH_URL ||
-    'https://api.studio.thegraph.com/query/48757/harvest-base/v0.0.24',
+    'https://api.studio.thegraph.com/query/48757/harvest-base/v0.1.9',
   42161:
     process.env.ARBITRUM_SUBGRAPH_URL ||
-    'https://api.studio.thegraph.com/query/48757/harvest-arbitrum/v0.0.19',
+    'https://api.studio.thegraph.com/query/48757/harvest-arbitrum/v0.0.84',
   324:
     process.env.ZKSYNC_SUBGRAPH_URL ||
-    'https://api.studio.thegraph.com/query/48757/l2-zksync-era/v0.1.12',
+    'https://api.studio.thegraph.com/query/48757/harvest-zksync/v0.0.27',
   999:
     process.env.HYPEREVM_SUBGRAPH_URL ||
     'https://api.studio.thegraph.com/query/48757/harvest-hyperliquid/v0.0.1',
