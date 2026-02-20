@@ -16,6 +16,7 @@ const {
   WEB3_CALL_COUNT_STATS_KEY,
   GET_PRICE_TYPES,
   CHAIN_IDS,
+  COINGECKO_API_KEY,
   GET_POOL_DATA_BATCH_SIZE,
   GET_VAULT_DATA_BATCH_SIZE,
   DEBUG_MODE,
@@ -1366,13 +1367,18 @@ const preLoadCoingeckoPrices = async () => {
   console.log('\n-- Getting token prices from CoinGecko --')
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
 
-  const addresses = {}
+  // Group contract addresses by chain so we call CoinGecko with the correct platform_id (avoids 400)
+  const addressesByChain = {}
   const ids = {}
 
   for (let tokenSymbol of Object.keys(tokens)) {
-    const priceFunction = tokens[tokenSymbol].priceFunction
+    const token = tokens[tokenSymbol]
+    const priceFunction = token.priceFunction
+    const chainId = token.chain || CHAIN_IDS.ETH
+
     if (priceFunction && priceFunction.type === GET_PRICE_TYPES.COINGECKO_CONTRACT) {
-      addresses[priceFunction.params[0].toLowerCase()] = true
+      if (!addressesByChain[chainId]) addressesByChain[chainId] = {}
+      addressesByChain[chainId][priceFunction.params[0].toLowerCase()] = true
     }
 
     if (priceFunction && priceFunction.type === GET_PRICE_TYPES.LP_TOKEN) {
@@ -1380,13 +1386,17 @@ const preLoadCoingeckoPrices = async () => {
         tokens[priceFunction.params[0]] &&
         !isArray(tokens[priceFunction.params[0]].tokenAddress)
       ) {
-        addresses[tokens[priceFunction.params[0]].tokenAddress.toLowerCase()] = true
+        const chain = tokens[priceFunction.params[0]].chain || CHAIN_IDS.ETH
+        if (!addressesByChain[chain]) addressesByChain[chain] = {}
+        addressesByChain[chain][tokens[priceFunction.params[0]].tokenAddress.toLowerCase()] = true
       }
       if (
         tokens[priceFunction.params[1]] &&
         !isArray(tokens[priceFunction.params[1]].tokenAddress)
       ) {
-        addresses[tokens[priceFunction.params[1]].tokenAddress.toLowerCase()] = true
+        const chain = tokens[priceFunction.params[1]].chain || CHAIN_IDS.ETH
+        if (!addressesByChain[chain]) addressesByChain[chain] = {}
+        addressesByChain[chain][tokens[priceFunction.params[1]].tokenAddress.toLowerCase()] = true
       }
     }
 
@@ -1396,37 +1406,42 @@ const preLoadCoingeckoPrices = async () => {
   }
 
   console.log('Caching token prices...')
-  const addressesSorted = Object.keys(addresses).sort()
   const idsSorted = Object.keys(ids).sort()
+  const ADDRESS_PREFETCH_BATCH_SIZE = 30
+  const ID_PREFETCH_BATCH_SIZE = 100
 
-  await prefetchPriceByAddresses(
-    addressesSorted.join(),
-    undefined,
-    'usd',
-    () => {
-      console.log(`Prices fetched successfully for ${addressesSorted}`)
-    },
-    err => {
-      logger.error(
-        `Something went wrong during the preloading of prices through addresses! ${addressesSorted}`,
-        err,
-      )
-    },
-  )
+  // Skip by-address prefetch in CI or without API key: free tier often returns 400 for batches
+  const skipAddressPrefetch = process.env.CI === 'true' || !COINGECKO_API_KEY
+  if (skipAddressPrefetch) {
+    console.log('Skipping CoinGecko by-address prefetch (CI or no COINGECKO_API_KEY).')
+  } else {
+    for (const chainId of Object.keys(addressesByChain)) {
+      const addressesSorted = Object.keys(addressesByChain[chainId]).sort()
+      for (const addressesBatch of chunk(addressesSorted, ADDRESS_PREFETCH_BATCH_SIZE)) {
+        if (!addressesBatch.length) continue
+        try {
+          await prefetchPriceByAddresses(addressesBatch.join(), chainId, 'usd')
+        } catch (err) {
+          logger.error(
+            `CoinGecko address batch failed (${addressesBatch.length} tokens, chain ${chainId}). Continuing...`,
+            { message: err.message, status: err.response?.status },
+          )
+        }
+      }
+    }
+  }
 
-  await prefetchPriceByIds(
-    idsSorted.join(),
-    'usd',
-    () => {
-      console.log(`Prices fetched successfully for ids: ${idsSorted}`)
-    },
-    err => {
-      logger.error(
-        `Something went wrong during the preloading of prices through ids! ${idsSorted}`,
-        err,
-      )
-    },
-  )
+  for (const idsBatch of chunk(idsSorted, ID_PREFETCH_BATCH_SIZE)) {
+    if (!idsBatch.length) continue
+    try {
+      await prefetchPriceByIds(idsBatch.join(), 'usd')
+    } catch (err) {
+      logger.error(`CoinGecko id batch failed (${idsBatch.length} ids). Continuing...`, {
+        message: err.message,
+        status: err.response?.status,
+      })
+    }
+  }
 }
 
 const v8 = require('v8')
