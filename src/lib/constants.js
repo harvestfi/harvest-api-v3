@@ -246,6 +246,7 @@ const DEBANK_API_URL = 'https://pro-openapi.debank.com'
 const SUPABASE_URL = 'https://fhsrpkorvuwvwacapbig.supabase.co' // Set your Supabase project URL here
 
 const DEBUG_MODE = process.env.DEBUG_MODE
+const TEST_MODE = process.env.TEST_MODE
 
 const WEB3_CALL_COUNT_STATS_KEY = 'web3CallCountStats'
 const WEB3_CALL_COUNT_KEY = 'web3CallCount'
@@ -350,6 +351,7 @@ module.exports = {
   SWIRL_API_URL,
   MSTABLE_API_URL,
   DEBUG_MODE,
+  TEST_MODE,
   DB_CACHE_IDS,
   PROFIT_SHARING_POOL_ID,
   UI_DATA_FILES,

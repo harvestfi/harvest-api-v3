@@ -197,16 +197,6 @@ const initRouter = app => {
     )
 
     app.get(
-      '/nanoly',
-      asyncWrap(async (req, res) => {
-        const dbField = 'data.nanolyEndPointData'
-        const queryResponse = await Cache.findOne({ type: DB_CACHE_IDS.STATS }, { [dbField]: 1 })
-
-        res.send(get(queryResponse, dbField, {}))
-      }),
-    )
-
-    app.get(
       '/tvl',
       asyncWrap(async (req, res) => {
         let dataInit = {},
@@ -222,20 +212,6 @@ const initRouter = app => {
         }
 
         res.send(dataFinal)
-      }),
-    )
-
-    app.get(
-      '/superform-reward/:vault',
-      asyncWrap(async (req, res) => {
-        const vaultAddress = req.params.vault.toLowerCase()
-
-        const dbField = `data.${vaultAddress}`
-        const queryResponse = await Cache.findOne(
-          { type: DB_CACHE_IDS.SF_REWARDS },
-          { [dbField]: 1 },
-        )
-        res.send(get(queryResponse, dbField, '0'))
       }),
     )
   }

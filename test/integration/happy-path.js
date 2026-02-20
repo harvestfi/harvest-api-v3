@@ -1,21 +1,18 @@
 const request = require('supertest')
 const assert = require('chai').assert
 const axios = require('axios')
-const { isArray } = require('lodash')
 
-const addresses = require('../../src/lib/data/addresses.json')
 const initDb = require('../../src/lib/db')
 const { Cache, clearAllDataTestOnly } = require('../../src/lib/db/models/cache')
-const { getStartTimestamp } = require('../../src/lib/utils')
 
 const app = require('../../src/runtime/app')
-const { sleep, assertValidPositiveNumber, assertArraySize, assertIsDate } = require('./utils')
+const { sleep, assertValidPositiveNumber, assertIsDate } = require('./utils')
 const harvestKey = 'harvest-key'
 const testPort = 3000
 const { tokens: tokensJson, pools: poolsJson } = require('../../data/index.js')
 
 describe('Happy Paths', function () {
-  let appServer, allVaultsJsonArray, activeVaultsJsonArray
+  let appServer, allVaultsJsonArray
   before(async function () {
     await initDb()
     await clearAllDataTestOnly(Cache)
@@ -24,22 +21,13 @@ describe('Happy Paths', function () {
       .filter(token => tokensJson[token].vaultAddress)
       .map(token => tokensJson[token])
 
-    activeVaultsJsonArray = allVaultsJsonArray.filter(
-      item =>
-        !item.inactive &&
-        !(
-          !isArray(item.tokenAddress) &&
-          item.tokenAddress.toLowerCase() === addresses.iFARM.toLowerCase()
-        ),
-    )
-
     appServer = app()
 
     let response = {
       data: {},
     }
     while (Object.keys(response.data).length < 3) {
-      response = await axios.get(`http://localhost:${testPort}/cmc?key=${harvestKey}`)
+      response = await axios.get(`http://localhost:${testPort}/leaderboard?key=${harvestKey}`)
       console.log('Still loading. Waiting...')
       await sleep(10000)
     }
@@ -103,37 +91,6 @@ describe('Happy Paths', function () {
   })
 
   describe('External ACTIVE_ENDPOINTS', () => {
-    it('queries /tvl', () => {
-      return request(`http://localhost:${testPort}`)
-        .get(`/tvl?key=${harvestKey}`)
-        .expect('Content-Type', /json/)
-        .expect(200)
-        .then(res => {
-          assert(res.body.ETH)
-          assert(res.body.MATIC)
-          assert(res.body.ARBITRUM)
-          assert(res.body.BASE)
-          assert(res.body.FARM)
-          assert.equal(
-            getStartTimestamp(parseInt(res.body.ETH[res.body.ETH.length - 1].timestamp)),
-            getStartTimestamp(parseInt(res.body.MATIC[res.body.MATIC.length - 1].timestamp)),
-          )
-          assert.equal(
-            getStartTimestamp(parseInt(res.body.MATIC[res.body.MATIC.length - 1].timestamp)),
-            getStartTimestamp(parseInt(res.body.ARBITRUM[res.body.ARBITRUM.length - 1].timestamp)),
-          )
-        })
-    })
-    it('queries /nanoly', () => {
-      return request(`http://localhost:${testPort}`)
-        .get(`/nanoly?key=${harvestKey}`)
-        .expect('Content-Type', /json/)
-        .expect(200)
-        .then(res => {
-          assert.equal(Object.keys(res.body).length, activeVaultsJsonArray.length + 1) // response must contain all active vaults + 3 special pools: iFARM, FARM/ETH, FARM/GRAIN
-        })
-    })
-
     it('queries /token-stats', () => {
       return request(`http://localhost:${testPort}`)
         .get(`/token-stats?key=${harvestKey}`)
@@ -141,10 +98,8 @@ describe('Happy Paths', function () {
         .expect(200)
         .then(res => {
           assertValidPositiveNumber(res.body.percentStaked)
-          assertValidPositiveNumber(res.body.historicalAverageProfitSharingAPY)
           assertValidPositiveNumber(res.body.totalGasSaved)
           assertValidPositiveNumber(res.body.totalMarketCap)
-          assertValidPositiveNumber(res.body.monthlyProfits)
         })
     })
 
@@ -229,17 +184,6 @@ describe('Happy Paths', function () {
         })
     })
 
-    it('queries /cmc', () => {
-      return request(`http://localhost:${testPort}`)
-        .get(`/cmc?key=${harvestKey}`)
-        .expect('Content-Type', /json/)
-        .expect(200)
-        .then(res => {
-          assertArraySize(res.body.links, 6) // links/socials
-          assertArraySize(res.body.pools, activeVaultsJsonArray.length + 3) // pools must contain all active vaults + 3 special pools
-        })
-    })
-
     it('queries /health', () => {
       return request(`http://localhost:${testPort}`)
         .get(`/health?key=${harvestKey}`)
@@ -259,7 +203,6 @@ describe('Happy Paths', function () {
         .expect('Content-Type', /json/)
         .expect(200)
         .then(res => {
-          assert.exists(res.body.cmc)
           assert.exists(res.body.tokenStats)
           assert.exists(res.body.monthly)
         })

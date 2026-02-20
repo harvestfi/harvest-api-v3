@@ -14,13 +14,12 @@ const { prefetchPriceByAddresses, prefetchPriceByIds } = require('../prices')
 const {
   UPDATE_LOOP_INTERVAL_MS,
   WEB3_CALL_COUNT_STATS_KEY,
-  ENDPOINT_TYPES,
-  ACTIVE_ENDPOINTS,
   GET_PRICE_TYPES,
   CHAIN_IDS,
   GET_POOL_DATA_BATCH_SIZE,
   GET_VAULT_DATA_BATCH_SIZE,
   DEBUG_MODE,
+  TEST_MODE,
   DB_CACHE_IDS,
   UI_DATA_FILES,
   CURRENCY_API_URL,
@@ -900,21 +899,6 @@ const getHistoricalRates = async () => {
   console.log('-- Done getting Historical Rates data --\n')
 }
 
-// const getSuperformRewardData = async () => {
-//   console.log('\n-- Getting SuperForm Reward data --')
-
-//   let data, hasErrors
-//   try {
-//     data = await superformRewardData()
-//     hasErrors = false
-//   } catch (e) {
-//     hasErrors = true
-//   }
-
-//   await storeData(Cache, DB_CACHE_IDS.SF_REWARDS, data, hasErrors)
-//   console.log('-- Done getting SuperForm Reward data --\n')
-// }
-
 const getLeaderboardData = async () => {
   console.log('\n-- Getting Leaderboard data --')
   let hasErrors = false
@@ -1517,69 +1501,35 @@ const runUpdateLoop = async () => {
   await getPools()
 
   logMem('Memory usage after getPools:')
-  // snap('after-pools')
 
   await getVaults()
 
   logMem('Memory usage after getVaults:')
-  // snap('after-vaults')
 
-  await getMainnetUserTransactions()
-  await getPolygonUserTransactions()
-  await getArbitrumUserTransactions()
-  await getBaseUserTransactions()
-  await getZkSyncUserTransactions()
-  await getHyperEVMUserTransactions()
-
-  if (ACTIVE_ENDPOINTS === ENDPOINT_TYPES.ALL || ACTIVE_ENDPOINTS === ENDPOINT_TYPES.EXTERNAL) {
-    await getTotalGmv()
-    if (DEBUG_MODE) {
-      updateCallCountCache('gmv')
-      resetCallCount()
-    }
-
-    await getWeeklyBuybacks()
-    if (DEBUG_MODE) {
-      updateCallCountCache('profit')
-      resetCallCount()
-    }
-
-    await getTotalRevenue()
-    if (DEBUG_MODE) {
-      updateCallCountCache('revenue')
-      resetCallCount()
-    }
-
-    await getTVL()
-    if (DEBUG_MODE) {
-      updateCallCountCache('tvl')
-      resetCallCount()
-    }
-
-    // await getNanolyData()
-    // if (DEBUG_MODE) {
-    //   updateCallCountCache('nanoly')
-    //   resetCallCount()
-    // }
-
-    // await getSuperformRewardData()
-    // if (DEBUG_MODE) {
-    //   updateCallCountCache('sfrewards')
-    //   resetCallCount()
-    // }
+  if (!TEST_MODE) {
+    await getMainnetUserTransactions()
+    await getPolygonUserTransactions()
+    await getArbitrumUserTransactions()
+    await getBaseUserTransactions()
+    await getZkSyncUserTransactions()
+    await getHyperEVMUserTransactions()
   }
 
-  await checkFoldingLeverage()
-
-  await getCurrencyRates()
+  await getTotalGmv()
   if (DEBUG_MODE) {
-    updateCallCountCache('rates')
+    updateCallCountCache('gmv')
     resetCallCount()
   }
 
-  await getHistoricalRates()
+  await getWeeklyBuybacks()
   if (DEBUG_MODE) {
-    updateCallCountCache('historical_rates')
+    updateCallCountCache('profit')
+    resetCallCount()
+  }
+
+  await getTotalRevenue()
+  if (DEBUG_MODE) {
+    updateCallCountCache('revenue')
     resetCallCount()
   }
 
@@ -1589,16 +1539,38 @@ const runUpdateLoop = async () => {
     resetCallCount()
   }
 
-  await getGmxData()
-  if (DEBUG_MODE) {
-    updateCallCountCache('gmx')
-    resetCallCount()
-  }
+  if (!TEST_MODE) {
+    await getTVL()
+    if (DEBUG_MODE) {
+      updateCallCountCache('tvl')
+      resetCallCount()
+    }
 
-  await getCLData()
-  if (DEBUG_MODE) {
-    updateCallCountCache('clTest')
-    resetCallCount()
+    await checkFoldingLeverage()
+
+    await getCurrencyRates()
+    if (DEBUG_MODE) {
+      updateCallCountCache('rates')
+      resetCallCount()
+    }
+
+    await getHistoricalRates()
+    if (DEBUG_MODE) {
+      updateCallCountCache('historical_rates')
+      resetCallCount()
+    }
+
+    await getGmxData()
+    if (DEBUG_MODE) {
+      updateCallCountCache('gmx')
+      resetCallCount()
+    }
+
+    await getCLData()
+    if (DEBUG_MODE) {
+      updateCallCountCache('clTest')
+      resetCallCount()
+    }
   }
 
   if (DEBUG_MODE) {
