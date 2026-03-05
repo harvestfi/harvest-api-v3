@@ -109,6 +109,9 @@
   "frxUSD": "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
   "OUSD": "0x2a8e1e676ec238d8a992307b495b45b3feaa5e86",
   "EURC": "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+  "PYUSD": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+  "cbBTC": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+  "hemiBTC": "0x06ea695B91700071B161A434fED42D1DcbAD9f00",
   "pools": {
     "DAIPool": "0xF9E5f9024c2f3f2908A1d0e7272861a767C9484b",
     "USDCPool": "0xE1f9A3EE001a2EcC906E8de637DBf20BB2d44633",
@@ -253,7 +256,7 @@
       "NewStrategy": "0x885D59830C1FdB120B54d62790dB7A6a1f534463",
       "NewPool": "0x27F12d1a08454402175b9F0b53769783578Be7d9",
       "Miner": "0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7",
-      "doHardwork": "onlyProfit"
+      "doHardwork": false
     },
     "TBTCMixed": {
       "NewVault": "0x640704D106E79e105FDA424f05467F005418F1B5",
@@ -339,11 +342,12 @@
       "Underlying": "0x21E27a5E5513D6e65C4f830167390997aA84843a",
       "OldUnderlying": "0x06325440D014e39736583c165C2963BA99fAf14E",
       "NewVault": "0xc27bfE32E0a934a12681C1b35acf0DBA0e7460Ba",
-      "NewStrategy": "0x9f314066678FEdf69665475f6ef92f84477eBE3D",
-      "OldStrategy": "0x52d8f04F071dD397C71514853A58664613B91192",
+      "NewStrategy": "0x600A3bA818CbA3C6033b36eD42660C171cd337d1",
+      "OldStrategy": "0x9f314066678FEdf69665475f6ef92f84477eBE3D",
       "NewPool": "0x2E25800957742C52b4d69b65F9C67aBc5ccbffe6",
       "Miner": "0x21E27a5E5513D6e65C4f830167390997aA84843a",
-      "OldMiner": "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022"
+      "OldMiner": "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022",
+      "PoolId": "0x075e0F745c3518d26B5Ae93e2483Ecc80396db8f"
     },
     "iFARM": {
       "Underlying": "0xa0246c9032bC3A600820415aE600c6388619A14D",
@@ -521,7 +525,8 @@
       "Underlying": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
       "NewVault": "0xBd3f00330d75883e3395AD443161CB0D5b3C1605",
       "NewStrategy": "0x0b686feE0102d9DBB2Fb528f24408fe1Aabdc87e",
-      "NewPool": "0x8002BD329b69802dBf7d7587C94a4b8D101FE7F0"
+      "NewPool": "0x8002BD329b69802dBf7d7587C94a4b8D101FE7F0",
+      "doHardwork": false
     },
     "UniV3_CNG_ETH": {
       "NewVault": "0xc3426599Ec933FbF657ee44b53e7f01d83Be1f63",
@@ -578,22 +583,25 @@
     "convex_CVX_ETH": {
       "Underlying": "0x3A283D9c08E8b55966afb64C515f5143cf907611",
       "NewVault": "0x549fAd7794d331eA0E1675CD7e60cE6931914457",
-      "NewStrategy": "0x29951C181Dff1f5f7b4c71d4D77604158d058ad2",
+      "NewStrategy": "0x6C515140Deca00a20DA44f125D7D69E880e25BE6",
       "NewPool": "0x973cFd9B6B5d98C6ff815e364D1F7f3C48C351be",
-      "Miner": "0xB576491F1E6e5E62f1d8F26062Ee822B40B0E0d4"
+      "Miner": "0xB576491F1E6e5E62f1d8F26062Ee822B40B0E0d4",
+      "PoolId": "0x76CF876c2A1287fE71cde51a587003a32f8630f0"
     },
     "curve_crvUSD_USDC": {
       "Underlying": "0x4DEcE678ceceb27446b35C672dC7d61F30bAD69E",
       "NewVault": "0xD2f344528e8ef62afbd1DB3467160b339bb0A712",
       "NewStrategy": "0xa1C58BF5E651E164E0ebf132F2B05b9dEB98a23e",
       "NewPool": "0x1c3d9b350FdAde924Be90e57f2AF96cc65CEe27d",
-      "Gauge": "0x95f00391cB5EebCd190EB58728B4CE23DbFa6ac1"
+      "Gauge": "0x95f00391cB5EebCd190EB58728B4CE23DbFa6ac1",
+      "doHardwork": false
     },
     "curve_OETH": {
       "Underlying": "0x94B17476A93b3262d87B9a326965D1E91f9c13E7",
       "NewVault": "0x924e022Ef8636FfA5971215e6Aac2652f7e9606e",
       "NewStrategy": "0x1d909e8cA9d99237eA435aBb2392d2C3831F6e3a",
-      "NewPool": "0x17b4093F43266B1D5FebfaC02DA547007bC87A42"
+      "NewPool": "0x17b4093F43266B1D5FebfaC02DA547007bC87A42",
+      "doHardwork": false
     },
     "curve_thUSD_3CRV": {
       "Underlying": "0x91553BAD9Fbc8bD69Ff5d5678Cbf7D514d00De0b",
@@ -747,25 +755,29 @@
       "NewVault": "0xd9e44fCC177448B26C2588852b789F37C2449aA2",
       "NewStrategy": "0xB67601aBe8B15FdadB0844f8559C15e49ef2d417",
       "NewPool": "0x2ec9407697b96dA9Fc1c6f37c282143f4D27d4e0",
-      "PoolAddress": "0x4149d1038575CE235E03E03B39487a80FD709D31"
+      "PoolAddress": "0x4149d1038575CE235E03E03B39487a80FD709D31",
+      "doHardwork": false
     },
     "curve_reUSD_scrvUSD": {
       "Underlying": "0xc522A6606BBA746d7960404F22a3DB936B6F4F50",
       "NewVault": "0x4d2d9447622921EE382FcEb228801f57D79D325d",
       "NewStrategy": "0x043Ba478384fb9854A4cf49b12d92592d14bD66B",
-      "NewPool": "0xA9511401440c87EccBA2825879113B3d7A7Af059"
+      "NewPool": "0xA9511401440c87EccBA2825879113B3d7A7Af059",
+      "doHardwork": false
     },
     "curve_reUSD_sfrxUSD": {
       "Underlying": "0xed785Af60bEd688baa8990cD5c4166221599A441",
       "NewVault": "0x597c4a98B24a6176d97eF7B3f3D9efE51750a151",
       "NewStrategy": "0x0F7523D3b9B9C8Acc1F09D7Da98F5Fb65E11a941",
-      "NewPool": "0xd26D8FB223f94d5C0d5Bd7745985167957a670Dd"
+      "NewPool": "0xd26D8FB223f94d5C0d5Bd7745985167957a670Dd",
+      "doHardwork": false
     },
     "curve_sUSD_sUSDe": {
       "Underlying": "0x4b5E827F4C0a1042272a11857a355dA1F4Ceebae",
       "NewVault": "0x4A8a41a9bF486ea4f3Bd262076b3021A8c0F9EE1",
       "NewStrategy": "0xA9F546F5d17e387C4520c13A460fF0F7ecdc70aC",
-      "NewPool": "0x4aB41F69c1308B8760DdA496Ae22E5AE2488bd87"
+      "NewPool": "0x4aB41F69c1308B8760DdA496Ae22E5AE2488bd87",
+      "doHardwork": false
     },
     "curve_sUSD_USDe": {
       "Underlying": "0x59a06b97b2d566B9Dee2a368EaC8787Cfa57f95D",
@@ -777,20 +789,23 @@
       "Underlying": "0x592878b920101946Fb5915aB97961bC546f211CC",
       "NewVault": "0xd1aB37421738Dde17e8AbDBCB9B4ED5f5Af5b621",
       "NewStrategy": "0x2EB3D16B992c3326526946CdE8dEe44E7798300C",
-      "NewPool": "0xa0e9afa9358B61AF2ecA935F6ED382002f5D76bE"
+      "NewPool": "0xa0e9afa9358B61AF2ecA935F6ED382002f5D76bE",
+      "doHardwork": false
     },
     "curve_RSUP_ETH": {
       "Underlying": "0xEe351f12EAE8C2B8B9d1B9BFd3c5dd565234578d",
       "NewVault": "0x0d7dFFC77D4978Cc87bEcfD14c6B130220a41fcb",
       "NewStrategy": "0x3062BDF4dA3A53E30dD73Bb43129a9aA21160574",
-      "NewPool": "0x79a9aAD892cdDa52ADefA86A6a32019C5072F822"
+      "NewPool": "0x79a9aAD892cdDa52ADefA86A6a32019C5072F822",
+      "doHardwork": false
     },
     "curve_T_ETH": {
       "Underlying": "0xCb08717451aaE9EF950a2524E33B6DCaBA60147B",
       "NewVault": "0xf2224543FB8492aB394A19E56643a16e934eA75c",
       "NewStrategy": "0x876Ef77e14b8a0b92c719c3f3aF0760B9a2B55F6",
       "NewPool": "0x5De85527699aDc3D26183024CdD6931314A9064A",
-      "PoolAddress": "0x752eBeb79963cf0732E9c0fec72a49FD1DEfAEAC"
+      "PoolAddress": "0x752eBeb79963cf0732E9c0fec72a49FD1DEfAEAC",
+      "doHardwork": false
     },
     "aave_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -971,8 +986,51 @@
     "curve_frxUSD_OUSD": {
       "Underlying": "0x68d03Ed49800e92D7Aa8aB171424007e55Fd1F49",
       "NewVault": "0xeEBCa168d29e9EAf2568D8E5AdD8C82816630130",
-      "NewStrategy": "0x1Ad87779171E34b754E175aCb1093Cc255858a33",
-      "NewPool": "0xBc57aad600EDff54f8f5E411e24feE763Ac932Ea"
+      "NewStrategy": "0xd52962dEaf7252ecbf119DcB18d9E39d42Ae5f88",
+      "NewPool": "0xBc57aad600EDff54f8f5E411e24feE763Ac932Ea",
+      "PoolId": "0x715AAAc9b7c35b88299376147eE7B0c09A0F1B22"
+    },
+    "curve_PYUSD_crvUSD": {
+      "Underlying": "0x625E92624Bc2D88619ACCc1788365A69767f6200",
+      "NewVault": "0x5C8168E58CB776aC216E386A65a7f63d8354c829",
+      "NewStrategy": "0x473bFe4B8dC264BcD6ABcC31E0938dF8FB9b82f2",
+      "NewPool": "0xf600E8D428829Ff8595F21F6F3c199e290084f92",
+      "PoolId": "0x0F67C05A034fEC0183ad74d3be42c8Ba27F6c4c4"
+    },
+    "curve_WBTC_cbBTC_hemiBTC": {
+      "Underlying": "0x66039342C66760874047c36943B1e2d8300363BB",
+      "NewVault": "0x745cA7DBfe786c58d31d8E142e04308Cd1F38f5f",
+      "NewStrategy": "0x543aD27221fD7362DFDA01fbe4E7e1ED51C4100A",
+      "NewPool": "0x1CB8A9E36cC74167B1a37889F528f92a9C722B1c",
+      "PoolId": "0x3C69C2F6852C65CDD8e02C4FdA1A7221CB79DDd5"
+    },
+    "morpho_KPKP_ETH": {
+      "Underlying": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "NewVault": "0xaFE99218186DF27a44F40Da4249e9E5cbDf712A8",
+      "NewStrategy": "0xF0431CaedCbBCb22543F7Dd120d6c46368404153",
+      "NewPool": "0xce5097B67493fCE3f88094E129B1F5606c2d75aE",
+      "MorphoVault": "0xBb50A5341368751024ddf33385BA8cf61fE65FF9"
+    },
+    "morpho_KPKP_USDC": {
+      "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "NewVault": "0x4292059EA6de854733C38f65259b9e8516FEB214",
+      "NewStrategy": "0xD80cFdC5605d312847aFB2939Fcb45d3985590DD",
+      "NewPool": "0x20fDd1C686C44de466c6eD000491CCF2b17c5979",
+      "MorphoVault": "0x4Ef53d2cAa51C447fdFEEedee8F07FD1962C9ee6"
+    },
+    "morpho_KPKY_ETH": {
+      "Underlying": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "NewVault": "0xbf4C718EAEf89bA7ba330a256533d381EeD09Fe3",
+      "NewStrategy": "0x6F4D86B106b9AA211524eb80A655Db1568838e60",
+      "NewPool": "0x39A0A5f78B297Dd76AbE0AcA9053D95aF03cFebE",
+      "MorphoVault": "0x5dbf760b4fd0cDdDe0366b33aEb338b2A6d77725"
+    },
+    "morpho_KPKY_USDC": {
+      "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "NewVault": "0x180f6E72A19dA2A791d40433c619C553FE268d94",
+      "NewStrategy": "0x5Fb8fb75Ff370ca9a737146e711655E0a7D6FbDE",
+      "NewPool": "0x6cC3B4650b56Bbb0ee0E22c95D5f58Cc1e9c4830",
+      "MorphoVault": "0xD5cCe260E7a755DDf0Fb9cdF06443d593AaeaA13"
     }
   },
   "MATIC": {
