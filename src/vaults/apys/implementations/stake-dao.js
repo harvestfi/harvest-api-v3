@@ -2,8 +2,6 @@ const BigNumber = require('bignumber.js')
 const { STAKE_DAO_API_URL } = require('../../../lib/constants.js')
 const { client } = require('../../../lib/http')
 
-const STAKE_DAO_FEE = 0.165
-
 const VAULT_APR_QUERY = `
   query GetAllVaultsWithAssets($address: String!) {
     Vault(where: { address: { _eq: $address } }) {
@@ -49,14 +47,11 @@ const getApy = async (poolId, profitSharingFactor) => {
 
     const stakingDetail = aprDetails.find(d => d.yieldType === 'STAKING_REWARDS')
     const stakingApr = new BigNumber(stakingDetail?.apr ?? 0).times(100)
-    // Stake DAO takes 16.5% of staking rewards; vault receives 83.5%
-    const afterSdFee = stakingApr.times(1 - STAKE_DAO_FEE)
 
     const liquidityDetail = aprDetails.find(d => d.yieldType === 'LIQUIDITY_INCENTIVES')
     const liquidityApr = new BigNumber(liquidityDetail?.apr ?? 0).times(100)
-    console.log('liquidityApr: ', liquidityApr.toString())
 
-    apy = afterSdFee.plus(liquidityApr).times(profitSharingFactor)
+    apy = stakingApr.plus(liquidityApr).times(profitSharingFactor)
   } catch (err) {
     console.error('Stake DAO API error: ', err)
     apy = new BigNumber(0)
