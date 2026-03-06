@@ -230,6 +230,8 @@ const CURVE_API_URLS = {
   42161: 'https://api.curve.finance/api/getVolumes/arbitrum',
 }
 
+const STAKE_DAO_API_URL = 'https://api-strategies.stakedao.org/v1/graphql'
+
 const GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/'
 const MERKL_ENDPOINT = 'https://api.angle.money/v3/'
 const CAMELOT_MERKL_ENDPOINT = 'https://api.camelot.exchange/campaigns?chainId=42161'
@@ -391,4 +393,5 @@ module.exports = {
   DEBANK_API_URL,
   SUPABASE_URL,
   USER_TRANSACTIONS_START_DATE,
+  STAKE_DAO_API_URL,
 }

@@ -41,6 +41,194 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  PYUSD: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    logoUrl: ['./icons/pyusd.svg'],
+    tokenAddress: addresses.PYUSD,
+    decimals: '6',
+    vaultAddress: null,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['paypal-usd'] },
+  },
+  cbBTC: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    logoUrl: ['./icons/cbbtc.svg'],
+    tokenAddress: addresses.cbBTC,
+    decimals: '8',
+    vaultAddress: null,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['coinbase-wrapped-btc'] },
+  },
+  hemiBTC: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    logoUrl: ['./icons/hemibtc.svg'],
+    tokenAddress: addresses.hemiBTC,
+    decimals: '8',
+    vaultAddress: null,
+    priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['hemi-bitcoin'] },
+  },
+  curve_PYUSD_crvUSD: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/curve.svg'],
+    apyTokenSymbols: ['CRV'],
+    logoUrl: ['./icons/pyusd.svg', './icons/crvusd.svg'],
+    tokenNames: ['PYUSD', 'crvUSD'],
+    platform: ['Stake Dao'],
+    tags: ['Advanced', 'Stable'],
+    tokenAddress: addresses.V2.curve_PYUSD_crvUSD.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.curve_PYUSD_crvUSD.NewVault,
+    strategyAddress: addresses.V2.curve_PYUSD_crvUSD.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.CURVE_POOL,
+      params: [
+        addresses.V2.curve_PYUSD_crvUSD.Underlying,
+        addresses.V2.curve_PYUSD_crvUSD.Underlying,
+        '18',
+        ['PYUSD', 'crvUSD'],
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.STAKE_DAO,
+        params: [addresses.V2.curve_PYUSD_crvUSD.PoolId, profitSharingCut15Percent],
+      },
+    ],
+  },
+  curve_WBTC_cbBTC_hemiBTC: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/curve.svg'],
+    apyTokenSymbols: ['CRV'],
+    logoUrl: ['./icons/wbtc.svg', './icons/cbbtc.svg', './icons/hemibtc.svg'],
+    tokenNames: ['WBTC', 'cbBTC', 'hemiBTC'],
+    platform: ['Stake Dao'],
+    tags: ['Advanced'],
+    tokenAddress: addresses.V2.curve_WBTC_cbBTC_hemiBTC.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.curve_WBTC_cbBTC_hemiBTC.NewVault,
+    strategyAddress: addresses.V2.curve_WBTC_cbBTC_hemiBTC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.CURVE_POOL,
+      params: [
+        addresses.V2.curve_WBTC_cbBTC_hemiBTC.Underlying,
+        addresses.V2.curve_WBTC_cbBTC_hemiBTC.Underlying,
+        '18',
+        ['WBTC', 'cbBTC', 'hemiBTC'],
+      ],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.STAKE_DAO,
+        params: [addresses.V2.curve_WBTC_cbBTC_hemiBTC.PoolId, profitSharingCut15Percent],
+      },
+    ],
+  },
+  morpho_KPKP_ETH: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/eth.svg'],
+    tokenNames: ['ETH'],
+    platform: ['Morpho - kpk Prime V2'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.V2.morpho_KPKP_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.morpho_KPKP_ETH.NewVault,
+    strategyAddress: addresses.V2.morpho_KPKP_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['ethereum'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.V2.morpho_KPKP_ETH.MorphoVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+      },
+    ],
+  },
+  morpho_KPKP_USDC: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - kpk Prime V2'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.V2.morpho_KPKP_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.V2.morpho_KPKP_USDC.NewVault,
+    strategyAddress: addresses.V2.morpho_KPKP_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.V2.morpho_KPKP_USDC.MorphoVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+      },
+    ],
+  },
+  morpho_KPKY_ETH: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/eth.svg'],
+    tokenNames: ['ETH'],
+    platform: ['Morpho - kpk Yield V2'],
+    tags: ['Beginner'],
+    tokenAddress: addresses.V2.morpho_KPKY_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.V2.morpho_KPKY_ETH.NewVault,
+    strategyAddress: addresses.V2.morpho_KPKY_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['ethereum'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.V2.morpho_KPKY_ETH.MorphoVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+      },
+    ],
+  },
+  morpho_KPKY_USDC: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['Morpho - kpk Yield V2'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.V2.morpho_KPKY_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.V2.morpho_KPKY_USDC.NewVault,
+    strategyAddress: addresses.V2.morpho_KPKY_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.V2.morpho_KPKY_USDC.MorphoVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+      },
+    ],
+  },
   morpho_CR_EURC: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/morpho.svg'],
@@ -92,11 +280,11 @@ module.exports = {
   },
   curve_frxUSD_OUSD: {
     chain: CHAIN_IDS.ETH_MAINNET,
-    apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
-    apyTokenSymbols: ['CRV', 'CVX'],
+    apyIconUrls: ['./icons/curve.svg'],
+    apyTokenSymbols: ['CRV'],
     logoUrl: ['./icons/frxusd.svg', './icons/ousd.svg'],
     tokenNames: ['frxUSD', 'OUSD'],
-    platform: ['Convex Finance'],
+    platform: ['Stake Dao'],
     tags: ['Advanced', 'Stable'],
     tokenAddress: addresses.V2.curve_frxUSD_OUSD.Underlying,
     decimals: '18',
@@ -113,8 +301,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.CONVEX,
-        params: ['frxusd_ousd', profitSharingCut15Percent],
+        type: ESTIMATED_APY_TYPES.STAKE_DAO,
+        params: [addresses.V2.curve_frxUSD_OUSD.PoolId, profitSharingCut15Percent],
       },
     ],
   },
@@ -2604,6 +2792,7 @@ module.exports = {
   },
   curve_ALCX_FRAXBP: {
     chain: CHAIN_IDS.ETH_MAINNET,
+    inactive: true,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/alcx.svg', './icons/fraxbp.svg'],
@@ -2632,6 +2821,7 @@ module.exports = {
   },
   curve_reUSD_scrvUSD: {
     chain: CHAIN_IDS.ETH_MAINNET,
+    inactive: true,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/reusd.svg', './icons/scrvusd.svg'],
@@ -2660,6 +2850,7 @@ module.exports = {
   },
   curve_reUSD_sfrxUSD: {
     chain: CHAIN_IDS.ETH_MAINNET,
+    inactive: true,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/reusd.svg', './icons/sfrxusd.png'],
@@ -2688,6 +2879,7 @@ module.exports = {
   },
   curve_sUSD_sUSDe: {
     chain: CHAIN_IDS.ETH_MAINNET,
+    inactive: true,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/susd.svg', './icons/susde.svg'],
@@ -2745,6 +2937,7 @@ module.exports = {
   },
   curve_CJPY_ETH: {
     chain: CHAIN_IDS.ETH_MAINNET,
+    inactive: true,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/cjpy.svg', './icons/weth.svg'],
@@ -2773,6 +2966,7 @@ module.exports = {
   },
   curve_RSUP_ETH: {
     chain: CHAIN_IDS.ETH_MAINNET,
+    inactive: true,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/rsup.svg', './icons/weth.svg'],
@@ -2801,6 +2995,7 @@ module.exports = {
   },
   curve_T_ETH: {
     chain: CHAIN_IDS.ETH_MAINNET,
+    inactive: true,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/t.svg', './icons/eth.svg'],
@@ -15063,6 +15258,7 @@ module.exports = {
     },
   },
   curve_OETH: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
@@ -15099,6 +15295,7 @@ module.exports = {
     priceFunction: { type: GET_PRICE_TYPES.COINGECKO_ID, params: ['crvusd'] },
   },
   curve_crvUSD_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     logoUrl: ['./icons/crvusd.svg', './icons/usdc.svg'],
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
@@ -15925,11 +16122,11 @@ module.exports = {
   },
   convex_CVX_ETH: {
     chain: CHAIN_IDS.ETH_MAINNET,
-    apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
-    apyTokenSymbols: ['CRV', 'CVX'],
+    apyIconUrls: ['./icons/curve.svg'],
+    apyTokenSymbols: ['CRV'],
     logoUrl: ['./icons/eth.svg', './icons/cvx.svg'],
     tokenNames: ['CVX', 'ETH'],
-    platform: ['Convex Finance'],
+    platform: ['Stake Dao'],
     tags: ['Advanced'],
     tokenAddress: addresses.V2.convex_CVX_ETH.Underlying,
     decimals: '18',
@@ -15945,8 +16142,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.CONVEX,
-        params: ['cvxeth', profitSharingCut15Percent],
+        type: ESTIMATED_APY_TYPES.STAKE_DAO,
+        params: [addresses.V2.convex_CVX_ETH.PoolId, profitSharingCut15Percent],
       },
     ],
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
@@ -15964,11 +16161,11 @@ module.exports = {
   },
   crvSTETH: {
     chain: CHAIN_IDS.ETH_MAINNET,
-    apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
-    apyTokenSymbols: ['CRV', 'CVX'],
+    apyIconUrls: ['./icons/curve.svg'],
+    apyTokenSymbols: ['CRV'],
     logoUrl: ['./icons/steth.svg', './icons/eth.svg'],
     tokenNames: ['stETH', 'ETH'],
-    platform: ['Convex Finance'],
+    platform: ['Stake Dao'],
     tags: ['Advanced', 'LSD'],
     tokenAddress: addresses.V2.crvSTETH.Underlying,
     decimals: '18',
@@ -15984,11 +16181,11 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.CONVEX,
-        params: ['steth-ng', profitSharingCut15Percent],
+        type: ESTIMATED_APY_TYPES.STAKE_DAO,
+        params: [addresses.V2.crvSTETH.PoolId, profitSharingCut15Percent],
       },
     ],
-    cmcRewardTokenSymbols: ['FARM', 'CVX', 'CRV'],
+    cmcRewardTokenSymbols: ['FARM', 'CRV'],
   },
   crvThreeCrypto: {
     inactive: true,
@@ -16019,6 +16216,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CVX', 'CRV'],
   },
   convex_cvxCRV: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg', './icons/3crv.svg'],
     apyTokenSymbols: ['CRV', 'CVX', '3CRV'],
@@ -17372,6 +17570,7 @@ module.exports = {
   },
   ThreePool: {
     chain: CHAIN_IDS.ETH_MAINNET,
+    inactive: true,
     apyIconUrls: ['./icons/curve.svg', './icons/cvx.svg'],
     apyTokenSymbols: ['CRV', 'CVX'],
     logoUrl: ['./icons/dai.svg', './icons/usdc.svg', './icons/usdt.svg'],
