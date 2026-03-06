@@ -22,7 +22,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.curve_PYUSD_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Stake Dao farm, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.curve_PYUSD_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Stake DAO OnlyBoost pool, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.curve_PYUSD_crvUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
@@ -52,7 +52,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.curve_WBTC_cbBTC_hemiBTC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Stake Dao farm, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.curve_WBTC_cbBTC_hemiBTC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Stake DAO OnlyBoost pool, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.curve_WBTC_cbBTC_hemiBTC.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
@@ -187,7 +187,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.curve_frxUSD_OUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Stake Dao farm, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.curve_frxUSD_OUSD.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Stake DAO OnlyBoost pool, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are converted into more
@@ -11634,7 +11634,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.convex_CVX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Stake Dao farm, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.convex_CVX_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Stake DAO OnlyBoost pool, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are converted into more
@@ -12363,7 +12363,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.crvSTETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Curve farm, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.crvSTETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens </a>in a Stake DAO OnlyBoost pool, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.crvSTETH.Underlying}" target="_blank" rel="noopener noreferrer"> Curve LP tokens</a>.
