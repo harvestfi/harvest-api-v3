@@ -91,13 +91,6 @@ const getApy = async (supplyAsset, borrowAsset, poolAddr, strategyAddr, reductio
     .times(100)
     .times(borrowedMul)
 
-  console.log(
-    supplyAPR.toString(),
-    borrowAPR.toString(),
-    suppliedMul.toString(),
-    borrowedMul.toString(),
-  )
-
   return supplyAPR.minus(borrowAPR).times(reduction).toFixed()
 }
 
