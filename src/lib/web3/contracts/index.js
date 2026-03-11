@@ -265,7 +265,14 @@ const dolomiteMarginMainnetContract = require('../contracts/dolomite-margin-main
 const loopStrategyMethods = require('../contracts/loop-strategy/methods')
 const loopStrategyContract = require('../contracts/loop-strategy/contract.json')
 
+const aaveViewerMethods = require('../contracts/aave-viewer/methods')
+const aaveViewerContract = require('../contracts/aave-viewer/contract.json')
+
 module.exports = {
+  aaveViewer: {
+    methods: aaveViewerMethods,
+    contract: aaveViewerContract,
+  },
   dolomiteMarginMainnet: {
     methods: dolomiteMarginMainnetMethods,
     contract: dolomiteMarginMainnetContract,
