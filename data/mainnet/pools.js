@@ -5,6 +5,27 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'aaveLoop_ETH_cbETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.aaveLoop_ETH_cbETH.NewPool,
+    collateralAddress: addresses.BASE.V2.aaveLoop_ETH_cbETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aaveLoop_ETH_cbETH.SupplyAsset}" target="_blank" rel="noopener noreferrer"> cbETH </a>to Aave, and uses it as collateral to borrow 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aaveLoop_ETH_cbETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH </a> earning leveraged cbETH staking rewards.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aaveLoop_ETH_cbETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'curve_PYUSD_crvUSD',
     type: POOL_TYPES.INCENTIVE,
