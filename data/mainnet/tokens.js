@@ -41,6 +41,36 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  IPOR_EURC_base: {
+    chain: CHAIN_IDS.BASE,
+    id: 'IPOR_EURC_base',
+    isIPORVault: true,
+    apyIconUrls: ['./icons/eurc.svg'],
+    apyTokenSymbols: ['EURC'],
+    logoUrl: ['./icons/eurc.svg'],
+    tokenNames: ['EURC'],
+    platform: ['Autopilot'],
+    tags: ['Beginners', 'Stable'],
+    tokenAddress: addresses.BASE.V2.IPOR_EURC_base.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.BASE.V2.IPOR_EURC_base.NewVault,
+    vaultDecimals: '8',
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['euro-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.IPOR,
+        params: [
+          addresses.BASE.V2.IPOR_EURC_base.Underlying,
+          addresses.BASE.V2.IPOR_EURC_base.NewVault,
+          CHAIN_IDS.BASE,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+  },
   llamalend_crvUSD_sreUSD: {
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg'],

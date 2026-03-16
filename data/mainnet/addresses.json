@@ -4166,6 +4166,10 @@
         "NewStrategy": "0xC8e496a06cF43b93a208A705F00e3ee0D950BaCf",
         "NewPool": "0xDd2325fDBA6f6a724a6444057b4764d51321a09E",
         "MorphoVault": "0x4C7b69b4a82e9E5D8ec60E96516f7A0E17CBC55C"
+      },
+      "IPOR_EURC_base": {
+        "Underlying": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
+        "NewVault": "0x180493090667A35D8511Be743835dAD8715d33be"
       }
     }
   },
