@@ -4169,7 +4169,8 @@
       },
       "IPOR_EURC_base": {
         "Underlying": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
-        "NewVault": "0x180493090667A35D8511Be743835dAD8715d33be"
+        "NewVault": "0x180493090667A35D8511Be743835dAD8715d33be",
+        "doHardwork": false
       }
     }
   },
