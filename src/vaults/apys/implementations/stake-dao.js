@@ -51,7 +51,10 @@ const getApy = async (poolId, profitSharingFactor) => {
     const liquidityDetail = aprDetails.find(d => d.yieldType === 'LIQUIDITY_INCENTIVES')
     const liquidityApr = new BigNumber(liquidityDetail?.apr ?? 0).times(100)
 
-    apy = stakingApr.plus(liquidityApr).times(profitSharingFactor)
+    const lendingDetail = aprDetails.find(d => d.yieldType === 'LENDING_INTEREST')
+    const lendingApr = new BigNumber(lendingDetail?.apr ?? 0).times(100)
+
+    apy = stakingApr.plus(liquidityApr).plus(lendingApr).times(profitSharingFactor)
   } catch (err) {
     console.error('Stake DAO API error: ', err)
     apy = new BigNumber(0)
