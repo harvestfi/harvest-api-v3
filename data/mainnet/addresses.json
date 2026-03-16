@@ -948,35 +948,35 @@
       "NewPool": "0xf586E3f91497bc5AC46489A6285fed4E8067D599",
       "MarketId": 1
     },
-    "ConvexLend_crvUSD_CRV": {
+    "llamalend_crvUSD_CRV": {
       "Underlying": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
       "NewVault": "0xA5B4A713141b617f906321409c02c94Aa2Ba3ba1",
       "NewStrategy": "0xCCde5122a00009761AdF4D9Cce74201DD64C736d",
       "NewPool": "0xd033E4312f5Bb8cD53b23F93ecc15Ca745A9C1DD",
       "PoolId": "ethereum-0xcea18a8752bb7e7817f9ae7565328fe415c0f2ca-325"
     },
-    "ConvexLend_crvUSD_sfrxUSD": {
+    "llamalend_crvUSD_sfrxUSD": {
       "Underlying": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
       "NewVault": "0x2067525419e05E8FCA88992F326a42FCBFa8ddbc",
-      "NewStrategy": "0xd770e833429E50B7Df42DE74B76501eE3e5EfCF5",
+      "NewStrategy": "0xf084C651d4Db8016bE4a1cAEcb73D0C22Ac54a76",
       "NewPool": "0x0f37B206f957665a44666B6F4b80062fE995F567",
-      "PoolId": "ethereum-0x8e3009b59200668e1efda0a2f2ac42b24baa2982-438"
+      "PoolId": "0x4FD78486951704AC75EEa9464302a1BA31C0d442"
     },
-    "ConvexLend_crvUSD_sUSDS": {
+    "llamalend_crvUSD_sUSDS": {
       "Underlying": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
       "NewVault": "0x247d459c33770Bb285Be22104991c18dAaD06f25",
       "NewStrategy": "0x019086Ceb439D635aDd1f0df8D2F8cfBb8523094",
       "NewPool": "0x31B9eBd61F0E781f457bCA87483aC2D820B344e4",
       "PoolId": "ethereum-0xc33aa628b10655b36eaa7ee880d6bc4789dd2289-453"
     },
-    "ConvexLend_crvUSD_tBTC": {
+    "llamalend_crvUSD_tBTC": {
       "Underlying": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
       "NewVault": "0xa20470a948D038e107C03A9BD967ec6f5C8255ae",
-      "NewStrategy": "0xE46B5e3c6880B7a2550D4221200a6dF53cae5cC0",
+      "NewStrategy": "0x2Ec9adC8D7f8B497DF19C51F8b65f1beeE1E8Ab0",
       "NewPool": "0xe6A3D8F77cD1Ef99A78AA36279e2b1f0039e327d",
-      "PoolId": "ethereum-0xb2b23c87a4b6d1b03ba603f7c3eb9a81fdc0aac9-328"
+      "PoolId": "0x977DdCA6f9E088094EEE9567E6d5906B1a1e94d2"
     },
-    "ConvexLend_crvUSD_WBTC": {
+    "llamalend_crvUSD_WBTC": {
       "Underlying": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
       "NewVault": "0xb8dc0C4EB3C02837AB82E6109Aca430C0B8fd99a",
       "NewStrategy": "0x6b0e3A9416F7Fb68CEB02d50cec61dF2ad9b5025",
@@ -1031,6 +1031,20 @@
       "NewStrategy": "0x5Fb8fb75Ff370ca9a737146e711655E0a7D6FbDE",
       "NewPool": "0x6cC3B4650b56Bbb0ee0E22c95D5f58Cc1e9c4830",
       "MorphoVault": "0xD5cCe260E7a755DDf0Fb9cdF06443d593AaeaA13"
+    },
+    "llamalend_crvUSD_sreUSD": {
+      "Underlying": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
+      "NewVault": "0xbDec0e60D03781266b1604C6440e0f7a8Bc56292",
+      "NewStrategy": "0x1E1DE9Ba8fad6BD0aE59E153AC65B1490541FE47",
+      "NewPool": "0x45A4434591103C4DF0b6fB24a102622BA2DccfEe",
+      "PoolId": "0x0DB9f8572abEb2e982782D869e764C9Fa162F2Bb"
+    },
+    "llamalend_crvUSD_wstETH": {
+      "Underlying": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
+      "NewVault": "0x5E69803eD2ee41f5006Be03AE173f8b9903EAe85",
+      "NewStrategy": "0xdb48A4B182A476Af64d5f97193b9717f6A11C1B7",
+      "NewPool": "0x403120D92805F66e870ec72Fdf98ad02C6B73F24",
+      "PoolId": "0xc4b246888399f926456860C51a09ad7336Ba3788"
     }
   },
   "MATIC": {
@@ -4138,21 +4152,13 @@
         "NewPool": "0x11d1bd40c892329e1711FBb126E0165fB073df3E",
         "MarketUniqueKey": "0x13c42741a359ac4a8aa8287d2be109dcf28344484f91185f9a79bd5a805a55ae"
       },
-      "moonwellLoop_wstETH_ETH": {
-        "Underlying": "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
-        "NewVault": "0xFF0dE75a60f6557dF434c6D0347D6Ed221f8727b",
-        "NewStrategy": "0xaF14edDE276e14F9619d49AF06F240F43909bA9E",
-        "NewPool": "0xdd138d715AD604672e681a52E0F255618257fb37",
-        "supplymToken": "0x627Fe393Bc6EdDA28e99AE648fD6fF362514304b",
-        "borrowmToken": "0x628ff693426583D9a7FB391E54366292F509D457"
-      },
-      "moonwellLoop_cbETH_ETH": {
-        "Underlying": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
-        "NewVault": "0x49c7F3f320c7473D8389Ad0C7adbB4c233e41b68",
-        "NewStrategy": "0xA9d2894234eA13f4435EC519Bb72dD27B46E2433",
-        "NewPool": "0xf2A57805098535b2D6b78d7eD40263dBA8d59471",
-        "supplymToken": "0x3bf93770f2d4a794c3d9EBEfBAeBAE2a8f09A5E5",
-        "borrowmToken": "0x628ff693426583D9a7FB391E54366292F509D457"
+      "aaveLoop_ETH_cbETH": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0x0DA39bc9efe94bd7229F3597d19658E250408381",
+        "NewStrategy": "0xa2c8A60b0ac47e5b61250A7e1b17894a2948cffC",
+        "NewPool": "0xDd2325fDBA6f6a724a6444057b4764d51321a09E",
+        "SupplyAsset": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
+        "AavePool": "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5"
       },
       "morpho_CR_EURC": {
         "Underlying": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",

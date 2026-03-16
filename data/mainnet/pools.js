@@ -6,6 +6,69 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'llamalend_crvUSD_sreUSD',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.llamalend_crvUSD_sreUSD.NewPool,
+    collateralAddress: addresses.V2.llamalend_crvUSD_sreUSD.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.llamalend_crvUSD_sreUSD.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend sreUSD market and stakes on Stake Dao, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.llamalend_crvUSD_sreUSD.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'llamalend_crvUSD_wstETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.llamalend_crvUSD_wstETH.NewPool,
+    collateralAddress: addresses.V2.llamalend_crvUSD_wstETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${addresses.V2.llamalend_crvUSD_wstETH.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend wstETH market and stakes on Stake Dao, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${addresses.V2.llamalend_crvUSD_wstETH.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'aaveLoop_ETH_cbETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.aaveLoop_ETH_cbETH.NewPool,
+    collateralAddress: addresses.BASE.V2.aaveLoop_ETH_cbETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aaveLoop_ETH_cbETH.SupplyAsset}" target="_blank" rel="noopener noreferrer"> cbETH </a>to Aave, and uses it as collateral to borrow 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aaveLoop_ETH_cbETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH </a> earning leveraged cbETH staking rewards.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${addresses.BASE.V2.aaveLoop_ETH_cbETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'curve_PYUSD_crvUSD',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.curve_PYUSD_crvUSD.NewPool,
@@ -202,10 +265,10 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'ConvexLend_crvUSD_CRV',
+    id: 'llamalend_crvUSD_CRV',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.ConvexLend_crvUSD_CRV.NewPool,
-    collateralAddress: addresses.V2.ConvexLend_crvUSD_CRV.NewVault,
+    contractAddress: addresses.V2.llamalend_crvUSD_CRV.NewPool,
+    collateralAddress: addresses.V2.llamalend_crvUSD_CRV.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
@@ -213,21 +276,21 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_CRV.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend CRV market and stakes on Convex, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.llamalend_crvUSD_CRV.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend CRV market and stakes on Convex, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_CRV.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.llamalend_crvUSD_CRV.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD</a>.
       </p>
     </div>
    `,
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'ConvexLend_crvUSD_sfrxUSD',
+    id: 'llamalend_crvUSD_sfrxUSD',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.ConvexLend_crvUSD_sfrxUSD.NewPool,
-    collateralAddress: addresses.V2.ConvexLend_crvUSD_sfrxUSD.NewVault,
+    contractAddress: addresses.V2.llamalend_crvUSD_sfrxUSD.NewPool,
+    collateralAddress: addresses.V2.llamalend_crvUSD_sfrxUSD.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
@@ -235,21 +298,20 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_sfrxUSD.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend sfrxUSD market and stakes on Convex, earning 
-       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
-       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.llamalend_crvUSD_sfrxUSD.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend sfrxUSD market and stakes on Stake Dao, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_sfrxUSD.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.llamalend_crvUSD_sfrxUSD.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD</a>.
       </p>
     </div>
    `,
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'ConvexLend_crvUSD_sUSDS',
+    id: 'llamalend_crvUSD_sUSDS',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.ConvexLend_crvUSD_sUSDS.NewPool,
-    collateralAddress: addresses.V2.ConvexLend_crvUSD_sUSDS.NewVault,
+    contractAddress: addresses.V2.llamalend_crvUSD_sUSDS.NewPool,
+    collateralAddress: addresses.V2.llamalend_crvUSD_sUSDS.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
@@ -257,21 +319,21 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_sUSDS.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend sUSDS market and stakes on Convex, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.llamalend_crvUSD_sUSDS.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend sUSDS market and stakes on Convex, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_sUSDS.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.llamalend_crvUSD_sUSDS.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD</a>.
       </p>
     </div>
    `,
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'ConvexLend_crvUSD_tBTC',
+    id: 'llamalend_crvUSD_tBTC',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.ConvexLend_crvUSD_tBTC.NewPool,
-    collateralAddress: addresses.V2.ConvexLend_crvUSD_tBTC.NewVault,
+    contractAddress: addresses.V2.llamalend_crvUSD_tBTC.NewPool,
+    collateralAddress: addresses.V2.llamalend_crvUSD_tBTC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
@@ -279,21 +341,20 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_tBTC.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend tBTC market and stakes on Convex, earning 
-       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
-       <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.llamalend_crvUSD_tBTC.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend tBTC market and stakes on Stake Dao, earning 
+       <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_tBTC.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.llamalend_crvUSD_tBTC.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD</a>.
       </p>
     </div>
    `,
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'ConvexLend_crvUSD_WBTC',
+    id: 'llamalend_crvUSD_WBTC',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.ConvexLend_crvUSD_WBTC.NewPool,
-    collateralAddress: addresses.V2.ConvexLend_crvUSD_WBTC.NewVault,
+    contractAddress: addresses.V2.llamalend_crvUSD_WBTC.NewPool,
+    collateralAddress: addresses.V2.llamalend_crvUSD_WBTC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
@@ -301,11 +362,11 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend WBTC market and stakes on Convex, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.llamalend_crvUSD_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD </a>to the Llamlend WBTC market and stakes on Convex, earning 
        <a href="https://etherscan.io/token/${addresses.CRV}" target="_blank" rel="noopener noreferrer">CRV</a> & 
        <a href="https://etherscan.io/token/${addresses.CVX}" target="_blank" rel="noopener noreferrer">CVX</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.ConvexLend_crvUSD_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.llamalend_crvUSD_WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> crvUSD</a>.
       </p>
     </div>
    `,
@@ -329,50 +390,6 @@ module.exports = [
       </p>
     </div>
     `,
-  },
-  {
-    chain: CHAIN_IDS.BASE,
-    id: 'moonwellLoop_wstETH_ETH',
-    type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.BASE.V2.moonwellLoop_wstETH_ETH.NewPool,
-    collateralAddress: addresses.BASE.V2.moonwellLoop_wstETH_ETH.NewVault,
-    rewardAPY: [],
-    rewardAPR: null,
-    rewardTokens: [addresses.BASE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
-    stakeAndDepositHelpMessage: `
-    <div class="help-message">
-      <p> The vault supplies
-       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH </a>to Moonwell, and uses it as collateral to borrow 
-       <a href="https://basescan.org/token/${addresses.BASE.V2.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a> earning 
-       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and leveraged wstETH staking rewards.
-       At every harvest, the earned rewards are converted into more
-       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_wstETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> wstETH</a>.
-      </p>
-    </div>
-   `,
-  },
-  {
-    chain: CHAIN_IDS.BASE,
-    id: 'moonwellLoop_cbETH_ETH',
-    type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.BASE.V2.moonwellLoop_cbETH_ETH.NewPool,
-    collateralAddress: addresses.BASE.V2.moonwellLoop_cbETH_ETH.NewVault,
-    rewardAPY: [],
-    rewardAPR: null,
-    rewardTokens: [addresses.BASE.iFARM],
-    rewardTokenSymbols: ['iFARM'],
-    stakeAndDepositHelpMessage: `
-    <div class="help-message">
-      <p> The vault supplies
-       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_cbETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> cbETH </a>to Moonwell, and uses it as collateral to borrow 
-       <a href="https://basescan.org/token/${addresses.BASE.V2.WETH}" target="_blank" rel="noopener noreferrer"> ETH </a> earning 
-       <a href="https://basescan.org/token/${addresses.BASE.WELL}" target="_blank" rel="noopener noreferrer">WELL</a> and leveraged cbETH staking rewards.
-       At every harvest, the earned rewards are converted into more
-       <a href="https://basescan.org/token/${addresses.BASE.V2.moonwellLoop_cbETH_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> cbETH</a>.
-      </p>
-    </div>
-   `,
   },
   {
     chain: CHAIN_IDS.BASE,
