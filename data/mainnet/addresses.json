@@ -841,7 +841,8 @@
       "NewVault": "0x473C188Acb9033D37e5bf9bA66FB51390522e342",
       "NewStrategy": "0x5CECb37B6B4669e2724B61B4E9F16C1d34f237BD",
       "NewPool": "0x5EC2eb63A40A86239427171F3A097016990901e1",
-      "EulerVault": "0xcBC9B61177444A793B85442D3a953B90f6170b7D"
+      "EulerVault": "0xcBC9B61177444A793B85442D3a953B90f6170b7D",
+      "doHardwork": false
     },
     "euler_SM_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -889,14 +890,16 @@
       "NewVault": "0x401a6262edaB0a4Fb2319ca29205aeC9e35E5f9B",
       "NewStrategy": "0xC4D045f679DE672D8855222195b8e3489e7FcE7a",
       "NewPool": "0xc79d6472a512B3F670fD425833e37f8CF2E11B67",
-      "MorphoVault": "0x1E2aAaDcF528b9cC08F43d4fd7db488cE89F5741"
+      "MorphoVault": "0x1E2aAaDcF528b9cC08F43d4fd7db488cE89F5741",
+      "doHardwork": false
     },
     "morpho_AR_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       "NewVault": "0xa8be729C0b2ce16C12f223BDE20B2fD715dae37F",
       "NewStrategy": "0x9867C2383dD0747a5a92F8Fdc2f3c95649D92153",
       "NewPool": "0xDBe157bc40fF7C54CE5bcE4f86Dc986DAf70e000",
-      "MorphoVault": "0x214B47C50057eFaa7adc1B1C2608C3751Cd77D78"
+      "MorphoVault": "0x214B47C50057eFaa7adc1B1C2608C3751Cd77D78",
+      "doHardwork": false
     },
     "morpho_CR_USDC": {
       "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -3833,14 +3836,16 @@
         "NewVault": "0x696c4e58C23Dc0d5A45a73f6943353B3c32d28e9",
         "NewStrategy": "0xF8002309C626dDbBd2CD1535a73557dB8Dfe7Eb6",
         "NewPool": "0x4C482C2Dc6F075BEb84B538D49FD6000293623Dd",
-        "MorphoVault": "0x5A32099837D89E3a794a44fb131CBbAD41f87a8C"
+        "MorphoVault": "0x5A32099837D89E3a794a44fb131CBbAD41f87a8C",
+        "doHardwork": false
       },
       "morphoION_USDC": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         "NewVault": "0x5B2102BFd84F0c6803A8B0178E3751d0254AECCB",
         "NewStrategy": "0x05e75B02fAe21BDb10F570FA7A2dB0605E7Df2d9",
         "NewPool": "0xD369F8aa01e87C7517C93dA6f4968027e29Ae9d7",
-        "MorphoVault": "0x23479229e52Ab6aaD312D0B03DF9F33B46753B5e"
+        "MorphoVault": "0x23479229e52Ab6aaD312D0B03DF9F33B46753B5e",
+        "doHardwork": false
       },
       "morphoRE7_ETH": {
         "Underlying": "0x4200000000000000000000000000000000000006",
@@ -3911,7 +3916,8 @@
         "NewVault": "0x06A26034dD4a8D84318e18a2bB9Ddc13313d7D04",
         "NewStrategy": "0x3d6826CE0FB7A20123E25e4B9a9B7DAf7e0DE602",
         "NewPool": "0x41EF12f0309502c29AF9056E2a3894AD1427FEC5",
-        "EulerVault": "0xC063C3b3625DF5F362F60f35B0bcd98e0fa650fb"
+        "EulerVault": "0xC063C3b3625DF5F362F60f35B0bcd98e0fa650fb",
+        "doHardwork": false
       },
       "euler_EURC_EUL": {
         "Underlying": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
@@ -3976,7 +3982,8 @@
         "NewVault": "0xC3e3Da3a751deF1620FF9971336cb1b1D93b7a52",
         "NewStrategy": "0x28297248eb96F20eD5923b1Bffeb1b3b5697c328",
         "NewPool": "0x42F0064e00348D28b1749793cfDB748a66eC1724",
-        "MorphoVault": "0xcdDCDd18A16ED441F6CB10c3909e5e7ec2B9e8f3"
+        "MorphoVault": "0xcdDCDd18A16ED441F6CB10c3909e5e7ec2B9e8f3",
+        "doHardwork": false
       },
       "morpho_UN_USDC": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",

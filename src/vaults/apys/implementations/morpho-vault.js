@@ -8,7 +8,7 @@ const getApy = async (morphoVault, factor, chain) => {
   try {
     const response = await getVaultData(morphoVault, chain)
     if (response) {
-      result = response.vaultByAddress.state.dailyNetApy
+      result = response.vaultByAddress.state.avgNetApy
     } else {
       const response = await getV2VaultData(morphoVault, chain)
       if (response) {
