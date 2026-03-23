@@ -28,7 +28,7 @@ const getApy = async (morphoVault, factor, chain) => {
 
   const apr = new BigNumber(result).times(100).times(factor)
 
-  return apr.toFixed(2)
+  return apr.gte(0) ? apr.toFixed(2) : '0'
 }
 
 module.exports = {

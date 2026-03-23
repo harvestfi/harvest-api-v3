@@ -31,7 +31,7 @@ const getVaultData = async (vaultAddr, chain) => {
         chainId: ${chain}
       ) {
         state {
-          avgNetApy(lookback: ONE_HOUR)
+          avgNetApy(lookback: SIX_HOURS)
         }
       }
   }`
@@ -48,7 +48,7 @@ const getV2VaultData = async (vaultAddr, chain) => {
         address: "${vaultAddr}"
         chainId: ${chain}
       ) {
-        avgNetApy(lookback: ONE_HOUR)
+        avgNetApy(lookback: SIX_HOURS)
       }
   }`
 

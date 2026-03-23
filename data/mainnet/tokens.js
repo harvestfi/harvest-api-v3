@@ -1573,7 +1573,7 @@ module.exports = {
     estimateApyFunctions: [
       {
         type: ESTIMATED_APY_TYPES.MANUAL,
-        params: ["0"],
+        params: ['0'],
       },
     ],
   },
