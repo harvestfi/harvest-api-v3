@@ -1572,13 +1572,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.EULER_EARN,
-        params: [
-          addresses.ARBITRUM_ONE.V2.euler_EE_USDC.EulerVault,
-          addresses.ARBITRUM_ONE.V2.euler_EE_USDC.NewStrategy,
-          profitSharingCut10Percent,
-          CHAIN_IDS.ARBITRUM_ONE,
-        ],
+        type: ESTIMATED_APY_TYPES.MANUAL,
+        params: ["0"],
       },
     ],
   },
