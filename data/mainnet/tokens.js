@@ -290,8 +290,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MANUAL,
-        params: ['0'],
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.V2.morpho_KPKY_USDC.MorphoVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
       },
     ],
   },
@@ -1284,6 +1288,7 @@ module.exports = {
     ],
   },
   silo_ET_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg'],
     apyTokenSymbols: ['ARB'],
@@ -1555,6 +1560,7 @@ module.exports = {
     ],
   },
   euler_EE_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg', './icons/reul.svg'],
     apyTokenSymbols: ['ARB', 'rEUL'],
@@ -1578,6 +1584,7 @@ module.exports = {
     ],
   },
   silo_OP_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg'],
     apyTokenSymbols: ['ARB'],
@@ -1686,6 +1693,7 @@ module.exports = {
     ],
   },
   morpho_MEV_USDC_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg', './icons/morpho.svg'],
     apyTokenSymbols: ['ARB', 'MORPHO'],
@@ -2222,6 +2230,7 @@ module.exports = {
     ],
   },
   morpho_EF_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
@@ -2262,8 +2271,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MANUAL,
-        params: ['0'],
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.BASE.V2.morpho_GF_USDC.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
       },
     ],
   },
@@ -3631,6 +3644,7 @@ module.exports = {
     ],
   },
   morphoSE_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/seam.svg', './icons/morpho.svg'],
     apyTokenSymbols: ['SEAM', 'MORPHO'],
@@ -3794,6 +3808,7 @@ module.exports = {
     ],
   },
   morphoRE7_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
@@ -3811,8 +3826,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MANUAL,
-        params: ['0'],
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.BASE.V2.morphoRE7_USDC.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
       },
     ],
   },
@@ -4074,6 +4093,7 @@ module.exports = {
     ],
   },
   morphoSE_cbBTC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/seam.svg', './icons/morpho.svg'],
     apyTokenSymbols: ['SEAM', 'MORPHO'],
@@ -5013,6 +5033,7 @@ module.exports = {
     ],
   },
   morphoSE_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/seam.svg', './icons/morpho.svg'],
     apyTokenSymbols: ['SEAM', 'MORPHO'],
@@ -6312,6 +6333,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'CRV'],
   },
   curve_zunETH_ETH: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/curve.svg'],
     apyTokenSymbols: ['CRV'],
@@ -7170,8 +7192,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MANUAL,
-        params: ['0'],
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.V2.morpho_GauntletUSDC.MorphoVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
       },
     ],
   },
@@ -7573,8 +7599,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MANUAL,
-        params: ['0'],
+        type: ESTIMATED_APY_TYPES.FLUID_LEND,
+        params: [
+          addresses.ARBITRUM_ONE.V2.fluid_USDC_arbitrum.fToken,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
       },
     ],
   },
@@ -7596,8 +7626,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MANUAL,
-        params: ['0'],
+        type: ESTIMATED_APY_TYPES.FLUID_LEND,
+        params: [
+          addresses.ARBITRUM_ONE.V2.fluid_USDT_arbitrum.fToken,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
       },
     ],
   },
@@ -7646,8 +7680,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MANUAL,
-        params: ['0'],
+        type: ESTIMATED_APY_TYPES.FLUID_LEND,
+        params: [
+          addresses.V2.fluid_USDC_mainnet.fToken,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
       },
     ],
   },
@@ -7669,8 +7707,12 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MANUAL,
-        params: ['0'],
+        type: ESTIMATED_APY_TYPES.FLUID_LEND,
+        params: [
+          addresses.V2.fluid_USDT_mainnet.fToken,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
       },
     ],
   },
@@ -7738,8 +7780,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MANUAL,
-        params: ['0'],
+        type: ESTIMATED_APY_TYPES.FLUID_LEND,
+        params: [addresses.BASE.V2.fluid_USDC.fToken, profitSharingCut10Percent, CHAIN_IDS.BASE],
       },
     ],
   },
@@ -9610,6 +9652,7 @@ module.exports = {
     ],
   },
   curve_eUSD_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/crv.svg'],
     apyTokenSymbols: ['CRV'],
@@ -9785,6 +9828,7 @@ module.exports = {
     ],
   },
   curve_WBTC_tBTC: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/crv.svg'],
     apyTokenSymbols: ['CRV'],
@@ -16259,8 +16303,8 @@ module.exports = {
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MANUAL,
-        params: ['0'],
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [addresses.V2.USDC.MorphoVault, profitSharingCut15Percent, CHAIN_IDS.ETH_MAINNET],
       },
     ],
   },
