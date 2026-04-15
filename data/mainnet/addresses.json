@@ -4179,9 +4179,9 @@
       },
       "aaveLoop_ETH_cbETH2": {
         "Underlying": "0x4200000000000000000000000000000000000006",
-        "NewVault": "0x0e95Dbb1F8bc45D6BBb65bb53e92FE1e6a92Db4A",
-        "NewStrategy": "0x7deC7048D9bB44B5bD0250186ce24371cEd34Fe4",
-        "NewPool": "0x22a1AA3646A063379Ec7809f4b1f5C06F38A87e8",
+        "NewVault": "0xE78285A51f51916F2311B7017Db036D8351F3Cf9",
+        "NewStrategy": "0xcfd2f32E6d533653cEd5Ba7E5fe1a76C3c626757",
+        "NewPool": "0x3Ba75d5C7F8F50ABbF7312bA526EeF5a3FB267DB",
         "SupplyAsset": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
         "AavePool": "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5"
       },
