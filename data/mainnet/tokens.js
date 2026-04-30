@@ -1131,7 +1131,7 @@ module.exports = {
     apyTokenSymbols: ['cbBTC'],
     logoUrl: ['./icons/cbbtc.svg'],
     tokenNames: ['cbBTC'],
-    platform: ['Euler - Frontier YO'],
+    platform: ['Euler - AlphaGrowth YO yoBTC Market'],
     tags: ['Beginner'],
     tokenAddress: addresses.BASE.V2.euler_YO_cbBTC.Underlying,
     decimals: '8',
