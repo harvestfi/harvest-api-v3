@@ -4615,7 +4615,8 @@
         "NewVault": "0x383122fC4b213fd499D25Cda789B59ED9D107486",
         "NewStrategy": "0x3eBa5d0027c454811f610195B9C4D567f2313f0B",
         "NewPool": "0x876ee98a1201486DfB660A69D12F386fBA46c088",
-        "MorphoVault": "0x92B518e1cD76dD70D3E20624AEdd7D107F332Cff"
+        "MorphoVault": "0x92B518e1cD76dD70D3E20624AEdd7D107F332Cff",
+        "doHardwork": false
       },
       "morpho_MEV_HYPE": {
         "Underlying": "0x5555555555555555555555555555555555555555",
