@@ -212,8 +212,7 @@ const STAKEWISE_API_URLS = {
   STAKING: 'https://api.stakewise.io/pool-stats/',
 }
 
-const ZKSWAP_URL =
-  'https://zkswap-dex-api-git-production-buzzteam.vercel.app/api/pools-data/zksyncMainnet'
+const ZKSWAP_URL = 'https://dexapi.zkswap.finance/api/cached/pools/apr/v2/zksync/farms-lp'
 
 const SYNCSWAP_API_URL =
   'https://api.syncswap.xyz/api/fetchers/fetchAllPools?network=zkSyncMainnet&type=v2'

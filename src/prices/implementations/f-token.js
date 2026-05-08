@@ -4,6 +4,7 @@ const { getTokenPrice } = require('../')
 
 const { getWeb3 } = require('../../lib/web3')
 const { getUIData } = require('../../lib/data')
+const logger = require('../../lib/logger')
 
 const { vault: vaultContractData } = require('../../lib/web3/contracts')
 const { getCachedContract } = require('../../lib/web3/contractCache')
@@ -34,13 +35,21 @@ const getPrice = async (tokenAddress, tokenDecimals, chain = CHAIN_IDS.ETH) => {
 
   const underlyingTokenPrice = new BigNumber(await getTokenPrice(tokenSymbol, chain))
 
-  const vaultSharePrice = await getPricePerFullShare(fTokenVaultInstance)
+  try {
+    const vaultSharePrice = await getPricePerFullShare(fTokenVaultInstance)
 
-  const fTokenPrice = new BigNumber(vaultSharePrice)
-    .multipliedBy(underlyingTokenPrice)
-    .dividedBy(new BigNumber(10).exponentiatedBy(tokenDecimals))
+    const fTokenPrice = new BigNumber(vaultSharePrice)
+      .multipliedBy(underlyingTokenPrice)
+      .dividedBy(new BigNumber(10).exponentiatedBy(tokenDecimals))
 
-  return fTokenPrice.toString(10)
+    return fTokenPrice.toString(10)
+  } catch (err) {
+    logger.warn(
+      `getPricePerFullShare reverted for vault ${tokenAddress} (${tokenSymbol}); using underlying USD price as 1:1 share fallback`,
+      err,
+    )
+    return underlyingTokenPrice.toString(10)
+  }
 }
 
 module.exports = {
