@@ -1641,6 +1641,7 @@ module.exports = {
     ],
   },
   morpho_AC_USDC_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg', './icons/morpho.svg'],
     apyTokenSymbols: ['ARB', 'MORPHO'],
@@ -1831,6 +1832,7 @@ module.exports = {
     ],
   },
   morpho_YOG_USDC_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg', './icons/morpho.svg'],
     apyTokenSymbols: ['ARB', 'MORPHO'],
@@ -2076,6 +2078,7 @@ module.exports = {
     ],
   },
   morpho_FX_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
@@ -16339,6 +16342,7 @@ module.exports = {
   },
   DAI: {
     chain: CHAIN_IDS.ETH_MAINNET,
+    inactive: true,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
     logoUrl: ['./icons/dai.svg'],
