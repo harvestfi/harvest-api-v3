@@ -5,6 +5,39 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.BASE,
+    id: 'IporLending_ETH',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.IporLending_ETH.NewPool,
+    collateralAddress: addresses.BASE.V2.IporLending_ETH.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.ipor.io/fusion/base/0x17d0f109ee895bad0b68aa104aa72bd0b003ad8e`,
+    tradingApyFunction: {
+      type: TRADING_APY_TYPES.IPOR_LENDING,
+      params: [addresses.BASE.V2.IporLending_ETH.IporVault, CHAIN_IDS.BASE],
+    },
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${
+         addresses.BASE.V2.IporLending_ETH.Underlying
+       }" target="_blank" rel="noopener noreferrer"> WETH </a>to the
+       <a href="https://app.ipor.io/fusion/base/${addresses.BASE.V2.IporLending_ETH.IporVault.toLowerCase()}" target="_blank" rel="noopener noreferrer"> IPOR Fusion Base ETH Lending Optimizer </a>plasma vault, which dynamically allocates the WETH across multiple
+       <a href="https://app.morpho.org/base/earn" target="_blank" rel="noopener noreferrer">Morpho Blue</a> and
+       <a href="https://app.euler.finance/?network=base" target="_blank" rel="noopener noreferrer">Euler v2</a>
+       lending markets, earning lending interest and WETH-denominated token incentives.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${
+         addresses.BASE.V2.IporLending_ETH.Underlying
+       }" target="_blank" rel="noopener noreferrer"> WETH</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'llamalend_crvUSD_sreUSD',
     type: POOL_TYPES.INCENTIVE,

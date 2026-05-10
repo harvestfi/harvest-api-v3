@@ -1,0 +1,34 @@
+{
+  "address": {
+    "ropsten": "",
+    "mainnet": ""
+  },
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getVestingData",
+      "outputs": [
+        {
+          "components": [
+            { "internalType": "uint32", "name": "vestingTime", "type": "uint32" },
+            { "internalType": "uint32", "name": "updateBalanceTimestamp", "type": "uint32" },
+            { "internalType": "uint128", "name": "transferredTokens", "type": "uint128" },
+            { "internalType": "uint128", "name": "lastUpdateBalance", "type": "uint128" }
+          ],
+          "internalType": "struct VestingData",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "balanceOf",
+      "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+}
