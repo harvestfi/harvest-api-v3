@@ -15,10 +15,6 @@ module.exports = [
     rewardTokens: [addresses.BASE.iFARM],
     rewardTokenSymbols: ['iFARM'],
     liquidityUrl: `https://app.ipor.io/fusion/base/0x17d0f109ee895bad0b68aa104aa72bd0b003ad8e`,
-    tradingApyFunction: {
-      type: TRADING_APY_TYPES.IPOR_LENDING,
-      params: [addresses.BASE.V2.IporLending_ETH.IporVault, CHAIN_IDS.BASE],
-    },
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
