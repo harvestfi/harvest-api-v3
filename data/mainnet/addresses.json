@@ -4201,6 +4201,13 @@
         "Underlying": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
         "NewVault": "0x180493090667A35D8511Be743835dAD8715d33be",
         "doHardwork": false
+      },
+      "IporLending_ETH": {
+        "Underlying": "0x4200000000000000000000000000000000000006",
+        "NewVault": "0xA912d926E7c7ac44BE2280bA4247DF1FB4ef02AE",
+        "NewStrategy": "0xce5833251fCc922acF0e21C50D9A2bcCB1202704",
+        "NewPool": "0xB90C8841b3c350c67FF25CA0e6504fd8649db6D1",
+        "IporVault": "0x17d0f109EE895bAD0b68AA104AA72bd0b003AD8E"
       }
     }
   },

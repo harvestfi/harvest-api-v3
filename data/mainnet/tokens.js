@@ -41,6 +41,34 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  IporLending_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/eth.svg'],
+    apyTokenSymbols: ['ETH'],
+    logoUrl: ['./icons/eth.svg'],
+    tokenNames: ['WETH'],
+    platform: ['IPOR - Lending'],
+    tags: ['Beginners'],
+    tokenAddress: addresses.BASE.V2.IporLending_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.IporLending_ETH.NewVault,
+    vaultDecimals: '18',
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['ethereum'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.IPOR_LENDING,
+        params: [
+          addresses.BASE.V2.IporLending_ETH.IporVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+        extraDailyCompound: false,
+      },
+    ],
+  },
   IPOR_EURC_base: {
     chain: CHAIN_IDS.BASE,
     id: 'IPOR_EURC_base',
