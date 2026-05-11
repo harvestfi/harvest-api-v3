@@ -46,16 +46,16 @@ module.exports = {
     apyIconUrls: ['./icons/eth.svg'],
     apyTokenSymbols: ['ETH'],
     logoUrl: ['./icons/eth.svg'],
-    tokenNames: ['WETH'],
-    platform: ['IPOR - Lending'],
+    tokenNames: ['ETH'],
+    platform: ['IPOR - Base ETH Lending Optimizer'],
     tags: ['Beginners'],
     tokenAddress: addresses.BASE.V2.IporLending_ETH.Underlying,
     decimals: '18',
     vaultAddress: addresses.BASE.V2.IporLending_ETH.NewVault,
-    vaultDecimals: '18',
+    strategyAddress: addresses.BASE.V2.IporLending_ETH.NewStrategy,
     priceFunction: {
       type: GET_PRICE_TYPES.COINGECKO_ID,
-      params: ['ethereum'],
+      params: ['weth'],
     },
     estimateApyFunctions: [
       {
@@ -65,7 +65,6 @@ module.exports = {
           profitSharingCut10Percent,
           CHAIN_IDS.BASE,
         ],
-        extraDailyCompound: false,
       },
     ],
   },
