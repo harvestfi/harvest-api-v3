@@ -41,6 +41,33 @@ module.exports = {
     ],
     cmcRewardTokenSymbols: ['FARM', 'WETH'],
   },
+  IporLending_ETH: {
+    chain: CHAIN_IDS.BASE,
+    apyIconUrls: ['./icons/eth.svg'],
+    apyTokenSymbols: ['ETH'],
+    logoUrl: ['./icons/eth.svg'],
+    tokenNames: ['ETH'],
+    platform: ['IPOR - Base ETH Lending Optimizer'],
+    tags: ['Beginners'],
+    tokenAddress: addresses.BASE.V2.IporLending_ETH.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.BASE.V2.IporLending_ETH.NewVault,
+    strategyAddress: addresses.BASE.V2.IporLending_ETH.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['weth'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.IPOR_LENDING,
+        params: [
+          addresses.BASE.V2.IporLending_ETH.IporVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
+      },
+    ],
+  },
   IPOR_EURC_base: {
     chain: CHAIN_IDS.BASE,
     id: 'IPOR_EURC_base',
@@ -1643,6 +1670,7 @@ module.exports = {
     ],
   },
   morpho_AC_USDC_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg', './icons/morpho.svg'],
     apyTokenSymbols: ['ARB', 'MORPHO'],
@@ -1833,6 +1861,7 @@ module.exports = {
     ],
   },
   morpho_YOG_USDC_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg', './icons/morpho.svg'],
     apyTokenSymbols: ['ARB', 'MORPHO'],
@@ -2078,6 +2107,7 @@ module.exports = {
     ],
   },
   morpho_FX_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
@@ -16341,6 +16371,7 @@ module.exports = {
   },
   DAI: {
     chain: CHAIN_IDS.ETH_MAINNET,
+    inactive: true,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
     logoUrl: ['./icons/dai.svg'],

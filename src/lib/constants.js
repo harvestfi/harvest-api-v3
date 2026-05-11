@@ -212,8 +212,7 @@ const STAKEWISE_API_URLS = {
   STAKING: 'https://api.stakewise.io/pool-stats/',
 }
 
-const ZKSWAP_URL =
-  'https://zkswap-dex-api-git-production-buzzteam.vercel.app/api/pools-data/zksyncMainnet'
+const ZKSWAP_URL = 'https://dexapi.zkswap.finance/api/cached/pools/apr/v2/zksync/farms-lp'
 
 const SYNCSWAP_API_URL =
   'https://api.syncswap.xyz/api/fetchers/fetchAllPools?network=zkSyncMainnet&type=v2'
@@ -240,6 +239,7 @@ const MORPHO_ENDPOINT = 'https://api.morpho.org/graphql'
 const FLUID_ENDPOINT = 'https://api.fluid.instadapp.io/v2/lending'
 const EULER_ENDPOINT = 'https://indexer.euler.finance/v1/earn/vault'
 const SILO_ENDPOINT = 'https://app.silo.finance/api/detailed-vault'
+const IPOR_API_URL = 'https://api.ipor.io'
 
 const CURRENCY_API_URL = `https://api.freecurrencyapi.com/v1/latest?apikey=${process.env.CURRENCY_API_KEY}`
 const HISTORICAL_CURRENCY_API_URL = `https://api.freecurrencyapi.com/v1/historical?apikey=${process.env.CURRENCY_API_KEY}`
@@ -390,6 +390,7 @@ module.exports = {
   FLUID_ENDPOINT,
   EULER_ENDPOINT,
   SILO_ENDPOINT,
+  IPOR_API_URL,
   DEBANK_API_URL,
   SUPABASE_URL,
   USER_TRANSACTIONS_START_DATE,

@@ -220,6 +220,9 @@ const plasmaVaultContract = require('../contracts/plasma-vault/contract.json')
 const plasmaFuseMethods = require('../contracts/plasma-fuse/methods')
 const plasmaFuseContract = require('../contracts/plasma-fuse/contract.json')
 
+const rewardsClaimManagerMethods = require('../contracts/rewards-claim-manager/methods')
+const rewardsClaimManagerContract = require('../contracts/rewards-claim-manager/contract.json')
+
 const venusComptrollerMethods = require('../contracts/venus-comptroller/methods')
 const venusComptrollerContract = require('../contracts/venus-comptroller/contract.json')
 
@@ -340,6 +343,10 @@ module.exports = {
   plasmaVault: {
     methods: plasmaVaultMethods,
     contract: plasmaVaultContract,
+  },
+  rewardsClaimManager: {
+    methods: rewardsClaimManagerMethods,
+    contract: rewardsClaimManagerContract,
   },
   clVault: {
     methods: clVaultMethods,
