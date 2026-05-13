@@ -2,42 +2,29 @@ const BigNumber = require('bignumber.js')
 const { STAKE_DAO_API_URL } = require('../../../lib/constants.js')
 const { client } = require('../../../lib/http')
 
-const VAULT_APR_QUERY = `
-  query GetAllVaultsWithAssets($address: String!) {
-    Vault(where: { address: { _eq: $address } }) {
-      gauge {
-        aprDetails {
-          yieldType
-          apr
-        }
-      }
-    }
-}
-`
-
-const getStakeDaoAprDetails = async address => {
-  const headers = {
-    'Content-Type': 'application/json',
-    Accept: 'application/json',
-    'User-Agent': 'PostmanRuntime/7.43.4',
-  }
-
+const getStakeDaoAprDetails = async vaultAddress => {
   try {
-    const response = await client.post(
-      STAKE_DAO_API_URL,
-      {
-        operationName: 'GetAllVaultsWithAssets',
-        query: VAULT_APR_QUERY,
-        variables: { address },
+    const response = await client.get(STAKE_DAO_API_URL, {
+      headers: {
+        Accept: 'application/json',
+        'User-Agent': 'PostmanRuntime/7.43.4',
       },
-      { headers },
+    })
+
+    const vaults = response?.data?.data ?? response?.data ?? []
+    const target = vaultAddress.toLowerCase()
+    const entry = (Array.isArray(vaults) ? vaults : []).find(
+      v => (v?.vault ?? '').toLowerCase() === target,
     )
 
-    return response?.data?.data?.Vault?.[0]?.gauge?.aprDetails ?? []
+    return entry?.apr?.current?.details ?? []
   } catch (err) {
     console.error('Stake DAO API error: ', err)
+    return []
   }
 }
+
+const isTradingFees = label => (label ?? '').toLowerCase().includes('trading fees')
 
 const getApy = async (poolId, profitSharingFactor) => {
   let apy
@@ -45,16 +32,14 @@ const getApy = async (poolId, profitSharingFactor) => {
   try {
     const aprDetails = (await getStakeDaoAprDetails(poolId)) ?? []
 
-    const stakingDetail = aprDetails.find(d => d.yieldType === 'STAKING_REWARDS')
-    const stakingApr = new BigNumber(stakingDetail?.apr ?? 0).times(100)
+    const rewardApr = aprDetails
+      .filter(d => !isTradingFees(d?.label))
+      .reduce((sum, d) => {
+        const values = Array.isArray(d?.value) ? d.value : [d?.value]
+        return values.reduce((acc, v) => acc.plus(new BigNumber(v ?? 0)), sum)
+      }, new BigNumber(0))
 
-    const liquidityDetail = aprDetails.find(d => d.yieldType === 'LIQUIDITY_INCENTIVES')
-    const liquidityApr = new BigNumber(liquidityDetail?.apr ?? 0).times(100)
-
-    const lendingDetail = aprDetails.find(d => d.yieldType === 'LENDING_INTEREST')
-    const lendingApr = new BigNumber(lendingDetail?.apr ?? 0).times(100)
-
-    apy = stakingApr.plus(liquidityApr).plus(lendingApr).times(profitSharingFactor)
+    apy = rewardApr.times(profitSharingFactor)
   } catch (err) {
     console.error('Stake DAO API error: ', err)
     apy = new BigNumber(0)

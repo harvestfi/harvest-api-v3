@@ -229,7 +229,7 @@ const CURVE_API_URLS = {
   42161: 'https://api.curve.finance/api/getVolumes/arbitrum',
 }
 
-const STAKE_DAO_API_URL = 'https://api-strategies.stakedao.org/v1/graphql'
+const STAKE_DAO_API_URL = 'https://hub.stakedao.org/v1/vaults'
 
 const GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/'
 const MERKL_ENDPOINT = 'https://api.angle.money/v3/'
