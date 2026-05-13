@@ -2,42 +2,29 @@ const BigNumber = require('bignumber.js')
 const { STAKE_DAO_API_URL } = require('../../../lib/constants.js')
 const { client } = require('../../../lib/http')
 
-const VAULT_APR_QUERY = `
-  query GetAllVaultsWithAssets($address: String!) {
-    Vault(where: { address: { _eq: $address } }) {
-      gauge {
-        aprDetails {
-          yieldType
-          apr
-        }
-      }
-    }
-  }
-`
-
-const getStakeDaoAprDetails = async address => {
-  const headers = {
-    'Content-Type': 'application/json',
-    Accept: 'application/json',
-    'User-Agent': 'PostmanRuntime/7.43.4',
-  }
-
+const getStakeDaoAprDetails = async vaultAddress => {
   try {
-    const response = await client.post(
-      STAKE_DAO_API_URL,
-      {
-        operationName: 'GetAllVaultsWithAssets',
-        query: VAULT_APR_QUERY,
-        variables: { address },
+    const response = await client.get(STAKE_DAO_API_URL, {
+      headers: {
+        Accept: 'application/json',
+        'User-Agent': 'PostmanRuntime/7.43.4',
       },
-      { headers },
+    })
+
+    const vaults = response?.data?.data ?? response?.data ?? []
+    const target = vaultAddress.toLowerCase()
+    const entry = (Array.isArray(vaults) ? vaults : []).find(
+      v => (v?.vault ?? '').toLowerCase() === target,
     )
 
-    return response?.data?.data?.Vault?.[0]?.gauge?.aprDetails ?? []
+    return entry?.apr?.current?.details ?? []
   } catch (err) {
     console.error('Stake DAO API error: ', err)
+    return []
   }
 }
+
+const isTradingFees = label => (label ?? '').toLowerCase().includes('trading fees')
 
 const getTradingApy = async vaultAddress => {
   let apy
@@ -45,8 +32,12 @@ const getTradingApy = async vaultAddress => {
   try {
     const aprDetails = (await getStakeDaoAprDetails(vaultAddress)) ?? []
 
-    const tradingDetail = aprDetails.find(d => d.yieldType === 'TRADING_FEES')
-    apy = new BigNumber(tradingDetail?.apr ?? 0).times(100)
+    apy = aprDetails
+      .filter(d => isTradingFees(d?.label))
+      .reduce((sum, d) => {
+        const values = Array.isArray(d?.value) ? d.value : [d?.value]
+        return values.reduce((acc, v) => acc.plus(new BigNumber(v ?? 0)), sum)
+      }, new BigNumber(0))
   } catch (err) {
     console.error('Stake DAO API error: ', err)
     apy = new BigNumber(0)
