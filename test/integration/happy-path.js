@@ -115,7 +115,7 @@ describe('Happy Paths', function () {
 
     it('queries /revenue/{token}', () => {
       return request(`http://localhost:${testPort}`)
-        .get(`/revenue/DAI?key=${harvestKey}`)
+        .get(`/revenue/USDC?key=${harvestKey}`)
         .expect('Content-Type', /text/)
         .expect(200)
         .then(res => {
@@ -156,7 +156,7 @@ describe('Happy Paths', function () {
 
     it('queries /buybacks/{token}', () => {
       return request(`http://localhost:${testPort}`)
-        .get(`/buybacks/DAI?key=${harvestKey}`)
+        .get(`/buybacks/USDC?key=${harvestKey}`)
         .expect('Content-Type', /text/)
         .expect(200)
         .then(res => {
