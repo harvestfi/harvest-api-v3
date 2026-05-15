@@ -35,32 +35,17 @@ const getCLData = async () => {
   } = clWrapper
 
   const vaults = [
-    '0xcc00Dd51b3aE372A5450031c9261052da9521FC3',
-    '0xEC0c0007eE5872268997a92C07AAeC5FF5eB6A3c',
-    '0x8FfF1A092F187f7B137CE513281143F3219D3352',
-    '0x86b8E5fc263e3760A44886fD50E9279e31eDdF4F',
-    '0x8611053A05080914E72D0C84fF95a11d10EdF36E',
+    '0xF1d5630B646E2D3AfC1fC31F057df349620F48eC',
+    '0xF83648Df279004CdcEee1bEE3a92b9194Cd3b94E',
   ]
   const wrappers = {
-    '0xcc00Dd51b3aE372A5450031c9261052da9521FC3': [
-      '0x4177A55bD35098fe893F52F7985aeEEcCE086825',
-      '0x2E676D3e5840bC7Eccd4d1E29dD4e390a6578092',
+    '0xF1d5630B646E2D3AfC1fC31F057df349620F48eC': [
+      '0x8D85fD0E10E9AE713205fB2cEb523214CA86C861',
+      '0x2cBC31d2aF935663ca4df91fDF2F048FFA651e24',
     ],
-    '0xEC0c0007eE5872268997a92C07AAeC5FF5eB6A3c': [
-      '0x09cEbe390d2cd46E2919c6d87b5d5A23601A4033',
-      '0x0D30Fa6f32f1FE83C8461B66498Aec00A96B698a',
-    ],
-    '0x8FfF1A092F187f7B137CE513281143F3219D3352': [
-      '0x1D6Fd9C383B1D8fa5a958F639A6B622C379A5e8b',
-      '0x7a43d01FC23F0CC061EC57ad1a6c1bED076E8448',
-    ],
-    '0x86b8E5fc263e3760A44886fD50E9279e31eDdF4F': [
-      '0x781Ca258fAf45B2490d4018a3cfDB45Cb8ADE650',
-      '0xE3DCe2393D35aB86ACf5821CE6554b51D0738f80',
-    ],
-    '0x8611053A05080914E72D0C84fF95a11d10EdF36E': [
-      '0x986fD02d727Fd489a32E9786D4Cd8ab29BAd5Bd0',
-      '0xa2faA0afE3321F820E8C1A9562288AFF9d4cB95d',
+    '0xF83648Df279004CdcEee1bEE3a92b9194Cd3b94E': [
+      '0x8Cda67F188a341BcC71ED126777A9fAD7bb05469',
+      '0x645Ae5De61D5E586440C22595c32fEf6631c4006',
     ],
   }
 
@@ -70,7 +55,6 @@ const getCLData = async () => {
     const wrapper0 = getCachedContract({ web3, abi: wrapperAbi, address: wrappers[vault][0] })
     const wrapper1 = getCachedContract({ web3, abi: wrapperAbi, address: wrappers[vault][1] })
 
-    const currentTick = await vaultMethods.getCurrentTick(vaultContr)
     const upperTick = await vaultMethods.getUpperTick(vaultContr)
     const lowerTick = await vaultMethods.getLowerTick(vaultContr)
     const tokenWeights = await vaultMethods.getTokenWeights(vaultContr)
@@ -83,7 +67,7 @@ const getCLData = async () => {
     const valueIn1 = await wrapperMethods.getTotalAssets(wrapper1)
 
     data[vault] = toMongoSafe({
-      ticks: [currentTick, upperTick, lowerTick],
+      ticks: [upperTick, lowerTick],
       tokens: [token0, token1],
       weights: [tokenWeights[0], tokenWeights[1]],
       values: [valueIn0, valueIn1],

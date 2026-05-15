@@ -3799,6 +3799,12 @@
       "aeroCL_cbETH_ETH": {
         "NewVault": "0x8611053A05080914E72D0C84fF95a11d10EdF36E"
       },
+      "aeroCL_tBTC_cbBTC_new": {
+        "NewVault": "0xF83648Df279004CdcEee1bEE3a92b9194Cd3b94E"
+      },
+      "aeroCL_cbETH_ETH_new": {
+        "NewVault": "0xF1d5630B646E2D3AfC1fC31F057df349620F48eC"
+      },
       "extrafi_USDC_2": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         "NewVault": "0x00f281832f74D3eb391C219148EE3b7c8Bb46319",
