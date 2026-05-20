@@ -1607,7 +1607,7 @@ module.exports = {
       },
     ],
   },
-  morpho_YOG_USDC: {
+  morpho_YOG_USDC_mainnet: {
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
