@@ -251,10 +251,10 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'morpho_KPKY_ETH',
+    id: 'morpho_SHP_ETH',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.morpho_KPKY_ETH.NewPool,
-    collateralAddress: addresses.V2.morpho_KPKY_ETH.NewVault,
+    contractAddress: addresses.V2.morpho_SHP_ETH.NewPool,
+    collateralAddress: addresses.V2.morpho_SHP_ETH.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
@@ -262,10 +262,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.morpho_KPKY_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH </a>to a Morpho kpk ETH Yield V2 Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_SHP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH </a>to the Morpho Steakhouse Prime Vault, earning 
        <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.morpho_KPKY_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_SHP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH</a>.
       </p>
     </div>
     `,
@@ -1162,10 +1162,10 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'morpho_OEV_USDC',
+    id: 'morpho_AP_USDC',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.morpho_OEV_USDC.NewPool,
-    collateralAddress: addresses.V2.morpho_OEV_USDC.NewVault,
+    contractAddress: addresses.V2.morpho_AP_USDC.NewPool,
+    collateralAddress: addresses.V2.morpho_AP_USDC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
@@ -1173,10 +1173,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.morpho_OEV_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho OEV-boosted Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_AP_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho Alpha Prime Vault, earning 
        <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.morpho_OEV_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_AP_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
     `,
@@ -1204,10 +1204,10 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'morpho_SP_USDC',
+    id: 'morpho_YOG_USDC',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.morpho_SP_USDC.NewPool,
-    collateralAddress: addresses.V2.morpho_SP_USDC.NewVault,
+    contractAddress: addresses.V2.morpho_YOG_USDC.NewPool,
+    collateralAddress: addresses.V2.morpho_YOG_USDC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
@@ -1215,10 +1215,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.morpho_SP_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho Spectra Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_YOG_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Yearn OG Vault, earning 
        <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.morpho_SP_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_YOG_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
     `,
@@ -2061,10 +2061,10 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'morpho_MEV_USDC',
+    id: 'morpho_AD_USDC',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.morpho_MEV_USDC.NewPool,
-    collateralAddress: addresses.V2.morpho_MEV_USDC.NewVault,
+    contractAddress: addresses.V2.morpho_AD_USDC.NewPool,
+    collateralAddress: addresses.V2.morpho_AD_USDC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
@@ -2072,20 +2072,20 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.morpho_MEV_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho MEV Capital Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_AD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho Alpha Delta Vault, earning 
        <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.morpho_MEV_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_AD_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
     `,
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'morpho_SH_USDC',
+    id: 'morpho_SHHY_USDC',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.morpho_SH_USDC.NewPool,
-    collateralAddress: addresses.V2.morpho_SH_USDC.NewVault,
+    contractAddress: addresses.V2.morpho_SHHY_USDC.NewPool,
+    collateralAddress: addresses.V2.morpho_SHHY_USDC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
@@ -2093,10 +2093,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.morpho_SH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho Smokehouse Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_SHHY_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho Steakhouse High Yield Vault, earning 
        <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.morpho_SH_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_SHHY_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
     `,
@@ -3621,10 +3621,10 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'morphoCS_USDC',
+    id: 'morpho_SDAO_USDC',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.morphoCS_USDC.NewPool,
-    collateralAddress: addresses.V2.morphoCS_USDC.NewVault,
+    contractAddress: addresses.V2.morpho_SDAO_USDC.NewPool,
+    collateralAddress: addresses.V2.morpho_SDAO_USDC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
@@ -3632,10 +3632,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.morphoCS_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho Coinshift Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_SDAO_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho StakeDAO Vault, earning 
        <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.morphoCS_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_SDAO_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
     `,
@@ -4425,7 +4425,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> WBTC </a>to the Morpho Re7 Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> WBTC </a>to the Morpho Gauntlet Core Vault, earning 
        <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.WBTC.Underlying}" target="_blank" rel="noopener noreferrer"> WBTC</a>.
@@ -5229,10 +5229,10 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'morpho_GauntletETH',
+    id: 'morpho_GP_ETH',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.morpho_GauntletETH.NewPool,
-    collateralAddress: addresses.V2.morpho_GauntletETH.NewVault,
+    contractAddress: addresses.V2.morpho_GP_ETH.NewPool,
+    collateralAddress: addresses.V2.morpho_GP_ETH.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
@@ -5240,20 +5240,20 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.morpho_GauntletETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to a Morpho Gauntlet Core Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_GP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH </a>to the Morpho Gauntlet Prime Vault, earning 
        <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.morpho_GauntletETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_GP_ETH.Underlying}" target="_blank" rel="noopener noreferrer"> WETH</a>.
       </p>
     </div>
     `,
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'morpho_GauntletUSDC',
+    id: 'morpho_API3_USDC',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.V2.morpho_GauntletUSDC.NewPool,
-    collateralAddress: addresses.V2.morpho_GauntletUSDC.NewVault,
+    contractAddress: addresses.V2.morpho_API3_USDC.NewPool,
+    collateralAddress: addresses.V2.morpho_API3_USDC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.iFARM],
@@ -5261,10 +5261,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.morpho_GauntletETH.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to a Morpho Gauntlet Core Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_API3_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Api3 dCOMP Vault, earning 
        <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://etherscan.io/token/${addresses.V2.morpho_GauntletETH.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+       <a href="https://etherscan.io/token/${addresses.V2.morpho_API3_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
     `,
@@ -12079,7 +12079,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Gauntlet Frontier Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Alpha Core Vault, earning 
        <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
@@ -12100,7 +12100,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT </a>to the Morpho Steakhouse Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT </a>to the Morpho Steakhouse Prime Vault, earning 
        <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.USDT.Underlying}" target="_blank" rel="noopener noreferrer"> USDT</a>.
@@ -12258,7 +12258,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.WETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH </a>to the Morpho MEV Capital Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.WETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH </a>to the Morpho KPK Yield Vault, earning 
        <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.WETH.Underlying}" target="_blank" rel="noopener noreferrer"> ETH</a>.
