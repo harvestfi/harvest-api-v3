@@ -591,6 +591,7 @@ module.exports = {
     ],
   },
   aaveLoop_ETH_cbETH: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -621,6 +622,7 @@ module.exports = {
     ],
   },
   aaveLoop_ETH_cbETH2: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
