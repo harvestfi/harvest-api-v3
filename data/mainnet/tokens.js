@@ -2805,7 +2805,7 @@ module.exports = {
       },
     ],
   },
-  morpho_SHHY_USDC: {
+  morpho_SHHY_USDC_mainnet: {
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
