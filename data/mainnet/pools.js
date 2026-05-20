@@ -6,6 +6,36 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.BASE,
+    id: 'aeroCL_tBTC_cbBTC_new',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.aeroCL_tBTC_cbBTC_new.NewPool,
+    collateralAddress: addresses.BASE.V2.aeroCL_tBTC_cbBTC_new.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'aeroCL_cbETH_ETH_new',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.aeroCL_cbETH_ETH_new.NewPool,
+    collateralAddress: addresses.BASE.V2.aeroCL_cbETH_ETH_new.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
     id: 'IporLending_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.BASE.V2.IporLending_ETH.NewPool,
