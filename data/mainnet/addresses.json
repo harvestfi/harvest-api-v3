@@ -3799,6 +3799,18 @@
       "aeroCL_cbETH_ETH": {
         "NewVault": "0x8611053A05080914E72D0C84fF95a11d10EdF36E"
       },
+      "aeroCL_tBTC_cbBTC_new": {
+        "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        "NewVault": "0xF83648Df279004CdcEee1bEE3a92b9194Cd3b94E",
+        "NewStrategy": "0xbC26A95B4A56F6b0Deb1f29A0c98402539bC322e",
+        "NewPool": "0x9fada499f966b30b30b42ae009c561ff4fcb0eaa"
+      },
+      "aeroCL_cbETH_ETH_new": {
+        "Underlying": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
+        "NewVault": "0xF1d5630B646E2D3AfC1fC31F057df349620F48eC",
+        "NewStrategy": "0x33C1bC4E11fD75be8f73304cb4a77AbD5BEbd7cf",
+        "NewPool": "0x8b47890d5b8c1f54efa4e8463c3638f2bf9cb11b"
+      },
       "extrafi_USDC_2": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         "NewVault": "0x00f281832f74D3eb391C219148EE3b7c8Bb46319",
