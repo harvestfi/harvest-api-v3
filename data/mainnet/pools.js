@@ -1204,7 +1204,7 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'morpho_YOG_USDC',
+    id: 'morpho_YOG_USDC_mainnet',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.morpho_YOG_USDC.NewPool,
     collateralAddress: addresses.V2.morpho_YOG_USDC.NewVault,
@@ -2082,7 +2082,7 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.ETH_MAINNET,
-    id: 'morpho_SHHY_USDC',
+    id: 'morpho_SHHY_USDC_mainnet',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.morpho_SHHY_USDC.NewPool,
     collateralAddress: addresses.V2.morpho_SHHY_USDC.NewVault,
