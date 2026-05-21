@@ -7227,6 +7227,7 @@ module.exports = {
     ],
   },
   morpho_GauntletDAI: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/dai.svg', './icons/morpho.svg'],
     apyTokenSymbols: ['DAI', 'MORPHO'],
@@ -16416,7 +16417,6 @@ module.exports = {
   },
   DAI: {
     chain: CHAIN_IDS.ETH_MAINNET,
-    inactive: true,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
     logoUrl: ['./icons/dai.svg'],

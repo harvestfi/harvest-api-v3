@@ -207,8 +207,7 @@
       "OldStrategy": "0x8f605dBa5207f57e3aE2E8fEA7b740b7D4b204A5",
       "NewStrategy": "0x19641d708940d3764652a7E9B52aB1B7f0829fe3",
       "NewPool": "0x15d3A64B2d5ab9E152F16593Cdebc4bB165B5B4A",
-      "MorphoVault": "0x500331c9fF24D9d11aee6B07734Aa72343EA74a5",
-      "doHardwork": false
+      "MorphoVault": "0x500331c9fF24D9d11aee6B07734Aa72343EA74a5"
     },
     "USDC": {
       "OldVault": "0xc3F7ffb5d5869B3ade9448D094d81B0521e8326f",
@@ -659,7 +658,8 @@
       "NewVault": "0x2827DdabE84691def2cdA14FD8FF817009093212",
       "NewStrategy": "0xA03BF4A3c92BB1366812a17163a46c1E14c50B5C",
       "NewPool": "0x89e7227340e333Cf29f9402ddD26b5aEc5224825",
-      "MorphoVault": "0x500331c9fF24D9d11aee6B07734Aa72343EA74a5"
+      "MorphoVault": "0x500331c9fF24D9d11aee6B07734Aa72343EA74a5",
+      "doHardwork": false
     },
     "morpho_GP_ETH": {
       "Underlying": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
