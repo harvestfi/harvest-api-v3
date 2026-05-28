@@ -3587,7 +3587,7 @@ module.exports = {
     isIPORVault: true,
     apyIconUrls: ['./icons/eth.svg', './icons/eth.svg'],
     apyTokenSymbols: ['WETH', 'WETH'],
-    apyDescriptionOverride: ['Auto harvested', 'WETH incentives'],
+    apyDescriptionOverride: ['Auto harvested', 'Base Season Incentives'],
     logoUrl: ['./icons/eth.svg'],
     tokenNames: ['WETH'],
     platform: ['Autopilot'],
