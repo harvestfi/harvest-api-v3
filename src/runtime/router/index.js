@@ -344,7 +344,7 @@ const initRouter = app => {
     walletConnectCors, // Apply specific CORS settings
     walletConnectRateLimit, // Apply rate limiting
     asyncWrap(async (req, res) => {
-      const { walletAddress } = req.body
+      const { walletAddress, sessionId } = req.body
 
       if (!walletAddress) {
         return res.status(400).json({ error: 'walletAddress is required' })
@@ -374,11 +374,17 @@ const initRouter = app => {
         const balance = await getTotalBalance(normalizedAddress)
         const harvestBalance = await getHarvestBalance(normalizedAddress)
 
+        const normalizedSessionId =
+          typeof sessionId === 'string' && sessionId.trim().length > 0
+            ? sessionId.trim().slice(0, 128)
+            : null
+
         await saveWalletConnection({
           walletAddress: normalizedAddress,
           connectedAt,
           balance,
           harvestBalance,
+          sessionId: normalizedSessionId,
         })
 
         res.json({
