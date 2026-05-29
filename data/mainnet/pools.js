@@ -2860,10 +2860,10 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.BASE,
-    id: 'morphoSPK_USDC',
+    id: 'morpho_AP_USDC_base',
     type: POOL_TYPES.INCENTIVE,
-    contractAddress: addresses.BASE.V2.morphoSPK_USDC.NewPool,
-    collateralAddress: addresses.BASE.V2.morphoSPK_USDC.NewVault,
+    contractAddress: addresses.BASE.V2.morpho_AP_USDC.NewPool,
+    collateralAddress: addresses.BASE.V2.morpho_AP_USDC.NewVault,
     rewardAPY: [],
     rewardAPR: null,
     rewardTokens: [addresses.BASE.iFARM],
@@ -2871,10 +2871,10 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://basescan.org/token/${addresses.BASE.V2.morphoSPK_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Spark Vault, earning 
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morpho_AP_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Alpha Prime Vault, earning 
        <a href="https://basescan.org/token/${addresses.BASE.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
-       <a href="https://basescan.org/token/${addresses.BASE.V2.morphoSPK_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
+       <a href="https://basescan.org/token/${addresses.BASE.V2.morpho_AP_USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.
       </p>
     </div>
    `,
