@@ -101,14 +101,7 @@ const getApy = async (plasmaVault, factor = 1, chain) => {
   }
 
   try {
-    merklApy = new BigNumber(
-      await getMerklApy(
-        null,
-        plasmaVault,
-        chain,
-        factor,
-      ),
-    )
+    merklApy = new BigNumber(await getMerklApy(null, plasmaVault, chain, factor))
   } catch (err) {
     logger.error('IPOR Merkl APY error:', err)
     merklApy = new BigNumber(0)

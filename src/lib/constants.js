@@ -232,7 +232,7 @@ const CURVE_API_URLS = {
 const STAKE_DAO_API_URL = 'https://hub.stakedao.org/v1/vaults'
 
 const GAMMA_ENDPOINT = 'https://wire2.gamma.xyz/'
-const MERKL_ENDPOINT = 'https://api.angle.money/v3/'
+const MERKL_ENDPOINT = 'https://api.merkl.xyz/v4/'
 const CAMELOT_MERKL_ENDPOINT = 'https://api.camelot.exchange/campaigns?chainId=42161'
 const PENDLE_ENDPOINT = 'https://api-v2.pendle.finance/core/v2/'
 const MORPHO_ENDPOINT = 'https://api.morpho.org/graphql'

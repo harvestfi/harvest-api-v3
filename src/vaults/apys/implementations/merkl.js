@@ -18,7 +18,7 @@ const getApy = async (userAddress, poolAddress, chainId, reduction, fold = false
     let attempts = 0
     const maxAttempts = 3
     let success = false
-    const url = `${MERKL_ENDPOINT}opportunity?campaigns=true&chainId=${chainId}&mainParameter=${poolAddress}`
+    const url = `${MERKL_ENDPOINT}opportunities/aggregate/apr?chainId=${chainId}&search=${poolAddress}`
     const cacheKey = `${url.replace(/\W/g, '')}-${stringHash(url)}`
 
     while (attempts < maxAttempts && !success) {
@@ -56,18 +56,8 @@ const getApy = async (userAddress, poolAddress, chainId, reduction, fold = false
     }
 
     if (response && response.data) {
-      const data = response.data
-      if (Object.keys(data).length > 0) {
-        const keys = Object.keys(data)
-        for (let key of keys) {
-          const apr = get(data, `${key}.apr`, 0)
-          apy += parseFloat(apr)
-        }
-        apy = parseFloat(apy) * parseFloat(reduction)
-        if (isNaN(apy)) {
-          apy = 0
-        }
-      }
+      const apr = get(response.data, `sum`, 0)
+      apy = parseFloat(apr)
     }
   } catch (err) {
     console.error('MERKL API error: ', err)
