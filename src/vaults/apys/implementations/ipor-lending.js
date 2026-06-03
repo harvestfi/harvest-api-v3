@@ -9,6 +9,7 @@ const logger = require('../../../lib/logger')
 const { IPOR_API_URL } = require('../../../lib/constants')
 const { client } = require('../../../lib/http')
 const { get } = require('lodash')
+const { getApy: getMerklApy } = require('./merkl')
 
 const SECONDS_PER_YEAR = new BigNumber(365.2425).times(86400)
 const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
@@ -17,7 +18,7 @@ const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 // IPOR Plasma Vault's `RewardsClaimManager`. Mirrors the front-end formula at
 // app.ipor.io: `(lastUpdateBalance / totalAssets) * (SECONDS_PER_YEAR / vestingTime) * 100`.
 const getApy = async (plasmaVault, factor = 1, chain) => {
-  let baseApy, incentivesApy
+  let baseApy, incentivesApy, merklApy
   try {
     const chainId = parseInt(chain, 10)
     const url = `${IPOR_API_URL}/fusion/vaults-history/${chainId}/${plasmaVault.toLowerCase()}`
@@ -99,7 +100,21 @@ const getApy = async (plasmaVault, factor = 1, chain) => {
     incentivesApy = new BigNumber(0)
   }
 
-  return baseApy.plus(incentivesApy).toFixed(2)
+  try {
+    merklApy = new BigNumber(
+      await getMerklApy(
+        null,
+        plasmaVault,
+        chain,
+        factor,
+      ),
+    )
+  } catch (err) {
+    logger.error('IPOR Merkl APY error:', err)
+    merklApy = new BigNumber(0)
+  }
+
+  return baseApy.plus(incentivesApy).plus(merklApy).toFixed(2)
 }
 
 module.exports = {
