@@ -54,10 +54,14 @@ const getApy = async (userAddress, poolAddress, chainId, reduction, fold = false
         }
       }
     }
-
+    console.log(response.data)
     if (response && response.data) {
       const apr = get(response.data, `sum`, 0)
-      apy = parseFloat(apr)
+      if (apr) {
+        apy = parseFloat(apr)
+      } else {
+        apy = 0.0
+      }
     }
   } catch (err) {
     console.error('MERKL API error: ', err)
