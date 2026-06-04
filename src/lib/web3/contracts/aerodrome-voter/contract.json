@@ -1,0 +1,16 @@
+{
+  "address": {
+    "ropsten": "",
+    "mainnet": "",
+    "base": "0x16613524e02ad97edfef371bc883f2f5d6c480a5"
+  },
+  "abi": [
+    {
+      "inputs": [{ "internalType": "address", "name": "_pool", "type": "address" }],
+      "name": "gauges",
+      "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+}

@@ -271,7 +271,35 @@ const loopStrategyContract = require('../contracts/loop-strategy/contract.json')
 const aaveViewerMethods = require('../contracts/aave-viewer/methods')
 const aaveViewerContract = require('../contracts/aave-viewer/contract.json')
 
+const aeroVoterMethods = require('../contracts/aerodrome-voter/methods')
+const aeroVoterContract = require('../contracts/aerodrome-voter/contract.json')
+
+const aeroClPoolMethods = require('../contracts/aerodrome-cl-pool/methods')
+const aeroClPoolContract = require('../contracts/aerodrome-cl-pool/contract.json')
+
+const aeroSlipstreamHelperMethods = require('../contracts/aerodrome-slipstream-helper/methods')
+const aeroSlipstreamHelperContract = require('../contracts/aerodrome-slipstream-helper/contract.json')
+
+const aeroNftManagerMethods = require('../contracts/aerodrome-nft-manager/methods')
+const aeroNftManagerContract = require('../contracts/aerodrome-nft-manager/contract.json')
+
 module.exports = {
+  aeroVoter: {
+    methods: aeroVoterMethods,
+    contract: aeroVoterContract,
+  },
+  aeroClPool: {
+    methods: aeroClPoolMethods,
+    contract: aeroClPoolContract,
+  },
+  aeroSlipstreamHelper: {
+    methods: aeroSlipstreamHelperMethods,
+    contract: aeroSlipstreamHelperContract,
+  },
+  aeroNftManager: {
+    methods: aeroNftManagerMethods,
+    contract: aeroNftManagerContract,
+  },
   aaveViewer: {
     methods: aaveViewerMethods,
     contract: aaveViewerContract,

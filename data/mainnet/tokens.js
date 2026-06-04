@@ -41,7 +41,7 @@ module.exports = {
     ],
   },
   aeroCL_tBTC_cbBTC_new: {
-    inactive: true,
+    isCLVault: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -54,18 +54,27 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aeroCL_tBTC_cbBTC_new.NewVault,
     strategyAddress: addresses.BASE.V2.aeroCL_tBTC_cbBTC_new.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.MANUAL,
-      params: ['1'],
+      type: GET_PRICE_TYPES.CL_VAULT,
+      params: [
+        addresses.BASE.V2.aeroCL_tBTC_cbBTC_new.NewVault,
+        addresses.BASE.V2.aeroCL_tBTC_cbBTC_new.Underlying,
+        CHAIN_IDS.BASE,
+      ],
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MANUAL,
-        params: ['1'],
+        type: ESTIMATED_APY_TYPES.CL_VAULT,
+        params: [
+          addresses.BASE.V2.aeroCL_tBTC_cbBTC_new.CLPool,
+          addresses.BASE.V2.aeroCL_tBTC_cbBTC_new.NewVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
       },
     ],
   },
   aeroCL_cbETH_ETH_new: {
-    inactive: true,
+    isCLVault: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aero.svg'],
     apyTokenSymbols: ['AERO'],
@@ -78,13 +87,22 @@ module.exports = {
     vaultAddress: addresses.BASE.V2.aeroCL_cbETH_ETH_new.NewVault,
     strategyAddress: addresses.BASE.V2.aeroCL_cbETH_ETH_new.NewStrategy,
     priceFunction: {
-      type: GET_PRICE_TYPES.MANUAL,
-      params: ['1'],
+      type: GET_PRICE_TYPES.CL_VAULT,
+      params: [
+        addresses.BASE.V2.aeroCL_cbETH_ETH_new.NewVault,
+        addresses.BASE.V2.aeroCL_cbETH_ETH_new.Underlying,
+        CHAIN_IDS.BASE,
+      ],
     },
     estimateApyFunctions: [
       {
-        type: ESTIMATED_APY_TYPES.MANUAL,
-        params: ['1'],
+        type: ESTIMATED_APY_TYPES.CL_VAULT,
+        params: [
+          addresses.BASE.V2.aeroCL_cbETH_ETH_new.CLPool,
+          addresses.BASE.V2.aeroCL_cbETH_ETH_new.NewVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.BASE,
+        ],
       },
     ],
   },
