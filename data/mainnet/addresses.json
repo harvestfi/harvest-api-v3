@@ -3803,14 +3803,38 @@
         "NewVault": "0xF83648Df279004CdcEee1bEE3a92b9194Cd3b94E",
         "NewStrategy": "0xbC26A95B4A56F6b0Deb1f29A0c98402539bC322e",
         "NewPool": "0x8b47890d5b8c1f54efa4e8463c3638f2bf9cb11b",
-        "CLPool": "0x138aceE5573fA09e7F215965ff60898cc33c6330"
+        "CLPool": "0x138aceE5573fA09e7F215965ff60898cc33c6330",
+        "Wrappers": [
+          {
+            "tokenName": "tBTC",
+            "tokenAddress": "0x236aa50979D5f3De3Bd1Eeb40E81137F22ab794b",
+            "wrapperAddress": "0x8Cda67F188a341BcC71ED126777A9fAD7bb05469"
+          },
+          {
+            "tokenName": "cbBTC",
+            "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+            "wrapperAddress": "0x645Ae5De61D5E586440C22595c32fEf6631c4006"
+          }
+        ]
       },
       "aeroCL_cbETH_ETH_new": {
         "Underlying": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
         "NewVault": "0xF1d5630B646E2D3AfC1fC31F057df349620F48eC",
         "NewStrategy": "0x33C1bC4E11fD75be8f73304cb4a77AbD5BEbd7cf",
         "NewPool": "0x9fada499f966b30b30b42ae009c561ff4fcb0eaa",
-        "CLPool": "0x47cA96Ea59C13F72745928887f84C9F52C3D7348"
+        "CLPool": "0x47cA96Ea59C13F72745928887f84C9F52C3D7348",
+        "Wrappers": [
+          {
+            "tokenName": "cbETH",
+            "tokenAddress": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
+            "wrapperAddress": "0x8D85fD0E10E9AE713205fB2cEb523214CA86C861"
+          },
+          {
+            "tokenName": "WETH",
+            "tokenAddress": "0x4200000000000000000000000000000000000006",
+            "wrapperAddress": "0x2cBC31d2aF935663ca4df91fDF2F048FFA651e24"
+          }
+        ]
       },
       "extrafi_USDC_2": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
