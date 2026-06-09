@@ -5,7 +5,6 @@ const {
   clVault,
   aeroVoter,
   aeroClPool,
-  aeroSlipstreamHelper,
   aeroNftManager,
   aeroGauge,
 } = require('../../../lib/web3/contracts')
@@ -15,7 +14,6 @@ const { CHAIN_IDS } = require('../../../lib/constants')
 const logger = require('../../../lib/logger')
 
 const AERODROME_VOTER = '0x16613524e02ad97edfef371bc883f2f5d6c480a5'
-const SLIPSTREAM_HELPER = '0x6d2d739bf37dfd93d804523c2dfa948eaf32f8e1'
 
 const SECONDS_PER_YEAR = 60 * 60 * 24 * 365.25
 
@@ -62,11 +60,6 @@ const getApy = async (poolAddress, vaultAddress, reduction = '1', chain = CHAIN_
       abi: aeroClPool.contract.abi,
       address: poolAddress,
     })
-    const helperInstance = getCachedContract({
-      web3,
-      abi: aeroSlipstreamHelper.contract.abi,
-      address: SLIPSTREAM_HELPER,
-    })
     const gaugeInstance = getCachedContract({
       web3,
       abi: aeroGauge.contract.abi,
@@ -100,25 +93,9 @@ const getApy = async (poolAddress, vaultAddress, reduction = '1', chain = CHAIN_
 
     const vaultShare = vaultLiquidity.div(totalStakedLiquidity)
 
-    const token0 = await aeroClPool.methods.getToken0(poolInstance)
-    const token1 = await aeroClPool.methods.getToken1(poolInstance)
-    const slot0 = await aeroClPool.methods.getSlot0(poolInstance)
-    const sqrtPriceX96 = slot0.sqrtPriceX96
-    const sqrtRatioLower = await aeroSlipstreamHelper.methods.getSqrtRatioAtTick(
-      Number(position.tickLower),
-      helperInstance,
-    )
-    const sqrtRatioUpper = await aeroSlipstreamHelper.methods.getSqrtRatioAtTick(
-      Number(position.tickUpper),
-      helperInstance,
-    )
-    const vaultAmounts = await aeroSlipstreamHelper.methods.getAmountsForLiquidity(
-      sqrtPriceX96,
-      sqrtRatioLower,
-      sqrtRatioUpper,
-      vaultLiquidity.toFixed(0),
-      helperInstance,
-    )
+    const token0 = await clVault.methods.getToken0(vaultInstance)
+    const token1 = await clVault.methods.getToken1(vaultInstance)
+    const vaultAmounts = await clVault.methods.getCurrentTokenAmounts(vaultInstance)
     const vaultUsd0 = await valueInUsd(web3, token0, vaultAmounts.amount0, chain)
     const vaultUsd1 = await valueInUsd(web3, token1, vaultAmounts.amount1, chain)
     const vaultTvlUsd = vaultUsd0.plus(vaultUsd1)

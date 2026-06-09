@@ -18,7 +18,7 @@ const valueInUsd = async (web3, tokenAddress, amount, chain) => {
   return amountBn.times(price).div(new BigNumber(10).pow(decimals))
 }
 
-const getPrice = async (vaultAddress, underlyingAddress, chain = CHAIN_IDS.BASE) => {
+const getPrice = async (vaultAddress, chain = CHAIN_IDS.BASE) => {
   const web3 = getWeb3(chain)
   const { methods: vaultMethods, contract: vaultContract } = clVault
 
