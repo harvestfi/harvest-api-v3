@@ -1,7 +1,10 @@
 const BigNumber = require('bignumber.js')
 const { web3BASE } = require('../../../lib/web3')
+const { CHAIN_IDS } = require('../../../lib/constants')
 const { faVault, faLoan } = require('../../../lib/web3/contracts')
 const { getCachedContract } = require('../../../lib/web3/contractCache')
+const { getApy: getMerklApy } = require('./merkl')
+const logger = require('../../../lib/logger')
 
 const getApy = async (faVaultAddress, reduction) => {
   const web3 = web3BASE
@@ -31,7 +34,16 @@ const getApy = async (faVaultAddress, reduction) => {
   if (reduction) {
     rate = rate.multipliedBy(reduction)
   }
-  return rate.toFixed(4)
+
+  let merklApy
+  try {
+    merklApy = new BigNumber(await getMerklApy(null, faVaultAddress, CHAIN_IDS.BASE, 1))
+  } catch (err) {
+    logger.error('IPOR Merkl APY error:', err)
+    merklApy = new BigNumber(0)
+  }
+
+  return rate.plus(merklApy).toFixed(4)
 }
 
 module.exports = {
