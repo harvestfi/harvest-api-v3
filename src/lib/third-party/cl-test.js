@@ -1,9 +1,10 @@
 const { clVault, clWrapper } = require('../web3/contracts')
 const { web3BASE } = require('../web3')
 const { Cache, storeData } = require('../db/models/cache')
-const { DB_CACHE_IDS } = require('../constants')
+const { DB_CACHE_IDS, CHAIN_IDS } = require('../constants')
 const { get } = require('lodash')
 const { getCachedContract } = require('../web3/contractCache')
+const { getPrice: getCLVaultPrice } = require('../../prices/implementations/cl-vault')
 
 const toMongoSafe = v => {
   if (typeof v === 'bigint') return v.toString()
@@ -66,12 +67,22 @@ const getCLData = async () => {
     const token1 = await wrapperMethods.getAsset(wrapper1)
     const valueIn1 = await wrapperMethods.getTotalAssets(wrapper1)
 
+    const totalSupply = await vaultMethods.getTotalSupply(vaultContr)
+    let priceUsd = '0'
+    try {
+      priceUsd = await getCLVaultPrice(vault, CHAIN_IDS.BASE)
+    } catch (e) {
+      console.error(`cl-test: failed to compute priceUsd for ${vault}`, e)
+    }
+
     data[vault] = toMongoSafe({
       ticks: [upperTick, lowerTick],
       tokens: [token0, token1],
       weights: [tokenWeights[0], tokenWeights[1]],
       values: [valueIn0, valueIn1],
       liquidity: liquidity,
+      totalSupply: totalSupply,
+      priceUsd: priceUsd,
     })
   }
 
