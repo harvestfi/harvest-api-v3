@@ -24,8 +24,8 @@ const getPrice = async (vaultAddress, chain = CHAIN_IDS.BASE) => {
 
   const vaultInstance = getCachedContract({ web3, abi: vaultContract.abi, address: vaultAddress })
 
-  const totalSupply = new BigNumber(await vaultMethods.getTotalSupply(vaultInstance))
-  if (totalSupply.isZero()) {
+  const underlying = new BigNumber(await vaultMethods.getLiquidity(vaultInstance))
+  if (underlying.isZero()) {
     return '0'
   }
 
@@ -38,7 +38,7 @@ const getPrice = async (vaultAddress, chain = CHAIN_IDS.BASE) => {
   const usd1 = await valueInUsd(web3, token1, amounts.amount1, chain)
   const positionUsd = usd0.plus(usd1)
 
-  const shares = totalSupply.div(new BigNumber(10).pow(vaultDecimals))
+  const shares = underlying.div(new BigNumber(10).pow(vaultDecimals))
   const price = positionUsd.div(shares)
 
   if (!price.isFinite() || price.isLessThan(0)) {
