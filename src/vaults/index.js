@@ -109,7 +109,7 @@ const fetchAndExpandVault = async (symbol, poolsDoc, statsDoc, tokens, pools) =>
     uniswapV3PositionId = await getPosId(vaultData.vaultAddress, web3Instance)
   }
 
-  usdPrice = (await getTokenPrice(symbol)).toString()
+  usdPrice = (await getTokenPrice(symbol, vaultData.chain)).toString()
 
   if (DEBUG_MODE) {
     const currentCache = cache.get(WEB3_CALL_COUNT_STATS_KEY)

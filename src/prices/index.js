@@ -39,23 +39,6 @@ const getTokenPrice = async (selectedToken, ourChainId = CHAIN_IDS.ETH) => {
 
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
 
-  let cachedPriceKey2 = null,
-    result
-  if (
-    tokens[selectedToken] &&
-    tokens[selectedToken].tokenAddress &&
-    !isArray(tokens[selectedToken].tokenAddress)
-  ) {
-    const normalizedTokenAddress = tokens[selectedToken].tokenAddress.toLowerCase()
-    const cachedPriceKey2 = `tokenPrice${normalizedTokenAddress}${ourChainId}${currency}`
-    const cachedPrice2 = cache.get(cachedPriceKey2)
-
-    if (cachedPrice2) {
-      return cachedPrice2
-    }
-  }
-
-  // next, checking if the staking token is a regular token
   const tokenData =
     tokens[selectedToken] ||
     toArray(tokens).find(
@@ -64,6 +47,24 @@ const getTokenPrice = async (selectedToken, ourChainId = CHAIN_IDS.ETH) => {
         !isArray(token.tokenAddress) &&
         token.tokenAddress.toLowerCase() === selectedToken.toLowerCase(),
     )
+
+  let cachedPriceKey2 = null
+  let result
+  if (
+    tokenData &&
+    tokenData.tokenAddress &&
+    !isArray(tokenData.tokenAddress) &&
+    tokenData.priceFunction?.type === GET_PRICE_TYPES.COINGECKO_CONTRACT
+  ) {
+    const normalizedTokenAddress = tokenData.tokenAddress.toLowerCase()
+    cachedPriceKey2 = `tokenPrice${normalizedTokenAddress}${ourChainId}${currency}`
+    const cachedPrice2 = cache.get(cachedPriceKey2)
+
+    if (cachedPrice2) {
+      return cachedPrice2
+    }
+  }
+
   if (tokenData) {
     result = await executePriceFunction(
       tokenData.priceFunction.type,
@@ -94,7 +95,7 @@ const getTokenPrice = async (selectedToken, ourChainId = CHAIN_IDS.ETH) => {
   }
 
   cache.set(cachedPriceKey1, result)
-  if (cachedPriceKey2) {
+  if (cachedPriceKey2 && tokenData?.priceFunction?.type === GET_PRICE_TYPES.COINGECKO_CONTRACT) {
     cache.set(cachedPriceKey2, result)
   }
   return result
