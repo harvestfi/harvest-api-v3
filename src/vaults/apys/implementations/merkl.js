@@ -54,7 +54,7 @@ const getApy = async (userAddress, poolAddress, chainId, reduction, fold = false
         }
       }
     }
-    console.log(response.data)
+
     if (response && response.data) {
       const apr = get(response.data, `sum`, 0)
       if (apr) {
