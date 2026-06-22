@@ -30,26 +30,20 @@ const getApy = async (faVaultAddress, reduction) => {
   })
   const epochReward = new BigNumber(await loanMethods.getLastEpochReward(loanInstance))
 
-  let baseRate = epochReward.times(52).times(100).div(totalAssets)
+  let rate = epochReward.times(52).times(100).div(totalAssets)
+  if (reduction) {
+    rate = rate.multipliedBy(reduction)
+  }
 
   let merklApy
   try {
     merklApy = new BigNumber(await getMerklApy(null, faVaultAddress, CHAIN_IDS.BASE, 1))
-    if (merklApy.gt(baseRate)) {
-      merklApy = merklApy.minus(baseRate)
-    } else {
-      merklApy = new BigNumber(0)
-    }
   } catch (err) {
     logger.error('IPOR Merkl APY error:', err)
     merklApy = new BigNumber(0)
   }
 
-  if (reduction) {
-    baseRate = baseRate.multipliedBy(reduction)
-  }
-
-  return baseRate.plus(merklApy).toFixed(4)
+  return rate.plus(merklApy).toFixed(4)
 }
 
 module.exports = {
