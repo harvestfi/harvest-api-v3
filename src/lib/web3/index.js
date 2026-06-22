@@ -1,6 +1,10 @@
+const http = require('http')
+const https = require('https')
+const { URL } = require('url')
 const { sumBy, orderBy, isArray } = require('lodash')
 const { Web3 } = require('web3')
 const { HttpProvider } = require('web3-providers-http')
+const { ResponseError } = require('web3-errors')
 const HttpAgent = require('agentkeepalive')
 const { HttpsAgent } = require('agentkeepalive')
 const { HttpsProxyAgent } = require('https-proxy-agent')
@@ -17,11 +21,11 @@ const {
 } = require('../constants')
 const { cache } = require('../cache')
 
-// web3 v4's HttpProvider uses node-fetch, which by default opens a brand-new
-// TCP+TLS connection for every JSON-RPC call. On a shared-egress host (Heroku)
-// that connection churn trips NAT/conntrack limits and the provider's per-IP
-// new-connection throttling, surfacing as `ERR_STREAM_PREMATURE_CLOSE`. Reuse a
-// bounded pool of keep-alive sockets and evict idle ones before they go stale.
+// web3 v4's stock HttpProvider sends JSON-RPC over `node-fetch@2` (via
+// cross-fetch). On Node 24 on Heroku that path fails every request with
+// `ERR_STREAM_PREMATURE_CLOSE`, while Node's built-in `https` module hits the
+// exact same Alchemy URLs from the same dyno with zero errors (verified). So we
+// keep web3 but swap its transport to the raw `https`/`http` modules.
 const keepAliveOptions = {
   keepAlive: true,
   maxSockets: Number(process.env.WEB3_MAX_SOCKETS ?? 25),
@@ -33,9 +37,7 @@ const httpKeepAliveAgent = new HttpAgent(keepAliveOptions)
 const httpsKeepAliveAgent = new HttpsAgent(keepAliveOptions)
 
 // When a static-IP egress proxy is configured (e.g. QuotaGuard Static or Fixie
-// on Heroku), route all RPC traffic through it so we leave from a dedicated IP
-// that isn't shared/flagged. This keeps us on Alchemy while fixing the
-// per-source-IP block that causes `ERR_STREAM_PREMATURE_CLOSE`.
+// on Heroku), route all RPC traffic through it so we leave from a dedicated IP.
 const PROXY_URL =
   process.env.WEB3_PROXY_URL ||
   process.env.QUOTAGUARDSTATIC_URL ||
@@ -48,12 +50,67 @@ if (PROXY_URL) {
   console.log('[web3] Routing RPC through static-IP egress proxy')
 }
 
-// node-fetch accepts `agent` as a function (parsedURL) => Agent
-const agentSelector = parsedURL => {
+const selectAgent = urlObj => {
   if (proxyAgent) {
     return proxyAgent
   }
-  return parsedURL.protocol === 'http:' ? httpKeepAliveAgent : httpsKeepAliveAgent
+  return urlObj.protocol === 'http:' ? httpKeepAliveAgent : httpsKeepAliveAgent
+}
+
+const REQUEST_TIMEOUT = Number(process.env.WEB3_REQUEST_TIMEOUT ?? 30_000)
+
+// Drop-in replacement for web3's HttpProvider that performs the JSON-RPC POST
+// with Node's native http/https instead of node-fetch. Same request/response
+// contract (returns the parsed JSON-RPC body; throws ResponseError on non-2xx).
+class NodeHttpProvider extends HttpProvider {
+  request(payload, requestOptions) {
+    return new Promise((resolve, reject) => {
+      const urlObj = new URL(this.clientUrl)
+      const lib = urlObj.protocol === 'http:' ? http : https
+      const body = JSON.stringify(payload)
+      const headers = {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        ...(requestOptions && requestOptions.headers),
+        'Content-Length': Buffer.byteLength(body),
+      }
+      const req = lib.request(
+        {
+          protocol: urlObj.protocol,
+          hostname: urlObj.hostname,
+          port: urlObj.port || (urlObj.protocol === 'http:' ? 80 : 443),
+          path: urlObj.pathname + urlObj.search,
+          method: 'POST',
+          headers,
+          agent: selectAgent(urlObj),
+          timeout: REQUEST_TIMEOUT,
+        },
+        res => {
+          let data = ''
+          res.setEncoding('utf8')
+          res.on('data', chunk => {
+            data += chunk
+          })
+          res.on('end', () => {
+            const status = res.statusCode || 0
+            let parsed
+            try {
+              parsed = data ? JSON.parse(data) : undefined
+            } catch (err) {
+              return reject(err)
+            }
+            if (status < 200 || status >= 300) {
+              return reject(new ResponseError(parsed, undefined, undefined, status))
+            }
+            return resolve(parsed)
+          })
+        },
+      )
+      req.on('timeout', () => req.destroy(Object.assign(new Error('Request timeout'), { code: 'ETIMEDOUT' })))
+      req.on('error', reject)
+      req.end(body)
+    })
+  }
 }
 
 // Transient socket-level failures that are safe to retry for idempotent reads.
@@ -70,9 +127,7 @@ const errorCode = err => err && (err.code || (err.cause && err.cause.code))
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 const createProvider = url => {
-  const provider = new HttpProvider(url, {
-    providerOptions: { agent: agentSelector },
-  })
+  const provider = new NodeHttpProvider(url)
 
   const originalRequest = provider.request.bind(provider)
   const maxAttempts = Number(process.env.WEB3_MAX_RETRIES ?? 3)
