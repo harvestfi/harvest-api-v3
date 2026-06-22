@@ -7,7 +7,6 @@ const { HttpProvider } = require('web3-providers-http')
 const { ResponseError } = require('web3-errors')
 const HttpAgent = require('agentkeepalive')
 const { HttpsAgent } = require('agentkeepalive')
-const { HttpsProxyAgent } = require('https-proxy-agent')
 const {
   INFURA_URL,
   MATIC_RPC_URL,
@@ -21,59 +20,30 @@ const {
 } = require('../constants')
 const { cache } = require('../cache')
 
-// web3 v4's stock HttpProvider sends JSON-RPC over `node-fetch@2` (via
-// cross-fetch). On Node 24 on Heroku that path fails every request with
-// `ERR_STREAM_PREMATURE_CLOSE`, while Node's built-in `https` module hits the
-// exact same Alchemy URLs from the same dyno with zero errors (verified). So we
-// keep web3 but swap its transport to the raw `https`/`http` modules.
+// web3 v4's stock HttpProvider sends JSON-RPC over node-fetch@2 (via cross-fetch),
+// which fails every request with ERR_STREAM_PREMATURE_CLOSE on our Node 24 Heroku
+// dynos, while Node's built-in https hits the same endpoints from the same dyno with
+// zero errors. So we keep web3 but run its transport over native http/https, pooled
+// with keep-alive (freeSocketTimeout evicts idle sockets before they go stale).
 const keepAliveOptions = {
   keepAlive: true,
-  maxSockets: Number(process.env.WEB3_MAX_SOCKETS ?? 25),
+  maxSockets: 50,
   maxFreeSockets: 10,
-  timeout: 60_000, // active socket inactivity timeout
-  freeSocketTimeout: 4_000, // close idle sockets after 4s to avoid stale reuse
+  timeout: 60_000,
+  freeSocketTimeout: 4_000,
 }
 const httpKeepAliveAgent = new HttpAgent(keepAliveOptions)
 const httpsKeepAliveAgent = new HttpsAgent(keepAliveOptions)
 
-// When a static-IP egress proxy is configured (e.g. QuotaGuard Static or Fixie
-// on Heroku), route all RPC traffic through it so we leave from a dedicated IP.
-const PROXY_URL =
-  process.env.WEB3_PROXY_URL ||
-  process.env.QUOTAGUARDSTATIC_URL ||
-  process.env.FIXIE_URL ||
-  null
-
-let proxyAgent = null
-if (PROXY_URL) {
-  proxyAgent = new HttpsProxyAgent(PROXY_URL, { keepAlive: true })
-  console.log('[web3] Routing RPC through static-IP egress proxy')
-}
-
-const selectAgent = urlObj => {
-  if (proxyAgent) {
-    return proxyAgent
-  }
-  return urlObj.protocol === 'http:' ? httpKeepAliveAgent : httpsKeepAliveAgent
-}
-
-const REQUEST_TIMEOUT = Number(process.env.WEB3_REQUEST_TIMEOUT ?? 30_000)
-
-// Drop-in replacement for web3's HttpProvider that performs the JSON-RPC POST
-// with Node's native http/https instead of node-fetch. Same request/response
-// contract (returns the parsed JSON-RPC body; throws ResponseError on non-2xx).
+// Drop-in replacement for web3's HttpProvider that POSTs the JSON-RPC body with
+// Node's native http/https instead of node-fetch. Same contract: resolves the
+// parsed JSON-RPC response, throws ResponseError on a non-2xx status.
 class NodeHttpProvider extends HttpProvider {
   request(payload, requestOptions) {
     return new Promise((resolve, reject) => {
       const urlObj = new URL(this.clientUrl)
       const lib = urlObj.protocol === 'http:' ? http : https
       const body = JSON.stringify(payload)
-      const headers = {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-        ...(requestOptions && requestOptions.headers),
-        'Content-Length': Buffer.byteLength(body),
-      }
       const req = lib.request(
         {
           protocol: urlObj.protocol,
@@ -81,9 +51,14 @@ class NodeHttpProvider extends HttpProvider {
           port: urlObj.port || (urlObj.protocol === 'http:' ? 80 : 443),
           path: urlObj.pathname + urlObj.search,
           method: 'POST',
-          headers,
-          agent: selectAgent(urlObj),
-          timeout: REQUEST_TIMEOUT,
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+            ...(requestOptions && requestOptions.headers),
+            'Content-Length': Buffer.byteLength(body),
+          },
+          agent: urlObj.protocol === 'http:' ? httpKeepAliveAgent : httpsKeepAliveAgent,
+          timeout: 30_000,
         },
         res => {
           let data = ''
@@ -106,67 +81,31 @@ class NodeHttpProvider extends HttpProvider {
           })
         },
       )
-      req.on('timeout', () => req.destroy(Object.assign(new Error('Request timeout'), { code: 'ETIMEDOUT' })))
+      req.on('timeout', () =>
+        req.destroy(Object.assign(new Error('Request timeout'), { code: 'ETIMEDOUT' })),
+      )
       req.on('error', reject)
       req.end(body)
     })
   }
 }
 
-// Transient socket-level failures that are safe to retry for idempotent reads.
-const RETRYABLE_CODES = new Set([
-  'ERR_STREAM_PREMATURE_CLOSE',
-  'ECONNRESET',
-  'ETIMEDOUT',
-  'EPIPE',
-  'UND_ERR_SOCKET',
-])
-
-const errorCode = err => err && (err.code || (err.cause && err.cause.code))
-
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-
-const createProvider = url => {
-  const provider = new NodeHttpProvider(url)
-
-  const originalRequest = provider.request.bind(provider)
-  const maxAttempts = Number(process.env.WEB3_MAX_RETRIES ?? 3)
-
-  provider.request = async (payload, requestOptions) => {
-    let lastError
-    for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
-      try {
-        return await originalRequest(payload, requestOptions)
-      } catch (err) {
-        lastError = err
-        if (!RETRYABLE_CODES.has(errorCode(err)) || attempt === maxAttempts) {
-          throw err
-        }
-        await sleep(150 * attempt)
-      }
-    }
-    throw lastError
-  }
-
-  return provider
-}
-
-const web3 = new Web3(createProvider(INFURA_URL))
+const web3 = new Web3(new NodeHttpProvider(INFURA_URL))
 web3._chainId = CHAIN_IDS.ETH
 
-const web3MATIC = new Web3(createProvider(MATIC_RPC_URL))
+const web3MATIC = new Web3(new NodeHttpProvider(MATIC_RPC_URL))
 web3MATIC._chainId = CHAIN_IDS.POLYGON
 
-const web3ARBITRUM = new Web3(createProvider(ARBITRUM_RPC_URL))
+const web3ARBITRUM = new Web3(new NodeHttpProvider(ARBITRUM_RPC_URL))
 web3ARBITRUM._chainId = CHAIN_IDS.ARBITRUM_ONE
 
-const web3BASE = new Web3(createProvider(BASE_RPC_URL))
+const web3BASE = new Web3(new NodeHttpProvider(BASE_RPC_URL))
 web3BASE._chainId = CHAIN_IDS.BASE
 
-const web3ZKSYNC = new Web3(createProvider(ZKSYNC_RPC_URL))
+const web3ZKSYNC = new Web3(new NodeHttpProvider(ZKSYNC_RPC_URL))
 web3ZKSYNC._chainId = CHAIN_IDS.ZKSYNC
 
-const web3HYPEREVM = new Web3(createProvider(HYPEREVM_RPC_URL))
+const web3HYPEREVM = new Web3(new NodeHttpProvider(HYPEREVM_RPC_URL))
 web3HYPEREVM._chainId = CHAIN_IDS.HYPEREVM
 
 const getWeb3 = chainId => {

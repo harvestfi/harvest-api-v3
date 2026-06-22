@@ -554,7 +554,7 @@ const getTotalGmv = async () => {
       console.log('Got GMV for: ', relevantPool.id, ':', relevantPool.totalValueLocked)
       totalGmv = totalGmv.plus(relevantPool.totalValueLocked)
     } catch (err) {
-      console.log(`Error getting GMV for: ${relevantPool && relevantPool.id}`, err)
+      console.log(`Error getting GMV for: ${relevantPool.id}`, err)
       hasErrors = true
     }
   })
