@@ -3,6 +3,7 @@ const { Web3 } = require('web3')
 const { HttpProvider } = require('web3-providers-http')
 const HttpAgent = require('agentkeepalive')
 const { HttpsAgent } = require('agentkeepalive')
+const { HttpsProxyAgent } = require('https-proxy-agent')
 const {
   INFURA_URL,
   MATIC_RPC_URL,
@@ -30,9 +31,30 @@ const keepAliveOptions = {
 }
 const httpKeepAliveAgent = new HttpAgent(keepAliveOptions)
 const httpsKeepAliveAgent = new HttpsAgent(keepAliveOptions)
+
+// When a static-IP egress proxy is configured (e.g. QuotaGuard Static or Fixie
+// on Heroku), route all RPC traffic through it so we leave from a dedicated IP
+// that isn't shared/flagged. This keeps us on Alchemy while fixing the
+// per-source-IP block that causes `ERR_STREAM_PREMATURE_CLOSE`.
+const PROXY_URL =
+  process.env.WEB3_PROXY_URL ||
+  process.env.QUOTAGUARDSTATIC_URL ||
+  process.env.FIXIE_URL ||
+  null
+
+let proxyAgent = null
+if (PROXY_URL) {
+  proxyAgent = new HttpsProxyAgent(PROXY_URL, { keepAlive: true })
+  console.log('[web3] Routing RPC through static-IP egress proxy')
+}
+
 // node-fetch accepts `agent` as a function (parsedURL) => Agent
-const agentSelector = parsedURL =>
-  parsedURL.protocol === 'http:' ? httpKeepAliveAgent : httpsKeepAliveAgent
+const agentSelector = parsedURL => {
+  if (proxyAgent) {
+    return proxyAgent
+  }
+  return parsedURL.protocol === 'http:' ? httpKeepAliveAgent : httpsKeepAliveAgent
+}
 
 // Transient socket-level failures that are safe to retry for idempotent reads.
 const RETRYABLE_CODES = new Set([
