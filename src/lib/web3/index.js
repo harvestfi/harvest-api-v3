@@ -1,5 +1,8 @@
 const { sumBy, orderBy, isArray } = require('lodash')
 const { Web3 } = require('web3')
+const { HttpProvider } = require('web3-providers-http')
+const HttpAgent = require('agentkeepalive')
+const { HttpsAgent } = require('agentkeepalive')
 const {
   INFURA_URL,
   MATIC_RPC_URL,
@@ -13,22 +16,80 @@ const {
 } = require('../constants')
 const { cache } = require('../cache')
 
-const web3 = new Web3(INFURA_URL)
+// web3 v4's HttpProvider uses node-fetch, which by default opens a brand-new
+// TCP+TLS connection for every JSON-RPC call. On a shared-egress host (Heroku)
+// that connection churn trips NAT/conntrack limits and the provider's per-IP
+// new-connection throttling, surfacing as `ERR_STREAM_PREMATURE_CLOSE`. Reuse a
+// bounded pool of keep-alive sockets and evict idle ones before they go stale.
+const keepAliveOptions = {
+  keepAlive: true,
+  maxSockets: Number(process.env.WEB3_MAX_SOCKETS ?? 25),
+  maxFreeSockets: 10,
+  timeout: 60_000, // active socket inactivity timeout
+  freeSocketTimeout: 4_000, // close idle sockets after 4s to avoid stale reuse
+}
+const httpKeepAliveAgent = new HttpAgent(keepAliveOptions)
+const httpsKeepAliveAgent = new HttpsAgent(keepAliveOptions)
+// node-fetch accepts `agent` as a function (parsedURL) => Agent
+const agentSelector = parsedURL =>
+  parsedURL.protocol === 'http:' ? httpKeepAliveAgent : httpsKeepAliveAgent
+
+// Transient socket-level failures that are safe to retry for idempotent reads.
+const RETRYABLE_CODES = new Set([
+  'ERR_STREAM_PREMATURE_CLOSE',
+  'ECONNRESET',
+  'ETIMEDOUT',
+  'EPIPE',
+  'UND_ERR_SOCKET',
+])
+
+const errorCode = err => err && (err.code || (err.cause && err.cause.code))
+
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+
+const createProvider = url => {
+  const provider = new HttpProvider(url, {
+    providerOptions: { agent: agentSelector },
+  })
+
+  const originalRequest = provider.request.bind(provider)
+  const maxAttempts = Number(process.env.WEB3_MAX_RETRIES ?? 3)
+
+  provider.request = async (payload, requestOptions) => {
+    let lastError
+    for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+      try {
+        return await originalRequest(payload, requestOptions)
+      } catch (err) {
+        lastError = err
+        if (!RETRYABLE_CODES.has(errorCode(err)) || attempt === maxAttempts) {
+          throw err
+        }
+        await sleep(150 * attempt)
+      }
+    }
+    throw lastError
+  }
+
+  return provider
+}
+
+const web3 = new Web3(createProvider(INFURA_URL))
 web3._chainId = CHAIN_IDS.ETH
 
-const web3MATIC = new Web3(MATIC_RPC_URL)
+const web3MATIC = new Web3(createProvider(MATIC_RPC_URL))
 web3MATIC._chainId = CHAIN_IDS.POLYGON
 
-const web3ARBITRUM = new Web3(ARBITRUM_RPC_URL)
+const web3ARBITRUM = new Web3(createProvider(ARBITRUM_RPC_URL))
 web3ARBITRUM._chainId = CHAIN_IDS.ARBITRUM_ONE
 
-const web3BASE = new Web3(BASE_RPC_URL)
+const web3BASE = new Web3(createProvider(BASE_RPC_URL))
 web3BASE._chainId = CHAIN_IDS.BASE
 
-const web3ZKSYNC = new Web3(ZKSYNC_RPC_URL)
+const web3ZKSYNC = new Web3(createProvider(ZKSYNC_RPC_URL))
 web3ZKSYNC._chainId = CHAIN_IDS.ZKSYNC
 
-const web3HYPEREVM = new Web3(HYPEREVM_RPC_URL)
+const web3HYPEREVM = new Web3(createProvider(HYPEREVM_RPC_URL))
 web3HYPEREVM._chainId = CHAIN_IDS.HYPEREVM
 
 const getWeb3 = chainId => {

@@ -545,11 +545,16 @@ const getTotalGmv = async () => {
   )
 
   await forEach(relevantPools, async relevantPool => {
+    // `promised-loops` forEach invokes the processor once even for an empty
+    // array, passing `undefined`. Guard against that.
+    if (!relevantPool) {
+      return
+    }
     try {
       console.log('Got GMV for: ', relevantPool.id, ':', relevantPool.totalValueLocked)
       totalGmv = totalGmv.plus(relevantPool.totalValueLocked)
     } catch (err) {
-      console.log(`Error getting GMV for: ${relevantPool.id}`, err)
+      console.log(`Error getting GMV for: ${relevantPool && relevantPool.id}`, err)
       hasErrors = true
     }
   })
