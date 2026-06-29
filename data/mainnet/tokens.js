@@ -604,6 +604,12 @@ module.exports = {
   },
   aaveLoop_ETH_cbETH: {
     inactive: true,
+    isLoopingVault: true,
+    loopConfig: {
+      supplyAsset: addresses.BASE.V2.aaveLoop_ETH_cbETH.SupplyAsset,
+      borrowAsset: addresses.BASE.V2.aaveLoop_ETH_cbETH.Underlying,
+      aavePool: addresses.BASE.V2.aaveLoop_ETH_cbETH.AavePool,
+    },
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
@@ -635,6 +641,12 @@ module.exports = {
   },
   aaveLoop_ETH_cbETH2: {
     inactive: true,
+    isLoopingVault: true,
+    loopConfig: {
+      supplyAsset: addresses.BASE.V2.aaveLoop_ETH_cbETH2.SupplyAsset,
+      borrowAsset: addresses.BASE.V2.aaveLoop_ETH_cbETH2.Underlying,
+      aavePool: addresses.BASE.V2.aaveLoop_ETH_cbETH2.AavePool,
+    },
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/well.svg'],
     apyTokenSymbols: ['WELL'],
