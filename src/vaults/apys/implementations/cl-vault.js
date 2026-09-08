@@ -41,6 +41,121 @@ const valueInUsd = async (web3, tokenAddress, amount, chain) => {
 //   apr               = vaultEmissionsUsd / vaultTvl
 //
 // `reduction` applies the vault's profit-sharing keep ratio (e.g. '0.9' for a 10% cut).
+// Swap-fee APR earned by the UNSTAKED buffer position of a V2 twin-position vault.
+//
+// In Slipstream the two halves earn different things: STAKED liquidity earns AERO emissions and its
+// swap fees go to voters via the gauge, while UNSTAKED liquidity earns swap fees and no emissions.
+// Verified on-chain: every staked position reads tokensOwed0/1 == 0 while every buffer has real
+// accrued fees. So the buffer's fee income is a genuine, and material, part of the yield that the
+// emissions-only calculation misses entirely.
+//
+// feeGrowthGlobal is cumulative fees per unit of in-range liquidity, so sampling it across a window
+// and scaling by the buffer's liquidity gives that buffer's fee income directly.
+//
+// Returns 0 rather than throwing on ANY failure — a V1 vault (no bufferPosId), a non-archive RPC, or
+// a reorg must degrade to emissions-only, never zero out the whole APY.
+// Fee growth over the window is a property of the POOL, not of any one vault, and the archive
+// calls behind it are by far the most expensive thing here. Compute once per pool per TTL: without
+// this, three vaults sharing a pool each repeated the same four archive reads, which slowed the poll
+// cycle enough that downstream endpoints were still empty when they were queried.
+const getPoolFeeGrowthDelta = async (poolAddress, poolInstance, web3) => {
+  const key = `clFeeGrowth-${poolAddress.toLowerCase()}`
+  const cached = cache.get(key)
+  if (cached) return cached
+  // web3 v4 returns BigInt here; mixing it with a Number throws, so normalise first.
+  const latest = Number(await web3.eth.getBlockNumber())
+  const past = latest - FEE_WINDOW_BLOCKS
+  if (past <= 0) return null
+  const [nowBlock, pastBlock] = await Promise.all([
+    web3.eth.getBlock(latest),
+    web3.eth.getBlock(past),
+  ])
+  const elapsed = Number(nowBlock.timestamp) - Number(pastBlock.timestamp)
+  if (!elapsed || elapsed <= 0) return null
+  const [f0Now, f1Now, f0Past, f1Past] = await Promise.all([
+    aeroClPool.methods.getFeeGrowthGlobal0(poolInstance, latest),
+    aeroClPool.methods.getFeeGrowthGlobal1(poolInstance, latest),
+    aeroClPool.methods.getFeeGrowthGlobal0(poolInstance, past),
+    aeroClPool.methods.getFeeGrowthGlobal1(poolInstance, past),
+  ])
+  const d0 = new BigNumber(f0Now).minus(f0Past)
+  const d1 = new BigNumber(f1Now).minus(f1Past)
+  if (d0.isNegative() || d1.isNegative()) return null
+  const result = { d0: d0.toFixed(), d1: d1.toFixed(), elapsed }
+  cache.set(key, result, FEE_CACHE_TTL_SECONDS)
+  return result
+}
+
+// Whether a vault is a V2 twin-position vault never changes, so the probing call is cached
+// permanently per vault rather than paid on every poll.
+const getBufferPosIdCached = async (vaultInstance, vaultAddress) => {
+  const key = `clBufferPosId-${vaultAddress.toLowerCase()}`
+  const cached = cache.get(key)
+  if (cached !== undefined) return cached
+  let value = null
+  try {
+    value = await clVault.methods.getBufferPosId(vaultInstance)
+  } catch (e) {
+    value = null // V1 single-position vault: no buffer, no swap fees to credit
+  }
+  cache.set(key, value, 0)
+  return value
+}
+
+const getBufferFeeApr = async ({
+  web3,
+  poolAddress,
+  poolInstance,
+  vaultInstance,
+  vaultAddress,
+  vaultTvlUsd,
+  chain,
+}) => {
+  try {
+    const bufferPosId = await getBufferPosIdCached(vaultInstance, vaultAddress)
+    if (!bufferPosId || bufferPosId === '0') return new BigNumber(0)
+
+    const posManagerAddress = await clVault.methods.getPosManager(vaultInstance)
+    const nftManagerInstance = getCachedContract({
+      web3,
+      abi: aeroNftManager.contract.abi,
+      address: posManagerAddress,
+    })
+    const buffer = await aeroNftManager.methods.getPositions(bufferPosId, nftManagerInstance)
+    const bufferLiquidity = new BigNumber(buffer.liquidity)
+    if (bufferLiquidity.isZero()) return new BigNumber(0)
+
+    // Out of range the buffer earns nothing going forward, so reporting a fee APR would be wrong.
+    const slot0 = await aeroClPool.methods.getSlot0(poolInstance)
+    const tick = Number(slot0.tick)
+    if (tick < Number(buffer.tickLower) || tick >= Number(buffer.tickUpper)) {
+      return new BigNumber(0)
+    }
+
+    const window = await getPoolFeeGrowthDelta(poolAddress, poolInstance, web3)
+    if (!window) return new BigNumber(0)
+    const d0 = new BigNumber(window.d0)
+    const d1 = new BigNumber(window.d1)
+    const elapsed = window.elapsed
+
+    const token0 = await clVault.methods.getToken0(vaultInstance)
+    const token1 = await clVault.methods.getToken1(vaultInstance)
+    const fees0 = d0.times(bufferLiquidity).div(Q128).integerValue(BigNumber.ROUND_FLOOR)
+    const fees1 = d1.times(bufferLiquidity).div(Q128).integerValue(BigNumber.ROUND_FLOOR)
+    const feesUsd = (await valueInUsd(web3, token0, fees0.toFixed(), chain)).plus(
+      await valueInUsd(web3, token1, fees1.toFixed(), chain),
+    )
+    if (feesUsd.isZero()) return new BigNumber(0)
+
+    const apr = feesUsd.div(elapsed).times(SECONDS_PER_YEAR).div(vaultTvlUsd).times(100)
+    if (!apr.isFinite() || apr.isLessThan(0)) return new BigNumber(0)
+    return apr
+  } catch (error) {
+    logger.info(`cl-vault getBufferFeeApr skipped: ${error.message}`)
+    return new BigNumber(0)
+  }
+}
+
 const getApy = async (poolAddress, vaultAddress, reduction = '1', chain = CHAIN_IDS.BASE) => {
   try {
     const web3 = web3BASE
