@@ -74,7 +74,10 @@ const getPoolFeeGrowthDelta = async (poolAddress, poolInstance, web3) => {
   const latest = Number(await web3.eth.getBlockNumber())
   const past = latest - FEE_WINDOW_BLOCKS
   if (past <= 0) return null
-  const [nowBlock, pastBlock] = await Promise.all([web3.eth.getBlock(latest), web3.eth.getBlock(past)])
+  const [nowBlock, pastBlock] = await Promise.all([
+    web3.eth.getBlock(latest),
+    web3.eth.getBlock(past),
+  ])
   const elapsed = Number(nowBlock.timestamp) - Number(pastBlock.timestamp)
   if (!elapsed || elapsed <= 0) return null
   const [f0Now, f1Now, f0Past, f1Past] = await Promise.all([
@@ -107,7 +110,15 @@ const getBufferPosIdCached = async (vaultInstance, vaultAddress) => {
   return value
 }
 
-const getBufferFeeApr = async ({ web3, poolAddress, poolInstance, vaultInstance, vaultAddress, vaultTvlUsd, chain }) => {
+const getBufferFeeApr = async ({
+  web3,
+  poolAddress,
+  poolInstance,
+  vaultInstance,
+  vaultAddress,
+  vaultTvlUsd,
+  chain,
+}) => {
   try {
     const bufferPosId = await getBufferPosIdCached(vaultInstance, vaultAddress)
     if (!bufferPosId || bufferPosId === '0') return new BigNumber(0)

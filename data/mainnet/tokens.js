@@ -40,6 +40,33 @@ module.exports = {
       },
     ],
   },
+  morpho_BW_AUSD: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/morpho.svg'],
+    apyTokenSymbols: ['MORPHO'],
+    logoUrl: ['./icons/ausd.svg'],
+    tokenNames: ['AUSD'],
+    platform: ['Morpho - Bitwise Premium RWA V2'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.V2.morpho_BW_AUSD.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.V2.morpho_BW_AUSD.NewVault,
+    strategyAddress: addresses.V2.morpho_BW_AUSD.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['agora-dollar'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.V2.morpho_BW_AUSD.MorphoVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+      },
+    ],
+  },
   iporFusion_AAPLc: {
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aaplc.svg'],
@@ -171,7 +198,7 @@ module.exports = {
           addresses.BASE.V2.euler_CSF_ETH.EulerVault,
           profitSharingCut10Percent,
           CHAIN_IDS.BASE,
-          addresses.BASE.V2.euler_CSF_ETH.NewStrategy
+          addresses.BASE.V2.euler_CSF_ETH.NewStrategy,
         ],
       },
     ],
