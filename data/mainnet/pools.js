@@ -12250,7 +12250,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Alpha Core Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Pendle Ecosystem Vault, earning 
        <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.

@@ -16662,7 +16662,7 @@ module.exports = {
     apyTokenSymbols: ['MORPHO'],
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC'],
-    platform: ['Morpho - Alpha Core V2'],
+    platform: ['Morpho - Pendle Ecosystem V2'],
     tags: ['Beginner', 'Stable'],
     tokenAddress: addresses.USDC,
     decimals: '6',
