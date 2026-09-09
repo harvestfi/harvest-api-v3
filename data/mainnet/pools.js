@@ -127,6 +127,106 @@ module.exports = [
   },
   {
     chain: CHAIN_IDS.BASE,
+    id: 'iporFusion_AAPLc',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.iporFusion_AAPLc.NewPool,
+    collateralAddress: addresses.BASE.V2.iporFusion_AAPLc.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${
+         addresses.BASE.V2.iporFusion_AAPLc.Underlying
+       }" target="_blank" rel="noopener noreferrer"> AAPLc </a>to the
+       <a href="https://app.ipor.io/fusion/base/${addresses.BASE.V2.iporFusion_AAPLc.IporVault.toLowerCase()}" target="_blank" rel="noopener noreferrer"> IPOR Fusion Apple Carry Trade </a>plasma vault, earning interest and USDC-denominated token incentives.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${
+         addresses.BASE.V2.iporFusion_AAPLc.Underlying
+       }" target="_blank" rel="noopener noreferrer"> AAPLc</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'iporFusion_GOOGLc',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.iporFusion_GOOGLc.NewPool,
+    collateralAddress: addresses.BASE.V2.iporFusion_GOOGLc.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${
+         addresses.BASE.V2.iporFusion_GOOGLc.Underlying
+       }" target="_blank" rel="noopener noreferrer"> GOOGLc </a>to the
+       <a href="https://app.ipor.io/fusion/base/${addresses.BASE.V2.iporFusion_GOOGLc.IporVault.toLowerCase()}" target="_blank" rel="noopener noreferrer"> IPOR Fusion Google Carry Trade </a>plasma vault, earning interest and USDC-denominated token incentives.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${
+         addresses.BASE.V2.iporFusion_GOOGLc.Underlying
+       }" target="_blank" rel="noopener noreferrer"> GOOGLc</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'iporFusion_METAc',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.iporFusion_METAc.NewPool,
+    collateralAddress: addresses.BASE.V2.iporFusion_METAc.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${
+         addresses.BASE.V2.iporFusion_METAc.Underlying
+       }" target="_blank" rel="noopener noreferrer"> METAc </a>to the
+       <a href="https://app.ipor.io/fusion/base/${addresses.BASE.V2.iporFusion_METAc.IporVault.toLowerCase()}" target="_blank" rel="noopener noreferrer"> IPOR Fusion Meta Carry Trade </a>plasma vault, earning interest and USDC-denominated token incentives.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${
+         addresses.BASE.V2.iporFusion_METAc.Underlying
+       }" target="_blank" rel="noopener noreferrer"> METAc</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
+    id: 'iporFusion_NVDAc',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.BASE.V2.iporFusion_NVDAc.NewPool,
+    collateralAddress: addresses.BASE.V2.iporFusion_NVDAc.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.BASE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://basescan.org/token/${
+         addresses.BASE.V2.iporFusion_NVDAc.Underlying
+       }" target="_blank" rel="noopener noreferrer"> NVDAc </a>to the
+       <a href="https://app.ipor.io/fusion/base/${addresses.BASE.V2.iporFusion_NVDAc.IporVault.toLowerCase()}" target="_blank" rel="noopener noreferrer"> IPOR Fusion Nvidia Carry Trade </a>plasma vault, earning interest and USDC-denominated token incentives.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://basescan.org/token/${
+         addresses.BASE.V2.iporFusion_NVDAc.Underlying
+       }" target="_blank" rel="noopener noreferrer"> NVDAc</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.BASE,
     id: 'euler_CSF_ETH',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.BASE.V2.euler_CSF_ETH.NewPool,
@@ -12541,7 +12641,7 @@ module.exports = [
     stakeAndDepositHelpMessage: `
     <div class="help-message">
       <p> The vault supplies
-       <a href="https://etherscan.io/token/${addresses.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Alpha Core Vault, earning 
+       <a href="https://etherscan.io/token/${addresses.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC </a>to the Morpho Pendle Ecosystem Vault, earning 
        <a href="https://etherscan.io/token/${addresses.MORPHO}" target="_blank" rel="noopener noreferrer">MORPHO</a>.
        At every harvest, the earned rewards are converted into more
        <a href="https://etherscan.io/token/${addresses.V2.USDC.Underlying}" target="_blank" rel="noopener noreferrer"> USDC</a>.

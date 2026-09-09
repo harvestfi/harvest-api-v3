@@ -90,15 +90,14 @@ const getApy = async (supplyAsset, borrowAsset, poolAddr, strategyAddr, reductio
     .div(1e27)
     .times(100)
     .plus(supplyStakeAPY)
+    .plus(merklApy)
     .times(suppliedMul)
   const borrowAPR = new BigNumber(borrowAssetData.currentVariableBorrowRate)
     .div(1e27)
     .times(100)
     .times(borrowedMul)
 
-  console.log(`supplyAPR: ${supplyAPR.toFixed()}, borrowAPR: ${borrowAPR.toFixed()}`)
-
-  return supplyAPR.minus(borrowAPR).plus(merklApy).times(reduction).toFixed()
+  return supplyAPR.minus(borrowAPR).times(reduction).toFixed()
 }
 
 module.exports = {
