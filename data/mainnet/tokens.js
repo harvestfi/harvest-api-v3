@@ -61,7 +61,7 @@ module.exports = {
         type: ESTIMATED_APY_TYPES.IPOR_LENDING,
         params: [
           addresses.V2.ipor_BTCD_USDC.IporVault,
-          profitSharingCut10Percent,
+          profitSharingCut15Percent,
           CHAIN_IDS.ETH_MAINNET,
         ],
       },
@@ -88,7 +88,7 @@ module.exports = {
         type: ESTIMATED_APY_TYPES.IPOR_LENDING,
         params: [
           addresses.V2.ipor_BTCD_WBTC.IporVault,
-          profitSharingCut10Percent,
+          profitSharingCut15Percent,
           CHAIN_IDS.ETH_MAINNET,
         ],
       },
