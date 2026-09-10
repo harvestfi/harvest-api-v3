@@ -40,6 +40,60 @@ module.exports = {
       },
     ],
   },
+  ipor_BTCD_USDC: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/usdc.svg'],
+    apyTokenSymbols: ['USDC'],
+    logoUrl: ['./icons/usdc.svg'],
+    tokenNames: ['USDC'],
+    platform: ['IPOR - Bitcoin Dollar USDC'],
+    tags: ['Beginners', 'Stable'],
+    tokenAddress: addresses.V2.ipor_BTCD_USDC.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.V2.ipor_BTCD_USDC.NewVault,
+    strategyAddress: addresses.V2.ipor_BTCD_USDC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.IPOR_LENDING,
+        params: [
+          addresses.V2.ipor_BTCD_USDC.IporVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+      },
+    ],
+  },
+  ipor_BTCD_WBTC: {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    apyIconUrls: ['./icons/wbtc.svg'],
+    apyTokenSymbols: ['WBTC'],
+    logoUrl: ['./icons/wbtc.svg'],
+    tokenNames: ['WBTC'],
+    platform: ['IPOR - wBTC Dollar Carry'],
+    tags: ['Beginners', 'BTC'],
+    tokenAddress: addresses.V2.ipor_BTCD_WBTC.Underlying,
+    decimals: '8',
+    vaultAddress: addresses.V2.ipor_BTCD_WBTC.NewVault,
+    strategyAddress: addresses.V2.ipor_BTCD_WBTC.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['wrapped-bitcoin'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.IPOR_LENDING,
+        params: [
+          addresses.V2.ipor_BTCD_WBTC.IporVault,
+          profitSharingCut15Percent,
+          CHAIN_IDS.ETH_MAINNET,
+        ],
+      },
+    ],
+  },
   morpho_BW_AUSD: {
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/morpho.svg'],
