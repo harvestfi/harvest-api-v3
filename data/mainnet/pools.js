@@ -6,6 +6,58 @@ const strat15PercentFactor = '0.85'
 module.exports = [
   {
     chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'ipor_BTCD_USDC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.ipor_BTCD_USDC.NewPool,
+    collateralAddress: addresses.V2.ipor_BTCD_USDC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.ipor.io/fusion/ethereum/${addresses.V2.ipor_BTCD_USDC.IporVault.toLowerCase()}`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${
+         addresses.V2.ipor_BTCD_USDC.Underlying
+       }" target="_blank" rel="noopener noreferrer"> USDC </a>to the
+       <a href="https://app.ipor.io/fusion/ethereum/${addresses.V2.ipor_BTCD_USDC.IporVault.toLowerCase()}" target="_blank" rel="noopener noreferrer"> IPOR Fusion Bitcoin Dollar USDC </a>plasma vault, earning interest and USDC-denominated token incentives.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${
+         addresses.V2.ipor_BTCD_USDC.Underlying
+       }" target="_blank" rel="noopener noreferrer"> USDC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
+    id: 'ipor_BTCD_WBTC',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.V2.ipor_BTCD_WBTC.NewPool,
+    collateralAddress: addresses.V2.ipor_BTCD_WBTC.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    liquidityUrl: `https://app.ipor.io/fusion/ethereum/${addresses.V2.ipor_BTCD_WBTC.IporVault.toLowerCase()}`,
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://etherscan.io/token/${
+         addresses.V2.ipor_BTCD_WBTC.Underlying
+       }" target="_blank" rel="noopener noreferrer"> WBTC </a>to the
+       <a href="https://app.ipor.io/fusion/ethereum/${addresses.V2.ipor_BTCD_WBTC.IporVault.toLowerCase()}" target="_blank" rel="noopener noreferrer"> IPOR Fusion wBTC Dollar Carry </a>plasma vault, earning interest and WBTC-denominated token incentives.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://etherscan.io/token/${
+         addresses.V2.ipor_BTCD_WBTC.Underlying
+       }" target="_blank" rel="noopener noreferrer"> WBTC</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ETH_MAINNET,
     id: 'morpho_BW_AUSD',
     type: POOL_TYPES.INCENTIVE,
     contractAddress: addresses.V2.morpho_BW_AUSD.NewPool,

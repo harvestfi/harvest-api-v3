@@ -1058,6 +1058,20 @@
       "NewStrategy": "0xc5eDa1a2A76e275aC7701Ef375DEA576e5d2414D",
       "NewPool": "0x4962C129cA0A6aDc95a4388b2779A1806A9C7f9b",
       "MorphoVault": "0xB344e331A3cDa61D329fb3Cca2Be5942da87c418"
+    },
+    "ipor_BTCD_USDC": {
+      "Underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "NewVault": "0xBcE1B3aC78b895c69f91E446c8f654BC1C40A3b8",
+      "NewStrategy": "0x2Ade0B981f012231F39E62Dd0E05a03b8B9DbefD",
+      "NewPool": "0x0566411417927CcDc93a0500851af74B13D03D16",
+      "IporVault": "0xF8F226dA66244F89e70C5B5D1a5C5b0d505Eb1d8"
+    },
+    "ipor_BTCD_WBTC": {
+      "Underlying": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "NewVault": "0x0d39D6ef06a3a5c2408db195D9Af2eA7a8D52B92",
+      "NewStrategy": "0x4062d9Bc1ECd1F92188F0434f0766c1C83d48e7A",
+      "NewPool": "0xbFf268994a503D914CeccC0562C523E8cB9c14D3",
+      "IporVault": "0x7659fc26bf3A63E8133BbECB7E16ACD48EE8E292"
     }
   },
   "MATIC": {
