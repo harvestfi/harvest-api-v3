@@ -42,8 +42,8 @@ const {
 } = require('../lib/third-party/harvest-subgraph')
 const { getLastUserTransactionTimestamp, saveUserTransactions } = require('../lib/db/supabase')
 // const { superformRewardData } = require('../lib/third-party/superform')
-const { getGmxData } = require('../lib/third-party/gmx')
-const { getCLData } = require('../lib/third-party/cl-test')
+// const { getGmxData } = require('../lib/third-party/gmx')
+// const { getCLData } = require('../lib/third-party/cl-test')
 const { checkFoldingLeverage } = require('../script/fold-check')
 const logger = require('../lib/logger')
 const { logContractCache } = require('../lib/web3/contractCache')
@@ -1565,17 +1565,17 @@ const runUpdateLoop = async () => {
       resetCallCount()
     }
 
-    await getGmxData()
-    if (DEBUG_MODE) {
-      updateCallCountCache('gmx')
-      resetCallCount()
-    }
+    // await getGmxData()
+    // if (DEBUG_MODE) {
+    //   updateCallCountCache('gmx')
+    //   resetCallCount()
+    // }
 
-    await getCLData()
-    if (DEBUG_MODE) {
-      updateCallCountCache('clTest')
-      resetCallCount()
-    }
+    // await getCLData()
+    // if (DEBUG_MODE) {
+    //   updateCallCountCache('clTest')
+    //   resetCallCount()
+    // }
   }
 
   if (DEBUG_MODE) {
