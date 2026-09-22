@@ -64,6 +64,7 @@ const getApy = async (plasmaVault, factor = 1, chain) => {
     })
 
     const rcmAddress = await getRewardsClaimManagerAddress(vaultInstance)
+    console.log(rcmAddress, 'RCM Address for plasmaVault:', plasmaVault)
     if (!rcmAddress || rcmAddress.toLowerCase() === ZERO_ADDRESS) {
       incentivesApy = new BigNumber(0)
     } else {
@@ -80,9 +81,17 @@ const getApy = async (plasmaVault, factor = 1, chain) => {
 
       const totalAssetsBn = new BigNumber(totalAssets)
       const vestingTime = new BigNumber(vestingData.vestingTime || vestingData[0] || 0)
+      const updateBalanceTimestamp = new BigNumber(
+        vestingData.updateBalanceTimestamp || vestingData[1] || 0,
+      )
       const lastUpdateBalance = new BigNumber(vestingData.lastUpdateBalance || vestingData[3] || 0)
 
-      if (totalAssetsBn.lte(0) || vestingTime.lte(0) || lastUpdateBalance.lte(0)) {
+      if (
+        totalAssetsBn.lte(0) ||
+        vestingTime.lte(0) ||
+        lastUpdateBalance.lte(0) ||
+        updateBalanceTimestamp.plus(vestingTime).lte(Date.now() / 1000)
+      ) {
         incentivesApy = new BigNumber(0)
       } else {
         // (lastUpdateBalance / totalAssets) * (SECONDS_PER_YEAR / vestingTime) * 100
