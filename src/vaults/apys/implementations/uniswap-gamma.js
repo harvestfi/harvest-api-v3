@@ -1,8 +1,7 @@
-const { client } = require('../../../lib/http')
 const { get } = require('lodash')
 const BigNumber = require('bignumber.js')
 const { getWeb3 } = require('../../../lib/web3')
-const { GAMMA_ENDPOINT } = require('../../../lib/constants')
+const { getGammaData, HYPERVISOR_PATHS } = require('../../../lib/third-party/gamma')
 
 const { getTokenPrice } = require('../../../prices')
 
@@ -10,14 +9,11 @@ const { gammaStakingRewards: RewardsContractInfo } = require('../../../lib/web3/
 const { getCachedContract } = require('../../../lib/web3/contractCache')
 
 const getApy = async (underlying, stakingRewards, chain, factor) => {
-  let tvlUSD = 0
-  try {
-    let response = await client.get(`${GAMMA_ENDPOINT}polygon/hypervisors/allData`)
-    tvlUSD = get(response, `data.${underlying.toLowerCase()}.tvlUSD`, 0)
-    tvlUSD = parseFloat(tvlUSD)
-  } catch (err) {
-    console.error('Gamma API error: ', err)
-    tvlUSD = 0
+  const gammaData = await getGammaData(HYPERVISOR_PATHS.UNISWAP)
+  const tvlUSD = parseFloat(get(gammaData, `${underlying.toLowerCase()}.tvlUSD`, 0))
+
+  if (!Number.isFinite(tvlUSD) || tvlUSD <= 0) {
+    return '0'
   }
 
   const web3Instance = getWeb3(chain)

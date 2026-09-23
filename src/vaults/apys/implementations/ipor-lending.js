@@ -6,9 +6,7 @@ const {
 } = require('../../../lib/web3/contracts')
 const { getCachedContract } = require('../../../lib/web3/contractCache')
 const logger = require('../../../lib/logger')
-const { IPOR_API_URL } = require('../../../lib/constants')
-const { client } = require('../../../lib/http')
-const { get } = require('lodash')
+const { getFusionVault } = require('../../../lib/third-party/ipor-fusion')
 const { getApy: getMerklApy } = require('./merkl')
 
 const SECONDS_PER_YEAR = new BigNumber(365.2425).times(86400)
@@ -20,26 +18,14 @@ const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 const getApy = async (plasmaVault, factor = 1, chain) => {
   let baseApy, incentivesApy, merklApy
   try {
-    const chainId = parseInt(chain, 10)
-    const url = `${IPOR_API_URL}/fusion/vaults-history/${chainId}/${plasmaVault.toLowerCase()}`
+    const fusionVault = await getFusionVault(plasmaVault, chain)
+    const interestApy = fusionVault && fusionVault.apy
 
-    const response = await client.get(url)
-    const history = get(response, 'data.history', [])
-
-    if (!Array.isArray(history) || history.length === 0) {
+    if (interestApy === null || interestApy === undefined || interestApy === '') {
       return new BigNumber(0).toFixed(2)
     }
 
-    let interestApy = null
-    for (let i = history.length - 1; i >= 0; i--) {
-      const candidate = history[i] && history[i].apy
-      if (candidate !== null && candidate !== undefined && candidate !== '') {
-        interestApy = candidate
-        break
-      }
-    }
-
-    baseApy = interestApy ? new BigNumber(interestApy).times(factor) : new BigNumber(0)
+    baseApy = new BigNumber(interestApy).times(factor)
   } catch (err) {
     logger.error('IPOR interest APY error:', err)
     baseApy = new BigNumber(0)
@@ -64,7 +50,6 @@ const getApy = async (plasmaVault, factor = 1, chain) => {
     })
 
     const rcmAddress = await getRewardsClaimManagerAddress(vaultInstance)
-    console.log(rcmAddress, 'RCM Address for plasmaVault:', plasmaVault)
     if (!rcmAddress || rcmAddress.toLowerCase() === ZERO_ADDRESS) {
       incentivesApy = new BigNumber(0)
     } else {

@@ -77,8 +77,16 @@ const getVaults = async () => {
     fetchedBASEVaults = [],
     fetchedZKSYNCVaults = [],
     fetchedHYPEREVMVaults = [],
-    fetchedVaults,
-    hasErrors = false
+    fetchedVaults
+
+  const chainErrors = {
+    eth: false,
+    matic: false,
+    arbitrum: false,
+    base: false,
+    zksync: false,
+    hyperevm: false,
+  }
 
   const tokensWithVault = pickBy(tokens, token => token.vaultAddress)
 
@@ -124,7 +132,7 @@ const getVaults = async () => {
       )
       fetchedHYPEREVMVaults.push(...vaultsData)
     } catch (err) {
-      hasErrors = true
+      chainErrors.hyperevm = true
       logger.error(`Failed to get vault data for: ${batch}`, err)
     }
   }
@@ -140,7 +148,7 @@ const getVaults = async () => {
       )
       fetchedZKSYNCVaults.push(...vaultsData)
     } catch (err) {
-      hasErrors = true
+      chainErrors.zksync = true
       logger.error(`Failed to get vault data for: ${batch}`, err)
     }
   }
@@ -156,7 +164,7 @@ const getVaults = async () => {
       )
       fetchedMATICVaults.push(...vaultsData)
     } catch (err) {
-      hasErrors = true
+      chainErrors.matic = true
       logger.error(`Failed to get vault data for: ${batch}`, err)
     }
   }
@@ -192,7 +200,7 @@ const getVaults = async () => {
         fetchedARBITRUMVaults.push(...iporVaultsData.filter(Boolean))
       }
     } catch (err) {
-      hasErrors = true
+      chainErrors.arbitrum = true
       logger.error(`Failed to get vault data for: ${batch}`, err)
     }
   }
@@ -228,7 +236,7 @@ const getVaults = async () => {
         fetchedETHVaults.push(...iporVaultsData.filter(Boolean))
       }
     } catch (err) {
-      hasErrors = true
+      chainErrors.eth = true
       logger.error(`Failed to get vault data for: ${batch}`, err)
     }
   }
@@ -264,7 +272,7 @@ const getVaults = async () => {
         fetchedBASEVaults.push(...iporVaultsData.filter(Boolean))
       }
     } catch (err) {
-      hasErrors = true
+      chainErrors.base = true
       logger.error(`Failed to get vault data for: ${batch}`, err)
     }
   }
@@ -299,13 +307,35 @@ const getVaults = async () => {
 
   console.log('\n-- Done getting vaults data --')
 
+  const failedChains = Object.keys(chainErrors).filter(chain => chainErrors[chain])
+
+  if (failedChains.length) {
+    const storedVaults = get(await Cache.collection.findOne({ type: DB_CACHE_IDS.VAULTS }), 'data')
+
+    failedChains.forEach(chain => {
+      const previous = get(storedVaults, chain)
+
+      if (previous && Object.keys(previous).length) {
+        logger.error(
+          `Vault data for ${chain} was incomplete; keeping the previously stored data for it.`,
+        )
+        fetchedVaults[chain] = previous
+      } else {
+        logger.error(
+          `Vault data for ${chain} was incomplete and nothing is stored for it yet; ` +
+            `publishing the ${Object.keys(fetchedVaults[chain]).length} vaults that were fetched.`,
+        )
+      }
+    })
+  }
+
   await storeData(
     Cache,
     DB_CACHE_IDS.VAULTS,
     {
       ...fetchedVaults,
     },
-    hasErrors,
+    false,
   )
 }
 
@@ -938,6 +968,14 @@ const getLeaderboardData = async () => {
   try {
     const vaults = await loadData(Cache, DB_CACHE_IDS.VAULTS)
     const pools = await loadData(Cache, DB_CACHE_IDS.POOLS)
+
+    if (!vaults || !pools) {
+      logger.error(
+        `Skipping the leaderboard: ${!vaults ? 'vault' : 'pool'} data is not in the database yet.`,
+      )
+      console.log('-- Done getting Leaderboard data --')
+      return
+    }
 
     let userBalances = {}
     for (let chain of Object.keys(HARVEST_SUBGRAPH_URLS)) {

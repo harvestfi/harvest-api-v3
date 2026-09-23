@@ -1,32 +1,14 @@
 const BigNumber = require('bignumber.js')
-const { get } = require('lodash')
-const { IPOR_API_URL } = require('../../../lib/constants')
-const { client } = require('../../../lib/http')
+const { getFusionVault } = require('../../../lib/third-party/ipor-fusion')
 const logger = require('../../../lib/logger')
 
 // Returns the lending Interest APY (in %) reported by IPOR for a Plasma Vault.
 const getTradingApy = async (plasmaVault, chain) => {
   try {
-    const chainId = parseInt(chain, 10)
-    const url = `${IPOR_API_URL}/fusion/vaults-history/${chainId}/${plasmaVault.toLowerCase()}`
+    const fusionVault = await getFusionVault(plasmaVault, chain)
+    const interestApy = fusionVault && fusionVault.apy
 
-    const response = await client.get(url)
-    const history = get(response, 'data.history', [])
-
-    if (!Array.isArray(history) || history.length === 0) {
-      return new BigNumber(0).toFixed(2)
-    }
-
-    let interestApy = null
-    for (let i = history.length - 1; i >= 0; i--) {
-      const candidate = history[i] && history[i].apy
-      if (candidate !== null && candidate !== undefined && candidate !== '') {
-        interestApy = candidate
-        break
-      }
-    }
-
-    if (interestApy === null) {
+    if (interestApy === null || interestApy === undefined || interestApy === '') {
       return new BigNumber(0).toFixed(2)
     }
 
