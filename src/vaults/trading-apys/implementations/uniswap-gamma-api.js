@@ -1,20 +1,11 @@
-const { client } = require('../../../lib/http')
 const { get } = require('lodash')
-const { GAMMA_ENDPOINT } = require('../../../lib/constants')
+const { getGammaData, HYPERVISOR_PATHS } = require('../../../lib/third-party/gamma')
 
 const getTradingApy = async poolAddress => {
-  let response, apy
+  const data = await getGammaData(HYPERVISOR_PATHS.UNISWAP)
+  const apy = parseFloat(get(data, `${poolAddress.toLowerCase()}.returns.daily.feeApr`, 0)) * 100
 
-  try {
-    response = await client.get(`${GAMMA_ENDPOINT}polygon/hypervisors/allData`)
-    apy = get(response, `data.${poolAddress.toLowerCase()}.returns.daily.feeApr`, 0)
-    apy = parseFloat(apy) * 100
-  } catch (err) {
-    console.error('Gamma API error: ', err)
-    apy = 0
-  }
-
-  return apy.toFixed(2)
+  return Number.isFinite(apy) ? apy.toFixed(2) : '0.00'
 }
 
 module.exports = {

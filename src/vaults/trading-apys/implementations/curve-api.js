@@ -1,35 +1,19 @@
-const { client } = require('../../../lib/http')
-const { get } = require('lodash')
-const { CURVE_API_URLS } = require('../../../lib/constants')
+const { getCurvePools } = require('../../../lib/third-party/curve')
 
 const getTradingApy = async (poolAddress, chainId) => {
-  let response, poolDetails, poolDetail, apy
+  const pools = await getCurvePools(chainId)
 
-  const url = CURVE_API_URLS[chainId]
+  const poolDetail = pools
+    ? pools.find(obj => obj.address && obj.address.toLowerCase() === poolAddress.toLowerCase())
+    : null
 
-  try {
-    response = await client.get(`${url}`)
-    poolDetails = get(response, 'data.data.pools', 0)
-  } catch (err) {
-    console.error('Curve API error: ', err)
-    response = null
-    poolDetails = null
+  if (!poolDetail) {
+    return 0
   }
 
-  if (poolDetails != null) {
-    poolDetail = poolDetails.find(obj => obj.address.toLowerCase() == poolAddress.toLowerCase())
-  } else {
-    poolDetail = null
-  }
+  const apy = parseFloat(poolDetail.latestDailyApyPcent)
 
-  if (poolDetail != null) {
-    apy = parseFloat(poolDetail.latestDailyApyPcent)
-    apy = apy.toFixed(2, 1)
-  } else {
-    apy = 0
-  }
-
-  return apy
+  return Number.isFinite(apy) ? apy.toFixed(2) : 0
 }
 
 module.exports = {

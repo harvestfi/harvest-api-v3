@@ -1,6 +1,7 @@
 const axios = require('axios')
 const { get } = require('lodash')
 const rateLimit = require('axios-rate-limit')
+const axiosRetry = require('axios-retry')
 
 const { cache } = require('../lib/cache')
 const {
@@ -18,6 +19,16 @@ const base = rateLimit(
   }),
   { maxRequests: 95, perMilliseconds: 60_000, maxRPS: 1 },
 )
+
+axiosRetry(base, {
+  retries: 3,
+  retryDelay: axiosRetry.exponentialDelay,
+  shouldResetTimeout: true,
+  retryCondition: err =>
+    axiosRetry.isNetworkOrIdempotentRequestError(err) ||
+    err.code === 'ECONNABORTED' ||
+    err.response?.status === 429,
+})
 
 const cgCall = base
 
