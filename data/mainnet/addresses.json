@@ -1339,7 +1339,8 @@
         "NewVault": "0xF977FF1e9A69BED009be1d0202ad4472fd7e6E1C",
         "NewStrategy": "0x9D270Ff77fD161a5cfd871e9ee5c6695c38336aC",
         "NewPool": "0x10b12068504491b11337BF12c3B59347A96003E8",
-        "MorphoVault": "0xF5C81d25ee174d83f1FD202cA94AE6070d073cCF"
+        "MorphoVault": "0xF5C81d25ee174d83f1FD202cA94AE6070d073cCF",
+        "doHardwork": false
       },
       "morphoCompound_USDC": {
         "Underlying": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
@@ -3842,7 +3843,8 @@
             "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
             "wrapperAddress": "0x645Ae5De61D5E586440C22595c32fEf6631c4006"
           }
-        ]
+        ],
+        "doHardwork": false
       },
       "aeroCL_cbETH_ETH_new": {
         "Underlying": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
