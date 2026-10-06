@@ -768,6 +768,7 @@ module.exports = {
     ],
   },
   llamalend_crvUSD_sfrxUSD: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/curve.svg'],
     apyTokenSymbols: ['CRV'],
@@ -3057,6 +3058,7 @@ module.exports = {
     ],
   },
   morpho_HY_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
