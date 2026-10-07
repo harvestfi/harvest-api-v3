@@ -64,6 +64,8 @@ GENERAL_CACHE_TTL | caching TTL for general responses  | Default: 10 Min
 BSC_RPC_URL | Blockchain node endpoint for Binance Smart Chain | `'https://bsc-dataseed2.binance.org/'`
 MATIC_RPC_URL | Blockchain node endpoint for Polygon (Matic) | `https://polygon-mainnet.infura.io/v3/${MATIC_INFURA_KEY}`
 MATIC_INFURA_KEY | Infura key used in case of default MATIC_RPC_URL |
+ARC_RPC_URL | Blockchain node endpoint for Arc (needs Arc Mainnet enabled on the Alchemy app when using the default) | `https://arc-mainnet.g.alchemy.com/v2/${ALCHEMY_KEY}`
+ARC_SUBGRAPH_URL | Harvest subgraph for Arc; it must serve data before the first Arc vault is listed (see [Aero CL vaults](./aero-cl-vaults.md)) | `https://api.studio.thegraph.com/query/48757/harvest-arc/v0.0.1`
 DEBUG_MODE | Computes and exposes some debug-only information | `false`
 MONGODB_URI  | MongoDB connection string | `mongodb://127.0.0.1:27017`
 MONGODB_DB_NAME  | MongoDB database name | `harvest-local`

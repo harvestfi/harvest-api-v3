@@ -44,6 +44,8 @@ const getPlatformId = chain => {
       return 'zksync'
     case CHAIN_IDS.HYPEREVM:
       return 'hyperevm'
+    case CHAIN_IDS.ARC:
+      return 'arc'
     default:
       return 'ethereum'
   }

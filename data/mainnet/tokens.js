@@ -40,6 +40,50 @@ module.exports = {
       },
     ],
   },
+  USDC_arc: {
+    chain: CHAIN_IDS.ARC,
+    logoUrl: ['./icons/usdc.svg'],
+    tokenAddress: addresses.ARC.USDC,
+    decimals: '6',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['usd-coin'],
+    },
+  },
+  EURC_arc: {
+    chain: CHAIN_IDS.ARC,
+    logoUrl: ['./icons/eurc.svg'],
+    tokenAddress: addresses.ARC.EURC,
+    decimals: '6',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['euro-coin'],
+    },
+  },
+  WETH_arc: {
+    chain: CHAIN_IDS.ARC,
+    logoUrl: ['./icons/weth.svg'],
+    tokenAddress: addresses.ARC.WETH,
+    decimals: '18',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['weth'],
+    },
+  },
+  cirBTC_arc: {
+    chain: CHAIN_IDS.ARC,
+    logoUrl: ['./icons/cirbtc.svg'],
+    tokenAddress: addresses.ARC.cirBTC,
+    decimals: '8',
+    vaultAddress: null,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['circle-wrapped-btc'],
+    },
+  },
   ipor_BTCD_USDC: {
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/usdc.svg'],

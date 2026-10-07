@@ -31,7 +31,11 @@ const executeGraphCall = async (chain, query, variables) => {
   if (data) {
     return data
   } else {
-    console.log(response)
+    // The full axios response is enormous and carries the (possibly private) subgraph URL.
+    console.log(
+      `Subgraph for chain ${chain} returned no data (HTTP ${response?.status}):`,
+      JSON.stringify(response?.data)?.slice(0, 500),
+    )
     return null
   }
 }

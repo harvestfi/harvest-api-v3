@@ -32,6 +32,7 @@ jobs:
         ZKSYNC_SUBGRAPH_URL: ${{ secrets.ZKSYNC_SUBGRAPH_URL }}
         BASE_SUBGRAPH_URL: ${{ secrets.BASE_SUBGRAPH_URL }}
         HYPEREVM_SUBGRAPH_URL: ${{ secrets.HYPEREVM_SUBGRAPH_URL }}
+        ARC_SUBGRAPH_URL: ${{ secrets.ARC_SUBGRAPH_URL }}
       run: |
         echo "::add-mask::$ALCHEMY_KEY"
         echo "::add-mask::$API_KEY"
@@ -42,6 +43,7 @@ jobs:
         echo "::add-mask::$ZKSYNC_SUBGRAPH_URL"
         echo "::add-mask::$BASE_SUBGRAPH_URL"
         echo "::add-mask::$HYPEREVM_SUBGRAPH_URL"
+        echo "::add-mask::$ARC_SUBGRAPH_URL"
     - name: Run Tests
       env:
         GET_POOL_DATA_BATCH_SIZE: 2
@@ -56,4 +58,5 @@ jobs:
         ZKSYNC_SUBGRAPH_URL: ${{ secrets.ZKSYNC_SUBGRAPH_URL }}
         BASE_SUBGRAPH_URL: ${{ secrets.BASE_SUBGRAPH_URL }}
         HYPEREVM_SUBGRAPH_URL: ${{ secrets.HYPEREVM_SUBGRAPH_URL }}
+        ARC_SUBGRAPH_URL: ${{ secrets.ARC_SUBGRAPH_URL }}
       run: yarn test

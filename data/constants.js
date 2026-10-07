@@ -6,6 +6,7 @@ const CHAIN_IDS = {
   ARBITRUM_ONE: '42161',
   ZKSYNC: '324',
   HYPEREVM: '999',
+  ARC: '5042',
 }
 
 const GET_PRICE_TYPES = {

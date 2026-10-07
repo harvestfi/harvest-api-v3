@@ -28,6 +28,7 @@ const CacheSchema = new mongoose.Schema({
   8453: { type: mongoose.Schema.Types.Mixed, default: [] },
   324: { type: mongoose.Schema.Types.Mixed, default: [] },
   999: { type: mongoose.Schema.Types.Mixed, default: [] },
+  5042: { type: mongoose.Schema.Types.Mixed, default: [] },
   FARM: { type: mongoose.Schema.Types.Mixed, default: [] },
   updatedAt: { type: Date, default: new Date() },
 })
@@ -46,8 +47,11 @@ const storeData = (dbSchema, type, data, hasErrors, resetData = true, upsert = t
     {
       type,
     },
+    // When replacing, `data` goes in as a literal. Evaluated as an expression, an empty object (e.g. a
+    // chain with no vaults yet) is rejected outright and a "$..." string is read as a field path.
+    // Merging has to stay an expression: that is what merges the nested fields into the stored data.
     resetData
-      ? [{ $unset: 'data' }, { $addFields: { data, updatedAt: new Date() } }]
+      ? [{ $unset: 'data' }, { $addFields: { data: { $literal: data }, updatedAt: new Date() } }]
       : [{ $addFields: { data, updatedAt: new Date() } }],
     { upsert },
   )

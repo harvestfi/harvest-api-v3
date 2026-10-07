@@ -152,6 +152,9 @@ const HARVEST_SUBGRAPH_URLS = {
   999:
     process.env.HYPEREVM_SUBGRAPH_URL ||
     'https://api.studio.thegraph.com/query/48757/harvest-hyperliquid/v0.0.1',
+  5042:
+    process.env.ARC_SUBGRAPH_URL ||
+    'https://api.studio.thegraph.com/query/48757/harvest-arc/v0.0.1',
 }
 
 const SUSHI_POOLS_IDS = {
@@ -183,6 +186,7 @@ const CHAIN_IDS = {
   ARBITRUM_ONE: '42161',
   ZKSYNC: '324',
   HYPEREVM: '999',
+  ARC: '5042',
 }
 
 const MATIC_RPC_URL =
@@ -196,6 +200,10 @@ const ZKSYNC_RPC_URL =
 const HYPEREVM_RPC_URL =
   process.env.HYPEREVM_RPC_URL ||
   `https://hyperliquid-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
+// Arc Mainnet has to be enabled on the Alchemy app first, otherwise Alchemy answers 403. Circle's
+// keyless https://rpc.mainnet.arc.io also serves archive state but is rate-limited per IP.
+const ARC_RPC_URL =
+  process.env.ARC_RPC_URL || `https://arc-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`
 const SWIRL_API_URL = 'https://api.swirl.cash/'
 const MSTABLE_API_URL = 'https://api.mstable.org/pools'
 const APE_API_URL = 'https://ape-swap-api.herokuapp.com'
@@ -381,6 +389,7 @@ module.exports = {
   HISTORICAL_CURRENCY_API_URL,
   ZKSYNC_RPC_URL,
   HYPEREVM_RPC_URL,
+  ARC_RPC_URL,
   CURRENCY_RATES,
   ZKSWAP_URL,
   SYNCSWAP_API_URL,

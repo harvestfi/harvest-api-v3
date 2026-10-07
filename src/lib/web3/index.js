@@ -14,6 +14,7 @@ const {
   BASE_RPC_URL,
   ZKSYNC_RPC_URL,
   HYPEREVM_RPC_URL,
+  ARC_RPC_URL,
   CHAIN_IDS,
   WEB3_CALL_COUNT_STATS_KEY,
   WEB3_CALL_COUNT_KEY,
@@ -108,6 +109,9 @@ web3ZKSYNC._chainId = CHAIN_IDS.ZKSYNC
 const web3HYPEREVM = new Web3(new NodeHttpProvider(HYPEREVM_RPC_URL))
 web3HYPEREVM._chainId = CHAIN_IDS.HYPEREVM
 
+const web3ARC = new Web3(new NodeHttpProvider(ARC_RPC_URL))
+web3ARC._chainId = CHAIN_IDS.ARC
+
 const getWeb3 = chainId => {
   switch (chainId) {
     case CHAIN_IDS.POLYGON:
@@ -120,6 +124,8 @@ const getWeb3 = chainId => {
       return web3ZKSYNC
     case CHAIN_IDS.HYPEREVM:
       return web3HYPEREVM
+    case CHAIN_IDS.ARC:
+      return web3ARC
     default:
       return web3
   }
@@ -195,6 +201,7 @@ module.exports = {
   web3BASE,
   web3ZKSYNC,
   web3HYPEREVM,
+  web3ARC,
   getWeb3,
   countFunctionCall,
   resetCallCount,

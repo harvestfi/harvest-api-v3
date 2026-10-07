@@ -60,6 +60,8 @@ const getProfitSharingFactor = chain => {
       return 0.9
     case CHAIN_IDS.HYPEREVM:
       return 0.9
+    case CHAIN_IDS.ARC:
+      return 0.9
     default:
       return 0.85
   }
@@ -77,6 +79,7 @@ const getVaults = async () => {
     fetchedBASEVaults = [],
     fetchedZKSYNCVaults = [],
     fetchedHYPEREVMVaults = [],
+    fetchedARCVaults = [],
     fetchedVaults
 
   const chainErrors = {
@@ -86,6 +89,7 @@ const getVaults = async () => {
     base: false,
     zksync: false,
     hyperevm: false,
+    arc: false,
   }
 
   const tokensWithVault = pickBy(tokens, token => token.vaultAddress)
@@ -121,6 +125,27 @@ const getVaults = async () => {
     Object.keys(tokensWithVault).filter(tokenId => tokens[tokenId].chain === CHAIN_IDS.HYPEREVM),
     GET_VAULT_DATA_BATCH_SIZE,
   )
+
+  const arcVaultsBatches = chunk(
+    Object.keys(tokensWithVault).filter(tokenId => tokens[tokenId].chain === CHAIN_IDS.ARC),
+    GET_VAULT_DATA_BATCH_SIZE,
+  )
+
+  console.log('\n-- Getting ARC vaults data --')
+  for (const batch of arcVaultsBatches) {
+    if (!batch?.length) continue
+    try {
+      console.log('Getting vault data for: ', batch)
+      const vaultsData = (await getVaultsData(batch, poolsDoc, statsDoc, tokens, pools)).filter(
+        Boolean,
+      )
+      fetchedARCVaults.push(...vaultsData)
+    } catch (err) {
+      chainErrors.arc = true
+      logger.error(`Failed to get vault data for: ${batch}`, err)
+    }
+  }
+  console.log('\n-- Done getting ARC vaults data --')
 
   console.log('\n-- Getting HYPEREVM vaults data --')
   for (const batch of hyperevmVaultsBatches) {
@@ -303,6 +328,10 @@ const getVaults = async () => {
       acc[vault.id] = vault
       return acc
     }, {}),
+    arc: fetchedARCVaults.reduce((acc, vault) => {
+      acc[vault.id] = vault
+      return acc
+    }, {}),
   }
 
   console.log('\n-- Done getting vaults data --')
@@ -390,10 +419,29 @@ const getPools = async () => {
     fetchedBASEPools = [],
     fetchedZKSYNCPools = [],
     fetchedHYPEREVMPools = [],
+    fetchedARCPools = [],
     fetchedPools = [],
     hasErrors
 
   try {
+    console.log('\n-- Getting ARC pool data --')
+
+    const arcPoolBatches = chunk(
+      pools.filter(pool => pool.chain === CHAIN_IDS.ARC),
+      GET_POOL_DATA_BATCH_SIZE,
+    )
+
+    if (size(arcPoolBatches)) {
+      for (const poolBatch of arcPoolBatches) {
+        const poolData = (await getPoolsData(poolBatch, poolsDoc, statsDoc, tokens)).filter(Boolean)
+        fetchedARCPools.push(...poolData) // avoids repeated concat copies
+      }
+    } else {
+      console.log('No pools available')
+    }
+
+    console.log('-- Done getting ARC pool data --\n')
+
     console.log('\n-- Getting HYPEREVM pool data --')
 
     const hyperevmPoolBatches = chunk(
@@ -511,6 +559,7 @@ const getPools = async () => {
     base: fetchedBASEPools,
     zksync: fetchedZKSYNCPools,
     hyperevm: fetchedHYPEREVMPools,
+    arc: fetchedARCPools,
   }
   hasErrors =
     (isArray(fetchedETHPools) &&
@@ -524,7 +573,9 @@ const getPools = async () => {
     (isArray(fetchedZKSYNCPools) &&
       (fetchedZKSYNCPools.includes(undefined) || fetchedZKSYNCPools.includes(null))) ||
     (isArray(fetchedHYPEREVMPools) &&
-      (fetchedHYPEREVMPools.includes(undefined) || fetchedHYPEREVMPools.includes(null)))
+      (fetchedHYPEREVMPools.includes(undefined) || fetchedHYPEREVMPools.includes(null))) ||
+    (isArray(fetchedARCPools) &&
+      (fetchedARCPools.includes(undefined) || fetchedARCPools.includes(null)))
   await storeData(
     Cache,
     DB_CACHE_IDS.POOLS,
@@ -962,6 +1013,7 @@ const getLeaderboardData = async () => {
     42161: 'arbitrum',
     324: 'zksync',
     999: 'hyperevm',
+    5042: 'arc',
   }
 
   let sortable = {}
@@ -977,12 +1029,34 @@ const getLeaderboardData = async () => {
       return
     }
 
+    // A chain's subgraph is only queried once the chain has vaults listed. Before that (Arc, until its
+    // vaults are added) there is nothing to rank, and a subgraph that is not serving yet would abort the
+    // whole leaderboard.
+    const tokens = await getUIData(UI_DATA_FILES.TOKENS)
+    const chainsWithVaults = new Set(
+      Object.values(tokens)
+        .filter(token => token.vaultAddress)
+        .map(token => token.chain),
+    )
+
     let userBalances = {}
     for (let chain of Object.keys(HARVEST_SUBGRAPH_URLS)) {
+      if (!chainsWithVaults.has(chain)) {
+        continue
+      }
       let maxValue = '1e99'
       let datapoints = 0
       for (let i = 0; i < 20; i++) {
         const data = await getBalanceData(chain, maxValue)
+        // A subgraph with no (more) balances, e.g. a freshly deployed one, returns an empty page, and
+        // reading its last entry below would throw and abort the leaderboard for every chain. A subgraph
+        // that returns no data at all still aborts it, as before, rather than publish a partial board.
+        if (!data) {
+          throw new Error(`No balance data from the ${CHAIN_NAMES[chain]} subgraph`)
+        }
+        if (!data.userBalances.length) {
+          break
+        }
 
         for (let balance of data.userBalances) {
           const poolAddress = balance.vault.pool ? balance.vault.pool.id : 0
@@ -1094,6 +1168,13 @@ const getLeaderboardData = async () => {
         let datapoints = 0
         for (let i = 0; i < 20; i++) {
           const data = await getPlasmaBalanceData(chain, maxValue)
+          // Same handling of an empty page and of no data as for the regular balances above.
+          if (!data) {
+            throw new Error(`No plasma balance data from the ${CHAIN_NAMES[chain]} subgraph`)
+          }
+          if (!data.plasmaUserBalances.length) {
+            break
+          }
           const plasmaVaultData = {}
 
           for (let balance of data.plasmaUserBalances) {
@@ -1405,6 +1486,10 @@ const getHyperEVMUserTransactions = async () => {
   await getUserTransactionsForChain(parseInt(CHAIN_IDS.HYPEREVM, 10), 'HyperEVM')
 }
 
+const getArcUserTransactions = async () => {
+  await getUserTransactionsForChain(parseInt(CHAIN_IDS.ARC, 10), 'Arc')
+}
+
 const preLoadCoingeckoPrices = async () => {
   console.log('\n-- Getting token prices from CoinGecko --')
   const tokens = await getUIData(UI_DATA_FILES.TOKENS)
@@ -1556,6 +1641,7 @@ const runUpdateLoop = async () => {
     await getBaseUserTransactions()
     await getZkSyncUserTransactions()
     await getHyperEVMUserTransactions()
+    await getArcUserTransactions()
   }
 
   await getTotalGmv()
