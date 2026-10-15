@@ -3,6 +3,7 @@ const { getWeb3 } = require('../../../lib/web3')
 const { seamlessPool, aToken, aaveRewards } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
 const { getCachedContract } = require('../../../lib/web3/contractCache')
+const { getApy: getMerklApy } = require('./merkl')
 
 const getApy = async (underlying, poolAddr, reduction, chain) => {
   const web3 = getWeb3(chain)
@@ -66,7 +67,16 @@ const getApy = async (underlying, poolAddr, reduction, chain) => {
     rewardAPR = rewardUsdPerYear.times(100).div(totalUsd)
   }
 
-  return supplyAPR.plus(rewardAPR).times(reduction).toFixed()
+  let merklSupply = new BigNumber(
+    await getMerklApy(
+      null,
+      assetData.aTokenAddress,
+      chain,
+      1,
+    ),
+  )
+
+  return supplyAPR.plus(rewardAPR).plus(merklSupply).times(reduction).toFixed()
 }
 
 module.exports = {
