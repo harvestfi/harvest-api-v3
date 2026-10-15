@@ -1589,7 +1589,7 @@ const runUpdateLoop = async () => {
       resetCallCount()
     }
 
-    await checkFoldingLeverage()
+    // await checkFoldingLeverage()
 
     await getCurrencyRates()
     if (DEBUG_MODE) {
