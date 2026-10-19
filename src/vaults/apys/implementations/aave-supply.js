@@ -3,7 +3,7 @@ const { getWeb3 } = require('../../../lib/web3')
 const { seamlessPool, aToken, aaveRewards } = require('../../../lib/web3/contracts')
 const { getTokenPrice } = require('../../../prices')
 const { getCachedContract } = require('../../../lib/web3/contractCache')
-const { getApy: getMerklApy } = require('./merkl')
+// const { getApy: getMerklApy } = require('./merkl')
 
 const getApy = async (underlying, poolAddr, reduction, chain) => {
   const web3 = getWeb3(chain)

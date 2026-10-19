@@ -44,7 +44,7 @@ const { getLastUserTransactionTimestamp, saveUserTransactions } = require('../li
 // const { superformRewardData } = require('../lib/third-party/superform')
 // const { getGmxData } = require('../lib/third-party/gmx')
 // const { getCLData } = require('../lib/third-party/cl-test')
-const { checkFoldingLeverage } = require('../script/fold-check')
+// const { checkFoldingLeverage } = require('../script/fold-check')
 const logger = require('../lib/logger')
 const { logContractCache } = require('../lib/web3/contractCache')
 
