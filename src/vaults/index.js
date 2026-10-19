@@ -8,7 +8,7 @@ const { getTokenPrice } = require('../prices')
 const { getPosId } = require('../prices/implementations/uniswap-v3.js')
 const { getPositions } = require('../lib/web3/contracts/uni-non-fungible-manager/methods')
 const { omit, get, find, isArray, toString } = require('lodash')
-const { getTotalSupply } = require('../lib/web3/contracts/vault/methods')
+const { getTotalSupply, getRedeemInKindEnabled } = require('../lib/web3/contracts/vault/methods')
 const managedVaultData = require('../lib/web3/contracts/uniswap-v3-vault/contract.json')
 const uniNonFungibleContractData = require('../lib/web3/contracts/uni-non-fungible-manager/contract.json')
 const {
@@ -50,7 +50,8 @@ const fetchAndExpandVault = async (symbol, poolsDoc, statsDoc, tokens, pools) =>
     uniswapV3PositionId = null,
     uniswapV3UnderlyingTokenPrices = [],
     totalValueLocked = null,
-    uniswapV3ManagedData = null
+    uniswapV3ManagedData = null,
+    redeemInKindEnabled = false
 
   const vaultData = tokens[symbol]
   vaultData.id = symbol
@@ -71,6 +72,12 @@ const fetchAndExpandVault = async (symbol, poolsDoc, statsDoc, tokens, pools) =>
     pricePerFullShare = new BigNumber(1).times(
       new BigNumber(10).exponentiatedBy(Number(vaultData.decimals)),
     )
+  }
+
+  try {
+    redeemInKindEnabled = Boolean(await getRedeemInKindEnabled(vaultInstance))
+  } catch (error) {
+    redeemInKindEnabled = false
   }
 
   const { estimatedApy, estimatedApyBreakdown } = await executeEstimateApyFunctions(
@@ -247,6 +254,7 @@ const fetchAndExpandVault = async (symbol, poolsDoc, statsDoc, tokens, pools) =>
     uniswapV3PositionId,
     uniswapV3UnderlyingTokenPrices,
     uniswapV3ManagedData,
+    redeemInKindEnabled,
     inactive: vaultData.inactive ? vaultData.inactive : false,
     rewardPool: vaultPool ? vaultPool.contractAddress : null,
   }
