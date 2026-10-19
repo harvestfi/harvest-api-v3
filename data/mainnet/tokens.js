@@ -1626,6 +1626,7 @@ module.exports = {
     ],
   },
   hypurr_UBTC: {
+    inactive: true,
     chain: CHAIN_IDS.HYPEREVM,
     apyIconUrls: ['./icons/ubtc.svg'],
     apyTokenSymbols: ['UBTC'],
@@ -1654,6 +1655,7 @@ module.exports = {
     ],
   },
   hypurr_UETH: {
+    inactive: true,
     chain: CHAIN_IDS.HYPEREVM,
     apyIconUrls: ['./icons/eth.svg'],
     apyTokenSymbols: ['UETH'],
@@ -4258,6 +4260,7 @@ module.exports = {
     ],
   },
   morphoCompound_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdc.svg'],
     tokenNames: ['USDC'],
@@ -4285,6 +4288,7 @@ module.exports = {
     ],
   },
   morphoCompound_USDT: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     logoUrl: ['./icons/usdt.svg'],
     tokenNames: ['USDT'],
@@ -6782,6 +6786,7 @@ module.exports = {
     ],
   },
   aave_USDbC_base: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/aave.svg'],
     apyTokenSymbols: ['AAVE'],
@@ -10488,6 +10493,7 @@ module.exports = {
     ],
   },
   aave_USDCe_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/aave.svg'],
     apyTokenSymbols: ['AAVE'],
@@ -12330,6 +12336,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM'],
   },
   aave_USDCe: {
+    inactive: true,
     chain: CHAIN_IDS.POLYGON_MAINNET,
     apyIconUrls: ['./icons/aave.svg'],
     apyTokenSymbols: ['AAVE'],
@@ -13725,6 +13732,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   lodestar_LODE: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/eth.svg'],
     apyTokenSymbols: ['WETH'],
