@@ -20,6 +20,9 @@ const withdraw = (amount, address, instance) =>
 
 const getTotalSupply = instance => countFunctionCall(instance.methods.totalSupply().call())
 
+const getRedeemInKindEnabled = instance =>
+  countFunctionCall(instance.methods.redeemInKindEnabled().call())
+
 module.exports = {
   getUnderlyingBalanceWithInvestment,
   getUnderlyingBalanceWithInvestmentForHolder,
@@ -29,4 +32,5 @@ module.exports = {
   withdraw,
   getStrategy,
   getTotalSupply,
+  getRedeemInKindEnabled,
 }

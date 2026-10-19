@@ -67,14 +67,7 @@ const getApy = async (underlying, poolAddr, reduction, chain) => {
     rewardAPR = rewardUsdPerYear.times(100).div(totalUsd)
   }
 
-  let merklSupply = new BigNumber(
-    await getMerklApy(
-      null,
-      assetData.aTokenAddress,
-      chain,
-      1,
-    ),
-  )
+  let merklSupply = new BigNumber(await getMerklApy(null, assetData.aTokenAddress, chain, 1))
 
   return supplyAPR.plus(rewardAPR).plus(merklSupply).times(reduction).toFixed()
 }
