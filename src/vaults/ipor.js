@@ -65,6 +65,8 @@ const fetchAndExpandIPORVault = async (symbol, tokens) => {
     totalValueLocked,
     vaultSymbol,
     allocPointData: allocPoints.allocDatas,
+    // IPOR Fusion plasma vaults don't implement redeemInKindEnabled(), keep the field for a consistent shape
+    redeemInKindEnabled: false,
     inactive: vaultData.inactive ? vaultData.inactive : false,
   }
 }
