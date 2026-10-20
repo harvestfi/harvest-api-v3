@@ -976,7 +976,8 @@
       "NewVault": "0x247d459c33770Bb285Be22104991c18dAaD06f25",
       "NewStrategy": "0x019086Ceb439D635aDd1f0df8D2F8cfBb8523094",
       "NewPool": "0x31B9eBd61F0E781f457bCA87483aC2D820B344e4",
-      "PoolId": "ethereum-0xc33aa628b10655b36eaa7ee880d6bc4789dd2289-453"
+      "PoolId": "ethereum-0xc33aa628b10655b36eaa7ee880d6bc4789dd2289-453",
+      "doHardwork": false
     },
     "llamalend_crvUSD_tBTC": {
       "Underlying": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
