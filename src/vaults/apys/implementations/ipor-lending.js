@@ -19,7 +19,7 @@ const getApy = async (plasmaVault, factor = 1, chain) => {
   let baseApy, incentivesApy, merklApy
   try {
     const fusionVault = await getFusionVault(plasmaVault, chain)
-    const interestApy = fusionVault && fusionVault.apy
+    const interestApy = fusionVault && Number(fusionVault.apy) + Number(fusionVault.rewardsApy)
 
     if (interestApy === null || interestApy === undefined || interestApy === '') {
       return new BigNumber(0).toFixed(2)
