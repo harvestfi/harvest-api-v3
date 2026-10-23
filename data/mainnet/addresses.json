@@ -2926,7 +2926,8 @@
         "NewVault": "0xB41c68ae552b06eF0d0402f20B133FbdA8e1B143",
         "NewStrategy": "0x27cB5897E2a6963935EADd919308c25Cee2CbEB7",
         "NewPool": "0x381ef1c1e59Cf7D3356660C660aE0d2BA9662fb3",
-        "Gauge": "0x9a202c932453fB3d04003979B121E80e5A14eE7b"
+        "Gauge": "0x9a202c932453fB3d04003979B121E80e5A14eE7b",
+        "doHardwork": false
       },
       "aerodrome_cbETH_ETH": {
         "Underlying": "0x44Ecc644449fC3a9858d2007CaA8CFAa4C561f91",
@@ -2949,21 +2950,24 @@
         "NewVault": "0x68f5992eE86879871cA40A7342406d6F6B5a6861",
         "NewStrategy": "0xe70cb31b7DF428655Cec64921a6BEa5780710A37",
         "NewPool": "0x6bf2726C111E8530Da099ed64850103B6Cb0b535",
-        "Gauge": "0xa81dac2e9caa218Fcd039D7CEdEB7847cf362213"
+        "Gauge": "0xa81dac2e9caa218Fcd039D7CEdEB7847cf362213",
+        "doHardwork": false
       },
       "aerodrome_tBTC_ETH": {
         "Underlying": "0x2722C8f9B5E2aC72D1f225f8e8c990E449ba0078",
         "NewVault": "0x32938237AC6212957061917E74Dd2Ab4956Bd2ED",
         "NewStrategy": "0x8aDa0EFD2bf2C2A12e4A7151fFf0b433bda69bE0",
         "NewPool": "0xed3088c1f2cdE063Ef3EB7D1E2164747d80456cF",
-        "Gauge": "0xfaE8C18D83655Fbf31af10d2e9A1Ad5bA77D0377"
+        "Gauge": "0xfaE8C18D83655Fbf31af10d2e9A1Ad5bA77D0377",
+        "doHardwork": false
       },
       "aerodrome_tBTC_USDC": {
         "Underlying": "0x723AEf6543aecE026a15662Be4D3fb3424D502A9",
         "NewVault": "0x60aFd9E8BE2f14C259323056850F9eC0d1804879",
         "NewStrategy": "0x93f40d78caf881F3F827150d26F3fDaCb4863CB9",
         "NewPool": "0xb4afAF87EA0C27819f371d20A64d93eeFc439aC7",
-        "Gauge": "0x50f0249B824033Cf0AF0C8b9fe1c67c2842A34d5"
+        "Gauge": "0x50f0249B824033Cf0AF0C8b9fe1c67c2842A34d5",
+        "doHardwork": false
       },
       "aerodrome_wUSDR_USDC": {
         "Underlying": "0x3Fc28BFac25fC8e93B5b2fc15EfBBD5a8aA44eFe",
@@ -2978,7 +2982,8 @@
         "NewVault": "0x71EB5907333dD2a768d6D74cBD9054c0A0B16BE9",
         "NewStrategy": "0xaBBAB688c39F1974CA68ECB95A6F495d5960501A",
         "NewPool": "0xb049EB833A12d3BCa9bd3dd9535826e87e5beb0e",
-        "Gauge": "0x950aD950D6f07491ef2c150545A6A2AB7AdC03f4"
+        "Gauge": "0x950aD950D6f07491ef2c150545A6A2AB7AdC03f4",
+        "doHardwork": false
       },
       "aerodrome_SPOT_USDC": {
         "Underlying": "0xa43455d99Eb63473cFA186b388c1BC2EA1B63924",
@@ -2993,14 +2998,16 @@
         "NewVault": "0x094185bc477FbeF37B076d1D1e987D3EB5BB1d69",
         "NewStrategy": "0x0a6Cc3A3F8f0DA4de442DA5125bEb825348DD3ed",
         "NewPool": "0x8d3ab153D3bfdCd9709e26354b2b4691917fdb00",
-        "Gauge": "0x44A927DD8f6def04f76B00cece9804BF441dc6b1"
+        "Gauge": "0x44A927DD8f6def04f76B00cece9804BF441dc6b1",
+        "doHardwork": false
       },
       "aerodrome_WELS_ETH": {
         "Underlying": "0xCaedc2561356B6a01a94E3C0438011459E91FBb9",
         "NewVault": "0xE2820aeC35bB736c7920950BCA4eda9F671bA5B2",
         "NewStrategy": "0xe3D23497fAACf79fa7784255133cD4de5beB4E22",
         "NewPool": "0xe0A9076e571Bb1CBC084ebEf51B43CB420061460",
-        "Gauge": "0xdE41799DE5fB357f501dd9386ACee424E816f7a6"
+        "Gauge": "0xdE41799DE5fB357f501dd9386ACee424E816f7a6",
+        "doHardwork": false
       },
       "based_BASED_ETH": {
         "Underlying": "0x5F45e48F9C053286cE9Ca08Db897f8b7eb3f7992",
@@ -3229,28 +3236,32 @@
         "NewVault": "0x47e3daF382C4603450905fb68766DB8308315407",
         "NewStrategy": "0xb93201d8B3C221f14032ADE6314ac9E458300254",
         "NewPool": "0xf4CaDf3A558C312dE522A258FeDfB41fC09723Cb",
-        "Gauge": "0x00B2149d89677a5069eD4D303941614A33700146"
+        "Gauge": "0x00B2149d89677a5069eD4D303941614A33700146",
+        "doHardwork": false
       },
       "aerodrome_USDC_AERO": {
         "Underlying": "0x6cDcb1C4A4D1C3C6d054b27AC5B77e89eAFb971d",
         "NewVault": "0xE97a32D05952357C7b5D4EafC70197a0B834f0F7",
         "NewStrategy": "0x18190885B6B8F684fd3de366c0A439eaf36a4D0A",
         "NewPool": "0xc0d3ccD19D8b3a159c55268ac8a9c4b13f7c1146",
-        "Gauge": "0x4F09bAb2f0E15e2A078A227FE1537665F55b8360"
+        "Gauge": "0x4F09bAb2f0E15e2A078A227FE1537665F55b8360",
+        "doHardwork": false
       },
       "aerodrome_WELL_ETH_old": {
         "Underlying": "0xffA3F8737C39e36dec4300B162c2153c67c8352f",
         "NewVault": "0x8d44eEdB4074E02bd418286b4Af5bD5E47F91A6f",
         "NewStrategy": "0x0FBeA24A65b7089A9EE705f32EdD0A793A89f75b",
         "NewPool": "0xDb08f5E56a00A1409053E31dbDae04fF643D8Cde",
-        "Gauge": "0xcEa0a2228145d0fD25dE083e3786ddB1eA184296"
+        "Gauge": "0xcEa0a2228145d0fD25dE083e3786ddB1eA184296",
+        "doHardwork": false
       },
       "aerodrome_STAR_USDC": {
         "Underlying": "0xF45F6cDBcd0D2D4Bf4d9758b032a66A2cf4e55C8",
         "NewVault": "0x94aA414BefB207B869904f3310665A63fBA3AE50",
         "NewStrategy": "0x96328405a3281bf7dFC46B4Ac1119e6D542b0cD9",
         "NewPool": "0xe03481E68FC15197C17EDD3B9F38b3cc821f7446",
-        "Gauge": "0xc115982d35fe4304274FEEf5b351256342BB6C2e"
+        "Gauge": "0xc115982d35fe4304274FEEf5b351256342BB6C2e",
+        "doHardwork": false
       },
       "aerodrome_USDC_USDbC": {
         "Underlying": "0x27a8Afa3Bd49406e48a074350fB7b2020c43B2bD",
@@ -3273,7 +3284,8 @@
         "NewVault": "0x284c60490212DB0dc0b8F93503d35744f8053381",
         "NewStrategy": "0xF1A26a78da5FA19E55C95DF13e1af9Aa289F1A5a",
         "NewPool": "0x28f914229770e403cEB2Ae55069fF7447247470a",
-        "Gauge": "0xa4F335B6ee0f8e34F31d4C8b702080196252dAc3"
+        "Gauge": "0xa4F335B6ee0f8e34F31d4C8b702080196252dAc3",
+        "doHardwork": false
       },
       "moonwell_weETH": {
         "Underlying": "0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A",
@@ -3328,7 +3340,8 @@
         "NewVault": "0x4600c5C9E582B6616A08DE974eb4e37e40a55CA4",
         "NewStrategy": "0x346107EE0adC21Fc9b08518980B100a74a49176D",
         "NewPool": "0x3D6651A8D9bB47a7829469cCC0195c021f2F74AD",
-        "Gauge": "0x62940D9643a130b80CA0f8bc7e94De5b7ec496C5"
+        "Gauge": "0x62940D9643a130b80CA0f8bc7e94De5b7ec496C5",
+        "doHardwork": false
       },
       "aerodrome_msUSD_USDC": {
         "Underlying": "0xcEFC8B799a8EE5D9b312aeca73262645D664AaF7",
@@ -3499,7 +3512,8 @@
         "NewVault": "0x58255202c78f96F892CA96F4c73380198e655AAE",
         "NewStrategy": "0xb057B2dAab740D93d9cfC7E3F4F446A0b4832aF2",
         "NewPool": "0xf3C2EEE0894987ef1b808C90c4e55461cb845669",
-        "Gauge": "0xAFdEBa12B6a870d6639d043030b4b49F9C7c62BB"
+        "Gauge": "0xAFdEBa12B6a870d6639d043030b4b49F9C7c62BB",
+        "doHardwork": false
       },
       "aerodrome_cbBTC_USDC": {
         "Underlying": "0x9c38b55f9A9Aba91BbCEDEb12bf4428f47A6a0B8",
@@ -3551,28 +3565,32 @@
         "NewVault": "0x90614c70AD47703057Af52A640e09Bf96D685167",
         "NewStrategy": "0x34df09bBBa978F6f6aDF9574689f9A122123682F",
         "NewPool": "0x7442fEb7600160055400100a1092859F860Efb64",
-        "Gauge": "0x533eb2cEf740654D09764334Bd86E62F0a253d1a"
+        "Gauge": "0x533eb2cEf740654D09764334Bd86E62F0a253d1a",
+        "doHardwork": false
       },
       "aerodrome_ION_ETH": {
         "Underlying": "0x0FAc819628a7F612AbAc1CaD939768058cc0170c",
         "NewVault": "0x1260Ab63565C4FBD70cb467B9655449dd4DFBEA0",
         "NewStrategy": "0xBfbAcE2BC6C036f394dF34Aa96171b6c5F5d822E",
         "NewPool": "0xC640c26969d745939eadD5E3191B30CE9Ad00AB5",
-        "Gauge": "0x9b42e5F8c45222b2715F804968251c747c588fd7"
+        "Gauge": "0x9b42e5F8c45222b2715F804968251c747c588fd7",
+        "doHardwork": false
       },
       "aerodrome_VIRTUAL_cbBTC": {
         "Underlying": "0xb909F567c5c2Bb1A4271349708CC4637D7318b4A",
         "NewVault": "0x4D4b009F6C4a3475F171b33403F3860B88e2401E",
         "NewStrategy": "0x2a75221aa9eb1346c5A53CaAbbB181Fa02d44E45",
         "NewPool": "0xCcd1b1cA36cF5E35f9A83D2Cd43Cc99065337DA1",
-        "Gauge": "0x8c44e7F913D0893Cd5A3CBBb2fCd59785a7801ab"
+        "Gauge": "0x8c44e7F913D0893Cd5A3CBBb2fCd59785a7801ab",
+        "doHardwork": false
       },
       "aerodrome_WELL_ETH": {
         "Underlying": "0x89D0F320ac73dd7d9513FFC5bc58D1161452a657",
         "NewVault": "0x175d69829Dfe3Aa72a399211885c4Fe1b2ffC2E3",
         "NewStrategy": "0xbB5c3C45268d40f4CF43433db42e129eae0B0003",
         "NewPool": "0xCd29563819d223C2B5745BCF46131F9652AdbecA",
-        "Gauge": "0x7b6964440b615aC1d31bc95681B133E112fB2684"
+        "Gauge": "0x7b6964440b615aC1d31bc95681B133E112fB2684",
+        "doHardwork": false
       },
       "moonwell_wrsETH": {
         "Underlying": "0xEDfa23602D0EC14714057867A78d01e94176BEA0",
@@ -3718,14 +3736,16 @@
         "NewVault": "0x9F2B4aB84599791DA372DFEcb0c295e90F8fBc1B",
         "NewStrategy": "0xf758bAB3F153771f58B158cd3877707ab945B622",
         "NewPool": "0x4f1EA08dF655274a1E0Ee3fc58C93D0251a0B403",
-        "Gauge": "0xCFede447ca3b4885720B5a327e3BFb02078f06e8"
+        "Gauge": "0xCFede447ca3b4885720B5a327e3BFb02078f06e8",
+        "doHardwork": false
       },
       "aerodrome_CHAMP_ETH": {
         "Underlying": "0x26029Ed89A19B919b5698F10cf776a4f4AEA1529",
         "NewVault": "0xdeC7011343b2c13AC663A2e56C2C3ae47C64A3A0",
         "NewStrategy": "0x295cACd546b93595Ec6FeC90415a008904D4B951",
         "NewPool": "0x8E737BFdd087F71aa917b2e091Ccc63b5D9E8165",
-        "Gauge": "0xf2c38dE50A250C0060fB45eBE4504B67f6F1be3C"
+        "Gauge": "0xf2c38dE50A250C0060fB45eBE4504B67f6F1be3C",
+        "doHardwork": false
       },
       "aerodrome_ETH_USDC_V2": {
         "Underlying": "0xcDAC0d6c6C59727a65F871236188350531885C43",
@@ -3740,14 +3760,16 @@
         "NewVault": "0x86580B840C45950357872F414F9a7096741E8BCE",
         "NewStrategy": "0x2CedCf910009bD3b152794551Ebc102fACB9A2c7",
         "NewPool": "0x04E4D6d02363ad396a43bb8516a5606c26F6C0BD",
-        "Gauge": "0xBD62Cad65b49b4Ad9C7aa9b8bDB89d63221F7af5"
+        "Gauge": "0xBD62Cad65b49b4Ad9C7aa9b8bDB89d63221F7af5",
+        "doHardwork": false
       },
       "aerodrome_VVV_ETH": {
         "Underlying": "0x01784ef301D79e4B2DF3a21ad9a536d4cF09A5Ce",
         "NewVault": "0x9a8c8acAeE07A12b52935f148b35258806d019A0",
         "NewStrategy": "0x16fd3E17EC28e9E07EAc04802e33aCaD7E30a0D5",
         "NewPool": "0xdCb63eC3D71bE5333A85fB6A2F0397108182DcDF",
-        "Gauge": "0x37a70295FCefebBB0a29735A53E2e6786A02F930"
+        "Gauge": "0x37a70295FCefebBB0a29735A53E2e6786A02F930",
+        "doHardwork": false
       },
       "aerodrome_wBLT_BMX": {
         "Underlying": "0x61907C8C3E6ef7eD813aCc2fBbBf8C05ac0F31d5",
@@ -3762,7 +3784,8 @@
         "NewVault": "0xb0E5AE2D1Eb9Aac8648C0f89459865Bcb259F6Eb",
         "NewStrategy": "0x372B59EDfbf12BA961AEb290b3e662E29e7530b9",
         "NewPool": "0xA075d1E13b1F9927B85A0bFD9713E43445d27AA6",
-        "Gauge": "0x96a24aB830D4ec8b1F6f04Ceac104F1A3b211a01"
+        "Gauge": "0x96a24aB830D4ec8b1F6f04Ceac104F1A3b211a01",
+        "doHardwork": false
       },
       "moonwell_LBTC": {
         "Underlying": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
