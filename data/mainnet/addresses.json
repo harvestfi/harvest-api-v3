@@ -3841,10 +3841,12 @@
         "doHardwork": false
       },
       "aeroCL_tBTC_cbBTC": {
-        "NewVault": "0x86b8E5fc263e3760A44886fD50E9279e31eDdF4F"
+        "NewVault": "0x86b8E5fc263e3760A44886fD50E9279e31eDdF4F",
+        "doHardwork": false
       },
       "aeroCL_cbETH_ETH": {
-        "NewVault": "0x8611053A05080914E72D0C84fF95a11d10EdF36E"
+        "NewVault": "0x8611053A05080914E72D0C84fF95a11d10EdF36E",
+        "doHardwork": false
       },
       "aeroCL_tBTC_cbBTC_new": {
         "Underlying": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
@@ -3863,7 +3865,8 @@
             "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
             "wrapperAddress": "0x645Ae5De61D5E586440C22595c32fEf6631c4006"
           }
-        ]
+        ],
+        "doHardwork": false
       },
       "aeroCL_cbETH_ETH_new": {
         "Underlying": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
@@ -3882,7 +3885,8 @@
             "tokenAddress": "0x4200000000000000000000000000000000000006",
             "wrapperAddress": "0x2cBC31d2aF935663ca4df91fDF2F048FFA651e24"
           }
-        ]
+        ],
+        "doHardwork": false
       },
       "extrafi_USDC_2": {
         "Underlying": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
