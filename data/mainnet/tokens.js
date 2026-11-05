@@ -97,9 +97,9 @@ module.exports = {
   morpho_KPKY_EURe: {
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/eure.svg'],
-    apyTokenSymbols: ['EURE'],
+    apyTokenSymbols: ['EURe'],
     logoUrl: ['./icons/eure.svg'],
-    tokenNames: ['EURE'],
+    tokenNames: ['EURe'],
     platform: ['Morpho - KPK Yield V2'],
     tags: ['Beginner', 'Stable'],
     tokenAddress: addresses.ARBITRUM_ONE.V2.morpho_KPKY_EURe.Underlying,
