@@ -46,7 +46,7 @@ module.exports = {
     apyTokenSymbols: ['ARB', 'USDG'],
     logoUrl: ['./icons/usdg.svg'],
     tokenNames: ['USDG'],
-    platform: ['Morpho - Gauntlet Premiun V2'],
+    platform: ['Morpho - Gauntlet Premium V2'],
     tags: ['Beginner', 'Stable'],
     tokenAddress: addresses.ARBITRUM_ONE.V2.morpho_GPREM_USDG.Underlying,
     decimals: '6',
