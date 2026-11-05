@@ -40,6 +40,87 @@ module.exports = {
       },
     ],
   },
+  morpho_GPREM_USDG: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg', './icons/usdg.svg'],
+    apyTokenSymbols: ['ARB', 'USDG'],
+    logoUrl: ['./icons/usdg.svg'],
+    tokenNames: ['USDG'],
+    platform: ['Morpho - Gauntlet Premiun V2'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.morpho_GPREM_USDG.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.morpho_GPREM_USDG.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.morpho_GPREM_USDG.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['global-dollar'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.ARBITRUM_ONE.V2.morpho_GPREM_USDG.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
+  morpho_SHPRO_USDG: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/arb.svg', './icons/usdg.svg'],
+    apyTokenSymbols: ['ARB', 'USDG'],
+    logoUrl: ['./icons/usdg.svg'],
+    tokenNames: ['USDG'],
+    platform: ['Morpho - Steakhouse Pro V2'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.morpho_SHPRO_USDG.Underlying,
+    decimals: '6',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.morpho_SHPRO_USDG.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.morpho_SHPRO_USDG.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['global-dollar'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.ARBITRUM_ONE.V2.morpho_SHPRO_USDG.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
+  morpho_KPKY_EURe: {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    apyIconUrls: ['./icons/eure.svg'],
+    apyTokenSymbols: ['EURE'],
+    logoUrl: ['./icons/eure.svg'],
+    tokenNames: ['EURE'],
+    platform: ['Morpho - KPK Yield V2'],
+    tags: ['Beginner', 'Stable'],
+    tokenAddress: addresses.ARBITRUM_ONE.V2.morpho_KPKY_EURe.Underlying,
+    decimals: '18',
+    vaultAddress: addresses.ARBITRUM_ONE.V2.morpho_KPKY_EURe.NewVault,
+    strategyAddress: addresses.ARBITRUM_ONE.V2.morpho_KPKY_EURe.NewStrategy,
+    priceFunction: {
+      type: GET_PRICE_TYPES.COINGECKO_ID,
+      params: ['monerium-eur-money-2'],
+    },
+    estimateApyFunctions: [
+      {
+        type: ESTIMATED_APY_TYPES.MORPHO_VAULT,
+        params: [
+          addresses.ARBITRUM_ONE.V2.morpho_KPKY_EURe.MorphoVault,
+          profitSharingCut10Percent,
+          CHAIN_IDS.ARBITRUM_ONE,
+        ],
+      },
+    ],
+  },
   ipor_BTCD_USDC: {
     chain: CHAIN_IDS.ETH_MAINNET,
     apyIconUrls: ['./icons/usdc.svg'],
@@ -1775,6 +1856,7 @@ module.exports = {
     ],
   },
   morpho_HY_USDC_arbitrum: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/arb.svg', './icons/morpho.svg'],
     apyTokenSymbols: ['ARB', 'MORPHO'],
@@ -2239,6 +2321,7 @@ module.exports = {
     ],
   },
   morpho_CHY_USDC: {
+    inactive: true,
     chain: CHAIN_IDS.BASE,
     apyIconUrls: ['./icons/morpho.svg'],
     apyTokenSymbols: ['MORPHO'],
@@ -13205,6 +13288,7 @@ module.exports = {
     cmcRewardTokenSymbols: ['iFARM', 'LODE', 'ARB'],
   },
   lodestar_LODE: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     apyIconUrls: ['./icons/eth.svg'],
     apyTokenSymbols: ['WETH'],
@@ -15514,6 +15598,7 @@ module.exports = {
     },
   },
   xGRAIL: {
+    inactive: true,
     chain: CHAIN_IDS.ARBITRUM_ONE,
     logoUrl: ['./icons/xgrail.svg'],
     apyIconUrls: [
