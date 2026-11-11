@@ -1,7 +1,7 @@
 const BigNumber = require('bignumber.js')
 const { getWeb3 } = require('../../../lib/web3')
 const { seamlessPool, aToken, aaveViewer } = require('../../../lib/web3/contracts')
-const { getDefiLlamaData } = require('../../../lib/third-party/defillama')
+const { getCbETHRate, getWstETHRate } = require('../../../lib/third-party/eth-apys')
 const { getCachedContract } = require('../../../lib/web3/contractCache')
 const { getApy: getMerklApy } = require('./merkl')
 
@@ -62,22 +62,17 @@ const getApy = async (supplyAsset, borrowAsset, poolAddr, strategyAddr, reductio
     borrowedMul = new BigNumber(0)
   }
 
-  const stakeDataRaw = await getDefiLlamaData()
-  const stakeData = stakeDataRaw.data
-
   let supplyStakeAPY
   if (
     //stETH
     supplyAsset == '0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452'
   ) {
-    const poolDetail = stakeData.find(obj => obj.pool == '747c1d2a-c668-4682-b9f9-296708a3dd90')
-    supplyStakeAPY = poolDetail.apy
+    supplyStakeAPY = await getWstETHRate()
   } else if (
     //cbETH
     supplyAsset == '0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22'
   ) {
-    const poolDetail = stakeData.find(obj => obj.pool == '0f45d730-b279-4629-8e11-ccb5cc3038b4')
-    supplyStakeAPY = poolDetail.apy
+    supplyStakeAPY = new BigNumber(await getCbETHRate()).times(100)
   } else {
     supplyStakeAPY = 0
   }

@@ -5,6 +5,69 @@ const strat15PercentFactor = '0.85'
 
 module.exports = [
   {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'morpho_GPREM_USDG',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.morpho_GPREM_USDG.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.morpho_GPREM_USDG.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.morpho_GPREM_USDG.Underlying}" target="_blank" rel="noopener noreferrer"> USDG </a>to the Morpho Gauntlet Premium Vault, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.morpho_GPREM_USDG.Underlying}" target="_blank" rel="noopener noreferrer"> USDG</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'morpho_SHPRO_USDG',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.morpho_SHPRO_USDG.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.morpho_SHPRO_USDG.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.morpho_SHPRO_USDG.Underlying}" target="_blank" rel="noopener noreferrer"> USDG </a>to the Morpho Stakehouse Pro Vault, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.ARB}" target="_blank" rel="noopener noreferrer">ARB</a>.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.morpho_SHPRO_USDG.Underlying}" target="_blank" rel="noopener noreferrer"> USDG</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
+    chain: CHAIN_IDS.ARBITRUM_ONE,
+    id: 'morpho_KPKY_EURe',
+    type: POOL_TYPES.INCENTIVE,
+    contractAddress: addresses.ARBITRUM_ONE.V2.morpho_KPKY_EURe.NewPool,
+    collateralAddress: addresses.ARBITRUM_ONE.V2.morpho_KPKY_EURe.NewVault,
+    rewardAPY: [],
+    rewardAPR: null,
+    rewardTokens: [addresses.ARBITRUM_ONE.iFARM],
+    rewardTokenSymbols: ['iFARM'],
+    stakeAndDepositHelpMessage: `
+    <div class="help-message">
+      <p> The vault supplies
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.morpho_KPKY_EURe.Underlying}" target="_blank" rel="noopener noreferrer"> EURe </a>to the Morpho KPK Yield Vault, earning 
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.morpho_KPKY_EURe.Underlying}" target="_blank" rel="noopener noreferrer">EURe</a> interest.
+       At every harvest, the earned rewards are converted into more
+       <a href="https://arbiscan.io/token/${addresses.ARBITRUM_ONE.V2.morpho_KPKY_EURe.Underlying}" target="_blank" rel="noopener noreferrer"> EURe</a>.
+      </p>
+    </div>
+   `,
+  },
+  {
     chain: CHAIN_IDS.ETH_MAINNET,
     id: 'ipor_BTCD_USDC',
     type: POOL_TYPES.INCENTIVE,
